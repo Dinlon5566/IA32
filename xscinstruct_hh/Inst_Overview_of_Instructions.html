@@ -1,0 +1,2334 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)--> <!--(Document created with RoboEditor. )============================--> <!--(==============================================================)-->
+
+
+<!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Inst_Overview_of_Instructions.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:32:30 GMT -->
+<head>
+
+<title>关于英特尔 XScale(R) 技术指令</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta name=MS-HAID content=Overview-Sc>
+<meta name=date content="05 28, 2003 2:03:05 PM">
+<meta name=topic-status content="In Progress">
+<meta name=topic-priority content=0>
+<meta name=topic-time-estimate content=0>
+<meta name=topic-comment content>
+<meta name=topic-id content=Inst_Overview_of_Instructions.htm>
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=1888>
+<meta name=layout-width content=771>
+<meta name=x-ignored-words content="dest;N;Z;C;Q;F;T;M;globl;funadd;READONLY;MOV;OxAE;ADC;funadc;OxFF;OxFE;SP;SP-relative;NCT;submodes;Coprocessor;ASR;sh_imm;addr_mode;shifter_carry_out;Arithmetic_Shift_right;opcode;basereg;Arithmetic_Shift_Right;Submode;imm;LSL;LSR;ROR;RRX;encodings;rt_imm;FF;start_addr;Bit_Number_Of(reglist;end_addr;ConditionPassed;W;reglist;decremented;L;immH;immL;addr;SWP;SWPB;LDRB;LDRBT;STRB;STRBT;STRH;Rotate_Right;immediates;rt_amount;LDRT;STRT;NotFinished;coprocessor[cpnum;coprocessor;coprocessor-defined;cpdest;cpnum;coprocessor-dependent;IB;cpname;LDC;STC;LDM|STM;basereg[;register(s;Submodes;CPSR;SPSR;EA;FD;coprocessors;LDR|STR;LDR;STR;indexreg;PLD;U==;Logical_Shift_Left;Logical_Shift_Right;H|SH|SB|D;LDRH;SH;LDRSH;SB;LDRSB;LDRD;STRD;Post-indexed(AM;SBZ;XScale;Microarchitecture;funand;Bitwise;EOR;ORR;funasr;OxC;B[condition;NOP;funb;crossMOV;BPL;BAL;BNE;BL;BX;TST;BIC;ANDed;bitwise;funbic;BKPT;prefetch;B[L;funcbl;EAFFFFFE;BLX;Thumb*;funblx;LR;CMN;funcmn;OxEF;BCS;CMP;funcmp;BMI;BEQ;funeor;XOR;ENDIF;ENDM;nestings;boolvar;imPORT;GLOBL;EQU;REQ;EXITM;ASCIIZ;C-style;HWORD;INT;LTORG;unvalidated;ADC[condition;TM;funcadc;ADCS;ADD[condition;funcadd;AND[condition;funcand;BIC[condition;funcbic;funcbkpt;FAFFFFFE;DCD;DCB;BLX[condition;ARM*;SBO;BX[condition;dest_;funcbx;CDP;CDP[condition;cpop-;funccdp;cp_dp;CLZ;CLZ[condition;funcclz;CMN[condition;funccmn;CMP[condition;funccmp;EOR[condition;funceor;LDC[condition;funcldc;LDM[condition;reg;reg};register{s};LDM;funldm;OxA;LDMIB;thru;Reg;STMFD;LR};LDMFD;PC};LDMDA;T-bit;PC}^;LDR[condition;little-endian;LSB;big-endian;funcldr;load_store;funcldrb;BT;funcldrbt;DSP;doubleword-aligned;addr_;funcldrd;Halfword;halfword;halfword-aligned;funcldrh;funcldrsb;Adressing;LDRS;funcldrsh;LDRT[condition;funcldrt;funcmar;MRA;MCRR;MCRR[condition;cpopcode;cp-dest;funcmcrr;cp_move;ConditionPassed(;funcmia;MIAPH;MIAxy;sign_extend;funcmiaph;xy;y;funcmiaxy;MIABB;MIABT;MIATT;MLA;MLA[;funcmla;MOV[condition;funcmov;MOVS;MRA[;funcmra;MRC;MRC[condition;cpsource;cpreg[;cpreg;cpop;funcmrc;MRRC;MRRC[condition;cp-;funcmrrc;PSR;MRS[condition;funcmrs;MSR;MSR[condition;CPSR_bit;SPSR_bit;CSPR;bitmask;rotate_;funcmsr;CPSR_F;CPSR_X;SPSR_F;SPSR_X;MUL;MUL[condition;funcmul;MULS;MVN;MVN[condition;funcmvn;MVNS;ORR[condition;funcorr;SMULW;EOR(Thumb;STMIA;LDMIA;NEG;QADD;LDRSB(Thumb;QDADD;QDSUB;QSUB;SWI;RSB;RSC;SBC;TEQ;SMLA;MCR;SMLAL;UMLAL;UMULL;SMLAW;SMUL;SMULL;IRQ;FIQ;Opcodes;EQ;HS;PL;LS;N==V;LT;LE">
+
+
+<!--(Links)=========================================================-->
+
+ <link rel='stylesheet' href='MSL_styl_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='MSL_styl.css'>");}
+//-->
+</script>
+<style type="text/css">
+<!--
+img_whs1 {margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; width: 36px; height: 36px; border-style: none; float: right; border-style: none; float: right;}
+ul.whs2 {list-style: disc;}
+table.whs3 {border-collapse: collapse; table-layout: fixed; x-cell-content-align: Center; border-spacing: 1px; border-spacing: 1px;}
+col.whs4 {width: 139px;}
+col.whs5 {width: 129px;}
+col.whs6 {width: 85px;}
+tr.whs7 {x-cell-content-align: center; height: 28px;}
+tr.whs8 {x-cell-content-align: center; height: 30px;}
+tr.whs9 {x-cell-content-align: center; display: none; height: 0px;}
+td.whs10 {width: 139px; padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;}
+td.whs11 {width: 129px; padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;}
+td.whs12 {width: 85px; padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;}
+p.whs13 {font-style: italic;}
+-->
+</style>
+<script type="text/javascript" language="JavaScript">
+<!--
+if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4))
+{
+  var strNSS = "<style type='text/css'>";
+  strNSS += "img_whs1 {margin-top:1;margin-bottom:1;margin-left:1;margin-right:1; }";
+  strNSS +="</style>";
+  document.write(strNSS);
+}
+//-->
+</script>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令");
+addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n关于英特尔 XScale(R) 技术指令");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(0);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../reference_olh.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<h1><script type="text/javascript" language="JavaScript"><!--
+if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特尔 XScale(R) 技术主题' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+else
+{   document.write("<img src='XS_logo.gif' alt='英特尔 XScale(R) 技术主题' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特尔 XScale(R) 技术主题' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>关于英特尔 XScale&#xAE; 技术指令</h1>
+
+<p>&ldquo;英特尔 XScale(R)&rdquo;技术指令由两个部分组成：</p>
+
+<ul type="disc" class="whs2">
+	
+	<li class=kadov-p><p>&ldquo;ARM* 核心指令集&rdquo;，它包括 ARM 32 位指令与 THUMB 16 位指令。 </p></li>
+	
+	<li class=kadov-p><p>&ldquo;英特尔 XScale(R)&rdquo;技术的&ldquo;扩展指令集&rdquo;，包括 DSP（数字信号处理）增强指令与&ldquo;无线 MMX&#x2122;&rdquo;技术指令。 </p></li>
+</ul>
+
+<h2>指令列表</h2>
+
+<!--(Table)=========================================================-->
+<table x:str x-use-null-cells cellspacing="1" class="whs3">
+	
+<col span="4" class="whs4">
+<col class="whs5">
+<col class="whs5">
+<col class="whs6">
+
+<tr valign="middle" class="whs7">
+<td rowspan=2
+	class=xl3025234
+	style="width: 139px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="inst_adc.html">ADC</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_LDRBT.html">LDRBT</a></td>
+<td class=xl2425234
+	x:str="SMLALxy "
+	style="width: 129px;
+			text-align: left;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_SMLAL_(DSP).html">SMLALxy<span style="mso-spacerun: yes;">&#xA0;</span></a></td>
+<td class=xl2625234
+	style="width: 85px;
+			text-align: left;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WADD.html">WADD</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_LDRD.html">LDRD</a></td>
+<td class=xl2425234
+	x:str="SMLAWy "
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_SMLAW.html">SMLAWy<span style="mso-spacerun: yes;">&#xA0;</span></a></td>
+<td class=xl2625234
+	style="width: 85px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WALIGNI.html">WALIGNI</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td rowspan=2
+	class=xl3625234
+	style="width: 139px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="ADC_(Thumb).html">ADC (Thumb)</a></td>
+<td class=xl2425234
+	x:str="LDRH "
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_LDRH.html">LDRH<span style="mso-spacerun: yes;">&#xA0;</span></a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_SMUL.html">SMULxy</a></td>
+<td class=xl2625234
+	style="width: 85px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WALIGNR.html">WALIGNR</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="LDRH(1)_(Thumb).html">LDRH(1) (Thumb)</a></td>
+<td class=xl2825234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_SMULL.html">SMULL</a></td>
+<td class=xl2625234
+	style="width: 85px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WAND.html">WAND</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="INST_ADD.html">ADD</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="LDRH(2)_(Thumb).html">LDRH(2) (Thumb)</a></td>
+<td rowspan=2
+	class=xl3225234
+	style="width: 129px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_SMULW.html">SMULWy</a></td>
+<td class=xl2625234
+	style="width: 85px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WANDN.html">WANDN</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="ADD(1)_(Thumb).html">ADD(1) (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_LDRSB.html">LDRSB</a></td>
+<td class=xl2625234
+	style="width: 85px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WAVG2.html">WAVG2</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="ADD(2)_(Thumb).html">ADD(2) (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="LDRSB_(Thumb).html">LDRSB (Thumb)</a></td>
+<td rowspan=2
+	class=xl3725234
+	style="width: 129px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_STC.html">STC/STC2</a></td>
+<td class=xl2625234
+	style="width: 85px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WCMPEQ.html">WCMPEQ</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td rowspan=2
+	class=xl3625234
+	style="width: 139px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="ADD(3)_(Thumb).html">ADD(3) (Thumb)</a></td>
+<td rowspan=2
+	class=xl3725234
+	x:str="LDRSH "
+	style="width: 129px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_LDRSH.html">LDRSH<span style="mso-spacerun: yes;">&#xA0;</span></a></td>
+<td class=xl2625234
+	style="width: 85px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WCMPGT.html">WCMPGT</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_STM(1).html">STM(1)</a></td>
+<td class=xl2625234
+	style="width: 85px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WLDR.html">WLDR</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="ADD(4)_(Thumb).html">ADD(4) (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="LDRSH_(Thumb).html">LDRSH (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_STM(2).html">STM(2)</a></td>
+<td class=xl2625234
+	style="width: 85px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WMAC.html">WMAC</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="ADD(5)_(Thumb).html">ADD(5) (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_LDRT.html">LDRT</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="STMIA_(Thumb).html">STMIA (Thumb)</a></td>
+<td class=xl2625234
+	style="width: 85px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WMADD.html">WMADD</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="ADD(6)_(Thumb).html">ADD(6) (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="LSL(1)_(Thumb).html">LSL(1) (Thumb)</a></td>
+<td rowspan=2
+	class=xl3725234
+	style="width: 129px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_STR.html">STR</a></td>
+<td rowspan=2
+	class=xl3825234
+	style="width: 85px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WMAX.html">WMAX</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="ADD(7)_(Thumb).html">ADD(7) (Thumb)</a></td>
+<td rowspan=1
+	class=xl3725234
+	colspan=1
+	style="width: 129px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px>
+<p><a href="LSL(2)_(Thumb).html">LSL(2) (Thumb)</a></td>
+</tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="INST_AND.html">AND</a></td>
+<td class=xl3725234
+	style="width: 129px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px>
+<p>&nbsp;</td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="STR(1)_(Thumb).html">STR(1) (Thumb)</a></td>
+<td class=xl2625234
+	style="width: 85px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WMIN.html">WMIN</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="AND_(Thumb).html">AND (Thumb)</a></td>
+<td class=xl2425234
+	x:str="LSR(1) (Thumb) "
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="LSR(1)_(Thumb).html">LSR(1) (Thumb)<span style="mso-spacerun: yes;">&#xA0;</span></a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="STR(2)_(Thumb).html">STR(2) (Thumb)</a></td>
+<td class=xl2625234
+	style="width: 85px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WMOV.html">WMOV</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="ASR(1)__(Thumb).html">ASR(1) (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="LSR(2)_(Thumb).html">LSR(2) (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="STR(3)_(Thumb).html">STR(3) (Thumb)</a></td>
+<td class=xl2625234
+	style="width: 85px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WMUL.html">WMUL</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="ASR(2)_(Thumb).html">ASR(2) (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_MAR.html">MAR</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_STRB.html">STRB</a></td>
+<td rowspan=2
+	class=xl3825234
+	style="width: 85px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WOR.html">WOR</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="B(1)_(Thumb).html">B(1) (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_MCR.html">MCR/MCR2</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="STRB(1)_(Thumb).html">STRB(1) (Thumb)</a></td>
+</tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="B(2)_(Thumb).html">B(2) (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_MCRR.html">MCRR</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="STRB(2)_(Thumb).html">STRB(2) (Thumb)</a></td>
+<td class=xl2625234
+	style="width: 85px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WPACK.html">WPACK</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="INST_BBL.html">B/BL</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_MIA.html">MIA</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_STRBT.html">STRBT</a></td>
+<td class=xl2625234
+	style="width: 85px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WROR.html">WROR</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="INST_BIC.html">BIC</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_MIAPH.html">MIAPH</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_STRD.html">STRD</a></td>
+<td class=xl2625234
+	style="width: 85px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WSAD.html">WSAD</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="BIC_(Thumb).html">BIC (Thumb)</a></td>
+<td class=xl2825234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_MIAxy.html">MIAxy</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_STRH.html">STRH</a></td>
+<td class=xl2625234
+	style="width: 85px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WSHUFH.html">WSHUFH</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	x:str="BKPT "
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="INST_BKPT.html">BKPT<span style="mso-spacerun: yes;">&#xA0;</span></a></td>
+<td rowspan=2
+	class=xl3225234
+	style="width: 129px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_MLA.html">MLA</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="STRH(1)_(Thumb).html">STRH(1) (Thumb)</a></td>
+<td class=xl2625234
+	style="width: 85px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WSLL.html">WSLL</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="BKPT_(Thumb).html">BKPT (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="STRH(2)_(Thumb).html">STRH(2) (Thumb)</a></td>
+<td class=xl2625234
+	style="width: 85px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WSRA.html">WSRA</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="BLX(1)_(Thumb).html">BL/BLX(1) (Thumb)</a></td>
+<td rowspan=2
+	class=xl3725234
+	style="width: 129px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_MOV.html">MOV</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_STRT.html">STRT</a></td>
+<td class=xl2625234
+	style="width: 85px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WSRL.html">WSRL</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td rowspan=2
+	class=xl3625234
+	x:str="BLX(1) "
+	style="width: 139px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="INST_BLX(1).html">BLX(1)<span style="mso-spacerun: yes;">&#xA0;</span></a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_SUB.html">SUB</a></td>
+<td class=xl2925234
+	style="width: 85px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=85px><a href="WSTR.html">WSTR</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="MOV(1)_(Thumb).html">MOV(1) (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="SUB(1)_(Thumb).html">SUB(1) (Thumb)</a></td>
+<td class=xl1525234
+	style="width: 85px;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	width=85px>
+<p><a HREF="WSUB.html">WSUB</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	x:str="BLX(2) "
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="INST_BLX(2).html">BLX(2)<span style="mso-spacerun: yes;">&#xA0;</span></a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="MOV(2)_(Thumb).html">MOV(2) (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="SUB(2)_(Thumb).html">SUB(2) (Thumb)</a></td>
+<td class=xl1525234
+	style="width: 85px;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	width=85px>
+<p><a HREF="WUNPCKEH.html">WUNPCKEH</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="BLX(2)_(Thumb).html">BLX(2) (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="MOV(3)_(Thumb).html">MOV(3) (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="SUB(3)_(Thumb).html">SUB(3) (Thumb)</a></td>
+<td class=xl1525234
+	style="width: 85px;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	width=85px>
+<p><a HREF="WUNPCKEL.html">WUNPCKEL</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	x:str="BX "
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="INST_BX.html">BX<span style="mso-spacerun: yes;">&#xA0;</span></a></td>
+<td rowspan=2
+	class=xl3725234
+	style="width: 129px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_MRA.html">MRA</a></td>
+<td rowspan=2
+	class=xl3725234
+	style="width: 129px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="SUB(4)_(Thumb).html">SUB(4) (Thumb)</a></td>
+<td class=xl1525234
+	style="width: 85px;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	width=85px>
+<p><a HREF="WUNPCKIH.html">WUNPCKIH</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td rowspan=2
+	class=xl3625234
+	style="width: 139px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="BX_(Thumb).html">BX (Thumb)</a></td>
+<td class=xl1525234
+	style="width: 85px;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	width=85px>
+<p><a HREF="WUNPCKIL.html">WUNPCKIL</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_MRC.html">MRC</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_SWI.html">SWI</a></td>
+<td class=xl1525234
+	style="width: 85px;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	width=85px>
+<p><a HREF="WXOR.html">WXOR</a></td></tr>
+
+<tr valign="middle" class="whs7">
+<td class=xl2525234
+	x:str="CDP/CDP2 "
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="INST_CDP.html">CDP/CDP2<span style="mso-spacerun: yes;">&#xA0;</span></a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_MRRC.html">MRRC</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="SWI_(Thumb).html">SWI (Thumb)</a></td>
+<td class=xl1525234
+	style="width: 85px;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	width=85px>
+<p><a HREF="WZERO.html">WZERO</a></td></tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2525234
+	x:str="CLZ "
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="INST_CLZ.html">CLZ<span style="mso-spacerun: yes;">&#xA0;</span></a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_MRS.html">MRS</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_SWP.html">SWP</a></td>
+<td class=xl1525234
+	rowspan=25
+	colspan=1
+	style="width: 85px;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	width=85px>
+<p>&nbsp;</td></tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2525234
+	x:str="CMN "
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="INST_CMN.html">CMN<span style="mso-spacerun: yes;">&#xA0;</span></a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_MSR.html">MSR</a></td>
+<td rowspan=2
+	class=xl3725234
+	style="width: 129px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_SWPB.html">SWPB</a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="CMN_(Thumb).html">CMN (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_MUL.html">MUL</a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="INST_CMP.html">CMP</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="MUL_(Thumb).html">MUL (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="TANDC.html">TANDC</a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="CMP_(Thumb).html">CMP(1) (Thumb)</a></td>
+<td class=xl2425234
+	x:str="MVN "
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_MVN.html">MVN<span style="mso-spacerun: yes;">&#xA0;</span></a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="TBCST.html">TBCST</a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2525234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="CMP(2)_(Thumb).html">CMP(2) (Thumb)</a></td>
+<td class=xl2425234
+	x:str="MVN (Thumb) "
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="MVN_(Thumb).html">MVN (Thumb)<span style="mso-spacerun: yes;">&#xA0;</span></a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_TEQ.html">TEQ</a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2725234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="CMP(3)_(Thumb).html">CMP(3) (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="NEG_(Thumb).html">NEG (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="TEXTRC.html">TEXTRC</a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td rowspan=2
+	class=xl3225234
+	style="width: 139px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="INST_EOR.html">EOR</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_ORR.html">ORR</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="TEXTRM.html">TEXTRM</a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="ORR_(Thumb).html">ORR (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="TINSR.html">TINSR</a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td rowspan=2
+	class=xl3725234
+	style="width: 139px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="EOR_(Thumb).html">EOR (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_PLD.html">PLD</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="TMCR.html">TMCR</a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="POP_(Thumb).html">POP (Thumb)</a></td>
+<td class=xl2825234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="TMCRR.html">TMCRR</a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2425234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="INST_LDC.html">LDC</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="PUSH_(Thumb).html">PUSH (Thumb)</a></td>
+<td rowspan=2
+	class=xl3425234
+	style="width: 129px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="TMIA.html">TMIA</a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2425234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="INST_LDM(1).html">LDM(1)</a></td>
+<td class=xl2425234
+	x:str="QADD "
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_QADD.html">QADD<span style="mso-spacerun: yes;">&#xA0;</span></a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2425234
+	x:str="LDM(2) "
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="INST_LDM(2).html">LDM(2)<span style="mso-spacerun: yes;">&#xA0;</span></a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_QDADD.html">QDADD</a></td>
+<td rowspan=2
+	class=xl3825234
+	style="width: 129px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="TMIAPH.html">TMIAPH</a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td rowspan=2
+	class=xl3725234
+	x:str="LDM(3) "
+	style="width: 139px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="INST_LDM(3).html">LDM(3)<span style="mso-spacerun: yes;">&#xA0;</span></a></td>
+<td rowspan=2
+	class=xl3725234
+	style="width: 129px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_QDSUB.html">QDSUB</a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2625234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="TMOVMSK.html">TMOVMSK</a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2425234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="LDMIA_(Thumb).html">LDMIA (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_QSUB.html">QSUB</a></td>
+<td class=xl2625234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="TMRC.html">TMRC</a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2425234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="inst_ldr.html">LDR</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="ROR_(Thumb).html">ROR (Thumb)</a></td>
+<td class=xl2625234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="TMRRC.html">TMRRC</a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2425234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="LDR(1)_(Thumb).html">LDR(1) (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_RSB.html">RSB</a></td>
+<td rowspan=2
+	class=xl3825234
+	style="width: 129px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="TORC.html">TORC</a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2425234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="LDR(2)_(Thumb).html">LDR(2) (Thumb)</a></td>
+<td rowspan=2
+	class=xl3725234
+	x:str="RSC "
+	style="width: 129px;
+			text-align: left;
+			border-bottom: 1.0pt solid #808080;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_RSC.html">RSC<span style="mso-spacerun: yes;">&#xA0;</span></a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2425234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="LDR(3)_(Thumb).html">LDR(3) (Thumb)</a></td>
+<td class=xl2625234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_TST.html">TST</a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2425234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="LDR(4)_(Thumb).html">LDR(4) (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_SBC.html">SBC</a></td>
+<td class=xl2625234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="TST_(Thumb).html">TST (Thumb)</a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2425234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="INST_LDRB.html">LDRB</a></td>
+<td class=xl2425234
+	x:str="SBC (Thumb) "
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="SBC_(Thumb).html">SBC (Thumb)<span style="mso-spacerun: yes;">&#xA0;</span></a></td>
+<td class=xl2625234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_UMLAL.html">UMLAL</a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2425234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="LDRB(1)_(Thumb).html">LDRB(1) (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_SMLA.html">SMLAxy</a></td>
+<td class=xl2625234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_UMULL.html">UMULL</a></td>
+</tr>
+
+<tr valign="middle" class="whs8">
+<td class=xl2425234
+	style="width: 139px;
+			text-align: left;
+			border-top: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=139px><a href="LDRB(2)_(Thumb).html">LDRB(2) (Thumb)</a></td>
+<td class=xl2425234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="INST_SMLAL.html">SMLAL</a></td>
+<td class=xl2625234
+	style="width: 129px;
+			text-align: left;
+			border-top: none;
+			border-left: none;
+			padding-left: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;"
+	align=left
+	width=129px><a href="WACC.html">WACC</a></td>
+</tr>
+
+<![if supportMisalignedColumns]>
+ <tr valign="middle" class="whs9">
+	
+<td width="139px" class="whs10">
+<p>&nbsp;</td>
+<td width="129px" class="whs11">
+<p>&nbsp;</td>
+<td width="129px" class="whs11">
+<p>&nbsp;</td>
+<td width="85px" class="whs12">
+<p>&nbsp;</td></tr>
+<![endif]&gt;
+</table>
+
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p class="whs13">更新日期：January 25, 2006 A</p>
+
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</body>
+
+
+<!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Inst_Overview_of_Instructions.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:33:08 GMT -->
+</html>
