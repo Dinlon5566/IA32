@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/lipslatency.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:36 GMT -->
 <head>
 
-<title>�ӳ�</title>
+<title>延遲</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="04 6, 2003 4:01:59 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -92,7 +92,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������ĳͷ�\n�ӳ�");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器的懲罰\n延遲");
 
 	}
 	if (window.writeBtnStyle)
@@ -115,15 +115,15 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>�ӳ�</h1>
+<h1>延遲</h1>
 
-<p><span style="font-weight: bold;"><B>Latency</B></span> ��ʾ���Խ�һ��ָ���滻�������ӳٸ��̵�����ָ�����С�</p>
+<p><span style="font-weight: bold;"><B>Latency</B></span> 表示可以將一條指令替換成總體延遲更短的其它指令序列。</p>
 
-<h3><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs1"> <span style="font-weight: bold;"><B>����</B></span></h3>
+<h3><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs1"> <span style="font-weight: bold;"><B>建議</B></span></h3>
 
-<p>���Խ���ָ���滻�ɿ����ڸ��ٵ�������ִ����ͬ����������ָ�����С�</p>
+<p>嘗試將此指令替換成可以在更少的週期內執行相同操作的其它指令序列。</p>
 
-<p>�±��г��ᵼ�� <span style="font-weight: bold;"><B>Latency</B></span> �ͷ���ָ����ṩ�й���ξ������ͳͷ��Ľ��顣</p>
+<p>下表列出會導致 <span style="font-weight: bold;"><B>Latency</B></span> 懲罰的指令，並提供有關如何儘量降低懲罰的建議。</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="100%" class="whs2">
@@ -136,49 +136,49 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) 
 
 <tr valign="top" class="whs6">
 <td width="18.271%" class="whs7">
-<h3 class=TableHead>ָ�� </td>
+<h3 class=TableHead>指令 </td>
 <td colspan="1" rowspan="1" width="43.407%" class="whs8">
-<h3 class=TableHead>�ӳ�˵��</td>
+<h3 class=TableHead>延遲說明</td>
 <td width="38.323%" class="whs9">
-<h3 class=TableHead><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs10"> ����</td></tr>
+<h3 class=TableHead><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs10"> 建議</td></tr>
 
 <tr valign="top" class="whs6">
 <td width="18.271%" class="whs11">
-<p><span class=Code>inc</span> �� <span class=Code>dec</span></td>
+<p><span class=Code>inc</span> 與 <span class=Code>dec</span></td>
 <td colspan="1" rowspan="1" width="43.407%" class="whs12">
-<p><span class=Code>inc</span> �� <span class=Code>dec</span> ָ��ֻ�޸ı�־�Ĵ����е�һ����λ����ᵼ�¶Ա�־�Ĵ�����������ǰд��������ԡ���Ϊ��Щָ�����ڸ��ļ��أ���������ָ������ڴ˲������ĵ�ַ�������Ǵ��ڹؼ�·��֮��ʱ����������Ϊ���⡣</td>
+<p><span class=Code>inc</span> 與 <span class=Code>dec</span> 指令只修改標誌暫存器中的一部分位。這會導致對標誌暫存器上所有先前寫入的依賴性。因為這些指令用於更改載入（其它許多指令都依賴於此操作）的地址，在它們處於關鍵路徑之上時，這尤其會成為問題。</td>
 <td width="38.323%" class="whs13">
-<p><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs10"> �� <span class=Code>inc</span> �� <span class=Code>dec</span></p>
-<p>ָ���滻�� <span class=Code>add</span> �� <span class=Code>sub</span> ָ���Ϊ <span class=Code>add</span> �� <span class=Code>sub</span> �Ḳ�����б�־λ��</p>
+<p><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs10"> 將 <span class=Code>inc</span> 與 <span class=Code>dec</span></p>
+<p>指令替換成 <span class=Code>add</span> 或 <span class=Code>sub</span> 指令，因為 <span class=Code>add</span> 與 <span class=Code>sub</span> 會覆蓋所有標誌位。</p>
 <p>&nbsp;</td></tr>
 
 <tr valign="top" class="whs6">
 <td width="18.271%" class="whs11">
 <p><span class=Code>shift</span></td>
 <td colspan="1" rowspan="1" width="43.407%" class="whs12">
-<p>ͬ��ǰ������������ȣ�<span class=Code>shift</span> ָ���ڱ��� 4 �������ϵ��ӳٸ������̶���ɱ���λ���ӳ���ͬ�� </p>
-<p>add ���е��ӳٱ���λ�����µ������ӳٸ��̡� </td>
+<p>同以前各代處理器相比，<span class=Code>shift</span> 指令在奔騰 4 處理器上的延遲更長。固定與可變移位的延遲相同。 </p>
+<p>add 序列的延遲比三位及以下的左移延遲更短。 </td>
 <td width="38.323%" class="whs13">
-<p><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs10"> ��� shift �ڹؼ�·���ϣ��뽫���滻�� add��������������С���������ӳٲ����ؼ�������ʹ�� shift��ԭ��������������΢�������١� </td></tr>
+<p><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs10"> 如果 shift 在關鍵路徑上，請將它替換成 add（最多三條）序列。如果它的延遲並不關鍵，請仍使用 shift，原因在於它產生的微操作更少。 </td></tr>
 
 <tr valign="top" class="whs6">
 <td colspan="1" rowspan="1" width="18.271%" class="whs11">
 <p><span class=Code>rotate</span></td>
 <td colspan="1" rowspan="1" width="43.407%" class="whs12">
-<p>ͬ��ǰ������������ȣ�<span class=Code>rotate</span> ָ���ڱ��� 4 �������ϵ��ӳٸ����� &nbsp;</td>
+<p>同以前各代處理器相比，<span class=Code>rotate</span> 指令在奔騰 4 處理器上的延遲更長。 &nbsp;</td>
 <td colspan="1" rowspan="1" width="38.323%" class="whs13">
-<p><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs10"> ����������Ĵ�����ѭ����λ����ͨ��λָ��Ŀ�������ѭ���ƶ� 1 λ����ͨ��λ���ӳ���ͬ�� </p>
-<p><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs10"> ����ʹ�ð��Ĵ�����������ѭ����λָ�������ܣ����滻��ѭ���ƶ� 1 λ��ָ�</p>
+<p><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs10"> 按立即數與暫存器的循環移位比普通移位指令的開銷更大。循環移動 1 位與普通移位的延遲相同。 </p>
+<p><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs10"> 避免使用按暫存器或立即數循環移位指令。如果可能，請替換成循環移動 1 位的指令。</p>
 <p>&nbsp;</td></tr>
 
 <tr valign="top" class="whs6">
 <td width="18.271%" class="whs11">
-<p><span class=Code>mul</span> �� <span class=Code>imul</span></td>
+<p><span class=Code>mul</span> 與 <span class=Code>imul</span></td>
 <td colspan="1" rowspan="1" width="43.407%" class="whs12">
-<p>�����˷����� <span class=Code>mul</span> �� <span 
- class=Code>imul</span> �ڸ��㵥Ԫ��ִ�У������Щָ�Ӧ��ͬ����ָ���ִ�С������ڸ��㵥Ԫ��ִ�У����ǻ��ᵼ��һЩ������ӳ١������һ������ִ�� <span class=Code>fmul</span>���򸡵�˷�ָ�� (<span   class=Code>fmul</span>) ���ӳ�һ�����ڡ��˷���ֻ��ÿ��һ�����ڽ���һ���²�������</td>
+<p>整數乘法運算 <span class=Code>mul</span> 與 <span 
+ class=Code>imul</span> 在浮點單元中執行，因此這些指令不應該同浮點指令並行執行。由於在浮點單元中執行，它們還會導致一些額外的延遲。如果上一個週期執行 <span class=Code>fmul</span>，則浮點乘法指令 (<span   class=Code>fmul</span>) 將延遲一個週期。乘法器只能每隔一個週期接受一對新運算元。</td>
 <td width="38.323%" class="whs13">
-<p><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs10"> ������С�����������˷������滻����������� <span class=Code>add</span> �� <span class=Code>lea</span> ָ�����Щ�˷��������������һ����ʱ������Ӧ����������</td></tr>
+<p><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs10"> 將乘以小常數的整數乘法運算替換成兩條或更多 <span class=Code>add</span> 與 <span class=Code>lea</span> 指令，在這些乘法運算是相關鏈的一部分時，尤其應該這樣做。</td></tr>
 <script language='JavaScript'><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) document.write("</table></table><table>");
 //--></script>
@@ -186,7 +186,7 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) 
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','����(R) 4 ������','pentium(r)_4_processor.htm');return false;" title="Ӱ��Ĵ�����"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%bd%b1%e5%93%8d%e7%9a%84%e5%a4%84%e7%90%86%e5%99%a8.gif" border=0 height=20 width=82 alt="Ӱ��Ĵ�����"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','奔騰(R) 4 處理器','pentium(r)_4_processor.htm');return false;" title="影響的處理器"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%bd%b1%e5%93%8d%e7%9a%84%e5%a4%84%e7%90%86%e5%99%a8.gif" border=0 height=20 width=82 alt="影響的處理器"></a>
 
 
  </p>

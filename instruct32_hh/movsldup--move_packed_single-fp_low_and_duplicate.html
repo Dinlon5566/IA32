@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/movsldup--move_packed_single-fp_low_and_duplicate.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:51 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>MOVSLDUP - �ƶ�ѹ�������ȸ���ֵ��λ������</title>
+<title>MOVSLDUP - 移動壓縮單精度浮點值低位並複製</title>
 
 <!--(Meta)==========================================================-->
 
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nM - ָ��\nMOVSLDUP - �ƶ�ѹ�������ȸ���ֵ��λ������");
+	addTocInfo("參考\n指令集\nIA-32 指令\nM - 指令\nMOVSLDUP - 移動壓縮單精度浮點值低位並複製");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,7 +105,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>MOVSLDUP - �ƶ�ѹ�������ȸ���ֵ��λ������</h1>
+<h1>MOVSLDUP - 移動壓縮單精度浮點值低位並複製</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -116,10 +116,10 @@ else
 	style="margin-bottom: 0;">&nbsp;</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">說明</td></tr>
 
 <tr>
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
@@ -127,20 +127,20 @@ else
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
 <p CLASS=TableCell>MOVSLDUP xmm1, xmm2/m128</td>
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
-<p CLASS=TableCell>�� XMM2/Mem �д���ѹ�� SP ����Ԫ�ص� 128 λ�Ƶ� XMM1 �Ĵ��������Ƶ�λ���֡�</td></tr>
+<p CLASS=TableCell>將 XMM2/Mem 中代表壓縮 SP 數據元素的 128 位移到 XMM1 暫存器並複製低位部分。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-���Ե�ַ��Ӧ�����õ��ڴ����ݵ������Ч�ֽڡ�ָ���ڴ��ַʱ���������ڴ�λ�� m128 �� 16 ���ֽڵ����ݣ�������λ�� 0 �� 2 ���ĵ�����Ԫ�ء�ʹ�üĴ���-�Ĵ�����ʽ�Ĵ˲���ʱ����ִ����ͬ�Ĳ��������������� 128 λԴ�Ĵ����� 
+線性地址對應于引用的記憶體數據的最低有效位元組。指出記憶體地址時，將載入記憶體位置 m128 處 16 個位元組的數據，並複製位置 0 與 2 處的單精度元素。使用暫存器-暫存器形式的此操作時，將執行相同的操作，但數據來自 128 位源暫存器。 
 
 <br><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='MOVSLDUP.gif' alt='MOVSLDUP���ƶ�ѹ�������ȸ���ֵ��λ������' x-maintain-ratio='TRUE' width='474px' height='168px' border='1' class='img_whs3'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='MOVSLDUP.gif' alt='MOVSLDUP：移動壓縮單精度浮點值低位並複製' x-maintain-ratio='TRUE' width='474px' height='168px' border='1' class='img_whs3'>");}
 else
-{   document.write("<img src='MOVSLDUP.gif' alt='MOVSLDUP���ƶ�ѹ�������ȸ���ֵ��λ������' x-maintain-ratio='TRUE' style='border-left-style:Solid;border-left-width:1px;border-right-style:Solid;border-right-width:1px;border-top-style:Solid;border-top-width:1px;border-bottom-style:Solid;border-bottom-width:1px;' width='474px' height='168px' border='1' class='img_whs3'>");}
-//--></script><noscript><img src='MOVSLDUP.gif' alt='MOVSLDUP���ƶ�ѹ�������ȸ���ֵ��λ������' x-maintain-ratio='TRUE' style='border-left-style:Solid;border-left-width:1px;border-right-style:Solid;border-right-width:1px;border-top-style:Solid;border-top-width:1px;border-bottom-style:Solid;border-bottom-width:1px;' width='474px' height='168px' border='1' class='img_whs3'></noscript>
-<h2>����</h2>
+{   document.write("<img src='MOVSLDUP.gif' alt='MOVSLDUP：移動壓縮單精度浮點值低位並複製' x-maintain-ratio='TRUE' style='border-left-style:Solid;border-left-width:1px;border-right-style:Solid;border-right-width:1px;border-top-style:Solid;border-top-width:1px;border-bottom-style:Solid;border-bottom-width:1px;' width='474px' height='168px' border='1' class='img_whs3'>");}
+//--></script><noscript><img src='MOVSLDUP.gif' alt='MOVSLDUP：移動壓縮單精度浮點值低位並複製' x-maintain-ratio='TRUE' style='border-left-style:Solid;border-left-width:1px;border-right-style:Solid;border-right-width:1px;border-top-style:Solid;border-top-width:1px;border-bottom-style:Solid;border-bottom-width:1px;' width='474px' height='168px' border='1' class='img_whs3'></noscript>
+<h2>操作</h2>
 
 <p class=Preformatted>if (source == m128) {  </p>
 
@@ -183,39 +183,39 @@ else
 <p class=Preformatted
 	style="margin-left: 0px;">}</p>
 
-<h2>�쳣</h2>
+<h2>異常</h2>
 
-���δ���� 16 �ֽڱ߽磬�����һ�㱣�����쳣�����۶���Ρ� 
+如果未對齊 16 位元組邊界，則產生一般保護性異常，無論段如何。 
 
-<h2>��ֵ�쳣</h2>
+<h2>數值異常</h2>
 
-��
+無
 
-<h2>����ģʽ�쳣</h2>
+<h2>保護模式異常</h2>
 
-#GP(0) - CS��DS��ES��FS �� GS ���е��ڴ��������Ч��ַ�Ƿ��� 
+#GP(0) - CS、DS、ES、FS 或 GS 段中的記憶體運算元有效地址非法。 
 
-<br>#SS(0) - SS ���еĵ�ַ�Ƿ��� 
+<br>#SS(0) - SS 段中的地址非法。 
 
-<br>#PF(�������) - ҳ���� 
+<br>#PF(錯誤程式碼) - 頁錯誤。 
 
-<br>#NM - ��� CR0 �е� TS ����Ϊ 1��#UD - ��� CR0.EM = 1��
-��� CR4.OSFXSR(bit 9) = 0��
-��� CPUID.PNI(ECX bit 0) = 0��<h2>ʵ��ַģʽ�쳣</h2>
+<br>#NM - 如果 CR0 中的 TS 設定為 1。#UD - 如果 CR0.EM = 1。
+如果 CR4.OSFXSR(bit 9) = 0。
+如果 CPUID.PNI(ECX bit 0) = 0。<h2>實地址模式異常</h2>
 
-�ж� 13 - ������������κβ��ֳ����ڴ� 0 �� 0FFFFH ����Ч��ַ�ռ�֮�⡣ 
+中斷 13 - 如果運算元的任何部分出現在從 0 到 0FFFFH 的有效地址空間之外。 
 
-<br>#NM - ��� CR0 �е� TS ����Ϊ 1�� 
+<br>#NM - 如果 CR0 中的 TS 設定為 1。 
 
-<br>#UD - ��� CR0.EM = 1��
-��� CR4.OSFXSR(bit 9) = 0����� CPUID.PNI(ECX bit 0) = 0��MOVSLDUP���ƶ�ѹ�������ȸ���ֵ��λ�����ƣ�����
-<h2>�� 8086 ģʽ�쳣</h2>
+<br>#UD - 如果 CR0.EM = 1。
+如果 CR4.OSFXSR(bit 9) = 0。如果 CPUID.PNI(ECX bit 0) = 0。MOVSLDUP：移動壓縮單精度浮點值低位並複製（續）
+<h2>虛 8086 模式異常</h2>
 
-�ж� 13 - ������������κβ��ֳ����ڴ� 0 �� 0FFFFH ����Ч��ַ�ռ�֮�⡣ 
+中斷 13 - 如果運算元的任何部分出現在從 0 到 0FFFFH 的有效地址空間之外。 
 
-<br>#NM - ��� CR0 �е� TS ����Ϊ 1�� 
+<br>#NM - 如果 CR0 中的 TS 設定為 1。 
 
-<br>#UD - ��� CR0.EM = 1����� CR4.OSFXSR(bit 9) = 0����� CPUID.PNI(ECX bit 0) = 0��#PF(�������) - ҳ���� 
+<br>#UD - 如果 CR0.EM = 1。如果 CR4.OSFXSR(bit 9) = 0。如果 CPUID.PNI(ECX bit 0) = 0。#PF(錯誤程式碼) - 頁錯誤。 
 
 <script type="text/javascript" language="javascript1.2">
 <!--

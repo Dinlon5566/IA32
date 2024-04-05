@@ -1,7 +1,7 @@
 <HTML>
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/syll_not_dispersed.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:42 GMT -->
 <HEAD>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 <TITLE>SYLL_NOT_DISPERSED</TITLE>
  <link rel='stylesheet' href='MSL_styl_ns.css'>
 <script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
@@ -48,7 +48,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\nָ������¼�\nSYLL_NOT_DISPERSED");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 安騰(R) 2 處理器\n英特爾(R) 安騰(R) 2 處理器事件\n指令分派事件\nSYLL_NOT_DISPERSED");
 
 	}
 	if (window.writeBtnStyle)
@@ -72,28 +72,28 @@ else
 //-->
 </script>
 <H1>SYLL_NOT_DISPERSED</H1>
-<BR><B style="font-weight: bold;">���⣺</B>δ���ɵ�ָ���<BR><B style="font-weight: bold;"> ���</B>ָ������¼�<BR><B style="font-weight: bold;"> IAR/DAR/OPC��</B>Y/N/N<BR><B style="font-weight: bold;"> �¼����룺</B>0x4E<BR><B style="font-weight: bold;">���ÿ����������</B>5<BR><P><B style="font-weight: bold;">���壺</B>ͳ���������е�ԭ����ͣ���⣩������δ���ɵ�ָ�������ͨ����Ԫ������Խ���ϸ��Ϊ 4 �����֮һ��</P>
+<BR><B style="font-weight: bold;">標題：</B>未分派的指令節<BR><B style="font-weight: bold;"> 類別：</B>指令分派事件<BR><B style="font-weight: bold;"> IAR/DAR/OPC：</B>Y/N/N<BR><B style="font-weight: bold;"> 事件程式碼：</B>0x4E<BR><B style="font-weight: bold;">最大每週期增量：</B>5<BR><P><B style="font-weight: bold;">定義：</B>統計由於所有的原因（暫停除外）而導致未分派的指令節數。通過單元掩碼可以將它細分為 4 種類別之一。</P>
 
 
 <BR><BR><TABLE x-use-null-cells style="width: 100%;" width=100%>
-<TR><TD><H3 CLASS=TableHead>��չ</TD>
+<TR><TD><H3 CLASS=TableHead>擴充套件</TD>
 <TD><H3 CLASS=TableHead>PMC.umask</TD>
-<TD><H3 CLASS=TableHead>˵��</TD></TR>
+<TD><H3 CLASS=TableHead>說明</TD></TR>
 <TR><TD><P>ALL</TD>
 <TD><P>b1111</TD>
-<TD><P>ͳ��δ���ɵ�����ָ��ڡ���ע��b0000-b1111 ���κ���϶���Ч��</TD></TR>
+<TD><P>統計未分派的所有指令節。備註：b0000-b1111 的任何組合都有效。</TD></TR>
 <TR><TD><P>MLI</TD>
 <TD><P>b1xxx</TD>
-<TD><P>ͳ������ MLI ָ���������¶�ַ���� 0 ָ��ڶ�����δ���ɵ�ָ�����������ÿ�� MLI ָ���������ɹ��̻�ִ�� 1 ��ָ������С��������¶�ַ���ĸ�ָ��ڣ����ɹ��̿��ܻ�ִ�� 0-2 ��ָ������С��ڴ˻�ͳ�Ʋ��ʱ����ǰ�˴����ָ���� 1��0-2 ��ָ������У���</TD></TR>
+<TD><P>統計由於 MLI 指令束與重新定址到非 0 指令節而導致未分派的指令節數。對於每個 MLI 指令束，分派過程會執行 1 個指令節命中。根據重新定址到哪個指令節，分派過程可能會執行 0-2 個指令節命中。在此會統計拆分時發生前端錯誤的指令束 1（0-2 個指令節命中）。</TD></TR>
 <TR><TD><P>FE</TD>
 <TD><P>bx1xx</TD>
-<TD><P>ͳ������ǰ��δ�ṩ��Чָ�������ṩ��Ч�ķǷ�ģ�������δ���ɵ�ָ��ڡ�����ǰ���ṩ��ÿ����Чָ��������Ч�ķǷ�ģ�壬���ɹ��̻�ִ�� 3 ��ָ������С��˴�ͳ�Ʒ���ǰ�˴����ָ���� 1��3 ��ָ������У���</TD></TR>
+<TD><P>統計由於前端未提供有效指令束或提供有效的非法模板而導致未分派的指令節。對於前端提供的每個無效指令束或有效的非法模板，分派過程會執行 3 個指令節命中。此處統計發生前端錯誤的指令束 1（3 個指令節命中）。</TD></TR>
 <TR><TD><P>IMPL</TD>
 <TD><P>bxx1x</TD>
-<TD><P>ͳ��������ʽֹͣλ������δ���ɵ�ָ��ڡ���Щ�������еķǼܹ���ֹͣλ�����Գơ�����Ԥ������ʽ����ɡ�����ָ���� 0(1) �е�ÿ����ʽֹͣλ�����ɹ��̻�ִ�� 6 ��ָ��ڣ�3 ��ָ��ڣ����С�</TD></TR>
+<TD><P>統計由於隱式停止位而導致未分派的指令節。這些是由所有的非架構型停止位（不對稱、超額預訂、隱式）組成。對於指令束 0(1) 中的每個隱式停止位，分派過程會執行 6 個指令節（3 個指令節）命中。</TD></TR>
 <TR><TD><P>EXPL</TD>
 <TD><P>bxxx1</TD>
-<TD><P>ͳ��������ʽֹͣλ������δ���ɵ�ָ��ڡ���Щ�ɳ���Աָ���ļܹ��� S λ��ģ�� 1 �� 5 ��ɡ�����ָ���� 0(1) �е�ÿ��ģ�� 1/5�����ɹ��̻�ִ�� 6 ��ָ��ڣ�3 ��ָ��ڣ����С�����ָ���� 0(1) �е�ÿ�� S λ�����ɹ���ִ�� 3 ��ָ��ڣ�0 ��ָ��ڣ����С�</TD></TR>
+<TD><P>統計由於顯式停止位而導致未分派的指令節。這些由程式設計師指定的架構型 S 位與模板 1 和 5 組成。對於指令束 0(1) 中的每個模板 1/5，分派過程會執行 6 個指令節（3 個指令節）命中。對於指令束 0(1) 中的每個 S 位，分派過程執行 3 個指令節（0 個指令節）命中。</TD></TR>
 </TABLE>
 
 

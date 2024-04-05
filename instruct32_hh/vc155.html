@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc155.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:16 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>LGDT/LIDT - ����ȫ��/�ж�����������Ĵ���</title>
+<title>LGDT/LIDT - 載入全域性/中斷描述符表格暫存器</title>
 
 <!--(Meta)==========================================================-->
 
@@ -23,7 +23,7 @@
 <meta name=layout-height content=1210>
 <meta name=layout-width content=689>
 <meta name=date content="03 6, 2002 11:47:54 AM">
-<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;��F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;��;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FLDZ--Load;EB;EC;EE;FLDZ;FCLEX;FNCLEX--Clear;FNCLEX*;PE;UE;OE;ZE;IE;FNCLEX;FNINIT*;coprocessor;FPUControlWord;FPUStatusWord;FPUTagWord;FPUDataPointer;FPUInstructionPointer;FPULastInstructionOpcode;FSAVE;FNSAVE--Store;FNSAVE*;FNSAVE;FNINIT--Initialize;coprocessors;FPUs;FWAIT;DEST[FPUControlWord;DEST[FPUStatusWord;DEST[FPUTagWord;DEST[FPUDataPointer;DEST[FPUInstructionPointer;DEST[FPULastInstructionOpcode;nonwritable;FSTCW;FNSTCW--Store;FNSTCW*;FNSTCW;FNSTENV--Store;FSTENV;FNSTENV*;FNSTENV;FNSTSW--Store;FNSTSW*;FNSTSW;FPREM;FXAM;denormalized;MOV--Move;ModR;M;m;PG;PGE;PSE;PAE;PDPTRs;FSTP--Store;FUCOMIP--Compare;FUCOMIP;FUCOMPP--Unordered;FWAIT--Wait;MP;INSB;INSW;INSD--Input;INSD;CPL;IOPL;VM;TSS;CL;BL;CH;DH;BH;CX;BX;SP;EBX;EBP;mm--An;DPL=;C;W;Y;INTRA-PRIVILEGE-LEVEL-INTERRUPT;flag*;Push(CS;Push(IP;IDT(Descriptor;vector_number;GP((DEST;EXT;GP((vector_number;NP((vector_number;GDT;GP(TSS;NP(TSS;Push(error;GP(selector;NP(selector;GP(new;GP(CodeSegmentSelector;INTER-PREVILEGE-LEVEL-INTERRUPT;TSSstackAddress;TS(current;NewSS;NewESP;TS(EXT;RPL;TS(SS;LDT;SS(SS;selector+EXT;SS(segment;TSS(NewSS;Gate(CS;IP;Push(far;Push(EFLAGS;Push(ErrorCode;ELSE(*;CodeSegmentDescriptor(DPL;CS(RPL;RF;tempEFLAGS;TempSS;TempESP;Push(GS;Push(FS;Push(DS;Push(ES;Push(TempSS;Push(TempESP;Push(TempEFlags;Push(EIP;Gate(instruction;ErrorCode;SS(selector;TS(selector;TSS's;LIDT--Load;SFENCE--Store;IDTR(Limit;IDTR(Base;GDTR(Limit;GDTR(Base">
+<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;±F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;±;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FLDZ--Load;EB;EC;EE;FLDZ;FCLEX;FNCLEX--Clear;FNCLEX*;PE;UE;OE;ZE;IE;FNCLEX;FNINIT*;coprocessor;FPUControlWord;FPUStatusWord;FPUTagWord;FPUDataPointer;FPUInstructionPointer;FPULastInstructionOpcode;FSAVE;FNSAVE--Store;FNSAVE*;FNSAVE;FNINIT--Initialize;coprocessors;FPUs;FWAIT;DEST[FPUControlWord;DEST[FPUStatusWord;DEST[FPUTagWord;DEST[FPUDataPointer;DEST[FPUInstructionPointer;DEST[FPULastInstructionOpcode;nonwritable;FSTCW;FNSTCW--Store;FNSTCW*;FNSTCW;FNSTENV--Store;FSTENV;FNSTENV*;FNSTENV;FNSTSW--Store;FNSTSW*;FNSTSW;FPREM;FXAM;denormalized;MOV--Move;ModR;M;m;PG;PGE;PSE;PAE;PDPTRs;FSTP--Store;FUCOMIP--Compare;FUCOMIP;FUCOMPP--Unordered;FWAIT--Wait;MP;INSB;INSW;INSD--Input;INSD;CPL;IOPL;VM;TSS;CL;BL;CH;DH;BH;CX;BX;SP;EBX;EBP;mm--An;DPL=;C;W;Y;INTRA-PRIVILEGE-LEVEL-INTERRUPT;flag*;Push(CS;Push(IP;IDT(Descriptor;vector_number;GP((DEST;EXT;GP((vector_number;NP((vector_number;GDT;GP(TSS;NP(TSS;Push(error;GP(selector;NP(selector;GP(new;GP(CodeSegmentSelector;INTER-PREVILEGE-LEVEL-INTERRUPT;TSSstackAddress;TS(current;NewSS;NewESP;TS(EXT;RPL;TS(SS;LDT;SS(SS;selector+EXT;SS(segment;TSS(NewSS;Gate(CS;IP;Push(far;Push(EFLAGS;Push(ErrorCode;ELSE(*;CodeSegmentDescriptor(DPL;CS(RPL;RF;tempEFLAGS;TempSS;TempESP;Push(GS;Push(FS;Push(DS;Push(ES;Push(TempSS;Push(TempESP;Push(TempEFlags;Push(EIP;Gate(instruction;ErrorCode;SS(selector;TS(selector;TSS's;LIDT--Load;SFENCE--Store;IDTR(Limit;IDTR(Base;GDTR(Limit;GDTR(Base">
 
 
  <meta name="topic-status" content="In Progress">
@@ -96,7 +96,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nL - ָ��\nLGDT/LIDT - ����ȫ��/�ж�����������Ĵ���");
+	addTocInfo("參考\n指令集\nIA-32 指令\nL - 指令\nLGDT/LIDT - 載入全域性/中斷描述符表格暫存器");
 
 	}
 	if (window.writeBtnStyle)
@@ -119,7 +119,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>LGDT/LIDT - ����ȫ��/�ж�����������Ĵ���</h1>
+<h1>LGDT/LIDT - 載入全域性/中斷描述符表格暫存器</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -127,13 +127,13 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">������</td>
+	style="margin-bottom: 0;">操作碼</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">說明</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -144,7 +144,7 @@ else
 	style="margin-bottom: 0;">LGDT <span style="font-style: italic;"><I>m16&amp;32</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <span style="font-style: italic;"><I>m</I></span> ���ص� GDTR</td></tr>
+	style="margin-bottom: 0;">將 <span style="font-style: italic;"><I>m</I></span> 載入到 GDTR</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -155,18 +155,18 @@ else
 	style="margin-bottom: 0;">LIDT <span style="font-style: italic;"><I>m16&amp;32</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <span style="font-style: italic;"><I>m</I></span> ���ص� IDTR</td></tr>
+	style="margin-bottom: 0;">將 <span style="font-style: italic;"><I>m</I></span> 載入到 IDTR</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>��Դ�������е�ֵ���ص�ȫ������������Ĵ��� (GDTR) ���ж�����������Ĵ��� (IDTR)��Դ������ָ�� 6 �ֽ��ڴ�λ�ã�������ȫ������������ (GDT) ���ж����������� (IDT) �Ļ�ַ�����Ե�ַ�������ƣ������С�����ֽڼƣ��������������С������ 32 λ���� 16 λ���ƣ�6 �ֽ����ݲ������� 2 ����λ�ֽڣ��� 32 λ��ַ�����ݲ������� 4 ����λ�ֽڣ����ص��Ĵ����������������С������ 16 λ������� 16 λ���ƣ�2 ����λ�ֽڣ��� 24 λ��ַ���������ġ����ֽڣ��������ʹ�ò������ĸ�λ�ֽڣ�GDTR �� IDTR �л�ַ�ĸ�λ�ֽ�������䡣</p>
+<p>將源運算元中的值載入到全域性描述符表格暫存器 (GDTR) 或中斷描述符表格暫存器 (IDTR)。源運算元指定 6 位元組記憶體位置，它包含全域性描述符表格 (GDT) 或中斷描述符表格 (IDT) 的基址（線性地址）與限制（表格大小，以位元組計）。如果運算元大小屬性是 32 位，則將 16 位限制（6 位元組數據運算元的 2 個低位位元組）與 32 位基址（數據運算元的 4 個高位位元組）載入到暫存器。如果運算元大小屬性是 16 位，則載入 16 位限制（2 個低位位元組）與 24 位基址（第三、四、五位元組）。這裡，不使用運算元的高位位元組，GDTR 或 IDTR 中基址的高位位元組用零填充。</p>
 
-<p>LGDT �� LIDT ָ������ڲ���ϵͳ�����У����ǲ�����Ӧ�ó����С��ڱ���ģʽ�У������ǽ��е��ܹ�ֱ�Ӽ������Ե�ַ���������Ƕ���Ե�ַ�������Ƶ�ָ�����ͨ����ʵ��ַģʽ��ִ�У��Ա㴦�������л�������ģʽ֮ǰ���г�ʼ����</p>
+<p>LGDT 與 LIDT 指令僅用在操作系統軟體中；它們不用在應用程式中。在保護模式中，它們是僅有的能夠直接載入線性地址（即，不是段相對地址）與限制的指令。它們通常在實地址模式中執行，以便處理器在切換到保護模式之前進行初始化。</p>
 
-<p>�����йش洢 GDTR �� IDTR ���ݵ���ϸ��Ϣ������ı����е� <a HREF="vc287.html">SFENCE - �洢�߽�</a>��</p>
+<p>如需有關儲存 GDTR 與 IDTR 內容的詳細資訊，請參閱本章中的 <a HREF="vc287.html">SFENCE - 儲存邊界</a>。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted>IF instruction is LIDT<br> THEN<br> IF OperandSize <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -220,31 +220,31 @@ else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'>");}
 //--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript> SRC[16:47]; <br> FI; FI;</p>
 
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
-<p>�ޡ�</p>
+<p>無。</p>
 
-<h2>����ģʽ�쳣</h2>
+<h2>保護模式異常</h2>
 
-<p>#UD - ���Դ�����������ڴ�λ�á�</p>
+<p>#UD - 如果源運算元不是記憶體位置。</p>
 
-<p>#GP(0) - �����ǰ��Ȩ������ 0������ڴ��������Ч��ַ���� CS��DS��ES��FS �� GS �����ơ���� DS��ES��FS���� GS �Ĵ������ڷ����ڴ棬�����������յĶ�ѡ������</p>
+<p>#GP(0) - 如果目前特權級別不是 0。如果記憶體運算元有效地址超出 CS、DS、ES、FS 或 GS 段限制。如果 DS、ES、FS、或 GS 暫存器用於訪問記憶體，並且它包含空的段選擇器。</p>
 
-<p>#SS(0) - ����ڴ��������Ч��ַ���� SS �����ơ�</p>
+<p>#SS(0) - 如果記憶體運算元有效地址超出 SS 段限制。</p>
 
-<p>#PF(�������) - �������ҳ����</p>
+<p>#PF(錯誤程式碼) - 如果發生頁錯誤。</p>
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>實地址模式異常</h2>
 
-<p>#UD - ���Դ�����������ڴ�λ�á�</p>
+<p>#UD - 如果源運算元不是記憶體位置。</p>
 
-<p>#GP - ����ڴ��������Ч��ַ���� CS��DS��ES��FS �� GS �����ơ�</p>
+<p>#GP - 如果記憶體運算元有效地址超出 CS、DS、ES、FS 或 GS 段限制。</p>
 
-<p>#SS - ����ڴ��������Ч��ַ���� SS �����ơ�</p>
+<p>#SS - 如果記憶體運算元有效地址超出 SS 段限制。</p>
 
-<h2>�� 8086 ģʽ�쳣</h2>
+<h2>虛 8086 模式異常</h2>
 
-<p class="whs4">#GP(0) - ����ڴ��������Ч��ַ���� CS��DS��ES��FS �� GS �����ơ� </p>
+<p class="whs4">#GP(0) - 如果記憶體運算元有效地址超出 CS、DS、ES、FS 或 GS 段限制。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

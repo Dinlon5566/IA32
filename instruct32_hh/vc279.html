@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc279.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:43 GMT -->
 <head>
 
-<title>RSM - ��ϵͳ����ģʽ�ָ�</title>
+<title>RSM - 從系統管理模式恢復</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="03 8, 2002 12:07:32 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -27,7 +27,7 @@
 <meta name=page-count content=1>
 <meta name=layout-height content=709>
 <meta name=layout-width content=792>
-<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;��F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;��;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FLDZ--Load;EB;EC;EE;FLDZ;FCLEX;FNCLEX--Clear;FNCLEX*;PE;UE;OE;ZE;IE;FNCLEX;FNINIT*;coprocessor;FPUControlWord;FPUStatusWord;FPUTagWord;FPUDataPointer;FPUInstructionPointer;FPULastInstructionOpcode;FSAVE;FNSAVE--Store;FNSAVE*;FNSAVE;FNINIT--Initialize;coprocessors;FPUs;FWAIT;DEST[FPUControlWord;DEST[FPUStatusWord;DEST[FPUTagWord;DEST[FPUDataPointer;DEST[FPUInstructionPointer;DEST[FPULastInstructionOpcode;nonwritable;FSTCW;FNSTCW--Store;FNSTCW*;FNSTCW;FNSTENV--Store;FSTENV;FNSTENV*;FNSTENV;FNSTSW--Store;FNSTSW*;FNSTSW;FPREM;FXAM;denormalized;MOV--Move;ModR;M;m;PG;PGE;PSE;PAE;PDPTRs;FSTP--Store;FUCOMIP--Compare;FUCOMIP;FUCOMPP--Unordered;FWAIT--Wait;MP;INSB;INSW;INSD--Input;INSD;CPL;IOPL;VM;TSS;CL;BL;CH;DH;BH;CX;BX;SP;EBX;EBP;mm--An;DPL=;C;W;Y;INTRA-PRIVILEGE-LEVEL-INTERRUPT;flag*;Push(CS;Push(IP;IDT(Descriptor;vector_number;GP((DEST;EXT;GP((vector_number;NP((vector_number;GDT;GP(TSS;NP(TSS;Push(error;GP(selector;NP(selector;GP(new;GP(CodeSegmentSelector;INTER-PREVILEGE-LEVEL-INTERRUPT;TSSstackAddress;TS(current;NewSS;NewESP;TS(EXT;RPL;TS(SS;LDT;SS(SS;selector+EXT;SS(segment;TSS(NewSS;Gate(CS;IP;Push(far;Push(EFLAGS;Push(ErrorCode;ELSE(*;CodeSegmentDescriptor(DPL;CS(RPL;RF;tempEFLAGS;TempSS;TempESP;Push(GS;Push(FS;Push(DS;Push(ES;Push(TempSS;Push(TempESP;Push(TempEFlags;Push(EIP;Gate(instruction;ErrorCode;SS(selector;TS(selector;TSS's;LIDT--Load;SFENCE--Store;IDTR(Limit;IDTR(Base;GDTR(Limit;GDTR(Base;SIDT--Store;mm_loadr_ps;mm_cmpgt_ss;Intra-privilege;Pop(;tempEIP;tempCS;tempEFLAGS(VM;VIF;EFLAGS(IF;EFLAGS(IOPL;EFLAGS(VM;RETURN-TO-OUTER-PRIVILGE-LEVEL;GP(SSselector;LODSD--Load;LODSD;LOOPcc--Loop;LOOPE;LOOPZ;LOOPNE;LOOPNZ;AddressSize;BranchCond;SignExtend(DEST;LSS--Load;SegmentRegister(DescriptorValidBit;Offset(SRC;XCHG--Exchange;MOVSD--Move;rw;rb;SI's;AddressSize--The;StackAddrSize--Represents;SRC--Represents;DEST--Represents;ZeroExtend(value;ZeroExtend;SignExtend(value;SignExtend;SaturateSignedWordToSignedByte--Converts;SaturateSignedDwordToSignedWord--Converts;SaturateSignedWordToUnsignedByte--Converts;FFH;SaturateToSignedByte--Represents;SaturateToSignedWord--Represents;SaturateToUnsignedByte--Represents;SaturateToUnsignedWord--Represents;LowOrderWord(DEST;HighOrderWord(DEST;Push(value;PUSH--Push;POP--Pop;PopRegisterStack--Marks;Switch-Tasks--Performs;Bit(BitBase;BitOffset;Bit[EAX;BIT[EAX;BitBase;GBits;DIV;EWBE#;EFLAGS(RF;SegmentSelector;PADDSW--Packed;SaturateToSignedByte;SaturateToSignedWord;PADDUSW--Packed;SaturateToUnsignedByte;SaturateToUnSignedByte;SaturateToUnsignedWord;SaturateToUnSignedWord;PAVGW--Packed;PCMPGTD--Packed;FFFFFFFFH;DCMPGTD;POPFD--Pop;PSLLQ--Packed;ZeroExtend(DEST;PSRAD--Packed;PSRLQ--Packed;PSUBD--Packed;PSUBSW--Packed;PSUBUSW--Packed;MMX;PUNPCKHQDQ--;PUNPCKHW;PUNPCKLQDQ--;Push(ECX;Push(EDX;Push(EBX;Push(Temp;Push(EBP;Push(ESI;Push(EDI;Push(AX;Push(CX;Push(DX;Push(BX;Push(BP;Push(SI;Push(DI;PUSHFD--Push;push(EFLAGS;stack*;LSB(DEST;LSB(SRC;MSB;ROR--Rotate;SCASB;SCASD--Scan;ES(E;mm_setcsr(unsigned;EFLAGS.AC;CPUID.XMM(EDX;STOSD--Store;FLD--Load;ExtendedReal(SRC;FLDCW--Load;FLDENV--Load;SRC[FPUControlWord;SRC[FPUStatusWord;SRC[FPUTagWord;SRC[FPUDataPointer;SRC[FPUInstructionPointer;SRC[FPULastInstructionOpcode;FNOP--No;FPATAN--Partial;Arctangent;arctangent;FPREM--Partial;LeastSignificantBits(Q;ADDSD--Scalar;mm_add_sd;FPTAN--Partial;FRNDINT--Round;FRSTOR--Restore;FSCALE--Scale;FTST--TEST;FXCH--Exchange;IP-offset;AND--Logical;iw;little-endian;FP;non-TOS;xx;FXTRACT--Extract;superset;logb(x;logbx;HLT--Halt;HLT;IDIV--Signed;EAX=Quotient;EDX=Remainder;OpernadSize;SignedModulus;EDXE;IMUL--Signed;IMUL;MUL;NumberOfOperands;size*;IN--Input;INC--Increment;INC;FF;ANDPD--Bitwise;ANDPD;BitwiseAND;INVD--Invalidate;INVD;WBINVD;Flush(InternalCaches;SignalFlush(ExternalCaches;INVLPG--Invalidate;INVLPG;lookaside;Flush(RelevantTLBEntries;Jcc--Jump;JA;JAE;JB;JBE;JC;JCXZ;JE;JG;SF=OF;JGE;JL;JLE;JNA;JNAE;JNB;JNBE;JNC;JNG;JNGE;JNL;JNLE;JNO;JNP;JNS;JP;JPE;JPO;JS;cw;Jcc;opcodes;JMP;FARLABEL;cacheability;EA;cp;jump--A;LFENCE;MFENCE;SFENCE;WB;WC;PREFETCHh;specualtive;LLDT;LDTR;LAR;VERR;VERW;LSL;ADDPD;ANDNPD;prepended;ADC;BTC;BTR;BTS;CMPXCHG;NEG;SBB;XADD;LOCK#;AssertLOCK#(DurationOfAccompaningInstruction;LSL--Load;LTR;MASKMOVDQU;UC;WP;MASKMOVQ;MAXPD--Maximum;MAXPD;MAXPS;ANDN;Single-FP;ANDNPS;MAXSD;MAXSS;Wait_On_Following_Loads_And_Stores_Until(preceding_loads_and_stores_globally_visible;MINPD;MINPS;MINSD;MINSS;Sreg;seg;ARPL;DEST[RPL;SRC[RPL;MOVAPD--Move;MOVAPD;MOVUPD;MOVAPS;void_mm_store_ps;MOVD;XXM;MOVDQA;MOVDQU;mmx;MOVHLPS--;MOVHLPS;MOVHPD;MOVHPS;MOVLHPS;doubleword-integers;ArrayIndex;LowerBound;UppderBound;MOVLPD;nvalue;mm_loadl_pd;mm_storel_pd;MOVLPS;mm_loadl_pi;mm_storel_pi;MOVMSKPD;mm_movemask_pd;MOVMSKPS;MOVNTDQ;uncacheable;MOVNTI;MOVNTPD;MOVNTPS;MOVNTQ--Move;MOVNTQ;MOVQ;BC;BSF;mm_load_sd;mm_store_sd;MOVSS;MOVSX;BF;MOVZX;MULPD;BD;BSR;MULPS;mem;MULSD;MULSS;SaturateSignedWordToUnsignedByte;��;PAND;PANDN;d;intrasegment;call--A;intersegment;switch--A;KBytes;GP(segment;newESP;CallGate(CS;PMC[ECX;RDTSC;TSD;SS(StackSegmentSelector;ReturnCodeSegmentSelector(RPL;tempESP;tempSS;RSM;SMM;SSM;ProcessorState">
+<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;±F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;±;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FLDZ--Load;EB;EC;EE;FLDZ;FCLEX;FNCLEX--Clear;FNCLEX*;PE;UE;OE;ZE;IE;FNCLEX;FNINIT*;coprocessor;FPUControlWord;FPUStatusWord;FPUTagWord;FPUDataPointer;FPUInstructionPointer;FPULastInstructionOpcode;FSAVE;FNSAVE--Store;FNSAVE*;FNSAVE;FNINIT--Initialize;coprocessors;FPUs;FWAIT;DEST[FPUControlWord;DEST[FPUStatusWord;DEST[FPUTagWord;DEST[FPUDataPointer;DEST[FPUInstructionPointer;DEST[FPULastInstructionOpcode;nonwritable;FSTCW;FNSTCW--Store;FNSTCW*;FNSTCW;FNSTENV--Store;FSTENV;FNSTENV*;FNSTENV;FNSTSW--Store;FNSTSW*;FNSTSW;FPREM;FXAM;denormalized;MOV--Move;ModR;M;m;PG;PGE;PSE;PAE;PDPTRs;FSTP--Store;FUCOMIP--Compare;FUCOMIP;FUCOMPP--Unordered;FWAIT--Wait;MP;INSB;INSW;INSD--Input;INSD;CPL;IOPL;VM;TSS;CL;BL;CH;DH;BH;CX;BX;SP;EBX;EBP;mm--An;DPL=;C;W;Y;INTRA-PRIVILEGE-LEVEL-INTERRUPT;flag*;Push(CS;Push(IP;IDT(Descriptor;vector_number;GP((DEST;EXT;GP((vector_number;NP((vector_number;GDT;GP(TSS;NP(TSS;Push(error;GP(selector;NP(selector;GP(new;GP(CodeSegmentSelector;INTER-PREVILEGE-LEVEL-INTERRUPT;TSSstackAddress;TS(current;NewSS;NewESP;TS(EXT;RPL;TS(SS;LDT;SS(SS;selector+EXT;SS(segment;TSS(NewSS;Gate(CS;IP;Push(far;Push(EFLAGS;Push(ErrorCode;ELSE(*;CodeSegmentDescriptor(DPL;CS(RPL;RF;tempEFLAGS;TempSS;TempESP;Push(GS;Push(FS;Push(DS;Push(ES;Push(TempSS;Push(TempESP;Push(TempEFlags;Push(EIP;Gate(instruction;ErrorCode;SS(selector;TS(selector;TSS's;LIDT--Load;SFENCE--Store;IDTR(Limit;IDTR(Base;GDTR(Limit;GDTR(Base;SIDT--Store;mm_loadr_ps;mm_cmpgt_ss;Intra-privilege;Pop(;tempEIP;tempCS;tempEFLAGS(VM;VIF;EFLAGS(IF;EFLAGS(IOPL;EFLAGS(VM;RETURN-TO-OUTER-PRIVILGE-LEVEL;GP(SSselector;LODSD--Load;LODSD;LOOPcc--Loop;LOOPE;LOOPZ;LOOPNE;LOOPNZ;AddressSize;BranchCond;SignExtend(DEST;LSS--Load;SegmentRegister(DescriptorValidBit;Offset(SRC;XCHG--Exchange;MOVSD--Move;rw;rb;SI's;AddressSize--The;StackAddrSize--Represents;SRC--Represents;DEST--Represents;ZeroExtend(value;ZeroExtend;SignExtend(value;SignExtend;SaturateSignedWordToSignedByte--Converts;SaturateSignedDwordToSignedWord--Converts;SaturateSignedWordToUnsignedByte--Converts;FFH;SaturateToSignedByte--Represents;SaturateToSignedWord--Represents;SaturateToUnsignedByte--Represents;SaturateToUnsignedWord--Represents;LowOrderWord(DEST;HighOrderWord(DEST;Push(value;PUSH--Push;POP--Pop;PopRegisterStack--Marks;Switch-Tasks--Performs;Bit(BitBase;BitOffset;Bit[EAX;BIT[EAX;BitBase;GBits;DIV;EWBE#;EFLAGS(RF;SegmentSelector;PADDSW--Packed;SaturateToSignedByte;SaturateToSignedWord;PADDUSW--Packed;SaturateToUnsignedByte;SaturateToUnSignedByte;SaturateToUnsignedWord;SaturateToUnSignedWord;PAVGW--Packed;PCMPGTD--Packed;FFFFFFFFH;DCMPGTD;POPFD--Pop;PSLLQ--Packed;ZeroExtend(DEST;PSRAD--Packed;PSRLQ--Packed;PSUBD--Packed;PSUBSW--Packed;PSUBUSW--Packed;MMX;PUNPCKHQDQ--;PUNPCKHW;PUNPCKLQDQ--;Push(ECX;Push(EDX;Push(EBX;Push(Temp;Push(EBP;Push(ESI;Push(EDI;Push(AX;Push(CX;Push(DX;Push(BX;Push(BP;Push(SI;Push(DI;PUSHFD--Push;push(EFLAGS;stack*;LSB(DEST;LSB(SRC;MSB;ROR--Rotate;SCASB;SCASD--Scan;ES(E;mm_setcsr(unsigned;EFLAGS.AC;CPUID.XMM(EDX;STOSD--Store;FLD--Load;ExtendedReal(SRC;FLDCW--Load;FLDENV--Load;SRC[FPUControlWord;SRC[FPUStatusWord;SRC[FPUTagWord;SRC[FPUDataPointer;SRC[FPUInstructionPointer;SRC[FPULastInstructionOpcode;FNOP--No;FPATAN--Partial;Arctangent;arctangent;FPREM--Partial;LeastSignificantBits(Q;ADDSD--Scalar;mm_add_sd;FPTAN--Partial;FRNDINT--Round;FRSTOR--Restore;FSCALE--Scale;FTST--TEST;FXCH--Exchange;IP-offset;AND--Logical;iw;little-endian;FP;non-TOS;xx;FXTRACT--Extract;superset;logb(x;logbx;HLT--Halt;HLT;IDIV--Signed;EAX=Quotient;EDX=Remainder;OpernadSize;SignedModulus;EDXE;IMUL--Signed;IMUL;MUL;NumberOfOperands;size*;IN--Input;INC--Increment;INC;FF;ANDPD--Bitwise;ANDPD;BitwiseAND;INVD--Invalidate;INVD;WBINVD;Flush(InternalCaches;SignalFlush(ExternalCaches;INVLPG--Invalidate;INVLPG;lookaside;Flush(RelevantTLBEntries;Jcc--Jump;JA;JAE;JB;JBE;JC;JCXZ;JE;JG;SF=OF;JGE;JL;JLE;JNA;JNAE;JNB;JNBE;JNC;JNG;JNGE;JNL;JNLE;JNO;JNP;JNS;JP;JPE;JPO;JS;cw;Jcc;opcodes;JMP;FARLABEL;cacheability;EA;cp;jump--A;LFENCE;MFENCE;SFENCE;WB;WC;PREFETCHh;specualtive;LLDT;LDTR;LAR;VERR;VERW;LSL;ADDPD;ANDNPD;prepended;ADC;BTC;BTR;BTS;CMPXCHG;NEG;SBB;XADD;LOCK#;AssertLOCK#(DurationOfAccompaningInstruction;LSL--Load;LTR;MASKMOVDQU;UC;WP;MASKMOVQ;MAXPD--Maximum;MAXPD;MAXPS;ANDN;Single-FP;ANDNPS;MAXSD;MAXSS;Wait_On_Following_Loads_And_Stores_Until(preceding_loads_and_stores_globally_visible;MINPD;MINPS;MINSD;MINSS;Sreg;seg;ARPL;DEST[RPL;SRC[RPL;MOVAPD--Move;MOVAPD;MOVUPD;MOVAPS;void_mm_store_ps;MOVD;XXM;MOVDQA;MOVDQU;mmx;MOVHLPS--;MOVHLPS;MOVHPD;MOVHPS;MOVLHPS;doubleword-integers;ArrayIndex;LowerBound;UppderBound;MOVLPD;nvalue;mm_loadl_pd;mm_storel_pd;MOVLPS;mm_loadl_pi;mm_storel_pi;MOVMSKPD;mm_movemask_pd;MOVMSKPS;MOVNTDQ;uncacheable;MOVNTI;MOVNTPD;MOVNTPS;MOVNTQ--Move;MOVNTQ;MOVQ;BC;BSF;mm_load_sd;mm_store_sd;MOVSS;MOVSX;BF;MOVZX;MULPD;BD;BSR;MULPS;mem;MULSD;MULSS;SaturateSignedWordToUnsignedByte;¨;PAND;PANDN;d;intrasegment;call--A;intersegment;switch--A;KBytes;GP(segment;newESP;CallGate(CS;PMC[ECX;RDTSC;TSD;SS(StackSegmentSelector;ReturnCodeSegmentSelector(RPL;tempESP;tempSS;RSM;SMM;SSM;ProcessorState">
 
 
 <!--(Links)=========================================================-->
@@ -96,7 +96,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nR - ָ��\nRSM - ��ϵͳ����ģʽ�ָ�");
+	addTocInfo("參考\n指令集\nIA-32 指令\nR - 指令\nRSM - 從系統管理模式恢復");
 
 	}
 	if (window.writeBtnStyle)
@@ -119,7 +119,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>RSM - ��ϵͳ����ģʽ�ָ�</h1>
+<h1>RSM - 從系統管理模式恢復</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -127,13 +127,13 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">������</td>
+	style="margin-bottom: 0;">操作碼</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">說明</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -144,29 +144,29 @@ else
 	style="margin-bottom: 0;">RSM</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�ָ����жϵĳ���Ĳ���</td></tr>
+	style="margin-bottom: 0;">恢復被中斷的程式的操作</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>���������Ȩ��ϵͳ����ģʽ (SMM) ���ظ��������յ� SMM �ж�ʱ���жϵ�Ӧ�ó�������ϵͳ���̡���������״̬�ӽ��� SMM ʱ������ת����Ϣ�л�ԭ����״̬��ԭ�����У������������⵽״̬��Ϣ��Ч�������ر�״̬��������Ч��Ϣ���ܻᵼ�¹رգ�</p>
+<p>將程序控制權從系統管理模式 (SMM) 返回給處理器收到 SMM 中斷時被中斷的應用程式或操作系統過程。處理器的狀態從進入 SMM 時建立的轉儲資訊中還原。在狀態還原過程中，如果處理器檢測到狀態資訊無效，則進入關閉狀態。以下無效資訊可能會導致關閉：</p>
 
 <ul>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>CR4 ���κα���λ����Ϊ 1��</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>CR4 的任何保留位設定為 1。</p></li>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>CR0 ��λ���κηǷ���ϣ��磨PG=1 �� PE=0����NW=1 �� CD=0����������Ӣ�ض�<font   style="font-family: Verdana, Arial, Helvetica, sans-serif;" 	face=Verdana>(R)</font> ����<font   style="font-family: Verdana, Arial, Helvetica, sans-serif;" 	face=Verdana>(R)</font> �� Intel486&#x2122; ����������</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>CR0 中位的任何非法組合，如（PG=1 且 PE=0）或（NW=1 且 CD=0）。（僅限英特爾<font   style="font-family: Verdana, Arial, Helvetica, sans-serif;" 	face=Verdana>(R)</font> 奔騰<font   style="font-family: Verdana, Arial, Helvetica, sans-serif;" 	face=Verdana>(R)</font> 與 Intel486&#x2122; 處理器）。</p></li>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>״̬ת����ַ�ֶ��д洢��ֵ���� 32 KB ����ĵ�ַ��</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>狀態轉儲基址欄位中儲存的值不是 32 KB 對齊的地址。</p></li>
 </ul>
 
-<p>�ͺ�ר�üĴ��������ݲ��ܴ� SMM ���ص�Ӱ�졣</p>
+<p>型號專用暫存器的內容不受從 SMM 返回的影響。</p>
 
-<p>�����й� SMM �� RSM ָ����Ϊ����ϸ��Ϣ�������&ldquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-				face=Verdana>IA-32 Ӣ�ض�(R) ��ϵ�ṹ����������Ա�ֲ�</font>&rdquo;�� 3 ���� 11 ��&ldquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-						face=Verdana>ϵͳ����ģʽ (SMM)</font>&rdquo;��</p>
+<p>如需有關 SMM 與 RSM 指令行為的詳細資訊，請參閱&ldquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
+				face=Verdana>IA-32 英特爾(R) 體系結構軟件開發人員手冊</font>&rdquo;第 3 卷第 11 章&ldquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
+						face=Verdana>系統管理模式 (SMM)</font>&rdquo;。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted>ReturnFromSSM;<br> ProcessorState <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -175,21 +175,21 @@ else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'>");}
 //--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript>Restore(SSMDump);</p>
 
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
-<p>���С�</p>
+<p>所有。</p>
 
-<h2>����ģʽ�쳣</h2>
+<h2>保護模式異常</h2>
 
-<p>#UD - ��������������� SMM ״̬ʱ��ͼִ�д�ָ�</p>
+<p>#UD - 如果處理器不處於 SMM 狀態時試圖執行此指令。</p>
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>實地址模式異常</h2>
 
-<p>#UD - ��������������� SMM ״̬ʱ��ͼִ�д�ָ�</p>
+<p>#UD - 如果處理器不處於 SMM 狀態時試圖執行此指令。</p>
 
-<h2>�� 8086 ģʽ�쳣</h2>
+<h2>虛 8086 模式異常</h2>
 
-<p class="whs4">#UD - ��������������� SMM ״̬ʱ��ͼִ�д�ָ� </p>
+<p class="whs4">#UD - 如果處理器不處於 SMM 狀態時試圖執行此指令。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

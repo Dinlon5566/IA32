@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/inst_adc.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:43 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>ADC - ����λ�ӷ�</title>
+<title>ADC - 帶進位加法</title>
 
 <!--(Meta)==========================================================-->
 
@@ -84,7 +84,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nA - ָ��\nADC");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nA - 指令\nADC");
 
 	}
 	if (window.writeBtnStyle)
@@ -107,15 +107,15 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">ADC - ����λ�ӷ�</h1>
+<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題">ADC - 帶進位加法</h1>
 
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted>ADC[condition][S] dest, op1, addr_mode </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,28 +126,28 @@ else
 							style="font-style: italic;">condition</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 個條件之一。請參閱<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">條件程式碼狀態</a>。</td></tr>
 
 <tr valign=middle>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
 <p CLASS=CellBodyLeft><em CLASS=Source
 							style="font-style: italic;">S</em> </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>�������������־��λ [20]��</td></tr>
+<p CLASS=CellBodyLeft>更新條件程式碼標誌（位 [20]）</td></tr>
 
 <tr valign=middle>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
 <p CLASS=CellBodyLeft><em CLASS=SourceItalic
 							style="font-style: italic;">dest</em> </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>目標暫存器</td></tr>
 
 <tr valign=middle>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
 <p CLASS=CellBodyLeft><em CLASS=SourceItalic
 							style="font-style: italic;">op1</em> </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>������һ���������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含第一個運算元的暫存器</td></tr>
 
 <tr valign=middle>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
@@ -155,20 +155,20 @@ else
 							style="font-style: italic;">addr_mode</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>Ѱַģʽ 1��<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">���ݴ���������</a>��</td></tr>
+<p CLASS=CellBodyLeft>定址模式 1：<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">數據處理運算元</a>。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-ADC ָ� <em CLASS=SourceItalic>op1</em> �ӵ� <em CLASS=SourceItalic>addr_mode</em>������� C ��־�� 0���򽫽���洢�� <em CLASS=SourceItalic>dest</em>����� C ��־�� 1����ӷ��Ľ���� 1��Ȼ�󽫽���洢�� <em CLASS=SourceItalic>dest</em>��<em CLASS=SourceItalic><br>condition</em> ��������Чֵ������ָ��� NOP�� 
+ADC 指令將 <em CLASS=SourceItalic>op1</em> 加到 <em CLASS=SourceItalic>addr_mode</em>，且如果 C 標誌是 0，則將結果儲存到 <em CLASS=SourceItalic>dest</em>。如果 C 標誌是 1，則加法的結果加 1，然後將結果儲存到 <em CLASS=SourceItalic>dest</em>。<em CLASS=SourceItalic><br>condition</em> 必須是有效值；否則將指令當作 NOP。 
 
-<h2>Ѱַģʽ</h2>
+<h2>定址模式</h2>
 
-�����&ldquo;Ѱַģʽ 1 - ���ݴ���������&rdquo;�� 
+請參閱&ldquo;定址模式 1 - 數據處理運算元&rdquo;。 
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs3">
@@ -217,7 +217,7 @@ ADC ָ� <em CLASS=SourceItalic>op1</em> �ӵ� <em CLASS=SourceItalic>addr_mode
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs3">
 
-<h2>����</h2>
+<h2>編碼</h2>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs4">
@@ -316,13 +316,13 @@ ADC ָ� <em CLASS=SourceItalic>op1</em> �ӵ� <em CLASS=SourceItalic>addr_mode
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p CLASS=Preformatted>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funcadc<br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0<br> 4 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@ * * * ADC (Addressing Mode 1) * * *<br> 5 &#xA0;<br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example, CODE, READONLY<br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1<br> 8 &#xA0;&#xA0;&#xA0;00000000 &#xA0;E3A0B001 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R11, #1<br> 9 &#xA0;&#xA0;&#xA0;00000004 &#xA0;E2AB0001 &#xA0;&#xA0;ADC &#xA0;&#xA0;&#xA0;R0, R11, #1<br> 10 <br> 11 &#xA0;&#xA0;00000008 &#xA0;E3A0B001 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R11, #1<br> 12 &#xA0;&#xA0;00000012 &#xA0;E2BB0001 &#xA0;&#xA0;<em CLASS=Bold>ADCS</em> &#xA0;&#xA0;R0, R11, #1<br> 13<br> 14 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END </p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
-<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">�����Ѱַģʽ 1�����ݴ���������</a> 
+<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">請參閱定址模式 1：數據處理運算元</a> 
 
 <h2 CLASS=FM02-Level>&nbsp;</h2>
 </div>

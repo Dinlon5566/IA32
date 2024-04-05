@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/CMP(3)_(Thumb).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:32:04 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>CMP(3) (Thumb) - �Ƚ�</title>
+<title>CMP(3) (Thumb) - 比較</title>
 
 <!--(Meta)==========================================================-->
 
@@ -83,7 +83,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n16 λָ��\nC - ָ��\nCMP(3) (Thumb)");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n16 位指令\nC - 指令\nCMP(3) (Thumb)");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,18 +106,18 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">CMP(3) (Thumb*) - �Ƚ�</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題">CMP(3) (Thumb*) - 比較</h1>
 
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <div>
 <p class=Preformatted><span class=Code>CMP op1, op2</span></p>
 </div>
 
 <div>
-<p>���У�</p>
+<p>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -127,35 +127,35 @@ else
 <p CLASS=CellBodyLeft><em CLASS=SourceItalic
 							style="font-style: italic;">op1</em> </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>������һ���������ļĴ��� (R0..R15)</td></tr>
+<p CLASS=CellBodyLeft>包含第一個運算元的暫存器 (R0..R15)</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
 <p CLASS=CellBodyLeft><em CLASS=SourceItalic
 							style="font-style: italic;">op2</em> </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>�����ڶ����������ļĴ��� (R0..R15)</td></tr>
+<p CLASS=CellBodyLeft>包含第二個運算元的暫存器 (R0..R15)</td></tr>
 </table>
 </div>
 
 <div>
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>�˸�ʽ�� CMP ָ��� <em CLASS=SourceItalic>op1</em> ��ȥ <em CLASS=SourceItalic>op2</em>��������������־������һ����������������ڸ�λ�Ĵ����С�����������Ч�Ƚ� <em CLASS=SourceItalic>op1</em> �� <em CLASS=SourceItalic>op2</em> ������ֵ�����ݲ�����������־ֵ����ִ��һЩ������ָ� </p>
+<p>此格式的 CMP 指令從 <em CLASS=SourceItalic>op1</em> 減去 <em CLASS=SourceItalic>op2</em>，並更新條件標誌。至少一個運算元必須包含在高位暫存器中。這樣便能有效比較 <em CLASS=SourceItalic>op1</em> 與 <em CLASS=SourceItalic>op2</em> 包含的值。根據產生的條件標誌值，會執行一些後續的指令。 </p>
 
-<h3 class=NoteTipHead><img src="Note.gif"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif"> 備註</h3>
 </div>
 </div>
 
 <div>
-<p>��� H1 ^ H2 == 0�����������޷�Ԥ֪</p>
+<p>如果 H1 ^ H2 == 0，則結果將會無法預知</p>
 
-<h2>Ѱַģʽ</h2>
+<h2>定址模式</h2>
 
-<p>�޲������� </p>
+<p>無運算元。 </p>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -203,7 +203,7 @@ else
 </div>
 
 <div>
-<h2>����</h2>
+<h2>編碼</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs3">
@@ -273,13 +273,13 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funcmp <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0 <br> 4 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example,CODE,READONLY <br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;CODE16 <br> 7<br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1 <br> 9 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Compare contents of R11 and R9 <br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Does R11-R9, and ignores result <br> 11 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Set Condition Codes <br> 12 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Branch to new label if equal <br> 13 &#xA0;&#xA0;&#xA0;00000000 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;F7C1 &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;R1, #Ox7B <br> 14 &#xA0;&#xA0;&#xA0;00000002 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;468B &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;R11, R1 <br> 15 &#xA0;&#xA0;&#xA0;00000004 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;4689 &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;R9, R1 <br> 16 &#xA0;&#xA0;&#xA0;00000006 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;42CB &#xA0;&#xA0;&#xA0;CMP &#xA0;&#xA0;R11, R9 <br> 17 &#xA0;&#xA0;&#xA0;00000008 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;D000 &#xA0;&#xA0;&#xA0;BEQ &#xA0;&#xA0;label2 </span></p>
 
-<h2>������Ϣ </h2>
+<h2>更多資訊 </h2>
 
-<a href="CMN_(Thumb).html" CLASS="XRef">����� CMN ָ��</a><a href="CMP_(Thumb).html" CLASS="XRef"><br> ����� CMP(1) ָ��</a><a href="CMP(2)_(Thumb).html"><br> ����� CMP(2) ָ��</a> 
+<a href="CMN_(Thumb).html" CLASS="XRef">請參閱 CMN 指令</a><a href="CMP_(Thumb).html" CLASS="XRef"><br> 請參閱 CMP(1) 指令</a><a href="CMP(2)_(Thumb).html"><br> 請參閱 CMP(2) 指令</a> 
 </div>
 </div>
 

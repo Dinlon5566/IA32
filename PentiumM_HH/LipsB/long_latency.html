@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/LipsB/long_latency.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:04 GMT -->
 <head>
 
-<title>���ӳ�</title>
+<title>長延遲</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta NAME=MS-HAID CONTENT="Banias Penalties">
 <meta name=date content="03 31, 2003 3:45:36 PM">
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
@@ -86,7 +86,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M �������ĳͷ�\n���ӳ�");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n英特爾(R) 奔騰(R) M 處理器的懲罰\n長延遲");
 
 	}
 	if (window.writeBtnStyle)
@@ -109,18 +109,18 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>���ӳ�</h1>
+<h1>長延遲</h1>
 
-<p class="whs1">long_latency<span style="font-weight: normal;"> ��һ�����档</span></p>
+<p class="whs1">long_latency<span style="font-weight: normal;"> 是一個警告。</span></p>
 
-<p class="whs2">�˾����ʾ�����ӳٽϳ���ָ�</p>
+<p class="whs2">此警告表示存在延遲較長的指令。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><span style="font-weight: normal;"><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs3"> </span> ����</h3>
+	style="margin-left: 40px;"><span style="font-weight: normal;"><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs3"> </span> 建議</h3>
 
-<p class="whs4">���ָ���Ƿ�����滻�ɸ���Ч��ָ�����С� </p>
+<p class="whs4">檢查指令是否可以替換成更高效的指令序列。 </p>
 
-<p class="whs4">���磬�˷���ʱ����ʹ�� <span class=Code>lea</span> ָ����ʵ�֣�����ʹ���ӳٽϳ��� <span class=Code>imul</span> ָ�</p>
+<p class="whs4">例如，乘法有時可以使用 <span class=Code>lea</span> 指令來實現，而不使用延遲較長的 <span class=Code>imul</span> 指令。</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="100%" class="whs5">
@@ -133,33 +133,33 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) 
 
 <tr valign="top" class="whs7">
 <td width="33.333%" class="whs8">
-<h3 class=TableHead>ָ��</td>
+<h3 class=TableHead>指令</td>
 <td width="33.333%" class="whs9">
-<h3 class=TableHead>�ӳ�˵��</td>
+<h3 class=TableHead>延遲說明</td>
 <td width="33.333%" class="whs9">
-<h3 class=TableHead>����</td></tr>
+<h3 class=TableHead>建議</td></tr>
 
 <tr valign="top" class="whs7">
 <td width="33.333%" class="whs10">
-<p><span class=Code>mul</span> �� <span class=Code>imul</span></td>
+<p><span class=Code>mul</span> 與 <span class=Code>imul</span></td>
 <td width="33.333%" class="whs11">
-<p>�����˷����� mul �� imul �ڸ��㵥Ԫ��ִ�У������Щָ�Ӧ��ͬ����ָ���ִ�С������ڸ��㵥Ԫ��ִ�У����ǻ��ᵼ��һЩ������ӳ١������һ������ִ�� <span class=Code>fmul</span>���򸡵�˷�ָ�� (<span   class=Code>fmul</span>) ���ӳ�һ�����ڡ��˷���ֻ��ÿ��һ�����ڽ���һ���²�������</td>
+<p>整數乘法運算 mul 與 imul 在浮點單元中執行，因此這些指令不應該同浮點指令並行執行。由於在浮點單元中執行，它們還會導致一些額外的延遲。如果上一個週期執行 <span class=Code>fmul</span>，則浮點乘法指令 (<span   class=Code>fmul</span>) 將延遲一個週期。乘法器只能每隔一個週期接受一對新運算元。</td>
 <td width="33.333%" class="whs11">
-<p><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs3"> ������С�����������˷������滻����������� add �� lea ָ�����Щ�˷��������������һ����ʱ������Ӧ����������</td></tr>
+<p><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs3"> 將乘以小常數的整數乘法運算替換成兩條或更多 add 與 lea 指令，在這些乘法運算是相關鏈的一部分時，尤其應該這樣做。</td></tr>
 <script language='JavaScript'><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) document.write("</table></table><table>");
 //--></script>
 </table>
 
-<h3>ʾ����</h3>
+<h3>示例：</h3>
 
-<p>�����³˷����㣺</p>
+<p>將以下乘法運算：</p>
 
 <p class=Preformatted><span class=Code>mov eax, 3 <br> imul ecx, eax</span></p>
 
 <p class="whs1">&nbsp;</p>
 
-<p class="whs2">�滻�ɣ�</p>
+<p class="whs2">替換成：</p>
 
 <p class=Preformatted><span class=Code>lea ecx, [ecx+2*ecx]</span></p>
 

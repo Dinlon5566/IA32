@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/address_arithmetic_shift_right_by_register_(am1).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:54 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>°´¼Ä´æÆ÷ËãÊõÓÒÒÆ (AM1)</title>
+<title>æŒ‰æš«å­˜å™¨ç®—è¡“å³ç§» (AM1)</title>
 
 <!--(Meta)==========================================================-->
 
@@ -83,7 +83,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("²Î¿¼\nÖ¸Áî¼¯\nÓ¢ÌØ¶û XScale(R) ¼¼ÊõÖ¸Áî\nÑ°Ö·Ä£Ê½\nÊý¾Ý´¦Àí²Ù×÷Êý\n°´¼Ä´æÆ÷ËãÊõÓÒÒÆ (AM1)");
+	addTocInfo("åƒè€ƒ\næŒ‡ä»¤é›†\nè‹±ç‰¹çˆ¾ XScale(R) æŠ€è¡“æŒ‡ä»¤\nå®šå€æ¨¡å¼\næ•¸æ“šè™•ç†é‹ç®—å…ƒ\næŒ‰æš«å­˜å™¨ç®—è¡“å³ç§» (AM1)");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,14 +106,14 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ó¢ÌØ¶û XScale(R) ¼¼ÊõÖ÷Ìâ"><a NAME=pgfId-1010161></a>°´¼Ä´æÆ÷ËãÊõÓÒÒÆ (AM1)</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="è‹±ç‰¹çˆ¾ XScale(R) æŠ€è¡“ä¸»é¡Œ"><a NAME=pgfId-1010161></a>æŒ‰æš«å­˜å™¨ç®—è¡“å³ç§» (AM1)</h1>
 
 <div>
-<h2>Óï·¨</h2>
+<h2>èªžæ³•</h2>
 
 <p class=Preformatted><span>op2, ASR op3</span> </p>
 
-<p CLASS=Body>ÆäÖÐ£º </p>
+<p CLASS=Body>å…¶ä¸­ï¼š </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -125,7 +125,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ö¸¶¨°üº¬ÒªÒÆÎ»µÄÖµµÄ¼Ä´æÆ÷¡£</td></tr>
+<p CLASS=CellBodyLeft>æŒ‡å®šåŒ…å«è¦ç§»ä½çš„å€¼çš„æš«å­˜å™¨ã€‚</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -134,7 +134,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ö¸Ê¾ËãÊõÓÒÒÆ¡£</td></tr>
+<p CLASS=CellBodyLeft>æŒ‡ç¤ºç®—è¡“å³ç§»ã€‚</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -143,18 +143,18 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ö¸¶¨°üº¬ÒÆÎ»ÖµµÄ¼Ä´æÆ÷¡£</td></tr>
+<p CLASS=CellBodyLeft>æŒ‡å®šåŒ…å«ç§»ä½å€¼çš„æš«å­˜å™¨ã€‚</td></tr>
 </table>
 
-<h2>ËµÃ÷</h2>
+<h2>èªªæ˜Ž</h2>
 
-Êý¾Ý´¦Àí²Ù×÷Êý&ldquo;°´¼Ä´æÆ÷ËãÊõÓÒÒÆ&rdquo;Ö´ÐÐÒÔÏÂ²Ù×÷£¨Î±´úÂëËµÃ÷£©£º
+æ•¸æ“šè™•ç†é‹ç®—å…ƒ&ldquo;æŒ‰æš«å­˜å™¨ç®—è¡“å³ç§»&rdquo;åŸ·è¡Œä»¥ä¸‹æ“ä½œï¼ˆå½ç¨‹å¼ç¢¼èªªæ˜Žï¼‰ï¼š
 
 <p CLASS=Preformatted-Code>if op3[7:0] == 0 then<br> &#xA0;&#xA0;addr_mode = op2<br> &#xA0;&#xA0;shifter_carry_out = C Flag<br> else if op3[7:0] &lt; 32 then<br> &#xA0;&#xA0;addr_mode = op2 Arithmetic_Shift_Right op3[7:0]<br> &#xA0;&#xA0;shifter_carry_out = op2[op3[7:0] - 1]<br> else /* op3[7:0] &gt;= 32 */<br> &#xA0;&#xA0;if op2[31] == 0 then<br> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;addr_mode = 0<br> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;shifter_carry_out = op2[31]<br> &#xA0;&#xA0;else /*op2[31] == 1 */<br> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;addr_mode = 0xFFFFFFFF<br> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;shifter_carry_out = op2[31]</p>
 
-<p CLASS=Body>´ËÊý¾Ý´¦Àí²Ù×÷ÊýÌá¹©ËãÊõÓÒÒÆ¼Ä´æÆ÷µÄÓÐ·ûºÅÖµ£¨³ýÒÔ 2 µÄ¿É±ä´ÎÃÝ£©¡£</p>
+<p CLASS=Body>æ­¤æ•¸æ“šè™•ç†é‹ç®—å…ƒæä¾›ç®—è¡“å³ç§»æš«å­˜å™¨çš„æœ‰ç¬¦è™Ÿå€¼ï¼ˆé™¤ä»¥ 2 çš„å¯è®Šæ¬¡å†ªï¼‰ã€‚</p>
 
-<p CLASS=Body>´ËÖ¸Áî²Ù×÷Êý´ú±íËãÊõÓÒÒÆ¼Ä´æÆ÷ <em CLASS=SourceItalic>op2</em> µÄÖµ£¬ÒÆÎ»Á¿µÈÓÚ¼Ä´æÆ÷ <em CLASS=SourceItalic>op3</em> ×îµÍÓÐÐ§×Ö½ÚÖÐµÄÖµ¡£ÔÚÌÚ³öµÄÎ»ÖÐ£¬½«²åÈë <em CLASS=SourceItalic>op2</em> (<em CLASS=SourceItalic> op2</em> <em CLASS=Source>[31]</em> ) µÄ·ûºÅÎ»¡£×îºóÒÆ³öµÄÎ»ÊÇÒÆÎ»Æ÷µÄ½øÎ»¡£Èç¹ûÒÆÎ»Á¿³¬¹ý 32£¬Ôò´ËÎ»ÊÇ <em CLASS=SourceItalic>op2</em> µÄ·ûºÅÎ»¡£Èç¹ûÒÆÎ»Á¿µÈÓÚ 0£¬Ôò½øÎ»ÊÇ C ±êÖ¾¡£</p>
+<p CLASS=Body>æ­¤æŒ‡ä»¤é‹ç®—å…ƒä»£è¡¨ç®—è¡“å³ç§»æš«å­˜å™¨ <em CLASS=SourceItalic>op2</em> çš„å€¼ï¼Œç§»ä½é‡ç­‰æ–¼æš«å­˜å™¨ <em CLASS=SourceItalic>op3</em> æœ€ä½Žæœ‰æ•ˆä½å…ƒçµ„ä¸­çš„å€¼ã€‚åœ¨é¨°å‡ºçš„ä½ä¸­ï¼Œå°‡æ’å…¥ <em CLASS=SourceItalic>op2</em> (<em CLASS=SourceItalic> op2</em> <em CLASS=Source>[31]</em> ) çš„ç¬¦è™Ÿä½ã€‚æœ€å¾Œç§»å‡ºçš„ä½æ˜¯ç§»ä½å™¨çš„é€²ä½ã€‚å¦‚æžœç§»ä½é‡è¶…éŽ 32ï¼Œå‰‡æ­¤ä½æ˜¯ <em CLASS=SourceItalic>op2</em> çš„ç¬¦è™Ÿä½ã€‚å¦‚æžœç§»ä½é‡ç­‰æ–¼ 0ï¼Œå‰‡é€²ä½æ˜¯ C æ¨™èªŒã€‚</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -175,7 +175,7 @@ else
 <col class="whs2">
 <col class="whs2">
 
-<h2>±àÂë </h2>
+<h2>ç·¨ç¢¼ </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -415,19 +415,19 @@ else
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="Caution.gif"> ×¢Òâ</h3>
+<h3 class=NoteTipHead><img src="Caution.gif"> æ³¨æ„</h3>
 
-<p class="whs3">Èç¹û <em CLASS=Source>R15</em> Ö¸¶¨Îª¼Ä´æÆ÷ <em CLASS=SourceItalic>dest</em>¡¢<em CLASS=SourceItalic>op3</em>¡¢<em CLASS=SourceItalic>op2</em> »ò <em CLASS=SourceItalic>op1</em>£¬Ôò½á¹û½«»áÎÞ·¨Ô¤Öª£¡</p>
+<p class="whs3">å¦‚æžœ <em CLASS=Source>R15</em> æŒ‡å®šç‚ºæš«å­˜å™¨ <em CLASS=SourceItalic>dest</em>ã€<em CLASS=SourceItalic>op3</em>ã€<em CLASS=SourceItalic>op2</em> æˆ– <em CLASS=SourceItalic>op1</em>ï¼Œå‰‡çµæžœå°‡æœƒç„¡æ³•é çŸ¥ï¼</p>
 </div>
 
 <div>
-<h2>Ê¾Àý</h2>
+<h2>ç¤ºä¾‹</h2>
 
 <p CLASS=Preformatted>ADC &nbsp;&nbsp;&nbsp;R7, R3, R13, ASR R4</p>
 
-<h2>¸ü¶àÐÅÏ¢</h2>
+<h2>æ›´å¤šè³‡è¨Š</h2>
 
-<a href="Address_Data_Processing_Operands_Overview_1.html" CLASS="XRef">Çë²ÎÔÄÑ°Ö·Ä£Ê½ 1£ºÊý¾Ý´¦Àí²Ù×÷Êý</a><a href="Inst_Overview_of_Instructions.html"><br> Çë²ÎÔÄ»ã±àÆ÷Ö¸Áî</a> 
+<a href="Address_Data_Processing_Operands_Overview_1.html" CLASS="XRef">è«‹åƒé–±å®šå€æ¨¡å¼ 1ï¼šæ•¸æ“šè™•ç†é‹ç®—å…ƒ</a><a href="Inst_Overview_of_Instructions.html"><br> è«‹åƒé–±å½™ç·¨å™¨æŒ‡ä»¤</a> 
 </div>
 
 <p>&nbsp;</p>

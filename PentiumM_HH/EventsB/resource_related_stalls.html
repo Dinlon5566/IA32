@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/resource_related_stalls.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:48 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>��Դ�����ͣ</title>
+<title>資源相關暫停</title>
 
 <!--(Meta)==========================================================-->
 
@@ -92,7 +92,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M �������¼�\n��ͣ�¼�\n��Դ�����ͣ");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n英特爾(R) 奔騰(R) M 處理器事件\n暫停事件\n資源相關暫停");
 
 	}
 	if (window.writeBtnStyle)
@@ -115,17 +115,17 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>��Դ�����ͣ</h1>
+<h1>資源相關暫停</h1>
 
-<p>���¼�ͳ����Դ�����ͣ�����ڼ�ִ�е�ʱ�������������������ԭ���µ���ͣ���Ĵ�����������������Ŀ���ڴ滺������Ŀ����֧Ԥ��ʧ��ָ��Լ�Ԥ��ʧ��ķ�֧ʧЧʱ���ӳ١����û���������⣬�򲻱�������Դ��ͣ��</p>
+<p>此事件統計資源相關暫停發生期間執行的時鐘週期數。這包括以下原因導致的暫停：暫存器重新命名緩衝區專案、記憶體緩衝區專案、分支預測失誤恢復以及預測失誤的分支失效時的延遲。如果沒有效能問題，則不必理會資源暫停。</p>
 
-<p>���������ϵͳδȫ�����У�����¼����ܱ�ʾ�������¿��ܵ��¼�֮һ��</p>
+<p>不過，如果系統未全速執行，則此事件可能表示發生以下可能的事件之一：</p>
 
 <ul>
 	
-	<li class=kadov-p><p>������ܰ����ܳ����������������������������Ժ��١�����ܻ��ڸ�������з�����ͨ���������������Կ��������ڼ�������⡣</p></li>
+	<li class=kadov-p><p>程式碼可能包含很長的相關鏈，因而導致亂序機器中配對很少。這可能會在浮點程式碼中發生。通過調整程式碼提高配對可能有助於減輕此問題。</p></li>
 	
-	<li class=kadov-p><p class="whs1">��֧ǰ���ӳٺܳ��Ĳ������ܻᵼ��Ԥ��ʧ��ķ�֧ʧЧ�ӳ١�����ܻ��ڸ�������з�����ͨ����������������Խ��ӳٺܳ��Ĳ����Ƶ�ǳ��֧���档 </p></li>
+	<li class=kadov-p><p class="whs1">分支前面延遲很長的操作可能會導致預測失誤的分支失效延遲。這可能會在浮點程式碼中發生。通過調整程式碼或許可以將延遲很長的操作移到淺分支下面。 </p></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

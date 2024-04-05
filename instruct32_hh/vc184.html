@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc184.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:30 GMT -->
 <head>
 
-<title>MOVDQU - �ƶ�δ�����˫����</title>
+<title>MOVDQU - 移動未對齊的雙四字</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="12 23, 2001 6:14:16 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -95,7 +95,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nM - ָ��\nMOVDQU - �ƶ�δ�����˫����");
+	addTocInfo("參考\n指令集\nIA-32 指令\nM - 指令\nMOVDQU - 移動未對齊的雙四字");
 
 	}
 	if (window.writeBtnStyle)
@@ -118,7 +118,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>MOVDQU - �ƶ�δ�����˫����</h1>
+<h1>MOVDQU - 移動未對齊的雙四字</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -127,15 +127,15 @@ else
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>������</td>
+	align=center>操作碼</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>ָ��</td>
+	align=center>指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>˵��</td></tr>
+	align=center>說明</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -146,7 +146,7 @@ else
 	style="margin-bottom: 0;">MOVDQU <span style="font-style: italic;"><I>xmm1</I></span>, <span style="font-style: italic;"><I>xmm2/m128</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��δ�����˫���ִ� <span   style="font-style: italic;"><I>xmm2/m128</I></span> �Ƶ� <span style="font-style: italic;"><I>xmm1</I></span>��</td></tr>
+	style="margin-bottom: 0;">將未對齊的雙四字從 <span   style="font-style: italic;"><I>xmm2/m128</I></span> 移到 <span style="font-style: italic;"><I>xmm1</I></span>。</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -157,16 +157,16 @@ else
 	style="margin-bottom: 0;">MOVDQU <span style="font-style: italic;"><I>xmm2/m128</I></span>, <span style="font-style: italic;"><I>xmm1</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��δ�����˫���ִ� <span   style="font-style: italic;"><I>xmm1</I></span> �Ƶ� <span style="font-style: italic;"><I>xmm2/m128</I></span>��</td></tr>
+	style="margin-bottom: 0;">將未對齊的雙四字從 <span   style="font-style: italic;"><I>xmm1</I></span> 移到 <span style="font-style: italic;"><I>xmm2/m128</I></span>。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>��˫���ִ�Դ���������ڶ������������Ƶ�Ŀ�����������һ��������������ָ����������� XMM �Ĵ����� 128 λ�ڴ�λ��֮������/�Ƴ�˫���֣����������� XMM �Ĵ���֮���ƶ���Դ��������Ŀ����������ڴ������ʱ�����������Բ����� 16 �ֽڱ߽磬���Ҳ��ᵼ������һ�㱣�����쳣 (#GP)��</p>
+<p>將雙四字從源運算元（第二個運算元）移到目標運算元（第一個運算元）。此指令可以用於在 XMM 暫存器與 128 位記憶體位置之間移入/移出雙四字，或是在兩個 XMM 暫存器之間移動。源運算元或目標運算元是記憶體運算元時，運算元可以不對齊 16 位元組邊界，並且不會導致產生一般保護性異常 (#GP)。</p>
 
-<p>������֪����� 16 �ֽڱ߽���ڴ�λ�ã�Ҫ����������/�Ƴ�˫���֣���ʹ�� MOVDQA ָ�</p>
+<p>對於已知與對齊 16 位元組邊界的記憶體位置，要在其中移入/移出雙四字，請使用 MOVDQA 指令。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted>DEST <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -175,39 +175,39 @@ else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'>");}
 //--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> SRC;<br> * #GP if SRC or DEST unaligned memory operand *;</p>
 
-<h2>Ӣ�ض�<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>(R)</font> C++ �������ȼ��ڲ�����</h2>
+<h2>英特爾<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>(R)</font> C++ 編譯器等價內部函式</h2>
 
 <p class=Preformatted>MOVDQU void _mm_storeu_si128 ( __m128i *p, __m128i a) MOVDQU __m128i _mm_loadu_si128 ( __m128i *p)</p>
 
-<h2>SIMD �����쳣</h2>
+<h2>SIMD 浮點異常</h2>
 
-<p>�ޡ�</p>
+<p>無。</p>
 
-<h2>����ģʽ�쳣</h2>
+<h2>保護模式異常</h2>
 
-<p>#GP(0) - ����ڴ��������Ч��ַ���� CS��DS��ES��FS �� GS �����ơ�</p>
+<p>#GP(0) - 如果記憶體運算元有效地址超出 CS、DS、ES、FS 或 GS 段限制。</p>
 
-<p>#SS(0) - ����ڴ��������Ч��ַ���� SS �����ơ�</p>
+<p>#SS(0) - 如果記憶體運算元有效地址超出 SS 段限制。</p>
 
-<p>#NM - ��� CR0 �е� TS ����Ϊ 1��</p>
+<p>#NM - 如果 CR0 中的 TS 設定為 1。</p>
 
-<p>#UD - ��� CR0 �е� EM ����Ϊ 1����� CR4 �е� OSFXSR �� 0����� CPUID ���ܱ�־ SSE2 �� 0��</p>
+<p>#UD - 如果 CR0 中的 EM 設定為 1。如果 CR4 中的 OSFXSR 是 0。如果 CPUID 功能標誌 SSE2 是 0。</p>
 
-<p>#PF(�������) - �������ҳ����</p>
+<p>#PF(錯誤程式碼) - 如果發生頁錯誤。</p>
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>實地址模式異常</h2>
 
-<p>#GP(0) - ������������κβ��ֳ����� 0 �� FFFFH ����Ч��ַ�ռ�֮�⡣</p>
+<p>#GP(0) - 如果運算元的任何部分出現在 0 到 FFFFH 的有效地址空間之外。</p>
 
-<p>#NM - ��� CR0 �е� TS ����Ϊ 1��</p>
+<p>#NM - 如果 CR0 中的 TS 設定為 1。</p>
 
-<p>#UD - ��� CR0 �е� EM ����Ϊ 1����� CR4 �е� OSFXSR �� 0����� CPUID ���ܱ�־ SSE2 �� 0��</p>
+<p>#UD - 如果 CR0 中的 EM 設定為 1。如果 CR4 中的 OSFXSR 是 0。如果 CPUID 功能標誌 SSE2 是 0。</p>
 
-<h2>�� 8086 ģʽ�쳣</h2>
+<h2>虛 8086 模式異常</h2>
 
-<p>��&ldquo;ʵ��ַģʽ&rdquo;�е��쳣��ͬ��</p>
+<p>與&ldquo;實地址模式&rdquo;中的異常相同。</p>
 
-<p class="whs4">#PF(�������) - ҳ���� </p>
+<p class="whs4">#PF(錯誤程式碼) - 頁錯誤。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

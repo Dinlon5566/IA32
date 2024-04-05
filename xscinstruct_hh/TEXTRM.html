@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -109,7 +109,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nT - ָ��\nTEXTRM");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nT - 指令\nTEXTRM");
 
 	}
 	if (window.writeBtnStyle)
@@ -134,16 +134,16 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>TEXTRM - ��ȡ�봫��</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>TEXTRM - 提取與傳輸</h1>
 
-<h2 class=Body>�﷨</h2>
+<h2 class=Body>語法</h2>
 
 <p class=Preformatted>TEXTRM<span style="font-size: 10pt; font-style: italic;"><font size=2 style="font-size:10pt;"><I>signlength</I></font></span>[<span style="font-size: 10pt; font-style: italic;"><font size=2 style="font-size:10pt;"><I>Condition</I></font></span>] <span style="font-size: 10pt; font-style: italic;"><font size=2 style="font-size:10pt;"><I>dest, op1, #Imm3</I></font></span> </p>
 
-<p class=Body>���У�<span   style="font-size: 12pt;"><font size=3 style="font-size:12pt;"></font></span></p>
+<p class=Body>其中：<span   style="font-size: 12pt;"><font size=3 style="font-size:12pt;"></font></span></p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -155,10 +155,10 @@ sign
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-S -- ������չ
+S -- 符號擴充套件
 </div>
 <div align="left" class="whs5">
-U -- �޷���
+U -- 無符號
 </div></td></tr>
 
 <tr>
@@ -177,17 +177,17 @@ U -- �޷���
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-��������ݳ��ȣ������������ַ�֮һָ����
+所需的數據長度，可以由以下字元之一指定：
  
 </div>
 <div align="left" class="whs5">
-B -- ��ȡ 8 λ���ֽڣ�����
+B -- 提取 8 位（位元組）操作
 </div>
 <div align="left" class="whs5">
-H -- ��ȡ 16 λ�����֣�����
+H -- 提取 16 位（半字）操作
 </div>
 <div align="left" class="whs5">
-W -- ��ȡ 32 λ���֣�����
+W -- 提取 32 位（字）操作
 </div></td></tr>
 
 <tr>
@@ -206,7 +206,7 @@ W -- ��ȡ 32 λ���֣�����
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-��ѡ��16 ������֮һ������ģ�<a HREF="Conditional_Execution.html">����ִ��</a>�� 
+可選。16 個條件之一。請參閱：<a HREF="Conditional_Execution.html">條件執行</a>。 
 </div></td></tr>
 
 <tr>
@@ -216,7 +216,7 @@ dest
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-Ŀ�꣬&ldquo;Ӣ�ض� XScale(R)&rdquo;�������ݼĴ���
+目標，&ldquo;英特爾 XScale(R)&rdquo;技術數據暫存器
 </div></td></tr>
 
 <tr>
@@ -226,7 +226,7 @@ op1
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-Դ��������&ldquo;Ӣ�ض�<span>(R)</span> <span style="vertical-align: super;"></span>���� MMX&#x2122;&rdquo;����Э���������ݼĴ���
+源運算元，&ldquo;英特爾<span>(R)</span> <span style="vertical-align: super;"></span>無線 MMX&#x2122;&rdquo;技術協處理器數據暫存器
 </div></td></tr>
 
 <tr>
@@ -236,19 +236,19 @@ Imm3
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-ָ����ȡ�ĸ��ֽ�/����/��
+指定提取哪個位元組/半字/字
 </div></td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-��&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;����Դ�Ĵ��� op1 ��ȡ 3 λ�������ֶ�����ָ���� 8-/16-/32 λʸ�������������䵽ָ����&ldquo;Ӣ�ض� XScale(R)&rdquo;���ļĴ��� dest��<br>�����Ӧ�������˷��ţ������ݽ����з�����չ��<br><br> ָ����ָ�����κ�������������������״̬��ƥ�䣬����ִ�и�ָ� 
+從&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術源暫存器 op1 提取 3 位立即數欄位數據指定的 8-/16-/32 位向量，並將它傳輸到指定的&ldquo;英特爾 XScale(R)&rdquo;核心暫存器 dest。<br>如果相應地設定了符號，則數據講進行符號擴充套件。<br><br> 指令中指定的任何條件必須與條件程式碼狀態相匹配，否則不執行該指令。 
 
-<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs6"> ��ע </h3>
+<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs6"> 備註 </h3>
 
-�� R15 ָ��ΪĿ��Ĵ���ʱ����������޷�Ԥ֪�Ľ���� 
+將 R15 指定為目標暫存器時，將會產生無法預知的結果。 
 
-<h2>���� </h2>
+<h2>編碼 </h2>
 
 <div class="whs7">
 <p class="whs8">&nbsp;</p>
@@ -454,7 +454,7 @@ sbbb
 </div>
 
 <div align="left" class="whs12">
-<h2>���ֶα���</h2>
+<h2>子欄位編碼</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -462,15 +462,15 @@ sbbb
 <tr bgcolor="#CCCCCC" class="whs9">
 <th class="whs10">
 <div align="center" class="whs13">
-�޶���
+限定符
 </div></th>
 <th class="whs10">
 <div align="center" class="whs13">
-�ֶ�
+欄位
 </div></th>
 <th class="whs10">
 <div align="center" class="whs13">
-ֵ
+值
 </div></th></tr>
 
 <tr>
@@ -518,7 +518,7 @@ ww
 <tr>
 <td class="whs3">
 <div align="center" class="whs14">
-����
+保留
 </div></td>
 <td class="whs3">
 <div align="center" class="whs14">
@@ -568,19 +568,19 @@ bbb
 </div></td>
 <td class="whs3">
 <div align="center" class="whs14">
-3 λƫ����
+3 位偏移量
 </div></td></tr>
 </table>
 
 &nbsp; 
 </div>
 
-<h2>Ӱ��� SIMD ��־</h2>
+<h2>影響的 SIMD 標誌</h2>
 
-��Ӱ�� SIMD PSR ��־ (wCASF) ��&ldquo;����&rdquo;��־ (wCSSF)�� 
+不影響 SIMD PSR 標誌 (wCASF) 或&ldquo;飽和&rdquo;標誌 (wCSSF)。 
  
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted><span class=Code>if (B Specified) then</span></p>
 
@@ -599,7 +599,7 @@ bbb
 <p class=Preformatted
 	style="margin-left: 40px;"><span class=Code>dest[31:0] = op1[Word #Imm3[0]]</span></p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
 <span style="color: #0000ff; font-size: 10pt;"><font size=2 color=blue style="font-size:10.000000pt;"><a HREF="TANDC.html">TANDC</a></font></span> 
  

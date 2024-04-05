@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -96,7 +96,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nW - ָ��\nWPACK");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nW - 指令\nWPACK");
 
 	}
 	if (window.writeBtnStyle)
@@ -121,56 +121,56 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>WPACK - ѹ��</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>WPACK - 壓縮</h1>
 
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted>WPACKlengthsign[condition] dest, op1, op2 </p>
 
-<p>���У� </p>
+<p>其中： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
 
 <tr>
 <td class="whs3"><i style="font-style: italic;">length</i></td>
-<td class="whs3">��������ݳ��ȣ������������ַ�֮һָ����<br>H -- �� 16 λ�����֣�ѹ���� 8 λ<br> W -- �� 32 λ���֣�ѹ���� 16 λ<br> D -- �� 64 λ��˫�֣�ѹ���� 32 λ</td></tr>
+<td class="whs3">所需的數據長度，可以由以下字元之一指定：<br>H -- 將 16 位（半字）壓縮到 8 位<br> W -- 將 32 位（字）壓縮到 16 位<br> D -- 將 64 位（雙字）壓縮到 32 位</td></tr>
 
 <tr>
 <td class="whs3">sign</td>
-<td class="whs3">ȷ������&ldquo;�з���&rdquo;����&ldquo;�޷���&rdquo;�������㣺<br>SS -- �з��ű���<br> US -- �޷��ű���</td></tr>
+<td class="whs3">確定進行&ldquo;有符號&rdquo;還是&ldquo;無符號&rdquo;算術運算：<br>SS -- 有符號飽和<br> US -- 無符號飽和</td></tr>
 
 <tr>
 <td class="whs3"><i style="font-style: italic;">condition</i></td>
-<td class="whs3">��ѡ��16 ������֮һ�������<a HREF="Conditional_Execution.html">����ִ��</a>��</td></tr>
+<td class="whs3">可選。16 個條件之一。請參閱<a HREF="Conditional_Execution.html">條件執行</a>。</td></tr>
 
 <tr>
 <td class="whs3">dest</td>
-<td class="whs3">Ŀ�꣬&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�������ݼĴ���</td></tr>
+<td class="whs3">目標，&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術數據暫存器</td></tr>
 
 <tr>
 <td class="whs3">op1</td>
-<td class="whs3">��һ��Դ��������&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�������ݼĴ���</td></tr>
+<td class="whs3">第一個源運算元，&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術數據暫存器</td></tr>
 
 <tr>
 <td class="whs3">op2</td>
-<td class="whs3">�ڶ���Դ��������&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�������ݼĴ���</td></tr>
+<td class="whs3">第二個源運算元，&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術數據暫存器</td></tr>
 </table>
 
 &nbsp; 
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>�� op1 �� op2 �е�����ѹ���� dest �У����� op2 ѹ�����ϰ벿�֣�op1 ѹ�����°벿�֡��˲��������� 16��32 �� 64 λ���ݳ��ȵ�ʸ����ִ�У�������ѹ����ԭʼ���ȵ�һ�롣Ҳ����˵�����磬�� 16 λ����ѹ���� dest �Ĵ������ֽڿռ䣻�� 32 λ��ѹ���� 16 λ�ռ䣬�ȵȡ����з��Ż��޷��ŵ�ֵ�Ͽ���ִ�нضϲ�������ʹ�ñ����㷨�������κε��������������ֵ���棻�κ���������Сֵ���档<br><br> ѹ�����԰����з��ű��ͻ��޷��ű���ִ�С�<br> <br> ָ����ָ�����κ�������������������״̬��ƥ�䣬����ִ�и�ָ� </p>
+<p>將 op1 與 op2 中的數據壓縮到 dest 中，其中 op2 壓縮到上半部分，op1 壓縮到下半部分。此操作可以在 16、32 或 64 位數據長度的向量上執行，將它們壓縮至原始長度的一半。也就是說，例如，將 16 位半字壓縮到 dest 暫存器的位元組空間；將 32 位字壓縮到 16 位空間，等等。在有符號或無符號的值上可以執行截斷操作，並使用飽和演算法，其中任何到零的上溢均由最大值代替；任何下溢由最小值代替。<br><br> 壓縮可以按照有符號飽和或無符號飽和執行。<br> <br> 指令中指定的任何條件必須與條件程式碼狀態相匹配，否則不執行該指令。 </p>
 
-<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> 備註</h3>
 
-US �� SS ָӦ���ڽ���ı������ƣ�������Ӧ���ڽ�����������͡������������Ϊ�з���ֵ����&ldquo;Ӣ�ض�(R) MMX&#x2122;&rdquo;��������ͬ���� 
+US 與 SS 指應用於結果的飽和限制，而不是應用於進入參數的型別。進入參數總視為有符號值（與&ldquo;英特爾(R) MMX&#x2122;&rdquo;技術的相同）。 
 
-<h2>����</h2>
+<h2>編碼</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -381,7 +381,7 @@ wwss
 
 &nbsp; 
 
-<h2>���ֶα���</h2>
+<h2>子欄位編碼</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -390,17 +390,17 @@ wwss
 <th class="whs6">
 <div align="center" class="whs7">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>�޶���</font> 
+		face=Verdana>限定符</font> 
 </div></th>
 <th class="whs6">
 <div align="center" class="whs7">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>�ֶ�</font> 
+		face=Verdana>欄位</font> 
 </div></th>
 <th class="whs6">
 <div align="center" class="whs7">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>ֵ</font> 
+		face=Verdana>值</font> 
 </div></th></tr>
 
 <tr>
@@ -448,7 +448,7 @@ ww
 <tr>
 <td class="whs3">
 <div align="center" class="whs7">
-����
+保留
 </div></td>
 <td class="whs3">
 <div align="center" class="whs7">
@@ -490,7 +490,7 @@ ss
 <tr>
 <td class="whs3">
 <div align="center" class="whs7">
-����
+保留
 </div></td>
 <td class="whs3">
 <div align="center" class="whs7">
@@ -504,7 +504,7 @@ ss
 <tr>
 <td class="whs3">
 <div align="center" class="whs7">
-����
+保留
 </div></td>
 <td class="whs3">
 <div align="center" class="whs7">
@@ -516,9 +516,9 @@ ss
 </div></td></tr>
 </table>
 
-<h2>Ӱ��� SIMD ��־</h2>
+<h2>影響的 SIMD 標誌</h2>
 
-�����Ӧ���ֶα��ͣ�US��SS����������&ldquo;����&rdquo;��־<br>����ѹ�����������ս������� C �� V�������� Z��N�� 
+如果對應的欄位飽和（US、SS），則設定&ldquo;飽和&rdquo;標誌<br>根據壓縮操作的最終結果，清除 C 與 V，並設定 Z、N。 
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -527,12 +527,12 @@ ss
 <th class="whs6">
 <div align="center" class="whs7">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>��־</font> 
+		face=Verdana>標誌</font> 
 </div></th>
 <th class="whs6">
 <div align="center" class="whs7">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>����</font> 
+		face=Verdana>操作</font> 
 </div></th></tr>
 
 <tr>
@@ -542,7 +542,7 @@ N
 </div></td>
 <td class="whs3">
 <div align="center" class="whs7">
-�������ս������
+根據最終結果設定
 </div></td></tr>
 
 <tr>
@@ -552,7 +552,7 @@ Z
 </div></td>
 <td class="whs3">
 <div align="center" class="whs7">
-�������ս������
+根據最終結果設定
 </div></td></tr>
 
 <tr>
@@ -562,7 +562,7 @@ C
 </div></td>
 <td class="whs3">
 <div align="center" class="whs7">
-���
+清除
 </div></td></tr>
 
 <tr>
@@ -572,13 +572,13 @@ V
 </div></td>
 <td class="whs3">
 <div align="center" class="whs7">
-���
+清除
 </div></td></tr>
 </table>
 
 &nbsp; 
 
-<br>���ݽ���� SIMD �������� SIMD ��־��������ʾ��
+<br>根據結果的 SIMD 寬度設定 SIMD 標誌（如下所示）
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -587,12 +587,12 @@ V
 <th class="whs6">
 <div align="center" class="whs7">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>�޶���</font> 
+		face=Verdana>限定符</font> 
 </div></th>
 <th class="whs6">
 <div align="center" class="whs7">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>SIMD ��־</font> 
+		face=Verdana>SIMD 標誌</font> 
 </div></th></tr>
 
 <tr>
@@ -626,7 +626,7 @@ SIMD32
 </div></td></tr>
 </table>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted
 	style="font-family: 'Courier New';">if (H Specified)then</p>
@@ -680,7 +680,7 @@ SIMD32
 <p class=Preformatted
 	style="margin-left: 40px;"><span style="margin-left: 0px;"><i style="font-style: italic;">dest</i>[word 0] = saturate(o<i>p1</i>, {US,SS}, 32)</span></p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
 <a HREF="WALIGNI.html">WALIGNI</a><a HREF="WALIGNR.html"><br> WALIGNR</a><a HREF="WSHUFH.html"><br> WSHUFH</a><a HREF="WUNPCKEH.html"><br> WUNPCKEH</a><a HREF="WUNPCKIH.html"><br> WUNPCKIH</a><a HREF="WUNPCKEL.html"><br> WUNPCKEL</a><a HREF="WUNPCKIL.html"><br> WUNPCKIL</a> 
 

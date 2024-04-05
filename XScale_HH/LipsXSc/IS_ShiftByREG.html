@@ -9,11 +9,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/XScale_HH/LipsXSc/IS_ShiftByREG.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:54 GMT -->
 <head>
 
-<title>���Ĵ�����λ��ָ��ѡ��</title>
+<title>按暫存器移位的指令選擇</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="05 28, 2003 11:13:09 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -89,7 +89,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض� XScale(R) ΢��ϵ�ṹ \nָ��ѡ��\n���Ĵ�����λ");
+	addTocInfo("參考\n處理器事件與建議\n英特爾 XScale(R) 微體系結構 \n指令選擇\n按暫存器移位");
 
 	}
 	if (window.writeBtnStyle)
@@ -112,15 +112,15 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="XS_logo.gif" alt="Ӣ�ض� XScale(R) ��������" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">���Ĵ�����λ��ָ��ѡ��</h1>
+<h1><img src="XS_logo.gif" alt="英特爾 XScale(R) 技術主題" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">按暫存器移位的指令選擇</h1>
 
 <h2>XSC_IS_ShiftByREG</h2>
 
-<h3>����</h3>
+<h3>解釋</h3>
 
-<p>����&ldquo;Ӣ�ض� XScale(R)&rdquo;����ָ������λ���������ǰ��Ĵ�����λ����ᷢ������ķ����ӳٶ�������ͣ��&ldquo;ָ��ѡ��&rdquo;ɨ��ȼ۳������滻���Ĵ�����λ��ͬʱȷ�����岻�䡣</p>
+<p>對於&ldquo;英特爾 XScale(R)&rdquo;技術指令，如果移位器運算元是按暫存器移位，則會發生額外的發出延遲而導致暫停。&ldquo;指令選擇&rdquo;掃瞄等價常數以替換按暫存器移位，同時確保語義不變。</p>
 
-<h3>ʾ��</h3>
+<h3>示例</h3>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="100%" class="whs2">
@@ -129,9 +129,9 @@ else
 
 <tr valign="top" class="whs5">
 <td valign="top" width="46.439%" class="whs6">
-<h3 class=TableHead>ԭʼ����</td>
+<h3 class=TableHead>原始程式碼</td>
 <td valign="top" width="53.561%" class="whs7">
-<h3 class=TableHead>ָ��ѡ��</td></tr>
+<h3 class=TableHead>指令選擇</td></tr>
 
 <tr valign="top" class="whs5">
 <td valign="top" width="46.439%" class="whs8">

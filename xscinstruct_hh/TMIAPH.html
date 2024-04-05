@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -104,7 +104,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nT - ָ��\nTMIAPH");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nT - 指令\nTMIAPH");
 
 	}
 	if (window.writeBtnStyle)
@@ -129,16 +129,16 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>TMIAPH - MIAPH �ϵĴ���ָ��ӳ��</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>TMIAPH - MIAPH 上的傳輸指令對映</h1>
 
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted>TMIAPH[condition] dest, op1, op2 &#xA0;</p>
 
-���У�<span style="color: #000000;
+其中：<span style="color: #000000;
 					font-size: 12pt;
 					font-style: normal;
 					font-weight: normal;
@@ -168,7 +168,7 @@ else
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-��ѡ��16 ������֮һ������ģ�<a HREF="Conditional_Execution.html">����ִ��</a>�� 
+可選。16 個條件之一。請參閱：<a HREF="Conditional_Execution.html">條件執行</a>。 
 </div></td></tr>
 
 <tr>
@@ -178,7 +178,7 @@ dest
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-64 λ&ldquo;Ӣ�ض�(R)<span style="vertical-align: super;"> </span>���� MMX&#x2122;&rdquo;����Ŀ�����ݼĴ���
+64 位&ldquo;英特爾(R)<span style="vertical-align: super;"> </span>無線 MMX&#x2122;&rdquo;技術目標數據暫存器
 </div></td></tr>
 
 <tr>
@@ -188,7 +188,7 @@ op1
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-&ldquo;Ӣ�ض�(R) XScale&rdquo;�������ݼĴ������ṩ��һ��������
+&ldquo;英特爾(R) XScale&rdquo;核心數據暫存器，提供第一個運算元
 </div></td></tr>
 
 <tr>
@@ -198,27 +198,27 @@ op2
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-&ldquo;Ӣ�ض�(R) XScale&rdquo;�������ݼĴ������ṩ�ڶ���������
+&ldquo;英特爾(R) XScale&rdquo;核心數據暫存器，提供第二個運算元
 </div></td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-�ṩ��&ldquo;Ӣ�ض� XScale(R)&rdquo;���� MIAPH ָ����ͬ�Ĺ��ܣ�ʹ������&ldquo;Ӣ�ض� XScale(R)&rdquo;����Դ�Ĵ�����op1 �� op2�����з��� 16 λ������ִ�г˷��ۼӣ���ʹ��&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;����Ŀ��Ĵ��� dest �ۼӽ����<br><br> ���Ƚ��Ĵ��� op1 �ĵ� 16 λֵ��Ĵ��� op2 �ĵ� 16 λֵ��ˡ�Ȼ�󽫼Ĵ��� op1 �ĸ� 16 λֵ��Ĵ��� op2 �ĸ� 16 λֵ��ˡ���������µĽ�������з��� 32 λ�˻�����Щ�˻��ӵ�һ��Ȼ���� dest �����е�ֵ��ӣ���Ŀ��Ĵ��� dest �в���һ�� 64 λ�����<br><br> ָ����ָ�����κ�������������������״̬��ƥ�䣬����ִ�и�ָ� 
+提供與&ldquo;英特爾 XScale(R)&rdquo;核心 MIAPH 指令相同的功能；使用兩個&ldquo;英特爾 XScale(R)&rdquo;核心源暫存器（op1 與 op2）的有符號 16 位運算元執行乘法累加，並使用&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術目標暫存器 dest 累加結果。<br><br> 首先將暫存器 op1 的低 16 位值與暫存器 op2 的低 16 位值相乘。然後將暫存器 op1 的高 16 位值與暫存器 op2 的高 16 位值相乘。兩種情況下的結果都是有符號 32 位乘積。這些乘積加到一起，然後與 dest 中現有的值相加，在目標暫存器 dest 中產生一個 64 位結果。<br><br> 指令中指定的任何條件必須與條件程式碼狀態相匹配，否則不執行該指令。 
 
-<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs6"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs6"> 備註</h3>
 
-<p>Ҳ����ʹ�ò���ǰ�� T �����Ƿ����� MIAPH��������&ldquo;Ӣ�ض� XScale(R)&rdquo;���� MIAPH ָ���ṩ��ͬ�Ĺ��ܣ���ע�⣬���� MIAPH ���� 40 λ�Ľ������&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�������ṩ������ 64 λ�Ĵ������������������ 40 λ���磬����� MIAPH ���磬��&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;���� TMIAPH Ҫ�ȵ����� 64 λ����ʱ���Ż������ȷ�Ľ������˺�����&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�����������ͬ�Ľ������</p>
+<p>也可以使用不帶前導 T 的助記符（即 MIAPH）；它與&ldquo;英特爾 XScale(R)&rdquo;核心 MIAPH 指令提供相同的功能（請注意，核心 MIAPH 計算 40 位的結果，而&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術則提供完整的 64 位暫存器結果；如果結果發生 40 位上溢，則核心 MIAPH 上溢，而&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術 TMIAPH 要等到發生 64 位上溢時，才會產生正確的結果，因此核心與&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術會產生不同的結果）。</p>
 
-<p>�� R15 ָ��Ϊ op1 �� op2 ʱ����������޷�Ԥ֪�Ľ����</p>
-
-<p>&nbsp;</p>
-
-<p>Ӣ�ض� XScale(R) ����</p>
+<p>將 R15 指定為 op1 或 op2 時，將會產生無法預知的結果。</p>
 
 <p>&nbsp;</p>
 
-<h2>����</h2>
+<p>英特爾 XScale(R) 技術</p>
+
+<p>&nbsp;</p>
+
+<h2>編碼</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -428,17 +428,17 @@ Cond
 
 &nbsp; 
 
-<h2>Ӱ��� SIMD ��־</h2>
+<h2>影響的 SIMD 標誌</h2>
 
-<p>��Ӱ�� SIMD PSR ��־ (wCASF) ��&ldquo;����&rdquo;��־ (wCSSF)��</p>
+<p>不影響 SIMD PSR 標誌 (wCASF) 或&ldquo;飽和&rdquo;標誌 (wCSSF)。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted><span style="font-style: italic;"><I>dest</I></span>=sign_extend((<span style="font-style: italic;"><I>op1</I></span>[31:16]*<span style="font-style: italic;"><I>op2</I></span>[31:16])+(<span style="font-style: italic;"><I>op1</I></span>[15:0]*<span style="font-style: italic;"><I>op2</I></span>[15:0])) + <span style="font-style: italic;"><I>dest</I></span>[63:0] </p>
 
 <p class=Preformatted><img src="TMIAPH.gif" x-maintain-ratio="TRUE" width="627px" height="366px" border="0" class="img_whs11"></p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
 <p><a HREF="TMIA.html#TMIA">TMIA</a></p>
 

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc266.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:25 GMT -->
 <head>
 
-<title>PUSH - ���ֻ�˫��ѹ���ջ</title>
+<title>PUSH - 將字或雙字壓入堆疊</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="03 8, 2002 11:49:23 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -27,7 +27,7 @@
 <meta name=page-count content=1>
 <meta name=layout-height content=1745>
 <meta name=layout-width content=792>
-<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;��F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;��;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FLDZ--Load;EB;EC;EE;FLDZ;FCLEX;FNCLEX--Clear;FNCLEX*;PE;UE;OE;ZE;IE;FNCLEX;FNINIT*;coprocessor;FPUControlWord;FPUStatusWord;FPUTagWord;FPUDataPointer;FPUInstructionPointer;FPULastInstructionOpcode;FSAVE;FNSAVE--Store;FNSAVE*;FNSAVE;FNINIT--Initialize;coprocessors;FPUs;FWAIT;DEST[FPUControlWord;DEST[FPUStatusWord;DEST[FPUTagWord;DEST[FPUDataPointer;DEST[FPUInstructionPointer;DEST[FPULastInstructionOpcode;nonwritable;FSTCW;FNSTCW--Store;FNSTCW*;FNSTCW;FNSTENV--Store;FSTENV;FNSTENV*;FNSTENV;FNSTSW--Store;FNSTSW*;FNSTSW;FPREM;FXAM;denormalized;MOV--Move;ModR;M;m;PG;PGE;PSE;PAE;PDPTRs;FSTP--Store;FUCOMIP--Compare;FUCOMIP;FUCOMPP--Unordered;FWAIT--Wait;MP;INSB;INSW;INSD--Input;INSD;CPL;IOPL;VM;TSS;CL;BL;CH;DH;BH;CX;BX;SP;EBX;EBP;mm--An;DPL=;C;W;Y;INTRA-PRIVILEGE-LEVEL-INTERRUPT;flag*;Push(CS;Push(IP;IDT(Descriptor;vector_number;GP((DEST;EXT;GP((vector_number;NP((vector_number;GDT;GP(TSS;NP(TSS;Push(error;GP(selector;NP(selector;GP(new;GP(CodeSegmentSelector;INTER-PREVILEGE-LEVEL-INTERRUPT;TSSstackAddress;TS(current;NewSS;NewESP;TS(EXT;RPL;TS(SS;LDT;SS(SS;selector+EXT;SS(segment;TSS(NewSS;Gate(CS;IP;Push(far;Push(EFLAGS;Push(ErrorCode;ELSE(*;CodeSegmentDescriptor(DPL;CS(RPL;RF;tempEFLAGS;TempSS;TempESP;Push(GS;Push(FS;Push(DS;Push(ES;Push(TempSS;Push(TempESP;Push(TempEFlags;Push(EIP;Gate(instruction;ErrorCode;SS(selector;TS(selector;TSS's;LIDT--Load;SFENCE--Store;IDTR(Limit;IDTR(Base;GDTR(Limit;GDTR(Base;SIDT--Store;mm_loadr_ps;mm_cmpgt_ss;Intra-privilege;Pop(;tempEIP;tempCS;tempEFLAGS(VM;VIF;EFLAGS(IF;EFLAGS(IOPL;EFLAGS(VM;RETURN-TO-OUTER-PRIVILGE-LEVEL;GP(SSselector;LODSD--Load;LODSD;LOOPcc--Loop;LOOPE;LOOPZ;LOOPNE;LOOPNZ;AddressSize;BranchCond;SignExtend(DEST;LSS--Load;SegmentRegister(DescriptorValidBit;Offset(SRC;XCHG--Exchange;MOVSD--Move;rw;rb;SI's;AddressSize--The;StackAddrSize--Represents;SRC--Represents;DEST--Represents;ZeroExtend(value;ZeroExtend;SignExtend(value;SignExtend;SaturateSignedWordToSignedByte--Converts;SaturateSignedDwordToSignedWord--Converts;SaturateSignedWordToUnsignedByte--Converts;FFH;SaturateToSignedByte--Represents;SaturateToSignedWord--Represents;SaturateToUnsignedByte--Represents;SaturateToUnsignedWord--Represents;LowOrderWord(DEST;HighOrderWord(DEST;Push(value;PUSH--Push;POP--Pop;PopRegisterStack--Marks;Switch-Tasks--Performs;Bit(BitBase;BitOffset;Bit[EAX;BIT[EAX;BitBase;GBits;DIV;EWBE#;EFLAGS(RF;SegmentSelector;PADDSW--Packed;SaturateToSignedByte;SaturateToSignedWord;PADDUSW--Packed;SaturateToUnsignedByte;SaturateToUnSignedByte;SaturateToUnsignedWord;SaturateToUnSignedWord;PAVGW--Packed;PCMPGTD--Packed;FFFFFFFFH;DCMPGTD;POPFD--Pop;PSLLQ--Packed;ZeroExtend(DEST;PSRAD--Packed;PSRLQ--Packed;PSUBD--Packed;PSUBSW--Packed;PSUBUSW--Packed;MMX;PUNPCKHQDQ--;PUNPCKHW;PUNPCKLQDQ--;Push(ECX;Push(EDX;Push(EBX;Push(Temp;Push(EBP;Push(ESI;Push(EDI;Push(AX;Push(CX;Push(DX;Push(BX;Push(BP;Push(SI;Push(DI;PUSHFD--Push;push(EFLAGS;stack*;LSB(DEST;LSB(SRC;MSB;ROR--Rotate;SCASB;SCASD--Scan;ES(E;mm_setcsr(unsigned;EFLAGS.AC;CPUID.XMM(EDX;STOSD--Store;FLD--Load;ExtendedReal(SRC;FLDCW--Load;FLDENV--Load;SRC[FPUControlWord;SRC[FPUStatusWord;SRC[FPUTagWord;SRC[FPUDataPointer;SRC[FPUInstructionPointer;SRC[FPULastInstructionOpcode;FNOP--No;FPATAN--Partial;Arctangent;arctangent;FPREM--Partial;LeastSignificantBits(Q;ADDSD--Scalar;mm_add_sd;FPTAN--Partial;FRNDINT--Round;FRSTOR--Restore;FSCALE--Scale;FTST--TEST;FXCH--Exchange;IP-offset;AND--Logical;iw;little-endian;FP;non-TOS;xx;FXTRACT--Extract;superset;logb(x;logbx;HLT--Halt;HLT;IDIV--Signed;EAX=Quotient;EDX=Remainder;OpernadSize;SignedModulus;EDXE;IMUL--Signed;IMUL;MUL;NumberOfOperands;size*;IN--Input;INC--Increment;INC;FF;ANDPD--Bitwise;ANDPD;BitwiseAND;INVD--Invalidate;INVD;WBINVD;Flush(InternalCaches;SignalFlush(ExternalCaches;INVLPG--Invalidate;INVLPG;lookaside;Flush(RelevantTLBEntries;Jcc--Jump;JA;JAE;JB;JBE;JC;JCXZ;JE;JG;SF=OF;JGE;JL;JLE;JNA;JNAE;JNB;JNBE;JNC;JNG;JNGE;JNL;JNLE;JNO;JNP;JNS;JP;JPE;JPO;JS;cw;Jcc;opcodes;JMP;FARLABEL;cacheability;EA;cp;jump--A;LFENCE;MFENCE;SFENCE;WB;WC;PREFETCHh;specualtive;LLDT;LDTR;LAR;VERR;VERW;LSL;ADDPD;ANDNPD;prepended;ADC;BTC;BTR;BTS;CMPXCHG;NEG;SBB;XADD;LOCK#;AssertLOCK#(DurationOfAccompaningInstruction;LSL--Load;LTR;MASKMOVDQU;UC;WP;MASKMOVQ;MAXPD--Maximum;MAXPD;MAXPS;ANDN;Single-FP;ANDNPS;MAXSD;MAXSS;Wait_On_Following_Loads_And_Stores_Until(preceding_loads_and_stores_globally_visible;MINPD;MINPS;MINSD;MINSS;Sreg;seg;ARPL;DEST[RPL;SRC[RPL;MOVAPD--Move;MOVAPD;MOVUPD;MOVAPS;void_mm_store_ps;MOVD;XXM;MOVDQA;MOVDQU;mmx;MOVHLPS--;MOVHLPS;MOVHPD;MOVHPS;MOVLHPS;doubleword-integers;ArrayIndex;LowerBound;UppderBound;MOVLPD;nvalue;mm_loadl_pd;mm_storel_pd;MOVLPS;mm_loadl_pi;mm_storel_pi;MOVMSKPD;mm_movemask_pd;MOVMSKPS;MOVNTDQ;uncacheable;MOVNTI;MOVNTPD;MOVNTPS;MOVNTQ--Move;MOVNTQ;MOVQ;BC;BSF;mm_load_sd;mm_store_sd;MOVSS;MOVSX;BF;MOVZX;MULPD;BD;BSR;MULPS;mem;MULSD;MULSS;SaturateSignedWordToUnsignedByte;��;PAND;PANDN;d;intrasegment;call--A;intersegment;switch--A;KBytes;GP(segment">
+<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;±F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;±;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FLDZ--Load;EB;EC;EE;FLDZ;FCLEX;FNCLEX--Clear;FNCLEX*;PE;UE;OE;ZE;IE;FNCLEX;FNINIT*;coprocessor;FPUControlWord;FPUStatusWord;FPUTagWord;FPUDataPointer;FPUInstructionPointer;FPULastInstructionOpcode;FSAVE;FNSAVE--Store;FNSAVE*;FNSAVE;FNINIT--Initialize;coprocessors;FPUs;FWAIT;DEST[FPUControlWord;DEST[FPUStatusWord;DEST[FPUTagWord;DEST[FPUDataPointer;DEST[FPUInstructionPointer;DEST[FPULastInstructionOpcode;nonwritable;FSTCW;FNSTCW--Store;FNSTCW*;FNSTCW;FNSTENV--Store;FSTENV;FNSTENV*;FNSTENV;FNSTSW--Store;FNSTSW*;FNSTSW;FPREM;FXAM;denormalized;MOV--Move;ModR;M;m;PG;PGE;PSE;PAE;PDPTRs;FSTP--Store;FUCOMIP--Compare;FUCOMIP;FUCOMPP--Unordered;FWAIT--Wait;MP;INSB;INSW;INSD--Input;INSD;CPL;IOPL;VM;TSS;CL;BL;CH;DH;BH;CX;BX;SP;EBX;EBP;mm--An;DPL=;C;W;Y;INTRA-PRIVILEGE-LEVEL-INTERRUPT;flag*;Push(CS;Push(IP;IDT(Descriptor;vector_number;GP((DEST;EXT;GP((vector_number;NP((vector_number;GDT;GP(TSS;NP(TSS;Push(error;GP(selector;NP(selector;GP(new;GP(CodeSegmentSelector;INTER-PREVILEGE-LEVEL-INTERRUPT;TSSstackAddress;TS(current;NewSS;NewESP;TS(EXT;RPL;TS(SS;LDT;SS(SS;selector+EXT;SS(segment;TSS(NewSS;Gate(CS;IP;Push(far;Push(EFLAGS;Push(ErrorCode;ELSE(*;CodeSegmentDescriptor(DPL;CS(RPL;RF;tempEFLAGS;TempSS;TempESP;Push(GS;Push(FS;Push(DS;Push(ES;Push(TempSS;Push(TempESP;Push(TempEFlags;Push(EIP;Gate(instruction;ErrorCode;SS(selector;TS(selector;TSS's;LIDT--Load;SFENCE--Store;IDTR(Limit;IDTR(Base;GDTR(Limit;GDTR(Base;SIDT--Store;mm_loadr_ps;mm_cmpgt_ss;Intra-privilege;Pop(;tempEIP;tempCS;tempEFLAGS(VM;VIF;EFLAGS(IF;EFLAGS(IOPL;EFLAGS(VM;RETURN-TO-OUTER-PRIVILGE-LEVEL;GP(SSselector;LODSD--Load;LODSD;LOOPcc--Loop;LOOPE;LOOPZ;LOOPNE;LOOPNZ;AddressSize;BranchCond;SignExtend(DEST;LSS--Load;SegmentRegister(DescriptorValidBit;Offset(SRC;XCHG--Exchange;MOVSD--Move;rw;rb;SI's;AddressSize--The;StackAddrSize--Represents;SRC--Represents;DEST--Represents;ZeroExtend(value;ZeroExtend;SignExtend(value;SignExtend;SaturateSignedWordToSignedByte--Converts;SaturateSignedDwordToSignedWord--Converts;SaturateSignedWordToUnsignedByte--Converts;FFH;SaturateToSignedByte--Represents;SaturateToSignedWord--Represents;SaturateToUnsignedByte--Represents;SaturateToUnsignedWord--Represents;LowOrderWord(DEST;HighOrderWord(DEST;Push(value;PUSH--Push;POP--Pop;PopRegisterStack--Marks;Switch-Tasks--Performs;Bit(BitBase;BitOffset;Bit[EAX;BIT[EAX;BitBase;GBits;DIV;EWBE#;EFLAGS(RF;SegmentSelector;PADDSW--Packed;SaturateToSignedByte;SaturateToSignedWord;PADDUSW--Packed;SaturateToUnsignedByte;SaturateToUnSignedByte;SaturateToUnsignedWord;SaturateToUnSignedWord;PAVGW--Packed;PCMPGTD--Packed;FFFFFFFFH;DCMPGTD;POPFD--Pop;PSLLQ--Packed;ZeroExtend(DEST;PSRAD--Packed;PSRLQ--Packed;PSUBD--Packed;PSUBSW--Packed;PSUBUSW--Packed;MMX;PUNPCKHQDQ--;PUNPCKHW;PUNPCKLQDQ--;Push(ECX;Push(EDX;Push(EBX;Push(Temp;Push(EBP;Push(ESI;Push(EDI;Push(AX;Push(CX;Push(DX;Push(BX;Push(BP;Push(SI;Push(DI;PUSHFD--Push;push(EFLAGS;stack*;LSB(DEST;LSB(SRC;MSB;ROR--Rotate;SCASB;SCASD--Scan;ES(E;mm_setcsr(unsigned;EFLAGS.AC;CPUID.XMM(EDX;STOSD--Store;FLD--Load;ExtendedReal(SRC;FLDCW--Load;FLDENV--Load;SRC[FPUControlWord;SRC[FPUStatusWord;SRC[FPUTagWord;SRC[FPUDataPointer;SRC[FPUInstructionPointer;SRC[FPULastInstructionOpcode;FNOP--No;FPATAN--Partial;Arctangent;arctangent;FPREM--Partial;LeastSignificantBits(Q;ADDSD--Scalar;mm_add_sd;FPTAN--Partial;FRNDINT--Round;FRSTOR--Restore;FSCALE--Scale;FTST--TEST;FXCH--Exchange;IP-offset;AND--Logical;iw;little-endian;FP;non-TOS;xx;FXTRACT--Extract;superset;logb(x;logbx;HLT--Halt;HLT;IDIV--Signed;EAX=Quotient;EDX=Remainder;OpernadSize;SignedModulus;EDXE;IMUL--Signed;IMUL;MUL;NumberOfOperands;size*;IN--Input;INC--Increment;INC;FF;ANDPD--Bitwise;ANDPD;BitwiseAND;INVD--Invalidate;INVD;WBINVD;Flush(InternalCaches;SignalFlush(ExternalCaches;INVLPG--Invalidate;INVLPG;lookaside;Flush(RelevantTLBEntries;Jcc--Jump;JA;JAE;JB;JBE;JC;JCXZ;JE;JG;SF=OF;JGE;JL;JLE;JNA;JNAE;JNB;JNBE;JNC;JNG;JNGE;JNL;JNLE;JNO;JNP;JNS;JP;JPE;JPO;JS;cw;Jcc;opcodes;JMP;FARLABEL;cacheability;EA;cp;jump--A;LFENCE;MFENCE;SFENCE;WB;WC;PREFETCHh;specualtive;LLDT;LDTR;LAR;VERR;VERW;LSL;ADDPD;ANDNPD;prepended;ADC;BTC;BTR;BTS;CMPXCHG;NEG;SBB;XADD;LOCK#;AssertLOCK#(DurationOfAccompaningInstruction;LSL--Load;LTR;MASKMOVDQU;UC;WP;MASKMOVQ;MAXPD--Maximum;MAXPD;MAXPS;ANDN;Single-FP;ANDNPS;MAXSD;MAXSS;Wait_On_Following_Loads_And_Stores_Until(preceding_loads_and_stores_globally_visible;MINPD;MINPS;MINSD;MINSS;Sreg;seg;ARPL;DEST[RPL;SRC[RPL;MOVAPD--Move;MOVAPD;MOVUPD;MOVAPS;void_mm_store_ps;MOVD;XXM;MOVDQA;MOVDQU;mmx;MOVHLPS--;MOVHLPS;MOVHPD;MOVHPS;MOVLHPS;doubleword-integers;ArrayIndex;LowerBound;UppderBound;MOVLPD;nvalue;mm_loadl_pd;mm_storel_pd;MOVLPS;mm_loadl_pi;mm_storel_pi;MOVMSKPD;mm_movemask_pd;MOVMSKPS;MOVNTDQ;uncacheable;MOVNTI;MOVNTPD;MOVNTPS;MOVNTQ--Move;MOVNTQ;MOVQ;BC;BSF;mm_load_sd;mm_store_sd;MOVSS;MOVSX;BF;MOVZX;MULPD;BD;BSR;MULPS;mem;MULSD;MULSS;SaturateSignedWordToUnsignedByte;¨;PAND;PANDN;d;intrasegment;call--A;intersegment;switch--A;KBytes;GP(segment">
 
 
 <!--(Links)=========================================================-->
@@ -96,7 +96,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nP - ָ��\nPUSH - ���ֻ�˫��ѹ���ջ");
+	addTocInfo("參考\n指令集\nIA-32 指令\nP - 指令\nPUSH - 將字或雙字壓入堆疊");
 
 	}
 	if (window.writeBtnStyle)
@@ -119,7 +119,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>PUSH - ���ֻ�˫��ѹ���ջ</h1>
+<h1>PUSH - 將字或雙字壓入堆疊</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -127,13 +127,13 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">������</td>
+	style="margin-bottom: 0;">操作碼</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">說明</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -144,7 +144,7 @@ else
 	style="margin-bottom: 0;">PUSH <span style="font-style: italic;"><I>r/m16</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">ѹ�� <span style="font-style: italic;"><I>r/m16</I></span></td></tr>
+	style="margin-bottom: 0;">壓入 <span style="font-style: italic;"><I>r/m16</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -155,7 +155,7 @@ else
 	style="margin-bottom: 0;">PUSH <span style="font-style: italic;"><I>r/m32</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">ѹ�� <span style="font-style: italic;"><I>r/m32</I></span></td></tr>
+	style="margin-bottom: 0;">壓入 <span style="font-style: italic;"><I>r/m32</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -166,7 +166,7 @@ else
 	style="margin-bottom: 0;">PUSH <span style="font-style: italic;"><I>r16</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">ѹ�� <span style="font-style: italic;"><I>r16</I></span></td></tr>
+	style="margin-bottom: 0;">壓入 <span style="font-style: italic;"><I>r16</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -177,7 +177,7 @@ else
 	style="margin-bottom: 0;">PUSH <span style="font-style: italic;"><I>r32</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">ѹ�� <span style="font-style: italic;"><I>r32</I></span></td></tr>
+	style="margin-bottom: 0;">壓入 <span style="font-style: italic;"><I>r32</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -188,7 +188,7 @@ else
 	style="margin-bottom: 0;">PUSH <span style="font-style: italic;"><I>imm8</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">ѹ�� <span style="font-style: italic;"><I>imm8</I></span></td></tr>
+	style="margin-bottom: 0;">壓入 <span style="font-style: italic;"><I>imm8</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -199,7 +199,7 @@ else
 	style="margin-bottom: 0;">PUSH <span style="font-style: italic;"><I>imm16</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">ѹ�� <span style="font-style: italic;"><I>imm16</I></span></td></tr>
+	style="margin-bottom: 0;">壓入 <span style="font-style: italic;"><I>imm16</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -210,7 +210,7 @@ else
 	style="margin-bottom: 0;">PUSH <span style="font-style: italic;"><I>imm32</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">ѹ�� <span style="font-style: italic;"><I>imm32</I></span></td></tr>
+	style="margin-bottom: 0;">壓入 <span style="font-style: italic;"><I>imm32</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -221,7 +221,7 @@ else
 	style="margin-bottom: 0;">PUSH CS</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">ѹ�� CS</td></tr>
+	style="margin-bottom: 0;">壓入 CS</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -232,7 +232,7 @@ else
 	style="margin-bottom: 0;">PUSH SS</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">ѹ�� SS</td></tr>
+	style="margin-bottom: 0;">壓入 SS</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -243,7 +243,7 @@ else
 	style="margin-bottom: 0;">PUSH DS</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">ѹ�� DS</td></tr>
+	style="margin-bottom: 0;">壓入 DS</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -254,7 +254,7 @@ else
 	style="margin-bottom: 0;">PUSH ES</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">ѹ�� ES</td></tr>
+	style="margin-bottom: 0;">壓入 ES</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -265,7 +265,7 @@ else
 	style="margin-bottom: 0;">PUSH FS</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">ѹ�� FS</td></tr>
+	style="margin-bottom: 0;">壓入 FS</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -276,22 +276,22 @@ else
 	style="margin-bottom: 0;">PUSH GS</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">ѹ�� GS</td></tr>
+	style="margin-bottom: 0;">壓入 GS</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>�ݼ���ջָ�룬Ȼ��Դ�������洢��ջ������ջ�εĵ�ַ��С����ȷ����ջָ���С��16 λ�� 32 λ������ǰ����εĲ�������С����ȷ����ջָ��ĵݼ�����2 �ֽڻ� 4 �ֽڣ������磬�����Щ��ַ��С�������������С����Ϊ 32���� 32 λ ESP �Ĵ�������ջָ�룩�ݼ� 4�������Щ����Ϊ 16���� 16 λ SP �Ĵ����ݼ� 2������ջ�εĶ��������е� B ��־ȷ����ջ�ĵ�ַ��С���ԣ���ǰ����εĶ��������е� D ��־��ǰ׺ȷ��Դ�������Ĳ�������С�������ַ��С���ԣ�����ջ��ַ��С����Ϊ 32 ʱ��ѹ�� 16 λ���������ܻᵼ�¶�ջָ��δ���루����ջָ��δ��˫�ֱ߽���룩��</p>
+<p>遞減堆疊指針，然後將源運算元儲存到棧頂。堆疊段的地址大小屬性確定堆疊指針大小（16 位或 32 位），目前程式碼段的運算元大小屬性確定堆疊指針的遞減量（2 位元組或 4 位元組）。例如，如果這些地址大小屬性與運算元大小屬性為 32，則 32 位 ESP 暫存器（堆疊指針）遞減 4，如果這些屬性為 16，則 16 位 SP 暫存器遞減 2。（堆疊段的段描述符中的 B 標誌確定堆疊的地址大小屬性，目前程式碼段的段描述符中的 D 標誌與字首確定源運算元的運算元大小屬性與地址大小屬性）。堆疊地址大小屬性為 32 時，壓入 16 位運算元可能會導致堆疊指針未對齊（即堆疊指針未與雙字邊界對齊）。</p>
 
-<p>PUSH ESP ָ� ESP �Ĵ�����ִ�д�ָ��֮ǰ��ֵѹ�롣�������� PUSH ָ��ʹ���ڴ�����������˲������ĵ�ַ���㽫 ESP �Ĵ���������ַ�Ĵ���ʱ������������Ч��ַ������ ESP �Ĵ����ݼ�֮ǰ���м��㡣</p>
+<p>PUSH ESP 指令將 ESP 暫存器按執行此指令之前的值壓入。這樣，在 PUSH 指令使用記憶體運算元，而此運算元的地址計算將 ESP 暫存器用作基址暫存器時，運算元的有效地址可以在 ESP 暫存器遞減之前進行計算。</p>
 
-<p>��ʵ��ַģʽ�У����ִ�� PUSH ָ��ʱ��ESP �� SP �Ĵ���Ϊ 1�������������ڶ�ջ�ռ䲻����رա���������ָʾ��������쳣��</p>
+<p>在實地址模式中，如果執行 PUSH 指令時，ESP 或 SP 暫存器為 1，則處理器會由於堆疊空間不足而關閉。不會產生指示此情況的異常。</p>
 
-<h2>Ӣ�ض�<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>(R)</font> ��ϵ�ṹ������</h2>
+<h2>英特爾<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>(R)</font> 體系結構相容性</h2>
 
-<p>����Ӣ�ض�<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>(R)</font> 286 ֮���&ldquo;Ӣ�ض�<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 					face=Verdana>(R)</font> ��ϵ�ṹ&rdquo;��������PUSH ESP ָ� ESP �Ĵ�����ִ�д�ָ��֮ǰ��ֵѹ�롣����ʵ��ַ���� 8086 ģʽ��Ҳ����ˣ�������Ӣ�ض�<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 							face=Verdana>(R)</font> 8086 ��������PUSH SP ָ��ѹ�� SP �Ĵ�������ֵ���������ݼ� 2 ֮���ֵ����</p>
+<p>對於英特爾<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>(R)</font> 286 之後的&ldquo;英特爾<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 					face=Verdana>(R)</font> 體系結構&rdquo;處理器，PUSH ESP 指令將 ESP 暫存器按執行此指令之前的值壓入。（在實地址與虛 8086 模式中也是如此）。對於英特爾<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 							face=Verdana>(R)</font> 8086 處理器，PUSH SP 指令壓入 SP 暫存器的新值（即將它遞減 2 之後的值）。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted>IF StackAddrSize <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -365,35 +365,35 @@ else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'>");}
 //--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> SRC; (* push doubleword *)<br> FI;<br> FI;</p>
 
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
-<p>�ޡ�</p>
+<p>無。</p>
 
-<h2>����ģʽ�쳣</h2>
+<h2>保護模式異常</h2>
 
-<p>#GP(0) - ����ڴ��������Ч��ַ���� CS��DS��ES��FS �� GS �����ơ���� DS��ES��FS���� GS �Ĵ������ڷ����ڴ棬�����������յĶ�ѡ������</p>
+<p>#GP(0) - 如果記憶體運算元有效地址超出 CS、DS、ES、FS 或 GS 段限制。如果 DS、ES、FS、或 GS 暫存器用於訪問記憶體，並且它包含空的段選擇器。</p>
 
-<p>#SS(0) - ����ڴ��������Ч��ַ���� SS �����ơ� </p>
+<p>#SS(0) - 如果記憶體運算元有效地址超出 SS 段限制。 </p>
 
-<p>#PF(�������) - �������ҳ����</p>
+<p>#PF(錯誤程式碼) - 如果發生頁錯誤。</p>
 
-<p>#AC(0) - ������ö����鲢�ڵ�ǰ��Ȩ����Ϊ 3 ʱ����δ������ڴ����á�</p>
+<p>#AC(0) - 如果啟用對齊檢查並在目前特權級別為 3 時進行未對齊的記憶體引用。</p>
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>實地址模式異常</h2>
 
-<p>#GP - ����ڴ��������Ч��ַ���� CS��DS��ES��FS �� GS �����ơ�</p>
+<p>#GP - 如果記憶體運算元有效地址超出 CS、DS、ES、FS 或 GS 段限制。</p>
 
-<p>#SS - ����ڴ��������Ч��ַ���� SS �����ơ���� SP �� ESP �Ĵ�������ֵ�����˶�ջ�ε����ơ�</p>
+<p>#SS - 如果記憶體運算元有效地址超出 SS 段限制。如果 SP 或 ESP 暫存器的新值超出了堆疊段的限制。</p>
 
-<h2>�� 8086 ģʽ�쳣</h2>
+<h2>虛 8086 模式異常</h2>
 
-<p>#GP(0) - ����ڴ��������Ч��ַ���� CS��DS��ES��FS �� GS �����ơ�</p>
+<p>#GP(0) - 如果記憶體運算元有效地址超出 CS、DS、ES、FS 或 GS 段限制。</p>
 
-<p>#SS(0) - ����ڴ��������Ч��ַ���� SS �����ơ�</p>
+<p>#SS(0) - 如果記憶體運算元有效地址超出 SS 段限制。</p>
 
-<p>#PF(�������) - �������ҳ����</p>
+<p>#PF(錯誤程式碼) - 如果發生頁錯誤。</p>
 
-<p class="whs4">#AC(0) - ��������ö����������½���δ������ڴ����á� </p>
+<p class="whs4">#AC(0) - 如果在啟用對齊檢查的情況下進行未對齊的記憶體引用。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

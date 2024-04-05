@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc177.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:32:12 GMT -->
 <head>
 
-<title>MOV - �ƶ�</title>
+<title>MOV - 移動</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="03 8, 2002 11:36:47 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -27,7 +27,7 @@
 <meta name=page-count content=1>
 <meta name=layout-height content=2642>
 <meta name=layout-width content=792>
-<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;��F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;��;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FLDZ--Load;EB;EC;EE;FLDZ;FCLEX;FNCLEX--Clear;FNCLEX*;PE;UE;OE;ZE;IE;FNCLEX;FNINIT*;coprocessor;FPUControlWord;FPUStatusWord;FPUTagWord;FPUDataPointer;FPUInstructionPointer;FPULastInstructionOpcode;FSAVE;FNSAVE--Store;FNSAVE*;FNSAVE;FNINIT--Initialize;coprocessors;FPUs;FWAIT;DEST[FPUControlWord;DEST[FPUStatusWord;DEST[FPUTagWord;DEST[FPUDataPointer;DEST[FPUInstructionPointer;DEST[FPULastInstructionOpcode;nonwritable;FSTCW;FNSTCW--Store;FNSTCW*;FNSTCW;FNSTENV--Store;FSTENV;FNSTENV*;FNSTENV;FNSTSW--Store;FNSTSW*;FNSTSW;FPREM;FXAM;denormalized;MOV--Move;ModR;M;m;PG;PGE;PSE;PAE;PDPTRs;FSTP--Store;FUCOMIP--Compare;FUCOMIP;FUCOMPP--Unordered;FWAIT--Wait;MP;INSB;INSW;INSD--Input;INSD;CPL;IOPL;VM;TSS;CL;BL;CH;DH;BH;CX;BX;SP;EBX;EBP;mm--An;DPL=;C;W;Y;INTRA-PRIVILEGE-LEVEL-INTERRUPT;flag*;Push(CS;Push(IP;IDT(Descriptor;vector_number;GP((DEST;EXT;GP((vector_number;NP((vector_number;GDT;GP(TSS;NP(TSS;Push(error;GP(selector;NP(selector;GP(new;GP(CodeSegmentSelector;INTER-PREVILEGE-LEVEL-INTERRUPT;TSSstackAddress;TS(current;NewSS;NewESP;TS(EXT;RPL;TS(SS;LDT;SS(SS;selector+EXT;SS(segment;TSS(NewSS;Gate(CS;IP;Push(far;Push(EFLAGS;Push(ErrorCode;ELSE(*;CodeSegmentDescriptor(DPL;CS(RPL;RF;tempEFLAGS;TempSS;TempESP;Push(GS;Push(FS;Push(DS;Push(ES;Push(TempSS;Push(TempESP;Push(TempEFlags;Push(EIP;Gate(instruction;ErrorCode;SS(selector;TS(selector;TSS's;LIDT--Load;SFENCE--Store;IDTR(Limit;IDTR(Base;GDTR(Limit;GDTR(Base;SIDT--Store;mm_loadr_ps;mm_cmpgt_ss;Intra-privilege;Pop(;tempEIP;tempCS;tempEFLAGS(VM;VIF;EFLAGS(IF;EFLAGS(IOPL;EFLAGS(VM;RETURN-TO-OUTER-PRIVILGE-LEVEL;GP(SSselector;LODSD--Load;LODSD;LOOPcc--Loop;LOOPE;LOOPZ;LOOPNE;LOOPNZ;AddressSize;BranchCond;SignExtend(DEST;LSS--Load;SegmentRegister(DescriptorValidBit;Offset(SRC;XCHG--Exchange;MOVSD--Move;rw;rb;SI's;AddressSize--The;StackAddrSize--Represents;SRC--Represents;DEST--Represents;ZeroExtend(value;ZeroExtend;SignExtend(value;SignExtend;SaturateSignedWordToSignedByte--Converts;SaturateSignedDwordToSignedWord--Converts;SaturateSignedWordToUnsignedByte--Converts;FFH;SaturateToSignedByte--Represents;SaturateToSignedWord--Represents;SaturateToUnsignedByte--Represents;SaturateToUnsignedWord--Represents;LowOrderWord(DEST;HighOrderWord(DEST;Push(value;PUSH--Push;POP--Pop;PopRegisterStack--Marks;Switch-Tasks--Performs;Bit(BitBase;BitOffset;Bit[EAX;BIT[EAX;BitBase;GBits;DIV;EWBE#;EFLAGS(RF;SegmentSelector;PADDSW--Packed;SaturateToSignedByte;SaturateToSignedWord;PADDUSW--Packed;SaturateToUnsignedByte;SaturateToUnSignedByte;SaturateToUnsignedWord;SaturateToUnSignedWord;PAVGW--Packed;PCMPGTD--Packed;FFFFFFFFH;DCMPGTD;POPFD--Pop;PSLLQ--Packed;ZeroExtend(DEST;PSRAD--Packed;PSRLQ--Packed;PSUBD--Packed;PSUBSW--Packed;PSUBUSW--Packed;MMX;PUNPCKHQDQ--;PUNPCKHW;PUNPCKLQDQ--;Push(ECX;Push(EDX;Push(EBX;Push(Temp;Push(EBP;Push(ESI;Push(EDI;Push(AX;Push(CX;Push(DX;Push(BX;Push(BP;Push(SI;Push(DI;PUSHFD--Push;push(EFLAGS;stack*;LSB(DEST;LSB(SRC;MSB;ROR--Rotate;SCASB;SCASD--Scan;ES(E;mm_setcsr(unsigned;EFLAGS.AC;CPUID.XMM(EDX;STOSD--Store;FLD--Load;ExtendedReal(SRC;FLDCW--Load;FLDENV--Load;SRC[FPUControlWord;SRC[FPUStatusWord;SRC[FPUTagWord;SRC[FPUDataPointer;SRC[FPUInstructionPointer;SRC[FPULastInstructionOpcode;FNOP--No;FPATAN--Partial;Arctangent;arctangent;FPREM--Partial;LeastSignificantBits(Q;ADDSD--Scalar;mm_add_sd;FPTAN--Partial;FRNDINT--Round;FRSTOR--Restore;FSCALE--Scale;FTST--TEST;FXCH--Exchange;IP-offset;AND--Logical;iw;little-endian;FP;non-TOS;xx;FXTRACT--Extract;superset;logb(x;logbx;HLT--Halt;HLT;IDIV--Signed;EAX=Quotient;EDX=Remainder;OpernadSize;SignedModulus;EDXE;IMUL--Signed;IMUL;MUL;NumberOfOperands;size*;IN--Input;INC--Increment;INC;FF;ANDPD--Bitwise;ANDPD;BitwiseAND;INVD--Invalidate;INVD;WBINVD;Flush(InternalCaches;SignalFlush(ExternalCaches;INVLPG--Invalidate;INVLPG;lookaside;Flush(RelevantTLBEntries;Jcc--Jump;JA;JAE;JB;JBE;JC;JCXZ;JE;JG;SF=OF;JGE;JL;JLE;JNA;JNAE;JNB;JNBE;JNC;JNG;JNGE;JNL;JNLE;JNO;JNP;JNS;JP;JPE;JPO;JS;cw;Jcc;opcodes;JMP;FARLABEL;cacheability;EA;cp;jump--A;LFENCE;MFENCE;SFENCE;WB;WC;PREFETCHh;specualtive;LLDT;LDTR;LAR;VERR;VERW;LSL;ADDPD;ANDNPD;prepended;ADC;BTC;BTR;BTS;CMPXCHG;NEG;SBB;XADD;LOCK#;AssertLOCK#(DurationOfAccompaningInstruction;LSL--Load;LTR;MASKMOVDQU;UC;WP;MASKMOVQ;MAXPD--Maximum;MAXPD;MAXPS;ANDN;Single-FP;ANDNPS;MAXSD;MAXSS;Wait_On_Following_Loads_And_Stores_Until(preceding_loads_and_stores_globally_visible;MINPD;MINPS;MINSD;MINSS;Sreg;seg">
+<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;±F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;±;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FLDZ--Load;EB;EC;EE;FLDZ;FCLEX;FNCLEX--Clear;FNCLEX*;PE;UE;OE;ZE;IE;FNCLEX;FNINIT*;coprocessor;FPUControlWord;FPUStatusWord;FPUTagWord;FPUDataPointer;FPUInstructionPointer;FPULastInstructionOpcode;FSAVE;FNSAVE--Store;FNSAVE*;FNSAVE;FNINIT--Initialize;coprocessors;FPUs;FWAIT;DEST[FPUControlWord;DEST[FPUStatusWord;DEST[FPUTagWord;DEST[FPUDataPointer;DEST[FPUInstructionPointer;DEST[FPULastInstructionOpcode;nonwritable;FSTCW;FNSTCW--Store;FNSTCW*;FNSTCW;FNSTENV--Store;FSTENV;FNSTENV*;FNSTENV;FNSTSW--Store;FNSTSW*;FNSTSW;FPREM;FXAM;denormalized;MOV--Move;ModR;M;m;PG;PGE;PSE;PAE;PDPTRs;FSTP--Store;FUCOMIP--Compare;FUCOMIP;FUCOMPP--Unordered;FWAIT--Wait;MP;INSB;INSW;INSD--Input;INSD;CPL;IOPL;VM;TSS;CL;BL;CH;DH;BH;CX;BX;SP;EBX;EBP;mm--An;DPL=;C;W;Y;INTRA-PRIVILEGE-LEVEL-INTERRUPT;flag*;Push(CS;Push(IP;IDT(Descriptor;vector_number;GP((DEST;EXT;GP((vector_number;NP((vector_number;GDT;GP(TSS;NP(TSS;Push(error;GP(selector;NP(selector;GP(new;GP(CodeSegmentSelector;INTER-PREVILEGE-LEVEL-INTERRUPT;TSSstackAddress;TS(current;NewSS;NewESP;TS(EXT;RPL;TS(SS;LDT;SS(SS;selector+EXT;SS(segment;TSS(NewSS;Gate(CS;IP;Push(far;Push(EFLAGS;Push(ErrorCode;ELSE(*;CodeSegmentDescriptor(DPL;CS(RPL;RF;tempEFLAGS;TempSS;TempESP;Push(GS;Push(FS;Push(DS;Push(ES;Push(TempSS;Push(TempESP;Push(TempEFlags;Push(EIP;Gate(instruction;ErrorCode;SS(selector;TS(selector;TSS's;LIDT--Load;SFENCE--Store;IDTR(Limit;IDTR(Base;GDTR(Limit;GDTR(Base;SIDT--Store;mm_loadr_ps;mm_cmpgt_ss;Intra-privilege;Pop(;tempEIP;tempCS;tempEFLAGS(VM;VIF;EFLAGS(IF;EFLAGS(IOPL;EFLAGS(VM;RETURN-TO-OUTER-PRIVILGE-LEVEL;GP(SSselector;LODSD--Load;LODSD;LOOPcc--Loop;LOOPE;LOOPZ;LOOPNE;LOOPNZ;AddressSize;BranchCond;SignExtend(DEST;LSS--Load;SegmentRegister(DescriptorValidBit;Offset(SRC;XCHG--Exchange;MOVSD--Move;rw;rb;SI's;AddressSize--The;StackAddrSize--Represents;SRC--Represents;DEST--Represents;ZeroExtend(value;ZeroExtend;SignExtend(value;SignExtend;SaturateSignedWordToSignedByte--Converts;SaturateSignedDwordToSignedWord--Converts;SaturateSignedWordToUnsignedByte--Converts;FFH;SaturateToSignedByte--Represents;SaturateToSignedWord--Represents;SaturateToUnsignedByte--Represents;SaturateToUnsignedWord--Represents;LowOrderWord(DEST;HighOrderWord(DEST;Push(value;PUSH--Push;POP--Pop;PopRegisterStack--Marks;Switch-Tasks--Performs;Bit(BitBase;BitOffset;Bit[EAX;BIT[EAX;BitBase;GBits;DIV;EWBE#;EFLAGS(RF;SegmentSelector;PADDSW--Packed;SaturateToSignedByte;SaturateToSignedWord;PADDUSW--Packed;SaturateToUnsignedByte;SaturateToUnSignedByte;SaturateToUnsignedWord;SaturateToUnSignedWord;PAVGW--Packed;PCMPGTD--Packed;FFFFFFFFH;DCMPGTD;POPFD--Pop;PSLLQ--Packed;ZeroExtend(DEST;PSRAD--Packed;PSRLQ--Packed;PSUBD--Packed;PSUBSW--Packed;PSUBUSW--Packed;MMX;PUNPCKHQDQ--;PUNPCKHW;PUNPCKLQDQ--;Push(ECX;Push(EDX;Push(EBX;Push(Temp;Push(EBP;Push(ESI;Push(EDI;Push(AX;Push(CX;Push(DX;Push(BX;Push(BP;Push(SI;Push(DI;PUSHFD--Push;push(EFLAGS;stack*;LSB(DEST;LSB(SRC;MSB;ROR--Rotate;SCASB;SCASD--Scan;ES(E;mm_setcsr(unsigned;EFLAGS.AC;CPUID.XMM(EDX;STOSD--Store;FLD--Load;ExtendedReal(SRC;FLDCW--Load;FLDENV--Load;SRC[FPUControlWord;SRC[FPUStatusWord;SRC[FPUTagWord;SRC[FPUDataPointer;SRC[FPUInstructionPointer;SRC[FPULastInstructionOpcode;FNOP--No;FPATAN--Partial;Arctangent;arctangent;FPREM--Partial;LeastSignificantBits(Q;ADDSD--Scalar;mm_add_sd;FPTAN--Partial;FRNDINT--Round;FRSTOR--Restore;FSCALE--Scale;FTST--TEST;FXCH--Exchange;IP-offset;AND--Logical;iw;little-endian;FP;non-TOS;xx;FXTRACT--Extract;superset;logb(x;logbx;HLT--Halt;HLT;IDIV--Signed;EAX=Quotient;EDX=Remainder;OpernadSize;SignedModulus;EDXE;IMUL--Signed;IMUL;MUL;NumberOfOperands;size*;IN--Input;INC--Increment;INC;FF;ANDPD--Bitwise;ANDPD;BitwiseAND;INVD--Invalidate;INVD;WBINVD;Flush(InternalCaches;SignalFlush(ExternalCaches;INVLPG--Invalidate;INVLPG;lookaside;Flush(RelevantTLBEntries;Jcc--Jump;JA;JAE;JB;JBE;JC;JCXZ;JE;JG;SF=OF;JGE;JL;JLE;JNA;JNAE;JNB;JNBE;JNC;JNG;JNGE;JNL;JNLE;JNO;JNP;JNS;JP;JPE;JPO;JS;cw;Jcc;opcodes;JMP;FARLABEL;cacheability;EA;cp;jump--A;LFENCE;MFENCE;SFENCE;WB;WC;PREFETCHh;specualtive;LLDT;LDTR;LAR;VERR;VERW;LSL;ADDPD;ANDNPD;prepended;ADC;BTC;BTR;BTS;CMPXCHG;NEG;SBB;XADD;LOCK#;AssertLOCK#(DurationOfAccompaningInstruction;LSL--Load;LTR;MASKMOVDQU;UC;WP;MASKMOVQ;MAXPD--Maximum;MAXPD;MAXPS;ANDN;Single-FP;ANDNPS;MAXSD;MAXSS;Wait_On_Following_Loads_And_Stores_Until(preceding_loads_and_stores_globally_visible;MINPD;MINPS;MINSD;MINSS;Sreg;seg">
 
 
 <!--(Links)=========================================================-->
@@ -98,7 +98,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nM - ָ��\nMOV - �ƶ�");
+	addTocInfo("參考\n指令集\nIA-32 指令\nM - 指令\nMOV - 移動");
 
 	}
 	if (window.writeBtnStyle)
@@ -121,7 +121,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>MOV - �ƶ�</h1>
+<h1>MOV - 移動</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -129,13 +129,13 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">������</td>
+	style="margin-bottom: 0;">操作碼</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">說明</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -146,7 +146,7 @@ else
 	style="margin-bottom: 0;">MOV <span style="font-style: italic;"><I>r/m8,r8</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <span style="font-style: italic;"><I>r8</I></span> �Ƶ� <span style="font-style: italic;"><I>r/m8</I></span></td></tr>
+	style="margin-bottom: 0;">將 <span style="font-style: italic;"><I>r8</I></span> 移到 <span style="font-style: italic;"><I>r/m8</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -157,7 +157,7 @@ else
 	style="margin-bottom: 0;">MOV <span style="font-style: italic;"><I>r/m16,r16</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <span style="font-style: italic;"><I>r16</I></span> �Ƶ� <span style="font-style: italic;"><I>r/m16</I></span></td></tr>
+	style="margin-bottom: 0;">將 <span style="font-style: italic;"><I>r16</I></span> 移到 <span style="font-style: italic;"><I>r/m16</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -168,7 +168,7 @@ else
 	style="margin-bottom: 0;">MOV <span style="font-style: italic;"><I>r/m32,r32</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <span style="font-style: italic;"><I>r32</I></span> �Ƶ� <span style="font-style: italic;"><I>r/m32</I></span></td></tr>
+	style="margin-bottom: 0;">將 <span style="font-style: italic;"><I>r32</I></span> 移到 <span style="font-style: italic;"><I>r/m32</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -179,7 +179,7 @@ else
 	style="margin-bottom: 0;">MOV <span style="font-style: italic;"><I>r8,r/m8</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <span style="font-style: italic;"><I>r/m8</I></span> �Ƶ� <span style="font-style: italic;"><I>r8</I></span></td></tr>
+	style="margin-bottom: 0;">將 <span style="font-style: italic;"><I>r/m8</I></span> 移到 <span style="font-style: italic;"><I>r8</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -190,7 +190,7 @@ else
 	style="margin-bottom: 0;">MOV <span style="font-style: italic;"><I>r16,r/m16</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <span style="font-style: italic;"><I>r/m16</I></span> �Ƶ� <span style="font-style: italic;"><I>r16</I></span></td></tr>
+	style="margin-bottom: 0;">將 <span style="font-style: italic;"><I>r/m16</I></span> 移到 <span style="font-style: italic;"><I>r16</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -201,7 +201,7 @@ else
 	style="margin-bottom: 0;">MOV <span style="font-style: italic;"><I>r32,r/m32</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <span style="font-style: italic;"><I>r/m32</I></span> �Ƶ� <span style="font-style: italic;"><I>r32</I></span></td></tr>
+	style="margin-bottom: 0;">將 <span style="font-style: italic;"><I>r/m32</I></span> 移到 <span style="font-style: italic;"><I>r32</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -212,7 +212,7 @@ else
 	style="margin-bottom: 0;">MOV <span style="font-style: italic;"><I>r/m16,Sreg</I></span>**</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">���μĴ����Ƶ� <span style="font-style: italic;"><I>r/m16</I></span></td></tr>
+	style="margin-bottom: 0;">將段暫存器移到 <span style="font-style: italic;"><I>r/m16</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -223,7 +223,7 @@ else
 	style="margin-bottom: 0;">MOV <span style="font-style: italic;"><I>Sreg,r/m16</I></span>**</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <span style="font-style: italic;"><I>r/m16</I></span> �Ƶ��μĴ���</td></tr>
+	style="margin-bottom: 0;">將 <span style="font-style: italic;"><I>r/m16</I></span> 移到段暫存器</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -234,7 +234,7 @@ else
 	style="margin-bottom: 0;">MOV AL,<span style="font-style: italic;"><I>moffs8</I></span>*</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��λ�� (<span style="font-style: italic;"><I>seg:offset</I></span>) ���ֽ��Ƶ� AL</td></tr>
+	style="margin-bottom: 0;">將位於 (<span style="font-style: italic;"><I>seg:offset</I></span>) 的位元組移到 AL</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -245,7 +245,7 @@ else
 	style="margin-bottom: 0;">MOV AX,<span style="font-style: italic;"><I>moffs16</I></span>*</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��λ�� (<span style="font-style: italic;"><I>seg:offset</I></span>) �����Ƶ� AX</td></tr>
+	style="margin-bottom: 0;">將位於 (<span style="font-style: italic;"><I>seg:offset</I></span>) 的字移到 AX</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -256,7 +256,7 @@ else
 	style="margin-bottom: 0;">MOV EAX,<span style="font-style: italic;"><I>moffs32</I></span>*</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��λ�� (<span style="font-style: italic;"><I>seg:offset</I></span>) ��˫���Ƶ� EAX</td></tr>
+	style="margin-bottom: 0;">將位於 (<span style="font-style: italic;"><I>seg:offset</I></span>) 的雙字移到 EAX</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -267,7 +267,7 @@ else
 	style="margin-bottom: 0;">MOV <span style="font-style: italic;"><I>moffs8</I></span>*,AL</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� AL �Ƶ� (<span style="font-style: italic;"><I>seg:offset</I></span>)</td></tr>
+	style="margin-bottom: 0;">將 AL 移到 (<span style="font-style: italic;"><I>seg:offset</I></span>)</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -278,7 +278,7 @@ else
 	style="margin-bottom: 0;">MOV <span style="font-style: italic;"><I>moffs16</I></span>*,AX</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� AX �Ƶ� (<span style="font-style: italic;"><I>seg:offset</I></span>)</td></tr>
+	style="margin-bottom: 0;">將 AX 移到 (<span style="font-style: italic;"><I>seg:offset</I></span>)</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -289,7 +289,7 @@ else
 	style="margin-bottom: 0;">MOV <span style="font-style: italic;"><I>moffs32</I></span>*,EAX</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� EAX �Ƶ� (<span style="font-style: italic;"><I>seg:offset</I></span>)</td></tr>
+	style="margin-bottom: 0;">將 EAX 移到 (<span style="font-style: italic;"><I>seg:offset</I></span>)</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -300,7 +300,7 @@ else
 	style="margin-bottom: 0;">MOV <span style="font-style: italic;"><I>r8,imm8</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <span style="font-style: italic;"><I>imm8</I></span> �Ƶ� <span style="font-style: italic;"><I>r8</I></span></td></tr>
+	style="margin-bottom: 0;">將 <span style="font-style: italic;"><I>imm8</I></span> 移到 <span style="font-style: italic;"><I>r8</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -311,7 +311,7 @@ else
 	style="margin-bottom: 0;">MOV <span style="font-style: italic;"><I>r16,imm16</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <span style="font-style: italic;"><I>imm16</I></span> �Ƶ� <span style="font-style: italic;"><I>r16</I></span></td></tr>
+	style="margin-bottom: 0;">將 <span style="font-style: italic;"><I>imm16</I></span> 移到 <span style="font-style: italic;"><I>r16</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -322,7 +322,7 @@ else
 	style="margin-bottom: 0;">MOV <span style="font-style: italic;"><I>r32,imm32</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <span style="font-style: italic;"><I>imm32</I></span> �Ƶ� <span style="font-style: italic;"><I>r32</I></span></td></tr>
+	style="margin-bottom: 0;">將 <span style="font-style: italic;"><I>imm32</I></span> 移到 <span style="font-style: italic;"><I>r32</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -333,7 +333,7 @@ else
 	style="margin-bottom: 0;">MOV <span style="font-style: italic;"><I>r/m8,imm8</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <span style="font-style: italic;"><I>imm8</I></span> �Ƶ� <span style="font-style: italic;"><I>r/m8</I></span></td></tr>
+	style="margin-bottom: 0;">將 <span style="font-style: italic;"><I>imm8</I></span> 移到 <span style="font-style: italic;"><I>r/m8</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -344,7 +344,7 @@ else
 	style="margin-bottom: 0;">MOV <span style="font-style: italic;"><I>r/m16,imm16</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <span style="font-style: italic;"><I>imm16</I></span> �Ƶ� <span style="font-style: italic;"><I>r/m16</I></span></td></tr>
+	style="margin-bottom: 0;">將 <span style="font-style: italic;"><I>imm16</I></span> 移到 <span style="font-style: italic;"><I>r/m16</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -355,28 +355,28 @@ else
 	style="margin-bottom: 0;">MOV <span style="font-style: italic;"><I>r/m32,imm32</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <span style="font-style: italic;"><I>imm32</I></span> �Ƶ� <span style="font-style: italic;"><I>r/m32</I></span></td></tr>
+	style="margin-bottom: 0;">將 <span style="font-style: italic;"><I>imm32</I></span> 移到 <span style="font-style: italic;"><I>r/m32</I></span></td></tr>
 </table>
 
-<p>��ע��*<span style="font-style: italic;"><I>moffs8</I></span>��<span 
- style="font-style: italic;"><I>moffs16</I></span> �� <span style="font-style: italic;"><I>moffs32</I></span> ������ָ������ڶλ�ַ�ļ�ƫ���������� 8��16 �� 32 ָ���ݵĴ�С��ָ��ĵ�ַ��С����ȷ��ƫ�����Ĵ�С���������� 16 λ�� 32 λ��**�� 32 λģʽ�У���������ܻ�������ָ��ǰ����� 16 λ��������Сǰ׺�������й���ϸ��Ϣ������������&ldquo;˵��&rdquo;���֣���</p>
+<p>備註：*<span style="font-style: italic;"><I>moffs8</I></span>、<span 
+ style="font-style: italic;"><I>moffs16</I></span> 及 <span style="font-style: italic;"><I>moffs32</I></span> 運算元指定相對於段基址的簡單偏移量，其中 8、16 及 32 指數據的大小。指令的地址大小屬性確定偏移量的大小，它可以是 16 位或 32 位。**在 32 位模式中，彙編器可能會在這條指令前面插入 16 位運算元大小字首（如需有關詳細資訊，請參閱下面的&ldquo;說明&rdquo;部分）。</p>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>���ڶ�����������Դ�����������Ƶ���һ����������Ŀ�����������Դ��������������������ͨ�üĴ������μĴ������ڴ�λ�ã�Ŀ��Ĵ���������ͨ�üĴ������μĴ������ڴ�λ�á������������Ĵ�С����һ�����������ֽڡ��ֻ�˫�֡�</p>
+<p>將第二個運算元（源運算元）複製到第一個運算元（目標運算元）。源運算元可以是立即數、通用暫存器、段暫存器或記憶體位置；目標暫存器可以是通用暫存器、段暫存器或記憶體位置。兩個運算元的大小必須一樣，可以是位元組、字或雙字。</p>
 
-<p>MOV ָ������ڼ��� CS �Ĵ�������ͼ�������ᵼ�²�������Ч�쳣 (#UD)��Ҫ���� CS �Ĵ�������ʹ��Զ JMP��CALL �� RET ָ�</p>
+<p>MOV 指令不能用於載入 CS 暫存器。試圖這樣做會導致操作碼無效異常 (#UD)。要載入 CS 暫存器，請使用遠 JMP、CALL 或 RET 指令。</p>
 
-<p>���Ŀ��������ǶμĴ��� (DS��ES��FS��GS �� SS)����Դ��������������Ч�Ķ�ѡ�������ڱ���ģʽ�У�����ѡ�����Ƶ��μĴ����ᵼ�½��ö�ѡ���������Ķ���������Ϣ�Զ����ص��μĴ��������أ���Ӱ�����֡����ش���Ϣʱ����ѡ���������������Ϣ��Ч������������&ldquo;����&rdquo;�㷨���������������ݴ�ָ���Ķ�ѡ������Ӧ�� GDT �� LDT ���л�ȡ��</p>
+<p>如果目標運算元是段暫存器 (DS、ES、FS、GS 或 SS)，則源運算元必須是有效的段選擇器。在保護模式中，將段選擇器移到段暫存器會導致將該段選擇器關聯的段描述符資訊自動載入到段暫存器的隱藏（陰影）部分。載入此資訊時，段選擇器與段描述符資訊生效（請參閱下面的&ldquo;操作&rdquo;演算法）。段描述符數據從指定的段選擇器對應的 GDT 或 LDT 項中獲取。</p>
 
-<p>�յĶ�ѡ������ֵΪ 0000 �� 0003�����Լ��ص� DS��ES��FS �� GS �Ĵ����������ᵼ�±����쳣�������������ͼ���öμĴ����м��ؿ�ֵ�Ķ�ʱ����������һ�㱣�����쳣 (#GP)�����Ҳ������κ��ڴ����á�</p>
+<p>空的段選擇器（值為 0000 到 0003）可以載入到 DS、ES、FS 及 GS 暫存器，而不會導致保護異常。不過，隨後試圖引用段暫存器中載入空值的段時，都將導致一般保護性異常 (#GP)，並且不發生任何記憶體引用。</p>
 
-<p>ʹ�� MOV ָ����� SS �Ĵ���ʱ�����ֹ�����жϣ�ֱ��ִ����һ��ָ��֮�󡣴˲����������ڷ����ж�֮ǰ������ջָ������һ��ָ����ص� ESP (MOV ESP, <span style="font-weight: bold;"><B>��ջָ��ֵ</B></span>)��LSS ָ���Ǹ���Ч�ļ��� SS �� ESP �Ĵ����ķ�����</p>
+<p>使用 MOV 指令載入 SS 暫存器時，會禁止所有中斷，直到執行下一條指令之後。此操作可用於在發生中斷之前，將堆疊指針與下一條指令載入到 ESP (MOV ESP, <span style="font-weight: bold;"><B>堆疊指針值</B></span>)。LSS 指令是更有效的載入 SS 與 ESP 暫存器的方法。</p>
 
-<p>�� 32 λģʽ�в������ڶμĴ�����ͨ�üĴ���֮���ƶ�����ʱ��&ldquo;Ӣ�ض�<font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-												face=Verdana>(R)</font> ��ϵ�ṹ&rdquo;32 λ��������Ҫ����� 16 λ��������Сǰ׺��ֵΪ 66H ���ֽڣ�ʹ�ô�ָ������ʹ�ñ�׼��ʽ��ָ��� MOV DS, AX����������������������ǰ׺������������ȷִ�д�ָ���ͨ��Ҫ���⻨��һ��ʱ�����ڡ����ڴ������������ԣ�ͨ��ʹ��ָ����ʽ MOV DS, EAX ���Ա�������������Ҫ�� 66H ǰ׺��������ִ��ʹ�� 32 λͨ�üĴ����Ĵ�ָ��ʱ������ٶ�ͨ�üĴ����� 16 �������Чλ��Ŀ���������Դ������������Ĵ�����Ŀ�����������Ĵ�����������λ�ֽ��в�����ֵȡ���ھ���ʵ�ֵİ汾�����ڱ���<font   style="font-family: Verdana, Arial, Helvetica, sans-serif;" 	face=Verdana>(R)</font> Pro ����������������λ�ֽ��� 0 ��䣻�������ڵ� 32 λ&ldquo;Ӣ�ض�&#xAE; ��ϵ�ṹ&rdquo;����������������λ�ֽ�δ���塣</p>
+<p>在 32 位模式中操作並在段暫存器與通用暫存器之間移動數據時，&ldquo;英特爾<font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
+												face=Verdana>(R)</font> 體系結構&rdquo;32 位處理器不要求配合 16 位運算元大小字首（值為 66H 的位元組）使用此指令，但如果使用標準形式的指令（如 MOV DS, AX），大多數彙編器都會插入此字首。處理器將正確執行此指令，但通常要額外花費一個時鐘週期。對於大多數彙編器而言，通過使用指令形式 MOV DS, EAX 可以避免插入這個不必要的 66H 字首。處理器執行使用 32 位通用暫存器的此指令時，它會假定通用暫存器的 16 個最低有效位是目標運算元或源運算元。如果暫存器是目標運算元，則暫存器的兩個高位位元組中產生的值取決於具體實現的版本。對於奔騰<font   style="font-family: Verdana, Arial, Helvetica, sans-serif;" 	face=Verdana>(R)</font> Pro 處理器，這兩個高位位元組用 0 填充；對於早期的 32 位&ldquo;英特爾&#xAE; 體系結構&rdquo;處理器，這兩個高位位元組未定義。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted>DEST <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -385,7 +385,7 @@ else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'>");}
 //--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> SRC;</p>
 
-<p>�ڱ���ģʽ�У����ضμĴ����ᵼ��ִ������ļ�������������������������Щ���Ķ����Ƕ�ѡ��������ָ��Ķ���������</p>
+<p>在保護模式中，載入段暫存器會導致執行特殊的檢查與操作，具體如下所述。這些檢查的對象是段選擇器及其指向的段描述符。</p>
 
 <p class=Preformatted>IF SS is loaded;<br> THEN<br> IF segment selector is null <br> THEN #GP(0);<br> FI;<br> IF segment selector index is outside descriptor table limits <br> OR segment selector's RPL <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -429,47 +429,47 @@ else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'>");}
 //--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> segment descriptor;<br> FI;</p>
 
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
-<p>�ޡ�</p>
+<p>無。</p>
 
-<h2>����ģʽ�쳣</h2>
+<h2>保護模式異常</h2>
 
-<p>#GP(0) - �����ͼ���յĶ�ѡ�������ص� SS �Ĵ��������Ŀ�������λ�ڲ���д�ĶΡ�����ڴ��������Ч��ַ���� CS��DS��ES��FS �� GS �����ơ���� DS��ES��FS �� GS �Ĵ��������յĶ�ѡ������</p>
+<p>#GP(0) - 如果試圖將空的段選擇器載入到 SS 暫存器。如果目標運算元位於不可寫的段。如果記憶體運算元有效地址超出 CS、DS、ES、FS 或 GS 段限制。如果 DS、ES、FS 或 GS 暫存器包含空的段選擇器。</p>
 
-<p>#GP(ѡ����) - �����ѡ�������������������������ơ�������� SS �Ĵ��������Ҷ�ѡ������ RPL ����������� DPL ������ CPL��������� SS �Ĵ�������ָ��Ķβ��ǿ�д�����ݶΡ�������� DS��ES��FS �� GS �Ĵ�������ָ��Ķβ������ݶλ�ɶ�����Ρ�������� DS��ES��FS �� GS �Ĵ�������ָ��Ķ������ݶλ�����ݴ���Σ��� RPL �� CPL ������ DPL��</p>
+<p>#GP(選擇器) - 如果段選擇器索引超出描述符表格限制。如果載入 SS 暫存器，並且段選擇器的 RPL 與段描述符的 DPL 不等於 CPL。如果載入 SS 暫存器，且指向的段不是可寫的數據段。如果載入 DS、ES、FS 或 GS 暫存器，且指向的段不是數據段或可讀程式碼段。如果載入 DS、ES、FS 或 GS 暫存器，且指向的段是數據段或非相容程式碼段，但 RPL 與 CPL 都大於 DPL。</p>
 
-<p>#SS(0) - ����ڴ��������Ч��ַ���� SS �����ơ�</p>
+<p>#SS(0) - 如果記憶體運算元有效地址超出 SS 段限制。</p>
 
-<p>#SS(ѡ����) - ������� SS �Ĵ�����ָ��Ķα��Ϊ�����ڡ�</p>
+<p>#SS(選擇器) - 如果載入 SS 暫存器且指向的段標記為不存在。</p>
 
-<p>#NP - ������� DS��ES��FS �� GS �Ĵ�����ָ��Ķα��Ϊ�����ڡ�</p>
+<p>#NP - 如果載入 DS、ES、FS 或 GS 暫存器且指向的段標記為不存在。</p>
 
-<p>#PF(�������) - �������ҳ����</p>
+<p>#PF(錯誤程式碼) - 如果發生頁錯誤。</p>
 
-<p>#AC(0) - ������ö����鲢�ڵ�ǰ��Ȩ����Ϊ 3 ʱ����δ������ڴ����á�</p>
+<p>#AC(0) - 如果啟用對齊檢查並在目前特權級別為 3 時進行未對齊的記憶體引用。</p>
 
-<p>#UD - �����ͼ���� CS �Ĵ�����</p>
+<p>#UD - 如果試圖載入 CS 暫存器。</p>
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>實地址模式異常</h2>
 
-<p>#GP - ����ڴ��������Ч��ַ���� CS��DS��ES��FS �� GS �����ơ�</p>
+<p>#GP - 如果記憶體運算元有效地址超出 CS、DS、ES、FS 或 GS 段限制。</p>
 
-<p>#SS - ����ڴ��������Ч��ַ���� SS �����ơ�</p>
+<p>#SS - 如果記憶體運算元有效地址超出 SS 段限制。</p>
 
-<p>#UD - �����ͼ���� CS �Ĵ�����</p>
+<p>#UD - 如果試圖載入 CS 暫存器。</p>
 
-<h2>�� 8086 ģʽ�쳣</h2>
+<h2>虛 8086 模式異常</h2>
 
-<p>#GP(0) - ����ڴ��������Ч��ַ���� CS��DS��ES��FS �� GS �����ơ�</p>
+<p>#GP(0) - 如果記憶體運算元有效地址超出 CS、DS、ES、FS 或 GS 段限制。</p>
 
-<p>#SS(0) - ����ڴ��������Ч��ַ���� SS �����ơ�</p>
+<p>#SS(0) - 如果記憶體運算元有效地址超出 SS 段限制。</p>
 
-<p>#PF(�������) - �������ҳ����</p>
+<p>#PF(錯誤程式碼) - 如果發生頁錯誤。</p>
 
-<p>#AC(0) - ��������ö����������½���δ������ڴ����á�</p>
+<p>#AC(0) - 如果在啟用對齊檢查的情況下進行未對齊的記憶體引用。</p>
 
-<p class="whs5">#UD - �����ͼ���� CS �Ĵ����� 
+<p class="whs5">#UD - 如果試圖載入 CS 暫存器。 
  </p>
 
 <script type="text/javascript" language="javascript1.2">

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Register_Pre-indexed_(AM_2).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:48 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>�Ĵ������ȱ�ַ (AM 2)</title>
+<title>暫存器事先變址 (AM 2)</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nѰַģʽ\n������洢�ֻ��޷����ֽ�\n�Ĵ������ȱ�ַ (AM 2)");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n定址模式\n載入與儲存字或無符號位元組\n暫存器事先變址 (AM 2)");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,14 +104,14 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������"><a NAME=44973></a>�Ĵ������ȱ�ַ (AM 2)</h1>
+<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題"><a NAME=44973></a>暫存器事先變址 (AM 2)</h1>
 
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted><span class=Code>[basereg, +/-indexreg]!</span> </p>
 
-<p CLASS=Body>���У� </p>
+<p CLASS=Body>其中： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -123,7 +123,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ��������ַ�ļĴ�����</td></tr>
+<p CLASS=CellBodyLeft>指定包含基址的暫存器。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -132,7 +132,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ������Ҫ�ӵ� <em CLASS=SourceItalic>basereg</em> ����м�ȥ��ƫ�����ļĴ�����</td></tr>
+<p CLASS=CellBodyLeft>指定包含要加到 <em CLASS=SourceItalic>basereg</em> 或從中減去的偏移量的暫存器。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -142,16 +142,16 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>���� W λ���Ը��»�ַ�Ĵ�����</td></tr>
+<p CLASS=CellBodyLeft>設定 W 位，以更新基址暫存器。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-Ѱַģʽ&ldquo;�Ĵ������ȱ�ַ&rdquo;ִ�����²�����α����˵������
+定址模式&ldquo;暫存器事先變址&rdquo;執行以下操作（偽程式碼說明）：
 
 <p CLASS=Preformatted-Code>if U == 1 then<br> &#xA0;addr = basereg + indexreg<br> else/* if U == 0 */<br> &#xA0;addr = basereg - indexreg<br> If ConditionPassed (condition) then<br> &#xA0;basereg = addr</p>
 
-<p CLASS=Body>��ַ�Ĵ��� <em CLASS=SourceItalic>indexreg</em> ��ֵ�ӵ���ַ�Ĵ��� <em CLASS=SourceItalic>basereg</em> ��ֵ�����Ǵ��м�ȥ�����ָ����ָ������������������״̬ƥ�䣬����д�ػ�ַ�Ĵ��� <em CLASS=SourceItalic>basereg</em>��</p>
+<p CLASS=Body>變址暫存器 <em CLASS=SourceItalic>indexreg</em> 的值加到基址暫存器 <em CLASS=SourceItalic>basereg</em> 的值，或是從中減去。如果指令中指定的條件與條件程式碼狀態匹配，則它寫回基址暫存器 <em CLASS=SourceItalic>basereg</em>。</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -172,7 +172,7 @@ else
 <col class="whs2">
 <col class="whs2">
 
-<h2>����</h2>
+<h2>編碼</h2>
 
 <tr>
 <td ROWSPAN=1
@@ -445,33 +445,33 @@ else
 </tr>
 </table>
 
-<p CLASS=Body>B λ��ʾ�޷����ֽ� (<em CLASS=Source> B == 1</em> ) ���ַ��� (<em CLASS=Source> B == 0</em> )��</p>
+<p CLASS=Body>B 位表示無符號位元組 (<em CLASS=Source> B == 1</em> ) 或字訪問 (<em CLASS=Source> B == 0</em> )。</p>
 
-<p CLASS=Body>L λ��ʾ&ldquo;����&rdquo;(<em CLASS=Source> L == 1</em> ) ��&ldquo;�洢&rdquo;(<em CLASS=Source> L == 0</em> ) ָ�</p>
+<p CLASS=Body>L 位表示&ldquo;載入&rdquo;(<em CLASS=Source> L == 1</em> ) 或&ldquo;儲存&rdquo;(<em CLASS=Source> L == 0</em> ) 指令。</p>
 
-<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif">&nbsp;��ע</h3>
+<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif">&nbsp;備註</h3>
 
-��Ѱַģʽ����ɰ� <em CLASS=Source>LSL</em> �����ļĴ���ƫ������������Ϊ�㡣 
+此定址模式編碼成按 <em CLASS=Source>LSL</em> 調整的暫存器偏移量，調整量為零。 
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Caution.gif">&nbsp;ע��</h3>
+<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Caution.gif">&nbsp;注意</h3>
 
-��� <em CLASS=Source>R15</em> ָ��Ϊ�Ĵ��� <em CLASS=SourceItalic>basereg</em>�����������޷�Ԥ֪�� 
+如果 <em CLASS=Source>R15</em> 指定為暫存器 <em CLASS=SourceItalic>basereg</em>，則結果將會無法預知。 
 </div>
 
 <div>
-Ϊ <em CLASS=Source>basereg</em> �� <em   CLASS=Source>indexreg</em> ָ����ͬ�ļĴ���ʱ����������޷�Ԥ֪�� 
+為 <em CLASS=Source>basereg</em> 與 <em   CLASS=Source>indexreg</em> 指定相同的暫存器時，結果將會無法預知。 
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p CLASS=Preformatted><span class=Code>LDR &#xA0;&#xA0;&#xA0;R7, [R5, R8]!</span></p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
-<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.htm">�����Ѱַģʽ 2��������洢�ֻ��޷����ֽ�</a><a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Inst_Overview_of_Instructions.htm" CLASS="XRef" style="font-weight: normal;"><br> ����Ļ����ָ��</a> 
+<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.htm">請參閱定址模式 2：載入與儲存字或無符號位元組</a><a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Inst_Overview_of_Instructions.htm" CLASS="XRef" style="font-weight: normal;"><br> 請參閱彙編器指令</a> 
 </div>
 
 <script type="text/javascript" language="javascript1.2">

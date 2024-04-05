@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/decreasing_trace_cache_misses.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:20 GMT -->
 <head>
 
-<title>���͸��ٻ���δ����</title>
+<title>降低跟蹤快取未命中</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="02 6, 2003 5:10:27 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -104,22 +104,22 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">���͸��ٻ���δ����</h1>
+<h1><img src="p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">降低跟蹤快取未命中</h1>
 
-<p>����ͨ��������ǿ�취�����ٸ��ٻ���δ���е�������</p>
+<p>嘗試通過以下增強辦法，減少跟蹤快取未命中的數量：</p>
 
 <ul type="disc" class="whs2">
 	
-	<li class=kadov-p><p>��ϸ���Ŵ��������ǿ�������ڴ������ԡ����ƵĻ���ָ�������Ӧ�ò��õ��ڴ���������λ�á�������漰�������ƵĴ��루�紦����������Ĵ��룩�ŵ�������֮�⡣�����й���ϸ��Ϣ������� <span style="font-style: italic;"><I>Intel(R) Pentium(R) 4 Processor Optimization Reference Manual</I></span>��Ӣ�ض�(R) ����(R) 4 �������Ż��ο��ֲᣩ�ĵ� 2 �¡�</p></li>
+	<li class=kadov-p><p>仔細安排程式碼可以增強快取與記憶體區域性。相似的基本指令塊序列應該佈置到記憶體中連續的位置。這可能涉及將不相似的程式碼（如處理錯誤情況的程式碼）放到該序列之外。如需有關詳細資訊，請參閱 <span style="font-style: italic;"><I>Intel(R) Pentium(R) 4 Processor Optimization Reference Manual</I></span>（英特爾(R) 奔騰(R) 4 處理器優化參考手冊）的第 2 章。</p></li>
 	
-	<li class=kadov-p><p>�����δ�о���ͬ���������еķ�֧Ԥ�����ܣ���ͨ���ɼ������¼������ݼ����о���<a href="../Events4/Clockticks.html" style="x-condition: eclipse;">ʱ���ź�</a>��<a href="../Events4/trace_cache_misses.html" style="x-condition: eclipse;">���ٻ���δ����</a>��<a href="../Events4/branches_retired.html" style="x-condition: eclipse;">ʧЧ�ķ�֧</a>��<a href="../Events4/mispredicted_branches_retired.html" style="x-condition: eclipse;">ʧЧ��Ԥ��ʧ���֧</a>��</p></li>
+	<li class=kadov-p><p>如果尚未研究相同程式碼區域中的分支預測效能，請通過採集以下事件的數據加以研究：<a href="../Events4/Clockticks.html" style="x-condition: eclipse;">時鐘訊號</a>、<a href="../Events4/trace_cache_misses.html" style="x-condition: eclipse;">跟蹤快取未命中</a>、<a href="../Events4/branches_retired.html" style="x-condition: eclipse;">失效的分支</a>及<a href="../Events4/mispredicted_branches_retired.html" style="x-condition: eclipse;">失效的預測失誤分支</a>。</p></li>
 	
-	<li class=kadov-p><p>�����ܱ��������޸Ĵ��롣���ǽ����������ݷ��ڲ�ͬ��ҳ�ϡ����Ҫ�޸Ĵ��룬�뾡��һ������ɣ���ȷ��ִ���޸ĵĴ�����Ҫ�޸ĵĴ��봦�ڲ�ͬ��ҳ�ϣ������������ 1K �������С������й���ϸ��Ϣ������� <span style="font-style: italic;"><I>Intel(R) Pentium(R) 4 Processor Optimization Reference Manual</I></span>��Ӣ�ض�(R) ����(R) 4 �������Ż��ο��ֲᣩ�ĵ� 2 �¡�</p></li>
+	<li class=kadov-p><p>儘可能避免自我修改程式碼。總是將程式碼與數據放在不同的頁上。如果要修改程式碼，請儘量一次性完成，並確保執行修改的程式碼與要修改的程式碼處在不同的頁上，或至少在相隔 1K 的區域中。如需有關詳細資訊，請參閱 <span style="font-style: italic;"><I>Intel(R) Pentium(R) 4 Processor Optimization Reference Manual</I></span>（英特爾(R) 奔騰(R) 4 處理器優化參考手冊）的第 2 章。</p></li>
 	
-	<li class=kadov-p><p>ʹ�õ��������Ż� (PGO) �����ô���·��һֱ�����ڻ����У��Լ���ָ���ȡ�������������Ը��ƴ��������ԡ� </p></li>
+	<li class=kadov-p><p>使用檔案導引優化 (PGO) 將常用程式碼路徑一直保留在快取中，以減少指令獲取次數，這樣可以改善程式碼區域性。 </p></li>
 </ul>
 
-<p>���躬&ldquo;���̼߳���&rdquo;�Ĵ������ĳ����Ż��������й���ϸ��Ϣ�����������<a href="../../Reference_HH/Intel_s_Software_Developer_s_Manuals.html" style="font-style: normal; x-condition: eclipse;">�Ż��ֲ�</a>�ĵ� 7 �¡�</p>
+<p>如需含&ldquo;超執行緒技術&rdquo;的處理器的常用優化技術的有關詳細資訊，請參閱最新<a href="../../Reference_HH/Intel_s_Software_Developer_s_Manuals.html" style="font-style: normal; x-condition: eclipse;">優化手冊</a>的第 7 章。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

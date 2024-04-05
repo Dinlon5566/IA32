@@ -8,12 +8,12 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/lipsmmx_mov_dep.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:51 GMT -->
 <head>
 
-<title>MMX(TM) ���� MOV �����</title>
+<title>MMX(TM) 技術 MOV 相關性</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
-<meta NAME=MS-HAID CONTENT="�ڴ�ͷ�">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
+<meta NAME=MS-HAID CONTENT="記憶體懲罰">
 <meta NAME=MS-HAID CONTENT="MMX(TM) Technology Penalties">
 <meta name=date content="04 8, 2003 2:35:20 PM">
 <meta name=topic-status content="In Progress">
@@ -120,18 +120,18 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/TA_logo.gif" align="right" width="36px" height="36px" border="0" class="img_whs1"> MMX(TM) ���� MOV �����</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/TA_logo.gif" align="right" width="36px" height="36px" border="0" class="img_whs1"> MMX(TM) 技術 MOV 相關性</h1>
 
-<p><span style="font-weight: bold;"><B>MM_MOV_Dep</B></span> ��ʾһ�ֳͷ�״̬��</p>
+<p><span style="font-weight: bold;"><B>MM_MOV_Dep</B></span> 表示一種懲罰狀態。</p>
 
-<p>MOVQ �� MOVD ָ��д���ڴ�ʱ������Դ������������ǰһ������׼��������</p>
+<p>MOVQ 或 MOVD 指令寫入記憶體時，它的源運算元必須提前一個週期準備就緒。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>����</B></span></h3>
+	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>建議</B></span></h3>
 
-<p class="whs3">��������˳���Ա� MOVQ �� MOVD ָ����Դ������׼����������һ������֮���ִ�С�</p>
+<p class="whs3">調整程式碼順序，以便 MOVQ 與 MOVD 指令在源運算元準備就緒至少一個週期之後才執行。</p>
 
-<p>ʾ����</p>
+<p>示例：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells>
@@ -139,16 +139,16 @@ else
 <tr>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ԭʼ����</td>
+	style="margin-bottom: 0;">原始程式碼</td>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td>
+	style="margin-bottom: 0;">週期</td>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">�Ż�����</td>
+	style="margin-bottom: 0;">優化程式碼</td>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td></tr>
+	style="margin-bottom: 0;">週期</td></tr>
 
 <tr>
 <td valign="top" class="whs4">
@@ -194,22 +194,22 @@ else
 
 <tr>
 <td COLSPAN="2" valign="top" class="whs4">
-<p class="whs5">&ldquo;ָ�� 2&rdquo;�� MM0 ����Դ��������&ldquo;ָ�� 1&rdquo;��ǰһ������д�� MM0����ˣ�&ldquo;ָ�� 2&rdquo;��ͣһ�����ڣ������� 3 �в�ִ�С�<b><br>ִ��ʱ���ܼƣ�4.5 ������</b></td>
+<p class="whs5">&ldquo;指令 2&rdquo;將 MM0 用作源運算元。&ldquo;指令 1&rdquo;在前一個週期寫入 MM0。因此，&ldquo;指令 2&rdquo;暫停一個週期，在週期 3 中才執行。<b><br>執行時間總計：4.5 個週期</b></td>
 <td COLSPAN="2" valign="top" class="whs4">
-<p class="whs5">���Ż��Ĵ����У��������о���������������Ե��Ա��⡣<b><br>ִ��ʱ���ܼƣ�3 ������</b></td>
+<p class="whs5">在優化的程式碼中，程式碼序列經過重新排序，相關性得以避免。<b><br>執行時間總計：3 個週期</b></td>
 </tr>
 </table>
 
 <p class="whs5">
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','���ݿ��ͻ','lipsbank_conflict.htm','�����Ĵ洢ת��','lipspro_mem_stall.htm');return false;" title="�ڴ�ͷ�"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_内存惩罚.gif" border=0 height=20 width=58 alt="�ڴ�ͷ�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','數據塊衝突','lipsbank_conflict.htm','阻塞的儲存轉發','lipspro_mem_stall.htm');return false;" title="記憶體懲罰"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_鍐呭瓨鎯╃綒.gif" border=0 height=20 width=58 alt="記憶體懲罰"></a>
 
 
  </p>
 
 <p class="whs5">
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','�� MMX(TM) �����ı���(R) ������','pentium(r)_with_mmx(tm_technology_processor.htm');return false;" title="Ӱ��Ĵ�����"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_影响的处理器.gif" border=0 height=20 width=82 alt="Ӱ��Ĵ�����"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','含 MMX(TM) 技術的奔騰(R) 處理器','pentium(r)_with_mmx(tm_technology_processor.htm');return false;" title="影響的處理器"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_褰卞搷鐨勫鐞嗗櫒.gif" border=0 height=20 width=82 alt="影響的處理器"></a>
 
 
  </p>

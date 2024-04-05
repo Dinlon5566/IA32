@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -80,7 +80,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\nRSE �¼�\nRSE_EVENT_RETIRED");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 安騰(R) 2 處理器\n英特爾(R) 安騰(R) 2 處理器事件\nRSE 事件\nRSE_EVENT_RETIRED");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,14 +105,14 @@ else
 </script>
 <h1>RSE_EVENT_RETIRED</h1>
 
-<b style="font-weight: bold;">���⣺</b>ʧЧ�� RSE ����<b style="font-weight: bold;"><br> ���</b>RSE �¼�<b style="font-weight: bold;"><br> IAR/DAR/OPC��</b>N/N/N<b style="font-weight: bold;"><br> �¼����룺</b>0x32<b style="font-weight: bold;"><br> ���ÿ����������</b>1 
+<b style="font-weight: bold;">標題：</b>失效的 RSE 操作<b style="font-weight: bold;"><br> 類別：</b>RSE 事件<b style="font-weight: bold;"><br> IAR/DAR/OPC：</b>N/N/N<b style="font-weight: bold;"><br> 事件程式碼：</b>0x32<b style="font-weight: bold;"><br> 最大每週期增量：</b>1 
 
-<p><b style="font-weight: bold;">���壺</b>ͳ��ʧЧ�� RSE �������������� alloc��br.ret��br.call��loadrs��flushrs��cover �� rfi ���µ� - �����&ldquo;��ע&rdquo;�������¼���ʾӰ�� RSE ��ָ���ʱʧЧ�����ܻ�������ڴ���ϵͳ�Ĳ�����Ҳ���ܲ��ᣩ��</p>
+<p><b style="font-weight: bold;">定義：</b>統計失效的 RSE 運算元（如由於 alloc、br.ret、br.call、loadrs、flushrs、cover 及 rfi 導致的 - 請參閱&ldquo;備註&rdquo;）。此事件表示影響 RSE 的指令何時失效（可能會引起對記憶體子系統的操作，也可能不會）。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> 備註</h3>
 
-<p class="whs2">2 ��&ldquo;RSE �¼�&rdquo;���� 1 ��ʱ��������ʧЧ��Ψһ����� flushrs/call �� flushrs/return ָ���������ڴ��¼����ڼ��㵱ǰ/����/��Ч�Ĵ�����ƽ�����������Щ�����������λ��Ϊ 1 ���¼��������� 2 �������� ifsvalid=1 ʱ���Ż���� rfi ָ���ֵ����ͨ���� rfi ֮ǰʹ�� cover ָ�����ã�Ҳ������ȷ��������Чλ�� </p>
+<p class="whs2">2 個&ldquo;RSE 事件&rdquo;可在 1 個時鐘週期內失效的唯一情況是 flushrs/call 或 flushrs/return 指令束。由於此事件用於計算目前/污損/無效暫存器的平均數，因此這些不常見的情形會計為 1 個事件，而不是 2 個。僅當 ifsvalid=1 時，才會包含 rfi 指令；此值可以通過在 rfi 之前使用 cover 指令設定，也可以明確地設定有效位。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

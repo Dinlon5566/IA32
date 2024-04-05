@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/ptc.g_ptc.g_-_purge_global_translation_cache_instructions.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>ptc.g��ptc.g - ���ȫ��ת�뻺��ָ��</title>
+<title>ptc.g、ptc.g - 清除全域性轉譯快取指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -85,7 +85,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nP - ָ��\nptc.g��ptc.ga - ���ȫ��ת�뻺��ָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nP - 指令\nptc.g、ptc.ga - 清除全域性轉譯快取指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,13 +108,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">���ȫ��ת�뻺��ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">清除全域性轉譯快取指令</h1>
 
-<p class="whs2">ptc.g��ptc.ga</p>
+<p class="whs2">ptc.g、ptc.ga</p>
 
-<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/ptc.g,_ptc.ga-operation.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a></p>
+<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/ptc.g,_ptc.ga-operation.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字型慣例</a></p>
 
-<p class="whs2">��ʽ</p>
+<p class="whs2">格式</p>
 
 <p class=Preformatted>(qp)ptc.g r3 , r2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;global_form M45</p>
 
@@ -125,45 +125,45 @@ else
 <hr class="whs3">
 
 
-<p><b style="font-weight: bold;">˵��</b></p>
+<p><b style="font-weight: bold;">說明</b></p>
 
-<p class="whs4"><span style="font-weight: normal;"><b style="font-weight: normal;">�������� TLB һ������ÿ����������ָ��������ת�뻺�棬���������ַ��ҳ��Сͬ</span>ָ������������ַ�������ַ��Χ<span style="font-weight: normal;">���ֻ�ȫ���ص���������Ŀ����Щ��Ŀ����ɾ����</span></b></p>
+<p class="whs4"><span style="font-weight: normal;"><b style="font-weight: normal;">搜索本地 TLB 一致域中每個處理器的指令與數據轉譯快取，查詢虛擬地址與頁大小同</span>指定的清除虛擬地址與清除地址範圍<span style="font-weight: normal;">部分或全部重疊的所有專案。這些專案將被刪除。</span></b></p>
 
-<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;">��������ַ�� GR </span><span style="font-style: italic; font-weight: normal;"><I>r3</I></span><span   style="font-weight: normal;"> ��λ {60:0} ָ������������ʶ�� GR </span><span style="font-style: italic; font-weight: normal;"><I>r3</I></span><span   style="font-weight: normal;"> ��λ {63:61} ѡ��GR</span> <span style="font-weight: normal; font-style: italic;"><I>r2</I></span> <span style="font-weight: normal;">���ֽ�Ϊ��λ���� 1&lt;&lt;GR[</span><span style="font-weight: normal; font-style: italic;"><I>r2</I></span><span   style="font-weight: normal;">]{7:2}</span> <span style="font-weight: normal;">����ʽָ������ĵ�ַ��Χ��</span></b></p>
+<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;">清除虛擬地址由 GR </span><span style="font-style: italic; font-weight: normal;"><I>r3</I></span><span   style="font-weight: normal;"> 的位 {60:0} 指定，清除區域標識由 GR </span><span style="font-style: italic; font-weight: normal;"><I>r3</I></span><span   style="font-weight: normal;"> 的位 {63:61} 選擇。GR</span> <span style="font-weight: normal; font-style: italic;"><I>r2</I></span> <span style="font-weight: normal;">以位元組為單位，按 1&lt;&lt;GR[</span><span style="font-weight: normal; font-style: italic;"><I>r2</I></span><span   style="font-weight: normal;">]{7:2}</span> <span style="font-weight: normal;">的形式指定清除的地址範圍。</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">���ݴ������ͺţ���ת�뻺�����������Ŀ���ܻ�����������ָ�������޶�</b><b style="font-weight: normal;">������ɾ��ת�뻺���е�</b></span><span style="font-weight: normal;"><b style="font-weight: normal;">������Ŀ��</b></span></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">根據處理器型號，在轉譯快取中清除的專案可能還會比清除參數指定的上限多</b><b style="font-weight: normal;">，包括刪除轉譯快取中的</b></span><span style="font-weight: normal;"><b style="font-weight: normal;">所有專案。</b></span></p>
 
-<p class="whs4"><span class=Code>ptc.g</span> ���ͷŵ����壬����ǰ���е������ڴ���ʶ��ɼ�֮�󣬿��Ա�֤�ǿɼ��ġ��ڴ�߽�ָ��ǿ�����д�������������������Ȼ����ִ���κκ������ڴ��������ʱ����Ҫ�������л����Թ۲�<b style="font-weight: normal;"><span   style="font-weight: normal;">ɾ��ת��ĸ����á�</span></b></p>
+<p class="whs4"><span class=Code>ptc.g</span> 有釋放的語義，在以前所有的數據記憶體訪問都可見之後，可以保證是可見的。記憶體邊界指令強制所有處理器先完成清除操作，然後再執行任何後續的記憶體操作。此時仍需要進行序列化，以觀察<b style="font-weight: normal;"><span   style="font-weight: normal;">刪除轉譯的副作用。</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span class=Code>ptc.g</span> ������ָ�����е����һ��ָ�����������Ϊ����������</b></p>
+<p class="whs4"><b style="font-weight: normal;"><span class=Code>ptc.g</span> 必須是指令組中的最後一條指令；否則，它的行為（包括它的</b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">˳�����壩����δ����ġ�</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">順序語義）將是未定義的。</span></b></p>
 
-<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;"></span></b><b style="font-weight: normal;"><span class=Code>ptc.ga</span></b><b><span   style="font-weight: normal;"> ָ�����Ϊ�� </span><span class=Code 	style="font-weight: normal;">ptc.g �����ơ�</span><span   style="font-weight: bold;"><B></B></span><span   style="font-weight: normal;">�� </span></b><b style="font-weight: normal;"><span class=Code 									style="font-weight: normal;">ptc.g</span> ��ָ����Ϊ֮�⣬<span class=Code 			style="font-weight: normal;">ptc.ga</span></b><b   style="font-weight: normal;"><span style="font-weight: normal;"> ָ����ڹ㲥����������һ���������Ϣλ������Ϣָ�������������ҳ����ӳ�䵼�µģ������ɱ������Ļ�</span></b><b style="font-weight: normal;"><span   style="font-weight: normal;">ҳȡ�����µġ�һ�����е�Զ�̴�������󽫲�ȡȷ�� ALAT һ��</span></b><b style="font-weight: normal;"><span   style="font-weight: normal;">������κζ������������ ALAT ���ᱻ�����</b><b style="font-weight: normal;">��ָ��ֻ���������Ȩ����ִ�С�</b></span></p>
+<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;"></span></b><b style="font-weight: normal;"><span class=Code>ptc.ga</span></b><b><span   style="font-weight: normal;"> 指令的行為與 </span><span class=Code 	style="font-weight: normal;">ptc.g 的類似。</span><span   style="font-weight: bold;"><B></B></span><span   style="font-weight: normal;">除 </span></b><b style="font-weight: normal;"><span class=Code 									style="font-weight: normal;">ptc.g</span> 的指定行為之外，<span class=Code 			style="font-weight: normal;">ptc.ga</span></b><b   style="font-weight: normal;"><span style="font-weight: normal;"> 指令還會在廣播事務中設定一個額外的資訊位。此資訊指定清除操作是由頁重新對映導致的，還是由保護更改或</span></b><b style="font-weight: normal;"><span   style="font-weight: normal;">頁取消導致的。一致域中的遠端處理器隨後將採取確保 ALAT 一致</span></b><b style="font-weight: normal;"><span   style="font-weight: normal;">所需的任何額外操作。本地 ALAT 不會被清除。</b><b style="font-weight: normal;">此指令只能在最高特權級別執行。</b></span></p>
 
-<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;">���д�����һ��ֻ�ܷ���һ��ȫ��������񣬷����������δ����ġ���������ȷ����ѭ�����ơ�</span><span style="font-weight: normal;"></span></b><b style="font-weight: normal;"><span class=Code>ptc.g</span></b><b   style="font-weight: normal;"><span style="font-weight: normal;"> �ڶ������ TLB һ����֮��Ĵ���ȡ����ƽ̨�����ұ���</span></b><b><span   style="font-weight: normal;">���������������� TLB һ������Ӧ�����ٺ���</span></b></p>
+<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;">所有處理器一次只能發出一個全域性清除事務，否則操作將是未定義的。軟體負責確保遵循此限制。</span><span style="font-weight: normal;"></span></b><b style="font-weight: normal;"><span class=Code>ptc.g</span></b><b   style="font-weight: normal;"><span style="font-weight: normal;"> 在多個本地 TLB 一致域之間的傳播取決於平臺，並且必須</span></b><b><span   style="font-weight: normal;">由軟體處理。本地 TLB 一致性域應該至少涵蓋</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;">��ͬ���������ϵĴ�������</b></p>
+<p class="whs4"><b style="font-weight: normal;">相同本地匯流排上的處理器。</b></p>
 
-<p><b style="font-weight: bold;">�ж�</b></p>
+<p><b style="font-weight: bold;">中斷</b></p>
 
 <ul type="disc" class="whs5">
 	
-	<li class=kadov-p><p><b style="font-weight: bold;"><span style="font-weight: normal;">&ldquo;�������&rdquo;��ֹ </span></b></p></li>
+	<li class=kadov-p><p><b style="font-weight: bold;"><span style="font-weight: normal;">&ldquo;機器檢查&rdquo;終止 </span></b></p></li>
 	
-	<li class=kadov-p><p><b style="font-weight: bold;"><span style="font-weight: normal;">&ldquo;�Ĵ��� NaT ʹ��&rdquo;����</span></b></p></li>
+	<li class=kadov-p><p><b style="font-weight: bold;"><span style="font-weight: normal;">&ldquo;暫存器 NaT 使用&rdquo;錯誤</span></b></p></li>
 	
-	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;">&ldquo;��Ȩ����&rdquo;���� </b></p></li>
+	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;">&ldquo;特權操作&rdquo;錯誤 </b></p></li>
 	
-	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;">&ldquo;δʹ�õ����ݵ�ַ&rdquo;����</b></p></li>
+	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;">&ldquo;未使用的數據地址&rdquo;錯誤</b></p></li>
 </ul>
 
-<p><b style="font-weight: bold;"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>���л�</B></span></b></b></p>
+<p><b style="font-weight: bold;"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>序列化</B></span></b></b></p>
 
-<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;">�㲥��� TC ����Զ�̴������ϵ�ָ����ͬ������������������ָ�������κ�����ͬ������ȷ�Ϲ㲥��� TC ֮����������� TLB ������ת��ָ��˷���Ȩ�ޣ�Զ�̻����ϵ�Ӳ��</span><span style="font-weight: normal;">���޷�</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">���ڴ�򻺴����¼���ָ�Ӳ�����ܻ����</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">ʹ��</span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;">ȷ�Ϲ㲥�������ָ�������ݵ�ҳ�� TC ֮ǰ��ȡ��ָ�������ݣ�������ָ������У������и������ڷ����жϻ��κ���ʽ����ʽ<span style="font-weight: normal;">ָ�����л��¼����� </span><span class=Code>srlz.i��rfi</span>��ʱ��Ӳ����������ת��</span></b><b style="font-weight: normal;"><span   style="font-weight: normal;">ָ��ҳ</span></b><b   style="font-weight: normal;"><span style="font-weight: normal;">�ķ���Ȩ�ޡ�</span></b></p>
+<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;">廣播清除 TC 不與遠端處理器上的指令流同步。軟體不能依賴與指令流的任何這類同步。在確認廣播清除 TC 之後，如果不先在 TLB 中重新轉譯指令端訪問許可權，遠端機器上的硬體</span><span style="font-weight: normal;">便無法</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">從記憶體或快取重新載入指令。硬體可能會繼續</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">使用</span></b><b style="font-weight: normal;"><span 
+ style="font-weight: normal;">確認廣播清除包含指令流數據的頁的 TC 之前獲取的指令流數據（可能在指令緩衝區中）的自有副本。在發生中斷或任何顯式或隱式<span style="font-weight: normal;">指令序列化事件（如 </span><span class=Code>srlz.i、rfi</span>）時，硬體必須重新轉譯</span></b><b style="font-weight: normal;"><span   style="font-weight: normal;">指令頁</span></b><b   style="font-weight: normal;"><span style="font-weight: normal;">的訪問許可權。</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">�ڽ���ͬ�����صı������ݷ��ʡ��Ƿ������û򱾵�ָ���ȡ����</b><b style="font-weight: normal;">֮ǰ���������뷢���ʵ���������/��ָ�����л���������ȷ��</b></span><span style="font-weight: normal;"><b style="font-weight: normal;">�����ɡ�</b></span></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">在進行同清除相關的本地數據訪問、非訪問引用或本地指令獲取訪問</b><b style="font-weight: normal;">之前，軟體必須發出適當的數據與/或指令序列化操作，以確保</b></span><span style="font-weight: normal;"><b style="font-weight: normal;">清除完成。</b></span></p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

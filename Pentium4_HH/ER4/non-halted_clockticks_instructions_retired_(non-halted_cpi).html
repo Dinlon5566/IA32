@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/ER4/non-halted_clockticks_instructions_retired_(non-halted_cpi).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:38:20 GMT -->
 <head>
 
-<title>����ͣʱ���ź�/ʧЧ��ָ�����ͣ CPI��</title>
+<title>非暫停時鐘訊號/失效的指令（非暫停 CPI）</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 8, 2002 4:24:39 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -86,7 +86,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 ���������¼�����\n�������ܵ�������\n��Ҫ CPI �����¼�����\n����ͣʱ���ź�/ʧЧ��ָ�����ͣ CPI��");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器的事件比率\n基本效能調整比率\n主要 CPI 限制事件比率\n非暫停時鐘訊號/失效的指令（非暫停 CPI）");
 
 	}
 	if (window.writeBtnStyle)
@@ -109,11 +109,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1"><img src="er_logo.gif" alt="�¼���������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs2">����ͣʱ���ź�/ʧЧ��ָ�����ͣ CPI��</h1>
+<h1><img src="p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1"><img src="er_logo.gif" alt="事件比率主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs2">非暫停時鐘訊號/失效的指令（非暫停 CPI）</h1>
 
-<p><a href="../Events4/non-halted_clocktick.html">����ͣʱ���ź�</a>/ <a href="../Events4/Instructions_retired.html">ʧЧ��ָ��</a></p>
+<p><a href="../Events4/non-halted_clocktick.html">非暫停時鐘訊號</a>/ <a href="../Events4/Instructions_retired.html">失效的指令</a></p>
 
-<p>һ����˵����Щ����Դ�Ծ���ḻ�����ܹ���ʦ�ľ��飺</p>
+<p>一般來說，這些數字源自經驗豐富的效能工程師的經驗：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="60%" class="whs3">
@@ -121,10 +121,10 @@ else
 <tr>
 <td valign="top" width="50%" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td>
+	style="margin-bottom: 0;">下限</td>
 <td valign="top" width="50%" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td></tr>
+	style="margin-bottom: 0;">上限</td></tr>
 
 <tr>
 <td valign="top" width="50%" class="whs4">
@@ -133,22 +133,22 @@ else
 <p>5</td></tr>
 </table>
 
-<p>�˱��ʵ�ֵ�ϸ�ʱ����ʾ�ڵ�ǰ�Ĵ��������ڣ�ָ���ִ�л��ѵĴ�����ʱ�����ڽϸߡ���������ָ������ӳٽϸߵ�ָ���/������΢���� ROM��������ܱ�ʾ�������⡣ </p>
+<p>此比率的值較高時，表示在目前的程式碼區域內，指令的執行花費的處理器時鐘週期較高。如果大多數指令都不是延遲較高的指令，且/或來自微程式碼 ROM，則這可能表示存在問題。 </p>
 
-<p><span style="font-weight: bold;"><B>����</B></span>��CPI �ϸ�ͨ����ʾӦ�ó����ĳ���������һ���������⣬��Ҫ��һ���о�����&ldquo;VTune(TM) ���ܷ�����&rdquo;�У��ɼ������븨�������¼�������ݡ�</p>
+<p><span style="font-weight: bold;"><B>建議</B></span>：CPI 較高通常表示應用程式的某個區域存在一個或多個問題，需要進一步研究。在&ldquo;VTune(TM) 效能分析器&rdquo;中，採集基本與輔助調整事件組的數據。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs5"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs5"> 備註</h3>
 
 <ul type="disc" class="whs6">
 	
 	<ul type="disc" class="whs6">
 		
-		<li class=kadov-p><p>��Ӣ�ض�����(R) 4 �������ϣ�ʹ�����µı��������������������ܡ�</p></li>
+		<li class=kadov-p><p>在英特爾奔騰(R) 4 處理器上，使用最新的編譯器可以顯著改善效能。</p></li>
 		
-		<li class=kadov-p><p>���ں�&ldquo;���̼߳���&rdquo;�Ĵ��������˱��ʲ����߼�����������ִ��ָ��Ĵ�������� CPI�� </p></li>
+		<li class=kadov-p><p>對於含&ldquo;超執行緒技術&rdquo;的處理器，此比率測量邏輯處理器正在執行指令的程式碼區域的 CPI。 </p></li>
 		
-		<li class=kadov-p><p>�����˽Ⲣ��ִ�ж� CPI ��Ӱ�죬�����<a HREF="Clockticks_per_Instructions_Retired.html">ÿʧЧָ��ʱ���ź����������� CPI��</a> </p></li>
+		<li class=kadov-p><p>如需瞭解並行執行對 CPI 的影響，請參閱<a HREF="Clockticks_per_Instructions_Retired.html">每失效指令時鐘訊號數（非休眠 CPI）</a> </p></li>
 	</ul>
 </ul>
 

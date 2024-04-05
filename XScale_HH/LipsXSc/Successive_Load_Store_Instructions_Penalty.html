@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/XScale_HH/LipsXSc/Successive_Load_Store_Instructions_Penalty.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:42 GMT -->
 <head>
 
-<title>��������/�洢ָ��ͷ�</title>
+<title>連續載入/儲存指令懲罰</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="02 16, 2003 12:40:53 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -95,7 +95,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض� XScale(R) ΢��ϵ�ṹ \nӢ�ض� XScale(R) ΢��ϵ�ṹ�ͷ�\n��������/�洢ָ��ͷ�");
+	addTocInfo("參考\n處理器事件與建議\n英特爾 XScale(R) 微體系結構 \n英特爾 XScale(R) 微體系結構懲罰\n連續載入/儲存指令懲罰");
 
 	}
 	if (window.writeBtnStyle)
@@ -120,26 +120,26 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>�����洢/����ָ��ͷ�/����</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>連續儲存/載入指令懲罰/警告</h1>
 
 <h2>XSC_SUCC_LoadStore</h2>
 
-<h3>����</h3>
+<h3>解釋</h3>
 
-<p>����&ldquo;Ӣ�ض�(R) XScale&rdquo;΢��ϵ�ṹ�Ĵ��������ĸ���仺�����������ڷ������ݻ���δ����ʱ���ⲿ�ڴ��ȡ���ݡ����е���仺��������ʹ��ʱ������������ͣ�������ĸ�����δ���ļ��ز��ȴ����ڴ��ȡʱ����ᷢ�����������</p>
+<p>基於&ldquo;英特爾(R) XScale&rdquo;微體系結構的處理器有四個填充緩衝區，用於在發生數據快取未命中時從外部記憶體獲取數據。所有的填充緩衝區都在使用時，處理器將暫停。存在四個以上未決的載入並等待從記憶體獲取時，便會發生這種情況。</p>
 
-<p>���Ƶأ�д�뻺����������Ҳ�����ܷ���������д�������������޴�����������ͣ���洢�������а˸�����˲��ܷ����˸����ϵĴ洢��</p>
+<p>類似地，寫入緩衝區的數量也限制能發出的連續寫入數，超過此限處理器將會暫停。儲存緩衝區有八個，因此不能發出八個以上的儲存。</p>
 
-<h3 class="whs2"><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs3"> ����</h3>
+<h3 class="whs2"><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs3"> 建議</h3>
 
-<p class="whs4">���µ���ָ��˳���Ա���ͬʱʹ�����е���仺������ &nbsp;</p>
+<p class="whs4">重新調整指令順序，以避免同時使用所有的填充緩衝區。 &nbsp;</p>
 
-<p class="whs4">ʹ�� PLD ָ��Ԥ�Ȼ�ȡ����Ҳ�ǿ��еİ취��PLD ָ��Ҳ��Ҫʹ����仺�����������������ʹ�� PLD ����������ָ������ <a href="Prefetch_Advice.html">XSC_PLD_Advice</a>��</p>
+<p class="whs4">使用 PLD 指令預先獲取數據也是可行的辦法。PLD 指令也需要使用填充緩衝區，因此請勿連續使用 PLD 及其它載入指令。請參閱 <a href="Prefetch_Advice.html">XSC_PLD_Advice</a>。</p>
 
-<h3>ʾ�� 1</h3>
+<h3>示例 1</h3>
 
 <p class=Preformatted><span class=Code>LDR &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R0, [R1, #0x0] &#xA0;</span></p>
 
@@ -151,7 +151,7 @@ else
 
 <p class=Preformatted><span class=Code>LDR &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R4, [R1, #-0xfff] &#xA0;&#xA0;&#xA0;&#xA0;;; XSC_SUCC_LoadStore, XSC_PLD_S1</span></p>
 
-<h3 class=Preformatted>ʾ�� 2</h3>
+<h3 class=Preformatted>示例 2</h3>
 
 <p class=Preformatted><span class=Code>STMDA &#xA0;&#xA0;&#xA0;R0,{R1,R2} &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;; XSC_LDMSTM_2</span></p>
 
@@ -161,7 +161,7 @@ else
 
 <p class=Preformatted><span class=Code>STMIA &#xA0;&#xA0;&#xA0;R0,{R5-R10} &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;; XSC_SUCC_LoadStore, XSC_PLD_S2, XSC_LDMSTM_3</span></p>
 
-<h3 class=Preformatted>ʾ�� 3</h3>
+<h3 class=Preformatted>示例 3</h3>
 
 <p class=Preformatted><span class=Code>SWP &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R0,R1,[R3] &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;; XSC_SWP</span></p>
 

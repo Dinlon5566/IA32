@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_CLZ.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:43 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>CLZ - ͳ��ǰ����</title>
+<title>CLZ - 統計前導零</title>
 
 <!--(Meta)==========================================================-->
 
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nC - ָ��\nCLZ");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nC - 指令\nCLZ");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,16 +105,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">CLZ - ͳ��ǰ����</h1>
+<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題">CLZ - 統計前導零</h1>
 
 <div>
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted><span class=Code>CLZ[condition] dest, source </span></p>
 
-<p>���У�</p>
+<p>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -127,7 +127,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 個條件之一。請參閱<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">條件程式碼狀態</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -137,7 +137,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>目標暫存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -147,20 +147,20 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>������һ���������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含第一個運算元的暫存器</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-CLZ ָ���λ [32] ��λ [0] ��� <em CLASS=SourceItalic>source</em> �е��㡣������� <em CLASS=SourceItalic>dest</em>������ 32 ��ʾԴ�Ĵ��� <em CLASS=SourceItalic>source</em> ��û�������κ�λ��condition ��������Чֵ������ָ��� NOP�� 
+CLZ 指令從位 [32] 到位 [0] 檢查 <em CLASS=SourceItalic>source</em> 中的零。結果放入 <em CLASS=SourceItalic>dest</em>，其中 32 表示源暫存器 <em CLASS=SourceItalic>source</em> 中沒有設定任何位。condition 必須是有效值；否則將指令當作 NOP。 
 
-<h2>Ѱַģʽ</h2>
+<h2>定址模式</h2>
 
-�޲������� 
+無運算元。 
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -209,7 +209,7 @@ CLZ ָ���λ [32] ��λ [0] ��� <em CLASS=SourceItalic>source</em> �е��㡣����
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� </h2>
+<h2>編碼 </h2>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
@@ -308,7 +308,7 @@ CLZ ָ���λ [32] ��λ [0] ��� <em CLASS=SourceItalic>source</em> �е��㡣����
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funcclz<br> 4 <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0<br> 6 <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@ * * * CLZ * * *<br> 8 <br> 9 <br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example, CODE, READONLY<br> 11 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1<br> 12 &#xA0;&#xA0;00000000 &#xA0;&#xA0;E3A0B001 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R11, #1<br> 13 &#xA0;&#xA0;00000004 &#xA0;&#xA0;E2AB0001 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;ADC &#xA0;&#xA0;&#xA0;R0, R11, #1<br> 14 <br> 15 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E16F2F10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;CLZ &#xA0;&#xA0;&#xA0;R2, R0<br> 16 <br> 17 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END &#xA0;&#xA0;&#xA0;18</span> </p>
 </div>

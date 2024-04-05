@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/XScale_HH/LipsXSc/MAC.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:56 GMT -->
 <head>
 
-<title>TMRC/TMRRC/TEXTRM �� MAC ��Ԫ�����ĳͷ�/����</title>
+<title>TMRC/TMRRC/TEXTRM 與 MAC 單元互動的懲罰/警告</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="04 14, 2003 12:00:53 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -83,7 +83,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض� XScale(R) ΢��ϵ�ṹ \nӢ�ض�(R) ���� MMX(TM) ָ��ͷ�\nTMRC/TMRRC/TEXTRM �� MAC ��Ԫ�����ĳͷ�/����");
+	addTocInfo("參考\n處理器事件與建議\n英特爾 XScale(R) 微體系結構 \n英特爾(R) 無線 MMX(TM) 指令集懲罰\nTMRC/TMRRC/TEXTRM 與 MAC 單元互動的懲罰/警告");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,29 +106,29 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="XS_logo.gif" alt="Ӣ�ض� XScale(R) ��������" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">TMRC/TMRRC/TEXTRM �� MAC ��Ԫ�����ĳͷ�/����</h1>
+<h1><img src="XS_logo.gif" alt="英特爾 XScale(R) 技術主題" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">TMRC/TMRRC/TEXTRM 與 MAC 單元互動的懲罰/警告</h1>
 
 <h2>XSCW_MAC</h2>
 
-<p>��&ldquo;����&rdquo;�е� MAC ��Ԫ��Ӧ��ͬ TMRC/TMRRC/TEXTRM �����ڵ�λ��ʹ�ã�ԭ�����������߹���д�غ��ļĴ����ļ���·����һ����δ��ɣ���һ���㲻�ܷ�����</p>
+<p>主&ldquo;核心&rdquo;中的 MAC 單元不應該同 TMRC/TMRRC/TEXTRM 在相鄰的位置使用，原因在於這兩者共享寫回核心暫存器檔案的路徑。一個尚未完成，另一個便不能發出。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs2"> ����</h3>
+	style="margin-left: 40px;"><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs2"> 建議</h3>
 
-<p class="whs3">������ܣ������µ���ָ��˳�򣬸���ʹ�� MAC ��Ԫ�� TMRC/TMRRC/TEXTRM ��ָ�</p>
+<p class="whs3">如果可能，請重新調整指令順序，隔開使用 MAC 單元與 TMRC/TMRRC/TEXTRM 的指令。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> 備註</h3>
 
-<p class="whs3">��&ldquo;�ͷ�/����&rdquo;��������&ldquo;Ӣ�ض�(R) ���� MMX(TM) ָ�&rdquo;��</p>
+<p class="whs3">此&ldquo;懲罰/警告&rdquo;僅適用於&ldquo;英特爾(R) 無線 MMX(TM) 指令集&rdquo;。</p>
 
-<h3>ʾ�� 1</h3>
+<h3>示例 1</h3>
 
 <p class=Preformatted><span class=Code>TMRC &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R4, wCID</span></p>
 
 <p class=Preformatted><span class=Code>MLA &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R1, R2, R3, R4 &#xA0;&#xA0;&#xA0;&#xA0;;; XSCW_MAC</span></p>
 
-<h3>ʾ�� 2</h3>
+<h3>示例 2</h3>
 
 <p class=Preformatted><span class=Code>MULS &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R1, R7, R3</span></p>
 

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/avoiding_memory_ordering_pipeline_clears.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:24:40 GMT -->
 <head>
 
-<title>±ÜÃâÄÚ´æË³Ðò¹ÜµÀÇå³ý</title>
+<title>é¿å…è¨˜æ†¶é«”é †åºç®¡é“æ¸…é™¤</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
 <meta name=generator-major-version content=0.1>
 <meta name=generator-minor-version content=1>
@@ -79,7 +79,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("²Î¿¼\n´¦ÀíÆ÷ÊÂ¼þÓë½¨Òé\nÓ¢ÌØ¶û(R) ±¼ÌÚ(R) 4 ´¦ÀíÆ÷\n¹ØÓÚÓ¢ÌØ¶û(R) ±¼ÌÚ(R) 4 ´¦ÀíÆ÷µÄ½¨Òé\n¹ØÓÚÓ¢ÌØ¶û(R) ±¼ÌÚ(R) 4 ´¦ÀíÆ÷µÄ½¨Òé\n±ÜÃâÄÚ´æË³Ðò¹ÜµÀÇå³ý");
+	addTocInfo("åƒè€ƒ\nè™•ç†å™¨äº‹ä»¶èˆ‡å»ºè­°\nè‹±ç‰¹çˆ¾(R) å¥”é¨°(R) 4 è™•ç†å™¨\né—œæ–¼è‹±ç‰¹çˆ¾(R) å¥”é¨°(R) 4 è™•ç†å™¨çš„å»ºè­°\né—œæ–¼è‹±ç‰¹çˆ¾(R) å¥”é¨°(R) 4 è™•ç†å™¨çš„å»ºè­°\né¿å…è¨˜æ†¶é«”é †åºç®¡é“æ¸…é™¤");
 
 	}
 	if (window.writeBtnStyle)
@@ -102,18 +102,18 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" alt="Ó¢ÌØ¶û(R) µ÷ÓÅÖúÊÖÖ÷Ìâ" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">±ÜÃâÄÚ´æË³Ðò¹ÜµÀÇå³ý</h1>
+<h1><img src="TA_logo.gif" alt="è‹±ç‰¹çˆ¾(R) èª¿å„ªåŠ©æ‰‹ä¸»é¡Œ" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">é¿å…è¨˜æ†¶é«”é †åºç®¡é“æ¸…é™¤</h1>
 
 &nbsp;
 
-<p>Òª±ÜÃâÓÉÓÚÄÚ´æË³ÐòÎÊÌâ¶øµ¼ÖÂµÄ¹ÜµÀÇå³ý£¬Çë³¢ÊÔÒÔÏÂ·½·¨£º
+<p>è¦é¿å…ç”±æ–¼è¨˜æ†¶é«”é †åºå•é¡Œè€Œå°Žè‡´çš„ç®¡é“æ¸…é™¤ï¼Œè«‹å˜—è©¦ä»¥ä¸‹æ–¹æ³•ï¼š
  </p>
 
-<li class=kadov-p>»®·Ö¹¤×÷£¨ÀýÈçÊý×é£©£¬Ê¹Ã¿¸öÏß³Ì´¦Àí²»Í¬»º´æÏßÖÐµÄÊý¾Ý£»»òÊÇÖÆ×÷Êý×é/Êý¾Ý½á¹¹µÄ×ÔÓÐ¸±±¾£¬¹©Ã¿¸öÏß³ÌÊ¹ÓÃ¡£ </li>
+<li class=kadov-p>åŠƒåˆ†å·¥ä½œï¼ˆä¾‹å¦‚é™£åˆ—ï¼‰ï¼Œä½¿æ¯å€‹åŸ·è¡Œç·’è™•ç†ä¸åŒå¿«å–ç·šä¸­çš„æ•¸æ“šï¼›æˆ–æ˜¯è£½ä½œé™£åˆ—/æ•¸æ“šçµæ§‹çš„è‡ªæœ‰å‰¯æœ¬ï¼Œä¾›æ¯å€‹åŸ·è¡Œç·’ä½¿ç”¨ã€‚ </li>
 
-<li class=kadov-p>ÔÚ×ÔÐýµÈ´ýÑ­»·Óë¿ÕÏÐÑ­»·ÖÐ£¬²åÈëÐÂµÄ <span class=Code>pause</span> Ö¸Áî¡£´ËÖ¸Áî³äµ±ÌáÊ¾£¬¸æÖª´úÂëÐòÁÐÊÇ×ÔÐýµÈ´ýÑ­»·£¬ÕâÑù¿ÉÒÔ´ó·ù½µµÍÄÚ´æË³Ðò³åÍ»µÄ¿ÉÄÜÐÔ¡£ </li>
+<li class=kadov-p>åœ¨è‡ªæ—‹ç­‰å¾…å¾ªç’°èˆ‡ç©ºé–‘å¾ªç’°ä¸­ï¼Œæ’å…¥æ–°çš„ <span class=Code>pause</span> æŒ‡ä»¤ã€‚æ­¤æŒ‡ä»¤å……ç•¶æç¤ºï¼Œå‘ŠçŸ¥ç¨‹å¼ç¢¼åºåˆ—æ˜¯è‡ªæ—‹ç­‰å¾…å¾ªç’°ï¼Œé€™æ¨£å¯ä»¥å¤§å¹…é™ä½Žè¨˜æ†¶é«”é †åºè¡çªçš„å¯èƒ½æ€§ã€‚ </li>
 
-<li class=kadov-p>µ¥¶À·ÅÖÃÃ¿¸öÍ¬²½±äÁ¿£¬±äÁ¿Ö®¼äÏà¸ô 128 ¸ö×Ö½Ú£¬»òÊÇ·ÅÈëµ¥¶ÀµÄ»º´æÏß¡£<br>ÈçÐèÓÐ¹ØÏêÏ¸ÐÅÏ¢£¬Çë²ÎÔÄ <i>Intel(R) Pentium(R) 4 and Intel(R) Xeon(TM) Processor Optimization Manual</i>£¨Ó¢ÌØ¶û(R) ±¼ÌÚ(R) 4 ÓëÓ¢ÌØ¶û(R) ÖÁÇ¿(TM) ´¦ÀíÆ÷ÓÅ»¯ÊÖ²á£©µÄµÚ 7 ÕÂ¡£</li>
+<li class=kadov-p>å–®ç¨æ”¾ç½®æ¯å€‹åŒæ­¥è®Šæ•¸ï¼Œè®Šæ•¸ä¹‹é–“ç›¸éš” 128 å€‹ä½å…ƒçµ„ï¼Œæˆ–æ˜¯æ”¾å…¥å–®ç¨çš„å¿«å–ç·šã€‚<br>å¦‚éœ€æœ‰é—œè©³ç´°è³‡è¨Šï¼Œè«‹åƒé–± <i>Intel(R) Pentium(R) 4 and Intel(R) Xeon(TM) Processor Optimization Manual</i>ï¼ˆè‹±ç‰¹çˆ¾(R) å¥”é¨°(R) 4 èˆ‡è‹±ç‰¹çˆ¾(R) è‡³å¼·(TM) è™•ç†å™¨å„ªåŒ–æ‰‹å†Šï¼‰çš„ç¬¬ 7 ç« ã€‚</li>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

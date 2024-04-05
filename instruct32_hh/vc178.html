@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc178.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:30 GMT -->
 <head>
 
-<title>MOV - ����/�Ƴ����ƼĴ���</title>
+<title>MOV - 移入/移出控制暫存器</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:12:46 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -27,7 +27,7 @@
 <meta name=page-count content=1>
 <meta name=layout-height content=1080>
 <meta name=layout-width content=792>
-<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;EFLAGS;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;��F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;��;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FSUB;FSUBP;FISUB;Dest;FSUBR;FSUBRP;FISUBR;FLDZ--Load;EB;EC;EE;FLDZ;FLDPI;FCLEX;FNCLEX--Clear;FNCLEX*;PE;UE;OE;ZE;IE;FNCLEX;MS-DOS*;MXCRS;FNINIT*;coprocessor;FPUControlWord;FPUStatusWord;FPUTagWord;FPUDataPointer;FPUInstructionPointer;FPULastInstructionOpcode;FINIT;FNINIT;MXCSR;FSAVE;FNSAVE--Store;FNSAVE*;FNSAVE;FNINIT--Initialize;coprocessors;FPUs;FWAIT;DEST[FPUControlWord;DEST[FPUStatusWord;DEST[FPUTagWord;DEST[FPUDataPointer;DEST[FPUInstructionPointer;DEST[FPULastInstructionOpcode;nonwritable;FSTCW;FNSTCW--Store;FNSTCW*;FNSTCW;FNSTENV--Store;FSTENV;FNSTENV*;FNSTENV;FNSTSW--Store;FNSTSW*;FNSTSW;FPREM;FXAM;FSTSW;denormalized;MOV--Move;ModR;M;m;PG;PGE;PSE;PAE;PDPTRs;MOV;reg;TLB;Lookaside;TLBs">
+<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;EFLAGS;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;±F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;±;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FSUB;FSUBP;FISUB;Dest;FSUBR;FSUBRP;FISUBR;FLDZ--Load;EB;EC;EE;FLDZ;FLDPI;FCLEX;FNCLEX--Clear;FNCLEX*;PE;UE;OE;ZE;IE;FNCLEX;MS-DOS*;MXCRS;FNINIT*;coprocessor;FPUControlWord;FPUStatusWord;FPUTagWord;FPUDataPointer;FPUInstructionPointer;FPULastInstructionOpcode;FINIT;FNINIT;MXCSR;FSAVE;FNSAVE--Store;FNSAVE*;FNSAVE;FNINIT--Initialize;coprocessors;FPUs;FWAIT;DEST[FPUControlWord;DEST[FPUStatusWord;DEST[FPUTagWord;DEST[FPUDataPointer;DEST[FPUInstructionPointer;DEST[FPULastInstructionOpcode;nonwritable;FSTCW;FNSTCW--Store;FNSTCW*;FNSTCW;FNSTENV--Store;FSTENV;FNSTENV*;FNSTENV;FNSTSW--Store;FNSTSW*;FNSTSW;FPREM;FXAM;FSTSW;denormalized;MOV--Move;ModR;M;m;PG;PGE;PSE;PAE;PDPTRs;MOV;reg;TLB;Lookaside;TLBs">
 
 
 <!--(Links)=========================================================-->
@@ -96,7 +96,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nM - ָ��\nMOV - ����/�Ƴ����ƼĴ���");
+	addTocInfo("參考\n指令集\nIA-32 指令\nM - 指令\nMOV - 移入/移出控制暫存器");
 
 	}
 	if (window.writeBtnStyle)
@@ -119,7 +119,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>MOV - ����/�Ƴ����ƼĴ���</h1>
+<h1>MOV - 移入/移出控制暫存器</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -127,13 +127,13 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">������</td>
+	style="margin-bottom: 0;">操作碼</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">說明</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -144,7 +144,7 @@ else
 	style="margin-bottom: 0;">MOV CR0,<span style="font-style: italic;"><I>r32</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <span style="font-style: italic;"><I>r32</I></span> �Ƶ� CR0</td></tr>
+	style="margin-bottom: 0;">將 <span style="font-style: italic;"><I>r32</I></span> 移到 CR0</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -155,7 +155,7 @@ else
 	style="margin-bottom: 0;">MOV CR2,<span style="font-style: italic;"><I>r32</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <span style="font-style: italic;"><I>r32</I></span> �Ƶ� CR2</td></tr>
+	style="margin-bottom: 0;">將 <span style="font-style: italic;"><I>r32</I></span> 移到 CR2</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -166,7 +166,7 @@ else
 	style="margin-bottom: 0;">MOV CR3,<span style="font-style: italic;"><I>r32</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <span style="font-style: italic;"><I>r32</I></span> �Ƶ� CR3</td></tr>
+	style="margin-bottom: 0;">將 <span style="font-style: italic;"><I>r32</I></span> 移到 CR3</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -177,7 +177,7 @@ else
 	style="margin-bottom: 0;">MOV CR4,<span style="font-style: italic;"><I>r32</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <span style="font-style: italic;"><I>r32</I></span> �Ƶ� CR4</td></tr>
+	style="margin-bottom: 0;">將 <span style="font-style: italic;"><I>r32</I></span> 移到 CR4</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -188,7 +188,7 @@ else
 	style="margin-bottom: 0;">MOV <span style="font-style: italic;"><I>r32,</I></span>CR0</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� CR0 �Ƶ� <span style="font-style: italic;"><I>r32</I></span></td></tr>
+	style="margin-bottom: 0;">將 CR0 移到 <span style="font-style: italic;"><I>r32</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -199,7 +199,7 @@ else
 	style="margin-bottom: 0;">MOV <span style="font-style: italic;"><I>r32,</I></span>CR2</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� CR2 �Ƶ� <span style="font-style: italic;"><I>r32</I></span></td></tr>
+	style="margin-bottom: 0;">將 CR2 移到 <span style="font-style: italic;"><I>r32</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -210,7 +210,7 @@ else
 	style="margin-bottom: 0;">MOV <span style="font-style: italic;"><I>r32,</I></span>CR3</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� CR3 �Ƶ� <span style="font-style: italic;"><I>r32</I></span></td></tr>
+	style="margin-bottom: 0;">將 CR3 移到 <span style="font-style: italic;"><I>r32</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -221,32 +221,32 @@ else
 	style="margin-bottom: 0;">MOV <span style="font-style: italic;"><I>r32,</I></span>CR4</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� CR4 �Ƶ� <span style="font-style: italic;"><I>r32</I></span></td></tr>
+	style="margin-bottom: 0;">將 CR4 移到 <span style="font-style: italic;"><I>r32</I></span></td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>�����ƼĴ�����CR0��CR2��CR3 �� CR4���������Ƶ�ͨ�üĴ����������෴�����۲�������С������Σ���Щָ��Ĳ�������С���� 32 λ�������йؿ��ƼĴ����ı�־���ֶε���ϸ˵���������&ldquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 											face=Verdana>IA-32 Ӣ�ض�(R) ��ϵ�ṹ����������Ա�ֲ�</font>&rdquo;�� 3 ���� 2 ���е�&ldquo;���ƼĴ���&rdquo;����</p>
+<p>將控制暫存器（CR0、CR2、CR3 或 CR4）的內容移到通用暫存器，或者相反。不論運算元大小屬性如何，這些指令的運算元大小總是 32 位。如需有關控制暫存器的標誌與欄位的詳細說明，請參閱&ldquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 											face=Verdana>IA-32 英特爾(R) 體系結構軟件開發人員手冊</font>&rdquo;第 3 卷第 2 章中的&ldquo;控制暫存器&rdquo;）。</p>
 
-<p>���ؿ��ƼĴ���ʱ������Ӧ��ͼ�����κα���λ��Ҳ����˵��Ӧ�����ǽ�����λ����Ϊ��ǰ��ȡ��ֵ��</p>
+<p>載入控制暫存器時，程式不應試圖更改任何保留位；也就是說，應該總是將保留位設定為以前讀取的值。</p>
 
-<p>�ڲ����뼶��ModR/M �ֽ��е� <span style="font-style: italic;"><I>reg</I></span> �ֶ�ָ�����ػ��ȡ�Ŀ��ƼĴ�����<span style="font-style: italic;"><I>mod</I></span> �ֶ��е�����λ���� 11B��<span style="font-style: italic;"><I>r/m</I></span> �ֶ�ָ�����ػ��ȡ��ͨ�üĴ�����</p>
+<p>在操作碼級別，ModR/M 位元組中的 <span style="font-style: italic;"><I>reg</I></span> 欄位指定載入或讀取的控制暫存器。<span style="font-style: italic;"><I>mod</I></span> 欄位中的兩個位總是 11B。<span style="font-style: italic;"><I>r/m</I></span> 欄位指定載入或讀取的通用暫存器。</p>
 
-<p>��Щָ�������¸����ã�</p>
-
-<ul>
-	
-	<p>д����ƼĴ��� CR3 ʱ����������еķ�ȫ�� TLB ������&ldquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>IA-32 Ӣ�ض�(R) ��ϵ�ṹ����������Ա�ֲ�</font>&rdquo;�� 3 ���� 3 ���е�&ldquo;ת���ѯ������ (TLB)&rdquo;����</p>
-</ul>
-
-<p>���ڱ���<font   style="font-family: Verdana, Arial, Helvetica, sans-serif;" 	face=Verdana>(R)</font> Pro �����������¸�����ȡ���ھ���ʵ�ֵİ汾��������Ӧ������������ǰ IA-32 �������еĴ���ܣ�</p>
+<p>這些指令有以下副作用：</p>
 
 <ul>
 	
-	<p>�޸Ŀ��ƼĴ����е��κη�ҳ��־���Ĵ��� CR0 �е� PE �� PG���Ĵ��� CR4 �е� PGE��PSE �� PAE��ʱ����������е� TLB ��Ŀ������ȫ����Ŀ����� PG ��־����Ϊ 1����д����ƼĴ��� CR4 �Ա㽫 PAE ��־����Ϊ 1��������������ַ��չģʽ������ҳĿ¼ָ����е�ָ�� (PDPTR) ���ص������������ص��ڲ�����ϵ�ṹ�Ĵ���������� PAE ��־�� PG ��־������Ϊ 1����д����ƼĴ��� CR3 �ᵼ�½� PDPTR ���¼��ص������������ PAE ��־����Ϊ 1����д����ƼĴ��� CR0 ������ PG ��־���� PDPTR ���¼��ص���������</p>
+	<p>寫入控制暫存器 CR3 時，將清除所有的非全域性 TLB 項（請參閱&ldquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>IA-32 英特爾(R) 體系結構軟件開發人員手冊</font>&rdquo;第 3 卷第 3 章中的&ldquo;轉譯查詢緩衝區 (TLB)&rdquo;）。</p>
 </ul>
 
-<h2>����</h2>
+<p>對於奔騰<font   style="font-family: Verdana, Arial, Helvetica, sans-serif;" 	face=Verdana>(R)</font> Pro 處理器，以下副作用取決於具體實現的版本。軟體不應依賴將來或以前 IA-32 處理器中的此項功能：</p>
+
+<ul>
+	
+	<p>修改控制暫存器中的任何分頁標誌（暫存器 CR0 中的 PE 與 PG，暫存器 CR4 中的 PGE、PSE 及 PAE）時，會清除所有的 TLB 專案，包括全域性專案。如果 PG 標誌設定為 1，且寫入控制暫存器 CR4 以便將 PAE 標誌設定為 1（以啟用實體地址擴充套件模式），則將頁目錄指針表中的指針 (PDPTR) 載入到處理器（載入到內部非體系結構暫存器）。如果 PAE 標誌與 PG 標誌都設定為 1，則寫入控制暫存器 CR3 會導致將 PDPTR 重新載入到處理器。如果 PAE 標誌設定為 1，且寫入控制暫存器 CR0 以設定 PG 標誌，則將 PDPTR 重新載入到處理器。</p>
+</ul>
+
+<h2>操作</h2>
 
 <p class=Preformatted>DEST <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -255,21 +255,21 @@ else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'>");}
 //--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> SRC;</p>
 
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
-<p>OF��SF��ZF��AF��PF �� CF ��־δ���塣</p>
+<p>OF、SF、ZF、AF、PF 及 CF 標誌未定義。</p>
 
-<h2>����ģʽ�쳣</h2>
+<h2>保護模式異常</h2>
 
-<p>#GP(0) - �����ǰ��Ȩ������ 0�������ͼ����Ч��λ���д�� CR0�����磬�� PE ��־����Ϊ 0 ʱ���� PG ��־����Ϊ 1�������� NE ��־����Ϊ 1 ʱ���� CD ����Ϊ 0���������ͼ�� 1 д�� CR4 �е��κα���λ������ڿ��ƼĴ��� CR4 �е� PAE ��־����ƼĴ��� CR0 �е� PG ��־������Ϊ 1 ʱ����ͼ������λд��ҳĿ¼ָ���������չ������ַģʽ��ʹ�ã���</p>
+<p>#GP(0) - 如果目前特權級別不是 0。如果試圖將無效的位組合寫入 CR0（例如，在 PE 標誌設定為 0 時，將 PG 標誌設定為 1；或是在 NE 標誌設定為 1 時，將 CD 設定為 0）。如果試圖將 1 寫入 CR4 中的任何保留位。如果在控制暫存器 CR4 中的 PAE 標誌與控制暫存器 CR0 中的 PG 標誌都設定為 1 時，試圖將保留位寫入頁目錄指針表格（在擴充套件實體地址模式中使用）。</p>
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>實地址模式異常</h2>
 
-<p>#GP - �����ͼ�� 1 д�� CR4 �е��κα���λ��</p>
+<p>#GP - 如果試圖將 1 寫入 CR4 中的任何保留位。</p>
 
-<h2>�� 8086 ģʽ�쳣</h2>
+<h2>虛 8086 模式異常</h2>
 
-<p class="whs4">#GP(0) - ��Щָ���޷����� 8086 ģʽ��ִ�С� </p>
+<p class="whs4">#GP(0) - 這些指令無法在虛 8086 模式中執行。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

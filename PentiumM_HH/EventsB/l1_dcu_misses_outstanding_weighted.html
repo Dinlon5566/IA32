@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/l1_dcu_misses_outstanding_weighted.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:54 GMT -->
 <head>
 
-<title>δ����һ��δ���У���Ȩ��</title>
+<title>未決的一級未命中（加權）</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="08 2, 2001 11:35:41 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -92,7 +92,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M �������¼�\nһ�������¼�\nδ����һ��δ���У���Ȩ��");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n英特爾(R) 奔騰(R) M 處理器事件\n一級快取事件\n未決的一級未命中（加權）");
 
 	}
 	if (window.writeBtnStyle)
@@ -115,19 +115,19 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>δ����һ��δ���У���Ȩ��</h1>
+<h1>未決的一級未命中（加權）</h1>
 
-<p>���¼���ʾ����δ����һ�����ݻ�����δ�����ڼ�ļ�Ȩ��������������һ����ʱ��δ����δ��������</p>
+<p>此事件表示存在未決的一級數據快取線未命中期間的加權週期數，加上任一給定時間未決的未命中數。</p>
 
 <ul>
 	
-	<li class=kadov-p><p>δ���Ļ���δ����������ȷ���Ļ���δ�������ѷ��ش��������ĵ�����֮����е�����</p></li>
+	<li class=kadov-p><p>未決的快取未命中是在已確定的快取未命中與已返回處理器核心的請求之間進行的請求。</p></li>
 	
-	<li class=kadov-p><p>�����ǿɻ���Ķ�ȡ����</p></li>
+	<li class=kadov-p><p>僅考慮可快取的讀取請求。</p></li>
 	
-	<li class=kadov-p><p>���������ɻ��������</p></li>
+	<li class=kadov-p><p>不包括不可快取的請求。</p></li>
 	
-	<li class=kadov-p><p class="whs1">ͳ������Ȩ��ȡ���Լ���������䡢ʧЧ���洢�� </p></li>
+	<li class=kadov-p><p class="whs1">統計所有權讀取，以及快取線填充、失效及儲存。 </p></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

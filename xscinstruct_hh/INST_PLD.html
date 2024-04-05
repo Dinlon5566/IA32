@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_PLD.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:54 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>PLD - DSP ָ��</title>
+<title>PLD - DSP 指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nP - ָ��\nPLD");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nP - 指令\nPLD");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,16 +104,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">PLD - DSP ָ��</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題">PLD - DSP 指令</h1>
 
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <div>
 <p class=Preformatted><span CLASS=Code>PLD addr_mode</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,26 +126,26 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ѱַģʽ 2��<a href="Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.html">������洢�ֻ��޷����ֽ�</a></td></tr>
+<p CLASS=CellBodyLeft>定址模式 2：<a href="Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.html">載入與儲存字或無符號位元組</a></td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p CLASS=Body>PLD ָ��ָ��������ָ���ĵ�ַ�����ڴ���ʡ����ʹ�ڴ�ϵͳԤ�ȼ��ذ���ָ����ַ�Ļ����ߣ��Ӷ��Ż��ڴ�ϵͳ���ܡ�</p>
+<p CLASS=Body>PLD 指令指出即將從指定的地址進行記憶體訪問。這會使記憶體系統預先載入包含指定地址的快取線，從而優化記憶體系統性能。</p>
 </div>
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="Note.gif"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif"> 備註</h3>
 
-���ȱ�ַ���º��ַѰַģʽ�����á� 
+事先變址或事後變址定址模式不可用。 
 
-<h2>Ѱַģʽ</h2>
+<h2>定址模式</h2>
 
-�����&ldquo;Ѱַģʽ 2 - ������洢�ֻ��޷����ֽ�&rdquo;�� 
+請參閱&ldquo;定址模式 2 - 載入與儲存字或無符號位元組&rdquo;。 
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -212,7 +212,7 @@ else
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>����</h2>
+<h2>編碼</h2>
 
 <tr>
 <td ROWSPAN=1
@@ -343,13 +343,13 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funcpld<br> 4 <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0<br> 6 <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@ * * * PLD (Adressing Mode 2) * * * <br> 8 <br> 9 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA load_store, CODE, READONLY<br> 10 <br> 11 &#xA0;&#xA0;00000000 &#xA0;&#xA0;E4979005 &#xA0;&#xA0;&#xA0;LDR &#xA0;&#xA0;R9, [R7], #5<br> 12 &#xA0;&#xA0;00000004 &#xA0;&#xA0;E3A0000A &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;R0, #10<br> 13 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E3A01001 &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;R1, #1<br> 14 &#xA0;&#xA0;00000012 &#xA0;&#xA0;E5801000 &#xA0;&#xA0;&#xA0;STR &#xA0;&#xA0;R1, [R0]<br> 15 &#xA0;&#xA0;00000016 &#xA0;&#xA0;1802000 &#xA0;&#xA0;&#xA0;&#xA0;PLD &#xA0;&#xA0;R2, [R0]<br> 16 <br> 17 &#xA0;&#xA0;00000020 &#xA0;&#xA0;E3A0100A &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;R1, #10<br> 18 &#xA0;&#xA0;00000024 &#xA0;&#xA0;E3A02002 &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;R2, #2<br> 19 &#xA0;&#xA0;00000028 &#xA0;&#xA0;E5812000 &#xA0;&#xA0;&#xA0;STR &#xA0;&#xA0;R2, [R1]<br> 20 &#xA0;&#xA0;00000032 &#xA0;&#xA0;E59130FF &#xA0;&#xA0;&#xA0;LDR &#xA0;&#xA0;R3, [R1, #0xff]<br> 21 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END</span> </p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
-<a href="Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.html">�����Ѱַģʽ 2��������洢�ֻ��޷����ֽ� </a>
+<a href="Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.html">請參閱定址模式 2：載入與儲存字或無符號位元組 </a>
 </div>
 </div>
 

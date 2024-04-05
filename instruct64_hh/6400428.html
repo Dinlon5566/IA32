@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400428.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:48 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>˳��������ָ��</title>
+<title>順序語義與指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -104,7 +104,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h2>˳��������ָ��</h2>
+<h2>順序語義與指令</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="2" class="whs1">
@@ -112,21 +112,21 @@ else
 <tr>
 <td valign="top" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˳������</td>
+	style="margin-bottom: 0;">順序語義</td>
 <td valign="top" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td>
+	style="margin-bottom: 0;">說明</td>
 <td valign="top" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">�ɶ�����&#xAE; ָ��</td></tr>
+	style="margin-bottom: 0;">可定序安騰&#xAE; 指令</td></tr>
 
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">����</td>
+	style="margin-bottom: 0;">無序</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">����ָ��������κ�˳����֡�</td>
+	style="margin-bottom: 0;">無序指令可能以任何順序出現。</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400278.htm">ld, st, ld.s, ld.a, ld.sa</a>, <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400284.htm">lfetch</a>, <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400278.htm">ld8.fill</a>, <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400362.htm">st8.fill</a></p>
 <p CLASS=TableCell><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400287.htm">mf.a</a>, <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400372.htm">sync.i</a></p>
@@ -136,10 +136,10 @@ else
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�ͷ�</td>
+	style="margin-bottom: 0;">釋放</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�ͷ�ָ�֤��������Ϊ�ɼ���֮ǰ����ǰ���пɶ����ָ�����Ϊ�ɼ��ġ�</td>
+	style="margin-bottom: 0;">釋放指令保證在自身成為可見的之前，以前所有可定序的指令均成為可見的。</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;"><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400165.htm">cmpxchg.rel</a>, <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400198.htm">fetchadd.rel</a>, <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400362.htm">st.rel</a></td></tr>
@@ -147,10 +147,10 @@ else
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��ȡ</td>
+	style="margin-bottom: 0;">獲取</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��ȡָ�֤�����ȳ�Ϊ�ɼ��ģ�֮�����к����Ŀɶ���ָ��ų�Ϊ�ɼ��ġ�</td>
+	style="margin-bottom: 0;">獲取指令保證自身先成為可見的，之後所有後續的可定序指令才成為可見的。</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;"><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400165.htm">cmpxchg.acq</a>, <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400198.htm">fetchadd.acq</a>, <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400380.htm">xchg</a>, <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400278.htm">ld.acq, ld.c.clr.acq</a></td></tr>
@@ -158,10 +158,10 @@ else
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�߽�</td>
+	style="margin-bottom: 0;">邊界</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�߽�ָ���ۺ����ͷ����ȡ���壬ʹ֮��Ϊһ��˫��ı߽磻Ҳ����˵������ȷ��������ǰ�Ŀɶ���ָ������к����Ŀɶ���ָ��֮ǰ��Ϊ�ɼ��ġ�</td>
+	style="margin-bottom: 0;">邊界指令綜合了釋放與獲取語義，使之成為一個雙向的邊界；也就是說，它們確保所有先前的可定序指令都在所有後續的可定序指令之前成為可見的。</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;"><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400287.htm">mf</a></td></tr>

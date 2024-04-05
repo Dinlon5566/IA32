@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/ev3_080.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:35 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>�μĴ�������</title>
+<title>段暫存器載入</title>
 
 <!--(Meta)==========================================================-->
 
@@ -91,7 +91,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M �������¼�\n���������¼�\n�μĴ�������");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n英特爾(R) 奔騰(R) M 處理器事件\n段重新命名事件\n段暫存器載入");
 
 	}
 	if (window.writeBtnStyle)
@@ -114,11 +114,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>�μĴ�������</h1>
+<h1>段暫存器載入</h1>
 
-<p>���¼���ʾ�μĴ������ز���������ֵ���ص��μĴ�����ָ��ᵼ��һ���ͷ������¼���ʾ 16 λ�����е��������⡣������¼�Ƶ�����������ڼ���ÿ���μĴ������ص�ʧЧָ��������ȷ��������Ƿ�͵�ֵ���о������¼����ܻ�ǳ����á�</p>
+<p>此事件表示段暫存器載入操作。將新值載入到段暫存器的指令會導致一個懲罰。此事件表示 16 位程式碼中的效能問題。如果此事件頻繁發生，對於計算每個段暫存器載入的失效指令數，並確定結果數是否低到值得研究，此事件可能會非常有用。</p>
 
-<p class="whs1">��Ϊ��֧Ԥ��ʧ��Ľ�������¼����������Ʋ��Եģ������ܰ���δʵ�ʷ����ĶμĴ������ء�������������μĴ������ض����ڲ����л��ģ��������Խ������Ʋ����ص㽵����͡� </p>
+<p class="whs1">作為分支預測失誤的結果，此事件本質上是推測性的，它可能包含未實際發生的段暫存器載入。不過，大多數段暫存器載入都是內部序列化的，這樣可以將這種推測性特點降到最低。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

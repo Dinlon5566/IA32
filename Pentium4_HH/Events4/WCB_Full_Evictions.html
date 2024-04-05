@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/WCB_Full_Evictions.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:47 GMT -->
 <head>
 
-<title>WCB �����ջ�</title>
+<title>WCB 已滿收回</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="12 10, 2002 10:43:25 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������¼�\n�����¼�\nWCB �����ջ�");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器事件\n附加事件\nWCB 已滿收回");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,22 +104,22 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>д����ϻ����� (WCB) �����ջ�</h1>
+<h1>寫入組合緩衝區 (WCB) 已滿收回</h1>
 
-<p class="whs1">�߳��ض��ԣ�<a href="Thread_Independent.html">TI</a></p>
+<p class="whs1">執行緒特定性：<a href="Thread_Independent.html">TI</a></p>
 
-<p>���¼�ͳ�ƺ�ʱ���е�&ldquo;д����ϻ�����&rdquo;(WCB) ȫ��ռ�ò���˱����ջ�һ���Դ����µ�����</p>
+<p>此事件統計何時所有的&ldquo;寫入組合緩衝區&rdquo;(WCB) 全被佔用並因此必須收回一項以處理新的請求。</p>
 
-<p>ͳ��&ldquo;WCB �����ջ�&rdquo;ʱ�������ṩ���µ���ϸ�ڣ�</p>
+<p>統計&ldquo;WCB 已滿收回&rdquo;時，可以提供以下調整細節：</p>
 
 <ul type="disc" class="whs2">
 	
-	<li class=kadov-p><p>�����ջؿ���ͬ�����ص���ͻ�������ջ����ֿ�������&ldquo;���� WCB �ջ�&rdquo;�¼��м�ȥ&ldquo;WCB �����ջ�&rdquo;�������ṩ���м�ֵ�Ĺ��� 64k �ص���ָ�ꡣ64k �ص������ڼ���֮�䷢�������´Ӷ��������ȡ�����ӳٵ�һ�������в�����ͻ������Ҳ�����ڴ洢�������ڴ�����֮�䷢������һ������ᵼ�� WCB ������������ʹ�ô����� WCB �ջؼ�ȥ WCB �����ջصĽ������ʾ��������ɵļ�����ʧЧָ����֮�Ƚϸߣ���ͨ������ʹ����� 64 KB �������ڴ����ã����ܻ����������ܡ�<br>��ע�⣬�˼�����ֻ�ǿ��ܵ������һ�ֱ�ʾ��Ӳ�������޷����о�ȷ��ͳ�ơ�</p></li>
+	<li class=kadov-p><p>這類收回可以同由於重疊衝突產生的收回區分開來。從&ldquo;所有 WCB 收回&rdquo;事件中減去&ldquo;WCB 已滿收回&rdquo;，可以提供更有價值的關於 64k 重疊的指標。64k 重疊可能在載入之間發生，導致從二級快取獲取數據延遲的一級快取中產生衝突；它們也可以在儲存計其它記憶體引用之間發生。后一種情況會導致 WCB 反覆，並可以使用從所有 WCB 收回減去 WCB 已滿收回的結果來表示。如果產生的計數與失效指令數之比較高，則通過避免使用相距 64 KB 倍數的記憶體引用，可能會大幅提升效能。<br>請注意，此計數仍只是可能的問題的一種表示；硬體限制無法進行精確的統計。</p></li>
 </ul>
 
 <ul type="disc" class="whs2">
 	
-	<li class=kadov-p><p>���ڴ洢���У����¼���ʱ������ WCB ʹ��Ч�ʵ�һ��ָ�ꡣWCB ���洢�е�������ϵ�һ���ڽ��ĵ�ַ����������ͬ�������е���Щ����������ڲ�ѭ����ͼ�ӳ��� WCB ����д�����������н���洢���� WCB �����������������֮ǰ�������ջ�����һЩ WCB����д���ڴ��У����� WCB ��ȡ�����ٴη��䣬����ᵼ��Щ���ӳ١���д������ڴ������ʱ�洢�У���ᵼ�²���д�룬�Ӷ���ʹ����ʹ��Ч�ʵͺܶࡣ<br>ͨ����ʧЧ�Ĵ洢����&ldquo;WCB �����ջ�&rdquo;֮��ͬÿ���������ϵĴ洢�����бȽϣ����Լ�⵽�����⡣����˱��ʴ���һ�����ʾ�������� WCB ����Ч�ʲ��ߡ�Ҫ��������⣬�뽫д���������ֲ��������ѭ���ϣ�������ֻ��һ���������Ż���������ѭ�����ѡ�<br>��ע�⣬WCB ���ܻ����߼�������֮�乲�������ʹ��&ldquo;���̼߳���&rdquo;ʱ��&ldquo;WCB �����ջ�&rdquo;���������ܻ����ӡ�</p></li>
+	<li class=kadov-p><p>對於儲存序列，此事件有時可用作 WCB 使用效率的一個指標。WCB 將儲存中的數據組合到一組鄰近的地址（例如在相同快取線中的那些）。但如果內部循環試圖從超過 WCB 數的寫入數據流進行交叉儲存，則 WCB 將發生反覆，在填充之前，必須收回其中一些 WCB。在寫回記憶體中，隨著 WCB 的取消與再次分配，這僅會導致些許延遲。在寫入組合記憶體與非臨時儲存中，這會導致部分寫入，從而致使匯流排使用效率低很多。<br>通過將失效的儲存數與&ldquo;WCB 已滿收回&rdquo;之比同每個快取線上的儲存數進行比較，可以檢測到此問題。如果此比率大於一，則表示數據流的 WCB 利用效率不高。要解決此問題，請將寫入數據流分佈到多個內循環上，而不是隻有一個。此類優化被稱作是循環分裂。<br>請注意，WCB 可能會在邏輯處理器之間共享，因此使用&ldquo;超執行緒技術&rdquo;時，&ldquo;WCB 已滿收回&rdquo;的數量可能會增加。</p></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

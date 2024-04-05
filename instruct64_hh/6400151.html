@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400151.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:49 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>loop ��֧����</title>
+<title>loop 分支型別</title>
 
 <!--(Meta)==========================================================-->
 
@@ -115,30 +115,30 @@ else
 		document.location.reload();
 //-->
 </script>
-<h2>loop ��֧����</h2>
+<h2>loop 分支型別</h2>
 
-<p><span style="font-weight: bold;"><B>cloop</B></span> ��֧������Լ򵥵ļ���ѭ�����ṩ���˷�֧����ʹ��&ldquo;ѭ������&rdquo;Ӧ�üĴ��� (LC) ȷ����֧����������ʹ���޶�ν�ʣ�</p>
+<p><span style="font-weight: bold;"><B>cloop</B></span> 分支型別針對簡單的計數循環而提供。此分支型別使用&ldquo;循環計數&rdquo;應用暫存器 (LC) 確定分支條件，而不使用限定謂詞：</p>
 
-<p>��� LC �Ĵ����������㣬�������ݼ���ִ�з�֧��</p>
+<p>如果 LC 暫存器不等於零，則它將遞減並執行分支。</p>
 
-<p>����Щ�򵥵ķ�֧�������⣬�����������ڼ���ģ������ѭ���ķ�֧���͡����������Ǽ���ѭ����ʹ�� LC �Ĵ����������������� while ѭ����ʹ���޶�ν�ʣ�����Щѭ������ʹ�üĴ���ѭ����λ�ṩ�Ĵ������������ܣ���������ʹ�ö϶��رն�Ӧ�չܵ��׶ε�ָ�</p>
+<p>除這些簡單的分支型別以外，還有四種用於加速模數排程循環的分支型別。其中兩個是計數循環（使用 LC 暫存器），另外兩個是 while 循環（使用限定謂詞）。這些循環型別使用暫存器循環移位提供暫存器重新命名功能，並且它們使用斷定關閉對應空管道階段的指令。</p>
 
-<p>&ldquo;��������&rdquo;Ӧ�üĴ��� (EC) ����ͳ�ƽ����׶Σ�����ĳЩ while ѭ����������ʼ�׶ε�һ���֡��ڽ����׶� EC ÿ�ζ���ݼ������ڴ󲿷ֵ�ѭ����EC Ϊһʱ���ܵ����ŷ���ѭ�����˳��������ض�����չ���������ܵ��Ż�ѭ����br.cexit �� br.wexit ��Ŀ�������Ϊ�����е���һ��ָ�������ڴ�������£�EC Ϊһʱ���ܵ�����δ��ȫ�ŷţ��������ŷŵ� EC Ϊ�㡣</p>
+<p>&ldquo;結束計數&rdquo;應用暫存器 (EC) 用於統計結束階段；對於某些 while 循環，則是起始階段的一部分。在結束階段 EC 每次都會遞減，對於大部分的循環，EC 為一時，管道已排放且循環已退出。對於特定型別展開的軟體管道優化循環，br.cexit 或 br.wexit 的目標會設定為序列中的下一個指令束。在此種情況下，EC 為一時，管道可能未完全排放，並繼續排放到 EC 為零。</p>
 
-<p>������Щģ������ѭ�����ͣ���֧�Ƿ�ִ�еļ���ȡ���ں��ķ�֧������LC ���ڼ����ͣ��޶�ν������ while �ͣ��Լ�����������EC �Ƿ����һ����</p>
+<p>對於這些模數排程循環型別，分支是否執行的計算取決於核心分支條件（LC 用於計數型，限定謂詞用於 while 型）以及結束條件（EC 是否大於一）。</p>
 
-<p>��Щ��֧���ͷ�Ϊ���ࣺ��������ڡ�ѭ������λ��ѭ������ĵײ�ʱ��ʹ�ö����ͣ�ctop �� wtop����������ִ�з�֧������ѭ��������ִ�еķ�֧���˳�ѭ����ѭ������λ��ѭ������ײ�֮���ĳ��λ��ʱ��ʹ�ó����ͣ�cexit �� wexit����������ִ�еķ�֧������ѭ������ִ�еķ�֧���˳�ѭ����������Ҳ��������չ���Ĺܵ�ʽѭ���е��м���ϡ�</p>
+<p>這些分支型別分為兩類：頂置與出口。循環決定位於循環主體的底部時，使用頂置型（ctop 與 wtop），這樣，執行分支將繼續循環，而不執行的分支則退出循環。循環決定位於循環主題底部之外的某個位置時，使用出口型（cexit 與 wexit），這樣不執行的分支將繼續循環，而執行的分支則退出循環。出口型也可以用在展開的管道式循環中的中間點上。</p>
 
-<p>ģ������ѭ�����Ͱ�����</p>
+<p>模數排程循環型別包括：</p>
 
 <ul type="disc" class="whs1">
 	
-	<li class=kadov-p><p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400152.htm">ctop �� cexit</a></p></li>
+	<li class=kadov-p><p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400152.htm">ctop 與 cexit</a></p></li>
 	
-	<li class=kadov-p><p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400153.htm">wtop �� wexit</a></p></li>
+	<li class=kadov-p><p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400153.htm">wtop 與 wexit</a></p></li>
 </ul>
 
-<p class="whs2">ѭ���ͷ�֧��CLOOP��CTOP��CEXIT��WTOP �� WEXIT����������ָ������ָ��� 2 ��ʹ�á���ָ��� 0 �� 1 ��ִ������ָ�����&ldquo;�Ƿ�����&rdquo;�������۷�֧�Ƿ�ִ�С� </p>
+<p class="whs2">循環型分支（CLOOP、CTOP、CEXIT、WTOP 及 WEXIT）僅允許在指令束的指令槽 2 中使用。在指令槽 0 或 1 中執行這類指令將導致&ldquo;非法操作&rdquo;錯誤，無論分支是否執行。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

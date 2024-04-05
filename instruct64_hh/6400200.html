@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400200.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
 
-<title>flushrs - ����Ĵ�����ջָ��</title>
+<title>flushrs - 清除暫存器堆疊指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:50:11 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nF - ָ��\nflushrs - ����Ĵ�����ջָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nF - 指令\nflushrs - 清除暫存器堆疊指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,16 +105,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">����Ĵ�����ջָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">清除暫存器堆疊指令</h1>
 
 <p><span style="font-weight: bold;"><B>flushrs</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400201.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400201.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字型慣例</a>
  </p>
 
-<p>ָ������ M</p>
+<p>指令型別 M</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>flushrs</p>
 
@@ -123,13 +123,13 @@ else
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>說明</B></span></p>
 
-<p>�Ĵ�����ջ�����������������ջ��ͨ�üĴ����ڼ���ִ��֮ǰ��д�뱸�ݴ洢��Ԫ������ķ���������ǰ�Ĺ���֡������δ���浽���ݴ洢��Ԫ�ļĴ�����</p>
+<p>暫存器堆疊的污損分割槽中所有入棧的通用暫存器在繼續執行之前會寫入備份儲存單元。污損的分割槽包含以前的過程幀當中尚未儲存到備份儲存單元的暫存器。</p>
 
-<p>�����&ldquo;�ⲿ�ж�&rdquo;����ʱ�����ж� RSE �洢ѭ������ָ�����֮��BSPSTORE ���� BSP��</p>
+<p>掛起的&ldquo;外部中斷&rdquo;啟用時可以中斷 RSE 儲存循環。此指令完成之後，BSPSTORE 等於 BSP。</p>
 
-<p>��ָ�������ָ�����еĵ�һ��ָ����򣬽������δ����ġ���ָ���޷��϶���</p>
+<p>此指令必須是指令組中的第一個指令。否則，結果將是未定義的。此指令無法斷定。</p>
 
 
 <!--(HR)============================================================-->

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/lipsmov_from_eax.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:48 GMT -->
 <head>
 
-<title>�� EAX �Ƴ�</title>
+<title>從 EAX 移出</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta NAME=MS-HAID CONTENT="Pairing Issues">
 <meta name=date content="09 6, 2001 4:23:18 PM">
 <meta name=topic-status content="In Progress">
@@ -118,30 +118,30 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> �� <span style="font-weight: bold;"><B>EAX</B></span> �Ƴ�</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> 從 <span style="font-weight: bold;"><B>EAX</B></span> 移出</h1>
 
-<p><span style="font-weight: bold;"><B>mov_from_EAX</B></span> ��ʾһ��������Ƴ�ͻ��</p>
+<p><span style="font-weight: bold;"><B>mov_from_EAX</B></span> 表示一種配對限制衝突。</p>
 
-<p>Ϊ�䷢�� <span style="font-weight: bold;"><B>mov_from_EAX</B></span> ��ָ� EAX��AX��AH �� AL �Ĵ������������������޷�ͬǰ���д��ָ��� EAX �Ĵ����Ƴ����ݣ���ԡ�ǰһ��ָ��������� <a HREF="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/V_pipe.htm">V �ܵ�</a>ʱ�ſ�����ԡ�</p>
+<p>為其發出 <span style="font-weight: bold;"><B>mov_from_EAX</B></span> 的指令將 EAX、AX、AH 或 AL 暫存器用作運算元。它無法同前面的寫入指令（從 EAX 暫存器移出數據）配對。前一條指令僅當發到 <a HREF="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/V_pipe.htm">V 管道</a>時才可以配對。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>����</B></span></h3>
+	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>建議</B></span></h3>
 
-<p class="whs3">��ѭ����ָ��ԭ��</p>
+<p class="whs3">遵循以下指導原則：</p>
 
 <ul>
 	
 	<ul type="disc" class="whs4">
 		
-		<li class=kadov-p><p>���µ�������˳��</p></li>
+		<li class=kadov-p><p>重新調整程式碼順序。</p></li>
 		
-		<li class=kadov-p><p>�ӼĴ����Ƴ�����ʱ������ʹ�� EAX ֮��ļĴ�����</p></li>
+		<li class=kadov-p><p>從暫存器移出數據時，儘量使用 EAX 之外的暫存器。</p></li>
 	</ul>
 </ul>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','�� MMX(TM) �����ı���(R) ������','pentium(r)_with_mmx(tm_technology_processor.htm','����(R) ������','pentium(r)_processor.htm');return false;" title="Ӱ��Ĵ�����"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_影响的处理器.gif" border=0 height=20 width=82 alt="Ӱ��Ĵ�����"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','含 MMX(TM) 技術的奔騰(R) 處理器','pentium(r)_with_mmx(tm_technology_processor.htm','奔騰(R) 處理器','pentium(r)_processor.htm');return false;" title="影響的處理器"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_褰卞搷鐨勫鐞嗗櫒.gif" border=0 height=20 width=82 alt="影響的處理器"></a>
 
 
  </p>

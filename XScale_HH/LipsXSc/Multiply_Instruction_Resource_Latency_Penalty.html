@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/XScale_HH/LipsXSc/Multiply_Instruction_Resource_Latency_Penalty.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:52 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>�˷�ָ����Դ�ӳٳͷ�</title>
+<title>乘法指令資源延遲懲罰</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض� XScale(R) ΢��ϵ�ṹ \nӢ�ض� XScale(R) ΢��ϵ�ṹ�ͷ�\nָ����Դ�ӳٳͷ�");
+	addTocInfo("參考\n處理器事件與建議\n英特爾 XScale(R) 微體系結構 \n英特爾 XScale(R) 微體系結構懲罰\n指令資源延遲懲罰");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,29 +104,29 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">ָ����Դ�ӳٳͷ�/����</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題">指令資源延遲懲罰/警告</h1>
 
 <h2>XSC_RESOURCE</h2>
 
-<h3>����</h3>
+<h3>解釋</h3>
 
-<p>&ldquo;�˷�/�˷��ۼ�&rdquo;(MLA) ָ����������ܵ����ģ�������Ϊ����һ��ָ�������Ҫʹ����ͬ������·����Դ�������ڣ�Ȼ����ܽ����µ�ָ���ᵼ�³˷�ָ����Դ�ӳ١��ܳͷ���ָ��ʹ�õ�ǰδ׼����������Դ��</p>
+<p>&ldquo;乘法/乘法累加&rdquo;(MLA) 指令並不是真正管道化的，這是因為處理一條指令可能需要使用相同的數據路徑資源幾個週期，然後才能接受新的指令。這會導致乘法指令資源延遲。受懲罰的指令使用目前未準備就緒的資源。</p>
 
-<p>�κ��ڴ����������� LDRD ָ��ʱ�������ܵ��� 1 �����ڵ���ͣ�� </p>
+<p>任何記憶體操作後面跟著 LDRD 指令時，都可能導致 1 個週期的暫停。 </p>
 
-<h3><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs1"> ����</h3>
+<h3><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs1"> 建議</h3>
 
-<p>���������µ���ָ��˳������˷���Դ����֮ǰ�Ķ����ӳ����ڡ�</p>
+<p>儘可能重新調整指令順序，以填補乘法資源可用之前的額外延遲週期。</p>
 
-<p>���µ���ָ��˳���Ա����ڴ����ָ�������� LDRD��</p>
+<p>重新調整指令順序，以避免記憶體操作指令後面跟著 LDRD。</p>
 
-<h3>ʾ�� 1</h3>
+<h3>示例 1</h3>
 
 <p class=Preformatted><span class=Code>MLA &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;r0,r1,r2,r3</span></p>
 
 <p class=Preformatted><span class=Code>UMLALS &#xA0;&#xA0;&#xA0;&#xA0;r4,r2,r3,r1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;; XSC_RESOURCE</span></p>
 
-<h3>ʾ�� 2</h3>
+<h3>示例 2</h3>
 
 <p class=Preformatted><span class=Code>LDRD &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R2, [R5, #0x0]!</span></p>
 

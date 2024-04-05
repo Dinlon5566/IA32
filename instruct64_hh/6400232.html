@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400232.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:30:59 GMT -->
 <head>
 
-<title>fpcvt.fx - ²¢ÐÐ¸¡µã×ª»»³ÉÕûÊýÖ¸Áî</title>
+<title>fpcvt.fx - ä¸¦è¡Œæµ®é»žè½‰æ›æˆæ•´æ•¸æŒ‡ä»¤</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:51:01 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("²Î¿¼\nÖ¸Áî¼¯\nÓ¢ÌØ¶û(R) °²ÌÚ(R) Ö¸Áî\nF - Ö¸Áî\nfpcvt.fx - ²¢ÐÐ¸¡µã×ª»»³ÉÕûÊýÖ¸Áî");
+	addTocInfo("åƒè€ƒ\næŒ‡ä»¤é›†\nè‹±ç‰¹çˆ¾(R) å®‰é¨°(R) æŒ‡ä»¤\nF - æŒ‡ä»¤\nfpcvt.fx - ä¸¦è¡Œæµ®é»žè½‰æ›æˆæ•´æ•¸æŒ‡ä»¤");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,16 +116,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="itanium60hw.gif" alt="°²ÌÚ(R) ´¦ÀíÆ÷Ö÷Ìâ" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">²¢ÐÐ¸¡µã×ª»»³ÉÕûÊýÖ¸Áî</h1>
+<h1><img src="itanium60hw.gif" alt="å®‰é¨°(R) è™•ç†å™¨ä¸»é¡Œ" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">ä¸¦è¡Œæµ®é»žè½‰æ›æˆæ•´æ•¸æŒ‡ä»¤</h1>
 
 <p><span style="font-weight: bold;"><B>fpcvt.fx</B></span></p>
 
-<p><a HREF="6400233.html">²Ù×÷</a> <a HREF="6400126.html">×ÖÌå¹ßÀý</a>
+<p><a HREF="6400233.html">æ“ä½œ</a> <a HREF="6400126.html">å­—åž‹æ…£ä¾‹</a>
  </p>
 
-<p>Ö¸ÁîÀàÐÍ F</p>
+<p>æŒ‡ä»¤åž‹åˆ¥ F</p>
 
-<p><span style="font-weight: bold;"><B>¸ñÊ½</B></span></p>
+<p><span style="font-weight: bold;"><B>æ ¼å¼</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) fpcvt.fx.<span style="x-condition: eclipse;">sf</span><script type="text/javascript"
 	language=JavaScript1.2><!--
@@ -143,13 +143,13 @@ kadovFilePopupInit('A1');
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>ËµÃ÷</B></span></p>
+<p><span style="font-weight: bold;"><B>èªªæ˜Ž</B></span></p>
 
-<p>°´ÕÕ FPSR.<span style="font-style: italic;"><I>sf</I></span>.<span 
- style="font-style: italic;"><I>rc</I></span> ÖÐÖ¸¶¨µÄÈ¡ÕûÄ£Ê½£¬»òÕßÔÚÊ¹ÓÃ trunc_form ÐÎÊ½µÄÖ¸ÁîÊ±°´ÕÕÈ¡Õûµ½ÁãµÄÄ£Ê½£¬½« <span 
- style="font-style: italic;"><I>f2</I></span> µÄÓÐÐ§Î»×Ö¶ÎÖÐµÄÒ»¶Ôµ¥¾«¶ÈÖµ×ª»»³ÉÒ»¶Ô 32 Î»ÓÐ·ûºÅÕûÊý (signed_form) »òÎÞ·ûºÅÕûÊý (unsigned_form)¡£½á¹û×÷ÎªÒ»¶Ô 32 Î»ÕûÊýÐ´Èë FR <span style="font-style: italic;"><I>f1</I></span> µÄÓÐÐ§Î»×Ö¶Î¡£FR <span style="font-style: italic;"><I>f1</I></span> µÄÖ¸Êý×Ö¶ÎÉèÖÃÎª 2.063 (0x1003E) µÄÆ«ÖÃÖ¸Êý£¬FR <span style="font-style: italic;"><I>f1</I></span> µÄ·ûºÅ×Ö¶ÎÉèÖÃÎªÕý (0)¡£Èç¹û×ª»»½á¹ûÎÞ·¨ÄÉÈë 32 Î»ÕûÊýÖ®ÖÐ£¬ÇÒ IEEE&ldquo;ÎÞÐ§²Ù×÷¸¡µãÒì³£&rdquo;´íÎó±»½ûÓÃ£¬Ôò½« 32 Î»ÕûÊýÎÞÏÞÖµ 0x80000000 ÓÃ×÷½á¹û¡£</p>
+<p>æŒ‰ç…§ FPSR.<span style="font-style: italic;"><I>sf</I></span>.<span 
+ style="font-style: italic;"><I>rc</I></span> ä¸­æŒ‡å®šçš„å–æ•´æ¨¡å¼ï¼Œæˆ–è€…åœ¨ä½¿ç”¨ trunc_form å½¢å¼çš„æŒ‡ä»¤æ™‚æŒ‰ç…§å–æ•´åˆ°é›¶çš„æ¨¡å¼ï¼Œå°‡ <span 
+ style="font-style: italic;"><I>f2</I></span> çš„æœ‰æ•ˆä½æ¬„ä½ä¸­çš„ä¸€å°å–®ç²¾åº¦å€¼è½‰æ›æˆä¸€å° 32 ä½æœ‰ç¬¦è™Ÿæ•´æ•¸ (signed_form) æˆ–ç„¡ç¬¦è™Ÿæ•´æ•¸ (unsigned_form)ã€‚çµæžœä½œç‚ºä¸€å° 32 ä½æ•´æ•¸å¯«å…¥ FR <span style="font-style: italic;"><I>f1</I></span> çš„æœ‰æ•ˆä½æ¬„ä½ã€‚FR <span style="font-style: italic;"><I>f1</I></span> çš„æŒ‡æ•¸æ¬„ä½è¨­å®šç‚º 2.063 (0x1003E) çš„åç½®æŒ‡æ•¸ï¼ŒFR <span style="font-style: italic;"><I>f1</I></span> çš„ç¬¦è™Ÿæ¬„ä½è¨­å®šç‚ºæ­£ (0)ã€‚å¦‚æžœè½‰æ›çµæžœç„¡æ³•ç´å…¥ 32 ä½æ•´æ•¸ä¹‹ä¸­ï¼Œä¸” IEEE&ldquo;ç„¡æ•ˆæ“ä½œæµ®é»žç•°å¸¸&rdquo;éŒ¯èª¤è¢«ç¦ç”¨ï¼Œå‰‡å°‡ 32 ä½æ•´æ•¸ç„¡é™å€¼ 0x80000000 ç”¨ä½œçµæžœã€‚</p>
 
-<p>Èç¹û FR <span style="font-style: italic;"><I>f2</I></span> ÊÇ NaTVal£¬Ôò FR <span   style="font-style: italic;"><I>f1</I></span> ÉèÖÃÎª NaTVal£¬¶ø²»ÊÇ¼ÆËãµÄ½á¹û¡£</p>
+<p>å¦‚æžœ FR <span style="font-style: italic;"><I>f2</I></span> æ˜¯ NaTValï¼Œå‰‡ FR <span   style="font-style: italic;"><I>f1</I></span> è¨­å®šç‚º NaTValï¼Œè€Œä¸æ˜¯è¨ˆç®—çš„çµæžœã€‚</p>
 
 
 <!--(HR)============================================================-->

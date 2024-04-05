@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/dtlb_page_walk_misses.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:50 GMT -->
 <head>
 
-<title>DTLB ҳ��ѯδ����</title>
+<title>DTLB 頁查詢未命中</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -79,7 +79,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\n����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 ������\n����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 �������Ľ���\n���ں���������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 ��������ϸ��\nDTLB ҳ��ѯδ����");
+	addTocInfo("參考\n處理器事件與建議\n含第三代數據流單指令多數據擴充套件指令集 (SSE3) 的英特爾(R) 奔騰(R) 4 處理器\n含第三代數據流單指令多數據擴充套件指令集 (SSE3) 的英特爾(R) 奔騰(R) 4 處理器的建議\n關於含第三代數據流單指令多數據擴充套件指令集 (SSE3) 的英特爾(R) 奔騰(R) 4 處理器的細節\nDTLB 頁查詢未命中");
 
 	}
 	if (window.writeBtnStyle)
@@ -102,21 +102,21 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="Ӣ�ض�&#xAE; ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">DTLB ҳ��ѯδ����</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="英特爾&#xAE; 調優助手主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">DTLB 頁查詢未命中</h1>
 
-<p>�����ִ���ִ�м��ػ�洢΢����ʱ������&ldquo;����ת���ѯ������&rdquo;(DTLB) δ���е��µ�ҳ��ѯ������ɵĹ���Ӱ�졣�������ύ 32 λ�������ݵ�ַʱ�����Ƚ����ύ�� DTLB����ִ�л����ѯ֮ǰ��DTLB �����ػ�洢��Ԫ������ 32 λ���Ե�ַת���� 36 λ�����ڴ��ַ��DTLB ��С��ṹȡ���ڴ���������ơ�Ϊת�� 32 λ���Ե�ַ��DTLB δ����Ҫ������ڴ���ʣ��Ի�ȡ����ϵͳҳĿ¼�������Ϣ�����¼�ͳ���� DTLB δ���е��µ�ҳ��ѯ��������ҳ��ѯ��ָӲ����������ϵͳҳ����ת�� 32 λ���Ե�ַ��ҳ��ѯδ���лᵼ��ҳ������������ϵͳ����Ҫ�������ҳ���ص������С�DTLB δ���в���һ����ζ�Ż���δ���С�<br>���ڲ���&ldquo;���̼߳���&rdquo;��ϵͳ��ദ����ϵͳ�����Ƶ�Ӱ������ܼƴ�����ʱ��Ӱ�죨ϵͳ�������߼�/����������֮�ͣ���������&ldquo;ʵ��ִ��&rdquo;ʱ��Ӱ�졣��ˣ��ڲ���&ldquo;���̼߳���&rdquo;��ϵͳ��ദ����ϵͳ�ϣ��ܿ��ܻῴ��ϸ�ڵ�ʱ��Ӱ����ڶԸ���ʵ��ִ��ʱ���Ӱ�졣��ע�⣬�ڵ�������ϵͳ�ϣ�������ʱ����ʵ��ִ��ʱ����ͬ��<br>Ӣ�ض�(R) ����(R) 4 �������ܹ�ȡ�ø����ܵķ���֮һ�ǣ��ֹ۵ؼ�����һ����ʵ�ָ������ܵ���������ʵ�����ķ���֮һ��Ԥ���֧�Ľ���������ڷ�֧�õ�����֮ǰ��ƾ�Ʋ���һ��·��ִ�С���һ�ַ���������ִ��ĳЩ�ڴ��������Щ�ڴ���ص����ܼ����¼�ͬʱͳ���Ʋ��Բ����Լ����Ʋ��Բ�������˲����ļ����Ȳ�ͳ���Ʋ��Բ���ʱ�ĸ�������ִ���ڴ�����ᵼ�¸�����Ʋ��Բ�������Ϊ�¼���������ܻᵼ�¼�����δ�������Ʋ�ʱ��õļ���ֵ�������磬���������᳢ܻ��ƾ�Ʋ�����ִ�м��ء��������ڴ������ڽ���ָ����٣����һ�û�л����ȷ�ĵ�ַ����˴������ļ��ص�ַ���Ǵ���ġ�������ص���&ldquo;DTLB ҳ��ѯ&rdquo;�¼�����&ldquo;DTLB ҳ��ѯ&rdquo;�¼������������Ʋ��Ե�ʣ�����ᷢ��&ldquo;DTLB ҳ��ѯ&rdquo;�¼��������û���Ʋ⣬�򲻻ᷢ�����¼�������ϵ�ṹ�ĽǶȿ�������ͳ�ƹ������������ʹ��û���Ʋ�ʱָ�������&ldquo;DTLB ҳ��ѯ&rdquo;���������Ʋ���ָ��Ҳ�ᱨ��˵����&ldquo;DTLB ҳ��ѯ&rdquo;����ʵ�ϣ�����΢��ϵ�ṹ���������¼��ľ�ȷ��ʾ����ָ��ȷʵ������&ldquo;DTLB ҳ��ѯ&rdquo;��</p>
+<p>此數字代表執行載入或儲存微操作時，由於&ldquo;數據轉譯查詢緩衝區&rdquo;(DTLB) 未命中導致的頁查詢請求造成的估計影響。處理器提交 32 位線性數據地址時，首先將它提交到 DTLB。在執行快取查詢之前，DTLB 將載入或儲存單元產生的 32 位線性地址轉換成 36 位實體記憶體地址。DTLB 大小與結構取決於處理器的設計。為轉譯 32 位線性地址，DTLB 未命中要求進行記憶體訪問，以獲取操作系統頁目錄與表格資訊。此事件統計由 DTLB 未命中導致的頁查詢請求數。頁查詢是指硬體遍歷操作系統頁表以轉譯 32 位線性地址。頁查詢未命中會導致頁錯誤，這樣操作系統便需要將所需的頁載入到表格中。DTLB 未命中並不一定意味著快取未命中。<br>對於採用&ldquo;超執行緒技術&rdquo;的系統或多處理器系統，估計的影響代表總計處理器時間影響（系統上所有邏輯/物理處理器之和），而不是&ldquo;實際執行&rdquo;時間影響。因此，在採用&ldquo;超執行緒技術&rdquo;的系統或多處理器系統上，很可能會看到細節的時間影響大於對負載實際執行時間的影響。請注意，在單處理器系統上，處理器時間與實際執行時間相同。<br>英特爾(R) 奔騰(R) 4 處理器能夠取得高效能的方法之一是，樂觀地假設有一種能實現更佳效能的條件。它實現這點的方法之一是預測分支的結果，並且在分支得到解析之前，憑推測沿一條路徑執行。另一種方法是無序執行某些記憶體操作。有些記憶體相關的效能監視事件同時統計推測性操作以及非推測性操作，因此產生的計數比不統計推測性操作時的更大。無序執行記憶體操作會導致更多的推測性操作（計為事件），這可能會導致計數比未發生此推測時獲得的計數值更大。例如，處理器可能會嘗試憑推測無序執行載入。假設由於程式碼正在進行指針跟蹤，並且還沒有獲得正確的地址，因此處理器的載入地址還是錯誤的。如果載入導致&ldquo;DTLB 頁查詢&rdquo;事件，則&ldquo;DTLB 頁查詢&rdquo;事件遞增。由於推測的緣故，這裡會發生&ldquo;DTLB 頁查詢&rdquo;事件，而如果沒有推測，則不會發生此事件。從體系結構的角度看，這是統計過量的情況：即使在沒有推測時指令不會遇到&ldquo;DTLB 頁查詢&rdquo;，但由於推測活動，指令也會報告說遇到&ldquo;DTLB 頁查詢&rdquo;。事實上，它是微體系結構級發生的事件的精確表示：此指令確實導致了&ldquo;DTLB 頁查詢&rdquo;。</p>
 
 &nbsp; 
 
 <br>&nbsp; 
  
 
-<br><b>����������ԣ�</b><br><br>��ϸ�����������ܼ�����������أ�<br> <br> PageWalkDTLBAllMisses = ((<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/page_walk_dtlb_all_misses.htm" style="x-condition: eclipse;">DTLB ҳ��ѯ (TI)</a>*36)/<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Clockticks.htm" style="x-condition: eclipse;">ʱ���ź�</a>)*100<b><br> �ϵ�ֵ��</b>0.2<b><br> �ϸ�ֵ��</b>2<br><br>�� PageWalkDTLBAllMisses <b>�ϸ�</b>ʱ����ϸ�ھ���ʵ�������塣<b><br><br> ���飺</b> 
+<br><b>計數器相關性：</b><br><br>此細節與以下效能計數器函式相關：<br> <br> PageWalkDTLBAllMisses = ((<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/page_walk_dtlb_all_misses.htm" style="x-condition: eclipse;">DTLB 頁查詢 (TI)</a>*36)/<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Clockticks.htm" style="x-condition: eclipse;">時鐘訊號</a>)*100<b><br> 較低值：</b>0.2<b><br> 較高值：</b>2<br><br>在 PageWalkDTLBAllMisses <b>較高</b>時，此細節具有實質性意義。<b><br><br> 建議：</b> 
 
 <ul>
 	
 	<li class=kadov-p
-		class=kadov-p><a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/avoiding_dtlb_page_walk_misses.htm" style="x-condition: eclipse;">���� DTLB ҳ��ѯδ����</a></li>
+		class=kadov-p><a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/avoiding_dtlb_page_walk_misses.htm" style="x-condition: eclipse;">避免 DTLB 頁查詢未命中</a></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_BLX(2).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:31 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>BLX(2) - �������뽻���ķ�֧</title>
+<title>BLX(2) - 帶鏈接與交換的分支</title>
 
 <!--(Meta)==========================================================-->
 
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nB - ָ��\nBLX(2)");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nB - 指令\nBLX(2)");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,16 +105,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">BLX(2) - �������뽻���ķ�֧</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題">BLX(2) - 帶鏈接與交換的分支</h1>
 
 <div>
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted><span class=Code>BLX[condition] dest </span></p>
 
-<p>���У�</p>
+<p>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -125,7 +125,7 @@ else
 							style="font-style: italic;">&#xA0;condition</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="notational_conventions.html#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 個條件之一。請參閱<a HREF="notational_conventions.html#Condition Code Status">條件程式碼狀態</a>。</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
@@ -133,20 +133,20 @@ else
 							style="font-style: italic;">&#xA0;dest</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>目標暫存器</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>�˸�ʽ�� BLX ָ����ص�ַ���浽&ldquo;�Ĵ��� 14&rdquo;������֧��ָ���ĵ�ַ <em CLASS=SourceItalic>dest</em>������ ARM* �� Thumb* �����̣���Ҫѡ�� ARM �����̣�Ŀ��Ĵ�����λ [0] ��Ҫ����Ϊ 0��Ҫѡ�� Thumb �����̣�Ŀ��Ĵ�����λ [0] ��Ҫ����Ϊ 1��condition ��������Чֵ������ָ��� NOP�� </p>
+<p>此格式的 BLX 指令將返回地址儲存到&ldquo;暫存器 14&rdquo;，並分支到指定的地址 <em CLASS=SourceItalic>dest</em>（包含 ARM* 或 Thumb* 子例程）。要選擇 ARM 子例程，目標暫存器的位 [0] 需要設定為 0。要選擇 Thumb 子例程，目標暫存器的位 [0] 需要設定為 1。condition 必須是有效值；否則將指令當作 NOP。 </p>
 
-<h2>Ѱַģʽ</h2>
+<h2>定址模式</h2>
 
-<p>�޲������� </p>
+<p>無運算元。 </p>
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -195,7 +195,7 @@ else
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� </h2>
+<h2>編碼 </h2>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
@@ -328,13 +328,13 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globlfuncblx2<br> 4 <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0<br> 6 <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@ * * * BLX(2) * * *<br> 8 <br> 9 <br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example, CODE, READONLY<br> 11 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1<br> 12 &#xA0;00000000 &#xA0;&#xA0;&#xA0;E4107000 &#xA0;&#xA0;LDR &#xA0;&#xA0;R7, label2<br> 13 &#xA0;00000004 &#xA0;&#xA0;&#xA0;E3A0B001 &#xA0;&#xA0;MOV &#xA0;&#xA0;R11,#1<br> 14 &#xA0;00000008 &#xA0;&#xA0;&#xA0;E2AB0001 &#xA0;&#xA0;ADC &#xA0;&#xA0;R0,R11, #1<br> 15 <br> 16 &#xA0;00000012 &#xA0;&#xA0;&#xA0;E12FFF37 &#xA0;&#xA0;BLX &#xA0;&#xA0;R7<br> 17 <br> 18 &#xA0;00000016 &#xA0;&#xA0;&#xA0;E3A0B001 &#xA0;&#xA0;MOV &#xA0;&#xA0;R11, #1<br> 19 &#xA0;00000020 &#xA0;&#xA0;&#xA0;E21B0001 &#xA0;&#xA0;ANDS &#xA0;R0, R11, #1<br> 20 <br> 21 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label2<br> 22 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;DCD &#xA0;&#xA0;0xdeadbeef<br> 23 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;DCB &#xA0;&#xA0;&quot;string&quot;<br> 24 &#xA0;00000037 &#xA0;&#xA0;&#xA0;E12FFF1E &#xA0;&#xA0;BX &#xA0;&#xA0;&#xA0;R14<br> 25 <br> 26 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END &#xA0;&#xA0;27</span> </p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
-<a href="Address_Data_Processing_Operands_Overview_1.html">�����Ѱַģʽ 1�����ݴ���������</a> 
+<a href="Address_Data_Processing_Operands_Overview_1.html">請參閱定址模式 1：數據處理運算元</a> 
 </div>
 </div>
 

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/itr_-_insert_translation_register_instruction.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>itr - ����ת��Ĵ���ָ��</title>
+<title>itr - 插入轉譯暫存器指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -85,7 +85,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nI - ָ��\nitr - ����ת��Ĵ���ָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nI - 指令\nitr - 插入轉譯暫存器指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,13 +108,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">����ת��Ĵ���ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">插入轉譯暫存器指令</h1>
 
 <p class="whs2">itr</p>
 
-<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itr-operation.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a></p>
+<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itr-operation.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字型慣例</a></p>
 
-<p class="whs2">��ʽ</p>
+<p class="whs2">格式</p>
 
 <p class=Preformatted>(qp)itr.iitr[r 3 ] = r 2 instruction_form M42</p>
 
@@ -125,40 +125,40 @@ else
 <hr class="whs3">
 
 
-<p><b style="font-weight: bold;">˵��</b></p>
+<p><b style="font-weight: bold;">說明</b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">��ת������� </b><b style="font-weight: normal;">GR </span><span 
- style="font-weight: normal; font-style: italic;"><I>r</I></span><span style="font-style: italic;"><I>3</I></span> ������ָ����ָ�������ת��Ĵ�����GR<span style="font-style: italic;"><I> r2</I></span> ָ��ת�����������ַ���֡�ITIR ָ������</b><b style="font-weight: normal;"><span style="font-weight: normal;">����ҳ��С�Լ�������Ϣ�������ַ�� IFA �Ĵ���ָ����</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">����Ĵ����� IFA{63:61} ѡ��</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">將轉譯項插入 </b><b style="font-weight: normal;">GR </span><span 
+ style="font-weight: normal; font-style: italic;"><I>r</I></span><span style="font-style: italic;"><I>3</I></span> 的內容指定的指令或數據轉譯暫存器。GR<span style="font-style: italic;"><I> r2</I></span> 指定轉譯項的實體地址部分。ITIR 指定保護</b><b style="font-weight: normal;"><span style="font-weight: normal;">鍵、頁大小以及其它資訊。虛擬地址由 IFA 暫存器指定，</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">區域暫存器由 IFA{63:61} 選擇。</span></b></p>
 
-<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;">TLB �������ͬ�²����ת�����ص����κ���Ŀ��</span><span style="font-weight: normal;">GR </span><span style="font-weight: normal; font-style: italic;"><I>r3</I></span><span 
- style="font-weight: normal;"> ָ���� TR ָ���</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">��ԭ�Ȱ�����ת����Ӵ������� TLB �����Ҫɾ����ǰ�� TR ת���</b><b style="font-weight: normal;">��������ʹ����ʽ ptr ָ�</b></span></p>
+<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;">TLB 首先清除同新插入的轉譯項重疊的任何專案。</span><span style="font-weight: normal;">GR </span><span style="font-weight: normal; font-style: italic;"><I>r3</I></span><span 
+ style="font-weight: normal;"> 指定的 TR 指令槽</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">中原先包含的轉譯項不從處理器的 TLB 清除。要刪除以前的 TR 轉譯項，</b><b style="font-weight: normal;">軟體必須使用顯式 ptr 指令。</b></span></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">�����������Ȩ����ִ�У����� PSR.ic Ϊ��ʱ����ָ��ſ���ִ�С�</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">僅當在最高特權級別執行，並且 PSR.ic 為零時，此指令才可以執行。</span></b></p>
 
-<p><b style="font-weight: bold;">�ж�</b></p>
+<p><b style="font-weight: bold;">中斷</b></p>
 
 <ul type="disc" class="whs5">
 	
-	<li class=kadov-p><p><b style="font-weight: bold;"><span style="font-weight: normal;">&ldquo;�������&rdquo;��ֹ </span></b></p></li>
+	<li class=kadov-p><p><b style="font-weight: bold;"><span style="font-weight: normal;">&ldquo;機器檢查&rdquo;終止 </span></b></p></li>
 	
-	<li class=kadov-p><p><b style="font-weight: bold;"><span style="font-weight: normal;">&ldquo;�����ļĴ���/�ֶ�&rdquo;����</span></b></p></li>
-	
-	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;"><span 
- style="font-weight: normal;">&ldquo;��Ȩ����&rdquo;���� </span></b></p></li>
+	<li class=kadov-p><p><b style="font-weight: bold;"><span style="font-weight: normal;">&ldquo;保留的暫存器/欄位&rdquo;錯誤</span></b></p></li>
 	
 	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;"><span 
- style="font-weight: normal;">&ldquo;δʹ�õ����ݵ�ַ&rdquo;����</span></b></p></li>
+ style="font-weight: normal;">&ldquo;特權操作&rdquo;錯誤 </span></b></p></li>
 	
-	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;">&ldquo;�Ĵ��� NaT ʹ��&rdquo;����</b></p></li>
+	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;"><span 
+ style="font-weight: normal;">&ldquo;未使用的數據地址&rdquo;錯誤</span></b></p></li>
+	
+	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;">&ldquo;暫存器 NaT 使用&rdquo;錯誤</b></p></li>
 </ul>
 
-<p><b style="font-weight: bold;"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>���л�</B></span></b></b></p>
+<p><b style="font-weight: bold;"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>序列化</B></span></b></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">���� instruction_form������ص�ָ���ȡ����֮ǰ���������뷢��ָ��</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">���л����������� data_form��</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">�ڷ���ͬ�µ�ת������ص����ݷ��ʻ�Ƿ�������֮ǰ���������뷢���������л�������</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">對於 instruction_form，在相關的指令獲取訪問之前，軟體必須發出指令</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">序列化操作。對於 data_form，</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">在發出同新的轉譯項相關的數據訪問或非訪問引用之前，軟體必須發出數據序列化操作。</span></b></p>
 
-<p class="whs2"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>��ע</B></span></b></p>
+<p class="whs2"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>備註</B></span></b></p>
 
-<p class="whs4"><span style="font-weight: normal;"><b style="font-weight: normal;">���������ܻ��ת�뻺����ʹ����Ч��ת��Ĵ�������ĳЩ�ͺŵĴ������ϣ�ͨ��ȷ����ת��Ĵ����㿪ʼ������������ת��Ĵ��������ܿ���������ߡ�</b></span></p>
+<p class="whs4"><span style="font-weight: normal;"><b style="font-weight: normal;">處理器可能會給轉譯快取項使用無效的轉譯暫存器。在某些型號的處理器上，通過確保從轉譯暫存器零開始向上連續分配轉譯暫存器，效能可以有所提高。</b></span></p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

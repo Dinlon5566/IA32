@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Reference_HH/streaming_simd_extensions_2_(sse2)_technology.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:38 GMT -->
 <head>
 
-<title>�ڶ�����������ָ���������չָ� (SSE2)</title>
+<title>第二代數據流單指令多數據擴充套件指令集 (SSE2)</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="02 6, 2003 3:40:04 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -103,30 +103,30 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>�ڶ�����������ָ���������չָ� (SSE2)</h1>
+<h1>第二代數據流單指令多數據擴充套件指令集 (SSE2)</h1>
 
-<p>Ӣ�ض�(R) ����(R) 4 ���������� SSE2 ��չָ���Ϊ&ldquo;Ӣ�ض� MMX(TM)&rdquo;������&ldquo;��������ָ���������չָ�&rdquo;�ṩ�˶�����ǿ����Щ��ǿ������</p>
+<p>英特爾(R) 奔騰(R) 4 處理器引入 SSE2 擴充套件指令集，為&ldquo;英特爾 MMX(TM)&rdquo;技術與&ldquo;數據流單指令多數據擴充套件指令集&rdquo;提供了多項增強。這些增強包括：</p>
 
 <ul type="disc" class="whs1">
 	
-	<li class=kadov-p><p>���µ�ѹ�����ݸ�ʽ�Ͻ������㣬�������� SIMD����ָ������ݼ��������㣬ʹ�� 128 λ���Ĵ����������� SIMD �������ܡ� </p></li>
+	<li class=kadov-p><p>在新的壓縮數據格式上進行運算，對於整數 SIMD（單指令多數據技術）運算，使用 128 位寬暫存器，改善了 SIMD 計算效能。 </p></li>
 	
-	<li class=kadov-p><p>�����ѹ�� 128 λ������������һ������ѹ��˫���ȸ����������͡���Щ�µ��������Ϳ������� XMM �Ĵ�����ִ��ѹ��˫�����뵥���ȸ���ֵ�Լ�ѹ���������㡣</p></li>
+	<li class=kadov-p><p>隨多種壓縮 128 位整型數據型別一起，引入壓縮雙精度浮點數據型別。這些新的數據型別可用於在 XMM 暫存器中執行壓縮雙精度與單精度浮點值以及壓縮整數計算。</p></li>
 </ul>
 
-<p>IA-32 ��ϵ�ṹ��������� SIMD ָ����������� SIMD ָ����� SIMD ָ�SIMD ���������� SIMD ��������֮���ת�����Լ� XMM �Ĵ����� MMX �Ĵ���֮���ѹ������ת����</p>
+<p>IA-32 體系結構中引入的新 SIMD 指令包括：浮點 SIMD 指令、整數 SIMD 指令、SIMD 浮點數據與 SIMD 整型數據之間的轉換、以及 XMM 暫存器與 MMX 暫存器之間的壓縮數據轉換。</p>
 
-<p>�µĸ��� SIMD ָ��ɹ���ѹ��˫���ȸ���ֵ��ÿ�� XMM �Ĵ�������˫����ֵ����ִ�м��㡣SIMD ����ָ��ļ����Լ���������˫���ȸ����ʽ����&ldquo;IEEE 754 �����Ƹ���ֵ������׼&rdquo;���ݡ�</p>
+<p>新的浮點 SIMD 指令可供在壓縮雙精度浮點值（每個 XMM 暫存器兩個雙精度值）上執行計算。SIMD 浮點指令的計算以及單精度與雙精度浮點格式均與&ldquo;IEEE 754 二進制浮點值算術標準&rdquo;相容。</p>
 
-<p>�µ����� SIMD ָ��֧����ѹ��˫��������������ִ���������㣬ͬʱ��֧����ѹ���ֽڡ��֡�˫�֡������Լ�˫����������ִ���������㣬�ṩ�˷ǳ��ߵ�������뼫��Ķ�̬��Χ����������</p>
+<p>新的整數 SIMD 指令支援在壓縮雙字與四字數據上執行算術運算，同時還支援在壓縮位元組、字、雙字、四字以及雙四字數據上執行其它運算，提供了非常高的靈活性與極大的動態範圍計算威力。</p>
 
-<p>���϶ν��ܵ��µ� 128 λ SIMD ָ��֮�⣬���ж� 68 ������ SIMD ָ��� 128 λ��ǿ����Щָ��������ڱ��� II �뱼�� <span style="font-family: Arial, sans-serif;">III</span> �������� 64 λ MMX �Ĵ����С���Щ 64 λ���� SIMD ָ�����ǿ������֧�ֱ��� 4 �������� 128 λ XMM �Ĵ����ϵ����㡣��Щ���� SIMD ָ�����ǿ֮����ʵ�ָ����������㷨ʱ������������������Ա����µ�����ˮƽ��ͨ��ʹ�� XMM �Ĵ����� MMX �Ĵ�����д SIMD ���룬����������������ԡ�</p>
+<p>除上段介紹的新的 128 位 SIMD 指令之外，還有對 68 條整數 SIMD 指令的 128 位增強，這些指令單獨工作于奔騰 II 與奔騰 <span style="font-family: Arial, sans-serif;">III</span> 處理器的 64 位 MMX 暫存器中。這些 64 位整數 SIMD 指令經過增強，可以支援奔騰 4 處理器中 128 位 XMM 暫存器上的運算。這些整數 SIMD 指令經過增強之後，在實現浮點與整數演算法時，可以讓軟件開發人員獲得新的效能水平，通過使用 XMM 暫存器或 MMX 暫存器編寫 SIMD 程式碼，還能享有最大的靈活性。</p>
 
-<p>Ϊ�ӿ촦���ٶȣ������ƻ����ʹ�ã�SSE2 ��չָ��ṩ�����µ�ָ���Ӧ�ó������Ա�������ݵĻ�����������Щָ���ṩ��ʹ�������������Ĵ����������Ż���Ĺ��ܣ��Լ���ʵ��ʹ��֮ǰԤȡ���ݵĹ��ܡ�</p>
+<p>為加快處理速度，並改善快取的使用，SSE2 擴充套件指令集提供多條新的指令，供應用程式程式設計師控制數據的快取能力。這些指令提供促使數據流進、出暫存器而不干擾快取的功能，以及在實際使用之前預取數據的功能。</p>
 
-<p>SSE2 ��չָ������һЩ����ϵ�ṹ���ܲ���Ҫ�²���ϵͳ��֧�֡�������Ϊ SSE2 ��չָ���δ�����µ���ϵ�ṹ״̬��֧�� SSE ��չָ��� FXSAVE/FXRSTOR Ҳ֧�� SSE2 ��չָ����������������л��ڼ䱣���뻹ԭ XMM �Ĵ�����MMX �Ĵ����� x87 FPU �Ĵ�����״̬�������Ѿ����á�CPUID ָ���Ѿ�����ǿ���ɹ�����ϵͳ��Ӧ�ó���ʶ�� SSE �� SSE2 ���ܴ������</p>
+<p>SSE2 擴充套件指令集引入的一些新體系結構功能不需要新操作系統的支援。這是因為 SSE2 擴充套件指令集並未引入新的體系結構狀態，支援 SSE 擴充套件指令集的 FXSAVE/FXRSTOR 也支援 SSE2 擴充套件指令集，對於在上下文切換期間儲存與還原 XMM 暫存器、MMX 暫存器及 x87 FPU 暫存器的狀態，它們已經夠用。CPUID 指令已經過增強，可供操作系統或應用程式識別 SSE 與 SSE2 功能存在與否。</p>
 
-<p>SSE2 ��չָ���Ӣ�ض����� 4 ������������ IA-32 ��ϵ�ṹ����ģʽ�о���ʹ�á����� 4 ������������ IA-32 ���������ԡ����е������������ܼ�����ȷ���У��������ڱ��� 4 �������Լ����������� SSE2 ָ��� IA-32 �����������κ��޸ġ�ͬ���������� SSE2 ָ���Ӧ�ó����У����е�����Ҳ���ܼ�����ȷ���С�</p>
+<p>SSE2 擴充套件指令集在英特爾奔騰 4 處理器的所有 IA-32 體系結構操作模式中均可使用。奔騰 4 處理器保持了 IA-32 軟體相容性。現有的所有軟體仍能繼續正確執行，而不必在奔騰 4 處理器以及將來會引入 SSE2 指令集的 IA-32 處理器上作任何修改。同樣，在利用 SSE2 指令的應用程式中，現有的軟體也仍能繼續正確執行。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

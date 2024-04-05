@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400258.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:15 GMT -->
 <head>
 
-<title>fselect - ����ѡ��ָ��</title>
+<title>fselect - 浮點選擇指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:52:06 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nF - ָ��\nfselect - ����ѡ��ָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nF - 指令\nfselect - 浮點選擇指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,16 +105,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">����ѡ��ָ��</h1>
+<h1><img src="itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">浮點選擇指令</h1>
 
 <p><span style="font-weight: bold;"><B>fselect</B></span></p>
 
-<p><a HREF="6400259.html">����</a> <a HREF="6400126.html">�������</a>
+<p><a HREF="6400259.html">操作</a> <a HREF="6400126.html">字型慣例</a>
  </p>
 
-<p>ָ������ F</p>
+<p>指令型別 F</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) fselect <span style="font-style: italic;"><I>f1</I></span> = <span style="font-style: italic;"><I>f3</I></span>,<span style="font-style: italic;"><I>f4</I></span>, <span style="font-style: italic;"><I>f2</I></span></p>
 
@@ -123,14 +123,14 @@ else
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>說明</B></span></p>
 
-<p><span style="font-style: italic;"><I>f3</I></span> ����Чλ�ֶ��� FR <span style="font-style: italic;"><I>f2</I></span> ����Чλ�ֶν����߼�&ldquo;��&rdquo;���㣬FR <span style="font-style: italic;"><I>f4</I></span> ����Чλ�ֶ��� FR <span style="font-style: italic;"><I>f2</I></span> ����Чλ�ֶε�һ�Ĳ�������߼�&ldquo;��&rdquo;���㡣����������ٽ����߼�&ldquo;��&rdquo;���㡣������� FR <span style="font-style: italic;"><I>f1</I></span> ����Чλ�ֶΡ�</p>
+<p><span style="font-style: italic;"><I>f3</I></span> 的有效位欄位與 FR <span style="font-style: italic;"><I>f2</I></span> 的有效位欄位進行邏輯&ldquo;與&rdquo;運算，FR <span style="font-style: italic;"><I>f4</I></span> 的有效位欄位與 FR <span style="font-style: italic;"><I>f2</I></span> 的有效位欄位的一的補碼進行邏輯&ldquo;與&rdquo;運算。這兩個結果再進行邏輯&ldquo;或&rdquo;運算。結果放入 FR <span style="font-style: italic;"><I>f1</I></span> 的有效位欄位。</p>
 
-<p>FR <span style="font-style: italic;"><I>f1</I></span> ��ָ���ֶ�����Ϊ 2.063 (0x1003E) ��ƫ��ָ����FR <span style="font-style: italic;"><I>f1</I></span> �ķ���λ�ֶ�����Ϊ���� (0)��</p>
+<p>FR <span style="font-style: italic;"><I>f1</I></span> 的指數欄位設定為 2.063 (0x1003E) 的偏置指數。FR <span style="font-style: italic;"><I>f1</I></span> 的符號位欄位設定為正號 (0)。</p>
 
-<p>��� FR <span style="font-style: italic;"><I>f3</I></span>��FR <span style="font-style: italic;"><I>f4</I></span> �� FR <span style="font-style: italic;"><I>f2</I></span> �е��κ�һ���� NaTVal���� FR <span 
- style="font-style: italic;"><I>f1</I></span> ����Ϊ NaTVal�������Ǽ���Ľ����</p>
+<p>如果 FR <span style="font-style: italic;"><I>f3</I></span>、FR <span style="font-style: italic;"><I>f4</I></span> 或 FR <span style="font-style: italic;"><I>f2</I></span> 中的任何一個是 NaTVal，則 FR <span 
+ style="font-style: italic;"><I>f1</I></span> 設定為 NaTVal，而不是計算的結果。</p>
 
 
 <!--(HR)============================================================-->

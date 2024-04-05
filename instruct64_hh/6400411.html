@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400411.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:43 GMT -->
 <head>
 
-<title>�Ĵ����ļ�����ָ��</title>
+<title>暫存器檔案傳輸指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:59:18 PM">
 <meta name=topic-status content=Complete>
 <meta name=topic-priority content=2>
@@ -104,7 +104,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h2>�Ĵ����ļ�����ָ��</h2>
+<h2>暫存器檔案傳輸指令</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="2" class="whs1">
@@ -112,15 +112,15 @@ else
 <tr>
 <td valign="top" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td>
+	style="margin-bottom: 0;">操作</td>
 <td valign="top" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">���Ƿ�</td></tr>
+	style="margin-bottom: 0;">助記符</td></tr>
 
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400567.htm">FR</a> ָ������Чλ�Ƶ� GR</td>
+	style="margin-bottom: 0;">將 <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400567.htm">FR</a> 指數或有效位移到 GR</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;"><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400274.htm">getf.exp, getf.sig</a></td></tr>
@@ -128,7 +128,7 @@ else
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�������Ȼ�˫�����ڴ��ʽ�� FR �Ƶ� GR</td>
+	style="margin-bottom: 0;">將單精度或雙精度記憶體格式從 FR 移到 GR</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">getf.d, getf.s</td></tr>
@@ -136,7 +136,7 @@ else
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�������Ȼ�˫�����ڴ��ʽ�� GR �Ƶ� FR</td>
+	style="margin-bottom: 0;">將單精度或雙精度記憶體格式從 GR 移到 FR</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;"><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400348.htm">setf.d, setf.s</a></td></tr>
@@ -144,7 +144,7 @@ else
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��ָ������Чλ�� GR �Ƶ� FR</td>
+	style="margin-bottom: 0;">將指數或有效位從 GR 移到 FR</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">setf.exp, setf.sig</td></tr>
@@ -152,7 +152,7 @@ else
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400560.htm">BR</a> �Ƶ� GR</td>
+	style="margin-bottom: 0;">從 <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400560.htm">BR</a> 移到 GR</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;"><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400293.htm">mov = br</a></td></tr>
@@ -160,7 +160,7 @@ else
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� GR �Ƶ� BR</td>
+	style="margin-bottom: 0;">從 GR 移到 BR</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">mov br =</td></tr>
@@ -168,7 +168,7 @@ else
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��ν���Ƶ� GR</td>
+	style="margin-bottom: 0;">從謂詞移到 GR</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;"><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400302.htm">mov = pr</a></td></tr>
@@ -176,7 +176,7 @@ else
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� GR �Ƶ�ν��</td>
+	style="margin-bottom: 0;">從 GR 移到謂詞</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">mov pr =, mov pr.rot =</td></tr>
@@ -184,7 +184,7 @@ else
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� GR �Ƶ� <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400559.htm">AR</a></td>
+	style="margin-bottom: 0;">從 GR 移到 <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400559.htm">AR</a></td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;"><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400291.htm">mov ar =</a></td></tr>
@@ -192,7 +192,7 @@ else
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� AR �Ƶ� GR</td>
+	style="margin-bottom: 0;">從 AR 移到 GR</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">mov = ar</td></tr>
@@ -200,7 +200,7 @@ else
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">���û������Ƶ� GR</td>
+	style="margin-bottom: 0;">從使用者掩碼移到 GR</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;"><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400304.htm">mov = psr.um</a></td></tr>
@@ -208,7 +208,7 @@ else
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� GR �Ƶ��û�����</td>
+	style="margin-bottom: 0;">從 GR 移到使用者掩碼</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">mov psr.um =</td></tr>
@@ -216,7 +216,7 @@ else
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�����븴λ�û�����</td>
+	style="margin-bottom: 0;">設定與復位使用者掩碼</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;"><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400368.htm">sum</a>, <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400346.htm">rum</a></td></tr>
@@ -224,7 +224,7 @@ else
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�����ܼ��������ݼĴ����Ƶ� GR</td>
+	style="margin-bottom: 0;">從效能監視器數據暫存器移到 GR</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">mov = cpuid[...]</td></tr>
@@ -232,7 +232,7 @@ else
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� CPU ��ʶ�Ĵ����Ƶ� GR</td>
+	style="margin-bottom: 0;">從 CPU 標識暫存器移到 GR</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;"><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400300.htm">mov = ip</a></td></tr>
@@ -240,7 +240,7 @@ else
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��ָ��ָ���Ƴ�</td>
+	style="margin-bottom: 0;">從指令指針移出</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">&nbsp;</td></tr>

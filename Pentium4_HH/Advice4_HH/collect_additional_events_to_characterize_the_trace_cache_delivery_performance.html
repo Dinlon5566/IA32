@@ -4,9 +4,9 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/collect_additional_events_to_characterize_the_trace_cache_delivery_performance.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:12 GMT -->
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=GB2312">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-<title>�ɼ������¼���ȷ�����ٻ��洫����������</title>
+<title>採集附加事件以確定跟蹤快取傳遞效能特徵</title>
   <link rel='stylesheet' href='MSL_styl_ns.css'>
 <script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
 <!--
@@ -52,7 +52,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n�ɼ������¼���ȷ�����ٻ��洫����������");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n關於英特爾(R) 奔騰(R) 4 處理器的建議\n關於英特爾(R) 奔騰(R) 4 處理器的建議\n採集附加事件以確定跟蹤快取傳遞效能特徵");
 
 	}
 	if (window.writeBtnStyle)
@@ -75,16 +75,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" alt="Ӣ�ض�&#xAE; ������������" x-maintain-ratio="TRUE" style="border: none; width: 36px; height: 36px; float: right;" width="36" height="36" align="right" border="0">�ɼ������¼���ȷ�����ٻ��洫����������</h1><br>
+<h1><img src="TA_logo.gif" alt="英特爾&#xAE; 調優助手主題" x-maintain-ratio="TRUE" style="border: none; width: 36px; height: 36px; float: right;" width="36" height="36" align="right" border="0">採集附加事件以確定跟蹤快取傳遞效能特徵</h1><br>
 
-<p>Ҫȷ�����ٻ��洫�������������Դ�������ȡһЩ���ӵ���Ϣ�����ٻ��洫�����������������ʹ�����·���ȷ����</p>
+<p>要確定跟蹤快取傳遞效能問題的來源，必須獲取一些附加的資訊。跟蹤快取傳遞效能問題的特徵可使用以下方法確定：</p>
 
   <ul class="noindent">
-<li>���ȣ�ȷ��û�����ߴ������⡣Ҫ������������ʣ�ͬʱ�о�һ��&ldquo;���ٻ��洫�ݰٷֱ�&rdquo;����ɼ������¼������д��������������ʡ�ʱ���źš����ٻ��洫��ģʽ��</li>
+<li>首先，確保沒有匯流排頻寬問題。要檢查匯流排利用率，同時研究一下&ldquo;跟蹤快取傳遞百分比&rdquo;，請採集以下事件：所有代理的匯流排利用率、時鐘訊號、跟蹤快取傳遞模式。</li>
 
-<li>������������ʲ��ǵ��´�&ldquo;���ٻ���&rdquo;�����ԭ����ͨ���ɼ������¼����о����ٻ���δ���������֧Ԥ����ʣ�ͬʱҲ��һ��&ldquo;���ٻ��洫�ݰٷֱ�&rdquo;��ʱ���źš����ٻ��洫��ģʽ��ʧЧ�ķ�֧��ʧЧ��Ԥ��ʧ���֧�����ٻ���δ���С�</li>
+<li>如果匯流排利用率不是導致此&ldquo;跟蹤快取&rdquo;問題的原因，請通過採集以下事件，研究跟蹤快取未命中數與分支預測比率，同時也看一下&ldquo;跟蹤快取傳遞百分比&rdquo;：時鐘訊號、跟蹤快取傳遞模式、失效的分支、失效的預測失誤分支、跟蹤快取未命中。</li>
 
-<li>Ҫȷ���˴��������в���΢������λ�õ�������ͬʱҲ��һ��&ldquo;���ٻ���δ����&rdquo;������Բɼ������¼����Ʋ��� TC ����΢�������Ʋ��� TC ����΢�������Ʋ���΢����΢���������ٻ��洫��ģʽ��ʱ���źš�<br> <br></li>
+<li>要確定此程式碼區域中產生微操作的位置的特徵，同時也看一下&ldquo;跟蹤快取未命中&rdquo;，則可以採集以下事件：推測性 TC 傳遞微操作、推測性 TC 構建微操作、推測性微程式碼微操作、跟蹤快取傳遞模式、時鐘訊號。<br> <br></li>
   </ul>
 <script type="text/javascript" language="javascript1.2">
 <!--

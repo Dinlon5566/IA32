@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_MIA.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:31 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>MIA - �˷����ڲ��ۼ�</title>
+<title>MIA - 乘法與內部累加</title>
 
 <!--(Meta)==========================================================-->
 
@@ -93,7 +93,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nM - ָ��\nMIA");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nM - 指令\nMIA");
 
 	}
 	if (window.writeBtnStyle)
@@ -118,19 +118,19 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'></noscript>MIA - �˷����ڲ��ۼ�</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'></noscript>MIA - 乘法與內部累加</h1>
 
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <div>
 <p class=Preformatted><span CLASS=Code>MIA [<em CLASS=Source-italic> condition</em> ] acc0, <em CLASS=Source-italic>op1</em> , <em CLASS=Source-italic>op2</em> </span></p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -142,7 +142,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="notational_conventions.html#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 個條件之一。請參閱<a HREF="notational_conventions.html#Condition Code Status">條件程式碼狀態</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -151,7 +151,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�ڲ� 40 λ�ۼ���</td></tr>
+<p CLASS=CellBodyLeft>內部 40 位累加器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -160,7 +160,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�����������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含被乘數的暫存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -170,12 +170,12 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>���������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含乘數的暫存器</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p CLASS=Body>MIA ָ��ִ�����²�����</p>
+<p CLASS=Body>MIA 指令執行以下操作：</p>
 
 <p CLASS=Code><em CLASS=Source
 					style="font-style: italic;"><span class=Code>if ConditionPassed(</em> <em CLASS=SourceItalic>condition</em> <em CLASS=Source>) then<br> acc0 = (</em> <em CLASS=SourceItalic>op1</em> <em CLASS=Source>[31:0] * </em><em CLASS=Source-italic>op2</em> <em CLASS=Source>[31:0]) + acc0[39:0]</em></span> 
@@ -183,24 +183,24 @@ else
 
 <p CLASS=Body>&nbsp;</p>
 
-<p CLASS=Body>MIA ָ��ִ�мĴ��� <em CLASS=SourceItalic>op2</em> �е��з���ֵ��Ĵ��� <em CLASS=SourceItalic>op1</em> �е��з���ֵ�ĳ˷�������ۼӵ� 40 λ�ۼ�������ָ�����ڲ���ʹ�� LDRSH ָ����ص�ͨ�üĴ����� 16 λ���ݡ�</p>
+<p CLASS=Body>MIA 指令執行暫存器 <em CLASS=SourceItalic>op2</em> 中的有符號值與暫存器 <em CLASS=SourceItalic>op1</em> 中的有符號值的乘法。結果累加到 40 位累加器。此指令用於操作使用 LDRSH 指令載入到通用暫存器的 16 位數據。</p>
 
-<h3 class=NoteTipHead><img src="Note.gif" border="0"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif" border="0"> 備註</h3>
 
-<p CLASS=Body>ָ����ָ����������������������״̬ƥ�䣬����ִ��ָ�</p>
+<p CLASS=Body>指令中指定的條件必須與條件程式碼狀態匹配，否則不執行指令。</p>
 </div>
 
 <div>
 &nbsp; 
 
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
-<p CLASS=Body>��</p>
+<p CLASS=Body>無</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
 
-<h2>���� </h2>
+<h2>編碼 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -367,13 +367,13 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.globl funcmia<br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.align 0<br> 4 <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@ * * * MIA * * * <br> 6 <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example, CODE, READONLY<br> 8 <br> 9 &#xA0;&#xA0;&#xA0;00000000 &#xA0;&#xA0;E3A0000A &#xA0;&#xA0;MOV &#xA0;&#xA0;R0, #10<br> 10 &#xA0;&#xA0;00000004 &#xA0;&#xA0;E3A01001 &#xA0;&#xA0;MOV &#xA0;&#xA0;R1, #1<br> 11 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E5801000 &#xA0;&#xA0;STR &#xA0;&#xA0;R1, [R0]<br> 12 &#xA0;&#xA0;00000012 &#xA0;&#xA0;E1D020F0 &#xA0;&#xA0;LDRSH R2, [R0]<br> 13 <br> 14 &#xA0;&#xA0;00000016 &#xA0;&#xA0;E3A0100A &#xA0;&#xA0;MOV &#xA0;&#xA0;R1, #10<br> 15 &#xA0;&#xA0;00000020 &#xA0;&#xA0;E3A02002 &#xA0;&#xA0;MOV &#xA0;&#xA0;R2, #2<br> 16 &#xA0;&#xA0;00000024 &#xA0;&#xA0;E5812000 &#xA0;&#xA0;STR &#xA0;&#xA0;R2, [R1]<br> 17 &#xA0;&#xA0;00000028 &#xA0;&#xA0;E15138FC &#xA0;&#xA0;LDRSH R3, [R1, #0x8c]<br> 18 <br> 19 &#xA0;&#xA0;00000032 &#xA0;&#xA0;EE203012 &#xA0;&#xA0;MIA &#xA0;&#xA0;acc0, R2, R3<br> 20 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END</span> </p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
-<a href="INST_MIAPH.html" CLASS="XRef">����� MIAPH ָ��</a><a href="INST_MIAxy.html" CLASS="XRef"><br> ����� MIAxy ָ��</a><a href="INST_LDRSH.html"><br> ����� LDRSH ָ��</a> 
+<a href="INST_MIAPH.html" CLASS="XRef">請參閱 MIAPH 指令</a><a href="INST_MIAxy.html" CLASS="XRef"><br> 請參閱 MIAxy 指令</a><a href="INST_LDRSH.html"><br> 請參閱 LDRSH 指令</a> 
 </div>
 </div>
 

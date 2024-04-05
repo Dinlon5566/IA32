@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/memory_operands.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:04 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>�ڴ������</title>
+<title>記憶體運算元</title>
 
 <!--(Meta)==========================================================-->
 
@@ -23,7 +23,7 @@
 <meta name=layout-height content=297>
 <meta name=layout-width content=694>
 <meta name=date content="04 24, 2003 1:39:41 PM">
-<meta name=x-ignored-words content="TC;Pentium;developer.intel.com;index.htm.;Aliasing;aliasing;Mispredictions;micro-ops;SIMD;Clockticks;prefetcher;prefetching;prefetch;intrinsics;MMX;modulo;pipelined;mispredicted;NetBurst;irets;BTB;Mispredicted;DTLB;Micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;Denormal;denormals;SSE;Denormalized;index.htm;a(i;y;enddo;UC;uncacheable;WC;MMNP;MMNM;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;clocktick;VTune;clockticks;MOCLEAR;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;LSC;SSC;USC;ULC;denormal;denormaled;DELIVERBit;BSQ;writeback;Uncacheable;encodings;misprediction;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;ITLB;?;cacheability;��op">
+<meta name=x-ignored-words content="TC;Pentium;developer.intel.com;index.htm.;Aliasing;aliasing;Mispredictions;micro-ops;SIMD;Clockticks;prefetcher;prefetching;prefetch;intrinsics;MMX;modulo;pipelined;mispredicted;NetBurst;irets;BTB;Mispredicted;DTLB;Micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;Denormal;denormals;SSE;Denormalized;index.htm;a(i;y;enddo;UC;uncacheable;WC;MMNP;MMNM;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;clocktick;VTune;clockticks;MOCLEAR;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;LSC;SSC;USC;ULC;denormal;denormaled;DELIVERBit;BSQ;writeback;Uncacheable;encodings;misprediction;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;ITLB;?;cacheability;μop">
 
 
  <meta name="topic-status" content="In Progress">
@@ -103,9 +103,9 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">�ڴ������</h1>
+<h1><img src="p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">記憶體運算元</h1>
 
-<p>��Ϊ������ֽڵ�˫���ȸ�����������»����� MOB ��ֳͷ��Ŀ����Ա�δ������ֽڵĲ�������С�����Ծ��и��õ����ܡ��ڴ�������ϵĸ������Ҫ����ڴ���ظò���������ᵼ�¶����΢��������ǰ�˴�����Щ΢����Ӱ�졣���⣬�ڴ���������ܻᵼ�����ݻ���δ���У��Ӷ����³ͷ���</p>
+<p>因為對齊八位元組的雙精度浮點運算元導致快取與 MOB 拆分懲罰的可能性比未對齊八位元組的運算元更小，所以具有更好的效能。記憶體運算元上的浮點操作要求從記憶體載入該運算元。這會導致額外的微操作，對前端頻寬有些微負面影響。此外，記憶體運算元可能會導致數據快取未命中，從而導致懲罰。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

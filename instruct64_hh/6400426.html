@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400426.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:50 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>���ƼĴ��� (CR) ָ��</title>
+<title>控制暫存器 (CR) 指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -103,7 +103,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h2>���ƼĴ��� (CR) ָ��</h2>
+<h2>控制暫存器 (CR) 指令</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="2" class="whs1">
@@ -111,15 +111,15 @@ else
 <tr>
 <td valign="top" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;"><span style="font-weight: bold;"><B>����</B></span></td>
+	style="margin-bottom: 0;"><span style="font-weight: bold;"><B>操作</B></span></td>
 <td valign="top" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;"><span style="font-weight: bold;"><B>���Ƿ�</B></span></td></tr>
+	style="margin-bottom: 0;"><span style="font-weight: bold;"><B>助記符</B></span></td></tr>
 
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�Ƴ����ƼĴ��� (GR[<span style="font-style: italic;"><I>r1</I></span>] &lt;- CR[<span style="font-style: italic;"><I>r3</I></span>])</td>
+	style="margin-bottom: 0;">移出控制暫存器 (GR[<span style="font-style: italic;"><I>r1</I></span>] &lt;- CR[<span style="font-style: italic;"><I>r3</I></span>])</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">mov <span style="font-style: italic;"><I>r1</I></span> = <span style="font-style: italic;"><I>cr3</I></span></td></tr>
@@ -127,7 +127,7 @@ else
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">���л�ָ�����ã�ȷ��ָ���ȡ���۲쵽�����ã�</td>
+	style="margin-bottom: 0;">序列化指令引用（確保指令獲取流觀察到副作用）</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;"><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400360.htm">srlz.i</a></td></tr>
@@ -135,7 +135,7 @@ else
 <tr>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">���л��������ã�ȷ��ִ�����������۲쵽�����ã�</td>
+	style="margin-bottom: 0;">序列化數據引用（確保執行與數據流觀察到副作用）</td>
 <td valign="top" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">srlz.d</td></tr>

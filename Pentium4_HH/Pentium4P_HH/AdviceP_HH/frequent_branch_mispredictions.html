@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/frequent_branch_mispredictions.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:49 GMT -->
 <head>
 
-<title>Ƶ��������֧Ԥ��ʧ��</title>
+<title>頻繁發生分支預測失誤</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="06 26, 2002 3:01:04 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -117,22 +117,22 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="Ӣ�ض�(R) ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">Ƶ��������֧Ԥ��ʧ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="英特爾(R) 調優助手主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">頻繁發生分支預測失誤</h1>
 
-<p>���Ʒ�֧�Ŀ�Ԥ���Կ��ܻ����������ܴ������Ե�Ӱ�졣</p>
+<p>改善分支的可預測性可能會給程式碼的效能帶來明顯的影響。</p>
 
-<p class="whs2">����������У���ϸ�ھ���ʵ�������壺</p>
+<p class="whs2">在以下情況中，此細節具有實質性意義：</p>
 
 <ul type="disc" class="whs3">
 	
-	<li class=kadov-p><p>�������ı��ʣ�ʧЧ�ķ�֧Ԥ��ʧ��/ʧЧ��΢���������ѡ�ֵ 0.005 Ӧ��Ϊ���ã�ֵ 0.08 Ӧ��Ϊ���ѡ�</p></li>
+	<li class=kadov-p><p>計數器的比率（失效的分支預測失誤/失效的微操作）不佳。值 0.005 應視為良好，值 0.08 應視為不佳。</p></li>
 </ul>
 
-<p>��</p>
+<p>或</p>
 
 <ul type="disc" class="whs3">
 	
-	<li class=kadov-p><p>�������ı��ʣ������ָ��/ʧЧ��ָ����ѡ�ֵ 1.03 Ӧ��Ϊ���ã�ֵ 1.10 Ӧ��Ϊ���ѡ�</p></li>
+	<li class=kadov-p><p>計數器的比率（解碼的指令/失效的指令）不佳。值 1.03 應視為良好，值 1.10 應視為不佳。</p></li>
 </ul>
 
 <h3 class=NoteTipHead><span style="font-weight: bold;"><B><script type="text/javascript" language="JavaScript"><!--
@@ -140,30 +140,30 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4))
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='tip.gif' width='17px' height='18px' border='0' class='img_whs4'>");}
 else
 {   document.write("<img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs4'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs4'></noscript> ����</B></span></h3>
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs4'></noscript> 建議</B></span></h3>
 
 <ul>
 	
-	<li class=kadov-p><p>����ʹ��&ldquo;Ӣ�ض�(R) ������&rdquo;��&ldquo;������������ָ����Ż�&rdquo;(PGBO) ѡ�����µ�������ָ���ṹ��ʹ�����ķ�֧���١�</p></li>
+	<li class=kadov-p><p>考慮使用&ldquo;英特爾(R) 編譯器&rdquo;的&ldquo;檔案導引基本指令塊優化&rdquo;(PGBO) 選項重新調整基本指令塊結構，使產生的分支更少。</p></li>
 	
-	<li class=kadov-p><p>����ʹ��&ldquo;Ӣ�ض�������&rdquo;ѡ�� <span   class=Code>-Qxi</span>������ָ֧���滻�� <span class=Code>cmov</span> �� <span class=Code>fcmov</span> ָ�</p></li>
+	<li class=kadov-p><p>考慮使用&ldquo;英特爾編譯器&rdquo;選項 <span   class=Code>-Qxi</span>，將分支指令替換成 <span class=Code>cmov</span> 與 <span class=Code>fcmov</span> 指令。</p></li>
 	
-	<li class=kadov-p><p>ʹ������ָ��ԭ����ƴ����Ը��Ʒ�֧��Ԥ���ԣ�</p></li>
+	<li class=kadov-p><p>使用以下指導原則設計程式碼以改善分支可預測性：</p></li>
 	
 	<ul>
 		
-		<li class=kadov-p><p>ȷ��ÿ�� call ָ���ƥ��� return��</p></li>
+		<li class=kadov-p><p>確保每條 call 指令都有匹配的 return。</p></li>
 		
-		<li class=kadov-p><p>�������������ָ�</p></li>
+		<li class=kadov-p><p>避免混用數據與指令。</p></li>
 		
-		<li class=kadov-p><p>չ���ǳ��̵�ѭ����</p></li>
+		<li class=kadov-p><p>展開非常短的循環。</p></li>
 		
-		<li class=kadov-p><p>������ƴ��������þ�̬��֧Ԥ���㷨��</p></li>
+		<li class=kadov-p><p>合理設計程式碼以利用靜態分支預測演算法。</p></li>
 		
-		<li class=kadov-p><p>�� case ��䣨��·��֧���У������������Ŀ����Դ�����������ģ������ if-then ���롣���磬����ϵͳ���ã������� 80% ��ʱ������ read() �� write()����ʹ�� case �������ǽ����ر�����������ʹ�ò�̫����ȡ���������ܵļ�ӷ�֧��</p></li>
+		<li class=kadov-p><p>在 case 語句（多路分支）中，如果少數結果的可能性大於其它結果的，請加入 if-then 程式碼。例如，對於系統呼叫：假設它 80% 的時間用於 read() 或 write()，則使用 case 語句對它們進行特別處理，並避免使用不太可能取得最優效能的間接分支。</p></li>
 	</ul>
 	
-	<li class=kadov-p><p>���ǻ�༶��֧Ԥ��������ڻ������У����ǽ���ָ֧���滻�� cmov��fcmov �� setcc ָ�����������֧����������Щ����£���������ʹ�� SIMD �Ƚϣ��������룩���߼�ָ���/��/�ǣ����Բ�������ִ�в���������鿴ʾ���������&ldquo;MMX(TM) ��������&rdquo;�ĵ��е�&ldquo;ɫ�ȼ���&rdquo;���֣����ĵ������� <a href="http://developer.intel.com/">http://developer.intel.com</a> ���ҵ��� 
+	<li class=kadov-p><p>考慮彙編級分支預測調整。在彙編程式碼中，考慮將分支指令替換成 cmov、fcmov 及 setcc 指令，幫助消除分支。此外在有些情況下，您還可以使用 SIMD 比較（建立掩碼）與邏輯指令（與/或/非），以布爾運算執行操作。如需檢視示例，請參閱&ldquo;MMX(TM) 技術概述&rdquo;文件中的&ldquo;色度鍵控&rdquo;部分，此文件可以在 <a href="http://developer.intel.com/">http://developer.intel.com</a> 上找到。 
  </p></li>
 </ul>
 

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/STRH(2)_(Thumb).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:47:14 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>STRH(2) (Thumb) - �洢�Ĵ�������</title>
+<title>STRH(2) (Thumb) - 儲存暫存器半字</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n16 λָ��\nS - ָ��\nSTRH(2) (Thumb)");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n16 位指令\nS - 指令\nSTRH(2) (Thumb)");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,17 +105,17 @@ else
 //-->
 </script>
 <div>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">STRH(2) (Thumb*) - �洢�Ĵ�������</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題">STRH(2) (Thumb*) - 儲存暫存器半字</h1>
 
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p CLASS=Preformatted>STRH op, [dest1, dest2]</p>
 </div>
 
 <div>
-<p>���У�</p>
+<p>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -127,7 +127,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>����ֵ�ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含值的暫存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -136,7 +136,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>������ַ��һ��ֵ�ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含地址第一個值的暫存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -145,28 +145,28 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>������ַ�ڶ���ֵ�ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含地址第二個值的暫存器</td></tr>
 </table>
 </div>
 
 <div>
-<h2>˵�� </h2>
+<h2>說明 </h2>
 
-�˸�ʽ�� STRH ָ������ڽ� 16 λ�ڴ����ݴ洢�� <em CLASS=SourceItalic>dest1</em> �� <em CLASS=SourceItalic>dest2</em>���������ڷ�������ĵ���Ԫ�أ����ҿ�����ִ��ָ�����ƫ�����������㡣 
+此格式的 STRH 指令可用於將 16 位記憶體數據儲存到 <em CLASS=SourceItalic>dest1</em> 與 <em CLASS=SourceItalic>dest2</em>。它有利於訪問陣列的單個元素，並且可用於執行指針與大偏移量算術運算。 
 </div>
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="Note.gif"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif"> 備註</h3>
 
-�����ͼ������Ч�ļ��ػ�洢���ݷ��ʣ�������������ֹ�쳣�����ʵ��ϵͳ����Э������ʱ���ö����飬���Ҵ���������λ [0] �ĵ�ַ�������ɶ����쳣����ַ���밴���ֶ��롣 
+如果試圖進行無效的載入或儲存數據訪問，則產生數據終止異常。如果實現系統控制協處理器時啟用對齊檢查，並且存在設定了位 [0] 的地址，則產生對齊異常。地址必須按半字對齊。 
 
-<h2>Ѱַģʽ </h2>
+<h2>定址模式 </h2>
 
-�޲������� 
+無運算元。 
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -235,7 +235,7 @@ else
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� </h2>
+<h2>編碼 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -323,15 +323,15 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funstrh <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0 <br> 4 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example,CODE,READONLY <br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;CODE16 <br> 7<br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1 <br> 9 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Store low half of register R7 <br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; to memory at address given by <br> 11 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; value of register R0 plus R1<br> 12 &#xA0;&#xA0;&#xA0;00000000 &#xA0;&#xA0;&#xA0;5247 &#xA0;&#xA0;&#xA0;STRH &#xA0;&#xA0;&#xA0;R7, [R0, R1]</span>  </p>
 
-<h2>������Ϣ </h2>
+<h2>更多資訊 </h2>
 
-<a href="LDRH(1)_(Thumb).html" CLASS="XRef">����� LDRH(1) ָ��</a><a href="LDRH(2)_(Thumb).html"><br> ����� LDRH(2) ָ��</a><a href="LDRSH_(Thumb).html" CLASS="XRef"><br> ����� LDRSH ָ��</a>
+<a href="LDRH(1)_(Thumb).html" CLASS="XRef">請參閱 LDRH(1) 指令</a><a href="LDRH(2)_(Thumb).html"><br> 請參閱 LDRH(2) 指令</a><a href="LDRSH_(Thumb).html" CLASS="XRef"><br> 請參閱 LDRSH 指令</a>
 
-<br><a href="STRH(1)_(Thumb).html">����� STRH(1) ָ��</a> 
+<br><a href="STRH(1)_(Thumb).html">請參閱 STRH(1) 指令</a> 
 </div>
 </div>
 </div>

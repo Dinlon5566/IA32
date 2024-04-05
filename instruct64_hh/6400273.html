@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400273.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:45 GMT -->
 <head>
 
-<title>��������</title>
+<title>操作部分</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:52:36 PM">
 <meta name=topic-status content=Complete>
 <meta name=topic-priority content=2>
@@ -98,36 +98,36 @@ else
 		document.location.reload();
 //-->
 </script>
-<h2>��������</h2>
+<h2>操作部分</h2>
 
-<p>&ldquo;����&rdquo;���ְ���ָ��ÿ��ָ��ִ���﷨�Ĵ��롣����������ָ���ȡ�йص��κ���Ϊ�����磬��ȡ�ڼ䵼�µ��ж�����󣩡�</p>
+<p>&ldquo;操作&rdquo;部分包含指定每條指令執行語法的程式碼。它不包含與指令獲取有關的任何行為（例如，獲取期間導致的中斷與錯誤）。</p>
 
-<p>Ҫ�鿴&ldquo;����&rdquo;���֣��뵥���κ�ָ�������&ldquo;����&rdquo;������</p>
+<p>要檢視&ldquo;操作&rdquo;部分，請單擊任何指令標題中&ldquo;操作&rdquo;字樣。</p>
 
-<p>�ⲿ�ֵ���������ǣ�</p>
+<p>這部分的字型慣例是：</p>
 
-<p>���� -��&ldquo;����&rdquo;���֣�ָ��ָ����Ϊ�� C ���롣</p>
+<p>程式碼 -（&ldquo;操作&rdquo;部分）指定指令行為的 C 程式碼。</p>
 
-<p><span style="font-style: italic;"><I>����_б��</I></span> -��&ldquo;����&rdquo;���֣���Ӧ&ldquo;��ʽ&rdquo;�����г���б���ֶεĻ�������ֶ�����</p>
+<p><span style="font-style: italic;"><I>程式碼_斜體</I></span> -（&ldquo;操作&rdquo;部分）對應&ldquo;格式&rdquo;部分列出的斜體欄位的彙編語言欄位名。</p>
 
-<p><span style="font-weight: bold;"><B>�������</B></span></p>
+<p><span style="font-weight: bold;"><B>程式碼慣例</B></span></p>
 
-<p>��&ldquo;����&rdquo;���֣��Ĵ���ʹ�ñ�ʾ�� reg[<span style="font-style: italic;"><I>addr</I></span>].field Ѱַ�����ʵļĴ����ļ��� reg ָ��������ֵ��<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400127.htm">�Ĵ����ļ���ʾ������</a>�ĵڶ�����ѡ��<span style="font-style: italic;"><I>addr</I></span> �ֶΰ��ջ�������ֶ�����Ĵ������Ƿ�����ʽָ���Ĵ�����ַ��field ѡ��ָ���Ĵ�����������λ�ֶΡ���� field �����ڣ�����ʼĴ����������ֶΡ�Ψһ������������ͨ�üĴ�����64 λ������ NaT���������ֶ�ʱ���ô�ʹ�ñ�ʾ�� GR[<span style="font-style: italic;"><I>addr</I></span>]��&ldquo;����&rdquo;�����еĴ������׼ C ֮����﷨�������� <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400128.htm">C ������������ִ�����﷨�������</a>�С�</p>
+<p>在&ldquo;操作&rdquo;部分，暫存器使用表示法 reg[<span style="font-style: italic;"><I>addr</I></span>].field 定址。訪問的暫存器檔案由 reg 指定，它的值從<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400127.htm">暫存器檔案表示法表格</a>的第二列中選擇。<span style="font-style: italic;"><I>addr</I></span> 欄位按照彙編語言欄位名或暫存器助記符的形式指定暫存器地址。field 選項指定暫存器內命名的位欄位。如果 field 不存在，則訪問暫存器的所有欄位。唯一的例外是引用通用暫存器（64 位，不含 NaT）的數據欄位時，該處使用表示法 GR[<span style="font-style: italic;"><I>addr</I></span>]。&ldquo;操作&rdquo;部分中的程式碼與標準 C 之間的語法差異列在 <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400128.htm">C 程式碼與操作部分程式碼的語法差異表格</a>中。</p>
 
-<p>���ڴ�ͳ�����������˳�����ʣ�����ָ��ָ������Ĵ�����ھ���ʵ�ֵİ汾��ʩ��һЩ��Ϊ�����ơ�Ӣ�ض�(R) ����(R) ���������ܻ���ǰ����ȥִ��һЩ����������ȴȷ��������Ҫ��Щ�����Ľ�������������������ϵ�ṹ�Ͽɼ�״̬�ĸ��¡�Ϊ�����������ɶȣ�����&ldquo;����&rdquo;���ֳ��ֵĴ��룬�������¹���</p>
+<p>由於傳統程式語言語句的順序性質，用於指定指令操作的程式碼會在具體實現的版本上施加一些人為的限制。英特爾(R) 安騰(R) 處理器可能會提前主動去執行一些操作，後來卻確定並不需要這些操作的結果，因此隨後會抑制其體系結構上可見狀態的更新。為體現這種自由度，對於&ldquo;操作&rdquo;部分出現的程式碼，適用以下規則：</p>
 
 <ol>
 	
-	<li class=kadov-p><p>��ֵ����Ҳ�ָ���Ĳ����ɶ�����ǰ����κ� &quot;if&quot; �������ִ�С������ֵ�����Ҳ�������̵��ã����κι��̲�������ֵ���ɶ�����ǰ����κ� &quot;if&quot; ������䡣ͬ���Ĺ���Ҳ�ݹ������ڹ��̱����������������е���䡣�ں����ָ��˵���У����̲����ı���ʽ�Ӳ�������ϵ�ṹ�Ͽɼ��ĸ����ã����磬����ϵ�ṹ״̬�ĸ�ֵ����</p></li>
+	<li class=kadov-p><p>賦值語句右側指定的操作可獨立於前面的任何 &quot;if&quot; 控制語句執行。如果賦值語句的右側包含過程呼叫，則任何過程參數的求值都可獨立於前面的任何 &quot;if&quot; 控制語句。同樣的規則也遞迴適用於過程本身及其它衍生物中的語句。在後面的指令說明中，過程參數的表達式從不會有體系結構上可見的副作用（例如，對體系結構狀態的賦值）。</p></li>
 	
-	<li class=kadov-p><p>�����ֵ������ı���������ϵ�ṹ�Ͽɼ���״̬������ǰ�����е� &quot;if&quot; ��������ֵΪ�棬���򲻷�����ֵ�������ֵ������ı�����������ϵ�ṹ�Ͽɼ���״̬�����磬��ʱ����������ֵ�ɶ�����ǰ����κ� &quot;if&quot; ������䷢�������������һ�����̵�����ɣ�����ͬ�Ĺ���ݹ������ڹ��̱��������������е���䡣</p></li>
+	<li class=kadov-p><p>如果賦值語句左側的變數代表體系結構上可見的狀態，除非前面所有的 &quot;if&quot; 控制語句的值為真，否則不發生賦值。如果賦值語句左側的變數不代表體系結構上可見的狀態（例如，臨時變數），則賦值可獨立於前面的任何 &quot;if&quot; 控制語句發生。如果語句僅由一個過程呼叫組成，則相同的規則遞迴適用於過程本身及其衍生物中的語句。</p></li>
 	
-	<li class=kadov-p><p>&quot;if&quot; ������������ʽ�ɶ�����ǰ����κ� &quot;if&quot; �������Ľ����ֵ���ں����ָ��˵���У�&quot;if&quot; ������������ʽ�Ӳ�������ϵ�ṹ�Ͽɼ��ĸ����ã����磬����ϵ�ṹ״̬�ĸ�ֵ����</p></li>
+	<li class=kadov-p><p>&quot;if&quot; 語句的條件表達式可獨立於前面的任何 &quot;if&quot; 控制語句的結果求值。在後面的指令說明中，&quot;if&quot; 語句的條件表達式從不會有體系結構上可見的副作用（例如，對體系結構狀態的賦值）。</p></li>
 </ol>
 
-<p>&ldquo;����&rdquo;���ֵĴ�����ʹ����ǿģʽ��α���뺯����</p>
+<p>&ldquo;操作&rdquo;部分的程式碼中使用增強模式的偽程式碼函式。</p>
 
-<p><span style="font-weight: bold;"><B>α����ʾ��</B></span></p>
+<p><span style="font-weight: bold;"><B>偽程式碼示例</B></span></p>
 
 <p CLASS=Preformatted>if (PR[qp]) {</p>
 
@@ -153,57 +153,57 @@ else
 
 <p CLASS=Preformatted>}</p>
 
-<p>��α����ʾ���У����ݵ�һ�����</p>
+<p>在偽程式碼示例中，根據第一項規則：</p>
 
 <ul>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>tlb_translate() �ɶ����� PR[<span style="font-style: italic;"><I>qp</I></span>] ��ֵ�� aligned() ���ص�ֵ���е���</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>tlb_translate() 可獨立於 PR[<span style="font-style: italic;"><I>qp</I></span>] 的值與 aligned() 返回的值進行呼叫</p></li>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>mem_read() �� zero_ext() �ɶ����� PR[<span style="font-style: italic;"><I>qp</I></span>] �� defer ��ֵ����</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>mem_read() 與 zero_ext() 可獨立於 PR[<span style="font-style: italic;"><I>qp</I></span>] 與 defer 的值呼叫</p></li>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>GR[r3]+GR[r2] �����ɶ����� PR[<span style="font-style: italic;"><I>qp</I></span>]��defer �� register_form ��ִֵ��</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>GR[r3]+GR[r2] 操作可獨立於 PR[<span style="font-style: italic;"><I>qp</I></span>]、defer 及 register_form 的值執行</p></li>
 </ul>
 
-<p>���ݵڶ������</p>
+<p>根據第二項規則：</p>
 
 <ul>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>���� PR[<span style="font-style: italic;"><I>qp</I></span>] Ϊ�棬defer Ϊ�٣����� GR[r1] �������</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>除非 PR[<span style="font-style: italic;"><I>qp</I></span>] 為真，defer 為假，否則 GR[r1] 不會更新</p></li>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>���� PR[<span style="font-style: italic;"><I>qp</I></span>] Ϊ�棬defer Ϊ�٣����� register_form Ϊ�棬���� GR[r3] �������</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>除非 PR[<span style="font-style: italic;"><I>qp</I></span>] 為真，defer 為假，並且 register_form 為真，否則 GR[r3] 不會更新</p></li>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>���� PR[<span style="font-style: italic;"><I>qp</I></span>] Ϊ�棬defer Ϊ�٣����򲻻���� alat_inval_single_entry()</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>除非 PR[<span style="font-style: italic;"><I>qp</I></span>] 為真，defer 為假，否則不會呼叫 alat_inval_single_entry()</p></li>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>���� PR[<span style="font-style: italic;"><I>qp</I></span>] Ϊ�棬aligned() ���ؼ٣����򲻻���� unaligned_data_reference_fault()</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>除非 PR[<span style="font-style: italic;"><I>qp</I></span>] 為真，aligned() 返回假，否則不會呼叫 unaligned_data_reference_fault()</p></li>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>tmp_paddr �ɶ����� PR[<span style="font-style: italic;"><I>qp</I></span>] ��ֵ���и���</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>tmp_paddr 可獨立於 PR[<span style="font-style: italic;"><I>qp</I></span>] 的值進行更新</p></li>
 </ul>
 
-<p>���ݵ��������</p>
+<p>根據第三項規則：</p>
 
 <ul>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>aligned() �ɶ����� PR[<span style="font-style: italic;"><I>qp</I></span>] ��ֵ���е���</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>aligned() 可獨立於 PR[<span style="font-style: italic;"><I>qp</I></span>] 的值進行呼叫</p></li>
 </ul>
 
-<p><span style="font-weight: bold;"><B>���������еı���</B></span></p>
+<p><span style="font-weight: bold;"><B>操作部分中的變數</B></span></p>
 
-<p>&ldquo;����&rdquo;���ֵĴ����г��ֵ����б�������&ldquo;ͨ����������&rdquo;���ǿɱ䳤�޷���λ�ֶΡ�������ϵ�ṹ״̬�ı���ʹ�ù̶����ֶγ��ȣ������ǵĶ��屣��һ�¡���ʱ��������������ϵ�ṹ������Ĭ��ʹ�����¸�ֵ����Ҳ�������ĳ��ȡ�</p>
+<p>&ldquo;操作&rdquo;部分的程式碼中出現的所有變數都是&ldquo;通用數據型別&rdquo;，是可變長無符號位欄位。代表體系結構狀態的變數使用固定的欄位長度，與它們的定義保持一致。臨時變數（即，非體系結構變數）預設使用最新賦值語句右側最長變數的長度。</p>
 
-<p>�����ֵ����Ҳ�ı��������ı����������ڸ�ֵ֮ǰ�������Ҳ������λ�ֶν��ض����������ĳ��ȡ������ֵ����Ҳ�ı��������ı����̣����ڸ�ֵ֮ǰ�������Ҳ������λ�ֶν���������չ��ʽ��չ���������ĳ��ȡ���Щ����ͬ���������ڲ�ͬ���ȵı�����ִ�еĲ�����</p>
+<p>如果賦值語句右側的變數比左側的變數長，則在賦值之前，代表右側變數的位欄位將截斷至左側變數的長度。如果賦值語句右側的變數比左側的變數短，則在賦值之前，代表右側變數的位欄位將按照零擴充套件方式擴充套件至左側變數的長度。這些規則同樣適用於在不同長度的變數上執行的操作。</p>
 
-<p>&ldquo;����&rdquo;���ֵĴ�����ʹ����һЩ�ض��ĳ��ú�����&ldquo;����&rdquo;���ֽ�����ָ��ÿ��ָ��ִ������Ĵ��룬�������κ���ָ���ȡ�йص���Ϊ�����磬��ȡ�ڼ䵼�µ��ж�����󣩡�&ldquo;�ж�&rdquo;���ֲ��г�������ָ���ȡ��ǿ���� RSE ���ص��µ��κδ���&ldquo;����&rdquo;���ֵĴ����в����������ض����ձ��Դ���������Ĵ��롣�����г���Щ�����������&ldquo;����&rdquo;�������������е�ָ����δ����&ldquo;�ж�&rdquo;���֡�</p>
+<p>&ldquo;操作&rdquo;部分的程式碼中使用了一些特定的常用函式。&ldquo;操作&rdquo;部分僅包含指定每條指令執行語義的程式碼，不包含任何與指令獲取有關的行為（例如，獲取期間導致的中斷與錯誤）。&ldquo;中斷&rdquo;部分不列出可能由指令獲取或強制性 RSE 載入導致的任何錯誤。&ldquo;操作&rdquo;部分的程式碼中不包含產生特定的普遍性錯誤與操作的程式碼。下面列出這些錯誤與操作。&ldquo;單步&rdquo;陷阱適用於所有的指令，因此未列在&ldquo;中斷&rdquo;部分。</p>
 
-<p><span style="font-weight: bold;"><B>ָ��˵��������δ�������ձ�״��</B></span></p>
+<p><span style="font-weight: bold;"><B>指令說明程式碼中未包含的普遍狀況</B></span></p>
 
 <ul>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>��ȡ��ǰ֮֡��ļĴ��� - ����δ�����ֵ���޴��󣩡�</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>讀取目前幀之外的暫存器 - 返回未定義的值（無錯誤）。</p></li>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>����ͨ�üĴ����⣨GR 16 �� GR 31����- ���� PSR.bn ָ���� GR �⡣</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>訪問通用暫存器庫（GR 16 到 GR 31）。- 訪問 PSR.bn 指定的 GR 庫。</p></li>
 	
 	<li class=kadov-p-CBulletPara><p CLASS=BulletPara
-									style="margin-bottom: 0;">PSR.ss ����Ϊ 1��- ����&ldquo;����&rdquo;���塣 </p></li>
+									style="margin-bottom: 0;">PSR.ss 設定為 1。- 觸發&ldquo;單步&rdquo;陷阱。 </p></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

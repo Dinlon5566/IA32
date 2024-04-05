@@ -7,7 +7,7 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400513.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:48 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
 <title>mem_xchg_cond</title>
@@ -116,7 +116,7 @@ else
 </script>
 <h2>mem_xchg_cond(cmp_val,data,paddr,size,byte_order,mattr,otype,hint)</h2>
 
-<p class="whs1">���ڴ淵�� paddr ָ����������ַ��ʼ�� size ���ֽڡ���ȡ�� hint ָ������������ʾ�޶�������������ڴ��ȡ��ֵ���� cmp_val���� data �� size �������Ч�ֽڴ� paddr ָ����������ַ��ʼ���ڴ���д�� size ���ֽڡ����ִ��д�룬���ȡ��д���ִ�в���ԭ���ͣ������ٷ֣�ָ�ʽ����ȡ��д����� mattr ָ�����ڴ������Լ� byte_order ָ�����ڴ��ֽ�˳������޶���otype ָ���˷��ʵ��ڴ�˳�����ԣ����ұ����� ACQUIRE �� RELEASE�� </p>
+<p class="whs1">從記憶體返回 paddr 指定的實體地址開始的 size 個位元組。讀取由 hint 指定的區域性提示限定條件。如果從記憶體讀取的值等於 cmp_val，則 data 的 size 個最低有效位元組從 paddr 指定的實體地址開始在記憶體中寫入 size 個位元組。如果執行寫入，則讀取與寫入的執行採用原子型（不可再分）指令方式。讀取與寫入均由 mattr 指定的記憶體屬性以及 byte_order 指定的記憶體位元組順序加以限定。otype 指定此訪問的記憶體順序屬性，並且必須是 ACQUIRE 或 RELEASE。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

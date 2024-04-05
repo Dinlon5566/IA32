@@ -9,11 +9,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/XScale_HH/LipsXSc/SWP_Penalty.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:42 GMT -->
 <head>
 
-<title>SWP ָ��ͷ�</title>
+<title>SWP 指令懲罰</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=Content-Type content="text/html; charset=GB2312">
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 <meta name=ProgId content=Word.Document>
 <meta name=Originator content="Microsoft Word 9">
 <meta name=date content="04 16, 2003 6:50:56 PM">
@@ -86,7 +86,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض� XScale(R) ΢��ϵ�ṹ \nӢ�ض� XScale(R) ΢��ϵ�ṹ�ͷ�\nSWP ָ��ͷ�");
+	addTocInfo("參考\n處理器事件與建議\n英特爾 XScale(R) 微體系結構 \n英特爾 XScale(R) 微體系結構懲罰\nSWP 指令懲罰");
 
 	}
 	if (window.writeBtnStyle)
@@ -109,22 +109,22 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="XS_logo.gif" alt="Ӣ�ض� XScale(R) ��������" v:shapes="_x0000_s1026" width="36px" height="36px" align="right" border="0" class="img_whs1">SWP ָ��ͷ�/����</h1>
+<h1><img src="XS_logo.gif" alt="英特爾 XScale(R) 技術主題" v:shapes="_x0000_s1026" width="36px" height="36px" align="right" border="0" class="img_whs1">SWP 指令懲罰/警告</h1>
 
 <h2>XSC_SWP</h2>
 
-<h3>����</h3>
+<h3>解釋</h3>
 
-<p>SWP/SWPB ָ����һ�� 5 ���ڵķ����ӳ١���ˣ���һ��ָ�����ͣ 4 �����ڡ�ֻ�����򲻵��ѵ�����£���Ӧ��ʹ�� SWP/SWPB��</p>
+<p>SWP/SWPB 指令有一個 5 週期的發出延遲。因此，下一條指令會暫停 4 個週期。只有在萬不得已的情況下，才應該使用 SWP/SWPB。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img id="_x0000_i1025" src="tip.gif" width="17px" height="18px" border="0" class="img_whs2"> ����</h3>
+	style="margin-left: 40px;"><img id="_x0000_i1025" src="tip.gif" width="17px" height="18px" border="0" class="img_whs2"> 建議</h3>
 
-<p class="whs3">ʹ�� LDR/STR ָ����� SWP/SWPB ָ�</p>
+<p class="whs3">使用 LDR/STR 指令替代 SWP/SWPB 指令。</p>
 
-<h3>ʾ��</h3>
+<h3>示例</h3>
 
-<h4>ԭʼ����&#xA0;&#xA0;&#xA0;</h4>
+<h4>原始程式碼&#xA0;&#xA0;&#xA0;</h4>
 
 <p class=preformatted
 	style="margin-left: 30.0pt;"><span class=code><span style="font-size: 11.0pt; color: #000000;"><font size=3 color=black style="font-size:11.000000pt;">LDR r2, [r0]</font></span></span><span style="font-size: 11.0pt; color: #000000;"> <font size=3 color=black style="font-size:11.000000pt;">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;</font></span></p>
@@ -135,7 +135,7 @@ else
 <p class=preformatted
 	style="margin-left: 30.0pt;"><span class=code><span style="font-size: 11.0pt; color: #000000;"><font size=3 color=black style="font-size:11.000000pt;">STR r2, [r1]</font></span></span><span style="font-size: 11.0pt; color: #000000;"> <font size=3 color=black style="font-size:11.000000pt;"></font></span></p>
 
-<h4>����Է���</h4>
+<h4>替代性方案</h4>
 
 <p class=preformatted
 	style="margin-left: 30.0pt;"><span class=code><span style="font-size: 11.0pt; color: #000000;"><font size=3 color=black style="font-size:11.000000pt;">LDR r2, [r0]</font></span></span></p>

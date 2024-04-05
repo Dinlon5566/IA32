@@ -7,7 +7,7 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_BIC.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:43 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
 <title>BIC</title>
@@ -94,7 +94,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nB - ָ��\nBIC");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nB - 指令\nBIC");
 
 	}
 	if (window.writeBtnStyle)
@@ -119,19 +119,19 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'></noscript>BIC - λ���</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'></noscript>BIC - 位清除</h1>
 
 <div>
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted><span class=Code>BIC[condition][S] dest, op1, addr_mode </span></p>
 
-<p>���У�</p>
+<p>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -142,7 +142,7 @@ else
 							style="font-style: italic;">&#xA0;condition</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs3">
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 個條件之一。請參閱<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">條件程式碼狀態</a>。</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs3">
@@ -150,7 +150,7 @@ else
 							style="font-style: italic;">&#xA0;S</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs3">
-<p CLASS=CellBodyLeft>�������������־��λ [20]��</td></tr>
+<p CLASS=CellBodyLeft>更新條件程式碼標誌（位 [20]）</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs3">
@@ -158,7 +158,7 @@ else
 							style="font-style: italic;">&#xA0;dest</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs3">
-<p CLASS=CellBodyLeft>Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>目標暫存器</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs3">
@@ -166,7 +166,7 @@ else
 							style="font-style: italic;">&#xA0;op1</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs3">
-<p CLASS=CellBodyLeft>������һ���������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含第一個運算元的暫存器</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs3">
@@ -174,20 +174,20 @@ else
 							style="font-style: italic;">&#xA0;addr_mode</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs3">
-<p CLASS=CellBodyLeft>Ѱַģʽ 1��<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">���ݴ���������</a></td></tr>
+<p CLASS=CellBodyLeft>定址模式 1：<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">數據處理運算元</a></td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>BIC ָ�ָ����λ����Ϊ�㡣��ʹ�� addr_mode �� op1 ��ִ��λ&ldquo;��&rdquo;��Ȼ�󽫽���洢�� dest��condition ��������Чֵ������ָ��� NOP�� &nbsp;</p>
+<p>BIC 指令將指定的位設定為零。它使用 addr_mode 在 op1 上執行位&ldquo;與&rdquo;，然後將結果儲存到 dest。condition 必須是有效值；否則將指令當作 NOP。 &nbsp;</p>
 
-<h2>Ѱַģʽ</h2>
+<h2>定址模式</h2>
 
-<p>�����&ldquo;Ѱַģʽ 1 - ���ݴ���������&rdquo;�� </p>
+<p>請參閱&ldquo;定址模式 1 - 數據處理運算元&rdquo;。 </p>
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -236,7 +236,7 @@ else
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
 
-<h2>���� </h2>
+<h2>編碼 </h2>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs3">
@@ -335,13 +335,13 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p CLASS=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funcbic<br> 4 <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0<br> 6 <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@ * * * BIC (Addressing Mode 1) * * *<br> 8 <br> 9 <br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example, CODE, READONLY<br> 11 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1<br> 12 &#xA0;&#xA0;00000000 &#xA0;E3A0B001 MOV &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R11, #1<br> 13 &#xA0;&#xA0;00000004 &#xA0;E3CB0001 BIC &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R0, R11, #1<br> 14 <br> 15 &#xA0;&#xA0;00000008 &#xA0;E3A0B001 MOV &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R11, #1<br> 16 &#xA0;&#xA0;00000012 &#xA0;E3DB0001 BICS &#xA0;&#xA0;&#xA0;&#xA0;R0, R11, #1<br> 17 <br> 18 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END</span> </p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
-<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">�����Ѱַģʽ 1�����ݴ���������</a> 
+<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">請參閱定址模式 1：數據處理運算元</a> 
 </div>
 </div>
 

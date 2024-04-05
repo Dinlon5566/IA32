@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/lipsnot_in_fetch.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:51 GMT -->
 <head>
 
-<title>���ڻ�ȡ��</title>
+<title>不在獲取中</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta NAME=MS-HAID CONTENT="Pairing Issues">
 <meta name=date content="09 6, 2001 4:23:34 PM">
 <meta name=topic-status content="In Progress">
@@ -118,31 +118,31 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> ���ڻ�ȡ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> 不在獲取中</h1>
 
-<p><span style="font-weight: bold;"><B>Not_in_Fetch</B></span> ��ʾһ��������Ƴ�ͻ��</p>
+<p><span style="font-weight: bold;"><B>Not_in_Fetch</B></span> 表示一種配對限制衝突。</p>
 
-<p>Ϊ�䷢�� <span style="font-weight: bold;"><B>Not_in_Fetch</B></span> ��ָ�����ͬ <a HREF="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/FIFO_Buffer.htm">FIFO ������</a>�е�ǰһ��ָ�׼������ʱ���ſ��Խ�����ԡ�FIFO ������ͨ��ÿ��������ܵ�������ָ������������ʱ������һЩ���ƣ�</p>
+<p>為其發出 <span style="font-weight: bold;"><B>Not_in_Fetch</B></span> 的指令僅當同 <a HREF="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/FIFO_Buffer.htm">FIFO 緩衝區</a>中的前一條指令都準備就緒時，才可以進行配對。FIFO 緩衝區通常每個週期向管道發兩條指令。遇到以下情況時，會有一些限制：</p>
 
 <ul>
 	
-	<li class=kadov-p><p>ָ��֮һ��ǰ׺��ǰ׺��ָ��ǰ��һ�������ֽڣ������޸�ָ��Ĳ�������Щ��ǰ׺�Ĳ�����ᵼ�³ͷ���������ơ�</p></li>
+	<li class=kadov-p><p>指令之一帶字首。字首是指令前的一個或多個位元組，可以修改指令的操作。這些帶字首的操作碼會導致懲罰或配對限制。</p></li>
 	
-	<li class=kadov-p><p>ָ��֮һ�ĳ��ȳ��� 7 ���ֽڡ�</p></li>
+	<li class=kadov-p><p>指令之一的長度超過 7 個位元組。</p></li>
 	
-	<li class=kadov-p><p>ָ��֮һ���֧Ԥ��ʧ�������Ԥȡ���С�</p></li>
+	<li class=kadov-p><p>指令之一因分支預測失誤而不在預取器中。</p></li>
 </ul>
 
-<p>��<a HREF="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/Static_Assembly_Analysis.htm">��̬����</a>�ڼ䣬ͨ������ÿ��<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#basic_block" style="x-condition: WebHelp;">����ָ���</a>�е�ͷ����ָ������ FIFO ��������׼��������</p>
+<p>在<a HREF="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/Static_Assembly_Analysis.htm">靜態分析</a>期間，通常假設每個<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#basic_block" style="x-condition: WebHelp;">基本指令塊</a>中的頭兩對指令已在 FIFO 緩衝區中準備就緒。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>����</B></span></h3>
+	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>建議</B></span></h3>
 
-<p class="whs3">ͨ����ʹ��ǰ׺�������й���ϸ��Ϣ�������<a HREF="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/LipsPrefix.htm">ǰ׺</a>���볤�ȳ��� 7 ���ֽڵ�ָ������й���ϸ��Ϣ�������<a HREF="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/LipsLongInst.htm">��ָ��</a>�����������ͣ�� </p>
+<p class="whs3">通過不使用字首（如需有關詳細資訊，請參閱<a HREF="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/LipsPrefix.htm">字首</a>）與長度超過 7 個位元組的指令（如需有關詳細資訊，請參閱<a HREF="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/LipsLongInst.htm">長指令</a>）避免此種暫停。 </p>
 
 <p class="whs4">
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','�� MMX(TM) �����ı���(R) ������','pentium(r)_with_mmx(tm_technology_processor.htm','����(R) ������','pentium(r)_processor.htm');return false;" title="Ӱ��Ĵ�����"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_影响的处理器.gif" border=0 height=20 width=82 alt="Ӱ��Ĵ�����"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','含 MMX(TM) 技術的奔騰(R) 處理器','pentium(r)_with_mmx(tm_technology_processor.htm','奔騰(R) 處理器','pentium(r)_processor.htm');return false;" title="影響的處理器"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_褰卞搷鐨勫鐞嗗櫒.gif" border=0 height=20 width=82 alt="影響的處理器"></a>
 
 
  </p>

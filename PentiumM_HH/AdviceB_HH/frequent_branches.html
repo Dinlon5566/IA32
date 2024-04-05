@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/AdviceB_HH/frequent_branches.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:31 GMT -->
 <head>
 
-<title>Ƶ�����ַ�֧</title>
+<title>頻繁出現分支</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="09 26, 2002 2:03:20 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -96,7 +96,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\n����Ӣ�ض�(R) ����(R) M �������Ľ���\nƵ�����ַ�֧");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n關於英特爾(R) 奔騰(R) M 處理器的建議\n頻繁出現分支");
 
 	}
 	if (window.writeBtnStyle)
@@ -119,11 +119,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" alt="Ӣ�ض�(R) ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">Ƶ�����ַ�֧</h1>
+<h1><img src="TA_logo.gif" alt="英特爾(R) 調優助手主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">頻繁出現分支</h1>
 
-<p>��ע�⣬��ʹԤ��ķ�֧���������Ŀ�������֧Ƶ��Ҳ��һ������Ҫ���������⡣Ƶ��������֧Ԥ��ʧ��ʱ����֧Ƶ���ᵼ�ºܴ�����ܿ�����</p>
+<p>請注意，即使預測的分支產生少量的開銷，分支頻繁也不一定是主要的效能問題。頻繁發生分支預測失誤時，分支頻繁會導致很大的效能開銷。</p>
 
-<p><span style="font-weight: bold;"><B>����������У���ϸ�ھ���ʵ�������壺</B></span><br>���������̣�<a href="../ERB/er_branch_misprediction_per_branch_retired.html" style="x-condition: eclipse;">ʧЧ�ķ�ָ֧��/ʧЧ��ָ��</a>�����ѡ�ֵ 0.15 Ӧ��Ϊ���ã�ֵ 0.30 Ӧ��Ϊ���ѡ�</p>
+<p><span style="font-weight: bold;"><B>在以下情況中，此細節具有實質性意義：</B></span><br>計數器的商（<a href="../ERB/er_branch_misprediction_per_branch_retired.html" style="x-condition: eclipse;">失效的分支指令/失效的指令</a>）不佳。值 0.15 應視為良好，值 0.30 應視為不佳。</p>
 
 <h3 class=NoteTipHead
 	style="margin-left: 40px;"><span style="font-weight: bold;"><B><script type="text/javascript" language="JavaScript"><!--
@@ -131,15 +131,15 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4))
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='tip.gif' width='17px' height='18px' border='0' class='img_whs2'>");}
 else
 {   document.write("<img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs2'>");}
-//--></script><noscript><img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs2'></noscript> ����</B></span></h3>
+//--></script><noscript><img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs2'></noscript> 建議</B></span></h3>
 
 <ol>
 	
 	<ul type="disc" class="whs3">
 		
-		<li class=kadov-p><p>����ʹ��&ldquo;Ӣ�ض�(R) C++ ������&rdquo;��&ldquo;������������ָ����Ż�&rdquo;(PGBO) ѡ�����µ�������ָ���ṹ��ʹ�����ķ�֧���١�</p></li>
+		<li class=kadov-p><p>考慮使用&ldquo;英特爾(R) C++ 編譯器&rdquo;的&ldquo;檔案導引基本指令塊優化&rdquo;(PGBO) 選項重新調整基本指令塊結構，使產生的分支更少。</p></li>
 		
-		<li class=kadov-p><p>���Ƕ�Ƶ�����õĺ���ʹ����Ƕ������ԭ�����ں������ü�Ϊ��֧��</p></li>
+		<li class=kadov-p><p>考慮對頻繁呼叫的函式使用內嵌技術，原因在於函式呼叫計為分支。</p></li>
 	</ul>
 </ol>
 

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Rotate_Right_by_Immediate_(AM_1).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:47:08 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>��������ѭ������ (AM 1)</title>
+<title>按立即數循環右移 (AM 1)</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nѰַģʽ\n���ݴ���������\n��������ѭ������ (AM 1)");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n定址模式\n數據處理運算元\n按立即數循環右移 (AM 1)");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,14 +104,14 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������"><a NAME=77748></a>��������ѭ������ (AM 1)</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題"><a NAME=77748></a>按立即數循環右移 (AM 1)</h1>
 
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted><span class=Code>op2, ROR #sh_imm</span> </p>
 
-<p CLASS=Body>���У� </p>
+<p CLASS=Body>其中： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -123,7 +123,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ������Ҫѭ����λ��ֵ�ļĴ�����</td></tr>
+<p CLASS=CellBodyLeft>指定包含要循環移位的值的暫存器。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -132,7 +132,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ʾѭ�����ơ�</td></tr>
+<p CLASS=CellBodyLeft>表示循環右移。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -141,18 +141,18 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ��ѭ����λ������ֵ���� 1 �� 31 ֮�䡣<em CLASS=Source>sh_imm == 0</em> ʱ��ִ�� RRX ��������չѭ�����ƣ��������й���ϸ��Ϣ�������&ldquo;���ݴ�������������չѭ������ (AM 1)&rdquo;��</td></tr>
+<p CLASS=CellBodyLeft>指定循環移位量。此值介於 1 與 31 之間。<em CLASS=Source>sh_imm == 0</em> 時，執行 RRX 操作（擴充套件循環右移）。如需有關詳細資訊，請參閱&ldquo;數據處理運算元：擴充套件循環右移 (AM 1)&rdquo;。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-���ݴ���������&ldquo;��������ѭ������&rdquo;ִ�����²�����α����˵������
+數據處理運算元&ldquo;按立即數循環右移&rdquo;執行以下操作（偽程式碼說明）：
 
 <p CLASS=Preformatted-Code>if sh_imm == 0 then<br> &#xA0;&#xA0;See Data-Processing Operands: Rotate Right with Extend (AM 1)<br> else /* sh_imm &lt; 0 */<br> &#xA0;&#xA0;addr_mode = op2 Rotate_Right sh_imm<br> &#xA0;&#xA0;shifter_carry_out = op2[sh_imm -1]</p>
 
-<p CLASS=Body>�����ݴ����������ṩ������ѭ����λ�ļĴ���ֵ��</p>
+<p CLASS=Body>此數據處理運算元提供按常數循環移位的暫存器值。</p>
 
-<p CLASS=Body>��ָ�������������������ѭ�����ƵļĴ��� <em CLASS=SourceItalic>op2</em> ��ֵ�������������� 1 �� 31 ֮�䡣ѭ����λ���Ҷ�����ʱ����һЩλ��������ڳ��Ŀ�λ�ϡ����һ��ѭ����λ���Ҷ������λ����λ���Ľ�λ��</p>
+<p CLASS=Body>此指令運算元代表按立即數循環右移的暫存器 <em CLASS=SourceItalic>op2</em> 的值，該立即數介於 1 與 31 之間。循環移位到右端以外時，將一些位插入左側騰出的空位上。最後一個循環移位到右端以外的位是移位器的進位。</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -173,7 +173,7 @@ else
 <col class="whs2">
 <col class="whs2">
 
-<h2>���� </h2>
+<h2>編碼 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -404,19 +404,19 @@ else
 </tr>
 </table>
 
-<h3 class=NoteTipHead><img src="Note.gif">&nbsp;��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif">&nbsp;備註</h3>
 
-<p class=fm08-example>��� <em CLASS=Source>R15</em> ָ��Ϊ�Ĵ��� <em CLASS=SourceItalic>op2</em> �� <em CLASS=SourceItalic>op1</em>����ʹ�õ�ֵ�ǵ�ǰָ��ĵ�ַ�� 8��</p>
+<p class=fm08-example>如果 <em CLASS=Source>R15</em> 指定為暫存器 <em CLASS=SourceItalic>op2</em> 或 <em CLASS=SourceItalic>op1</em>，則使用的值是目前指令的地址加 8。</p>
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span CLASS=Code>ADC &#xA0;&#xA0;&#xA0;R8, R4, R14, ROR #5</span> </p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
-<a href="Address_Data_Processing_Operands_Overview_1.html">�����Ѱַģʽ 1�����ݴ���������</a><a href="Address_Rotate_Right_with_Extend_(AM_1).html"><br> ��������ݴ�������������չѭ������ (AM 1)</a><a href="Inst_Overview_of_Instructions.html" CLASS="XRef" style="font-weight: normal;"><br> ����Ļ����ָ��</a>
+<a href="Address_Data_Processing_Operands_Overview_1.html">請參閱定址模式 1：數據處理運算元</a><a href="Address_Rotate_Right_with_Extend_(AM_1).html"><br> 請參閱數據處理運算元：擴充套件循環右移 (AM 1)</a><a href="Inst_Overview_of_Instructions.html" CLASS="XRef" style="font-weight: normal;"><br> 請參閱彙編器指令</a>
 </div>
 
 <script type="text/javascript" language="javascript1.2">

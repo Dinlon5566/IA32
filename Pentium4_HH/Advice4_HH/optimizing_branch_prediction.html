@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/optimizing_branch_prediction.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:24:59 GMT -->
 <head>
 
-<title>�Ż���֧Ԥ��</title>
+<title>優化分支預測</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="02 6, 2003 5:11:04 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -27,7 +27,7 @@
 <meta name=page-count content=1>
 <meta name=layout-height content=518>
 <meta name=layout-width content=678>
-<meta name=x-ignored-words content="MMX;SIMD;Aliasing;modulo;aliasing;Pentium;pipelined;mispredicted;NetBurst;irets;BTB;DTLB;Micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;UC;uncacheable;WC;MMNP;MMNM;Mispredicted;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;Clockticks;clocktick;VTune;clockticks;MOCLEAR;prefetching;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;prefetch;LSC;SSC;USC;ULC;SSE;denormal;denormaled;DELIVERBit;TC;BSQ;writeback;Uncacheable;encodings;misprediction;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;ITLB;?;a(i;y;enddo;cacheability;developer.intel.com;index.htm.;��ops">
+<meta name=x-ignored-words content="MMX;SIMD;Aliasing;modulo;aliasing;Pentium;pipelined;mispredicted;NetBurst;irets;BTB;DTLB;Micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;UC;uncacheable;WC;MMNP;MMNM;Mispredicted;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;Clockticks;clocktick;VTune;clockticks;MOCLEAR;prefetching;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;prefetch;LSC;SSC;USC;ULC;SSE;denormal;denormaled;DELIVERBit;TC;BSQ;writeback;Uncacheable;encodings;misprediction;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;ITLB;?;a(i;y;enddo;cacheability;developer.intel.com;index.htm.;μops">
 
 
 <!--(Links)=========================================================-->
@@ -116,53 +116,53 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">�Ż���֧Ԥ��</h1>
+<h1><img src="p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">優化分支預測</h1>
 
-<p>��֧�Ż����������ش�Ӱ�졣</p>
+<p>分支優化對效能有重大影響。</p>
 
-<p>�˽��֧���̲����Ʒ�֧�Ŀ�Ԥ���ԣ�����������ߴ�����ٶȡ�</p>
+<p>瞭解分支流程並改善分支的可預測性，可以明顯提高程式碼的速度。</p>
 
-<p>�����ڷ�֧Ԥ��Ļ����Ż������У�</p>
+<p>有助於分支預測的基本優化型別有：</p>
 
 <ul type="disc" class="whs2">
 	
-	<li class=kadov-p><p>�ô��������ݴ��ڵ�����ҳ�ϣ����ǳ���Ҫ�������й���ϸ��Ϣ�������<a href="memory_accesses.html">�ڴ����</a>���⣩��</p></li>
+	<li class=kadov-p><p>讓程式碼與數據處在單獨的頁上（這點非常重要，如需有關詳細資訊，請參閱<a href="memory_accesses.html">記憶體訪問</a>主題）。</p></li>
 	
-	<li class=kadov-p><p>������֧��</p></li>
+	<li class=kadov-p><p>消除分支。</p></li>
 	
-	<li class=kadov-p><p>��������ṹ��ʹ֮���Ͼ�̬��֧Ԥ���㷨��Ҫ��</p></li>
+	<li class=kadov-p><p>調整程式碼結構，使之符合靜態分支預測演算法的要求。</p></li>
 	
-	<li class=kadov-p><p>����޷���������ṹ�������ʵ��ĵط�ʹ�÷�֧������ʾ��</p></li>
+	<li class=kadov-p><p>如果無法調整程式碼結構，請在適當的地方使用分支方向提示。</p></li>
 	
-	<li class=kadov-p><p>�������ȴ�ѭ����ʹ�� pause ָ�</p></li>
+	<li class=kadov-p><p>在自旋等待循環中使用 pause 指令。</p></li>
 	
-	<li class=kadov-p><p>��������Ƕ�����������뷵����ԡ�</p></li>
+	<li class=kadov-p><p>將函式內嵌，並將呼叫與返回配對。</p></li>
 	
-	<li class=kadov-p><p>������Ҫչ��ѭ����ʹ�ظ�ִ�е�ѭ���ĵ�������Ϊʮ���λ���٣�������������Ӵ���ƪ����</p></li>
+	<li class=kadov-p><p>根據需要展開循環，使重複執行的循環的迭代次數為十六次或更少，除非這會大幅增加程式碼篇幅。</p></li>
 	
-	<li class=kadov-p><p>�����ܸ�����֧��ʹ���ǵķ���Ƶ�ʲ�����ÿ 3 ��΢����һ�Ρ�</p></li>
+	<li class=kadov-p><p>儘可能隔開分支，使它們的發生頻率不超過每 3 個微操作一次。</p></li>
 </ul>
 
 <ul type="disc" class="whs2">
 	
-	<li class=kadov-p><p class="whs3">���վ�̬��֧Ԥ��<span style="margin-bottom: 0;">���裨���ִ������ǰ��ִ�У���������ṹ�����Ʒ�֧��Ԥ���Բ��Ż�ָ��ԤȡЧ����</span></p></li>
+	<li class=kadov-p><p class="whs3">按照靜態分支預測<span style="margin-bottom: 0;">假設（向後執行與向前不執行）調整程式碼結構，改善分支可預測性並優化指令預取效果。</span></p></li>
 	
-	<li class=kadov-p><p class="whs3">������ʹ��Զ���������뷵�ء�</p></li>
+	<li class=kadov-p><p class="whs3">避免混合使用遠、近呼叫與返回。</p></li>
 	
-	<li class=kadov-p><p class="whs3">����ͨ��ѹ�뷵�ص�ַ����ת<span style="margin-bottom: 0;">��Ŀ����ʵ�ֵ��á�Ӳ�����Խ������뷵��ָ����ԣ��Ӷ����ƿ�Ԥ���ԡ�</span></p></li>
+	<li class=kadov-p><p class="whs3">避免通過壓入返回地址並跳轉<span style="margin-bottom: 0;">到目標來實現呼叫。硬體可以將呼叫與返回指令配對，從而改善可預測性。</span></p></li>
 	
-	<li class=kadov-p><p class="whs3">�������ȴ�ѭ����ʹ�� &quot;pause&quot; ָ�</p></li>
+	<li class=kadov-p><p class="whs3">在自旋等待循環中使用 &quot;pause&quot; 指令。</p></li>
 	
-	<li class=kadov-p><p class="whs3">���ݱ��뽨����Ƕ������</p></li>
+	<li class=kadov-p><p class="whs3">根據編碼建議內嵌函式。</p></li>
 	
-	<li class=kadov-p><p class="whs3">�����ӵ��á�</p></li>
+	<li class=kadov-p><p class="whs3">避免間接呼叫。</p></li>
 </ul>
 
-<p>�����й���ϸ��Ϣ����������µ�<a href="../../Reference_HH/Intel_s_Software_Developer_s_Manuals.html" style="font-style: normal; x-condition: eclipse;">�Ż��ֲ�</a>�� </p>
+<p>如需有關詳細資訊，請參閱最新的<a href="../../Reference_HH/Intel_s_Software_Developer_s_Manuals.html" style="font-style: normal; x-condition: eclipse;">優化手冊</a>。 </p>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','���ڷ�֧Ԥ��','branch_prediction.htm','������֧','eliminating_branches.htm');return false;" title="�������"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e7%9b%b8%e5%85%b3%e4%b8%bb%e9%a2%98.gif" border=0 height=20 width=58 alt="�������"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','關於分支預測','branch_prediction.htm','消除分支','eliminating_branches.htm');return false;" title="相關主題"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e7%9b%b8%e5%85%b3%e4%b8%bb%e9%a2%98.gif" border=0 height=20 width=58 alt="相關主題"></a>
 
 
  </p>

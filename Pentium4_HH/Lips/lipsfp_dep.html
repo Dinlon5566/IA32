@@ -8,12 +8,12 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/lipsfp_dep.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:49 GMT -->
 <head>
 
-<title>�������</title>
+<title>浮點相關</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
-<meta NAME=MS-HAID CONTENT="����ͷ�">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
+<meta NAME=MS-HAID CONTENT="浮點懲罰">
 <meta name=date content="09 6, 2001 4:16:33 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -128,20 +128,20 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> �������</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> 浮點相關</h1>
 
-<p><span style="font-weight: bold;"><B>FP_Dep</B></span> ��ʾһ�ֳͷ�״̬��</p>
+<p><span style="font-weight: bold;"><B>FP_Dep</B></span> 表示一種懲罰狀態。</p>
 
-<p>Ϊ�䷢�� <span style="font-weight: bold;"><B>FP_Dep</B></span> ��ָ����������ܵ��е�ǰִ�е�ָ���������������һֱ��ͣ������ָ�����ִ�С�</p>
+<p>為其發出 <span style="font-weight: bold;"><B>FP_Dep</B></span> 的指令依賴浮點管道中目前執行的指令的輸出。因此它會一直暫停到浮點指令完成執行。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>����</B></span></h3>
+	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>建議</B></span></h3>
 
-<p class="whs3">���������ָ���ڿ�ʼִ��ʱ����Ҫ�����������<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#TOS" style="x-condition: WebHelp;">ջ�� (TOS)</a>������������ָ����ִ����<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#latency" style="x-condition: WebHelp;">�ӳ�</a>����ʱ�����Ĳ�������һ��Ҫ�� TOS �С�</p>
+<p class="whs3">大多數浮點指令在開始執行時，都要求其運算元在<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#TOS" style="x-condition: WebHelp;">棧頂 (TOS)</a>。不過，浮點指令在執行其<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#latency" style="x-condition: WebHelp;">延遲</a>週期時，它的運算元不一定要在 TOS 中。</p>
 
-<p class="whs3">ʹ�� FXCH ָ�����ָ��������ִ�еĸ���ָ��Ĳ������ڶ�ջ�е�λ�á���������ָ��Ϳ���������ʼִ�С���ע�⣬��ָ���Ŀ��Ĵ�����ջ�� (TOS) �Ĵ��������ݡ����δ��ʽָ��Ŀ��Ĵ�������ʹ�� st(1)��</p>
+<p class="whs3">使用 FXCH 指令交換此指令與正在執行的浮點指令的運算元在堆疊中的位置。這樣，此指令就可以立即開始執行。請注意，此指令交換目標暫存器與棧頂 (TOS) 暫存器的內容。如果未顯式指定目標暫存器，則使用 st(1)。</p>
 
-<p>ʾ����</p>
+<p>示例：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells width="84.844%" class="whs4">
@@ -153,16 +153,16 @@ else
 <tr>
 <td valign="top" width="163px" class="whs9">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ԭʼ����</td>
+	style="margin-bottom: 0;">原始程式碼</td>
 <td valign="top" width="113px" class="whs10">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td>
+	style="margin-bottom: 0;">週期</td>
 <td valign="top" width="206px" class="whs11">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">�Ż�����</td>
+	style="margin-bottom: 0;">優化程式碼</td>
 <td valign="top" width="108px" class="whs12">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td></tr>
+	style="margin-bottom: 0;">週期</td></tr>
 
 <tr>
 <td valign="top" width="163px" class="whs9">
@@ -210,22 +210,22 @@ fxch st(1)</b><b style="font-weight: bold;">
 
 <tr>
 <td COLSPAN="2" valign="top" width="276px" class="whs13">
-<p class="whs14">FADD C��ָ�� 2���� 3 ��ʱ�����ڵ�ִ���ӳ١�FADD D��ָ�� 3����ͣ���ȴ�&ldquo;ָ�� 2&rdquo;���ִ�С�ͬ������ǰ���ָ������� TOS �ϵĲ���֮ǰ������ָ��޷���ʼִ�С�<b><br>ִ��ʱ���ܼƣ�10 ������</b></td>
+<p class="whs14">FADD C（指令 2）有 3 個時鐘週期的執行延遲。FADD D（指令 3）暫停，等待&ldquo;指令 2&rdquo;完成執行。同樣，在前面的指令完成在 TOS 上的操作之前，其它指令都無法開始執行。<b><br>執行時間總計：10 個週期</b></td>
 <td COLSPAN="2" valign="top" width="314px" class="whs15">
-<p class="whs14">ͨ��������֯���룬���� FXCH ָ���Խ��� TOS �����ݣ��������ظ���ָ���ִ���ӳ١����磬����&ldquo;ָ�� 5&rdquo;֮��� FXCH ָ� B + C ���� TOS����ˣ���ʹ��&ldquo;ָ�� 6&rdquo;����ִ�У��� ST(1) �ϲ������ڼ䣬���ڽ� D �ӵ� B + C �ϵ�&ldquo;ָ�� 3&rdquo;�Կ�������ִ�С�<b><br>ִ��ʱ���ܼƣ�6 ������</b></td>
+<p class="whs14">通過重新組織程式碼，插入 FXCH 指令以交換 TOS 的內容，可以隱藏浮點指令的執行延遲。例如，跟在&ldquo;指令 5&rdquo;之後的 FXCH 指令將 B + C 放入 TOS。因此，即使在&ldquo;指令 6&rdquo;繼續執行（在 ST(1) 上操作）期間，用於將 D 加到 B + C 上的&ldquo;指令 3&rdquo;仍可以立即執行。<b><br>執行時間總計：6 個週期</b></td>
 </tr>
 </table>
 
 <p class="whs14">
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','FDIV/FLDCW ָ��','lipsfdiv_stall.htm','FMUL ��ͣ','lipsfmul_stall.htm','MMX(TM) ��������ת��','lipspro_mmx_trans.htm','����ָ���� FXCH ֮��','lipsint_fxch.htm','������ͣ�Եȴ� FST ������','lipsfst_dep.htm');return false;" title="����ͷ�"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_浮点惩罚.gif" border=0 height=20 width=58 alt="����ͷ�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','FDIV/FLDCW 指令','lipsfdiv_stall.htm','FMUL 暫停','lipsfmul_stall.htm','MMX(TM) 技術程式碼轉換','lipspro_mmx_trans.htm','整數指令在 FXCH 之後','lipsint_fxch.htm','浮點暫停以等待 FST 運算元','lipsfst_dep.htm');return false;" title="浮點懲罰"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_嫻偣鎯╃綒.gif" border=0 height=20 width=58 alt="浮點懲罰"></a>
 
 
  </p>
 
 <p class="whs14">
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','�� MMX(TM) �����ı���(R) ������','pentium(r)_with_mmx(tm_technology_processor.htm','����(R) ������','pentium(r)_processor.htm');return false;" title="Ӱ��Ĵ�����"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_影响的处理器.gif" border=0 height=20 width=82 alt="Ӱ��Ĵ�����"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','含 MMX(TM) 技術的奔騰(R) 處理器','pentium(r)_with_mmx(tm_technology_processor.htm','奔騰(R) 處理器','pentium(r)_processor.htm');return false;" title="影響的處理器"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_褰卞搷鐨勫鐞嗗櫒.gif" border=0 height=20 width=82 alt="影響的處理器"></a>
 
 
  </p>

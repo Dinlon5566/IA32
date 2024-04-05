@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/blocked_store_forwards.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:52 GMT -->
 <head>
 
-<title>�����Ĵ洢ת��</title>
+<title>阻塞的儲存轉發</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -79,7 +79,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\n����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 ������\n����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 �������Ľ���\n���ں���������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 ��������ϸ��\n�����Ĵ洢ת��");
+	addTocInfo("參考\n處理器事件與建議\n含第三代數據流單指令多數據擴充套件指令集 (SSE3) 的英特爾(R) 奔騰(R) 4 處理器\n含第三代數據流單指令多數據擴充套件指令集 (SSE3) 的英特爾(R) 奔騰(R) 4 處理器的建議\n關於含第三代數據流單指令多數據擴充套件指令集 (SSE3) 的英特爾(R) 奔騰(R) 4 處理器的細節\n阻塞的儲存轉發");
 
 	}
 	if (window.writeBtnStyle)
@@ -102,21 +102,21 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="Ӣ�ض�&#xAE; ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">�����Ĵ洢ת��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="英特爾&#xAE; 調優助手主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">阻塞的儲存轉發</h1>
 
-<p>���ڶ������⣬�洢�޷�ת�������أ���ᵼ�µ��ڹܵ����ȵ���ͣ����ע��ʹ�� Microsoft ��Ӣ�ض������±�����ͨ�����Լ��ٻ�������Щ���͵��¼���<br>���ڲ���&ldquo;���̼߳���&rdquo;��ϵͳ��ദ����ϵͳ�����Ƶ�Ӱ������ܼƴ�����ʱ��Ӱ�죨ϵͳ�������߼�/����������֮�ͣ���������&ldquo;ʵ��ִ��&rdquo;ʱ��Ӱ�졣��ˣ��ڲ���&ldquo;���̼߳���&rdquo;��ϵͳ��ദ����ϵͳ�ϣ��ܿ��ܻῴ��ϸ�ڵ�ʱ��Ӱ����ڶԸ���ʵ��ִ��ʱ���Ӱ�졣��ע�⣬�ڵ�������ϵͳ�ϣ�������ʱ����ʵ��ִ��ʱ����ͬ��<br>Ӣ�ض�(R) ����(R) 4 �������ܹ�ȡ�ø����ܵķ���֮һ�ǣ��ֹ۵ؼ�����һ����ʵ�ָ������ܵ���������ʵ�����ķ���֮һ��Ԥ���֧�Ľ���������ڷ�֧�õ�����֮ǰ��ƾ�Ʋ���һ��·��ִ�С���һ�ַ���������ִ��ĳЩ�ڴ��������Щ�ڴ���ص����ܼ����¼�ͬʱͳ���Ʋ��Բ����Լ����Ʋ��Բ�������˲����ļ����Ȳ�ͳ���Ʋ��Բ���ʱ�ĸ�������ִ���ڴ�����ᵼ�¸�����Ʋ��Բ�������Ϊ�¼���������ܻᵼ�¼�����δ�������Ʋ�ʱ��õļ���ֵ�������磬���Ǵ�������ͼƾ�Ʋ�����ִ�м��ص�������������ڴ������ڽ���ָ����٣��Ҵ�������û�л����ȷ�ĵ�ַ����˴������ļ��ص�ַ���Ǵ���ġ�������ص��´洢ת����ͻ����&ldquo;ʧЧ�� MOB �����ط�&rdquo;�¼������������Ʋ��Ե�ʣ�����ᷢ��&ldquo;ʧЧ�� MOB �����ط�&rdquo;�¼��������û���Ʋ⣬�򲻻ᷢ�����¼�������ϵ�ṹ�ĽǶȿ��������Ʋ���ͳ�ƹ������������ʹ��û���Ʋ�ʱָ��������洢ת����ͻ���������Ʋ���ָ��Ҳ�ᱨ��˵�����洢ת����ͻ����ʵ�ϣ�����΢��ϵ�ṹ���������¼��ľ�ȷ��ʾ����ָ��ȷʵ�����˴洢ת����ͻ��</p>
+<p>由於對齊問題，儲存無法轉發到載入，這會導致等於管道長度的暫停。備註：使用 Microsoft 或英特爾的最新編譯器通常可以減少或消除這些型別的事件。<br>對於採用&ldquo;超執行緒技術&rdquo;的系統或多處理器系統，估計的影響代表總計處理器時間影響（系統上所有邏輯/物理處理器之和），而不是&ldquo;實際執行&rdquo;時間影響。因此，在採用&ldquo;超執行緒技術&rdquo;的系統或多處理器系統上，很可能會看到細節的時間影響大於對負載實際執行時間的影響。請注意，在單處理器系統上，處理器時間與實際執行時間相同。<br>英特爾(R) 奔騰(R) 4 處理器能夠取得高效能的方法之一是，樂觀地假設有一種能實現更佳效能的條件。它實現這點的方法之一是預測分支的結果，並且在分支得到解析之前，憑推測沿一條路徑執行。另一種方法是無序執行某些記憶體操作。有些記憶體相關的效能監視事件同時統計推測性操作以及非推測性操作，因此產生的計數比不統計推測性操作時的更大。無序執行記憶體操作會導致更多的推測性操作（計為事件），這可能會導致計數比未發生此推測時獲得的計數值更大。例如，考慮處理器試圖憑推測無序執行載入的情況。假設由於程式碼正在進行指針跟蹤，且處理器還沒有獲得正確的地址，因此處理器的載入地址還是錯誤的。如果載入導致儲存轉發衝突，則&ldquo;失效的 MOB 載入重發&rdquo;事件遞增。由於推測的緣故，這裡會發生&ldquo;失效的 MOB 載入重發&rdquo;事件，而如果沒有推測，則不會發生此事件。從體系結構的角度看，此種推測是統計過量的情況。即使在沒有推測時指令不會遇到儲存轉發衝突，但由於推測活動，指令也會報告說遇到儲存轉發衝突。事實上，它是微體系結構級發生的事件的精確表示：此指令確實導致了儲存轉發衝突。</p>
 
 &nbsp; 
 
 <br>&nbsp; 
  
 
-<br><b>����������ԣ�</b><br><br>��ϸ�����������ܼ�����������أ�<br> <br> �洢ת������Ӱ�� = ((<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/mob_load_replays_retired.htm" style="x-condition: eclipse;">ʧЧ�� MOB �����ط�</a>*50)/<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Clockticks.htm" style="x-condition: eclipse;">ʱ���ź�</a>)*100<b><br> �ϵ�ֵ��</b>0.2<b><br> �ϸ�ֵ��</b>2<br><br>��&ldquo;�洢ת������Ӱ��&rdquo;<b>�ϸ�</b>ʱ����ϸ�ھ���ʵ�������塣<b><br><br>���飺</b> 
+<br><b>計數器相關性：</b><br><br>此細節與以下效能計數器函式相關：<br> <br> 儲存轉發效能影響 = ((<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/mob_load_replays_retired.htm" style="x-condition: eclipse;">失效的 MOB 載入重發</a>*50)/<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Clockticks.htm" style="x-condition: eclipse;">時鐘訊號</a>)*100<b><br> 較低值：</b>0.2<b><br> 較高值：</b>2<br><br>在&ldquo;儲存轉發效能影響&rdquo;<b>較高</b>時，此細節具有實質性意義。<b><br><br>建議：</b> 
 
 <ul>
 	
 	<li class=kadov-p
-		class=kadov-p><a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/avoiding_blocked_store_forwards.htm" style="x-condition: eclipse;">���������Ĵ洢ת��</a></li>
+		class=kadov-p><a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/avoiding_blocked_store_forwards.htm" style="x-condition: eclipse;">避免阻塞的儲存轉發</a></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

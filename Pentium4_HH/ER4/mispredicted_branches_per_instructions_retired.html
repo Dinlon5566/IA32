@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/ER4/mispredicted_branches_per_instructions_retired.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:54 GMT -->
 <head>
 
-<title>Ԥ��ʧ��ķ�֧/ʧЧ��ָ��</title>
+<title>預測失誤的分支/失效的指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=MS-HAID content="E4 Mispredicted Branches Retired">
 <meta name=date content="10 31, 2001 5:02:55 PM">
 <meta name=topic-status content="In Progress">
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 ���������¼�����\n�������ܵ�������\n��Ҫ CPI �����¼�����\nԤ��ʧ��ķ�֧/ʧЧ��ָ��");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器的事件比率\n基本效能調整比率\n主要 CPI 限制事件比率\n預測失誤的分支/失效的指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,20 +105,20 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/ER4/p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/ER4/er_logo.gif" alt="�¼���������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs2">Ԥ��ʧ��ķ�֧/ʧЧ��ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/ER4/p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/ER4/er_logo.gif" alt="事件比率主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs2">預測失誤的分支/失效的指令</h1>
 
-<p>(<a HREF="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/mispredicted_branches_retired.htm">ʧЧ��Ԥ��ʧ���֧</a> / <a HREF="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Instructions_retired.htm">ʧЧ��ָ��</a>)</p>
+<p>(<a HREF="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/mispredicted_branches_retired.htm">失效的預測失誤分支</a> / <a HREF="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Instructions_retired.htm">失效的指令</a>)</p>
 
-<p>�˱�����ʾÿָ��Ԥ��ʧ��ķ�֧������֧Ԥ��δ�������ϸ߿��ܻ��������/���֧��������ĸ���Ӱ�졣�������Ӱ��߶Ƚϵͣ�������ⲻֵ�ý�һ���о��� </p>
+<p>此比率顯示每指令預測失誤的分支數。分支預測未命中數較高可能會對效能與/或分支造成顯著的負面影響。如果效能影響尺度較低，則此問題不值得進一步研究。 </p>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','һ������������б���','1st_level_cache_load_hit_rate.htm','һ������������б���','../Pentium4P_HH/ERP/1st_level_cache_load_hit_rate.htm','һ���������δ��������Ӱ��','level_1_cache_load_miss_performance_impact.htm','һ���������δ��������Ӱ��','../Pentium4P_HH/ERP/Level_1_Cache_Load_Miss_Performance_Impact.htm','�����������δ����/ʧЧ��ָ��','2nd-level_cache_load_misses_per_instruction_retired.htm','�����������δ����/ʧЧ��ָ��','../Pentium4P_HH/ERP/2nd-level_cache_load_misses_per_instruction_retired.htm','ʧЧ��һ���������δ����','../Events4/1st-level_cache_load_misses_retired.htm','ʧЧ�Ķ����������δ����','../Events4/2nd-level_cache_load_misses_retired.htm');return false;" title="��ص��¼����¼�����"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_相关的事件与事件比率.gif" border=0 height=20 width=130 alt="��ص��¼����¼�����"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','一級快取載入命中比率','1st_level_cache_load_hit_rate.htm','一級快取載入命中比率','../Pentium4P_HH/ERP/1st_level_cache_load_hit_rate.htm','一級快取載入未命中效能影響','level_1_cache_load_miss_performance_impact.htm','一級快取載入未命中效能影響','../Pentium4P_HH/ERP/Level_1_Cache_Load_Miss_Performance_Impact.htm','二級快取載入未命中/失效的指令','2nd-level_cache_load_misses_per_instruction_retired.htm','二級快取載入未命中/失效的指令','../Pentium4P_HH/ERP/2nd-level_cache_load_misses_per_instruction_retired.htm','失效的一級快取載入未命中','../Events4/1st-level_cache_load_misses_retired.htm','失效的二級快取載入未命中','../Events4/2nd-level_cache_load_misses_retired.htm');return false;" title="相關的事件與事件比率"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_鐩稿叧鐨勪簨浠朵笌浜嬩歡姣旂巼.gif" border=0 height=20 width=130 alt="相關的事件與事件比率"></a>
 
 
  </p>
 
-<p><span style="font-weight: bold;"><B>����</B></span>�������й���ϸ��Ϣ�������<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/avoiding_branch_mispredictions.htm" style="x-condition: eclipse;">�����֧Ԥ��ʧ��</a> &#xA0;</p>
+<p><span style="font-weight: bold;"><B>建議</B></span>：如需有關詳細資訊，請參閱<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/avoiding_branch_mispredictions.htm" style="x-condition: eclipse;">避免分支預測失誤</a> &#xA0;</p>
 
 <p>&nbsp;</p>
 

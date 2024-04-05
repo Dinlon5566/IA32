@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -96,7 +96,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nW - ָ��\nWMAC");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nW - 指令\nWMAC");
 
 	}
 	if (window.writeBtnStyle)
@@ -121,16 +121,16 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>WMAC - ʸ���˷����ۼ�</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>WMAC - 向量乘法與累加</h1>
 
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted>WMACsign[Z]condition] dest, op1, op2 </p>
 
-���У�
+其中：
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -139,36 +139,36 @@ else
 
 <tr>
 <td class="whs3">sign</td>
-<td class="whs3">ȷ������&ldquo;�з���&rdquo;����&ldquo;�޷���&rdquo;�������㣺<br>S -- �з���<br> U -- �޷���</td></tr>
+<td class="whs3">確定進行&ldquo;有符號&rdquo;還是&ldquo;無符號&rdquo;算術運算：<br>S -- 有符號<br> U -- 無符號</td></tr>
 
 <tr>
 <td class="whs3"><i style="font-style: italic;">Z</i></td>
-<td class="whs3">��ѡ������ַ� Z ����ָ�����Ƿ���<br> ��&ldquo;�ۼ�&rdquo;����֮ǰ&ldquo;Ŀ��Ĵ���&rdquo;����</td></tr>
+<td class="whs3">可選。如果字元 Z 放入指令助記符：<br> 在&ldquo;累加&rdquo;發生之前&ldquo;目標暫存器&rdquo;置零</td></tr>
 
 <tr>
 <td class="whs3"><i style="font-style: italic;">condition</i></td>
-<td class="whs3">��ѡ��16 ������֮һ�������<a HREF="Conditional_Execution.html">����ִ��</a></td></tr>
+<td class="whs3">可選。16 個條件之一。請參閱<a HREF="Conditional_Execution.html">條件執行</a></td></tr>
 
 <tr>
 <td class="whs3">dest</td>
-<td class="whs3">Ŀ�꣬&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�������ݼĴ���</td></tr>
+<td class="whs3">目標，&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術數據暫存器</td></tr>
 
 <tr>
 <td class="whs3">op1</td>
-<td class="whs3">��һ��Դ��������&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�������ݼĴ���</td></tr>
+<td class="whs3">第一個源運算元，&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術數據暫存器</td></tr>
 
 <tr>
 <td class="whs3">op2</td>
-<td class="whs3">�ڶ���Դ��������&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�������ݼĴ���</td></tr>
+<td class="whs3">第二個源運算元，&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術數據暫存器</td></tr>
 </table>
 
 &nbsp; 
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-�� op1 �� op2 �е��ĸ� 16 λ������ˣ������ĸ� 32 λ�м�����Ȼ����� dest �е��κ� 64 λֵ��������Ŀ��Ĵ��� dest��<br> ��ִ�мӷ�֮ǰ������ѡ��Ŀ��Ĵ������㡣<br> �з������޷����޶�������Ӧ���ڳ˷������յ��ۼӡ�<br>���ʵ���ʱ�򣬻����м�����ִ�з�����չ��<br><br>ָ����ָ�����κ�������������������״̬ƥ�䣬����ִ��ָ� 
+將 op1 與 op2 中的四個 16 位半字相乘，產生四個 32 位中間結果。然後加上 dest 中的任何 64 位值，並放入目標暫存器 dest。<br> 在執行加法之前，可以選擇將目標暫存器置零。<br> 有符號與無符號限定符均可應用於乘法與最終的累加。<br>在適當的時候，會在中間結果上執行符號擴充套件。<br><br>指令中指定的任何條件必須與條件程式碼狀態匹配，否則不執行指令。 
 
-<h2>����</h2>
+<h2>編碼</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -382,7 +382,7 @@ Cond
 
 &nbsp; 
 
-<h2>���ֶα���</h2>
+<h2>子欄位編碼</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -393,17 +393,17 @@ Cond
 <th class="whs5">
 <div align="center" class="whs6">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>�޶���</font> 
+		face=Verdana>限定符</font> 
 </div></th>
 <th class="whs5">
 <div align="center" class="whs6">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>�ֶ�</font> 
+		face=Verdana>欄位</font> 
 </div></th>
 <th class="whs5">
 <div align="center" class="whs6">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>ֵ</font> 
+		face=Verdana>值</font> 
 </div></th></tr>
 
 <tr>
@@ -451,7 +451,7 @@ z
 <tr>
 <td class="whs3">
 <div align="center" class="whs6">
-�� Z
+無 Z
 </div></td>
 <td class="whs3">
 <div align="center" class="whs6">
@@ -463,16 +463,16 @@ z
 </div></td></tr>
 </table>
 
-<h2>Ӱ��� SIMD ��־</h2>
+<h2>影響的 SIMD 標誌</h2>
 
-��Ӱ�� SIMD PSR ��־ (wCASF) ��&ldquo;����&rdquo;��־ (wCSSF)�� 
+不影響 SIMD PSR 標誌 (wCASF) 或&ldquo;飽和&rdquo;標誌 (wCSSF)。 
  
 
-<h2>����</h2>
+<h2>操作</h2>
 
 &nbsp;<img src="wmac.gif" x-maintain-ratio="TRUE" width="551px" height="263px" border="0" class="img_whs7"> 
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
 <a HREF="WMADD.html">WMADD</a><a HREF="WMUL.html"><br> WMUL</a> 
 

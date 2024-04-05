@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/self-modifying_code_clear.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:35 GMT -->
 <head>
 
-<title>�����޸Ĵ������</title>
+<title>自我修改程式碼清除</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta NAME=MS-HAID CONTENT="E4 Group Stall SECOND">
 <meta NAME=MS-HAID CONTENT=Events4>
 <meta name=date content="05 12, 2002 3:50:29 PM">
@@ -29,7 +29,7 @@
 <meta name=page-count content=1>
 <meta name=layout-height content=624>
 <meta name=layout-width content=736>
-<meta name=x-ignored-words content="MMX;SIMD;Aliasing;modulo;aliasing;Pentium;pipelined;mispredicted;NetBurst;irets;BTB;DTLB;Micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;UC;uncacheable;WC;MMNP;MMNM;Mispredicted;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;Clockticks;clocktick;VTune;clockticks;MOCLEAR;prefetching;misprediction;PGO;pseudo-LRU;developer.intel.com;index.htm;Vol;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;prefetch;LSC;SSC;USC;ULC;SSE;denormal;denormaled;DELIVERBit;;BSQ;writeback;Uncacheable;encodings;ITLB;RGBA;C++*;?;a(i;y;enddo;cacheability;index.htm.;��ops;��op;prefetched;CPUID;resynchronize;Memory_Flag;ELIHW">
+<meta name=x-ignored-words content="MMX;SIMD;Aliasing;modulo;aliasing;Pentium;pipelined;mispredicted;NetBurst;irets;BTB;DTLB;Micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;UC;uncacheable;WC;MMNP;MMNM;Mispredicted;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;Clockticks;clocktick;VTune;clockticks;MOCLEAR;prefetching;misprediction;PGO;pseudo-LRU;developer.intel.com;index.htm;Vol;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;prefetch;LSC;SSC;USC;ULC;SSE;denormal;denormaled;DELIVERBit;;BSQ;writeback;Uncacheable;encodings;ITLB;RGBA;C++*;?;a(i;y;enddo;cacheability;index.htm.;μops;μop;prefetched;CPUID;resynchronize;Memory_Flag;ELIHW">
 
 
 <!--(Links)=========================================================-->
@@ -83,7 +83,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������¼�\n���ܵ����¼� - ����\n��ͣ�¼�\n�����޸Ĵ������");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器事件\n效能調整事件 - 輔助\n暫停事件\n自我修改程式碼清除");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,21 +106,21 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">�����޸Ĵ������</h1>
+<h1><img src="p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">自我修改程式碼清除</h1>
 
-<p><span style="font-weight: bold;"><B>�߳��ض���</B></span>��<a href="Thread_Specific.html">TS</a></p>
+<p><span style="font-weight: bold;"><B>執行緒特定性</B></span>：<a href="Thread_Specific.html">TS</a></p>
 
-<p>���������޸Ĵ����������������������ܵ��Ĵ�����</p>
+<p>由於自我修改程式碼問題而清除機器的整個管道的次數。</p>
 
-<p>�Դ�����е�ǰ���ڴ������л�����ڴ�λ�ý���д�����ʱ���ᵼ�¹����Ļ�����ʧЧ���˼�����ָ���������ַ�����⣬P6 ϵ����Ӣ�ض�(R) ����(R) ������������Դ���ε�д���Ƿ���޸��Ѿ�Ԥȡ���Ա�ִ�У���ָ����д���Ӱ��Ԥȡ��ָ���Ԥȡ���н�ʧЧ����һ�ּ�����ָ������Ե�ַ�����ڱ��� 4 ����������Ŀ��ָ���Ѿ����벢�����ڸ��ٻ����еĴ���ν���д�������������̽���е�ָ���ʹ�������ٻ���ʧЧ����һ����Ϊ��ʾ���ڱ��� 4 �����������г���ʱ�������޸Ĵ�����ܻᵼ�����������½���������̽����ϸ��Ϣ��</p>
+<p>對程式碼段中目前已在處理器中快取的記憶體位置進行寫入操作時，會導致關聯的快取線失效。此檢查基於指令的實體地址。此外，P6 系列與英特爾(R) 奔騰(R) 處理器還會檢查對程式碼段的寫入是否會修改已經預取（以便執行）的指令。如果寫入會影響預取的指令，則預取佇列將失效。后一種檢查基於指令的線性地址。對於奔騰 4 處理器，對目標指令已經解碼並儲存在跟蹤快取中的程式碼段進行寫入操作，或是嗅探其中的指令，將使整個跟蹤快取失效。后一種行為表示，在奔騰 4 處理器上執行程式時，自我修改程式碼可能會導致效能嚴重下降。關於嗅探的詳細資訊：</p>
 
-<p>��������� A �ڸ��ٻ�������һ�������ߣ������� B ϣ����ȡ�û����ߣ������ǵ������뻹�����ݣ�����������̽������ A �Ļ��档����&ldquo;��ȡ��̽&rdquo;��Ӱ�촦���� A����������������� B ��ͼд��û����ߣ���������&ldquo;д����̽&rdquo;�ķ�ʽ��̽������ A �Ļ��棬�����¸��ٻ��汻�������ˣ��ڱ��� 4 �������ϣ��˴��������κδ������Ի����ߵ�д�����������������ٻ��档�κδ������Ըû����ߵĶ�ȡ��������Ӱ�����ܡ�</p>
+<p>如果處理器 A 在跟蹤快取中有一條快取線，處理器 B 希望讀取該快取線（不論是當作程式碼還是數據），則它將嗅探處理器 A 的快取。這種&ldquo;讀取嗅探&rdquo;不影響處理器 A。不過，如果處理器 B 試圖寫入該快取線，則它會以&ldquo;寫入嗅探&rdquo;的方式嗅探處理器 A 的快取，並導致跟蹤快取被清除。因此，在奔騰 4 處理器上，此處理器或任何處理器對快取線的寫入操作，都將清除跟蹤快取。任何處理器對該快取線的讀取操作都不影響效能。</p>
 
-<p>ʵ���ϣ����Ե�ַ���Ӧ�ò����� IA-32 ������֮��������������⡣���������޸Ĵ����Ӧ�ó���ʹ����ͬ�����Ե�ַ�޸����ȡָ�ϵͳ������������������ܻ�ʹ�ò�ͬ�ڻ�ȡָ��ʱ�����Ե�ַ�޸�ָ���ִ���޸ĵ�ָ��֮ǰ��ϵͳ������ִ�����л��������� CPUID ָ����Ա��Զ�����ͬ��ָ�����Ԥȡ���С����� Intel486(TM) ���������Ի����е�ָ�����д�����ʱ����ͬʱ�ڻ������ڴ����޸������������д��֮ǰ�Ѿ�Ԥȡ��ָ����ִ�оɰ汾��ָ�Ҫ����ִ�о�ָ��������޸�ָ���д��������棬�����ű�дһ����תָ��Ա����ָ��Ԥȡ��Ԫ��</p>
+<p>實際上，線性地址檢查應該不會在 IA-32 處理器之間產生相容性問題。包含自我修改程式碼的應用程式使用相同的線性地址修改與獲取指令。系統軟體（如偵錯程式）可能會使用不同於獲取指令時的線性地址修改指令，在執行修改的指令之前，系統軟體會執行序列化操作（如 CPUID 指令），以便自動重新同步指令快取與預取佇列。對於 Intel486(TM) 處理器，對快取中的指令進行寫入操作時，將同時在快取與記憶體中修改它，但如果在寫入之前已經預取該指令，則會執行舊版本的指令。要避免執行舊指令，可以在修改指令的寫入操作後面，緊接著編寫一條跳轉指令，以便清除指令預取單元。</p>
 
-<h2>���������޸��뽻���޸Ĵ���</h2>
+<h2>處理自我修改與交叉修改程式碼</h2>
 
-<p>������������д�뵱ǰ����ִ�еĴ���Σ�������Щ���ݵ���������ִ�У����ִ����Ϊ�����޸Ĵ��롣ִ�������޸Ĵ���ʱ��IA-32 ����������Ϊȡ�����ͺţ�����ȡ�����ڵ�ǰִ��ָ��֮ǰ��Զ��λ���޸Ĵ��롣���Ŵ�������ϵ�ṹ���Խ��Խ���ӣ�����ʼ��ʧЧ��֮ǰƾ�Ʋ�ִ�д��루�ڱ��� 4 �� P6 ϵ�д������о������������й�Ӧ��ִ����Щ���롢���޸Ļ��Ǻ��޸ĵȵȹ���Ҳ���ģ�����塣</p>
+<p>處理器將數據寫入目前正在執行的程式碼段，並將這些數據當作程式碼來執行，這種程式碼稱為自我修改程式碼。執行自我修改程式碼時，IA-32 處理器的行為取決於型號，具體取決於在目前執行指針之前多遠的位置修改程式碼。隨著處理器體系結構變得越來越複雜，並開始在失效點之前憑推測執行程式碼（在奔騰 4 與 P6 系列處理器中就是這樣），有關應該執行哪些程式碼、先修改還是后修改等等規則也變得模糊不清。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

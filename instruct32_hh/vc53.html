@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc53.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:29 GMT -->
 <head>
 
-<title>CVTPI2PS - Ñ¹ËõË«×ÖÕûÊý×ª»»³ÉÑ¹Ëõµ¥¾«¶È¸¡µãÖµ</title>
+<title>CVTPI2PS - å£“ç¸®é›™å­—æ•´æ•¸è½‰æ›æˆå£“ç¸®å–®ç²¾åº¦æµ®é»žå€¼</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="03 31, 2003 4:09:37 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -95,7 +95,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("²Î¿¼\nÖ¸Áî¼¯\nIA-32 Ö¸Áî\nC - Ö¸Áî\nCVTPI2PS - Ñ¹ËõË«×ÖÕûÊý×ª»»³ÉÑ¹Ëõµ¥¾«¶È¸¡µãÖµ");
+	addTocInfo("åƒè€ƒ\næŒ‡ä»¤é›†\nIA-32 æŒ‡ä»¤\nC - æŒ‡ä»¤\nCVTPI2PS - å£“ç¸®é›™å­—æ•´æ•¸è½‰æ›æˆå£“ç¸®å–®ç²¾åº¦æµ®é»žå€¼");
 
 	}
 	if (window.writeBtnStyle)
@@ -118,7 +118,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>CVTPI2PS - Ñ¹ËõË«×ÖÕûÊý×ª»»³ÉÑ¹Ëõµ¥¾«¶È¸¡µãÖµ</h1>
+<h1>CVTPI2PS - å£“ç¸®é›™å­—æ•´æ•¸è½‰æ›æˆå£“ç¸®å–®ç²¾åº¦æµ®é»žå€¼</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -127,15 +127,15 @@ else
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>²Ù×÷Âë</td>
+	align=center>æ“ä½œç¢¼</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>Ö¸Áî</td>
+	align=center>æŒ‡ä»¤</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>ËµÃ÷</td></tr>
+	align=center>èªªæ˜Ž</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -146,18 +146,18 @@ else
 	style="margin-bottom: 0;">CVTPI2PS <span style="font-style: italic;"><I>xmm</I></span>, <span style="font-style: italic;"><I>mm</I></span>/<span style="font-style: italic;"><I>m64</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">½« <span style="font-style: italic;"><I>mm</I></span>/<span style="font-style: italic;"><I>m64</I></span> ÖÐµÄÁ½¸öÓÐ·ûºÅË«×ÖÕûÊý×ª»»³É <span style="font-style: italic;"><I>xmm</I></span> ÖÐµÄÁ½¸öµ¥¾«¶È¸¡µãÖµ¡£</td></tr>
+	style="margin-bottom: 0;">å°‡ <span style="font-style: italic;"><I>mm</I></span>/<span style="font-style: italic;"><I>m64</I></span> ä¸­çš„å…©å€‹æœ‰ç¬¦è™Ÿé›™å­—æ•´æ•¸è½‰æ›æˆ <span style="font-style: italic;"><I>xmm</I></span> ä¸­çš„å…©å€‹å–®ç²¾åº¦æµ®é»žå€¼ã€‚</td></tr>
 </table>
 
-<h2>ËµÃ÷</h2>
+<h2>èªªæ˜Ž</h2>
 
-<p>½«Ô´²Ù×÷Êý£¨µÚ¶þ¸ö²Ù×÷Êý£©ÖÐµÄÁ½¸öÑ¹ËõÓÐ·ûºÅË«×ÖÕûÊý×ª»»³ÉÄ¿±ê²Ù×÷Êý£¨µÚÒ»¸ö²Ù×÷Êý£©ÖÐµÄÁ½¸öÑ¹Ëõµ¥¾«¶È¸¡µãÖµ¡£Ô´²Ù×÷Êý¿ÉÒÔÊÇ MMX&#x2122; ¼¼Êõ¼Ä´æÆ÷»ò 64 Î»ÄÚ´æÎ»ÖÃ¡£Ä¿±ê²Ù×÷ÊýÊÇ XMM ¼Ä´æÆ÷¡£½á¹û´æ´¢µ½Ä¿±ê²Ù×÷ÊýµÄµÍÎ»ËÄ×Ö£¬¸ßÎ»ËÄ×Ö±£³Ö²»±ä¡£</p>
+<p>å°‡æºé‹ç®—å…ƒï¼ˆç¬¬äºŒå€‹é‹ç®—å…ƒï¼‰ä¸­çš„å…©å€‹å£“ç¸®æœ‰ç¬¦è™Ÿé›™å­—æ•´æ•¸è½‰æ›æˆç›®æ¨™é‹ç®—å…ƒï¼ˆç¬¬ä¸€å€‹é‹ç®—å…ƒï¼‰ä¸­çš„å…©å€‹å£“ç¸®å–®ç²¾åº¦æµ®é»žå€¼ã€‚æºé‹ç®—å…ƒå¯ä»¥æ˜¯ MMX&#x2122; æŠ€è¡“æš«å­˜å™¨æˆ– 64 ä½è¨˜æ†¶é«”ä½ç½®ã€‚ç›®æ¨™é‹ç®—å…ƒæ˜¯ XMM æš«å­˜å™¨ã€‚çµæžœå„²å­˜åˆ°ç›®æ¨™é‹ç®—å…ƒçš„ä½Žä½å››å­—ï¼Œé«˜ä½å››å­—ä¿æŒä¸è®Šã€‚</p>
 
-<p>´ËÖ¸Áî»áµ¼ÖÂ´Ó x87 FPU µ½ MMX ¼¼Êõ²Ù×÷µÄ×ª»»£¨Ò²¾ÍÊÇËµ£¬x87 FPU Õ»¶¥Ö¸ÕëÉèÖÃÎª 0£¬ÇÒ x87 FPU ±ê¼Ç×ÖÉèÖÃÎªÈ« 0 [ÓÐÐ§]£©¡£Èç¹ûÔÚ´æÔÚÎ´¾ö x87 FPU ¸¡µãÒì³£µÄÇé¿öÏÂÖ´ÐÐ CVTPI2PS Ö¸Áî£¬Ôò»áÔÚ´ËÖ¸ÁîÖ®Ç°´¦ÀíÒì³£¡£</p>
+<p>æ­¤æŒ‡ä»¤æœƒå°Žè‡´å¾ž x87 FPU åˆ° MMX æŠ€è¡“æ“ä½œçš„è½‰æ›ï¼ˆä¹Ÿå°±æ˜¯èªªï¼Œx87 FPU æ£§é ‚æŒ‡é‡è¨­å®šç‚º 0ï¼Œä¸” x87 FPU æ¨™è¨˜å­—è¨­å®šç‚ºå…¨ 0 [æœ‰æ•ˆ]ï¼‰ã€‚å¦‚æžœåœ¨å­˜åœ¨æœªæ±º x87 FPU æµ®é»žç•°å¸¸çš„æƒ…æ³ä¸‹åŸ·è¡Œ CVTPI2PS æŒ‡ä»¤ï¼Œå‰‡æœƒåœ¨æ­¤æŒ‡ä»¤ä¹‹å‰è™•ç†ç•°å¸¸ã€‚</p>
 
-<p>×ª»»²»¾«È·Ê±£¬¸ù¾Ý MXCSR ¼Ä´æÆ÷ÖÐµÄÈ¡Õû¿ØÖÆÎ»¶Ô·µ»ØÖµÈ¡Õû¡£ </p>
+<p>è½‰æ›ä¸ç²¾ç¢ºæ™‚ï¼Œæ ¹æ“š MXCSR æš«å­˜å™¨ä¸­çš„å–æ•´æŽ§åˆ¶ä½å°è¿”å›žå€¼å–æ•´ã€‚ </p>
 
-<h2>²Ù×÷</h2>
+<h2>æ“ä½œ</h2>
 
 <p class=Preformatted>DEST[31-0] <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -171,51 +171,51 @@ else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'>");}
 //--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> Convert_Integer_To_Single_Precision_Floating_Point(SRC[63-32]);<br> * high quadword of destination remains unchanged *;</p>
 
-<h2>Ó¢ÌØ¶û<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>(R)</font> C++ ±àÒëÆ÷µÈ¼ÛÄÚ²¿º¯Êý</h2>
+<h2>è‹±ç‰¹çˆ¾<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>(R)</font> C++ ç·¨è­¯å™¨ç­‰åƒ¹å…§éƒ¨å‡½å¼</h2>
 
 <p class=Preformatted>CVTPI2PS __m128 _mm_cvtpi32_ps(__m128 a, __m64 b)</p>
 
-<h2>SIMD ¸¡µãÒì³£</h2>
+<h2>SIMD æµ®é»žç•°å¸¸</h2>
 
-<p>¾«¶È¡£</p>
+<p>ç²¾åº¦ã€‚</p>
 
-<h2>±£»¤Ä£Ê½Òì³£</h2>
+<h2>ä¿è­·æ¨¡å¼ç•°å¸¸</h2>
 
-<p>#GP(0) - CS¡¢DS¡¢ES¡¢FS »ò GS ¶ÎÖÐµÄÄÚ´æ²Ù×÷ÊýÓÐÐ§µØÖ··Ç·¨¡£</p>
+<p>#GP(0) - CSã€DSã€ESã€FS æˆ– GS æ®µä¸­çš„è¨˜æ†¶é«”é‹ç®—å…ƒæœ‰æ•ˆåœ°å€éžæ³•ã€‚</p>
 
-<p>#SS(0) - SS ¶ÎÖÐµÄµØÖ··Ç·¨¡£</p>
+<p>#SS(0) - SS æ®µä¸­çš„åœ°å€éžæ³•ã€‚</p>
 
-<p>#PF(´íÎó´úÂë) - Ò³´íÎó¡£</p>
+<p>#PF(éŒ¯èª¤ç¨‹å¼ç¢¼) - é éŒ¯èª¤ã€‚</p>
 
-<p>#NM - Èç¹û CR0 ÖÐµÄ TS ÉèÖÃÎª 1¡£</p>
+<p>#NM - å¦‚æžœ CR0 ä¸­çš„ TS è¨­å®šç‚º 1ã€‚</p>
 
-<p>#MF - Èç¹û´æÔÚÎ´¾öµÄ x87 FPU Òì³£¡£</p>
+<p>#MF - å¦‚æžœå­˜åœ¨æœªæ±ºçš„ x87 FPU ç•°å¸¸ã€‚</p>
 
-<p>#XM - Èç¹û·¢ÉúÎÞÑÚÂë SIMD ¸¡µãÒì³££¬ÇÒ CR4 ÖÐµÄ OSXMMEXCPT ÊÇ 1¡£</p>
+<p>#XM - å¦‚æžœç™¼ç”Ÿç„¡æŽ©ç¢¼ SIMD æµ®é»žç•°å¸¸ï¼Œä¸” CR4 ä¸­çš„ OSXMMEXCPT æ˜¯ 1ã€‚</p>
 
-<p>#UD - Èç¹û·¢ÉúÎÞÑÚÂë SIMD ¸¡µãÒì³££¬ÇÒ CR4 ÖÐµÄ OSXMMEXCPT ÊÇ 0¡£Èç¹û CR0 ÖÐµÄ EM ÉèÖÃÎª 1¡£Èç¹û CR4 ÖÐµÄ OSFXSR ÊÇ 0¡£Èç¹û CPUID ¹¦ÄÜ±êÖ¾ SSE2 ÊÇ 0¡£</p>
+<p>#UD - å¦‚æžœç™¼ç”Ÿç„¡æŽ©ç¢¼ SIMD æµ®é»žç•°å¸¸ï¼Œä¸” CR4 ä¸­çš„ OSXMMEXCPT æ˜¯ 0ã€‚å¦‚æžœ CR0 ä¸­çš„ EM è¨­å®šç‚º 1ã€‚å¦‚æžœ CR4 ä¸­çš„ OSFXSR æ˜¯ 0ã€‚å¦‚æžœ CPUID åŠŸèƒ½æ¨™èªŒ SSE2 æ˜¯ 0ã€‚</p>
 
-<p>#AC - Èç¹ûÔÚµ±Ç°ÌØÈ¨¼¶±ðÎª 3 Ê±½øÐÐÎ´¶ÔÆëµÄÄÚ´æÒýÓÃ¡£</p>
+<p>#AC - å¦‚æžœåœ¨ç›®å‰ç‰¹æ¬Šç´šåˆ¥ç‚º 3 æ™‚é€²è¡Œæœªå°é½Šçš„è¨˜æ†¶é«”å¼•ç”¨ã€‚</p>
 
-<h2>ÊµµØÖ·Ä£Ê½Òì³£</h2>
+<h2>å¯¦åœ°å€æ¨¡å¼ç•°å¸¸</h2>
 
-<p>ÖÐ¶Ï 13 - Èç¹û²Ù×÷ÊýµÄÈÎºÎ²¿·Ö³öÏÖÔÚ´Ó 0 µ½ 0FFFFH µÄÓÐÐ§µØÖ·¿Õ¼äÖ®Íâ¡£</p>
+<p>ä¸­æ–· 13 - å¦‚æžœé‹ç®—å…ƒçš„ä»»ä½•éƒ¨åˆ†å‡ºç¾åœ¨å¾ž 0 åˆ° 0FFFFH çš„æœ‰æ•ˆåœ°å€ç©ºé–“ä¹‹å¤–ã€‚</p>
 
-<p>#NM - Èç¹û CR0 ÖÐµÄ TS ÉèÖÃÎª 1¡£</p>
+<p>#NM - å¦‚æžœ CR0 ä¸­çš„ TS è¨­å®šç‚º 1ã€‚</p>
 
-<p>#MF - Èç¹û´æÔÚÎ´¾öµÄ x87 FPU Òì³£¡£</p>
+<p>#MF - å¦‚æžœå­˜åœ¨æœªæ±ºçš„ x87 FPU ç•°å¸¸ã€‚</p>
 
-<p>#XM - Èç¹û·¢ÉúÎÞÑÚÂë SIMD ¸¡µãÒì³££¬ÇÒ CR4 ÖÐµÄ OSXMMEXCPT ÊÇ 1¡£</p>
+<p>#XM - å¦‚æžœç™¼ç”Ÿç„¡æŽ©ç¢¼ SIMD æµ®é»žç•°å¸¸ï¼Œä¸” CR4 ä¸­çš„ OSXMMEXCPT æ˜¯ 1ã€‚</p>
 
-<p>#UD - Èç¹û·¢ÉúÎÞÑÚÂë SIMD ¸¡µãÒì³££¬ÇÒ CR4 ÖÐµÄ OSXMMEXCPT ÊÇ 0¡£Èç¹û CR0 ÖÐµÄ EM ÉèÖÃÎª 1¡£Èç¹û CR4 ÖÐµÄ OSFXSR ÊÇ 0¡£Èç¹û CPUID ¹¦ÄÜ±êÖ¾ SSE Îª 0¡£</p>
+<p>#UD - å¦‚æžœç™¼ç”Ÿç„¡æŽ©ç¢¼ SIMD æµ®é»žç•°å¸¸ï¼Œä¸” CR4 ä¸­çš„ OSXMMEXCPT æ˜¯ 0ã€‚å¦‚æžœ CR0 ä¸­çš„ EM è¨­å®šç‚º 1ã€‚å¦‚æžœ CR4 ä¸­çš„ OSFXSR æ˜¯ 0ã€‚å¦‚æžœ CPUID åŠŸèƒ½æ¨™èªŒ SSE ç‚º 0ã€‚</p>
 
-<h2>Ðé 8086 Ä£Ê½Òì³£</h2>
+<h2>è™› 8086 æ¨¡å¼ç•°å¸¸</h2>
 
-<p>Óë&ldquo;ÊµµØÖ·Ä£Ê½&rdquo;ÖÐµÄÒì³£ÏàÍ¬¡£</p>
+<p>èˆ‡&ldquo;å¯¦åœ°å€æ¨¡å¼&rdquo;ä¸­çš„ç•°å¸¸ç›¸åŒã€‚</p>
 
-<p>#PF(´íÎó´úÂë) - Ò³´íÎó¡£</p>
+<p>#PF(éŒ¯èª¤ç¨‹å¼ç¢¼) - é éŒ¯èª¤ã€‚</p>
 
-<p class="whs4">#AC - Èç¹ûÔÚµ±Ç°ÌØÈ¨¼¶±ðÎª 3 Ê±½øÐÐÎ´¶ÔÆëµÄÄÚ´æÒýÓÃ¡£ </p>
+<p class="whs4">#AC - å¦‚æžœåœ¨ç›®å‰ç‰¹æ¬Šç´šåˆ¥ç‚º 3 æ™‚é€²è¡Œæœªå°é½Šçš„è¨˜æ†¶é«”å¼•ç”¨ã€‚ </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

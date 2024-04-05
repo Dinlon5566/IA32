@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc37.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:28:56 GMT -->
 <head>
 
-<title>CMPPD - �Ƚ�ѹ��˫���ȸ���ֵ</title>
+<title>CMPPD - 比較壓縮雙精度浮點值</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="01 16, 2003 1:11:25 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -96,7 +96,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nC - ָ��\nCMPPD - �Ƚ�ѹ��˫���ȸ���ֵ");
+	addTocInfo("參考\n指令集\nIA-32 指令\nC - 指令\nCMPPD - 比較壓縮雙精度浮點值");
 
 	}
 	if (window.writeBtnStyle)
@@ -119,7 +119,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>CMPPD - �Ƚ�ѹ��˫���ȸ���ֵ</h1>
+<h1>CMPPD - 比較壓縮雙精度浮點值</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -128,15 +128,15 @@ else
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>������</td>
+	align=center>操作碼</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>ָ��</td>
+	align=center>指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>˵��</td></tr>
+	align=center>說明</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -147,14 +147,14 @@ else
 	style="margin-bottom: 0;">CMPPD <span style="font-style: italic;"><I>xmm1</I></span>, <span style="font-style: italic;"><I>xmm2/m128</I></span>,<span style="font-style: italic;"><I>imm8</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� imm8 �����Ƚ�ν�ʣ��Ƚ� <span style="font-style: italic;"><I>xmm2/m128</I></span> �е�ѹ��˫���ȸ���ֵ�� <span style="font-style: italic;"><I>xmm1</I></span> �е�ѹ��˫���ȸ���ֵ��</td></tr>
+	style="margin-bottom: 0;">將 imm8 用作比較謂詞，比較 <span style="font-style: italic;"><I>xmm2/m128</I></span> 中的壓縮雙精度浮點值與 <span style="font-style: italic;"><I>xmm1</I></span> 中的壓縮雙精度浮點值。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>��Դ���������ڶ�������������Ŀ�����������һ�����������е�����ѹ��˫���ȸ���ִֵ�� SIMD �Ƚϣ������ȽϽ�����ظ�Ŀ����������Ƚ�ν�ʲ���������������������ָ��Ҫ��ÿ��ѹ��ֵ��ִ�еıȽ����͡��ȽϽ��������ȫ 1���ȽϽ��Ϊ��)��ȫ 0���ȽϽ��Ϊ�٣��������롣Դ������������ XMM �Ĵ����� 128 λ�ڴ�λ�á�Ŀ��������� XMM �Ĵ������Ƚ�ν�ʲ�������һ�� 8 λ������������ͷ 3 λ����Ҫִ�еıȽ����ͣ�������±�������������λ 4 �� 7 ������</p>
+<p>對源運算元（第二個運算元）與目標運算元（第一個運算元）中的兩個壓縮雙精度浮點值執行 SIMD 比較，並將比較結果返回給目標運算元。比較謂詞運算元（第三個運算元）指定要在每對壓縮值上執行的比較型別。比較結果是兩個全 1（比較結果為真)或全 0（比較結果為假）四字掩碼。源運算元可以是 XMM 暫存器或 128 位記憶體位置。目標運算元是 XMM 暫存器。比較謂詞運算元是一個 8 位立即數，其中頭 3 位定義要執行的比較型別（請參閱下表）；立即數的位 4 到 7 保留。</p>
 
-<h4><a name=Comparison></a>CMPPD �� CMPPS ָ��ıȽ�ν��</h4>
+<h4><a name=Comparison></a>CMPPD 與 CMPPS 指令的比較謂詞</h4>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -163,31 +163,31 @@ else
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>ν��</td>
+	align=center>謂詞</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>imm8 ����</td>
+	align=center>imm8 編碼</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>˵��</td>
+	align=center>說明</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>��ϵ</td>
+	align=center>關係</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>ģ��</td>
+	align=center>模擬</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>������Ϊ NaN ʱ�Ľ��</td>
+	align=center>運算元為 NaN 時的結果</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>QNaN ������������Ч�ź�</td></tr>
+	align=center>QNaN 運算元發出無效訊號</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -199,7 +199,7 @@ else
 	align=center>000B</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">����</td>
+	style="margin-bottom: 0;">等於</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">xmm1 == xmm2</td>
@@ -208,9 +208,9 @@ else
 	style="margin-bottom: 0;">&nbsp;</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��</td>
+	style="margin-bottom: 0;">假</td>
 <td valign="middle" class="whs2">
-<p class="whs3">��</td></tr>
+<p class="whs3">否</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -222,7 +222,7 @@ else
 	align=center>001B</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">С��</td>
+	style="margin-bottom: 0;">小於</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">xmm1 &lt; xmm2</td>
@@ -231,9 +231,9 @@ else
 	style="margin-bottom: 0;">&nbsp;</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��</td>
+	style="margin-bottom: 0;">假</td>
 <td valign="middle" class="whs2">
-<p class="whs3">��</td></tr>
+<p class="whs3">是</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -245,7 +245,7 @@ else
 	align=center>010B</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">С�ڻ����</td>
+	style="margin-bottom: 0;">小於或等於</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">xmm1 &lt;= xmm2</td>
@@ -254,9 +254,9 @@ else
 	style="margin-bottom: 0;">&nbsp;</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��</td>
+	style="margin-bottom: 0;">假</td>
 <td valign="middle" class="whs2">
-<p class="whs3">��</td></tr>
+<p class="whs3">是</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -267,7 +267,7 @@ else
 	style="margin-bottom: 0;">&nbsp;</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">����</td>
+	style="margin-bottom: 0;">大於</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">xmm1 &gt; xmm2</td>
@@ -276,9 +276,9 @@ else
 	style="margin-bottom: 0;">swap, protect, lt</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��</td>
+	style="margin-bottom: 0;">假</td>
 <td valign="middle" class="whs2">
-<p class="whs3">��</td></tr>
+<p class="whs3">是</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -289,7 +289,7 @@ else
 	style="margin-bottom: 0;">&nbsp;</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">���ڻ����</td>
+	style="margin-bottom: 0;">大於或等於</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">xmm1 &gt;= xmm2</td>
@@ -298,9 +298,9 @@ else
 	style="margin-bottom: 0;">swap protect, le</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��</td>
+	style="margin-bottom: 0;">假</td>
 <td valign="middle" class="whs2">
-<p class="whs3">��</td></tr>
+<p class="whs3">是</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -312,7 +312,7 @@ else
 	align=center>011B</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">����</td>
+	style="margin-bottom: 0;">無序</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">xmm1 ? xmm2</td>
@@ -321,9 +321,9 @@ else
 	style="margin-bottom: 0;">&nbsp;</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��</td>
+	style="margin-bottom: 0;">真</td>
 <td valign="middle" class="whs2">
-<p class="whs3">��</td></tr>
+<p class="whs3">否</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -335,7 +335,7 @@ else
 	align=center>100B</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">������</td>
+	style="margin-bottom: 0;">不等於</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">!(xmm1 == xmm2)</td>
@@ -344,9 +344,9 @@ else
 	style="margin-bottom: 0;">&nbsp;</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��</td>
+	style="margin-bottom: 0;">真</td>
 <td valign="middle" class="whs2">
-<p class="whs3">��</td></tr>
+<p class="whs3">否</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -358,7 +358,7 @@ else
 	align=center>101B</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��С��</td>
+	style="margin-bottom: 0;">不小於</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">!(xmm1 &lt; xmm2)</td>
@@ -367,9 +367,9 @@ else
 	style="margin-bottom: 0;">&nbsp;</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��</td>
+	style="margin-bottom: 0;">真</td>
 <td valign="middle" class="whs2">
-<p class="whs3">��</td></tr>
+<p class="whs3">是</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -381,7 +381,7 @@ else
 	align=center>110B</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��С�ڻ����</td>
+	style="margin-bottom: 0;">不小於或等於</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">!(xmm1 &lt;= xmm2)</td>
@@ -390,9 +390,9 @@ else
 	style="margin-bottom: 0;">&nbsp;</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��</td>
+	style="margin-bottom: 0;">真</td>
 <td valign="middle" class="whs2">
-<p class="whs3">��</td></tr>
+<p class="whs3">是</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -403,7 +403,7 @@ else
 	style="margin-bottom: 0;">&nbsp;</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">������</td>
+	style="margin-bottom: 0;">不大於</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">!(xmm1 &gt; xmm2)</td>
@@ -412,9 +412,9 @@ else
 	style="margin-bottom: 0;">swap, protect, nlt</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��</td>
+	style="margin-bottom: 0;">真</td>
 <td valign="middle" class="whs2">
-<p class="whs3">��</td></tr>
+<p class="whs3">是</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -425,7 +425,7 @@ else
 	style="margin-bottom: 0;">&nbsp;</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�����ڻ����</td>
+	style="margin-bottom: 0;">不大於或等於</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">!(xmm1 &gt;= xmm2)</td>
@@ -434,9 +434,9 @@ else
 	style="margin-bottom: 0;">swap, protect, nle</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��</td>
+	style="margin-bottom: 0;">真</td>
 <td valign="middle" class="whs2">
-<p class="whs3">��</td></tr>
+<p class="whs3">是</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -448,7 +448,7 @@ else
 	align=center>111B</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">����</td>
+	style="margin-bottom: 0;">有序</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">!(xmm1 ? xmm2)</td>
@@ -457,18 +457,18 @@ else
 	style="margin-bottom: 0;">&nbsp;</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��</td>
+	style="margin-bottom: 0;">假</td>
 <td valign="middle" class="whs2">
-<p class="whs3">��</td></tr>
+<p class="whs3">否</td></tr>
 </table>
 
-<p>��ע�⣬����ȫ 0 �����Ӧ����ֵ +0.0��ȫ 1 �����Ӧ����ֵ -QNaN�����������ļ�����ָ�Ŀ��������е�������������������������������ɴ���</p>
+<p>請注意，由於全 0 掩碼對應浮點值 +0.0，全 1 掩碼對應浮點值 -QNaN，因此如果隨後的計算型指令將目標運算元中的掩碼結果用作輸入運算元，並不會產生錯誤。</p>
 
-<p>��Щ�Ƚ�ֻ��ͨ������ģ����ʵ�֡�������Щ�Ƚϣ�����Ա���뽻�����������ڱ�Ҫʱͨ�����ƼĴ�������������Ŀ��Ĵ����е����ݣ�Ȼ��ʹ�ò�ͬ��ν��ִ�бȽϡ�������Щģ���ν���ڱ���&ldquo;ģ��&rdquo;���г���</p>
+<p>有些比較只能通過軟體模擬來實現。對於這些比較，程式設計師必須交換運算元，在必要時通過複製暫存器來保護正在目標暫存器中的數據，然後使用不同的謂詞執行比較。用於這些模擬的謂詞在標題&ldquo;模擬&rdquo;下列出。</p>
 
-<p>��ע�⣬���ڡ����ڻ���ڡ������ڣ��Լ������ڻ���ڹ�ϵ������Ӳ����ֱ��ʵ�֡�</p>
+<p>請注意，大於、大於或等於、不大於，以及不大於或等於關係不是在硬體中直接實現。</p>
 
-<p>���������� CMPPD ָ��֮�⣬������������������ʵ������˫������α������</p>
+<p>除三運算元 CMPPD 指令之外，編譯器與彙編器還可能實現以下雙運算元偽操作。</p>
 
 <p class="whs3">&nbsp;</p>
 
@@ -479,11 +479,11 @@ else
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>α����</td>
+	align=center>偽操作</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>CMPPD ʵ��</td></tr>
+	align=center>CMPPD 實現</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -550,9 +550,9 @@ else
 	style="margin-bottom: 0;">CMPPD xmm1, xmm2, 7</td></tr>
 </table>
 
-<p>���ڹ�ϵ����Ӳ����ʵ�֣���������ģ����Щ��ϵʱ��Ҫ����ָ����Ӧ����Ϊα������ʵ�֡���������Щ��ϵ������ԱӦ�÷���ʹ����Ӧ��С�ڹ�ϵ�Ĳ���������ʹ���ƶ�ָ��ȷ���������Ƶ���ȷ��Ŀ��Ĵ�������ȷ��Դ���������ֲ��䣩��</p>
+<p>大於關係不在硬體中實現，在軟體中模擬這些關係時需要多條指令，因此應該作為偽操作來實現。（對於這些關係，程式設計師應該反向使用相應的小於關係的運算元，並使用移動指令確保將掩碼移到正確的目標暫存器，並確保源運算元保持不變）。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted>CASE (COMPARISON PREDICATE) OF<br> 0: OP <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -626,7 +626,7 @@ else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs4'>");}
 //--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs4'></noscript> 0000000000000000H; FI;</p>
 
-<h2>Ӣ�ض�<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>(R)</font> C++ �������ȼ��ڲ�����</h2>
+<h2>英特爾<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>(R)</font> C++ 編譯器等價內部函式</h2>
 
 <p>CMPPD for equality __m128d _mm_cmpeq_pd(__m128d a, __m128d b)</p>
 
@@ -652,39 +652,39 @@ else
 
 <p>CMPPD for not-less-than-or-equal __m128d _mm_cmpnle_pd(__m128d a, __m128d b)</p>
 
-<h2>SIMD �����쳣</h2>
+<h2>SIMD 浮點異常</h2>
 
-<p>������Ϊ SNaN ʱ��Ч�����ϱ���ʾʹ�� QNaN ��ν��ʱ��Ч���ǹ�񻯡�</p>
+<p>運算元為 SNaN 時無效、按上表所示使用 QNaN 與謂詞時無效、非規格化。</p>
 
-<h2>����ģʽ�쳣</h2>
+<h2>保護模式異常</h2>
 
-<p>#GP(0) - CS��DS��ES��FS �� GS ���е��ڴ��������Ч��ַ�Ƿ�������ڴ������δ���� 16 �ֽڱ߽磬��������һ�Ρ�</p>
+<p>#GP(0) - CS、DS、ES、FS 或 GS 段中的記憶體運算元有效地址非法。如果記憶體運算元未對齊 16 位元組邊界，不論是哪一段。</p>
 
-<p>#SS(0) - SS ���еĵ�ַ�Ƿ���</p>
+<p>#SS(0) - SS 段中的地址非法。</p>
 
-<p>#PF(�������) - ҳ����</p>
+<p>#PF(錯誤程式碼) - 頁錯誤。</p>
 
-<p>#NM - ��� CR0 �е� TS ����Ϊ 1��</p>
+<p>#NM - 如果 CR0 中的 TS 設定為 1。</p>
 
-<p>#XM - ������������� SIMD �����쳣���� CR4 �е� OSXMMEXCPT �� 1��</p>
+<p>#XM - 如果發生無掩碼 SIMD 浮點異常，且 CR4 中的 OSXMMEXCPT 是 1。</p>
 
-<p>#UD - ������������� SIMD �����쳣���� CR4 �е� OSXMMEXCPT �� 0��<span style="font-weight: bold;"><B></B></span>��� CR0 �е� EM ����Ϊ 1����� CR4 �е� OSFXSR �� 0����� CPUID ���ܱ�־ SSE2 �� 0��</p>
+<p>#UD - 如果發生無掩碼 SIMD 浮點異常，且 CR4 中的 OSXMMEXCPT 是 0。<span style="font-weight: bold;"><B></B></span>如果 CR0 中的 EM 設定為 1。如果 CR4 中的 OSFXSR 是 0。如果 CPUID 功能標誌 SSE2 是 0。</p>
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>實地址模式異常</h2>
 
-<p>#GP(0) - ����ڴ������δ���� 16 �ֽڱ߽磬��������һ�Ρ��ж� 13 - ������������κβ��ֳ����ڴ� 0 �� 0FFFFH ����Ч��ַ�ռ�֮�⡣</p>
+<p>#GP(0) - 如果記憶體運算元未對齊 16 位元組邊界，不論是哪一段。中斷 13 - 如果運算元的任何部分出現在從 0 到 0FFFFH 的有效地址空間之外。</p>
 
-<p>#NM - ��� CR0 �е� TS ����Ϊ 1��</p>
+<p>#NM - 如果 CR0 中的 TS 設定為 1。</p>
 
-<p>#XM - ������������� SIMD �����쳣���� CR4 �е� OSXMMEXCPT �� 1��</p>
+<p>#XM - 如果發生無掩碼 SIMD 浮點異常，且 CR4 中的 OSXMMEXCPT 是 1。</p>
 
-<p>#UD - ������������� SIMD �����쳣���� CR4 �е� OSXMMEXCPT �� 0��<span style="font-weight: bold;"><B></B></span>��� CR0 �е� EM ����Ϊ 1����� CR4 �е� OSFXSR �� 0����� CPUID ���ܱ�־ SSE2 �� 0��</p>
+<p>#UD - 如果發生無掩碼 SIMD 浮點異常，且 CR4 中的 OSXMMEXCPT 是 0。<span style="font-weight: bold;"><B></B></span>如果 CR0 中的 EM 設定為 1。如果 CR4 中的 OSFXSR 是 0。如果 CPUID 功能標誌 SSE2 是 0。</p>
 
-<h2>�� 8086 ģʽ�쳣</h2>
+<h2>虛 8086 模式異常</h2>
 
-<p>��&ldquo;ʵ��ַģʽ&rdquo;�е��쳣��ͬ��</p>
+<p>與&ldquo;實地址模式&rdquo;中的異常相同。</p>
 
-<p class="whs3">#PF(�������) - ҳ���� </p>
+<p class="whs3">#PF(錯誤程式碼) - 頁錯誤。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

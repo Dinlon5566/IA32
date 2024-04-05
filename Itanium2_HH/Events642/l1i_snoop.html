@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\n�ڴ��¼�\nһ��ָ�����Ԥȡ�¼�\nL1I_SNOOP");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 安騰(R) 2 處理器\n英特爾(R) 安騰(R) 2 處理器事件\n記憶體事件\n一級指令快取與預取事件\nL1I_SNOOP");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,14 +106,14 @@ else
 </script>
 <h1>L1I_SNOOP</h1>
 
-<b style="font-weight: bold;">���⣺</b>L1I ��������̽����<b style="font-weight: bold;"><br> ���</b>һ��ָ�����Ԥȡ�¼�<b style="font-weight: bold;"><br> IAR/DAR/OPC��</b>Y/Y/Y<b style="font-weight: bold;"><br> �¼����룺</b>0x4A<b style="font-weight: bold;"><br> ���ÿ����������</b>1 
+<b style="font-weight: bold;">標題：</b>L1I 處理的嗅探請求<b style="font-weight: bold;"><br> 類別：</b>一級指令快取與預取事件<b style="font-weight: bold;"><br> IAR/DAR/OPC：</b>Y/Y/Y<b style="font-weight: bold;"><br> 事件程式碼：</b>0x4A<b style="font-weight: bold;"><br> 最大每週期增量：</b>1 
 
-<p><b style="font-weight: bold;">���壺</b>�ṩ L1I ��������̽����64 �ֽڵ����ȣ��������й���Ϣ��</p>
+<p><b style="font-weight: bold;">定義：</b>提供 L1I 處理的嗅探請求（64 位元組的粒度）數量的有關資訊。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> 備註</h3>
 
-<p class="whs2">�������ϳ���֮��ÿ�� &quot;fc&quot; ָ����� 1 �� L1I ��̽���󡣾���ÿ�� IA32 �洢�������� 1 �� L1I ��̽���󣬵�������æ��������Ҫ�����飬������ L1D �е���ѭ���������ͳ��������Ρ�L1D ����̽�����͵� ifr ʱ����� ifr ��̽�ܵ�æ������¼���ͳ�ƶ����ͬ����̽�������Ļ�����Ҳ��������̽����Щ��������Ҳ���Ե��� L1I ��̽�� </p>
+<p class="whs2">在匯流排上出現之後，每個 &quot;fc&quot; 指令將產生 1 個 L1I 嗅探請求。儘管每個 IA32 儲存都將產生 1 個 L1I 嗅探請求，但由於它忙於做更重要的事情，隨著在 L1D 中的再循環，這裡會統計它許多次。L1D 將嗅探請求發送到 ifr 時，如果 ifr 嗅探管道忙，則此事件將統計多次相同的嗅探。犧牲的快取線也將產生嗅探。有些匯流排事務也可以導致 L1I 嗅探。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

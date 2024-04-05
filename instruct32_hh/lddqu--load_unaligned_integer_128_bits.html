@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/lddqu--load_unaligned_integer_128_bits.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:55 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>LDDQU - ����δ�������� 128 λ</title>
+<title>LDDQU - 載入未對齊整數 128 位</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nL - ָ��\nLDDQU - ����δ�������� 128 λ");
+	addTocInfo("參考\n指令集\nIA-32 指令\nL - 指令\nLDDQU - 載入未對齊整數 128 位");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,7 +104,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>LDDQU - ����δ�������� 128 λ</h1>
+<h1>LDDQU - 載入未對齊整數 128 位</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -115,10 +115,10 @@ else
 	style="margin-bottom: 0;">&nbsp;</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">說明</td></tr>
 
 <tr>
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
@@ -126,62 +126,62 @@ else
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
 <p CLASS=TableCell>LDDQU xmm, m128</td>
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
-<p CLASS=TableCell>�� 128 λ�� Mem ���ص� XMM �Ĵ�����</td></tr>
+<p CLASS=TableCell>將 128 位從 Mem 載入到 XMM 暫存器。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-��ָ���ڹ����ϵ�ͬ�� MOVDQU xmm, m128������˫���ִ��ڴ�Դ���������ڶ������������ƶ���Ŀ��Ĵ�������һ������������Դ����������δ���� 16 �ֽڱ߽磬�����ᵼ������һ�㱣�����쳣 (#GP)�����Դ��������Խ�����߽߱磬���ָ����ܻ������ MOVDQU �йص����ܡ��������Ҫ����д洢������ת�������ָ����ܻή�����ܡ�������֪����� 16 �ֽڱ߽���ڴ�λ�ã�Ҫ����������/�Ƴ�˫���֣���ʹ�� MOVDQA ָ� 
+此指令在功能上等同於 MOVDQU xmm, m128。它將雙四字從記憶體源運算元（第二個運算元）移動到目標暫存器（第一個運算元）。源運算元可能未對齊 16 位元組邊界，而不會導致產生一般保護性異常 (#GP)。如果源運算元跨越快取線邊界，則此指令可能會提高與 MOVDQU 有關的效能。如果載入要求進行儲存至載入轉發，則此指令可能會降低效能。對於已知與對齊 16 位元組邊界的記憶體位置，要在其中移入/移出雙四字，請使用 MOVDQA 指令。 
 
-<h2>ʵ�ֱ�ע</h2>
+<h2>實現備註</h2>
 
-����������������������� 16 �ֽڱ߽磩ʵ�ֵ� LDDQU �ᵼ�����ܲ��� MOVDQU���ض��Ĵ��������ܻᰴ�� MOVDQU һģһ��ȥʵ�� LDDQU�� 
+如果按上文所述（對齊兩個 16 位元組邊界）實現的 LDDQU 會導致效能不及 MOVDQU，特定的處理器可能會按照 MOVDQU 一模一樣去實現 LDDQU。 
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted>xmm[127-0] = m128; </p>
 
-<h2>��ֵ�쳣</h2>
+<h2>數值異常</h2>
 
-��
+無
 
-<h2>����ģʽ�쳣</h2>
+<h2>保護模式異常</h2>
 
-#GP(0) - CS��DS��ES��FS �� GS ���е��ڴ��������Ч��ַ�Ƿ��� 
+#GP(0) - CS、DS、ES、FS 或 GS 段中的記憶體運算元有效地址非法。 
 
-<br>#SS(0) - SS ���еĵ�ַ�Ƿ��� 
+<br>#SS(0) - SS 段中的地址非法。 
 
-<br>#PF(�������) - ҳ����
+<br>#PF(錯誤程式碼) - 頁錯誤；
 
-<br>#UD - ��� CR0.EM = 1��
+<br>#UD - 如果 CR0.EM = 1。
 
-<br>#NM - ��� CR0 �е� TS ����Ϊ 1��
+<br>#NM - 如果 CR0 中的 TS 設定為 1；
 
-<br>#UD - ��� CR4.OSFXSR(bit 9) = 0��
+<br>#UD - 如果 CR4.OSFXSR(bit 9) = 0。
 
-<br>#UD - ��� CPUID.PNI(ECX bit 0) = 0��LDDQU������δ�������� 128 λ������
+<br>#UD - 如果 CPUID.PNI(ECX bit 0) = 0。LDDQU：載入未對齊整數 128 位（續）
  
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>實地址模式異常</h2>
 
-�ж� 13 - ������������κβ��ֳ����ڴ� 0 �� 0FFFFH ����Ч��ַ�ռ�֮�⡣ 
+中斷 13 - 如果運算元的任何部分出現在從 0 到 0FFFFH 的有效地址空間之外。 
 
-<br>#NM - ��� CR0 �е� TS ����Ϊ 1�� 
+<br>#NM - 如果 CR0 中的 TS 設定為 1。 
 
-<br>#UD - ��� CR0.EM = 1��
-��� CR4.OSFXSR(bit 9) = 0��
-��� CPUID.PNI(ECX bit 0) = 0��
-<h2>�� 8086 ģʽ�쳣</h2>
+<br>#UD - 如果 CR0.EM = 1。
+如果 CR4.OSFXSR(bit 9) = 0。
+如果 CPUID.PNI(ECX bit 0) = 0。
+<h2>虛 8086 模式異常</h2>
 
-�ж� 13 - ������������κβ��ֳ����ڴ� 0 �� 0FFFFH ����Ч��ַ�ռ�֮�⡣ 
+中斷 13 - 如果運算元的任何部分出現在從 0 到 0FFFFH 的有效地址空間之外。 
 
-<br>#NM - ��� CR0 �е� TS ����Ϊ 1�� 
+<br>#NM - 如果 CR0 中的 TS 設定為 1。 
 
-<br>#UD - ��� CR0.EM = 1����� CR4.OSFXSR(bit 9) = 0����� CPUID.PNI(ECX bit 0) = 0��#PF(�������) - ҳ���� 
+<br>#UD - 如果 CR0.EM = 1。如果 CR4.OSFXSR(bit 9) = 0。如果 CPUID.PNI(ECX bit 0) = 0。#PF(錯誤程式碼) - 頁錯誤。 
 
-<h2>ע��</h2>
+<h2>註釋</h2>
 
-��ָ����ܻ�ʹ������ 128 λ����ļ��أ�������� 32 �ֽڣ�ģ��δ������ڴ���ʣ�ֻҪ������ʵ�ַ�����ʹ�� MOVDQU ���� 16 �ֽڸ����������ơ����Դ���������� 16 �ֽڱ߽磬����ʵ�ַ�����16 �ֽڿ��ܻ���ض�Ρ���������ԭ����ʹ�ò��ɻ������д�� (WC) ���ڴ�����ʱ��Ӧ����ʹ�� LDDQU�����ڲ��ɻ���� WC �ڴ����������ʹ�� MOVDQU�������߲������Ӱ������ʱ����ָ�������� MOVDQU�����أ�������Ӧ���ڴ洢������ת�����ܷǳ��ؼ���λ�á�����洢������ת�������ܶ���Ӧ�ó�����Էǳ��ؼ��������ݶ��� 128 λʱ����ʹ�� MOVDQA �洢���ضԣ�����δ���� 128 λʱ����ʹ�� MOVDQU �洢���ضԡ�����ƫ����������δ���루�ر��� 16 �ֽ�δ���룩��ַ���޵� 15 ���ֽ����ڵ�Ҫ��LDDQU ����Ϊȡ���ھ���ʵ�ֵİ汾���������¿��ܻᷢ�� #GP �쳣�����ڶεĶ��壨��ַ������ֵ�������ʵ��ֽڿ��ܻ�������ͬ�����ݷ��ʿ�Խ 16b(32b) �߽�ʱ��16b(32b) Ѱַģʽ�� LDDQU ����ΪҲȡ���ھ���ʵ�ֵİ汾�����ܻᡢҲ���ܲ��ᷢ�� #GP �쳣�����ڶεĶ��壨��ַ������ֵ�������ʵ��ֽڿ��ܻ�������ͬ�� 
+此指令可能會使用兩個 128 位對齊的載入（例如載入 32 位元組）模擬未對齊的記憶體訪問，只要這樣的實現方案比使用 MOVDQU 載入 16 位元組更有效能優勢。如果源運算元對齊 16 位元組邊界，基於實現方案，16 位元組可能會載入多次。由於以上原因，在使用不可快取或結合寫入 (WC) 的記憶體區域時，應避免使用 LDDQU。對於不可快取或 WC 記憶體區域，請繼續使用 MOVDQU。快取線拆分嚴重影響效能時，此指令可以替代 MOVDQU（載入）。它不應用於儲存至載入轉發效能非常關鍵的位置。如果儲存至載入轉發的效能對於應用程式而言非常關鍵，則數據對齊 128 位時，請使用 MOVDQA 儲存載入對，數據未對齊 128 位時，請使用 MOVDQU 儲存載入對。對於偏移量必須在未對齊（特別是 16 位元組未對齊）基址或極限的 15 個位元組以內的要求，LDDQU 的行為取決於具體實現的版本；此情形下可能會發出 #GP 異常。基於段的定義（基址、極限值），訪問的位元組可能會有所不同。數據訪問跨越 16b(32b) 邊界時，16b(32b) 定址模式中 LDDQU 的行為也取決於具體實現的版本，可能會、也可能不會發出 #GP 異常。基於段的定義（基址、極限值），訪問的位元組可能會有所不同。 
 
 <script type="text/javascript" language="javascript1.2">
 <!--

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Miscellaneous_Loads_and_Stores_Overview.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:46:54 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>���� - ����������洢</title>
+<title>概述 - 其它載入與儲存</title>
 
 <!--(Meta)==========================================================-->
 
@@ -97,7 +97,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nѰַģʽ\n����������洢\n����������洢����");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n定址模式\n其它載入與儲存\n其它載入與儲存概述");
 
 	}
 	if (window.writeBtnStyle)
@@ -122,21 +122,21 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'></noscript><a name="Miscellaneous Loads and Stores"></a>����������洢����</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'></noscript><a name="Miscellaneous Loads and Stores"></a>其它載入與儲存概述</h1>
 
 <div>
-<p CLASS=Body>&ldquo;����������洢&rdquo;Ѱַģʽ�ֳ� 6 ����ģʽ���������ڼ��������洢�з��Ż��޷��Ű��֡������з����ֽڻ������洢˫��ָ��ĵ�ַ����Ѱַģʽ��һ���﷨�ں��������ṩ��</p>
+<p CLASS=Body>&ldquo;其它載入與儲存&rdquo;定址模式分成 6 個子模式。它們用於計算載入與儲存有符號或無符號半字、載入有符號位元組或載入與儲存雙字指令的地址。此定址模式的一般語法在後續部分提供。</p>
 
 <div>
-<h2>һ���﷨</h2>
+<h2>一般語法</h2>
 
 <div>
 <p class=Preformatted><span class=Code>LDR|STR [condition] H|SH|SB|D dest, addr_mode </span></p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -149,7 +149,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ��&ldquo;���ؼĴ���&rdquo;ָ�</td></tr>
+<p CLASS=CellBodyLeft>指定&ldquo;載入暫存器&rdquo;指令。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -158,7 +158,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ��&ldquo;�洢�Ĵ���&rdquo;ָ�</td></tr>
+<p CLASS=CellBodyLeft>指定&ldquo;儲存暫存器&rdquo;指令。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -167,7 +167,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="notational_conventions.html#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 個條件之一。請參閱<a HREF="notational_conventions.html#Condition Code Status">條件程式碼狀態</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -176,7 +176,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ָ����չ��&ldquo;���ؼĴ�������&rdquo;(<em CLASS=Source> LDRH</em> ) ָ���&ldquo;�洢�Ĵ�������&rdquo;(<em CLASS=Source> STRH</em> ) ָ������й���ϸ��Ϣ������� <a href="INST_LDRH.html" CLASS="XRef">LDRH ָ��</a>��<span class=XRef> </span><a href="INST_STRH.html">STRH ָ��</a>��</td></tr>
+<p CLASS=CellBodyLeft>將指令擴充套件到&ldquo;載入暫存器半字&rdquo;(<em CLASS=Source> LDRH</em> ) 指令或&ldquo;儲存暫存器半字&rdquo;(<em CLASS=Source> STRH</em> ) 指令。如需有關詳細資訊，請參閱 <a href="INST_LDRH.html" CLASS="XRef">LDRH 指令</a>或<span class=XRef> </span><a href="INST_STRH.html">STRH 指令</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -186,7 +186,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ָ����չ��&ldquo;���ؼĴ����з��Ű���&rdquo;(<em CLASS=Source> LDRSH</em> ) ָ������й���ϸ��Ϣ������� <a href="INST_LDRSH.html" CLASS="XRef"></a><a href="INST_LDRSH.html">LDRSH ָ��</a>��</td></tr>
+<p CLASS=CellBodyLeft>將指令擴充套件到&ldquo;載入暫存器有符號半字&rdquo;(<em CLASS=Source> LDRSH</em> ) 指令。如需有關詳細資訊，請參閱 <a href="INST_LDRSH.html" CLASS="XRef"></a><a href="INST_LDRSH.html">LDRSH 指令</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -196,7 +196,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ָ����չ��&ldquo;���ؼĴ����з����ֽ�&rdquo;(<em CLASS=Source> LDRSB</em> ) ָ������й���ϸ��Ϣ������� <a href="INST_LDRSB.html" CLASS="XRef">LDRSB ָ��</a>�� </td></tr>
+<p CLASS=CellBodyLeft>將指令擴充套件到&ldquo;載入暫存器有符號位元組&rdquo;(<em CLASS=Source> LDRSB</em> ) 指令。如需有關詳細資訊，請參閱 <a href="INST_LDRSB.html" CLASS="XRef">LDRSB 指令</a>。 </td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -206,7 +206,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ָ����չ�� <em CLASS=Source>LDRD</em> ָ��� <em CLASS=Source>STRD</em> ָ������й���ϸ��Ϣ������� <a href="INST_LDRD.html" CLASS="XRef">LDRD ָ��</a>�� <a href="INST_STRD.html" CLASS="XRef">STRD ָ��</a>��</td></tr>
+<p CLASS=CellBodyLeft>將指令擴充套件到 <em CLASS=Source>LDRD</em> 指令或 <em CLASS=Source>STRD</em> 指令。如需有關詳細資訊，請參閱 <a href="INST_LDRD.html" CLASS="XRef">LDRD 指令</a>或 <a href="INST_STRD.html" CLASS="XRef">STRD 指令</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -215,12 +215,12 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ��Ŀ��Ĵ�����</td></tr>
+<p CLASS=CellBodyLeft>指定目標暫存器。</td></tr>
 </table>
 
 <p CLASS=Body>&nbsp;</p>
 
-<p CLASS=Body>addr_mode ������ 6 ����ģʽ֮һ�� </p>
+<p CLASS=Body>addr_mode 是以下 6 種子模式之一： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -228,10 +228,10 @@ else
 <tr>
 <th ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellHeadingCenter>��ģʽ</th>
+<p CLASS=CellHeadingCenter>子模式</th>
 <th ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellHeadingCenter>˵��</th></tr>
+<p CLASS=CellHeadingCenter>說明</th></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -240,7 +240,7 @@ else
 							style="font-style: italic;">&#xA0;[basereg, #+/-value]</em> </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ƫ����ѡ�<br> �� 8 λ������ƫ������ֵ�ӵ���ַ�Ĵ���������м�ȥ��<a href="address_immediate_offset_(am_3).html">���������������洢��������ƫ���� (AM 3)��</a></td></tr>
+<p CLASS=CellBodyLeft>偏移量選項：<br> 將 8 位立即數偏移量的值加到基址暫存器，或從中減去。<a href="address_immediate_offset_(am_3).html">請參閱其它載入與儲存：立即數偏移量 (AM 3)。</a></td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -249,7 +249,7 @@ else
 							style="font-style: italic;">&#xA0;[basereg, +/-indexreg]</em> </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ƫ����ѡ�<br> ����ַ�Ĵ�����ֵ�ӵ���ַ�Ĵ���������м�ȥ��<a href="Address_Register_Offset_(AM_3).html">���������������洢���Ĵ���ƫ���� (AM 3)</a>��</td></tr>
+<p CLASS=CellBodyLeft>偏移量選項：<br> 將變址暫存器的值加到基址暫存器，或從中減去。<a href="Address_Register_Offset_(AM_3).html">請參閱其它載入與儲存：暫存器偏移量 (AM 3)</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -258,7 +258,7 @@ else
 							style="font-style: italic;">&#xA0;[basereg #+/-value]!</em> </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>���ȱ�ַѡ�<br> �� 8 λ������ƫ������ֵ�ӵ���ַ�Ĵ���������м�ȥ�����������ĳ����������ֵд�ػ�ַ�Ĵ�����<a href="address_immediate_pre-indexed_(am_3).html">���������������洢�����������ȱ�ַ (AM 3)��</a></td></tr>
+<p CLASS=CellBodyLeft>事先變址選項：<br> 將 8 位立即數偏移量的值加到基址暫存器，或從中減去。如果傳遞了某個條件，則將值寫回基址暫存器。<a href="address_immediate_pre-indexed_(am_3).html">請參閱其它載入與儲存：立即數事先變址 (AM 3)。</a></td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -267,7 +267,7 @@ else
 							style="font-style: italic;">&#xA0;[basereg, +/-indexreg]!</em> </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>���ȱ�ַѡ�<br> ����ַ�Ĵ�����ֵ�ӵ���ַ�Ĵ���������м�ȥ�����������ĳ����������ֵд�ػ�ַ�Ĵ�����<a href="Address_Register_Pre-indexed_(AM_3).html">���������������洢���Ĵ������ȱ�ַ (AM 3)��</a></td></tr>
+<p CLASS=CellBodyLeft>事先變址選項：<br> 將變址暫存器的值加到基址暫存器，或從中減去。如果傳遞了某個條件，則將值寫回基址暫存器。<a href="Address_Register_Pre-indexed_(AM_3).html">請參閱其它載入與儲存：暫存器事先變址 (AM 3)。</a></td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -276,7 +276,7 @@ else
 							style="font-style: italic;">&#xA0;[basereg], #+/-value</em> </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�º��ַѡ�<br> �� 8 λ������ƫ������ֵ�ӵ���ַ�Ĵ���������м�ȥ��Ȼ��ֵд�ػ�ַ�Ĵ�����<a href="address_immedate_post-indexed_(am_3).html">���������������洢���������º��ַ (AM 3)</a>��</td></tr>
+<p CLASS=CellBodyLeft>事後變址選項：<br> 將 8 位立即數偏移量的值加到基址暫存器，或從中減去。然後將值寫回基址暫存器。<a href="address_immedate_post-indexed_(am_3).html">請參閱其它載入與儲存：立即數事後變址 (AM 3)</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -285,15 +285,15 @@ else
 							style="font-style: italic;">&#xA0;[basereg], +/-indexreg</em> </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�º��ַѡ�<br> �������ĳ���������򽫱�ַ�Ĵ�����ֵ�ӵ���ַ�Ĵ���������м�ȥ��Ȼ��ֵд�ػ�ַ�Ĵ�����<a href="Address_Register_Post-indexed_(AM_3).html">���������������洢���Ĵ����º��ַ (AM 3)��</a></td></tr>
+<p CLASS=CellBodyLeft>事後變址選項：<br> 如果傳遞某個條件，則將變址暫存器的值加到基址暫存器，或從中減去。然後將值寫回基址暫存器。<a href="Address_Register_Post-indexed_(AM_3).html">請參閱其它載入與儲存：暫存器事後變址 (AM 3)。</a></td></tr>
 </table>
 </div>
 </div>
 
 <div>
-<h2>һ�����</h2>
+<h2>一般編碼</h2>
 
-<p CLASS=Body>�±���ʾ&ldquo;Ѱַģʽ 3&rdquo;�ı��룺</p>
+<p CLASS=Body>下表顯示&ldquo;定址模式 3&rdquo;的編碼：</p>
 
 <p CLASS=Body>&nbsp;&nbsp;</p>
 
@@ -316,7 +316,7 @@ else
 <col class="whs3">
 <col class="whs3">
 
-<h3 class=NoteTipHead>���� - Ѱַģʽ 3��������ƫ����/��ַ
+<h3 class=NoteTipHead>編碼 - 定址模式 3、立即數偏移量/變址
  </h3>
 
 <tr>
@@ -500,7 +500,7 @@ else
 <col class="whs3">
 <col class="whs3">
 
-<h3>���� - Ѱַģʽ 3���Ĵ���ƫ����/��ַ </h3>
+<h3>編碼 - 定址模式 3、暫存器偏移量/變址 </h3>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" width="20" class="whs4">
@@ -664,7 +664,7 @@ else
 
 <p CLASS=Body>&nbsp;</p>
 
-<p CLASS=Body>���У� </p>
+<p CLASS=Body>其中： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -676,7 +676,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft><em CLASS=Source 							style="font-style: italic;">P == 0</em> ��ʾ�º��ַѰַ����ַ�Ĵ���ֵ�����ڴ��ַ��ƫ����Ӧ���ڻ�ַ�Ĵ�����ֵ����д�ػ�ַ�Ĵ�����<em CLASS=Source><br>P == 1</em> ��ʾƫ����Ѱַ�����ȱ�ַѰַ�������� <em CLASS=Source>W</em> λȷ�������ڴ��ַ��ͨ����ƫ����Ӧ���ڻ�ַ�Ĵ���ֵ�����ɵġ�</td></tr>
+<p CLASS=CellBodyLeft><em CLASS=Source 							style="font-style: italic;">P == 0</em> 表示事後變址定址。基址暫存器值用作記憶體地址。偏移量應用於基址暫存器的值，並寫回基址暫存器。<em CLASS=Source><br>P == 1</em> 表示偏移量定址或事先變址定址。（這由 <em CLASS=Source>W</em> 位確定。）記憶體地址是通過將偏移量應用於基址暫存器值而產生的。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -685,7 +685,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ʾ��ƫ�����ӵ���ַ���Ǵ��м�ȥ��<br> ��� <em CLASS=Source>U == 1</em>����ƫ�����ӵ���ַ�ϡ�<br>��� <em CLASS=Source>U == 0</em>����ƫ�����ӻ�ַ�м�ȥ��</td></tr>
+<p CLASS=CellBodyLeft>表示是偏移量加到基址還是從中減去：<br> 如果 <em CLASS=Source>U == 1</em>，則偏移量加到基址上。<br>如果 <em CLASS=Source>U == 0</em>，則偏移量從基址中減去。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -694,7 +694,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft><em CLASS=Source>W</em> �ĺ���ȡ���� <em CLASS=Source>P</em> �����ã�<br>��� <em CLASS=Source>P == 0</em>���� <em CLASS=Source>W</em> ������ 0�������������޷�Ԥ֪��<br>��� <em CLASS=Source>P == 1</em>��<br> ��� <em CLASS=Source>W == 0</em>�����ַ�Ĵ��������£�ƫ����Ѱַ����<br>��� <em CLASS=Source>W == 1</em>���������ڴ��ַд�ػ�ַ�Ĵ��������ȱ�ַѰַ����</td></tr>
+<p CLASS=CellBodyLeft><em CLASS=Source>W</em> 的含義取決於 <em CLASS=Source>P</em> 的設定：<br>如果 <em CLASS=Source>P == 0</em>，則 <em CLASS=Source>W</em> 必須是 0。否則結果將會無法預知。<br>如果 <em CLASS=Source>P == 1</em>：<br> 如果 <em CLASS=Source>W == 0</em>，則基址暫存器不更新（偏移量定址）。<br>如果 <em CLASS=Source>W == 1</em>，則計算的記憶體地址寫回基址暫存器（事先變址定址）。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -703,7 +703,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ʾ&ldquo;����&rdquo;��&ldquo;�洢&rdquo;��<em CLASS=Source><br> L==1</em> ��ʾ&ldquo;����&rdquo;��<em CLASS=Source><br>L == 0</em> ��ʾ&ldquo;�洢&rdquo;��</td></tr>
+<p CLASS=CellBodyLeft>表示&ldquo;載入&rdquo;或&ldquo;儲存&rdquo;：<em CLASS=Source><br> L==1</em> 表示&ldquo;載入&rdquo;。<em CLASS=Source><br>L == 0</em> 表示&ldquo;儲存&rdquo;。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -712,7 +712,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ʾ�з��Ż��޷��Ű��ַ��ʣ�<em   CLASS=Source><br>S == 0</em> ��ʾ�޷��Ű��ַ��ʡ�<em CLASS=Source><br>S == 1</em> ��ʾ�з��Ű��ַ��ʡ�</td></tr>
+<p CLASS=CellBodyLeft>表示有符號或無符號半字訪問：<em   CLASS=Source><br>S == 0</em> 表示無符號半字訪問。<em CLASS=Source><br>S == 1</em> 表示有符號半字訪問。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -721,7 +721,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ʾ���ַ��ʻ��ֽڷ��ʣ�<em   CLASS=Source><br>H == 0</em> ��ʾ�ֽڷ��ʡ�<em CLASS=Source><br>H == 1</em> ��ʾ���ַ��ʡ�</td></tr>
+<p CLASS=CellBodyLeft>表示半字訪問或位元組訪問：<em   CLASS=Source><br>H == 0</em> 表示位元組訪問。<em CLASS=Source><br>H == 1</em> 表示半字訪問。</td></tr>
 </table>
 
 <ul>
@@ -729,15 +729,15 @@ else
 	&nbsp; 
 </ul>
 
-<h2>�޷����ֽ�</h2>
+<h2>無符號位元組</h2>
 
-<p CLASS=Body>��� <em CLASS=Source>S</em> �� <em CLASS=Source>H</em> ��ʾ�޷����ֽڣ�<em CLASS=Source>S == 0</em> �� <em CLASS=Source>H == 0</em>������ָ�ʹ�ô�Ѱַģʽ������һ���˷�ָ��� <em CLASS=Source>SWP</em> �� <em CLASS=Source>SWPB</em> ָ��������������/�洢ָ����չ����δ�����ָ�</p>
+<p CLASS=Body>如果 <em CLASS=Source>S</em> 與 <em CLASS=Source>H</em> 表示無符號位元組（<em CLASS=Source>S == 0</em> 且 <em CLASS=Source>H == 0</em>），則指令不使用此定址模式。這是一個乘法指令，即 <em CLASS=Source>SWP</em> 或 <em CLASS=Source>SWPB</em> 指令，或是算術或載入/儲存指令擴充套件區中未分配的指令。</p>
 
-<p CLASS=Body>�޷����ֽ�ͨ��ָ�� <em CLASS=Source>LDRB</em>��<em CLASS=Source>LDRBT</em>��<em CLASS=Source>STRB</em> �� <em CLASS=Source>STRBT</em> ���ʡ���Щָ��ʹ��Ѱַģʽ 2�������й���ϸ��Ϣ�������&ldquo;Ѱַģʽ 2��������洢�ֻ��޷����ֽ�&rdquo;��</p>
+<p CLASS=Body>無符號位元組通過指令 <em CLASS=Source>LDRB</em>、<em CLASS=Source>LDRBT</em>、<em CLASS=Source>STRB</em> 及 <em CLASS=Source>STRBT</em> 訪問。這些指令使用定址模式 2。如需有關詳細資訊，請參閱&ldquo;定址模式 2：載入與儲存字或無符號位元組&rdquo;。</p>
 
-<h2>�з��Ŵ洢</h2>
+<h2>有符號儲存</h2>
 
-��� <em CLASS=Source>S</em> �� <span class=Source 									style="font-style: italic;"><I>L</I></span> ��ʾ�з��Ŵ洢ָ�<em CLASS=Source>S == 1</em> �� <span class=Source 		style="font-style: italic;"><I>L</I></span><span class=Source> </span><em   CLASS=Source>== 0</em>������ָ���Ǽ���/�洢��չ����δ�����ָ��з����ֽ������ʹ��ָ�� <em CLASS=Source>STRB</em> �� <em CLASS=Source>STRH</em> �洢�� 
+如果 <em CLASS=Source>S</em> 與 <span class=Source 									style="font-style: italic;"><I>L</I></span> 表示有符號儲存指令（<em CLASS=Source>S == 1</em> 且 <span class=Source 		style="font-style: italic;"><I>L</I></span><span class=Source> </span><em   CLASS=Source>== 0</em>），則指令是載入/儲存擴充套件區中未分配的指令。有符號位元組與半字使用指令 <em CLASS=Source>STRB</em> 與 <em CLASS=Source>STRH</em> 儲存。 
 </div>
 </div>
 

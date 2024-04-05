@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_STRB.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:43 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>STRB - �洢�Ĵ����ֽ�</title>
+<title>STRB - 儲存暫存器位元組</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nS - ָ��\nSTRB");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nS - 指令\nSTRB");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,16 +104,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">STRB - �洢�Ĵ����ֽ�</h1>
+<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題">STRB - 儲存暫存器位元組</h1>
 
 <div>
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted><span Class=Code>STR[condition] op1, addr_mode</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,7 +126,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 個條件之一。請參閱<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">條件程式碼狀態</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -136,7 +136,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>����Դ�������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含源運算元的暫存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -146,26 +146,26 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ѱַģʽ 2��<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.htm">������洢�ֻ��޷����ֽ�</a></td></tr>
+<p CLASS=CellBodyLeft>定址模式 2：<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.htm">載入與儲存字或無符號位元組</a></td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p CLASS=Body>STRB ָ��� <em CLASS=SourceItalic>op1</em> �� LSB ��ȡһ���ֽڵ����ݣ��������洢�� <em CLASS=SourceItalic>addr_mode</em> ָ���ĵ�ַ�����������ַ�Ĵ������������� PC ���Ѱַ��condition ��������Чֵ������ָ��� NOP��</p>
+<p CLASS=Body>STRB 指令從 <em CLASS=SourceItalic>op1</em> 的 LSB 讀取一個位元組的數據，並將它儲存到 <em CLASS=SourceItalic>addr_mode</em> 指定的地址。如果用作基址暫存器，它還啟用 PC 相對定址。condition 必須是有效值；否則將指令當作 NOP。</p>
 </div>
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif"> ��ע</h3>
+<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif"> 備註</h3>
 
-�����ͼ������Ч�ļ��ػ�洢���ݷ��ʣ�������������ֹ�쳣�� 
+如果試圖進行無效的載入或儲存數據訪問，則產生數據終止異常。 
 
-<h2>Ѱַģʽ</h2>
+<h2>定址模式</h2>
 
-ģʽ 2 - ������洢�ֻ��޷����ֽڡ� 
+模式 2 - 載入與儲存字或無符號位元組。 
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -232,7 +232,7 @@ else
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� </h2>
+<h2>編碼 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -339,13 +339,13 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funstr <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0 <br> 4 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@ **** STRB (Addressing Mode 2) **** <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; <br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example,CODE,READONLY <br> 7 <br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1 <br> 9 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Store least byte from R8 to an address 28 bytes<br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; above that held in R10<br> 11 &#xA0;&#xA0;00000000 &#xA0;&#xA0;E5CA801C &#xA0;&#xA0;STRB &#xA0;&#xA0;R8, [R10,#28] <br> 12 <br> 13 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Store least byte from R1 to address held in R4<br> 14 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; then increment R4 by an offset given by <br> 15 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; R2 rotated right 8 times <br> 16 &#xA0;&#xA0;00000004 &#xA0;&#xA0;E6C41462 &#xA0;&#xA0;STRB &#xA0;&#xA0;R1, [R4], R2,ROR #8<br> 17 <br> 18 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Store least byte from R0 to address held in R3<br> 19 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E5C30000 &#xA0;&#xA0;STRB &#xA0;&#xA0;R0, [R3]</span> &#xA0;</p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
-<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.htm">�����Ѱַģʽ 2��������洢�ֻ��޷����ֽ� </a>
+<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.htm">請參閱定址模式 2：載入與儲存字或無符號位元組 </a>
 </div>
 </div>
 

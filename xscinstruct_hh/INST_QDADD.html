@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_QDADD.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:54 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>QDADD - DSP ָ��</title>
+<title>QDADD - DSP 指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nQ - ָ��\nQDADD");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nQ - 指令\nQDADD");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,16 +104,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">QDADD - DSP ָ��</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題">QDADD - DSP 指令</h1>
 
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <div>
 <p CLASS=Preformatted>QDADD[condition] dest, op1, op2</p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -125,7 +125,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ��<br> �����<a HREF="notational_conventions.html#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 個條件之一。<br> 請參閱<a HREF="notational_conventions.html#Condition Code Status">條件程式碼狀態</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -135,7 +135,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>目標暫存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -145,7 +145,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>������һ���������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含第一個運算元的暫存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -155,21 +155,21 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�����ڶ����������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含第二個運算元的暫存器</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p CLASS=Body>QDADD ָ� <em CLASS=SourceItalic>op2</em> �ӱ���Ȼ��ʹ�� <em CLASS=SourceItalic>op1</em> ��<em CLASS=SourceItalic>op2</em> ִ�������ӷ�����������洢�� <em CLASS=SourceItalic>dest</em>���м��������ʹ�������Ϊ 32 λ�з�����������Χ�� -2<span style="vertical-align: Super;">31</span> �� x �� 2<span 
- style="vertical-align: Super;">31</span> - 1����һ�����������ʱ��Q ��־��λ��condition ��������Чֵ������ָ��� NOP��</p>
+<p CLASS=Body>QDADD 指令將 <em CLASS=SourceItalic>op2</em> 加倍，然後使用 <em CLASS=SourceItalic>op1</em> 與<em CLASS=SourceItalic>op2</em> 執行整數加法，並將結果儲存到 <em CLASS=SourceItalic>dest</em>。中間結果經飽和處理，成為 32 位有符號整數，範圍是 -2<span style="vertical-align: Super;">31</span> ≤ x ≤ 2<span 
+ style="vertical-align: Super;">31</span> - 1。任一結果發生飽和時，Q 標誌置位。condition 必須是有效值；否則將指令當作 NOP。</p>
 
-<h2>Ѱַģʽ</h2>
+<h2>定址模式</h2>
 
-�޲������� 
+無運算元。 
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -236,7 +236,7 @@ else
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� </h2>
+<h2>編碼 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -379,7 +379,7 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funcqdadd<br> 4 <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0<br> 6 <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@ * * * QDADD * * *<br> 8 <br> 9 <br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example, CODE, READONLY<br> 11 <br> 1200000000E3A0104A MOVR1, #74<br> 13 &#xA0;&#xA0;00000004 &#xA0;&#xA0;E3A0200D &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R2, #13<br> 14 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E1023051 &#xA0;&#xA0;&#xA0;QDADD &#xA0;&#xA0;R3, R1, R2<br> 15 <br> 16 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@ Set Q flag <br> 17 &#xA0;&#xA0;00000012 &#xA0;&#xA0;E3A04001 &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R4, #1<br> 18 &#xA0;&#xA0;00000016 &#xA0;&#xA0;E3A05000 &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R5, #0xFFFF<br> 19 &#xA0;&#xA0;00000020 &#xA0;&#xA0;E1056054 &#xA0;&#xA0;&#xA0;QDADD &#xA0;&#xA0;R6, R4, R5<br> 20 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END</span> </p>
 </div>

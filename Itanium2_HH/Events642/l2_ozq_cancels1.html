@@ -12,13 +12,13 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
 <meta name=topic-comment content>
 <meta name=topic-id content=L2_OZQ_CANCELS1>
-<meta name=MS-HAID content="һ�廯���������¼�">
+<meta name=MS-HAID content="一體化二級快取事件">
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
 <meta name=generator-major-version content=0.1>
 <meta name=generator-minor-version content=1>
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\n�ڴ��¼�\nһ�廯���������¼�\nL2_OZQ_CANCELS1");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 安騰(R) 2 處理器\n英特爾(R) 安騰(R) 2 處理器事件\n記憶體事件\n一體化二級快取事件\nL2_OZQ_CANCELS1");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,24 +106,24 @@ else
 </script>
 <h1>L2_OZQ_CANCELS1</h1>
 
-<b style="font-weight: bold;">���⣺</b>L2 OZQ ȡ�����ض�ԭ�� 1��<b style="font-weight: bold;"><br> ���</b>һ�廯���������¼�<b style="font-weight: bold;"><br> IAR/DAR/OPC��</b>Y/Y/Y<b style="font-weight: bold;"><br> �¼����룺</b>0xAC<b style="font-weight: bold;"><br> ���ÿ����������</b>4 
+<b style="font-weight: bold;">標題：</b>L2 OZQ 取消（特定原因集 1）<b style="font-weight: bold;"><br> 類別：</b>一體化二級快取事件<b style="font-weight: bold;"><br> IAR/DAR/OPC：</b>Y/Y/Y<b style="font-weight: bold;"><br> 事件程式碼：</b>0xAC<b style="font-weight: bold;"><br> 最大每週期增量：</b>4 
 
-<p><b style="font-weight: bold;">���壺</b>ͳ���ض�ԭ�򣨻��ڵ�Ԫ���룩���µ�&ldquo;L2 OZ ����ȡ��&rdquo;������</p>
+<p><b style="font-weight: bold;">定義：</b>統計特定原因（基於單元掩碼）導致的&ldquo;L2 OZ 佇列取消&rdquo;總數。</p>
 
-<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> ��ע</h3>
+<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> 備註</h3>
 
-���������� 0 ��&ldquo;��������&rdquo;�¼������κθ���ʱ�䣬3 �� L1_OZQ_CANCEL �¼��н����ܲ���һ����Ҫ�������¼���<a HREF="l2_ifet_cancels.html">L2_IFET_CANCELS</a> ����¼�����ʹ�� PMD4 ������ 
+這是有限組 0 的&ldquo;二級快取&rdquo;事件。在任何給定時間，3 個 L1_OZQ_CANCEL 事件中僅可能測量一個。要測量此事件，<a HREF="l2_ifet_cancels.html">L2_IFET_CANCELS</a> 或此事件必須使用 PMD4 測量。 
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells width="100%" class="whs2">
 
 <tr>
 <td>
-<h3 CLASS=TableHead>��չ</td>
+<h3 CLASS=TableHead>擴充套件</td>
 <td>
 <h3 CLASS=TableHead>PMC.umask</td>
 <td>
-<h3 CLASS=TableHead>˵��</td></tr>
+<h3 CLASS=TableHead>說明</td></tr>
 
 <tr>
 <td>
@@ -131,7 +131,7 @@ else
 <td>
 <p>b0000</td>
 <td>
-<p>�ͷŵ��µ�</td></tr>
+<p>釋放導致的</td></tr>
 
 <tr>
 <td>
@@ -139,7 +139,7 @@ else
 <td>
 <p>b0001</td>
 <td>
-<p>���ͻ</td></tr>
+<p>庫衝突</td></tr>
 
 <tr>
 <td>
@@ -147,7 +147,7 @@ else
 <td>
 <p>b0010</td>
 <td>
-<p>�洢ƥ�� L2D</td></tr>
+<p>儲存匹配 L2D</td></tr>
 
 <tr>
 <td>
@@ -155,7 +155,7 @@ else
 <td>
 <p>b0011</td>
 <td>
-<p>��*��ͳ��*��</td></tr>
+<p>（*不統計*）</td></tr>
 
 <tr>
 <td>
@@ -163,7 +163,7 @@ else
 <td>
 <p>b0100</td>
 <td>
-<p>sync.i ���µ�</td></tr>
+<p>sync.i 導致的</td></tr>
 
 <tr>
 <td>
@@ -171,7 +171,7 @@ else
 <td>
 <p>b0101</td>
 <td>
-<p>ifetch ��ͻ��ȡ�� HPW����</td></tr>
+<p>ifetch 衝突（取消 HPW？）</td></tr>
 
 <tr>
 <td>
@@ -179,7 +179,7 @@ else
 <td>
 <p>b0110</td>
 <td>
-<p>L2M �еĴ洢ȡ�����µ�</td></tr>
+<p>L2M 中的儲存取消導致的</td></tr>
 
 <tr>
 <td>
@@ -187,7 +187,7 @@ else
 <td>
 <p>b0111</td>
 <td>
-<p>һ������ͻ</td></tr>
+<p>一級填充衝突</td></tr>
 
 <tr>
 <td>
@@ -195,7 +195,7 @@ else
 <td>
 <p>b1000</td>
 <td>
-<p>�洢����ͻ</td></tr>
+<p>儲存填充衝突</td></tr>
 
 <tr>
 <td>
@@ -211,7 +211,7 @@ else
 <td>
 <p>b1010</td>
 <td>
-<p>�ź���</td></tr>
+<p>訊號量</td></tr>
 
 <tr>
 <td>
@@ -219,7 +219,7 @@ else
 <td>
 <p>b1011</td>
 <td>
-<p>�洢ƥ�� L2M</td></tr>
+<p>儲存匹配 L2M</td></tr>
 
 <tr>
 <td>
@@ -227,7 +227,7 @@ else
 <td>
 <p>b1100</td>
 <td>
-<p>�ڴ�߽�ָ��</td></tr>
+<p>記憶體邊界指令</td></tr>
 
 <tr>
 <td>
@@ -235,7 +235,7 @@ else
 <td>
 <p>b1101</td>
 <td>
-<p>�洢ƥ�� L2A</td></tr>
+<p>儲存匹配 L2A</td></tr>
 
 <tr>
 <td>
@@ -243,7 +243,7 @@ else
 <td>
 <p>b1110</td>
 <td>
-<p>L1D ��� L2M</td></tr>
+<p>L1D 填充 L2M</td></tr>
 
 <tr>
 <td>
@@ -251,7 +251,7 @@ else
 <td>
 <p>b1111</td>
 <td>
-<p>ECC Ӳ����⵽����</td></tr>
+<p>ECC 硬體檢測到問題</td></tr>
 </table>
 
 <script type="text/javascript" language="javascript1.2">

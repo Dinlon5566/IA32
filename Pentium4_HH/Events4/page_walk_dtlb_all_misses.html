@@ -8,14 +8,14 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/page_walk_dtlb_all_misses.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:38:21 GMT -->
 <head>
 
-<title>DTLB ҳ��ѯ (TI)</title>
+<title>DTLB 頁查詢 (TI)</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=MS-HAID content=Events4>
 <meta name=MS-HAID content="E4 Page Walk DTLB All Misses">
-<meta name=MS-HAID content="E4 Group - �ڴ��¼�">
+<meta name=MS-HAID content="E4 Group - 記憶體事件">
 <meta name=date content="07 8, 2002 12:48:51 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -91,7 +91,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������¼�\n���ܵ����¼� - ����\n�ڴ��¼�\nDTLB ҳ��ѯ");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器事件\n效能調整事件 - 輔助\n記憶體事件\nDTLB 頁查詢");
 
 	}
 	if (window.writeBtnStyle)
@@ -114,13 +114,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">DTLB ҳ��ѯ</h1>
+<h1><img src="p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">DTLB 頁查詢</h1>
 
-<p><span style="font-weight: bold;"><B>�߳��ض���</B></span>��<a href="Thread_Independent.html">TI</a></p>
+<p><span style="font-weight: bold;"><B>執行緒特定性</B></span>：<a href="Thread_Independent.html">TI</a></p>
 
-<p>���ػ�洢΢����ʱ����������ת���ѯ������ (DTLB) δ���е��µ�ҳ��ѯ���������������ύ 32 λ�������ݵ�ַʱ�����Ƚ����ύ�� DTLB����ִ�л����ѯ֮ǰ��TLB �����ػ�洢��Ԫ������ 32 λ���Ե�ַת���� 36 λ�����ڴ��ַ��DTLB ��С��ṹȡ���ڴ���������ơ�Ϊת�� 32 λ���Ե�ַ��DTLB δ����Ҫ������ڴ���ʣ��Ի�ȡ����ϵͳҳĿ¼�������Ϣ�����¼�ͳ���� DTLB δ���е��µ�ҳ��ѯ��������ҳ��ѯ��ָӲ����������ϵͳҳ����ת�� 32 λ���Ե�ַ��ҳ��ѯδ���лᵼ��ҳ��������&ldquo;����ϵͳ&rdquo;����Ҫ�������ҳ���ص������С�DTLB δ���в���һ����ζ�Ż���δ���С�</p>
+<p>載入或儲存微操作時，由於數據轉譯查詢緩衝區 (DTLB) 未命中導致的頁查詢請求數。處理器提交 32 位線性數據地址時，首先將它提交到 DTLB。在執行快取查詢之前，TLB 將載入或儲存單元產生的 32 位線性地址轉換成 36 位實體記憶體地址。DTLB 大小與結構取決於處理器的設計。為轉譯 32 位線性地址，DTLB 未命中要求進行記憶體訪問，以獲取操作系統頁目錄與表格資訊。此事件統計由 DTLB 未命中導致的頁查詢請求數。頁查詢是指硬體遍歷操作系統頁表以轉譯 32 位線性地址。頁查詢未命中會導致頁錯誤，這樣&ldquo;操作系統&rdquo;便需要將所需的頁載入到表格中。DTLB 未命中並不一定意味著快取未命中。</p>
 
-<p>һ����˵����Щ����Դ�Ծ���ḻ�����ܹ���ʦ�ľ��飺</p>
+<p>一般來說，這些數字源自經驗豐富的效能工程師的經驗：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="60%" class="whs2">
@@ -128,10 +128,10 @@ else
 <tr>
 <td valign="top" width="50%" class="whs3">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">��</td>
+	style="margin-bottom: 0;">低</td>
 <td valign="top" width="50%" class="whs3">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">��</td></tr>
+	style="margin-bottom: 0;">高</td></tr>
 
 <tr>
 <td valign="top" width="50%" class="whs3">
@@ -141,28 +141,28 @@ else
 </table>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="Caution.gif" alt="ע��" x-maintain-ratio="TRUE" width="24px" height="23px" border="0" class="img_whs4"> ע��</h3>
+	style="margin-left: 40px;"><img src="Caution.gif" alt="注意" x-maintain-ratio="TRUE" width="24px" height="23px" border="0" class="img_whs4"> 注意</h3>
 
-<p class="whs5">������ڴ���ʿ��ܻ�Ӱ�� CPI�� </p>
+<p class="whs5">額外的記憶體訪問可能會影響 CPI。 </p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="tip.gif" alt="��ʾ" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs6"> ��ʾ</h3>
+	style="margin-left: 40px;"><img src="tip.gif" alt="提示" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs6"> 提示</h3>
 
-<p class="whs7">Ϊ��С�� DTLB δ���У�����С�����ݺ������С���Ա㣺</p>
+<p class="whs7">為最小化 DTLB 未命中，請最小化數據和區域大小，以便：</p>
 
 <ol type="disc" class="whs8">
 	
 	<ul type="disc" class="whs9">
 		
-		<li class=kadov-p><p>���ݷֲ������ٵ�ҳ�� </p></li>
+		<li class=kadov-p><p>數據分佈在最少的頁上 </p></li>
 		
-		<li class=kadov-p><p>���ݷֲ���ҳ��С�� DTLB ����</p></li>
+		<li class=kadov-p><p>數據分佈的頁數小於 DTLB 項數</p></li>
 	</ul>
 </ol>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','ITLB ҳ��ѯ (TI)','page_walk_miss_itlb.htm','ʧЧ��һ���������δ����','1st-level_cache_load_misses_retired.htm','ʧЧ�ļ���','loads_retired.htm','ʧЧ�Ĳ�ִ洢 (AT-E)','split_stores_retired.htm');return false;" title="�����ڴ��¼�"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%85%b6%e5%ae%83%e5%86%85%e5%ad%98%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=82 alt="�����ڴ��¼�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','ITLB 頁查詢 (TI)','page_walk_miss_itlb.htm','失效的一級快取載入未命中','1st-level_cache_load_misses_retired.htm','失效的載入','loads_retired.htm','失效的拆分儲存 (AT-E)','split_stores_retired.htm');return false;" title="其它記憶體事件"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%85%b6%e5%ae%83%e5%86%85%e5%ad%98%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=82 alt="其它記憶體事件"></a>
 
 
  </p>

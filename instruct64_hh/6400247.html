@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400247.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:08 GMT -->
 <head>
 
-<title>fpnma - ���㲢�г˷��ӷ�ȡ��ָ��</title>
+<title>fpnma - 浮點並行乘法加法取反指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:51:24 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nF - ָ��\nfpnma - ���㲢�г˷��ӷ�ȡ��ָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nF - 指令\nfpnma - 浮點並行乘法加法取反指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,15 +116,15 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">���㲢�г˷��ӷ�ȡ��ָ��</h1>
+<h1><img src="itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">浮點並行乘法加法取反指令</h1>
 
 <p><span style="font-weight: bold;"><B>fpnma</B></span></p>
 
-<p><a HREF="6400248.html">����</a> <a HREF="6400126.html">�������</a></p>
+<p><a HREF="6400248.html">操作</a> <a HREF="6400126.html">字型慣例</a></p>
 
-<p>ָ������ F</p>
+<p>指令型別 F</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) fpnma.<span style="x-condition: eclipse;">sf</span><script type="text/javascript"
 	language=JavaScript1.2><!--
@@ -136,9 +136,9 @@ kadovFilePopupInit('A1');
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>說明</B></span></p>
 
-<p>���� <span style="font-style: italic;"><I>f3</I></span> �� FR <span style="font-style: italic;"><I>f4</I></span> ����Чλ�ֶ��е�һ�Ե�����ֵ�ĳ˻�����ȷ�����޾��ȣ�ȡ��֮���� FR <span style="font-style: italic;"><I>f2</I></span> ����Чλ�ֶ��е�һ�Ե�����ֵ��ӣ�ͬ����ȷ�����޾��ȡ����Ű��� FPSR.<span style="x-condition: eclipse;">sf</span>.<span   style="x-condition: eclipse;">rc</span> ָ����ȡ��ģʽ����������ֵȡ��Ϊ�����ȡ�<script 
+<p>計算 <span style="font-style: italic;"><I>f3</I></span> 與 FR <span style="font-style: italic;"><I>f4</I></span> 的有效位欄位中的一對單精度值的乘積，精確到無限精度；取反之後與 FR <span style="font-style: italic;"><I>f2</I></span> 的有效位欄位中的一對單精度值相加，同樣精確到無限精度。接著按照 FPSR.<span style="x-condition: eclipse;">sf</span>.<span   style="x-condition: eclipse;">rc</span> 指定的取整模式，將產生的值取整為單精度。<script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A2');
@@ -146,17 +146,17 @@ kadovFilePopupInit('A2');
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A3');
-//--></script>ȡ�����һ�Խ���洢�� FR <span style="font-style: italic;"><I>f1</I></span> ����Чλ�ֶΡ�FR <span style="font-style: italic;"><I>f1</I></span> ��ָ���ֶ�����Ϊ 2.063 (0x1003E) ��ƫ��ָ����FR <span style="font-style: italic;"><I>f1</I></span> �ķ����ֶ�����Ϊ�� (0)��</p>
+//--></script>取整后的一對結果儲存到 FR <span style="font-style: italic;"><I>f1</I></span> 的有效位欄位。FR <span style="font-style: italic;"><I>f1</I></span> 的指數欄位設定為 2.063 (0x1003E) 的偏置指數，FR <span style="font-style: italic;"><I>f1</I></span> 的符號欄位設定為正 (0)。</p>
 
-<p>��� FR <span style="font-style: italic;"><I>f3</I></span>��FR <span style="font-style: italic;"><I>f4</I></span> �� FR <span style="font-style: italic;"><I>f2</I></span> �е��κ�һ���� NaTVal���� NaTVal �洢�� FR <span style="font-style: italic;"><I>f1</I></span>�������ǽ�����Ľ���洢�����С�</p>
+<p>如果 FR <span style="font-style: italic;"><I>f3</I></span>、FR <span style="font-style: italic;"><I>f4</I></span> 或 FR <span style="font-style: italic;"><I>f2</I></span> 中的任何一個是 NaTVal，則將 NaTVal 儲存到 FR <span style="font-style: italic;"><I>f1</I></span>，而不是將計算的結果儲存到其中。</p>
 
-<p><span style="font-weight: bold;"><B>��ע��</B></span></p>
+<p><span style="font-weight: bold;"><B>備註：</B></span></p>
 
 <ul>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>��� fpnma ָ���е� <span style="font-style: italic;"><I>f2</I></span> �� f0����ִֻ�� IEEE �˷����㣨ȡ��֮ǰ�Գ˻�ȡ������</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>如果 fpnma 指令中的 <span style="font-style: italic;"><I>f2</I></span> 是 f0，則只執行 IEEE 乘法運算（取整之前對乘積取反）。</p></li>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>�����˽�״̬�ֶε� <span style="font-style: italic;"><I>rc</I></span> �ı�������ͣ������<a href="6400132.html" style="x-condition: eclipse;">����ȡ�����ƶ���</a>��<script 
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>如需瞭解狀態欄位的 <span style="font-style: italic;"><I>rc</I></span> 的編碼與解釋，請參閱<a href="6400132.html" style="x-condition: eclipse;">浮點取整控制定義</a>。<script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A4');

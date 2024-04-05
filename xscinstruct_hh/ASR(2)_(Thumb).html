@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/ASR(2)_(Thumb).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:47:09 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>ASR(2) (Thumb) - ��������</title>
+<title>ASR(2) (Thumb) - 算術右移</title>
 
 <!--(Meta)==========================================================-->
 
@@ -83,7 +83,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n16 λָ��\nA - ָ��\nASR(2) (Thumb)");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n16 位指令\nA - 指令\nASR(2) (Thumb)");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,9 +106,9 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">ASR(2) (Thumb*) - ��������</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題">ASR(2) (Thumb*) - 算術右移</h1>
 
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <div>
 <div>
@@ -116,7 +116,7 @@ else
 </div>
 
 <div>
-<p>���У�</p>
+<p>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,29 +126,29 @@ else
 <p CLASS=CellBodyLeft><em CLASS=SourceItalic
 							style="font-style: italic;">dest</em> </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>�����������ļĴ�����Ҳ��Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>包含運算元的暫存器，也是目標暫存器</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
 <p CLASS=CellBodyLeft><em CLASS=SourceItalic
 							style="font-style: italic;">source</em> </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>������λ���ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含移位量的暫存器</td></tr>
 </table>
 </div>
 
 <div>
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>�˸�ʽ�� ASR ָ��ִ�����ƣ�<em CLASS=SourceItalic>dest</em> �е�λ���� <em CLASS=SourceItalic>source</em> ��ָ��������������λ����������洢�� <em CLASS=SourceItalic>dest</em>�������ʾ���Ĵ����е��з���ֵ���� 2 �Ŀɱ���ݡ�</p>
+<p>此格式的 ASR 指令執行右移，<em CLASS=SourceItalic>dest</em> 中的位按照 <em CLASS=SourceItalic>source</em> 中指定的數量向右移位，並將結果儲存到 <em CLASS=SourceItalic>dest</em>。結果表示將暫存器中的有符號值除以 2 的可變次冪。</p>
 
-<h2>Ѱַģʽ </h2>
+<h2>定址模式 </h2>
 
-<p>�޲������� </p>
+<p>無運算元。 </p>
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -199,7 +199,7 @@ else
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs3">
 
-<h2 class=TableCell>����</h2>
+<h2 class=TableCell>編碼</h2>
 
 <tr valign=middle>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
@@ -267,16 +267,16 @@ else
 
 <div>
 <div>
-<h2>ʾ�� </h2>
+<h2>示例 </h2>
 </div>
 
 <p class=Preformatted><span>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funasr <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0 <br> 4 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example,CODE,READONLY <br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;CODE16 <br> 7 <br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1 <br> 9 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Arithmetic Shift Right value in R3 <br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; 12 times.The 12 is put in R2 <br> 11 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Put result back to R3<br> 12 &#xA0;&#xA0;&#xA0;00000000 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;F7C2 &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;R2, #OxC <br> 13 &#xA0;&#xA0;&#xA0;00000002 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;4113 &#xA0;&#xA0;&#xA0;ASR &#xA0;&#xA0;&#xA0;R3, R2</span> </p>
 
-<h2>������Ϣ </h2>
+<h2>更多資訊 </h2>
 
-<a href="ASR(1)__(Thumb).html">����� ASR(1) ָ��</a> 
+<a href="ASR(1)__(Thumb).html">請參閱 ASR(1) 指令</a> 
 
-<br><a href="LSL(1)_(Thumb).html">����� LSL(1) ָ��</a><a href="LSL(2)_(Thumb).html"><br> ����� LSL(2) ָ��</a><a href="LSR(1)_(Thumb).html"><br> ����� LSR(1) ָ��</a><a href="LSR(2)_(Thumb).html"><br> ����� LSR(2) ָ��</a><a href="ROR_(Thumb).html"><br> ����� ROR ָ��</a> 
+<br><a href="LSL(1)_(Thumb).html">請參閱 LSL(1) 指令</a><a href="LSL(2)_(Thumb).html"><br> 請參閱 LSL(2) 指令</a><a href="LSR(1)_(Thumb).html"><br> 請參閱 LSR(1) 指令</a><a href="LSR(2)_(Thumb).html"><br> 請參閱 LSR(2) 指令</a><a href="ROR_(Thumb).html"><br> 請參閱 ROR 指令</a> 
 </div>
 
 <script type="text/javascript" language="javascript1.2">

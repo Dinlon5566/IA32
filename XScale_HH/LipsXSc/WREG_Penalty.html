@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/XScale_HH/LipsXSc/WREG_Penalty.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:45 GMT -->
 <head>
 
-<title>WMMX �Ĵ�����سͷ�/����</title>
+<title>WMMX 暫存器相關懲罰/警告</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="04 14, 2003 12:02:04 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -83,7 +83,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض� XScale(R) ΢��ϵ�ṹ \nӢ�ض�(R) ���� MMX(TM) ָ��ͷ�\nWMMX �Ĵ�����سͷ�/����");
+	addTocInfo("參考\n處理器事件與建議\n英特爾 XScale(R) 微體系結構 \n英特爾(R) 無線 MMX(TM) 指令集懲罰\nWMMX 暫存器相關懲罰/警告");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,27 +106,27 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="XS_logo.gif" alt="Ӣ�ض� XScale(R) ��������" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">WMMX �Ĵ�����سͷ�/����</h1>
+<h1><img src="XS_logo.gif" alt="英特爾 XScale(R) 技術主題" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">WMMX 暫存器相關懲罰/警告</h1>
 
 <h2>XSCW_REG_DEP</h2>
 
-<p>ָ��Ĵ��� <span class=Code>REG</span> ����������֮һ����������ǰһ��ָ����δ���ֵ�Ĵ洢���������Ĵ���ֵ�����á���ᵼ�¹ܵ���ͣ�Եȴ�������Ӷ�����ָ��Ѷ����һЩ����ȥִ�С�</p>
+<p>指令將暫存器 <span class=Code>REG</span> 用作運算元之一，但是由於前一條指令尚未完成值的儲存，因此這個暫存器值不可用。這會導致管道暫停以等待結果，從而導致指令花費額外的一些週期去執行。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs2"> ����</h3>
+	style="margin-left: 40px;"><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs2"> 建議</h3>
 
-<p class="whs3">������ܣ������¸�ָ���������ʹ�üĴ��� <span class=Code>REG</span> ��ָ��ִ��֮ǰ�Ķ�����ӳ����ڡ� </p>
+<p class="whs3">如果可能，請重新給指令排序，以填補使用暫存器 <span class=Code>REG</span> 的指令執行之前的額外的延遲週期。 </p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> 備註</h3>
 
-<p class="whs3"><span class=Code>XSCW_REG_REG</span> �е� <span class=Code>REG</span> ������ <span class=Code>wR0��wR1��...��wR15</span>����&ldquo;�ͷ�/����&rdquo;��������&ldquo;Ӣ�ض�(R) ���� MMX(TM) ָ�&rdquo;��</p>
+<p class="whs3"><span class=Code>XSCW_REG_REG</span> 中的 <span class=Code>REG</span> 可以是 <span class=Code>wR0、wR1、...、wR15</span>。此&ldquo;懲罰/警告&rdquo;僅適用於&ldquo;英特爾(R) 無線 MMX(TM) 指令集&rdquo;。</p>
 
-<h3>ʾ��</h3>
+<h3>示例</h3>
 
-<p>��������ʾ�����룬������ <span class=Code>WADDB</span> ָ��� <span class=Code>XSCW_REG_wR4 &amp; XSCW_CDP_RES</span>��</p>
+<p>對於以下示例程式碼，將給出 <span class=Code>WADDB</span> 指令的 <span class=Code>XSCW_REG_wR4 &amp; XSCW_CDP_RES</span>。</p>
 
-<h3>������       &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;�ͷ��뾯��</h3>
+<h3>彙編程式碼       &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;懲罰與警告</h3>
 
 <p class=Preformatted><span class=Code>WMACU &#xA0;&#xA0;&#xA0;wR4, wR5, wR7</span></p>
 
@@ -136,7 +136,7 @@ else
 
 <p>&nbsp;</p>
 
-<h3>�������ʾ��</h3>
+<h3>其它情況示例</h3>
 
 <p class=Preformatted><span class=Code>TMIA &#xA0;&#xA0;&#xA0;&#xA0;wR0, R4, R5 </span></p>
 

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400164.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:49 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>cmp4 操作</title>
+<title>cmp4 鎿嶄綔</title>
 
 <!--(Meta)==========================================================-->
 
@@ -101,7 +101,7 @@ else
 		document.location.reload();
 //-->
 </script>
-cmp4 操作 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a> 
+cmp4 鎿嶄綔 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">瀛楀瀷鎱ｄ緥</a> 
 
 <br>if (PR[qp]) { <br> if (<i>p1</i> == <i>p2</i>) <br> illegal_operation_fault(); <br> <br> tmp_nat = (register_form ?GR[<i>r2</i>].nat : 0) || GR[<i>r3</i>].nat; <br> <br> if (register_form) <br> tmp_src = GR[<i>r2</i>]; <br> else if (imm8_form) <br> tmp_src = <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400526.htm" onMouseOver="if (parseInt(navigator.appVersion) >= 4) BSPSPopupOnMouseOver(event)" class="BSSCPopup" id="A3">sign_ext</a>(<i>imm8</i>, 8); <br> else // parallel_inequality_form <br> tmp_src = 0; <br> <br> if &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;(<i>crel</i> == &lsquo;eq') tmp_rel = tmp_src{31:0} == GR[<i>r3</i>]{31:0}; <br> else if (<i>crel</i> == &lsquo;ne') tmp_rel = tmp_src{31:0} != GR[<i>r3</i>]{31:0}; <br> else if (<i>crel</i> == &lsquo;lt') <br> tmp_rel = lesser_signed(sign_ext(tmp_src, 32), sign_ext(GR[<i>r3</i>], 32)); <br> else if (<i>crel</i> == &lsquo;le') <br> tmp_rel = lesser_equal_signed(sign_ext(tmp_src, 32),<b> </b>sign_ext(GR[<i>r3</i>], 32)); <br> else if (<i>crel</i> == &lsquo;gt') <br> tmp_rel = greater_signed(sign_ext(tmp_src, 32), sign_ext(GR[<i>r3</i>], 32)); <br> else if (<i>crel</i> == &lsquo;ge') <br> tmp_rel = greater_equal_signed(sign_ext(tmp_src,<b> </b>32),<b> </b>sign_ext(GR[<i>r3</i>],<b></b>32)); <br> else if (<i>crel</i> == &lsquo;ltu') <br> tmp_rel = lesser(zero_ext(tmp_src, 32), zero_ext(GR[<i>r3</i>], 32)); <br> else if (<i>crel</i> == &lsquo;leu') <br> tmp_rel = lesser_equal(zero_ext(tmp_src, 32), zero_ext(GR[<i>r3</i>], 32)); <br> else if (<i>crel</i> == &lsquo;gtu') <br> tmp_rel = greater(zero_ext(tmp_src, 32), zero_ext(GR[<i>r3</i>], 32)); <br> else&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;// &lsquo;geu' <br> tmp_rel = greater_equal(zero_ext(tmp_src, 32), zero_ext(GR[<i>r3</i>], 32)); <br> <br> switch (<i>ctype</i>) { <br> case &lsquo;and': // and-type compare <br> if (tmp_nat || !tmp_rel) { <br> PR[<i>p1</i>] = 0; <br> PR[<i>p2</i>] = 0; <br> } <br> break; <br> case &lsquo;or': // or-type compare <br> if (!tmp_nat &amp;&amp; tmp_rel) { <br> PR[<i>p1</i>] = 1; <br> PR[<i>p2</i>] = 1; <br> } <br> break; <br> case &lsquo;or.andcm': // or.andcm-type compare <br> if (!tmp_nat &amp;&amp; tmp_rel) { <br> PR[<i>p1</i>] = 1; <br> PR[<i>p2</i>] = 0; <br> } <br> break; <br> case &lsquo;unc': // unc-type compare <br> default: // normal compare <br> if (tmp_nat) { <br> PR[<i>p1</i>] = 0; <br> PR[<i>p2</i>] = 0; <br> } else { <br> PR[<i>p1</i>] = tmp_rel; <br> PR[<i>p2</i>] = !tmp_rel; <br> } <br> break; <br> } <br> } else { <br> if (<i>ctype</i> == &lsquo;unc') { <br> if (<i>p1</i> == <i>p2</i>) <br> illegal_operation_fault(); <br> PR[<i>p1</i>] = 0; <br> PR[<i>p2</i>] = 0; <br> } <br> } <script><!--
 BSSCCreatePopupDiv();

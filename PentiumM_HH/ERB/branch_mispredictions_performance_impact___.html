@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/ERB/branch_mispredictions_performance_impact___.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:52 GMT -->
 <head>
 
-<title>��֧Ԥ��ʧ������Ӱ�� [%]</title>
+<title>分支預測失誤效能影響 [%]</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=MS-HAID content="Mispredicted Branch">
 <meta name=date content="02 12, 2003 4:56:56 PM">
 <meta name=topic-status content="In Progress">
@@ -83,9 +83,9 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M ���������¼�����\n��֧ͳ�Ʊ���\n��֧Ԥ��ʧ������Ӱ�� [%]");
-addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M ���������¼�����\n�������\n��֧Ԥ��ʧ������Ӱ�� [%]");
-addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M ���������¼�����\n�������ܵ�������\n��֧Ԥ��ʧ������Ӱ�� [%]");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n英特爾(R) 奔騰(R) M 處理器的事件比率\n分支統計比率\n分支預測失誤效能影響 [%]");
+addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n英特爾(R) 奔騰(R) M 處理器的事件比率\n常規比率\n分支預測失誤效能影響 [%]");
+addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n英特爾(R) 奔騰(R) M 處理器的事件比率\n基本效能調整比率\n分支預測失誤效能影響 [%]");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,27 +108,27 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/ERB/er_logo.gif" alt="�¼���������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">��֧Ԥ��ʧ������Ӱ�� [%]</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/ERB/er_logo.gif" alt="事件比率主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">分支預測失誤效能影響 [%]</h1>
 
-<p>(6*[<a href="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/mispredicted_branch_instructions_(mispredicted_at_decoding).htm">Ԥ��ʧ��ķ�ָ֧�����ʱԤ��ʧ��</a>] + 20*[<a href="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/mispredicted_branch_instructions_(mispredicted_at_execution).htm">Ԥ��ʧ��ķ�ָ֧�ִ��ʱԤ��ʧ��</a>])/<a href="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/clockticks.htm">ʱ���ź�</a></p>
+<p>(6*[<a href="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/mispredicted_branch_instructions_(mispredicted_at_decoding).htm">預測失誤的分支指令（解碼時預測失誤）</a>] + 20*[<a href="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/mispredicted_branch_instructions_(mispredicted_at_execution).htm">預測失誤的分支指令（執行時預測失誤）</a>])/<a href="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/clockticks.htm">時鐘訊號</a></p>
 
-<p>���¼����ʱ�ʾ��������Ԥ��ʧ��ķ�ָ֧��µĿ���������������ʱԤ��ʧ��ķ�֧��ִ��ʱԤ��ʧ��ķ�֧�ļ�Ȩ��ϡ� </p>
+<p>此事件比率表示所有型別預測失誤的分支指令導致的開銷。它代表解碼時預測失誤的分支與執行時預測失誤的分支的加權組合。 </p>
 
-<h3>Ҫ�Ż���֧��Ԥ���ԣ�</h3>
+<h3>要優化分支可預測性：</h3>
 
 <ul type="disc" class="whs2">
 	
-	<li class=kadov-p><p>�������Ŵ��룬ʹ֮���� <span style="font-style: italic;"><I>Optimizations Manual</I></span>���Ż��ֲᣩ�н��ܵķ�֧Ԥ��ָ��ԭ���Ը��Ʒ�֧��Ԥ���Բ��Ż�ָ��Ԥȡ��</p></li>
+	<li class=kadov-p><p>合理安排程式碼，使之符合 <span style="font-style: italic;"><I>Optimizations Manual</I></span>（優化手冊）中介紹的分支預測指導原則，以改善分支可預測性並優化指令預取。</p></li>
 	
-	<li class=kadov-p><p>������ʹ��Զ���������뷵�ء�</p></li>
+	<li class=kadov-p><p>避免混合使用遠、近呼叫與返回。</p></li>
 	
-	<li class=kadov-p><p>����ͨ��ѹ�뷵�ص�ַ����ת��Ŀ����ʵ�ֵ��á�Ӳ�����Խ������뷵��ָ����ԣ��Ը��ƿ�Ԥ���ԡ�</p></li>
+	<li class=kadov-p><p>避免通過壓入返回地址並跳轉到目標來實現呼叫。硬體可以將呼叫與返回指令配對，以改善可預測性。</p></li>
 	
-	<li class=kadov-p><p>�������ȴ�ѭ����ʹ�� <span class=Code>pause</span> ָ�</p></li>
+	<li class=kadov-p><p>在自旋等待循環中使用 <span class=Code>pause</span> 指令。</p></li>
 	
-	<li class=kadov-p><p>���ݱ��뽨����Ƕ������</p></li>
+	<li class=kadov-p><p>根據編碼建議內嵌函式。</p></li>
 	
-	<li class=kadov-p><p>������֧��</p></li>
+	<li class=kadov-p><p>消除分支。</p></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

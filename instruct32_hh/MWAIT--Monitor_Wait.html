@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/MWAIT--Monitor_Wait.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:30:10 GMT -->
 <head>
 
-<title>MWAIT - �������ȴ�</title>
+<title>MWAIT - 監視器等待</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="05 12, 2003 2:15:01 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nM - ָ��\nMWAIT - �������ȴ�");
+	addTocInfo("參考\n指令集\nIA-32 指令\nM - 指令\nMWAIT - 監視器等待");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,7 +104,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>MWAIT - �������ȴ�</h1>
+<h1>MWAIT - 監視器等待</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -115,10 +115,10 @@ else
 	style="margin-bottom: 0;">&nbsp;</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">說明</td></tr>
 
 <tr>
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
@@ -126,26 +126,26 @@ else
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
 <p CLASS=TableCell>MWAIT EAX, ECX</td>
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
-<p CLASS=TableCell>����һ����ʾ������������ָֹͣ��ִ�У�������ȡ���ھ���汾���Ż�״̬��ֱ������ĳ���¼��� </td></tr>
+<p CLASS=TableCell>這是一個提示，允許處理器停止指令執行，並進入取決於具體版本的優化狀態，直到發生某類事件。 </td></tr>
 </table>
 
 <p>&nbsp;</p>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>MWAIT ָ������������ <a HREF="MONITOR--Setup_Monitor_Address.html">MONITOR</a> ָ��ʹ�ã��Ա��������������������źţ��ȴ��ĵ�ַ (MONITOR) �뵼�µȴ�������ʼ��ָ�� (MWAIT)��MWAIT ָ��Ҳ��һ����ʾ���ڴ������ȴ��¼�����ȴ��Ե�ַ��Χ���ɳ������е�ǰһ�� MONITOR ָ�����ã��Ĵ洢�ڼ䣬����ʾ����������ѡ�����ȡ���ھ���汾��״̬�� </p>
+<p>MWAIT 指令設計用於配合 <a HREF="MONITOR--Setup_Monitor_Address.html">MONITOR</a> 指令使用，以便允許處理器發出以下訊號：等待的地址 (MONITOR) 與導致等待操作開始的指令 (MWAIT)。MWAIT 指令也是一個提示，在處理器等待事件，或等待對地址範圍（由程式流中的前一條 MONITOR 指令設定）的儲存期間，它提示處理器可以選擇進入取決於具體版本的狀態。 </p>
 
-<p>����汾���ܻ�ѡ����Դ���ʾ������ִ����һ��ָ���������Ĵ������汾���ܻ�ʵ�ֶ���Ż��ĵȴ�״̬����������ʾ����ѡ����Щ״̬��</p>
+<p>具體版本可能會選擇忽略此提示，繼續執行下一條指令。將來具體的處理器版本可能會實現多個優化的等待狀態，並根據提示參數選擇這些狀態。</p>
 
-<p>�ڽ����Ĵ���������У�EAX �� ECX ������ͬ MWAIT ָ���������Ϣ����ͨѶ���紦����Ӧ�ý�����Ż�״̬���ࡣECX ָ�� MWAIT ָ���ѡ����չ��EAX ���ܰ���һЩ��ʾ���紦����Ӧ�ý������ѡ�Ż�״̬�����ں� SSE3 ��Ӣ�ض�<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 													face=Verdana>(R)</font> ����<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>(R)</font> 4 ��������EAX �� ECX �����з���ֵ���Ǳ���ֵ������� ECX ���ڱ���ֵ�������ִ�� MWAIT ָ�������������һ�㱣���Դ��󡣴��������� EDX �б���λ�����á�</p>
+<p>在將來的處理器設計中，EAX 與 ECX 將用於同 MWAIT 指令就其它資訊進行通訊，如處理器應該進入的優化狀態種類。ECX 指定 MWAIT 指令可選的擴充套件。EAX 可能包含一些提示，如處理器應該進入的首選優化狀態。對於含 SSE3 的英特爾<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 													face=Verdana>(R)</font> 奔騰<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>(R)</font> 4 處理器，EAX 與 ECX 的所有非零值都是保留值。如果在 ECX 等於保留值的情況下執行 MWAIT 指令，處理器將產生一般保護性錯誤。處理器忽略 EDX 中保留位的設定。</p>
 
-<p>�� MONITOR ָ�����õĵ�ַ��Χ�Ĵ洢���жϡ�NMI��SMI�������쳣����������쳣��BINIT# �źš�INIT# �źŻ� RESET# �źŶ����˳��Ż�״̬����ע�⣬�����Ż�״̬���������жϵ�����½���ģ��жϲŻᵼ�´������˳��Ż���״̬������Ե�ַ��Χ�Ĵ洢���´������˳������Ӹ��� MWAIT ָ������ָ��ָ�ִ�С�����жϣ����� NMI�����´������˳��Ż�״̬�����������˳��Ż�״̬���������жϡ���� SMI ���´������˳��Ż�״̬�����ڴ����� SMI ֮�󣬴Ӹ��� MWAIT �����ָ��ָ�ִ�С��� HALT ָ�ͬ��MWAIT ָ�֧���� MWAIT ָ��������������ܻ�������һЩȡ���ھ���汾���¼���ʱ�ᵼ�´������˳��Ż�״̬�����Ӹ��� MWAIT �����ָ��ָ�ִ�С� </p>
+<p>對 MONITOR 指令設定的地址範圍的儲存、中斷、NMI、SMI、除錯異常、機器檢查異常、BINIT# 訊號、INIT# 訊號或 RESET# 訊號都將退出優化狀態。請注意，僅當優化狀態是在啟用中斷的情況下進入的，中斷才會導致處理器退出優化的狀態。如果對地址範圍的儲存導致處理器退出，則會從跟在 MWAIT 指令後面的指令處恢復執行。如果中斷（包括 NMI）導致處理器退出優化狀態，則處理器將退出優化狀態並處理該中斷。如果 SMI 導致處理器退出優化狀態，則在處理完 SMI 之後，從跟在 MWAIT 後面的指令處恢復執行。與 HALT 指令不同，MWAIT 指令不支援在 MWAIT 指令處重新啟動。可能還有其它一些取決於具體版本的事件或超時會導致處理器退出優化狀態，並從跟在 MWAIT 後面的指令處恢復執行。 </p>
 
-<p>���ǰһ�� MONITOR ָ��δ�ɹ����õ�ַ��Χ������ִ�� MWAIT ֮ǰ��δִ�� MONITOR ָ�����������������Ż�״̬����ʱ���Ӹ��� MWAIT �����ָ��ָ�ִ�С�</p>
+<p>如果前一條 MONITOR 指令未成功設定地址範圍，或是執行 MWAIT 之前，未執行 MONITOR 指令，則處理器將不會進入優化狀態。此時將從跟在 MWAIT 後面的指令處恢復執行。</p>
 
-<p>MWAIT ָ��������κ���Ȩ����ִ�С�MONITOR CPUID ���ܱ�־���� EAX=1 �������ִ�� CPUID ʱ���� ECX ��λ 3��ָʾ�������Ƿ�֧�ִ�ָ�����ϵͳ��ϵͳ BIOS ����ͨ�� IA32_MISC_ENABLES MSR ���ô�ָ����ô�ָ������ CPUID ���ܱ�־��������ִ�� MWAIT ָ��ʱ���ɷǷ��������쳣</p>
+<p>MWAIT 指令可以在任何特權級別執行。MONITOR CPUID 功能標誌（在 EAX=1 的情況下執行 CPUID 時，是 ECX 的位 3）指示處理器是否支援此指令。操作系統或系統 BIOS 可以通過 IA32_MISC_ENABLES MSR 禁用此指令；禁用此指令會清除 CPUID 功能標誌，並導致執行 MWAIT 指令時產生非法操作碼異常</p>
 
-<h2>���� </h2>
+<h2>操作 </h2>
 
 <p class=Preformatted>// MWAIT takes the argument inEAX as a hint extension and is </p>
 
@@ -167,9 +167,9 @@ else
 <p class=Preformatted
 	style="margin-left: 0px;">} </p>
 
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
-��Ϊִ�� MWAIT ָ������������ַ��Χ������ MONITOR �� MWAIT ָ���������ͬ��ѭ���б��롣��������ѭ����ִ�� MONITOR һ�Σ�Ȼ����ִ�� MWAIT������ MONITOR ����ִ�� MWAIT ʱ��û���κθ���Ӱ�졣�������һ��ȫ�ֹ����Ŀɱ����������������ڴ��������� MWAIT ֮ǰд���� (0x0)������Ҫ���Ѵ˴������������߳�/������д��һ (0x1)�� 
+因為執行 MWAIT 指令將清除監視器地址範圍，所以 MONITOR 與 MWAIT 指令必須在相同的循環中編碼。不可能在循環中執行 MONITOR 一次，然後再執行 MWAIT。設定 MONITOR 而不執行 MWAIT 時，沒有任何負面影響。假設存在一個全域性共享的可變整數觸發器，它在處理器進入 MWAIT 之前寫入零 (0x0)，並由要喚醒此觸發器的其它執行緒/處理器寫入一 (0x1)。 
 
 <p class=Preformatted>Trigger = 0;</p>
 
@@ -205,33 +205,33 @@ else
 <p class=Preformatted
 	style="margin-left: 0px;"><span style="margin-left: 40px;">} </span></p>
 
-������������ȷ���ڵ�һ�μ�鴥������ִ�м�����ָ��֮�䣬������д����洢�����û�еڶ��μ�飬�����洢�����н��С�MONITOR �� MWAIT �ĵ����÷�������ѭ���еĴ������С� 
+上述程式碼序列確保在第一次檢查觸發器與執行監視器指令之間，不會進行觸發儲存。如果沒有第二次檢查，觸發儲存將暗中進行。MONITOR 與 MWAIT 的典型用法是上述循環中的程式碼序列。 
 
-<h2>�쳣</h2>
+<h2>異常</h2>
 
-��
+無
 
-<h2>��ֵ�쳣</h2>
+<h2>數值異常</h2>
 
-��
+無
 
-<h2>����ģʽ�쳣</h2>
+<h2>保護模式異常</h2>
 
-#GP(0) - ECX ��ֵ���� 0��
+#GP(0) - ECX 的值不是 0。
 
-<br>#UD - ��� CPUID ���ܱ�־ MONITOR Ϊ 0�����ʹ�� LOCK ǰ׺�� 
+<br>#UD - 如果 CPUID 功能標誌 MONITOR 為 0。如果使用 LOCK 字首。 
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>實地址模式異常</h2>
 
-#GP(0) - ECX ��ֵ���� 0��
+#GP(0) - ECX 的值不是 0。
 
-<br>#UD - ��� CPUID ���ܱ�־ MONITOR Ϊ 0�����ʹ�� LOCK ǰ׺�� 
+<br>#UD - 如果 CPUID 功能標誌 MONITOR 為 0。如果使用 LOCK 字首。 
 
-<h2>�� 8086 ģʽ�쳣</h2>
+<h2>虛 8086 模式異常</h2>
 
-#GP(0) - ECX ��ֵ���� 0��
+#GP(0) - ECX 的值不是 0。
 
-<br>#UD - ��� CPUID ���ܱ�־ MONITOR Ϊ 0�����ʹ�� LOCK ǰ׺�� 
+<br>#UD - 如果 CPUID 功能標誌 MONITOR 為 0。如果使用 LOCK 字首。 
 
 <script type="text/javascript" language="javascript1.2">
 <!--

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/calculating_cpi.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:03 GMT -->
 <head>
 
-<title>ÿʧЧָ��ʱ���ź����¼�����</title>
+<title>每失效指令時鐘訊號數事件比率</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name="build tags" content="eclipse">
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
 <meta name=generator-major-version content=0.1>
@@ -130,11 +130,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>ÿʧЧָ��ʱ���ź��� (CPI) �¼�����</h1>
+<h1>每失效指令時鐘訊號數 (CPI) 事件比率</h1>
 
-<p>ʹ��&ldquo;ʱ���ź�&rdquo;��&ldquo;ʧЧָ��&rdquo;�¼���������&ldquo;ÿʧЧָ��ʱ���ź��� (CPI)&rdquo;�¼����ʣ�<span style="font-weight: bold;"><B>Clockticks/Instructions Retired</B></span>��ʱ���ź�/ʧЧ��ָ���CPI ֵ������ȷ�������ܵ�������������ʲô�ط���CPI �������ñ�ʾ�����ִ���������졣</p>
+<p>使用&ldquo;時鐘訊號&rdquo;與&ldquo;失效指令&rdquo;事件計數計算&ldquo;每失效指令時鐘訊號數 (CPI)&rdquo;事件比率：<span style="font-weight: bold;"><B>Clockticks/Instructions Retired</B></span>（時鐘訊號/失效的指令）。CPI 值有助於確定將效能調整精力集中在什麼地方。CPI 比率良好表示程式碼的執行效能優異。</p>
 
-<p>һ����˵����Щ����Դ�Ծ���ḻ�����ܹ���ʦ�ľ��飺</p>
+<p>一般來說，這些數字源自經驗豐富的效能工程師的經驗：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="73.264%" class="whs1">
@@ -146,9 +146,9 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) 
 
 <tr valign="top" class="whs4">
 <td width="41.633%" class="whs5">
-<h3 class=TableHead>����</td>
+<h3 class=TableHead>良好</td>
 <td width="58.367%" class="whs6">
-<h3 class=TableHead>����</td></tr>
+<h3 class=TableHead>不佳</td></tr>
 
 <tr valign="top" class="whs4">
 <td width="41.633%" class="whs7">
@@ -160,16 +160,16 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) 
 //--></script>
 </table>
 
-<p>CPI ���ʲ��ѱ�ʾ�����������֮һ��</p>
+<p>CPI 比率不佳表示存在以下情況之一：</p>
 
 <ul type="disc" class="whs9">
 	
-	<li class=kadov-p><p>��ѡ�Ĵ����������ͨ���Ż����ڴ������ϸ���Ч��ִ�С�</p></li>
+	<li class=kadov-p><p>所選的程式碼或許可以通過優化，在處理器上更高效地執行。</p></li>
 	
-	<li class=kadov-p><p>��ѡ�Ĵ�������ַ���ָ���΢���롣</p></li>
+	<li class=kadov-p><p>所選的程式碼包含字串指令或微程式碼。</p></li>
 </ul>
 
-<p>���磬��������&ldquo;����&rdquo;��</p>
+<p>例如，考慮以下&ldquo;活動結果&rdquo;：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="100%" class="whs10">
@@ -182,60 +182,60 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) 
 
 <tr valign="top" class="whs4">
 <td width="30.822%" class="whs14">
-<h3 class=TableHead>��Ŀ</td>
+<h3 class=TableHead>專案</td>
 <td width="35.844%" class="whs15">
-<h3 class=TableHead>���� 1</td>
+<h3 class=TableHead>執行 1</td>
 <td width="33.333%" class="whs16">
-<h3 class=TableHead>���� 2 </td></tr>
+<h3 class=TableHead>執行 2 </td></tr>
 
 <tr valign="top" class="whs4">
 <td width="30.822%" class="whs17">
-<p class="whs18">Activity result<SPAN style="font-weight: normal;">��������</SPAN></td>
+<p class="whs18">Activity result<SPAN style="font-weight: normal;">（活動結果）</SPAN></td>
 <td width="35.844%" class="whs19">
-<p>50 ��ʱ���ź�</p>
-<p>100 ��ʧЧ��ָ��</td>
+<p>50 個時鐘訊號</p>
+<p>100 個失效的指令</td>
 <td width="33.333%" class="whs20">
-<p>100 ��ʱ���ź�</p>
-<p>100 ��ʧЧ��ָ��</td></tr>
+<p>100 個時鐘訊號</p>
+<p>100 個失效的指令</td></tr>
 
 <tr valign="top" class="whs4">
 <td width="30.822%" class="whs17">
 <p class="whs18">CPI</td>
 <td width="35.844%" class="whs19">
-<p><span style="font-weight: bold;"><B>0.5 </B></span>ʱ���ź�/ʧЧ��ָ��</td>
+<p><span style="font-weight: bold;"><B>0.5 </B></span>時鐘訊號/失效的指令</td>
 <td width="33.333%" class="whs20">
-<p><span style="font-weight: bold;"><B>1.0 </B></span>ʱ���ź�/ʧЧ��ָ��</td></tr>
+<p><span style="font-weight: bold;"><B>1.0 </B></span>時鐘訊號/失效的指令</td></tr>
 <script language='JavaScript'><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) document.write("</table></table><table>");
 //--></script>
 </table>
 
-<p>�ڱ����У��Ƚ���������ʱ����������֮��Ĳ����ø������������ 2 �Ǹ��õĺ�ѡ�Ż���</p>
+<p>在本例中，比較兩個比率時，兩次執行之間的差異變得更加清楚。執行 2 是更好的候選優化。</p>
 
-<p>�����۲�&ldquo;����&rdquo;ʱ����Ҫ��������ĸ���������˽���������֮��Ĳ��졣</p>
+<p>僅僅觀察&ldquo;活動結果&rdquo;時，需要檢查所有四個結果才能瞭解兩次執行之間的差異。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="PentiumM_HH/EventsB/tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs21"> ��ʾ</h3>
+	style="margin-left: 40px;"><img src="PentiumM_HH/EventsB/tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs21"> 提示</h3>
 
-<p class="whs22">ʹ���㷨���Ľ����Ż�֮����<a href="https://www.hgy413.com/tunmeth_hh/micro-architecture-level_tuning.htm" style="x-condition: WebHelp;">���΢��ϵ�ṹ�����Ż�</a>ʱ����һ��Ӧ�����о� CPI������ CPI ���ѵ�ÿ�����򣬼���ڴ�����¼����֧����¼������˽�Ϊʲô CPI �᲻�ѡ� </p>
+<p class="whs22">使用演算法更改進行優化之後，在<a href="https://www.hgy413.com/tunmeth_hh/micro-architecture-level_tuning.htm" style="x-condition: WebHelp;">針對微體系結構進行優化</a>時，第一步應該是研究 CPI。對於 CPI 不佳的每個區域，檢查記憶體相關事件與分支相關事件，以瞭解為什麼 CPI 會不佳。 </p>
 
 <p class="whs23">
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','DTLB δ����','PentiumM_HH/EventsB/dtlb_misses.htm','α��֧','PentiumM_HH/EventsB/bogus_branches.htm','���Ե� BACLEARS','PentiumM_HH/EventsB/baclears_asserted.htm','ʧЧ�ķ�ָ֧��','PentiumM_HH/EventsB/branch_instructions_retired.htm','ʧЧ�ķ�֧Ԥ��ʧ��','PentiumM_HH/EventsB/branch_mispredictions_retired.htm','ʧЧ��ִ�з�֧','PentiumM_HH/EventsB/taken_branch_retired.htm','ִ�еķ�ָ֧��','PentiumM_HH/EventsB/branch_instructions_executed.htm','ִ�еķ�֧Ԥ��ʧ��','PentiumM_HH/EventsB/taken_branch_mispredictions.htm','ִ�е�������ָ֧��','PentiumM_HH/EventsB/conditional_branch_instructions_executed.htm','ִ�еķ��ط�ָ֧��','PentiumM_HH/EventsB/return_branch_instructions_executed.htm','ִ�еļ�ӷ�ָ֧��','PentiumM_HH/EventsB/indirect_branch_instructions_executed.htm','����ķ�ָ֧��','PentiumM_HH/EventsB/branch_instructions_decoded.htm');return false;" title="Ӣ�ض�(R) ����(R) M ���������֧�¼�"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e8%8b%b1%e7%89%b9%e5%b0%94(r)_%e5%a5%94%e8%85%be(r)_m_%e5%a4%84%e7%90%86%e5%99%a8%e4%b8%8e%e5%88%86%e6%94%af%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=226 alt="Ӣ�ض�(R) ����(R) M ���������֧�¼�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','DTLB 未命中','PentiumM_HH/EventsB/dtlb_misses.htm','偽分支','PentiumM_HH/EventsB/bogus_branches.htm','聲言的 BACLEARS','PentiumM_HH/EventsB/baclears_asserted.htm','失效的分支指令','PentiumM_HH/EventsB/branch_instructions_retired.htm','失效的分支預測失誤','PentiumM_HH/EventsB/branch_mispredictions_retired.htm','失效的執行分支','PentiumM_HH/EventsB/taken_branch_retired.htm','執行的分支指令','PentiumM_HH/EventsB/branch_instructions_executed.htm','執行的分支預測失誤','PentiumM_HH/EventsB/taken_branch_mispredictions.htm','執行的條件分支指令','PentiumM_HH/EventsB/conditional_branch_instructions_executed.htm','執行的返回分支指令','PentiumM_HH/EventsB/return_branch_instructions_executed.htm','執行的間接分支指令','PentiumM_HH/EventsB/indirect_branch_instructions_executed.htm','解碼的分支指令','PentiumM_HH/EventsB/branch_instructions_decoded.htm');return false;" title="英特爾(R) 奔騰(R) M 處理器與分支事件"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e8%8b%b1%e7%89%b9%e5%b0%94(r)_%e5%a5%94%e8%85%be(r)_m_%e5%a4%84%e7%90%86%e5%99%a8%e4%b8%8e%e5%88%86%e6%94%af%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=226 alt="英特爾(R) 奔騰(R) M 處理器與分支事件"></a>
 
 
 </p>
 
 <p class="whs23">
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','DTLB ҳ��ѯ (TI)','Pentium4_HH/Events4/page_walk_dtlb_all_misses.htm','ITLB δ����','Pentium4_HH/Events4/itlb_misses.htm','ITLB ҳ��ѯ (TI)','Pentium4_HH/Events4/page_walk_miss_itlb.htm','MOB �����ط� (AT-E)','Pentium4_HH/Events4/mob_load_replays.htm','���������ȡ�����޸ĵĻ�����','Pentium4_HH/Events4/3rd-level_cache_reads_hit_modified.htm','���������ȡ���й����Ļ�����','Pentium4_HH/Events4/3rd-level_cache_reads_hit_shared.htm','���������ȡ���ж�ռ�Ļ�����','Pentium4_HH/Events4/3rd-level_cache_reads_hit_exclusive.htm','���������ȡ����','Pentium4_HH/Events4/3rd-level_cache_read_references.htm','���������ȡδ����','Pentium4_HH/Events4/3rd-level_cache_read_misses.htm','���������ȡ�����޸ĵĻ�����','Pentium4_HH/Events4/2nd-level_cache_reads_hit_modified.htm','���������ȡ���й����Ļ�����','Pentium4_HH/Events4/2nd-level_cache_reads_hit_shared.htm','���������ȡ���ж�ռ�Ļ�����','Pentium4_HH/Events4/2nd-level_cache_reads_hit_exclusive.htm','���������ȡ����','Pentium4_HH/Events4/2nd-Level_Cache_Read_References.htm','���������ȡδ����','Pentium4_HH/Events4/2nd_level_cache_read_misses.htm','α��֧','PentiumM_HH/EventsB/bogus_branches.htm','���Ե� BACLEARS','PentiumM_HH/EventsB/baclears_asserted.htm','ʧЧ�� DTLB ������洢δ����','Pentium4_HH/Events4/dtlb_load_and_store_misses_retired.htm','ʧЧ�� DTLB ����δ����','Pentium4_HH/Events4/dltb_load_misses_retired.htm','ʧЧ�� DTLB �洢δ����','Pentium4_HH/Events4/dtlb_store_misses_retired.htm','ʧЧ��һ���������δ����','Pentium4_HH/Events4/1st-level_cache_load_misses_retired.htm','ʧЧ�ķ�ָ֧��','PentiumM_HH/EventsB/branch_instructions_retired.htm','ʧЧ�ķ�֧Ԥ��ʧ��','PentiumM_HH/EventsB/branch_mispredictions_retired.htm','ʧЧ�ļ���','Pentium4_HH/Events4/loads_retired.htm','ʧЧ�Ĵ洢','Pentium4_HH/Events4/stores_retired.htm','ʧЧ��ִ�з�֧','PentiumM_HH/EventsB/taken_branch_retired.htm','ʧЧ�Ĳ�ִ洢 (AT-E)','Pentium4_HH/Events4/split_stores_retired.htm','ִ�еķ�ָ֧��','PentiumM_HH/EventsB/branch_instructions_executed.htm','ִ�еķ�֧Ԥ��ʧ��','PentiumM_HH/EventsB/taken_branch_mispredictions.htm','ִ�е�������ָ֧��','PentiumM_HH/EventsB/conditional_branch_instructions_executed.htm','ִ�еķ��ط�ָ֧��','PentiumM_HH/EventsB/return_branch_instructions_executed.htm','ִ�еļ�ӷ�ָ֧��','PentiumM_HH/EventsB/indirect_branch_instructions_executed.htm','��ּ����ط�','Pentium4_HH/Events4/split_load_replays.htm','��ִ洢�ط�','Pentium4_HH/Events4/split_store_replays.htm','����ķ�ָ֧��','PentiumM_HH/EventsB/branch_instructions_decoded.htm');return false;" title="Ӣ�ض�(R) ����(R) 4 ���������֧�¼�"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e8%8b%b1%e7%89%b9%e5%b0%94(r)_%e5%a5%94%e8%85%be(r)_4_%e5%a4%84%e7%90%86%e5%99%a8%e4%b8%8e%e5%88%86%e6%94%af%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=226 alt="Ӣ�ض�(R) ����(R) 4 ���������֧�¼�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','DTLB 頁查詢 (TI)','Pentium4_HH/Events4/page_walk_dtlb_all_misses.htm','ITLB 未命中','Pentium4_HH/Events4/itlb_misses.htm','ITLB 頁查詢 (TI)','Pentium4_HH/Events4/page_walk_miss_itlb.htm','MOB 載入重發 (AT-E)','Pentium4_HH/Events4/mob_load_replays.htm','三級快取讀取命中修改的快取線','Pentium4_HH/Events4/3rd-level_cache_reads_hit_modified.htm','三級快取讀取命中共享的快取線','Pentium4_HH/Events4/3rd-level_cache_reads_hit_shared.htm','三級快取讀取命中獨佔的快取線','Pentium4_HH/Events4/3rd-level_cache_reads_hit_exclusive.htm','三級快取讀取引用','Pentium4_HH/Events4/3rd-level_cache_read_references.htm','三級快取讀取未命中','Pentium4_HH/Events4/3rd-level_cache_read_misses.htm','二級快取讀取命中修改的快取線','Pentium4_HH/Events4/2nd-level_cache_reads_hit_modified.htm','二級快取讀取命中共享的快取線','Pentium4_HH/Events4/2nd-level_cache_reads_hit_shared.htm','二級快取讀取命中獨佔的快取線','Pentium4_HH/Events4/2nd-level_cache_reads_hit_exclusive.htm','二級快取讀取引用','Pentium4_HH/Events4/2nd-Level_Cache_Read_References.htm','二級快取讀取未命中','Pentium4_HH/Events4/2nd_level_cache_read_misses.htm','偽分支','PentiumM_HH/EventsB/bogus_branches.htm','聲言的 BACLEARS','PentiumM_HH/EventsB/baclears_asserted.htm','失效的 DTLB 載入與儲存未命中','Pentium4_HH/Events4/dtlb_load_and_store_misses_retired.htm','失效的 DTLB 載入未命中','Pentium4_HH/Events4/dltb_load_misses_retired.htm','失效的 DTLB 儲存未命中','Pentium4_HH/Events4/dtlb_store_misses_retired.htm','失效的一級快取載入未命中','Pentium4_HH/Events4/1st-level_cache_load_misses_retired.htm','失效的分支指令','PentiumM_HH/EventsB/branch_instructions_retired.htm','失效的分支預測失誤','PentiumM_HH/EventsB/branch_mispredictions_retired.htm','失效的載入','Pentium4_HH/Events4/loads_retired.htm','失效的儲存','Pentium4_HH/Events4/stores_retired.htm','失效的執行分支','PentiumM_HH/EventsB/taken_branch_retired.htm','失效的拆分儲存 (AT-E)','Pentium4_HH/Events4/split_stores_retired.htm','執行的分支指令','PentiumM_HH/EventsB/branch_instructions_executed.htm','執行的分支預測失誤','PentiumM_HH/EventsB/taken_branch_mispredictions.htm','執行的條件分支指令','PentiumM_HH/EventsB/conditional_branch_instructions_executed.htm','執行的返回分支指令','PentiumM_HH/EventsB/return_branch_instructions_executed.htm','執行的間接分支指令','PentiumM_HH/EventsB/indirect_branch_instructions_executed.htm','拆分載入重發','Pentium4_HH/Events4/split_load_replays.htm','拆分儲存重發','Pentium4_HH/Events4/split_store_replays.htm','解碼的分支指令','PentiumM_HH/EventsB/branch_instructions_decoded.htm');return false;" title="英特爾(R) 奔騰(R) 4 處理器與分支事件"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e8%8b%b1%e7%89%b9%e5%b0%94(r)_%e5%a5%94%e8%85%be(r)_4_%e5%a4%84%e7%90%86%e5%99%a8%e4%b8%8e%e5%88%86%e6%94%af%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=226 alt="英特爾(R) 奔騰(R) 4 處理器與分支事件"></a>
 
 
 </p>
 
 <p class="whs23">
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','be_br_mispred_detail','Itanium2_HH/Events642/be_br_mispred_detail.html','BR_MISPRED_DETAIL','Itanium2_HH/Events642/BR_MISPRED_DETAIL.html','br_mispred_detail2','Itanium2_HH/Events642/br_mispred_detail2.html','br_path_pred','Itanium2_HH/Events642/br_path_pred.html','br_path_pred2','Itanium2_HH/Events642/br_path_pred2.html','branch_event','Itanium2_HH/Events642/branch_event.html','encbr_mispred_detail','Itanium2_HH/Events642/encbr_mispred_detail.html','�����ڴ��¼�','Itanium2_HH/Events642/about_memory_events.htm');return false;" title="Ӣ�ض�(R) ����(R) 2 ���������֧�¼�"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e8%8b%b1%e7%89%b9%e5%b0%94(r)_%e5%ae%89%e8%85%be(r)_2_%e5%a4%84%e7%90%86%e5%99%a8%e4%b8%8e%e5%88%86%e6%94%af%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=226 alt="Ӣ�ض�(R) ����(R) 2 ���������֧�¼�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','be_br_mispred_detail','Itanium2_HH/Events642/be_br_mispred_detail.html','BR_MISPRED_DETAIL','Itanium2_HH/Events642/BR_MISPRED_DETAIL.html','br_mispred_detail2','Itanium2_HH/Events642/br_mispred_detail2.html','br_path_pred','Itanium2_HH/Events642/br_path_pred.html','br_path_pred2','Itanium2_HH/Events642/br_path_pred2.html','branch_event','Itanium2_HH/Events642/branch_event.html','encbr_mispred_detail','Itanium2_HH/Events642/encbr_mispred_detail.html','關於記憶體事件','Itanium2_HH/Events642/about_memory_events.htm');return false;" title="英特爾(R) 安騰(R) 2 處理器與分支事件"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e8%8b%b1%e7%89%b9%e5%b0%94(r)_%e5%ae%89%e8%85%be(r)_2_%e5%a4%84%e7%90%86%e5%99%a8%e4%b8%8e%e5%88%86%e6%94%af%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=226 alt="英特爾(R) 安騰(R) 2 處理器與分支事件"></a>
 
 
  </p>

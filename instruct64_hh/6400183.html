@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400183.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:45 GMT -->
 <head>
 
-<title>fc - �������ָ��</title>
+<title>fc - 清除快取指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="11 12, 2001 11:19:20 AM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nF - ָ��\nfc - �������ָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nF - 指令\nfc - 清除快取指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,15 +116,15 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">�������ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">清除快取指令</h1>
 
 <p><span style="font-weight: bold;"><B>fc</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400184.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a></p>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400184.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字型慣例</a></p>
 
-<p>ָ������ M</p>
+<p>指令型別 M</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) fc <span style="font-style: italic;"><I>r3</I></span></p>
 
@@ -133,21 +133,21 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>說明</B></span></p>
 
-<p>�Ӵ����������νṹ�����м����У�ʹ���� <span style="x-condition: eclipse;">GR</span><span style="font-style: italic;"><I>r3</I></span> �е�ֵָ���ĵ�ַ�����Ļ�����ȫ��ʧЧ��<script 
+<p>從處理器快取層次結構的所有級別中，使得與 <span style="x-condition: eclipse;">GR</span><span style="font-style: italic;"><I>r3</I></span> 中的值指定的地址關聯的快取線全部失效。<script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A1');
-//--></script>ʧЧ�ᴫ��������һ�������С��ڻ����νṹ���κμ����У�������������ڴ治һ�£�������ʧЧ֮ǰ��д���ڴ档</p>
+//--></script>失效會傳播到整個一致性域中。在快取層次結構的任何級別中，如果快取線與記憶體不一致，則它在失效之前先寫入記憶體。</p>
 
-<p>��Ӱ��Ļ����ߴ�С������ 32 �ֽڣ��� 32 �ֽڱ߽��϶��룩������ʵ�ֵİ汾���ܻ�������������</p>
+<p>受影響的快取線大小至少是 32 位元組（在 32 位元組邊界上對齊）。具體實現的版本可能會清除更大的區域。</p>
 
-<p>����Ȩ���� 0 ִ��ʱ��fc ��ִ�з���Ȩ�޻򱣻�����顣��������Ȩ�����ϣ�fc ���ն�ȡ 1 �ֽ�ʱ�ķ�ʽִ�з���Ȩ�޼�飬������鱣���������� PSR.pk ��Σ���</p>
+<p>在特權級別 0 執行時，fc 不執行訪問許可權或保護鍵檢查。在其它特權級別上，fc 按照讀取 1 位元組時的方式執行訪問許可權檢查，但不檢查保護鍵（不管 PSR.pk 如何）。</p>
 
-<p>������Ӱ��Ļ����ߵ�ҳ���ڴ����Զ�����ָ�����Ϊû���κ�Ӱ�졣��ָ�����ͨ���Ƚ��ڴ����Ը���Ϊ���ɻ��棬Ȼ�������Χ�����ӻ�����ɾ��һ����Χ�ĵ�ַ��</p>
+<p>包含受影響的快取線的頁的記憶體屬性對這條指令的行為沒有任何影響。此指令可以通過先將記憶體屬性更改為不可快取，然後清除範圍，而從快取中刪除一定範圍的地址。</p>
 
-<p>��ָ����ѭһЩ�������ԭ������˳�������ͬ��������֮ǰ��֮����ڴ�����ȷ����fc Ҳ��ѭһ������������ԣ��˴�������ǰ���κδ洢��������д���ڴ�������С�fc ��һ������������Ҳ����ڴ�߽� (mf) ָ���Ӱ�졣����˳����� <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400372.htm">sync</a>.i ָ��ȷ����</p>
+<p>此指令遵循一些數據相關原則，它的順序根據相同快取線上之前與之後的記憶體引用確定。fc 也遵循一定的數據相關性：此處理器先前的任何儲存將包含在寫回記憶體的數據中。fc 是一個無序操作，且不受記憶體邊界 (mf) 指令的影響。它的順序根據 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400372.htm">sync</a>.i 指令確定。</p>
 
 
 <!--(HR)============================================================-->

@@ -8,12 +8,12 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/x87_input_assists.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:47 GMT -->
 <head>
 
-<title>x87 ����Э��</title>
+<title>x87 輸入協助</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
-<meta name=MS-HAID content="E4 Group - ָʾ����ȱ�ݵ��¼�">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
+<meta name=MS-HAID content="E4 Group - 指示編碼缺陷的事件">
 <meta name=MS-HAID content="E4 x87 Input Assists">
 <meta name=MS-HAID content=Events4>
 <meta name=MS-HAID content="E4 Group Assists">
@@ -96,7 +96,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������¼�\n���ܵ����¼� - ����\nָʾ����ȱ�ݵ��¼�\nx87 ����Э��");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器事件\n效能調整事件 - 基本\n指示編碼缺陷的事件\nx87 輸入協助");
 
 	}
 	if (window.writeBtnStyle)
@@ -119,19 +119,19 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">x87 ����Э��</h1>
+<h1><img src="p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">x87 輸入協助</h1>
 
-<p><span style="font-weight: bold;"><B>�߳��ض���</B></span>��<a href="Thread_Specific.html">TS</a></p>
+<p><span style="font-weight: bold;"><B>執行緒特定性</B></span>：<a href="Thread_Specific.html">TS</a></p>
 
-<p>Ĭ������£����ڴ��¼�������λ����Ϊͳ����ҪЭ�������쳣������ x87 ������������ֵĴ������˺����߶ȳ�������ÿָ����ʵķ�ʽ���㡣</p>
+<p>預設情況下，對於此事件，掩碼位設定為統計需要協助處理異常條件的 x87 輸入運算元出現的次數。此衡量尺度常常按照每指令比率的方式計算。</p>
 
-<p>&ldquo;VTune(TM) ���ܷ�����&rdquo;ͳ����Ҫ���⴦���� x87 ָ���ʧЧ���� </p>
+<p>&ldquo;VTune(TM) 效能分析器&rdquo;統計需要特殊處理的 x87 指令的失效數。 </p>
 
-<p>VTune �������ɼ���ԭʼ���ݿ����ڼ������ָ�ꡣ���磬<a href="Clockticks.html">������ʱ���ź�</a>��<a href="Instructions_retired.html">ʧЧ��ָ��</a>�ı��ʣ�x87 Э�����ܿ��Ժܺõ�ָ��Ӧ�ó����п��ܷ�����ͣ������ʺϸ�д����ĸ��������롣</p>
+<p>VTune 分析器採集的原始數據可用於計算各種指標。例如，<a href="Clockticks.html">非休眠時鐘訊號</a>與<a href="Instructions_retired.html">失效的指令</a>的比率，x87 協助功能可以很好地指出應用程式中可能發生暫停並因此適合改寫程式碼的浮點計算程式碼。</p>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','64k/M �ص���ͻ����Ӱ��','64k_aliasing_conflicts.htm','64k/M �ص���ͻ����Ӱ��','../Pentium4P_HH/EventsP/64k_aliasing_conflicts.htm','x87 ���Э��','x87_output_assists.htm','ʧЧ�� MOB �����ط�','mob_load_replays_retired.htm','ʧЧ�Ĳ�ּ��� (AT-E)','split_loads_retired.htm','��������ָ���������չָ�����Э�� (TI)','streaming_simd_extensions_input_assists.htm');return false;" title="����ָʾ����ȱ�ݵ��¼�"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%85%b6%e5%ae%83%e6%8c%87%e7%a4%ba%e7%bc%96%e7%a0%81%e7%bc%ba%e9%99%b7%e7%9a%84%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=142 alt="����ָʾ����ȱ�ݵ��¼�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','64k/M 重疊衝突性能影響','64k_aliasing_conflicts.htm','64k/M 重疊衝突性能影響','../Pentium4P_HH/EventsP/64k_aliasing_conflicts.htm','x87 輸出協助','x87_output_assists.htm','失效的 MOB 載入重發','mob_load_replays_retired.htm','失效的拆分載入 (AT-E)','split_loads_retired.htm','數據流單指令多數據擴充套件指令集輸入協助 (TI)','streaming_simd_extensions_input_assists.htm');return false;" title="其它指示編碼缺陷的事件"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%85%b6%e5%ae%83%e6%8c%87%e7%a4%ba%e7%bc%96%e7%a0%81%e7%bc%ba%e9%99%b7%e7%9a%84%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=142 alt="其它指示編碼缺陷的事件"></a>
 
 
  </p>

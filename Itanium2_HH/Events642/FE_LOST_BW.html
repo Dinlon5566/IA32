@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -80,7 +80,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\n��ͣ�¼�\nFE_LOST_BW");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 安騰(R) 2 處理器\n英特爾(R) 安騰(R) 2 處理器事件\n暫停事件\nFE_LOST_BW");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,13 +105,13 @@ else
 </script>
 <h1>FE_LOST_BW</h1>
 
-<b style="font-weight: bold;">���⣺</b>IB ��ڴ�����Чָ����<b style="font-weight: bold;"><br> ���</b>��ͣ�¼�<b style="font-weight: bold;"><br> IAR/DAR/OPC��</b>N/N/N<b style="font-weight: bold;"><br>�¼����룺</b>0x70<b style="font-weight: bold;"><br> ���ÿ����������</b>2 
+<b style="font-weight: bold;">標題：</b>IB 入口處的無效指令束<b style="font-weight: bold;"><br> 類別：</b>暫停事件<b style="font-weight: bold;"><br> IAR/DAR/OPC：</b>N/N/N<b style="font-weight: bold;"><br>事件程式碼：</b>0x70<b style="font-weight: bold;"><br> 最大每週期增量：</b>2 
 
-<p><b style="font-weight: bold;">���壺</b>ͳ��&ldquo;ָ�����&rdquo;��ڴ�����Чָ����������</p>
+<p><b style="font-weight: bold;">定義：</b>統計&ldquo;指令緩衝區&rdquo;入口處的無效指令束數量。</p>
 
-<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> ��ע</h3>
+<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> 備註</h3>
 
-���ڴ��¼������´�����ʧ��ԭ�����ȼ��Ӹߵ��͵�˳���������£�FEFLUSH��TLBMISS��IMISS��PLP��BR_ILOCK��BRQ��BI��FILL_RECIRC��BUBBLE IBFULL��UNREACHED�����ȼ���ʾͬʱ���ڶ����ͣ���ʱ��ֻͳ�����ȼ���ߵ��Ǹ�������������£�����Ϊ��ָ����&ldquo;�޷�����&rdquo;��ָ���� 0 ����ִ�еķ�֧������ָ���� 0 ��Ч���ǽ� IP[4] ����Ϊ 1 ʱ��ָ���� 1 ���޷����ʡ� <br>
+對於此事件，導致頻寬損失的原因按優先順序從高到低的順序排列如下：FEFLUSH、TLBMISS、IMISS、PLP、BR_ILOCK、BRQ、BI、FILL_RECIRC、BUBBLE IBFULL、UNREACHED。優先順序暗示同時存在多個暫停情況時，只統計優先順序最高的那個。在兩種情況下，會認為是指令束&ldquo;無法訪問&rdquo;。指令束 0 包含執行的分支，或是指令束 0 無效但是將 IP[4] 設定為 1 時，指令束 1 將無法訪問。 <br>
 
 
 <!--(Table)=========================================================-->
@@ -119,11 +119,11 @@ else
 
 <tr>
 <td>
-<h3 CLASS=TableHead>��չ</td>
+<h3 CLASS=TableHead>擴充套件</td>
 <td>
 <h3 CLASS=TableHead>PMC.umask</td>
 <td>
-<h3 CLASS=TableHead>˵��</td></tr>
+<h3 CLASS=TableHead>說明</td></tr>
 
 <tr>
 <td>
@@ -131,7 +131,7 @@ else
 <td>
 <p>b0000</td>
 <td>
-<p>ͳ��������ԭ���µ�</td></tr>
+<p>統計由所有原因導致的</td></tr>
 
 <tr>
 <td>
@@ -139,7 +139,7 @@ else
 <td>
 <p>b0001</td>
 <td>
-<p>��ͳ����ǰ��������µ�</td></tr>
+<p>僅統計由前端清除導致的</td></tr>
 
 <tr>
 <td>
@@ -147,7 +147,7 @@ else
 <td>
 <p>b0010</td>
 <td>
-<p>��*����δ����*��</td></tr>
+<p>（*計數未定義*）</td></tr>
 
 <tr>
 <td>
@@ -155,7 +155,7 @@ else
 <td>
 <p>b0011</td>
 <td>
-<p>��*�Ƿ�ѡ��*��</td></tr>
+<p>（*非法選擇*）</td></tr>
 
 <tr>
 <td>
@@ -163,7 +163,7 @@ else
 <td>
 <p>b0100</td>
 <td>
-<p>�����޷�����ָ�������µ�</td></tr>
+<p>僅限無法訪問指令束導致的</td></tr>
 
 <tr>
 <td>
@@ -171,7 +171,7 @@ else
 <td>
 <p>b0101</td>
 <td>
-<p>����ָ�����������ͣ���µ�</td></tr>
+<p>僅限指令緩衝區已滿暫停導致的</td></tr>
 
 <tr>
 <td>
@@ -179,7 +179,7 @@ else
 <td>
 <p>b0110</td>
 <td>
-<p>����ָ���δ������ͣ���µ�</td></tr>
+<p>僅限指令快取未命中暫停導致的</td></tr>
 
 <tr>
 <td>
@@ -187,7 +187,7 @@ else
 <td>
 <p>b0111</td>
 <td>
-<p>���� TLB ��ͣ���µ�</td></tr>
+<p>僅限 TLB 暫停導致的</td></tr>
 
 <tr>
 <td>
@@ -195,7 +195,7 @@ else
 <td>
 <p>b1000</td>
 <td>
-<p>���޻���������������ѭ�����µ�</td></tr>
+<p>僅限快取線填充操作的再循環導致的</td></tr>
 
 <tr>
 <td>
@@ -203,7 +203,7 @@ else
 <td>
 <p>b1001</td>
 <td>
-<p>���޷�֧��ʼ����ͣ���µ�</td></tr>
+<p>僅限分支初始化暫停導致的</td></tr>
 
 <tr>
 <td>
@@ -211,7 +211,7 @@ else
 <td>
 <p>b1010</td>
 <td>
-<p>���޷�֧ʧЧ������ͣ���µ�</td></tr>
+<p>僅限分支失效佇列暫停導致的</td></tr>
 
 <tr>
 <td>
@@ -219,7 +219,7 @@ else
 <td>
 <p>b1011</td>
 <td>
-<p>����ѭ����ȷԤ����ͣ���µ�</td></tr>
+<p>僅限循環正確預測暫停導致的</td></tr>
 
 <tr>
 <td>
@@ -227,7 +227,7 @@ else
 <td>
 <p>b1100</td>
 <td>
-<p>���޷�֧������ͣ���µ�</td></tr>
+<p>僅限分支互鎖暫停導致的</td></tr>
 
 <tr>
 <td>
@@ -235,7 +235,7 @@ else
 <td>
 <p>b1101</td>
 <td>
-<p>���޷�֧���¶�ַ������ͣ���µ�</td></tr>
+<p>僅限分支重新定址氣泡暫停導致的</td></tr>
 
 <tr>
 <td>
@@ -243,7 +243,7 @@ else
 <td>
 <p>b1110-b1111</td>
 <td>
-<p>��*�Ƿ�ѡ��*��</td></tr>
+<p>（*非法選擇*）</td></tr>
 </table>
 
 <script type="text/javascript" language="javascript1.2">

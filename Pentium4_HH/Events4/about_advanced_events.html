@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/about_advanced_events.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:53 GMT -->
 <head>
 
-<title>���ڸ߼��¼�</title>
+<title>關於高級事件</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="03 6, 2002 8:39:56 AM">
 <meta NAME=MS-HAID CONTENT=Events4>
 <meta name=topic-status content="In Progress">
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������¼�\n���ܵ����¼� - �߼��¼�\n���ڸ߼��¼�");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器事件\n效能調整事件 - 高級事件\n關於高級事件");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,31 +104,31 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1 class=Overview><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" width="48px" height="60px" align="right" border="0" class="img_whs1">���ڸ߼��¼�</h1>
+<h1 class=Overview><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" width="48px" height="60px" align="right" border="0" class="img_whs1">關於高級事件</h1>
 
-<p>�������¼�֮���Ա������߼��¼�������Ϊ���ǳ�����������ܵ����ķ�Χ��������Щ�¼���Ϊ�˹�����ḻ�����ܹ���ʦ�ο���</p>
+<p>此類別的事件之所以被視作高級事件，是因為它們超出大多數效能調整的範圍。包含這些事件是爲了供經驗豐富的效能工程師參考。</p>
 
-<p>�����йظ����õ�Ӣ�ض�(R) ����(R) 4 ���������ܼ����¼�����ϸ��Ϣ�������<a HREF="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/About_Primary_Events_for_Tuning.htm">���ڻ��������¼�</a>��<a HREF="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/about_secondary_events_for_tuning.htm">���ڸ��������¼�</a>��</p>
+<p>如需有關更常用的英特爾(R) 奔騰(R) 4 處理器效能監視事件的詳細資訊，請參閱<a HREF="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/About_Primary_Events_for_Tuning.htm">關於基本調整事件</a>與<a HREF="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/about_secondary_events_for_tuning.htm">關於輔助調整事件</a>。</p>
 
-<p>�߼��¼��������¼��飺</p>
+<p>高級事件包括以下幾組：</p>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','���ٻ��洫��ģʽ','trace_cache_deliver_mode.htm','���ٻ���δ����','trace_cache_misses.htm');return false;" title="ǰ���¼�"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_前端事件.gif" border=0 height=20 width=58 alt="ǰ���¼�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','跟蹤快取傳遞模式','trace_cache_deliver_mode.htm','跟蹤快取未命中','trace_cache_misses.htm');return false;" title="前端事件"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_鍓嶇浜嬩歡.gif" border=0 height=20 width=58 alt="前端事件"></a>
 
 
  </p>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','ITLB δ����','itlb_misses.htm','MOB �����ط� (AT-E)','mob_load_replays.htm','���������ȡ����','2nd-Level_Cache_Read_References.htm','���������ȡδ����','2nd_level_cache_read_misses.htm','ʧЧ�� DTLB ������洢δ����','dtlb_load_and_store_misses_retired.htm','ʧЧ�� DTLB ����δ����','dltb_load_misses_retired.htm','ʧЧ�� DTLB �洢δ����','dtlb_store_misses_retired.htm','ʧЧ�Ĵ洢','stores_retired.htm','ʧЧ�Ĳ�ּ��� (AT-E)','split_loads_retired.htm','��ִ洢�ط�','split_store_replays.htm');return false;" title="�ڴ��¼� - �߼�"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_内存事件_-_高级.gif" border=0 height=20 width=100 alt="�ڴ��¼� - �߼�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','ITLB 未命中','itlb_misses.htm','MOB 載入重發 (AT-E)','mob_load_replays.htm','二級快取讀取引用','2nd-Level_Cache_Read_References.htm','二級快取讀取未命中','2nd_level_cache_read_misses.htm','失效的 DTLB 載入與儲存未命中','dtlb_load_and_store_misses_retired.htm','失效的 DTLB 載入未命中','dltb_load_misses_retired.htm','失效的 DTLB 儲存未命中','dtlb_store_misses_retired.htm','失效的儲存','stores_retired.htm','失效的拆分載入 (AT-E)','split_loads_retired.htm','拆分儲存重發','split_store_replays.htm');return false;" title="記憶體事件 - 高級"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_鍐呭瓨浜嬩歡_-_楂樼駭.gif" border=0 height=20 width=100 alt="記憶體事件 - 高級"></a>
 
 
  </p>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','��ȫд�� WC (BSQ) (AT-E)','write_wc_full_bsq.htm','���߷��ʣ��˴�������(AT-E)','bus_accesses_from_the_processor.htm','���� WC���˴�������(AT-E)','all_wc_from_the_processor.htm','��Ԥȡ���߷��ʣ��˴�������(AT-E)','non-prefetch_bus_accesses_from_the_processor.htm','��Ԥȡ��ȡ���˴�������(AT-E)','Reads_Non-prefetch_from_the_Processor.htm');return false;" title="�����¼� - �߼�"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_总线事件_-_高级.gif" border=0 height=20 width=100 alt="�����¼� - �߼�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','完全寫入 WC (BSQ) (AT-E)','write_wc_full_bsq.htm','匯流排訪問（此處理器）(AT-E)','bus_accesses_from_the_processor.htm','所有 WC（此處理器）(AT-E)','all_wc_from_the_processor.htm','非預取匯流排訪問（此處理器）(AT-E)','non-prefetch_bus_accesses_from_the_processor.htm','非預取讀取（此處理器）(AT-E)','Reads_Non-prefetch_from_the_Processor.htm');return false;" title="匯流排事件 - 高級"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_鎬葷嚎浜嬩歡_-_楂樼駭.gif" border=0 height=20 width=100 alt="匯流排事件 - 高級"></a>
 
 
  </p>

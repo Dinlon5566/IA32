@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -97,7 +97,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nW - ָ��\nWMUL");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nW - 指令\nWMUL");
 
 	}
 	if (window.writeBtnStyle)
@@ -122,56 +122,56 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>WMUL - ʸ���˷����ۼ�</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>WMUL - 向量乘法與累加</h1>
 
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted>WMULsignsignif[condition] dest, op1, op2  </p>
 
-<p>���У� </p>
+<p>其中： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
 
 <tr>
 <td class="whs3">sign</td>
-<td class="whs3">ȷ������&ldquo;�з���&rdquo;����&ldquo;�޷���&rdquo;�������㣺<br>S -- �з���<br> U -- �޷���</td></tr>
+<td class="whs3">確定進行&ldquo;有符號&rdquo;還是&ldquo;無符號&rdquo;算術運算：<br>S -- 有符號<br> U -- 無符號</td></tr>
 
 <tr>
 <td class="whs3"><i style="font-style: italic;">signif</i></td>
-<td class="whs3">ȷ�������ֵ���Щλ��<br> M -- ��������&ldquo;�����Ч&rdquo;λ<br> L -- ��������&ldquo;�����Ч&rdquo;λ</td></tr>
+<td class="whs3">確定儲存字的哪些位：<br> M -- 儲存結果的&ldquo;最高有效&rdquo;位<br> L -- 儲存結果的&ldquo;最低有效&rdquo;位</td></tr>
 
 <tr>
 <td class="whs3"><i style="font-style: italic;">condition</i></td>
-<td class="whs3">��ѡ��16 ������֮һ�������<a HREF="Conditional_Execution.html">����ִ��</a>��</td></tr>
+<td class="whs3">可選。16 個條件之一。請參閱<a HREF="Conditional_Execution.html">條件執行</a>。</td></tr>
 
 <tr>
 <td class="whs3">dest</td>
-<td class="whs3">Ŀ�꣬&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 	face=Verdana>����</font>���ݼĴ���</td></tr>
+<td class="whs3">目標，&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 	face=Verdana>技術</font>數據暫存器</td></tr>
 
 <tr>
 <td class="whs3">op1</td>
-<td class="whs3">��һ��Դ��������&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 		face=Verdana>&rdquo;����</font>���ݼĴ���</td></tr>
+<td class="whs3">第一個源運算元，&ldquo;英特爾(R) 無線 MMX&#x2122;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 		face=Verdana>&rdquo;技術</font>數據暫存器</td></tr>
 
 <tr>
 <td class="whs3">op2</td>
-<td class="whs3">�ڶ���Դ��������&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 		face=Verdana>&rdquo;����</font>���ݼĴ���</td></tr>
+<td class="whs3">第二個源運算元，&ldquo;英特爾(R) 無線 MMX&#x2122;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 		face=Verdana>&rdquo;技術</font>數據暫存器</td></tr>
 </table>
 
 &nbsp; 
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>�� op1 �� op2 �� 16 λ������ִ��ʸ���˷��������� 32 λ�м�������ֻ��Ŀ��Ĵ��� dest �б������е� 16 λ��<br>�޶��� M ��ʾ�� dest �д洢����ĸ� 16 λ���޶��� L ��ʾ�� dest �д洢����ĵ� 16 λ��<br>�˲����������з���������ִ�У�Ҳ�������޷���������ִ�С�<br><br>ָ����ָ�����κ�������������������״̬ƥ�䣬����ִ��ָ� </p>
+<p>在 op1 與 op2 的 16 位半字上執行向量乘法，以產生 32 位中間結果。但只在目標暫存器 dest 中儲存結果中的 16 位。<br>限定符 M 表示在 dest 中儲存結果的高 16 位，限定符 L 表示在 dest 中儲存結果的低 16 位。<br>此操作可以在有符號數據上執行，也可以在無符號數據上執行。<br><br>指令中指定的任何條件必須與條件程式碼狀態匹配，否則不執行指令。 </p>
 
-<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> 備註</h3>
 
-ָ�� L ʱ��U �� S �޶���������ͬ�Ľ���� 
+指定 L 時，U 與 S 限定符產生相同的結果。 
 
-<h2>����</h2>
+<h2>編碼</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -383,7 +383,7 @@ Cond
 
 &nbsp; 
 
-<h2>���ֶα���</h2>
+<h2>子欄位編碼</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -392,17 +392,17 @@ Cond
 <th class="whs6">
 <div align="center" class="whs7">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>�޶���</font> 
+		face=Verdana>限定符</font> 
 </div></th>
 <th class="whs6">
 <div align="center" class="whs7">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>�ֶ�</font> 
+		face=Verdana>欄位</font> 
 </div></th>
 <th class="whs6">
 <div align="center" class="whs7">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>ֵ</font> 
+		face=Verdana>值</font> 
 </div></th></tr>
 
 <tr>
@@ -462,18 +462,18 @@ f
 </div></td></tr>
 </table>
 
-<h2>Ӱ��� SIMD ��־</h2>
+<h2>影響的 SIMD 標誌</h2>
 
-��Ӱ�� SIMD PSR ��־ (wCASF) ��&ldquo;����&rdquo;��־ (wCSSF)�� 
+不影響 SIMD PSR 標誌 (wCASF) 或&ldquo;飽和&rdquo;標誌 (wCSSF)。 
  
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p><img src="wmul.gif" x-maintain-ratio="TRUE" width="309px" height="141px" border="0" class="img_whs8"></p>
 
 <p>&nbsp;</p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
 <a HREF="WMAC.html">WMAC</a><a HREF="WMADD.html"><br> WMADD</a> 
 

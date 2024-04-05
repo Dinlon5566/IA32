@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400140.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:45 GMT -->
 <head>
 
-<title>alloc - �����ջָ֡��</title>
+<title>alloc - 分配堆疊幀指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="01 16, 2003 10:43:11 AM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -94,7 +94,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nA - ָ��\nalloc - �����ջָ֡��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nA - 指令\nalloc - 分配堆疊幀指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -128,16 +128,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">�����ջָ֡��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">分配堆疊幀指令</h1>
 
 <p><span style="font-weight: bold;"><B>alloc</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400141.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400141.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字型慣例</a>
  </p>
 
-<p>ָ������ M</p>
+<p>指令型別 M</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>alloc <span style="font-style: italic;"><I>r1</I></span> = <span style="x-condition: eclipse;">ar</span><script type="text/javascript"
 	language=JavaScript1.2><!--
@@ -149,19 +149,19 @@ kadovFilePopupInit('A1');
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>說明</B></span></p>
 
-<p>��ͨ�üĴ�����ջ�Ϸ���һ���µĶ�ջ֡������&ldquo;ǰһ������״̬&rdquo;�Ĵ��� (PFS) ���Ƶ� GR <span style="font-style: italic;"><I>r1</I></span>��֡�Ĵ�С���������ġ�GR <span style="font-style: italic;"><I>r1</I></span> ��д������ָͬ�����к�����ָ���ʹ����֡����ָ���޷��϶���</p>
+<p>在通用暫存器堆疊上分配一個新的堆疊幀，並將&ldquo;前一個函式狀態&rdquo;暫存器 (PFS) 複製到 GR <span style="font-style: italic;"><I>r1</I></span>。幀的大小會立即更改。GR <span style="font-style: italic;"><I>r1</I></span> 的寫入與相同指令組中後續的指令均使用新幀。此指令無法斷定。</p>
 
-<p>�ĸ����� <span style="font-style: italic;"><I>i</I></span>�������С����<span style="font-style: italic;"><I>l</I></span>���ֲ���С����<span style="font-style: italic;"><I>o</I></span>�������С���Լ� <span style="font-style: italic;"><I>r</I></span>��ѭ����С��������ָ��<a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400002.htm" ONMOUSEOVER="if (parseInt(navigator.appVersion) >= 4) BSPSPopupOnMouseOver(event)" CLASS="BSSCPopup" id="A3">��ջ֡</a>����Ĵ�С��</p>
+<p>四個參數 <span style="font-style: italic;"><I>i</I></span>（輸入大小）、<span style="font-style: italic;"><I>l</I></span>（區域性大小）、<span style="font-style: italic;"><I>o</I></span>（輸出大小）以及 <span style="font-style: italic;"><I>r</I></span>（循環大小）均可以指定<a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400002.htm" ONMOUSEOVER="if (parseInt(navigator.appVersion) >= 4) BSPSPopupOnMouseOver(event)" CLASS="BSSCPopup" id="A3">堆疊幀</a>區域的大小。</p>
 
-<p>֡�Ĵ�С (sof) �� <span style="font-style: italic;"><I>i</I></span> + <span style="font-style: italic;"><I>l</I></span> + <span style="font-style: italic;"><I>o</I></span> ȷ������ע�⣬��ָ����ܻ����ӻ���С��ǰ�Ĵ�����ջ֡�Ĵ�С���ֲ�����Ĵ�С (sol) �� <span style="font-style: italic;"><I>i</I></span> + <span style="font-style: italic;"><I>l</I></span> �����������С��ֲ���С֮��û��ʵ�ʷֱ���ָ���У����Ǿ���Ϊ�����Ĳ�����������ֻ��ʾ��������ʹ�þֲ��Ĵ�����</p>
+<p>幀的大小 (sof) 由 <span style="font-style: italic;"><I>i</I></span> + <span style="font-style: italic;"><I>l</I></span> + <span style="font-style: italic;"><I>o</I></span> 確定。請注意，此指令可能會增加或縮小目前暫存器堆疊幀的大小。區域性區域的大小 (sol) 由 <span style="font-style: italic;"><I>i</I></span> + <span style="font-style: italic;"><I>l</I></span> 給出。輸入大小與區域性大小之間沒有實際分別。在指令中，它們均作為單獨的運算元給出，只提示彙編器如何使用區域性暫存器。</p>
 
-<p>ѭ����λ�Ĵ��������ʺ϶�ջ֡������������ 8 �ı����������ָ����ͼ���� CFM.sor ��С�����ҼĴ�����������ַ�Ĵ������� CFM.rrb.gr��CFM.rrb.fr��CFM.rrb.pr����Ϊȫ��ʱ����ָ�����&ldquo;�����ļĴ���/�ֶ�&rdquo;����</p>
+<p>循環移位暫存器必須適合堆疊幀，並且數量是 8 的倍數。如果此指令試圖更改 CFM.sor 大小，並且暫存器重新命名基址暫存器（如 CFM.rrb.gr、CFM.rrb.fr、CFM.rrb.pr）不為全零時，該指令將導致&ldquo;保留的暫存器/欄位&rdquo;錯誤。</p>
 
-<p>���ܻ���������� alloc ���зǷ��Ĳ�������ϣ�����Ȼ������ָ���б���Ƿ���ϡ���ͼ���䳬�� 96 ���Ĵ����Ķ�ջ֡����ѭ����λ���򳬹���ջ֡��ֲ���С������ջ֡�Ķ�ջ֡ʱ����������&ldquo;�Ƿ�����&rdquo;����alloc ָ�������ָ�����еĵ�һ��ָ����򣬽������δ����ġ�</p>
+<p>儘管彙編器不允許 alloc 進行非法的運算元組合，但仍然可以在指令中編碼非法組合。試圖分配超過 96 個暫存器的堆疊幀、或循環移位區域超過堆疊幀或區域性大小超過堆疊幀的堆疊幀時，都將導致&ldquo;非法操作&rdquo;錯誤。alloc 指令必須是指令組中的第一個指令。否則，結果將是未定義的。</p>
 
-<p class="whs3">����Ĵ������������Է��������֡�� alloc ����ͣ��������ֱ�����㹻������Ĵ���д�뱸�ݴ洢��Ԫ��������ǿ�� RSE �洢���ܻᵼ������������ش��� </p>
+<p class="whs3">如果暫存器數量不足以分配所需的幀， alloc 將暫停處理器，直到有足夠的污損暫存器寫入備份儲存單元。這樣的強制 RSE 儲存可能會導致下列數據相關錯誤。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

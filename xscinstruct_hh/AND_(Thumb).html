@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/AND_(Thumb).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:32:12 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>AND (Thumb) - �루�߼���</title>
+<title>AND (Thumb) - 與（邏輯）</title>
 
 <!--(Meta)==========================================================-->
 
@@ -83,7 +83,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n16 λָ��\nA - ָ��\nAND (Thumb)");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n16 位指令\nA - 指令\nAND (Thumb)");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,17 +106,17 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">AND (Thumb*) - �루�߼���</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題">AND (Thumb*) - 與（邏輯）</h1>
 
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted>AND dest, op2</p>
 </div>
 
 <div>
-<p><span style="font-weight: normal;">����</span>��</p>
+<p><span style="font-weight: normal;">其中</span>：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,29 +126,29 @@ else
 <p CLASS=CellBodyLeft><em CLASS=SourceItalic
 							style="font-style: italic;">dest</em> </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>������һ���������ļĴ�����Ҳ��Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>包含第一個運算元的暫存器，也是目標暫存器</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
 <p CLASS=CellBodyLeft><em CLASS=SourceItalic
 							style="font-style: italic;">op2</em> </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>�����ڶ����������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含第二個運算元的暫存器</td></tr>
 </table>
 </div>
 
 <div>
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>���� <em CLASS=SourceItalic>dest</em> �� <em CLASS=SourceItalic>op2</em> �е�ÿ��λ��AND ָ����û���� <em CLASS=SourceItalic>dest</em> �е�λ�������������������Ӧ��λ��������Ϊ 1���� <em CLASS=SourceItalic>dest</em> �е�λҲ����Ϊ 1�������������������Ӧ��λ��δȫ����λ���������λ�����洢�� <em CLASS=SourceItalic>dest</em>�� </p>
+<p>對於 <em CLASS=SourceItalic>dest</em> 與 <em CLASS=SourceItalic>op2</em> 中的每個位，AND 指令將設定或清除 <em CLASS=SourceItalic>dest</em> 中的位。如果兩個運算元中相應的位均已設定為 1，則 <em CLASS=SourceItalic>dest</em> 中的位也設定為 1。如果兩個運算元中相應的位並未全部置位，則清除該位，並存儲到 <em CLASS=SourceItalic>dest</em>。 </p>
 
-<h2>Ѱַģʽ</h2>
+<h2>定址模式</h2>
 
-<p>�޲������� </p>
+<p>無運算元。 </p>
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -196,7 +196,7 @@ else
 </div>
 
 <div>
-<h2>����</h2>
+<h2>編碼</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs3">
@@ -267,14 +267,14 @@ else
 
 <div>
 <div>
-<h2>ʾ�� </h2>
+<h2>示例 </h2>
 </div>
 
 <p class=Preformatted><span>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funand <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0 <br> 4 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example,CODE,READONLY <br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;CODE16 <br> 7 <br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1 <br> 9 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Bitwise logical AND.<br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; R6 = R4 AND R6<br> 11 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Result hex 7E <br> 12 &#xA0;&#xA0;&#xA0;00000000 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;F7C4 &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;R4, #OxFE <br> 13 &#xA0;&#xA0;&#xA0;00000002 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;F7C6 &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;R6, #Ox7F <br> 14 &#xA0;&#xA0;&#xA0;00000004 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;4026 &#xA0;&#xA0;&#xA0;AND &#xA0;&#xA0;R6, R4</span> </p>
 
-<h2>������Ϣ </h2>
+<h2>更多資訊 </h2>
 
-<a href="EOR_(Thumb).html" CLASS="XRef">����� EOR ָ��</a><a href="ORR_(Thumb).html"><br> ����� ORR ָ��</a> 
+<a href="EOR_(Thumb).html" CLASS="XRef">請參閱 EOR 指令</a><a href="ORR_(Thumb).html"><br> 請參閱 ORR 指令</a> 
 </div>
 
 <script type="text/javascript" language="javascript1.2">

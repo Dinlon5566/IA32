@@ -3,7 +3,7 @@ var gaHSLoad=new Array();
 var gnMinIdx=0;
 var gnInsIdx=-1;
 var gsLoadingDivID="LoadingDiv";
-var gsLoadingMsg="ÕýÔÚ¼ÓÔØ£¬µ¥»÷´Ë´¦¿ÉÈ¡Ïû...";
+var gsLoadingMsg="æ­£åœ¨è¼‰å…¥ï¼Œå–®æ“Šæ­¤è™•å¯å–æ¶ˆ...";
 var gaProj=null;
 var gaTocs=new Array();
 var goChunk=null;
@@ -270,7 +270,7 @@ function writeBook(nIdx)
 		{
 			sHTML+="parent><p><nobr><a id=\""+getBookId(nIdx)+"\" href=\"javascript:void(0);\" onfocus=\"markBook("+nIdx+");\" onclick=\"";
 			sHTML+="insertBookItems("+nIdx+", "+getItemContentsNum(nIdx);
-			sHTML+=");return false;\" title=\""+sName+"\"><img alt=\"Êé±¾\" name=\""+getBId(nIdx)+"\" src=\""+sIcon+"\" border=0 align=\"absmiddle\">";
+			sHTML+=");return false;\" title=\""+sName+"\"><img alt=\"æ›¸æœ¬\" name=\""+getBId(nIdx)+"\" src=\""+sIcon+"\" border=0 align=\"absmiddle\">";
 			sHTML+="&nbsp;"+sName+"</a></nobr></p></div>";
 			var sURL=_textToHtml_nonbsp(getItemURL(nIdx));
 			if(sURL!="")
@@ -427,9 +427,9 @@ function writeAnItem(nIdx)
 	var sHTML="<p><nobr><a id=\""+getItemId(nIdx)+"\" onfocus=\"markItem("+nIdx+");\""
 	var sAltString="";
 	if(nItemType&2)
-		sAltString="Ò³Ãæ";
+		sAltString="é é¢";
 	else
-		sAltString="Ô¶³ÌÒ³Ãæ";
+		sAltString="é ç«¯é é¢";
 	if(sTarget!="")
 		sHTML+="target=\""+sTarget+"\" ";
 	sHTML+="href=\""+_textToHtml_nonbsp(getItemURL(nIdx))+"\" title=\""+sName+"\"><img alt=\""+sAltString+"\" src=\""+sIcon+"\" border=0 align=\"absmiddle\">&nbsp;"+sName+"</a></nobr></p>";
@@ -1478,8 +1478,8 @@ if(window.gbWhUtil&&window.gbWhVer&&window.gbWhMsg&&window.gbWhProxy)
 	RegisterListener2(this,WH_MSG_PROJECTREADY);
 	RegisterListener2(this,WH_MSG_SYNCTOC);
 	RegisterListener2(this,WH_MSG_SHOWTOC);
-	goFont=new whFont("ËÎÌå","9pt","#000000","normal","normal","none");
-	goHFont=new whFont("ËÎÌå","9pt","#007f00","normal","normal","underline");
+	goFont=new whFont("ç´°æ˜Žé«”","9pt","#000000","normal","normal","none");
+	goHFont=new whFont("ç´°æ˜Žé«”","9pt","#007f00","normal","normal","underline");
 
 	window.onload=window_OnLoad;
 	window.onbeforeunload=window_BUnload;

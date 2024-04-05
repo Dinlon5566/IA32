@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400348.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:17 GMT -->
 <head>
 
-<title>setf - ���ø���ֵ��ָ������Чλָ��</title>
+<title>setf - 設定浮點值、指數或有效位指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:55:57 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nS - ָ��\nsetf - ���ø���ֵ��ָ������Чλָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nS - 指令\nsetf - 設定浮點值、指數或有效位指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,16 +116,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">���ø���ֵ��ָ������Чλָ��</h1>
+<h1><img src="itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">設定浮點值、指數或有效位指令</h1>
 
 <p><span style="font-weight: bold;"><B>setf</B></span></p>
 
-<p><a HREF="6400349.html">����</a> <a HREF="6400126.html">�������</a>
+<p><a HREF="6400349.html">操作</a> <a HREF="6400126.html">字型慣例</a>
  </p>
 
-<p>ָ������ M</p>
+<p>指令型別 M</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) setf.s <span style="font-style: italic;"><I>f1</I></span> = <span style="font-style: italic;"><I>r2</I></span> single_form</p>
 
@@ -146,31 +146,31 @@ kadovFilePopupInit('A2');
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>說明</B></span></p>
 
-<p>�ڵ�������˫������ʽ�У�<span style="x-condition: eclipse;">GR</span><script type="text/javascript"
+<p>在單精度與雙精度形式中，<span style="x-condition: eclipse;">GR</span><script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A3');
-//--></script> <span style="font-style: italic;"><I>r2</I></span> ��Ϊ�����ȣ��� single_form �У���˫���ȣ��� double_form �У��ڴ��ʾ��������Ȼ��ת���ɸ���Ĵ�����ʽ�������� <span style="x-condition: eclipse;">FR</span><script type="text/javascript"
+//--></script> <span style="font-style: italic;"><I>r2</I></span> 作為單精度（在 single_form 中）或雙精度（在 double_form 中）記憶體表示法處理，然後轉換成浮點暫存器格式，並放入 <span style="x-condition: eclipse;">FR</span><script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A4');
-//--></script> <span style="font-style: italic;"><I>f1��</I></span></p>
+//--></script> <span style="font-style: italic;"><I>f1。</I></span></p>
 
-<p>�� <span style="x-condition: eclipse;">exponent_form</span> ��<script 
+<p>在 <span style="x-condition: eclipse;">exponent_form</span> 中<script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A5');
-//--></script>��GR <span style="font-style: italic;"><I>r2</I></span> ��λ 16:0 ���Ƶ� FR <span style="font-style: italic;"><I>f1</I></span> ��ָ���ֶΣ�GR <span style="font-style: italic;"><I>r2</I></span> ��λ 17 ���Ƶ� FR <span style="font-style: italic;"><I>f1</I></span> �ķ���λ��FR <span style="font-style: italic;"><I>f1</I></span> ����Чλ�ֶ�����Ϊһ (0x800...000)��</p>
+//--></script>，GR <span style="font-style: italic;"><I>r2</I></span> 的位 16:0 複製到 FR <span style="font-style: italic;"><I>f1</I></span> 的指數欄位，GR <span style="font-style: italic;"><I>r2</I></span> 的位 17 複製到 FR <span style="font-style: italic;"><I>f1</I></span> 的符號位。FR <span style="font-style: italic;"><I>f1</I></span> 的有效位欄位設定為一 (0x800...000)。</p>
 
-<p>�� <span style="x-condition: eclipse;">significand_form</span> ��<script 
+<p>在 <span style="x-condition: eclipse;">significand_form</span> 中<script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A6');
-//--></script>��GR <span style="font-style: italic;"><I>r2</I></span> ��ֵ���Ƶ� FR <span style="font-style: italic;"><I>f1</I></span> ����Чλ�ֶΡ�</p>
+//--></script>，GR <span style="font-style: italic;"><I>r2</I></span> 的值複製到 FR <span style="font-style: italic;"><I>f1</I></span> 的有效位欄位。</p>
 
-<p>FR <span style="font-style: italic;"><I>f1</I></span> ��ָ���ֶ�����Ϊ 2.063 (0x1003E) ��ƫ��ָ����FR <span style="font-style: italic;"><I>f1</I></span> �ķ����ֶ�����Ϊ�� (0)��</p>
+<p>FR <span style="font-style: italic;"><I>f1</I></span> 的指數欄位設定為 2.063 (0x1003E) 的偏置指數，FR <span style="font-style: italic;"><I>f1</I></span> 的符號欄位設定為正 (0)。</p>
 
-<p>�������е���ʽ����� <span style="font-style: italic;"><I>r2</I></span> ��Ӧ�� NaT λ���� 1���� FR <span style="font-style: italic;"><I>f1</I></span> ����Ϊ NaTVal�������Ǽ���Ľ����</p>
+<p>對於所有的形式，如果 <span style="font-style: italic;"><I>r2</I></span> 對應的 NaT 位等於 1，則將 FR <span style="font-style: italic;"><I>f1</I></span> 設定為 NaTVal，而不是計算的結果。</p>
 
 
 <!--(HR)============================================================-->

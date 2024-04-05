@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_SWPB.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:46:54 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>SWPB - �����ֽ�</title>
+<title>SWPB - 交換位元組</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nS - ָ��\nSWPB");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nS - 指令\nSWPB");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,16 +104,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">SWPB - �����ֽ�</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題">SWPB - 交換位元組</h1>
 
 <div>
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted><span CLASS=Code>SWP[condition]B dest op1, [source]</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,7 +126,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="notational_conventions.html#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 個條件之一。請參閱<a HREF="notational_conventions.html#Condition Code Status">條件程式碼狀態</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -136,7 +136,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>目標暫存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -146,7 +146,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>����Դ�������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含源運算元的暫存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -156,26 +156,26 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Դ��������ַ</td></tr>
+<p CLASS=CellBodyLeft>源運算元地址</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-SWPB ָ��� <em CLASS=SourceItalic>source</em> ����һ���ֽڵ����ݣ���������չ��ʽ��չ�� 32 λ�֣�Ȼ��洢�� <em CLASS=SourceItalic>dest</em>����Ȼ��� <em CLASS=SourceItalic>op1</em> ȡ�� LSB �ֽڲ��洢�� <em CLASS=SourceItalic>source</em>���Ӷ�ʵ���ڴ��а������ֽ�ֵ��Ĵ����� LSB �ֽ�֮��Ľ�������ָ�����ʵ���ź�����condition ��������Чֵ������ָ��� NOP�� 
+SWPB 指令從 <em CLASS=SourceItalic>source</em> 載入一個位元組的數據，按照零擴充套件方式擴充套件成 32 位字，然後儲存到 <em CLASS=SourceItalic>dest</em>。它然後從 <em CLASS=SourceItalic>op1</em> 取出 LSB 位元組並存儲到 <em CLASS=SourceItalic>source</em>；從而實現記憶體中包含的位元組值與暫存器的 LSB 位元組之間的交換。此指令可以實現訊號量。condition 必須是有效值；否則將指令當作 NOP。 
 </div>
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="Note.gif"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif"> 備註</h3>
 
-�����ͼ������Ч�ļ��ػ�洢���ݷ��ʣ�������������ֹ�쳣�� 
+如果試圖進行無效的載入或儲存數據訪問，則產生數據終止異常。 
 
-<h2>Ѱַģʽ</h2>
+<h2>定址模式</h2>
 
-�޲�����
+無運算元
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -242,7 +242,7 @@ SWPB ָ��� <em CLASS=SourceItalic>source</em> ����һ���ֽڵ����ݣ���������չ���
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� </h2>
+<h2>編碼 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -385,13 +385,13 @@ SWPB ָ��� <em CLASS=SourceItalic>source</em> ����һ���ֽڵ����ݣ���������չ���
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funswp <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0 <br> 4 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example,CODE,READONLY <br> 6<br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1 <br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Swap least byte of data from register R3 with<br> 9 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; data from memory using memory address held in R8<br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Data from memory byte is zero-extended<br> 11 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; to form a 32-bit word to place in R3 <br> 12 &#xA0;&#xA0;00000000 &#xA0;&#xA0;F3B4D678 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R8, #OxA<br> 13 &#xA0;&#xA0;00000004 &#xA0;&#xA0;F3B47678 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R3, #Ox1<br> 14 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E1083093 &#xA0;&#xA0;SWPB &#xA0;&#xA0;R3, R3, [R8]<br> 15<br> 16 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Store least byte of data held in R5 <br> 17 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; to memory address held in R10 <br> 18 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; and load byte data already at that address<br> 19 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; zero-extended into R7 <br> 20 &#xA0;&#xA0;00000012 &#xA0;&#xA0;F3B4F678 &#xA0;MOV &#xA0;&#xA0;&#xA0;&#xA0;R10, #OxA <br> 21 &#xA0;&#xA0;00000016 &#xA0;&#xA0;E3A05001 &#xA0;MOV &#xA0;&#xA0;&#xA0;&#xA0;R5, #1 <br> 22 &#xA0;&#xA0;00000020 &#xA0;&#xA0;E10A7095 &#xA0;SWPB &#xA0;&#xA0;&#xA0;R7, R5, [R10]</span> 
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
-<span style="font-weight: normal;"><a href="INST_SWP.html">����� SWP ָ��</span></a>
+<span style="font-weight: normal;"><a href="INST_SWP.html">請參閱 SWP 指令</span></a>
 </div>
 </div>
 

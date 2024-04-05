@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/lipsexp_flow_dep.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:54 GMT -->
 <head>
 
-<title>��ʽ�������</title>
+<title>顯式流程相關</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta NAME=MS-HAID CONTENT="Flow and Output Dependencies">
 <meta name=date content="04 8, 2003 2:34:46 PM">
 <meta name=topic-status content="In Progress">
@@ -119,18 +119,18 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> ��ʽ�������</h1>
+<h1><img src="TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> 顯式流程相關</h1>
 
-<p><span style="font-weight: bold;"><B>Exp_Flow_Dep</B></span> ��ʾһ��������ơ�</p>
+<p><span style="font-weight: bold;"><B>Exp_Flow_Dep</B></span> 表示一種配對限制。</p>
 
-<p>Ϊ�䷢�� <span style="font-weight: bold;"><B>Exp_Flow_Dep</B></span> ��ָ����ʽ����Դ�������ļĴ�����ǰһ��ָ������Ŀ��������������������ء�������ػᵼ������ָ���޷���ԡ�</p>
+<p>為其發出 <span style="font-weight: bold;"><B>Exp_Flow_Dep</B></span> 的指令顯式用作源運算元的暫存器被前一條指令用作目標運算元。這就是流程相關。流程相關會導致兩條指令無法配對。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>����</B></span></h3>
+	style="margin-left: 40px;"><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>建議</B></span></h3>
 
-<p class="whs3">���������е���������ԡ�Ȼ����ʹ����ͬ�Ĵ���������ָ��֮�����һЩָ�����������������ø��Ĵ�������塣</p>
+<p class="whs3">分析程式碼中的流程相關性。然後在使用相同暫存器的兩條指令之間插入一些指令提高配對數，而不用更改程式碼的語義。</p>
 
-<p>ʾ����</p>
+<p>示例：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells>
@@ -138,16 +138,16 @@ else
 <tr>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ԭʼ����</td>
+	style="margin-bottom: 0;">原始程式碼</td>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td>
+	style="margin-bottom: 0;">週期</td>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">�Ż�����</td>
+	style="margin-bottom: 0;">優化程式碼</td>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td></tr>
+	style="margin-bottom: 0;">週期</td></tr>
 
 <tr>
 <td valign="top" class="whs4">
@@ -185,26 +185,26 @@ else
 
 <tr>
 <td COLSPAN="2" valign="top" class="whs4">
-<p CLASS=TableCell>����������أ�&ldquo;ָ�� 1&rdquo;��&ldquo;ָ�� 2&rdquo;�޷���ԡ�&ldquo;ָ�� 1&rdquo;д�� ECX �Ĵ�����&ldquo;ָ�� 2&rdquo;�� ECX �Ĵ�������Դ��������ͬ����&ldquo;ָ�� 3&rdquo;��&ldquo;ָ�� 4&rdquo;Ҳ�޷���ԡ�</p>
+<p CLASS=TableCell>由於流程相關，&ldquo;指令 1&rdquo;與&ldquo;指令 2&rdquo;無法配對。&ldquo;指令 1&rdquo;寫入 ECX 暫存器，&ldquo;指令 2&rdquo;將 ECX 暫存器用作源運算元。同樣，&ldquo;指令 3&rdquo;與&ldquo;指令 4&rdquo;也無法配對。</p>
 <p CLASS=TableCell
-	style="margin-bottom: 0;"><b style="font-weight: bold;">ִ��ʱ���ܼƣ�3 ������</b></td>
+	style="margin-bottom: 0;"><b style="font-weight: bold;">執行時間總計：3 個週期</b></td>
 <td COLSPAN="2" valign="top" class="whs4">
-<p CLASS=TableCell>���Ż��Ĵ����У�ָ���˳�򾭹����µ��������Ա���������ء�&ldquo;ָ�� 1&rdquo;��&ldquo;ָ�� 3&rdquo;��ԣ����ڵ�һ��������ִ�С�&ldquo;ָ�� 2&rdquo;��&ldquo;ָ�� 4&rdquo;Ҳ��ԣ����ڵ� 2 ��������ִ�С�</p>
+<p CLASS=TableCell>在優化的程式碼中，指令的順序經過重新調整，可以避免流程相關。&ldquo;指令 1&rdquo;與&ldquo;指令 3&rdquo;配對，並在第一個週期中執行。&ldquo;指令 2&rdquo;與&ldquo;指令 4&rdquo;也配對，並在第 2 個週期中執行。</p>
 <p CLASS=TableCell
-	style="margin-bottom: 0;"><b style="font-weight: bold;">ִ��ʱ���ܼƣ�2 ������</b></td>
+	style="margin-bottom: 0;"><b style="font-weight: bold;">執行時間總計：2 個週期</b></td>
 </tr>
 </table>
 
 <p class="whs5">
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','MMX(TM) �˷�ָ��','lipsmmx_mul.htm','MMX(TM) ָ��ʹ�������Ĵ������ڴ�','lipsmmx_int_mem.htm','MMX(TM) ��λָ��','lipsmmx_shift.htm','NP ָ��','lipsnp_inst.htm','PU ָ��','lipspu_inst.htm','���ڻ�ȡ��','lipsnot_in_fetch.htm','�� EAX �Ƴ�','lipsmov_from_eax.htm','ǰһ�� MMX(TM) ָ��ʹ�������Ĵ������ڴ�','lipsprev_mm_int_mem.htm','ǰһ�� PV �� NP ָ��','lipsprev_pv.htm','ǰһ������ָ��δ���','lipsprev_np_fp.htm','ǰ׺','LipsPrefix.htm','����ָ���','lipsbasic_block.htm');return false;" title="��سͷ�"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e7%9b%b8%e5%85%b3%e6%83%a9%e7%bd%9a.gif" border=0 height=20 width=58 alt="��سͷ�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','MMX(TM) 乘法指令','lipsmmx_mul.htm','MMX(TM) 指令使用整數暫存器或記憶體','lipsmmx_int_mem.htm','MMX(TM) 移位指令','lipsmmx_shift.htm','NP 指令','lipsnp_inst.htm','PU 指令','lipspu_inst.htm','不在獲取中','lipsnot_in_fetch.htm','從 EAX 移出','lipsmov_from_eax.htm','前一條 MMX(TM) 指令使用整數暫存器或記憶體','lipsprev_mm_int_mem.htm','前一條 PV 或 NP 指令','lipsprev_pv.htm','前一條浮點指令未配對','lipsprev_np_fp.htm','字首','LipsPrefix.htm','基本指令塊','lipsbasic_block.htm');return false;" title="相關懲罰"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e7%9b%b8%e5%85%b3%e6%83%a9%e7%bd%9a.gif" border=0 height=20 width=58 alt="相關懲罰"></a>
 
 
  </p>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','�� MMX(TM) �����ı���(R) ������','pentium(r)_with_mmx(tm_technology_processor.htm','����(R) ������','pentium(r)_processor.htm');return false;" title="Ӱ��Ĵ�����"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%bd%b1%e5%93%8d%e7%9a%84%e5%a4%84%e7%90%86%e5%99%a8.gif" border=0 height=20 width=82 alt="Ӱ��Ĵ�����"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','含 MMX(TM) 技術的奔騰(R) 處理器','pentium(r)_with_mmx(tm_technology_processor.htm','奔騰(R) 處理器','pentium(r)_processor.htm');return false;" title="影響的處理器"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%bd%b1%e5%93%8d%e7%9a%84%e5%a4%84%e7%90%86%e5%99%a8.gif" border=0 height=20 width=82 alt="影響的處理器"></a>
 
 
  </p>

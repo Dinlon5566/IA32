@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/avoiding_second-level_cache_load_misses.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:24:40 GMT -->
 <head>
 
-<title>��������������δ����</title>
+<title>避免二級快取載入未命中</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -80,7 +80,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n��������������δ����");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n關於英特爾(R) 奔騰(R) 4 處理器的建議\n關於英特爾(R) 奔騰(R) 4 處理器的建議\n避免二級快取載入未命中");
 
 	}
 	if (window.writeBtnStyle)
@@ -103,26 +103,26 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" alt="Ӣ�ض�(R) ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">��������������δ����</h1>
+<h1><img src="TA_logo.gif" alt="英特爾(R) 調優助手主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">避免二級快取載入未命中</h1>
 
 &nbsp; 
 
-<p>���ǹ�����С�����ݵ��ڴ�ռ�����ļ��ֵ������⡣��Ҫ���˽��������Ĳ�������ϵ�ṹ�����������Ա�������ݽṹ��������̵ķ�ʽ���Լ������ڱ���Ĵ����еİ��������������һЩ��������������ʣ��Ӷ�������ܣ��İ취������ʵ���Ѷȵĵ���˳������� </p>
+<p>這是關於最小化數據的記憶體佔用量的棘手的老問題。它要求瞭解二級快取的佈局與體系結構、軟體設計人員安排數據結構與訪問例程的方式，以及它們在編譯的程式碼中的安排情況。這裡是一些有助於提高命中率（從而提高效能）的辦法，按照實現難度的遞增順序給出： </p>
 
 <li class=kadov-p
-	class=kadov-p>���ȣ��ҳ�ϵͳ�ϻ���Ĵ�С������ķ�����ʹ�� support.intel.com ���ṩ��&ldquo;Ӣ�ض�(R) ������Ƶ�ʱ�ʶʵ�ó���&rdquo;������ &quot;processor frequency id&quot;�������δ�ṩ�ʺ���ϵͳ�����ʵ�ó�������ĳ���Ա�ο��ֲᣬ�Ի�ȡ CPUID ָ����й���Ϣ�������ҳ�����Ĵ�С�� </li>
+	class=kadov-p>首先，找出系統上快取的大小。最簡便的方法是使用 support.intel.com 上提供的&ldquo;英特爾(R) 處理器頻率標識實用程式&rdquo;（搜索 &quot;processor frequency id&quot;）。如果未提供適合您系統的這個實用程式，請參閱程式設計師參考手冊，以獲取 CPUID 指令的有關資訊，幫助找出快取的大小。 </li>
 
 <li class=kadov-p
-	class=kadov-p>Ӳ��Ԥȡ���ɴ��������ܣ�����Ҫǰ������˳����ʲ��ܲ������ԵĲ�� </li>
+	class=kadov-p>硬體預取器可大幅提高效能，但需要前向或後向順序訪問才能產生明顯的差別。 </li>
 
 <li class=kadov-p
-	class=kadov-p>����ģ�黯��ѭ��������ѭ��ʱ����ϲ����Ż���������ע����Щ��������ɱ�����ʵ�֡�</li>
+	class=kadov-p>嘗試模組化、循環互換、循環時滯與合併等優化技術。備註：這些方法最好由編譯器實現。</li>
 
 <li class=kadov-p
 	class=kadov-p>
-�Ż����ݽṹ�����ڲ���&ldquo;���̼߳���&rdquo;��HT �������Ĵ�������ʹ֮�ɷ��� 1/4 �� 1/2 �Ķ������棻���ڲ�����&ldquo;HT ����&rdquo;�Ĵ�������ʹ֮�ɷ��� 1/2 �Ļ��档 
+優化數據結構，對於採用&ldquo;超執行緒技術&rdquo;（HT 技術）的處理器，使之可放入 1/4 到 1/2 的二級快取；對於不採用&ldquo;HT 技術&rdquo;的處理器，使之可放入 1/2 的快取。 
 
-<p>�����й��Ż���������ϸ��Ϣ������� <span style="font-style: italic;"><I>Intel(R) Pentium(R) 4 and Intel(R) <i>Xeon</i>(TM) Processor Optimization Manual</I></span>��Ӣ�ض�(R) ����(R) 4 ��Ӣ�ض�(R) ��ǿ(TM) �������Ż��ֲᣩ�ĵ� 7 �¡�</p>
+<p>如需有關優化技術的詳細資訊，請參閱 <span style="font-style: italic;"><I>Intel(R) Pentium(R) 4 and Intel(R) <i>Xeon</i>(TM) Processor Optimization Manual</I></span>（英特爾(R) 奔騰(R) 4 與英特爾(R) 至強(TM) 處理器優化手冊）的第 7 章。</p>
 </li>
 
 <script type="text/javascript" language="javascript1.2">

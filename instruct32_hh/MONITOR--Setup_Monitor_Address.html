@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/MONITOR--Setup_Monitor_Address.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:47:00 GMT -->
 <head>
 
-<title>MONITOR - ���ü�������ַ</title>
+<title>MONITOR - 設定監視器地址</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="05 12, 2003 11:52:41 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nM - ָ��\nMONITOR - ���ü�������ַ");
+	addTocInfo("參考\n指令集\nIA-32 指令\nM - 指令\nMONITOR - 設定監視器地址");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,7 +104,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>MONITOR - ���ü�������ַ</h1>
+<h1>MONITOR - 設定監視器地址</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -115,10 +115,10 @@ else
 	style="margin-bottom: 0;">&nbsp;</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">說明</td></tr>
 
 <tr>
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
@@ -126,45 +126,45 @@ else
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
 <p CLASS=TableCell>MONITOR EAX, ECX, EDX</td>
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
-<p CLASS=TableCell>����Ӳ��Ҫ���ӵ����Ե�ַ��Χ�����������������ַ��ΧӦ����д���ڴ滺���͡�</td></tr>
+<p CLASS=TableCell>設定硬體要監視的線性地址範圍，並激活監視器。地址範圍應該是寫回記憶體快取型。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-MONITOR ָ�������������г�Ϊ�������¼�δ����־��״̬���������¼�δ����־��������Ϊ 1���������������ͨ�� MWAIT ָ�����Ϊ�����������ã���������ֵ��������ϵ�ṹ��Χ�ɼ��ġ��������¼�δ����־�ɶ���¼�����������ӵĵ�ַ��Χ��д�룩���ã����� MONITOR ָ�λ��MONITOR ָ��ʹ�� EAX ��ָ���ĵ�ַ���õ�ַ����Ӳ��������λ�������¼�δ����־��Ӳ�����洢�ĵ�ַ��Χ����ͨ������ CPUID ȷ���������й����ô˵�ַ��Χ�Ա�������ѵ���ϸ��Ϣ������ġ�����Ӳ�����Ըõ�ַ��Χ�ڵĵ�ַ���еĴ洢�����ڼ�⵽д��ʱ���ü������¼�δ����־���������¼�δ����־��״̬�� <a HREF="MWAIT--Monitor_Wait.html">MWAIT</a> ָ��ʹ�á������¼�Ҳ�����ü������¼�δ����־����ַ��Χ������д�ػ������ڴ��С�ֻ�жԼ��ӵĵ�ַ��Χ��д���ڴ��ʹ洢�Ż����ü������¼�δ����־��EAX ���������߼���ַ��Ĭ������£�DS �����ڴ������Ҫ���ӵ����Ե�ַ���θ��ǿ���ͬ MONITOR ָ��һ��ʹ�á�ECX �� EDX ����ͬ MONITOR ָ���������Ϣ����ͨѶ��ECX ָ�� MONITOR ָ���ѡ����չ��EDX ���ܰ�����ʾ���Ҳ������ָ�����ϵ�ṹ��Ϊ�����ں�&ldquo;��������������ָ���������չָ�&rdquo;(SSE3) ��Ӣ�ض�<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 	face=Verdana>(R)</font> ����<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 										face=Verdana>(R)</font> 4 ��������û�ж�����չ����ʾ��ECX �� EDX ��ֵӦ��Ϊ�㡣ECX �� EDX �ķ���ֵ���ڱ���ֵ���� ECX Ϊ����ֵʱִ�� MONITOR ָ�������������һ�㱣���Դ����쳣������������ EDX �б���λ�����á�MONITOR ָ����Ϊ���ز������������ڴ�����ȷ��˳�򡣴�ָ����������е���Ȩ����ʹ�ã��������е�Ȩ�޼�飬�Լ�ͬ�ֽڼ����йصĴ��󶼻�Ӱ������ͬ����һ����MONITOR ָ����ҳ�������� A λ������ D λ��MONITOR CPUID ���ܱ�־���� EAX=1 �������ִ�� CPUID ʱ���� ECX ��λ 3��ָʾ�������Ƿ�֧�ִ�ָ�����ϵͳ��ϵͳ BIOS ����ͨ�� IA32_MISC_ENABLES MSR ���ô�ָ����ô�ָ������ CPUID ���ܱ�־��������ִ�� MONITOR ָ��ʱ���ɷǷ��������쳣�� 
+MONITOR 指令依賴處理器中稱為監視器事件未決標誌的狀態。監視器事件未決標誌或是設定為 1，或是清除；除非通過 MWAIT 指令的行為進行特殊設定，否則它的值並不是體系結構範圍可見的。監視器事件未決標誌由多個事件（包括向監視的地址範圍的寫入）設定，並由 MONITOR 指令復位。MONITOR 指令使用 EAX 中指定的地址設定地址監視硬體，並復位監視器事件未決標誌。硬體檢查儲存的地址範圍可以通過呼叫 CPUID 確定。如需有關設定此地址範圍以避免錯誤喚醒的詳細資訊，請參閱。監視硬體檢測對該地址範圍內的地址進行的儲存，並在檢測到寫入時設定監視器事件未決標誌。監視器事件未決標誌的狀態由 <a HREF="MWAIT--Monitor_Wait.html">MWAIT</a> 指令使用。其它事件也會設定監視器事件未決標誌。地址範圍必須在寫回快取型記憶體中。只有對監視的地址範圍的寫回記憶體型儲存才會設定監視器事件未決標誌。EAX 的內容是邏輯地址。預設情況下，DS 段用於建立隨後要監視的線性地址。段覆蓋可以同 MONITOR 指令一起使用。ECX 與 EDX 用於同 MONITOR 指令就其它資訊進行通訊。ECX 指定 MONITOR 指令可選的擴充套件。EDX 可能包含提示，且不會更改指令的體系結構行為。對於含&ldquo;第三代數據流單指令多數據擴充套件指令集&rdquo;(SSE3) 的英特爾<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 	face=Verdana>(R)</font> 奔騰<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 										face=Verdana>(R)</font> 4 處理器，沒有定義擴充套件或提示，ECX 與 EDX 的值應該為零。ECX 與 EDX 的非零值屬於保留值，在 ECX 為保留值時執行 MONITOR 指令，處理器將產生一般保護性錯誤異常。處理器忽略 EDX 中保留位的設定。MONITOR 指令作為載入操作根據其它記憶體事務確定順序。此指令可以在所有的特權級別使用，並且所有的許可權檢查，以及同位元組載入有關的錯誤都會影響它。同載入一樣，MONITOR 指令在頁表中設定 A 位而不是 D 位。MONITOR CPUID 功能標誌（在 EAX=1 的情況下執行 CPUID 時，是 ECX 的位 3）指示處理器是否支援此指令。操作系統或系統 BIOS 可以通過 IA32_MISC_ENABLES MSR 禁用此指令；禁用此指令會清除 CPUID 功能標誌，並導致執行 MONITOR 指令時產生非法操作碼異常。 
 
-<br>������ģ�<a href="guideline_for_monitor_mwait.html">MONITOR/MWAIT ָ��ԭ��</a>�� 
+<br>另請參閱：<a href="guideline_for_monitor_mwait.html">MONITOR/MWAIT 指導原則</a>。 
  
 
-<h2>����</h2>
+<h2>操作</h2>
 
-<p>MONITOR ʹ�� EAX �����ݣ��߼���ַ��Ϊ������Ӳ�����õ�ַ��Χ������λ�������¼�δ����־���ڴ��ַ��ΧӦ����д�ػ������ڴ��С���ָ���ĵ�ַ��Χ���д洢ʱ�������ü������¼�δ����־��ECX �� EDX ����������ͬ MONITOR ָ���������Ϣ����ͨѶ�� </p>
+<p>MONITOR 使用 EAX 的內容（邏輯地址）為監視器硬體設定地址範圍，並復位監視器事件未決標誌。記憶體地址範圍應該在寫回快取型記憶體中。對指定的地址範圍進行儲存時，將設定監視器事件未決標誌。ECX 與 EDX 的內容用於同 MONITOR 指令就其它資訊進行通訊。 </p>
 
-<h2>�쳣</h2>
+<h2>異常</h2>
 
-��
+無
 
-<h2>����ģʽ�쳣</h2>
+<h2>保護模式異常</h2>
 
-#GP(0) - CS��DS��ES��FS �� GS ���е��ڴ��������Ч��ַ�Ƿ���#GP(0) - ECX ��ֵ���� 0��#SS(0) - SS ���еĵ�ַ�Ƿ���#PF(�������) - ҳ���� (TBD)��#UD - ��� CPUID ���ܱ�־ MONITOR Ϊ 0�����ʹ�� LOCK��REP��REPNE/NZ ��&ldquo;��������С&rdquo;����ǰ׺�� 
+#GP(0) - CS、DS、ES、FS 或 GS 段中的記憶體運算元有效地址非法。#GP(0) - ECX 的值不是 0。#SS(0) - SS 段中的地址非法。#PF(錯誤程式碼) - 頁錯誤 (TBD)。#UD - 如果 CPUID 功能標誌 MONITOR 為 0。如果使用 LOCK、REP、REPNE/NZ 及&ldquo;運算元大小&rdquo;覆蓋字首。 
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>實地址模式異常</h2>
 
-#GP - ������������κβ���λ�� 0 �� FFFFH ����Ч��ַ�ռ�֮�⡣ 
+#GP - 如果運算元的任何部分位於 0 到 FFFFH 的有效地址空間之外。 
 
-<br>#GP(0) - ECX ��ֵ���� 0��
+<br>#GP(0) - ECX 的值不是 0。
 
-<br>#UD - ��� CPUID ���ܱ�־ MONITOR Ϊ 0�����ʹ�� LOCK��REP��REPNE/NZ ��&ldquo;��������С&rdquo;����ǰ׺�� 
+<br>#UD - 如果 CPUID 功能標誌 MONITOR 為 0。如果使用 LOCK、REP、REPNE/NZ 及&ldquo;運算元大小&rdquo;覆蓋字首。 
 
-<h2>�� 8086 ģʽ�쳣</h2>
+<h2>虛 8086 模式異常</h2>
 
-<p>#GP - ������������κβ���λ�� 0 �� FFFFH ����Ч��ַ�ռ�֮�⡣ </p>
+<p>#GP - 如果運算元的任何部分位於 0 到 FFFFH 的有效地址空間之外。 </p>
 
-<p>#GP(0) - ECX ��ֵ���� 0�� </p>
+<p>#GP(0) - ECX 的值不是 0； </p>
 
-<p>#UD - ��� CPUID ���ܱ�־ MONITOR Ϊ 0�� </p>
+<p>#UD - 如果 CPUID 功能標誌 MONITOR 為 0。 </p>
 
-<p>#UD - ���ʹ�� LOCK��REP��REPNE/NZ ��&ldquo;��������С&rdquo;���ǡ�#PF(�������) - ҳ���� </p>
+<p>#UD - 如果使用 LOCK、REP、REPNE/NZ 及&ldquo;運算元大小&rdquo;覆蓋。#PF(錯誤程式碼) - 頁錯誤。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

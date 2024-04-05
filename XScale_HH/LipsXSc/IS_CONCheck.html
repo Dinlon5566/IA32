@@ -9,11 +9,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/XScale_HH/LipsXSc/IS_CONCheck.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:54 GMT -->
 <head>
 
-<title>��������ָ��ѡ��</title>
+<title>條件檢查的指令選擇</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="05 28, 2003 11:12:45 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -91,7 +91,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض� XScale(R) ΢��ϵ�ṹ \nָ��ѡ��\n�������");
+	addTocInfo("參考\n處理器事件與建議\n英特爾 XScale(R) 微體系結構 \n指令選擇\n條件檢查");
 
 	}
 	if (window.writeBtnStyle)
@@ -114,19 +114,19 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="XS_logo.gif" alt="Ӣ�ض� XScale(R) ��������" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">��������ָ��ѡ��</h1>
+<h1><img src="XS_logo.gif" alt="英特爾 XScale(R) 技術主題" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">條件檢查的指令選擇</h1>
 
 <h2>XSC_IS_CONCheck</h2>
 
-<h3>����</h3>
+<h3>解釋</h3>
 
-<span>&ldquo;Ӣ�ض� XScale(R)&rdquo;����ָ�������ѡ���Ե��޸����������״̬���� </span><span class=Code>IS</span><span> ģʽ��Ҫע�ؼ���������ã�S ��ǣ��Ƿ��Ҫ��</span> 
+<span>&ldquo;英特爾 XScale(R)&rdquo;技術指令可以有選擇性地修改條件程式碼的狀態。此 </span><span class=Code>IS</span><span> 模式主要注重檢查條件設定（S 標記）是否必要。</span> 
 
-<h3 class="whs2"><img id="_x0000_i1025" src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs3"> ��ע </h3>
+<h3 class="whs2"><img id="_x0000_i1025" src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs3"> 備註 </h3>
 
-<p class="whs4">���ڳ˷�ָ���&ldquo;ָ��ѡ��&rdquo;�� <a HREF="Multiply_Instruction_Condition_Code_Penalty.html">XSC_MUL_CONDITION</a> �ͷ�/�������ʹ�á� </p>
+<p class="whs4">對於乘法指令，此&ldquo;指令選擇&rdquo;與 <a HREF="Multiply_Instruction_Condition_Code_Penalty.html">XSC_MUL_CONDITION</a> 懲罰/警告配合使用。 </p>
 
-<h3>ʾ�� 1</h3>
+<h3>示例 1</h3>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="100%" class="whs5">
@@ -135,9 +135,9 @@ else
 
 <tr valign="top" class="whs7">
 <td valign="top" width="50%" class="whs8">
-<h3 class=TableHead>ԭʼ����</td>
+<h3 class=TableHead>原始程式碼</td>
 <td valign="top" width="50%" class="whs9">
-<h3 class=TableHead>ָ��ѡ��</td></tr>
+<h3 class=TableHead>指令選擇</td></tr>
 
 <tr valign="top" class="whs7">
 <td valign="top" width="50%" class="whs10">
@@ -149,10 +149,10 @@ else
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p>��ָ�����ȥ����</td></tr>
+<p>此指令可以去除！</td></tr>
 </table>
 
-<h3>ʾ�� 2</h3>
+<h3>示例 2</h3>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="100%" class="whs5">
@@ -161,9 +161,9 @@ else
 
 <tr valign="top" class="whs7">
 <td valign="top" width="50%" class="whs8">
-<h3 class=TableHead>ԭʼ����</td>
+<h3 class=TableHead>原始程式碼</td>
 <td valign="top" width="50%" class="whs9">
-<h3 class=TableHead>ָ��ѡ��</td></tr>
+<h3 class=TableHead>指令選擇</td></tr>
 
 <tr valign="top" class="whs7">
 <td valign="top" width="50%" class="whs10">
@@ -174,7 +174,7 @@ else
 <p><span class=code>MUL &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R2, R3, R4</span></td></tr>
 </table>
 
-<h3>ʾ�� 3</h3>
+<h3>示例 3</h3>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="100%" class="whs5">
@@ -183,9 +183,9 @@ else
 
 <tr valign="top" class="whs7">
 <td valign="top" width="50%" class="whs8">
-<h3 class=TableHead>ԭʼ����</td>
+<h3 class=TableHead>原始程式碼</td>
 <td valign="top" width="50%" class="whs9">
-<h3 class=TableHead>ָ��ѡ��</td></tr>
+<h3 class=TableHead>指令選擇</td></tr>
 
 <tr valign="top" class="whs7">
 <td valign="top" width="50%" class="whs10">

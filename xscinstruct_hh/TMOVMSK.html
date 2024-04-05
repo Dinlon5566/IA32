@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -117,7 +117,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nT - ָ��\nTMOVMSK");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nT - 指令\nTMOVMSK");
 
 	}
 	if (window.writeBtnStyle)
@@ -142,16 +142,16 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>TMOVMSK - ���� SIMD �ֶ�</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>TMOVMSK - 傳輸 SIMD 欄位</h1>
 
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted>TMOVMSKlength[condition] dest, op1</p>
 
-<p>���У�</p>
+<p>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -172,17 +172,17 @@ else
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-��������ݳ��ȣ������������ַ�֮һָ����
+所需的數據長度，可以由以下字元之一指定：
  
 </div>
 <div align="left" class="whs5">
-B -- ���� 8 λ���ֽڣ�SIMD �ֶ�
+B -- 傳輸 8 位（位元組）SIMD 欄位
 </div>
 <div align="left" class="whs5">
-H -- ���� 16 λ�����֣�SIMD �ֶ�
+H -- 傳輸 16 位（半字）SIMD 欄位
 </div>
 <div align="left" class="whs5">
-W -- ���� 32 λ���֣�SIMD �ֶ�
+W -- 傳輸 32 位（字）SIMD 欄位
 </div></td></tr>
 
 <tr>
@@ -201,7 +201,7 @@ W -- ���� 32 λ���֣�SIMD �ֶ�
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-��ѡ��16 ������֮һ������ģ�<a href="Conditional_Execution.html">����ִ��</a>�� 
+可選。16 個條件之一。請參閱：<a href="Conditional_Execution.html">條件執行</a>。 
 </div></td></tr>
 
 <tr>
@@ -211,7 +211,7 @@ dest
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-Ŀ�꣬&ldquo;Ӣ�ض� XScale(R)&rdquo;�������ݼĴ���
+目標，&ldquo;英特爾 XScale(R)&rdquo;核心數據暫存器
 </div></td></tr>
 
 <tr>
@@ -221,21 +221,21 @@ op1
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-Դ��������&ldquo;Ӣ�ض�(R)<span style="vertical-align: super;"> </span>���� MMX&#x2122;&rdquo;�������ݼĴ���
+源運算元，&ldquo;英特爾(R)<span style="vertical-align: super;"> </span>無線 MMX&#x2122;&rdquo;技術數據暫存器
 </div></td></tr>
 </table>
 
 &nbsp;
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-��&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;����Դ����Ĵ��� op1 ����ÿ��&ldquo;ʸ��&rdquo;�������Чλ���䵽ָ����&ldquo;Ӣ�ض� XScale(R)&rdquo;����Ŀ��Ĵ��� dest �������Чλ 8��4 �� 2����ָ����� 8��16 �� 32 λ����ֵ�������� dest ��δʹ�õ�λ��<br><br> ָ����ָ�����κ�������������������״̬��ƥ�䣬����ִ�и�ָ� 
+將&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術原始碼暫存器 op1 中內每個&ldquo;向量&rdquo;的最高有效位傳輸到指定的&ldquo;英特爾 XScale(R)&rdquo;核心目標暫存器 dest 的最低有效位 8、4 或 2。此指令操作 8、16 及 32 位數據值，並重置 dest 中未使用的位。<br><br> 指令中指定的任何條件必須與條件程式碼狀態相匹配，否則不執行該指令。 
 
-<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs6"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs6"> 備註</h3>
 
-�� R15 ָ��ΪĿ��Ĵ���ʱ����������޷�Ԥ֪�Ľ���� 
+將 R15 指定為目標暫存器時，將會產生無法預知的結果。 
 
-<h2>����</h2>
+<h2>編碼</h2>
 
 <div class="whs7">
 <h2>&nbsp;</h2>
@@ -438,7 +438,7 @@ ww0
 </table>
 </div>
 
-<h2>���ֶα���</h2>
+<h2>子欄位編碼</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="49.454%" class="whs11">
@@ -451,11 +451,11 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) 
 
 <tr valign="top" class="whs15">
 <td width="23.937%" class="whs16">
-<h3 class=TableHead>�޶��� </td>
+<h3 class=TableHead>限定符 </td>
 <td width="31.127%" class="whs17">
-<h3 class=TableHead>�ֶ� </td>
+<h3 class=TableHead>欄位 </td>
 <td width="29.534%" class="whs18">
-<h3 class=TableHead>ֵ</td></tr>
+<h3 class=TableHead>值</td></tr>
 
 <tr valign="top" class="whs15">
 <td width="23.937%" class="whs19">
@@ -483,7 +483,7 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) 
 
 <tr valign="top" class="whs15">
 <td colspan="1" rowspan="1" width="23.937%" class="whs22">
-<p class=TableCell>���� </td>
+<p class=TableCell>保留 </td>
 <td colspan="1" rowspan="1" width="31.127%" class="whs23">
 <p class=TableCell>ww </td>
 <td colspan="1" rowspan="1" width="29.534%" class="whs24">
@@ -495,11 +495,11 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) 
 
 <p>&nbsp;</p>
 
-<h2>Ӱ��� SIMD ��־</h2>
+<h2>影響的 SIMD 標誌</h2>
 
-<p>��Ӱ�� SIMD PSR ��־ (wCASF) ��&ldquo;����&rdquo;��־ (wCSSF)��</p>
+<p>不影響 SIMD PSR 標誌 (wCASF) 或&ldquo;飽和&rdquo;標誌 (wCSSF)。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted>if (B Specified) then</p>
 
@@ -518,7 +518,7 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) 
 <p class=Preformatted
 	style="margin-left: 40px;"><span style="font-style: italic;"><I>dest</I></span><span>[1]=o</span><span style="font-style: italic;"><I>p1</I></span><span>[63]; </span><span style="font-style: italic;"><I>dest</I></span><span>[0]=o</span><span style="font-style: italic;"><I>p1</I></span><span>[31]; </span><span style="font-style: italic;"><I>dest</I></span><span>[31:2]=0; </span></p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
 <p><a HREF="TANDC.html">TANDC</a></p>
 

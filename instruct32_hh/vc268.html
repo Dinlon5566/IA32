@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc268.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:16 GMT -->
 <head>
 
-<title>PUSHF/PUSHFD - �� EFLAGS �Ĵ���ѹ���ջ</title>
+<title>PUSHF/PUSHFD - 將 EFLAGS 暫存器壓入堆疊</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:16:34 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -27,7 +27,7 @@
 <meta name=page-count content=1>
 <meta name=layout-height content=1096>
 <meta name=layout-width content=840>
-<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;EFLAGS;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;��F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;��;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FSUB;FSUBP;FISUB;Dest;FSUBR;FSUBRP;FISUBR;FLDZ--Load;EB;EC;EE;FLDZ;FLDPI;FCLEX;FNCLEX--Clear;FNCLEX*;PE;UE;OE;ZE;IE;FNCLEX;MS-DOS*;MXCRS;FNINIT*;coprocessor;FPUControlWord;FPUStatusWord;FPUTagWord;FPUDataPointer;FPUInstructionPointer;FPULastInstructionOpcode;FINIT;FNINIT;MXCSR;FSAVE;FNSAVE--Store;FNSAVE*;FNSAVE;FNINIT--Initialize;coprocessors;FPUs;FWAIT;DEST[FPUControlWord;DEST[FPUStatusWord;DEST[FPUTagWord;DEST[FPUDataPointer;DEST[FPUInstructionPointer;DEST[FPULastInstructionOpcode;nonwritable;FSTCW;FNSTCW--Store;FNSTCW*;FNSTCW;FNSTENV--Store;FSTENV;FNSTENV*;FNSTENV;FNSTSW--Store;FNSTSW*;FNSTSW;FPREM;FXAM;FSTSW;denormalized;MOV--Move;ModR;M;m;PG;PGE;PSE;PAE;PDPTRs;MOV;reg;TLB;Lookaside;TLBs;GD;FSTP--Store;FST;FSTP;significand;FUCOMIP--Compare;FUCOMIP;FCOMI;FCOMIP;FUCOMI;FUCOMPP--Unordered;FUCOMP;FUCOMPP;FWAIT--Wait;MP;INSB;INSW;INSD--Input;INSD;CPL;IOPL;VM;TSS;CL;BL;CH;DH;BH;CX;BX;SP;EBX;EBP;mm--An;XLAT;LIDT;LGDT;GDTR;IDTR;ith;DPL=;C;W;Y;INTRA-PRIVILEGE-LEVEL-INTERRUPT;flag*;Push(CS;Push(IP;IDT(Descriptor;vector_number;GP((DEST;EXT;GP((vector_number;NP((vector_number;GDT;GP(TSS;NP(TSS;Push(error;GP(selector;NP(selector;GP(new;GP(CodeSegmentSelector;INTER-PREVILEGE-LEVEL-INTERRUPT;TSSstackAddress;TS(current;NewSS;NewESP;TS(EXT;RPL;TS(SS;LDT;SS(SS;selector+EXT;SS(segment;TSS(NewSS;Gate(CS;IP;Push(far;Push(EFLAGS;Push(ErrorCode;ELSE(*;CodeSegmentDescriptor(DPL;CS(RPL;RF;tempEFLAGS;TempSS;TempESP;Push(GS;Push(FS;Push(DS;Push(ES;Push(TempSS;Push(TempESP;Push(TempEFlags;Push(EIP;Gate(instruction;ErrorCode;SS(selector;TS(selector;TSS's;INT;n;CE;IDT;VME;Microsoft*;EIP;IRET;DPL;GOTO;TF;CMC;LIDT--Load;SFENCE--Store;IDTR(Limit;IDTR(Base;GDTR(Limit;GDTR(Base;SIDT--Store;SGDT;SIDT;mm_loadr_ps;mm_cmpgt_ss;Intrinsics;intrinsics;xmm;declspec;ps;ss;z;y;w;t;mm_load_ps(a;immediates;Intra-privilege;Pop(;tempEIP;tempCS;tempEFLAGS(VM;VIF;EFLAGS(IF;EFLAGS(IOPL;EFLAGS(VM;RETURN-TO-OUTER-PRIVILGE-LEVEL;GP(SSselector;LODSD--Load;LODSD;LOOPcc--Loop;LOOPE;LOOPZ;LOOPNE;LOOPNZ;AddressSize;BranchCond;SignExtend(DEST;LSS--Load;SegmentRegister(DescriptorValidBit;Offset(SRC;XCHG--Exchange;MOVSD--Move;rw;rb;SI's;AddressSize--The;StackAddrSize--Represents;SRC--Represents;DEST--Represents;ZeroExtend(value;ZeroExtend;SignExtend(value;SignExtend;SaturateSignedWordToSignedByte--Converts;SaturateSignedDwordToSignedWord--Converts;SaturateSignedWordToUnsignedByte--Converts;FFH;SaturateToSignedByte--Represents;SaturateToSignedWord--Represents;SaturateToUnsignedByte--Represents;SaturateToUnsignedWord--Represents;LowOrderWord(DEST;HighOrderWord(DEST;Push(value;PUSH--Push;POP--Pop;PopRegisterStack--Marks;Switch-Tasks--Performs;Bit(BitBase;BitOffset;Bit[EAX;BIT[EAX;BitBase;GBits;DIV;EWBE#;EFLAGS(RF;SegmentSelector;IRETD;LODS;LODSB;LODSW;cb;LOOPcc;LDS;LES;LFS;LGS;LSS;ProtectedMode;SegementSelector;SegmentSelector(SRC;SegmentDescriptor([SRC;SegmentRegister;NullSelector;software*;XCHG;BSWAP;MOVSB;MOVSW;MOVS;MOVSD;Encodings;OUTSB;OUTSW;OUTSD;prefetched;PADDB;PADDW;FC;FD;FE;PADDD;PADDSW--Packed;SaturateToSignedByte;SaturateToSignedWord;PADDSB;PADDSW;PADDUSW--Packed;SaturateToUnsignedByte;SaturateToUnSignedByte;SaturateToUnsignedWord;SaturateToUnSignedWord;PADDUSB;PADDUSW;PAVGW--Packed;PAVGB;PAVGW;PCMPEQB;PCMPEQW;PCMPEQD;PCMPGTD--Packed;FFFFFFFFH;DCMPGTD;PCMPGTB;PCMPGTW;PCMPGTD;POPA;POPAD;PUSHA;PUSHAD;POPFD--Pop;POPF;POPFD;PUSHF;PUSHFD;unaffected*;PSLLQ--Packed;ZeroExtend(DEST;PSLLW;PSLLD;PSLLQ;quadwords;int;PSRAD--Packed;PSRAW;PSRAD;PSRLQ--Packed;PSRLW;PSRLD;PSRLQ;PSUBD--Packed;PSUBB;PSUBW;PSUBD;PSUBSW--Packed;PSUBSB;PSUBSW;PSUBUSW--Packed;MMX;PSUBUSB;PSUBUSW;PUNPCKHQDQ--;PUNPCKHW;PUNPCKHBW;PUNPCKHWD;PUNPCKHDQ;PUNPCKHQDQ;PUNPCKLQDQ--;PUNPCKLBW;PUNPCKLWD;PUNPCKLDQ;PUNPCKLQDQ;Push(ECX;Push(EDX;Push(EBX;Push(Temp;Push(EBP;Push(ESI;Push(EDI;Push(AX;Push(CX;Push(DX;Push(BX;Push(BP;Push(SI;Push(DI;Push(EAX;PUSHFD--Push;push(EFLAGS;stack*;EFLAG">
+<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;EFLAGS;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;±F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;±;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FSUB;FSUBP;FISUB;Dest;FSUBR;FSUBRP;FISUBR;FLDZ--Load;EB;EC;EE;FLDZ;FLDPI;FCLEX;FNCLEX--Clear;FNCLEX*;PE;UE;OE;ZE;IE;FNCLEX;MS-DOS*;MXCRS;FNINIT*;coprocessor;FPUControlWord;FPUStatusWord;FPUTagWord;FPUDataPointer;FPUInstructionPointer;FPULastInstructionOpcode;FINIT;FNINIT;MXCSR;FSAVE;FNSAVE--Store;FNSAVE*;FNSAVE;FNINIT--Initialize;coprocessors;FPUs;FWAIT;DEST[FPUControlWord;DEST[FPUStatusWord;DEST[FPUTagWord;DEST[FPUDataPointer;DEST[FPUInstructionPointer;DEST[FPULastInstructionOpcode;nonwritable;FSTCW;FNSTCW--Store;FNSTCW*;FNSTCW;FNSTENV--Store;FSTENV;FNSTENV*;FNSTENV;FNSTSW--Store;FNSTSW*;FNSTSW;FPREM;FXAM;FSTSW;denormalized;MOV--Move;ModR;M;m;PG;PGE;PSE;PAE;PDPTRs;MOV;reg;TLB;Lookaside;TLBs;GD;FSTP--Store;FST;FSTP;significand;FUCOMIP--Compare;FUCOMIP;FCOMI;FCOMIP;FUCOMI;FUCOMPP--Unordered;FUCOMP;FUCOMPP;FWAIT--Wait;MP;INSB;INSW;INSD--Input;INSD;CPL;IOPL;VM;TSS;CL;BL;CH;DH;BH;CX;BX;SP;EBX;EBP;mm--An;XLAT;LIDT;LGDT;GDTR;IDTR;ith;DPL=;C;W;Y;INTRA-PRIVILEGE-LEVEL-INTERRUPT;flag*;Push(CS;Push(IP;IDT(Descriptor;vector_number;GP((DEST;EXT;GP((vector_number;NP((vector_number;GDT;GP(TSS;NP(TSS;Push(error;GP(selector;NP(selector;GP(new;GP(CodeSegmentSelector;INTER-PREVILEGE-LEVEL-INTERRUPT;TSSstackAddress;TS(current;NewSS;NewESP;TS(EXT;RPL;TS(SS;LDT;SS(SS;selector+EXT;SS(segment;TSS(NewSS;Gate(CS;IP;Push(far;Push(EFLAGS;Push(ErrorCode;ELSE(*;CodeSegmentDescriptor(DPL;CS(RPL;RF;tempEFLAGS;TempSS;TempESP;Push(GS;Push(FS;Push(DS;Push(ES;Push(TempSS;Push(TempESP;Push(TempEFlags;Push(EIP;Gate(instruction;ErrorCode;SS(selector;TS(selector;TSS's;INT;n;CE;IDT;VME;Microsoft*;EIP;IRET;DPL;GOTO;TF;CMC;LIDT--Load;SFENCE--Store;IDTR(Limit;IDTR(Base;GDTR(Limit;GDTR(Base;SIDT--Store;SGDT;SIDT;mm_loadr_ps;mm_cmpgt_ss;Intrinsics;intrinsics;xmm;declspec;ps;ss;z;y;w;t;mm_load_ps(a;immediates;Intra-privilege;Pop(;tempEIP;tempCS;tempEFLAGS(VM;VIF;EFLAGS(IF;EFLAGS(IOPL;EFLAGS(VM;RETURN-TO-OUTER-PRIVILGE-LEVEL;GP(SSselector;LODSD--Load;LODSD;LOOPcc--Loop;LOOPE;LOOPZ;LOOPNE;LOOPNZ;AddressSize;BranchCond;SignExtend(DEST;LSS--Load;SegmentRegister(DescriptorValidBit;Offset(SRC;XCHG--Exchange;MOVSD--Move;rw;rb;SI's;AddressSize--The;StackAddrSize--Represents;SRC--Represents;DEST--Represents;ZeroExtend(value;ZeroExtend;SignExtend(value;SignExtend;SaturateSignedWordToSignedByte--Converts;SaturateSignedDwordToSignedWord--Converts;SaturateSignedWordToUnsignedByte--Converts;FFH;SaturateToSignedByte--Represents;SaturateToSignedWord--Represents;SaturateToUnsignedByte--Represents;SaturateToUnsignedWord--Represents;LowOrderWord(DEST;HighOrderWord(DEST;Push(value;PUSH--Push;POP--Pop;PopRegisterStack--Marks;Switch-Tasks--Performs;Bit(BitBase;BitOffset;Bit[EAX;BIT[EAX;BitBase;GBits;DIV;EWBE#;EFLAGS(RF;SegmentSelector;IRETD;LODS;LODSB;LODSW;cb;LOOPcc;LDS;LES;LFS;LGS;LSS;ProtectedMode;SegementSelector;SegmentSelector(SRC;SegmentDescriptor([SRC;SegmentRegister;NullSelector;software*;XCHG;BSWAP;MOVSB;MOVSW;MOVS;MOVSD;Encodings;OUTSB;OUTSW;OUTSD;prefetched;PADDB;PADDW;FC;FD;FE;PADDD;PADDSW--Packed;SaturateToSignedByte;SaturateToSignedWord;PADDSB;PADDSW;PADDUSW--Packed;SaturateToUnsignedByte;SaturateToUnSignedByte;SaturateToUnsignedWord;SaturateToUnSignedWord;PADDUSB;PADDUSW;PAVGW--Packed;PAVGB;PAVGW;PCMPEQB;PCMPEQW;PCMPEQD;PCMPGTD--Packed;FFFFFFFFH;DCMPGTD;PCMPGTB;PCMPGTW;PCMPGTD;POPA;POPAD;PUSHA;PUSHAD;POPFD--Pop;POPF;POPFD;PUSHF;PUSHFD;unaffected*;PSLLQ--Packed;ZeroExtend(DEST;PSLLW;PSLLD;PSLLQ;quadwords;int;PSRAD--Packed;PSRAW;PSRAD;PSRLQ--Packed;PSRLW;PSRLD;PSRLQ;PSUBD--Packed;PSUBB;PSUBW;PSUBD;PSUBSW--Packed;PSUBSB;PSUBSW;PSUBUSW--Packed;MMX;PSUBUSB;PSUBUSW;PUNPCKHQDQ--;PUNPCKHW;PUNPCKHBW;PUNPCKHWD;PUNPCKHDQ;PUNPCKHQDQ;PUNPCKLQDQ--;PUNPCKLBW;PUNPCKLWD;PUNPCKLDQ;PUNPCKLQDQ;Push(ECX;Push(EDX;Push(EBX;Push(Temp;Push(EBP;Push(ESI;Push(EDI;Push(AX;Push(CX;Push(DX;Push(BX;Push(BP;Push(SI;Push(DI;Push(EAX;PUSHFD--Push;push(EFLAGS;stack*;EFLAG">
 
 
 <!--(Links)=========================================================-->
@@ -96,7 +96,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nP - ָ��\nPUSHF/PUSHFD - �� EFLAGS �Ĵ���ѹ���ջ");
+	addTocInfo("參考\n指令集\nIA-32 指令\nP - 指令\nPUSHF/PUSHFD - 將 EFLAGS 暫存器壓入堆疊");
 
 	}
 	if (window.writeBtnStyle)
@@ -119,7 +119,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>PUSHF/PUSHFD - �� EFLAGS �Ĵ���ѹ���ջ</h1>
+<h1>PUSHF/PUSHFD - 將 EFLAGS 暫存器壓入堆疊</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -127,13 +127,13 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">������</td>
+	style="margin-bottom: 0;">操作碼</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">說明</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -144,7 +144,7 @@ else
 	style="margin-bottom: 0;">PUSHF</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">ѹ�� EFLAGS �ĵ� 16 λ</td></tr>
+	style="margin-bottom: 0;">壓入 EFLAGS 的低 16 位</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -155,20 +155,20 @@ else
 	style="margin-bottom: 0;">PUSHFD</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">ѹ�� EFLAGS</td></tr>
+	style="margin-bottom: 0;">壓入 EFLAGS</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>����ջָ��ݼ� 4�������ǰ��������С����Ϊ 32�������� EFLAGS �Ĵ�����ȫ������ѹ���ջ���򽫶�ջָ��ݼ� 2�������ǰ��������С����Ϊ 16�������� EFLAGS �Ĵ����ĵ� 16 λ���� FLAGS �Ĵ�����ѹ���ջ������Щָ��ִ�� POPF/POPFD ָ������������������ EFLAGS �Ĵ������Ƶ���ջʱ�����Ḵ�� VM �� RF ��־��λ 16 �� 17�����෴���ڴ洢����ջ�� EFLAGS ӳ���У���Щ��־��ֵ�ᱻ����������й� EFLAGS �Ĵ�������ϸ��Ϣ�������&ldquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>IA-32 Ӣ�ض�(R) ��ϵ�ṹ����������Ա�ֲ�</font>&rdquo;�� 1 ���� 3 ���б���Ϊ&ldquo;EFLAGS �Ĵ���&rdquo;�Ĳ��֡�</p>
+<p>將堆疊指針遞減 4（如果目前運算元大小屬性為 32），並將 EFLAGS 暫存器的全部內容壓入堆疊；或將堆疊指針遞減 2（如果目前運算元大小屬性為 16），並將 EFLAGS 暫存器的低 16 位（即 FLAGS 暫存器）壓入堆疊。（這些指令執行 POPF/POPFD 指令的逆操作）。將整個 EFLAGS 暫存器複製到堆疊時，不會複製 VM 與 RF 標誌（位 16 與 17）；相反，在儲存到堆疊的 EFLAGS 映像中，這些標誌的值會被清除。如需有關 EFLAGS 暫存器的詳細資訊，請參閱&ldquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>IA-32 英特爾(R) 體系結構軟件開發人員手冊</font>&rdquo;第 1 卷第 3 章中標題為&ldquo;EFLAGS 暫存器&rdquo;的部分。</p>
 
-<p>PUSHF��ѹ���־���� PUSHFD��ѹ���־˫�֣����Ƿ�������ͬ�Ĳ����롣������������Ϊ 16 ʱ��ʹ�� PUSHF ָ���������������Ϊ 32 ʱ��ʹ�� PUSHFD ָ�ĳЩ�����������ʹ�� PUSHF ʱ����������Сǿ��Ϊ 16������ʹ�� PUSHFD ʱ����������Сǿ��Ϊ 32��������������ܻὫ��Щ���Ƿ�����ͬ��� (PUSHF/PUSHFD)����ʹ�ò�������С���Եĵ�ǰ������ȷ��Ҫѹ���ջ��ֵ�Ĵ�С��������ʹ����һ�����Ƿ���</p>
+<p>PUSHF（壓入標誌）與 PUSHFD（壓入標誌雙字）助記符引用相同的操作碼。當運算元屬性為 16 時，使用 PUSHF 指令，而當運算元屬性為 32 時，使用 PUSHFD 指令。某些彙編器可能在使用 PUSHF 時將運算元大小強制為 16，而在使用 PUSHFD 時將運算元大小強制為 32。其它彙編器可能會將這些助記符看作同義詞 (PUSHF/PUSHFD)，並使用運算元大小屬性的當前設定來確定要壓入堆疊的值的大小，而不管使用哪一個助記符。</p>
 
-<p>���� 8086 ģʽ���� I/O ��Ȩ���� (IOPL) С�� 3 ʱ��PUSHF/PUSHFD ָ��ᵼ��һ�㱣�����쳣 (#GP)��</p>
+<p>在虛 8086 模式中且 I/O 特權級別 (IOPL) 小於 3 時，PUSHF/PUSHFD 指令會導致一般保護性異常 (#GP)。</p>
 
-<p>��ʵ��ַģʽ�У����ִ�� PUSH/PUSHAD ָ��ʱ��ESP �� SP �Ĵ���Ϊ 1��3 �� 5�������������ڶ�ջ�ռ䲻����رա���������ָʾ��������쳣��</p>
+<p>在實地址模式中，如果執行 PUSH/PUSHAD 指令時，ESP 或 SP 暫存器為 1、3 或 5，則處理器會由於堆疊空間不足而關閉。不會產生指示此情況的異常。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted>IF (PE=0) OR (PE=1 AND ((VM=0) OR (VM=1 AND IOPL=3)))<br> (* Real-Address Mode, Protected mode, or Virtual-8086 mode with IOPL equal to 3 *)<br> THEN<br> IF OperandSize <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -177,29 +177,29 @@ else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'>");}
 //--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> 32<br> THEN <br> push(EFLAGS AND 00FCFFFFH);<br> (* VM and RF EFLAG bits are cleared in image stored on the stack*)<br> ELSE <br> push(EFLAGS); (* Lower 16 bits only *)<br> FI;<br> ELSE (* In Virtual-8086 Mode with IOPL less than 0 *)<br> #GP(0); (* Trap to virtual-8086 monitor *)<br> FI;</p>
 
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
-<p>�ޡ�</p>
+<p>無。</p>
 
-<h2>����ģʽ�쳣</h2>
+<h2>保護模式異常</h2>
 
-<p>#SS(0) - ��� ESP �Ĵ���������ջ�εı߽硣</p>
+<p>#SS(0) - 如果 ESP 暫存器超出堆疊段的邊界。</p>
 
-<p>#PF(�������) - �������ҳ����</p>
+<p>#PF(錯誤程式碼) - 如果發生頁錯誤。</p>
 
-<p>#AC(0) - ����ڵ�ǰ��Ȩ����Ϊ 3 �����ö����������½���δ������ڴ����á�</p>
+<p>#AC(0) - 如果在目前特權級別為 3 且啟用對齊檢查的情況下進行未對齊的記憶體引用。</p>
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>實地址模式異常</h2>
 
-<p>�ޡ�</p>
+<p>無。</p>
 
-<h2>�� 8086 ģʽ�쳣</h2>
+<h2>虛 8086 模式異常</h2>
 
-<p>#GP(0) - ��� I/O ��Ȩ����С�� 3��</p>
+<p>#GP(0) - 如果 I/O 特權級別小於 3。</p>
 
-<p>#PF(�������) - �������ҳ����</p>
+<p>#PF(錯誤程式碼) - 如果發生頁錯誤。</p>
 
-<p class="whs4">#AC(0) - ��������ö����������½���δ������ڴ����á� </p>
+<p class="whs4">#AC(0) - 如果在啟用對齊檢查的情況下進行未對齊的記憶體引用。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

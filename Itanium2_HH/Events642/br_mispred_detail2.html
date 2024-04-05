@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\n��֧�¼�\nBR_MISPRED_DETAIL2");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 安騰(R) 2 處理器\n英特爾(R) 安騰(R) 2 處理器事件\n分支事件\nBR_MISPRED_DETAIL2");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,13 +106,13 @@ else
 </script>
 <h1>BR_MISPRED_DETAIL2</h1>
 
-<b style="font-weight: bold;">���⣺</b>FE ��֧Ԥ��ʧ��ϸ�ڣ�δ֪·�������<b style="font-weight: bold;"><br> ���</b>��֧�¼�<b style="font-weight: bold;"><br> IAR/DAR/OPC��</b>Y/N/Y<b style="font-weight: bold;"><br> �¼����룺</b>0x68<b style="font-weight: bold;"><br> ���ÿ����������</b>2 
+<b style="font-weight: bold;">標題：</b>FE 分支預測失誤細節（未知路徑元件）<b style="font-weight: bold;"><br> 類別：</b>分支事件<b style="font-weight: bold;"><br> IAR/DAR/OPC：</b>Y/N/Y<b style="font-weight: bold;"><br> 事件程式碼：</b>0x68<b style="font-weight: bold;"><br> 最大每週期增量：</b>2 
 
-<p><b style="font-weight: bold;">���壺</b>���¼���� <a HREF="BR_MISPRED_DETAIL.html">BR_MISPRED_DETAIL</a> �¼�ʹ�ã�����Ԥ�������֧�����ṩ��Ϣ</p>
+<p><b style="font-weight: bold;">定義：</b>此事件配合 <a HREF="BR_MISPRED_DETAIL.html">BR_MISPRED_DETAIL</a> 事件使用，基於預測結果與分支型別提供資訊</p>
 
-<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> ��ע</h3>
+<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> 備註</h3>
 
-Ҫ��ȡ׼ȷ��Ԥ��ʧ�����������ִ�����²�����<br>BR_MISPRED_DETAIL.[umask] - <a HREF="br_mispred_detail2.html">BR_MISPRED_DETAIL2</a>.[umask]<br>ͨ����ÿ����Ԫ����ִ�д�����㣬���Ի�ȡ <a HREF="BR_MISPRED_DETAIL.html">BR_MISPRED_DETAIL</a> �¼�����ʵֵ�� 
+要獲取準確的預測失誤計數，必須執行以下測量：<br>BR_MISPRED_DETAIL.[umask] - <a HREF="br_mispred_detail2.html">BR_MISPRED_DETAIL2</a>.[umask]<br>通過對每個單元掩碼執行此項計算，可以獲取 <a HREF="BR_MISPRED_DETAIL.html">BR_MISPRED_DETAIL</a> 事件的真實值。 
  
 
 <!--(Table)=========================================================-->
@@ -120,11 +120,11 @@ else
 
 <tr>
 <td>
-<h3 CLASS=TableHead>��չ</td>
+<h3 CLASS=TableHead>擴充套件</td>
 <td>
 <h3 CLASS=TableHead>PMC.umask</td>
 <td>
-<h3 CLASS=TableHead>˵��</td></tr>
+<h3 CLASS=TableHead>說明</td></tr>
 
 <tr>
 <td>
@@ -132,7 +132,7 @@ else
 <td>
 <p>b0000</td>
 <td>
-<p>���з�֧���ͣ�·��Ԥ��δ֪�ķ�֧</td></tr>
+<p>所有分支型別，路徑預測未知的分支</td></tr>
 
 <tr>
 <td>
@@ -140,7 +140,7 @@ else
 <td>
 <p>b0001</td>
 <td>
-<p>���з�֧���ͣ�·��Ԥ��δ֪�ҷ�֧Ԥ����ȷ�������Ŀ�꣩�ķ�֧</td></tr>
+<p>所有分支型別，路徑預測未知且分支預測正確（結果與目標）的分支</td></tr>
 
 <tr>
 <td>
@@ -148,7 +148,7 @@ else
 <td>
 <p>b0010</td>
 <td>
-<p>���з�֧���ͣ�·��Ԥ��δ֪�ҷ�֧�������ķ�֧</td></tr>
+<p>所有分支型別，路徑預測未知且分支方向錯誤的分支</td></tr>
 
 <tr>
 <td>
@@ -156,7 +156,7 @@ else
 <td>
 <p>b0011</td>
 <td>
-<p>��*��ͳ��*��</td></tr>
+<p>（*不統計*）</td></tr>
 
 <tr>
 <td>
@@ -164,7 +164,7 @@ else
 <td>
 <p>b0100</td>
 <td>
-<p>���� IP ��Է�֧��·��Ԥ��δ֪�ķ�֧</td></tr>
+<p>僅限 IP 相對分支，路徑預測未知的分支</td></tr>
 
 <tr>
 <td>
@@ -172,7 +172,7 @@ else
 <td>
 <p>b0101</td>
 <td>
-<p>���� IP ��Է�֧��·��Ԥ��δ֪�ҷ�֧Ԥ����ȷ�������Ŀ�꣩�ķ�֧</td></tr>
+<p>僅限 IP 相對分支，路徑預測未知且分支預測正確（結果與目標）的分支</td></tr>
 
 <tr>
 <td>
@@ -180,7 +180,7 @@ else
 <td>
 <p>b0110</td>
 <td>
-<p>���� IP ��Է�֧��·��Ԥ��δ֪�ҷ�֧�������ķ�֧</td></tr>
+<p>僅限 IP 相對分支，路徑預測未知且分支方向錯誤的分支</td></tr>
 
 <tr>
 <td>
@@ -188,7 +188,7 @@ else
 <td>
 <p>b0111</td>
 <td>
-<p>��*��ͳ��*��</td></tr>
+<p>（*不統計*）</td></tr>
 
 <tr>
 <td>
@@ -196,7 +196,7 @@ else
 <td>
 <p>b1000</td>
 <td>
-<p>���޷����ͷ�֧��·��Ԥ��δ֪�ķ�֧</td></tr>
+<p>僅限返回型分支，路徑預測未知的分支</td></tr>
 
 <tr>
 <td>
@@ -204,7 +204,7 @@ else
 <td>
 <p>b1001</td>
 <td>
-<p>���޷����ͷ�֧��·��Ԥ��δ֪�ҷ�֧Ԥ����ȷ�������Ŀ�꣩�ķ�֧</td></tr>
+<p>僅限返回型分支，路徑預測未知且分支預測正確（結果與目標）的分支</td></tr>
 
 <tr>
 <td>
@@ -212,7 +212,7 @@ else
 <td>
 <p>b1010</td>
 <td>
-<p>���޷����ͷ�֧��·��Ԥ��δ֪�ҷ�֧�������ķ�֧</td></tr>
+<p>僅限返回型分支，路徑預測未知且分支方向錯誤的分支</td></tr>
 
 <tr>
 <td>
@@ -220,7 +220,7 @@ else
 <td>
 <p>b1011</td>
 <td>
-<p>��*��ͳ��*��</td></tr>
+<p>（*不統計*）</td></tr>
 
 <tr>
 <td>
@@ -228,7 +228,7 @@ else
 <td>
 <p>b1100</td>
 <td>
-<p>���޷Ƿ����ͼ�ӷ�֧��·��Ԥ��δ֪�ķ�֧</td></tr>
+<p>僅限非返回型間接分支，路徑預測未知的分支</td></tr>
 
 <tr>
 <td>
@@ -236,7 +236,7 @@ else
 <td>
 <p>b1101</td>
 <td>
-<p>���޷Ƿ����ͼ�ӷ�֧��·��Ԥ��δ֪�ҷ�֧Ԥ����ȷ�������Ŀ�꣩�ķ�֧</td></tr>
+<p>僅限非返回型間接分支，路徑預測未知且分支預測正確（結果與目標）的分支</td></tr>
 
 <tr>
 <td>
@@ -244,7 +244,7 @@ else
 <td>
 <p>b1110</td>
 <td>
-<p>���޷Ƿ����ͼ�ӷ�֧��·��Ԥ��δ֪�ҷ�֧�������ķ�֧</td></tr>
+<p>僅限非返回型間接分支，路徑預測未知且分支方向錯誤的分支</td></tr>
 
 <tr>
 <td>
@@ -252,7 +252,7 @@ else
 <td>
 <p>b1111</td>
 <td>
-<p>��*��ͳ��*��</td></tr>
+<p>（*不統計*）</td></tr>
 </table>
 
 <script type="text/javascript" language="javascript1.2">

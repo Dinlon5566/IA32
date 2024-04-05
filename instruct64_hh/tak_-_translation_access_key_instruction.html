@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/tak_-_translation_access_key_instruction.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:47 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>tak - ת����ʼ�ָ��</title>
+<title>tak - 轉譯訪問鍵指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -85,7 +85,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nT - ָ��\ntak - ת����ʼ�ָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nT - 指令\ntak - 轉譯訪問鍵指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,13 +108,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">ת����ʼ�ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">轉譯訪問鍵指令</h1>
 
 <p class="whs2">tak</p>
 
-<p class="whs2"><span style="font-weight: normal;"><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a></span></p>
+<p class="whs2"><span style="font-weight: normal;"><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字型慣例</a></span></p>
 
-<p class="whs2">��ʽ</p>
+<p class="whs2">格式</p>
 
 <p class=Preformatted>(qp)takr 1 = r3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;M46</p>
 
@@ -123,18 +123,18 @@ else
 <hr class="whs3">
 
 
-<p><b style="font-weight: bold;">˵��</b></p>
+<p><b style="font-weight: bold;">說明</b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">���������ַ�ı������� GR</span><span style="font-weight: normal; font-style: italic;"><I>r1</I></span><span 
- style="font-weight: normal;"> �л�ȡ�뱣�档</span></b><b style="font-weight: normal;"><span   style="font-weight: normal;">PSR.dt Ϊ 1 ʱ������ DTLB �� VHPT ������ GR </span><span style="font-style: italic; font-weight: normal;"><I>r3</I></span><span   style="font-weight: normal;"> ָ���������ַ���Լ� GR </span><span   style="font-weight: normal; font-style: italic;"><I>r3</I></span><span style="font-weight: normal;"></span></b><b style="font-weight: normal;"><span style="font-weight: normal;"> ��λ {63:61} ����������Ĵ�����������ִ���ƥ���ת�룬��</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">ת��ı��������� GR </span><span style="font-weight: normal; font-style: italic;"><I>r1</I></span><span 
- style="font-weight: normal;">�����δ����ƥ���ת�룬����</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">��� GR </span><span style="font-style: italic; font-weight: normal;"><I>r3</I></span> ָ�������ַδʹ��<span 
- style="font-weight: normal;">���򷵻�ֵ 1��</span></b><b   style="font-weight: normal;"><span style="font-weight: normal;">PSR.dt Ϊ 0 ʱ���� VHPT ��ѯ�������ã�tak ֻ���� DTLB����� DTLB ��û��</span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;">ƥ���ת�룬�򷵻�ֵ 1��</span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;">�� NaTPage ���Ե�ת�벻����Դ������ҷ������ļ��ֶΡ�</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">給定虛擬地址的保護鍵在 GR</span><span style="font-weight: normal; font-style: italic;"><I>r1</I></span><span 
+ style="font-weight: normal;"> 中獲取與儲存。</span></b><b style="font-weight: normal;"><span   style="font-weight: normal;">PSR.dt 為 1 時，則在 DTLB 與 VHPT 中搜索 GR </span><span style="font-style: italic; font-weight: normal;"><I>r3</I></span><span   style="font-weight: normal;"> 指定的虛擬地址，以及 GR </span><span   style="font-weight: normal; font-style: italic;"><I>r3</I></span><span style="font-weight: normal;"></span></b><b style="font-weight: normal;"><span style="font-weight: normal;"> 的位 {63:61} 索引的區域暫存器。如果發現存在匹配的轉譯，則</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">轉譯的保護鍵放入 GR </span><span style="font-weight: normal; font-style: italic;"><I>r1</I></span><span 
+ style="font-weight: normal;">。如果未發現匹配的轉譯，或者</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">如果 GR </span><span style="font-style: italic; font-weight: normal;"><I>r3</I></span> 指定虛擬地址未使用<span 
+ style="font-weight: normal;">，則返回值 1。</span></b><b   style="font-weight: normal;"><span style="font-weight: normal;">PSR.dt 為 0 時，因 VHPT 查詢器被禁用，tak 只搜索 DTLB。如果 DTLB 中沒有</span></b><b style="font-weight: normal;"><span 
+ style="font-weight: normal;">匹配的轉譯，則返回值 1。</span></b><b style="font-weight: normal;"><span 
+ style="font-weight: normal;">帶 NaTPage 屬性的轉譯不區別對待，而且返回它的鍵欄位。</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">��ָ��ֻ���������Ȩ����ִ�С�</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">此指令只能在最高特權級別執行。</span></b></p>
 
-<p class="whs2"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>����</B></span></b></p>
+<p class="whs2"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>操作</B></span></b></p>
 
 <p class="whs4"><b style="font-weight: normal;"><span class=Code>if (PR[qp]) {</span></b></p>
 
@@ -156,17 +156,17 @@ else
 
 <p class="whs4"><b style="font-weight: normal;"><span class=Code>}</span></b></p>
 
-<p class="whs2"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>�ж�</B></span></b></p>
+<p class="whs2"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>中斷</B></span></b></p>
 
 <ul type="disc" class="whs5">
 	
 	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;"><span 
- style="font-weight: normal;">&ldquo;�Ƿ�����&rdquo;���� </span></b></p></li>
+ style="font-weight: normal;">&ldquo;非法操作&rdquo;錯誤 </span></b></p></li>
 	
-	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;">&ldquo;�Ĵ��� NaT ʹ��&rdquo;����</b></p></li>
+	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;">&ldquo;暫存器 NaT 使用&rdquo;錯誤</b></p></li>
 	
 	<li class=kadov-p><p class="whs4"><span style="font-weight: normal;"><b 
- style="font-weight: normal;">&ldquo;��Ȩ����&rdquo;����</b></span></p></li>
+ style="font-weight: normal;">&ldquo;特權操作&rdquo;錯誤</b></span></p></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400356.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
 
-<title>shr - ����ָ��</title>
+<title>shr - 右移指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:56:24 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nS - ָ��\nshr - ����ָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nS - 指令\nshr - 右移指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,16 +116,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">����ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">右移指令</h1>
 
 <p><span style="font-weight: bold;"><B>shr</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400357.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400357.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字型慣例</a>
  </p>
 
-<p>ָ������ I</p>
+<p>指令型別 I</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) shr <span style="font-style: italic;"><I>r1</I></span> = <span style="font-style: italic;"><I>r3</I></span>, <span style="font-style: italic;"><I>r2</I></span> signed_form</p>
 
@@ -140,16 +140,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>說明</B></span></p>
 
-<p><span style="x-condition: eclipse;">GR</span><span style="font-style: italic;"><I>r3</I></span> �е�ֵ���ƣ�Ȼ����� GR <span style="font-style: italic;"><I>r</I></span>1��<script type="text/javascript"
+<p><span style="x-condition: eclipse;">GR</span><span style="font-style: italic;"><I>r3</I></span> 中的值右移，然後放入 GR <span style="font-style: italic;"><I>r</I></span>1。<script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A1');
-//--></script>�� signed_form �У��ڳ��Ŀ�λ�� GR <span style="font-style: italic;"><I>r</I></span>3 �е�λ 63 ��䣻�� unsigned_form �У��ڳ��Ŀ�λ������䡣Ҫ��λ��λ���� GR <span   style="font-style: italic;"><I>r2</I></span> �е�ֵ�������� <span style="font-style: italic;"><I>count6</I></span> ָ������λ������Ϊ�޷������֡���� GR <span style="font-style: italic;"><I>r</I></span>2 �е�ֵ���� 63�����Ϊȫ�㣨���� unsigned_form ����� GR <span   style="font-style: italic;"><I>r</I></span>3 ��λ 63 Ϊ 0��������Ϊȫһ������ signed_form ����� GR <span style="font-style: italic;"><I>r</I></span>3 ��λ 63 Ϊ 1����</p>
+//--></script>在 signed_form 中，騰出的空位用 GR <span style="font-style: italic;"><I>r</I></span>3 中的位 63 填充；在 unsigned_form 中，騰出的空位用零填充。要移位的位數由 GR <span   style="font-style: italic;"><I>r2</I></span> 中的值或立即數 <span style="font-style: italic;"><I>count6</I></span> 指定。移位量解釋為無符號數字。如果 GR <span style="font-style: italic;"><I>r</I></span>2 中的值大於 63，結果為全零（對於 unsigned_form 或如果 GR <span   style="font-style: italic;"><I>r</I></span>3 的位 63 為 0），或結果為全一（對於 signed_form 或如果 GR <span style="font-style: italic;"><I>r</I></span>3 的位 63 為 1）。</p>
 
-<p>���ָ�� .u ��ɷ�������λ���޷��ţ��߼����ģ��������з��ţ��������ġ�</p>
+<p>如果指定 .u 完成符，則移位是無符號（邏輯）的，否則是有符號（算術）的。</p>
 
-<p>������������ʽ�������<a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400171.htm">��ȡ (extr)</a> ָ�</p>
+<p>對於立即數形式，請參閱<a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400171.htm">提取 (extr)</a> 指令。</p>
 
 
 <!--(HR)============================================================-->

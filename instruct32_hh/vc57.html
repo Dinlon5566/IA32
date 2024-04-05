@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc57.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:29 GMT -->
 <head>
 
-<title>CVTSD2SI - ����˫���ȸ���ֵת����˫�����������ض�</title>
+<title>CVTSD2SI - 標量雙精度浮點值轉換成雙字整數，帶截斷</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="06 7, 2001 11:56:08 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -95,7 +95,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nC - ָ��\nCVTSD2SI - ����˫���ȸ���ֵת����˫�����������ض�");
+	addTocInfo("參考\n指令集\nIA-32 指令\nC - 指令\nCVTSD2SI - 標量雙精度浮點值轉換成雙字整數，帶截斷");
 
 	}
 	if (window.writeBtnStyle)
@@ -118,7 +118,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>CVTSD2SI - ����˫���ȸ���ֵת����˫�����������ض�</h1>
+<h1>CVTSD2SI - 標量雙精度浮點值轉換成雙字整數，帶截斷</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -127,15 +127,15 @@ else
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>������</td>
+	align=center>操作碼</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>ָ��</td>
+	align=center>指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>˵��</td></tr>
+	align=center>說明</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -146,16 +146,16 @@ else
 	style="margin-bottom: 0;">CVTSD2SI <span style="font-style: italic;"><I>r32</I></span>, <span style="font-style: italic;"><I>xmm/m64</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� <span style="font-style: italic;"><I>xmm/m64</I></span> �е�һ��˫���ȸ���ֵת���� <span style="font-style: italic;"><I>r32</I></span> �е�һ���з���˫��������</td></tr>
+	style="margin-bottom: 0;">將 <span style="font-style: italic;"><I>xmm/m64</I></span> 中的一個雙精度浮點值轉換成 <span style="font-style: italic;"><I>r32</I></span> 中的一個有符號雙字整數。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>��Դ���������ڶ������������е�˫���ȸ���ֵת����Ŀ�����������һ�����������е��з���˫��������Դ������������ XMM �Ĵ����� 64 λ�ڴ�λ�á�Ŀ���������ͨ�üĴ�����Դ�������� XMM �Ĵ���ʱ��˫���ȸ���ֵ�����ڼĴ����ĵ�λ�����С�</p>
+<p>將源運算元（第二個運算元）中的雙精度浮點值轉換成目標運算元（第一個運算元）中的有符號雙字整數。源運算元可以是 XMM 暫存器或 64 位記憶體位置。目標運算元是通用暫存器。源運算元是 XMM 暫存器時，雙精度浮點值包含在暫存器的低位四字中。</p>
 
-<p>ת������ȷʱ������ MXCSR �Ĵ����е�ȡ������λ�Է���ֵȡ�������ת���Ľ����������з���˫���������򴥷�������Ч�쳣��������ô��쳣�����룬�򷵻����������ֵ (80000000H)��</p>
+<p>轉換不精確時，根據 MXCSR 暫存器中的取整控制位對返回值取整。如果轉換的結果大於最大有符號雙字整數，則觸發浮點無效異常；如果設定此異常的掩碼，則返回無窮大整數值 (80000000H)。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted>DEST[31-0] <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -164,47 +164,47 @@ else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'>");}
 //--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> Convert_Double_Precision_Floating_Point_To_Integer(SRC[63-0]);</p>
 
-<h2>Ӣ�ض�<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>(R)</font> C++ �������ȼ��ڲ�����</h2>
+<h2>英特爾<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>(R)</font> C++ 編譯器等價內部函式</h2>
 
 <p class=Preformatted>int_mm_cvtsd_si32(__m128d a)</p>
 
-<h2>SIMD �����쳣</h2>
+<h2>SIMD 浮點異常</h2>
 
-<p>��Ч�����ȡ�</p>
+<p>無效、精度。</p>
 
-<h2>����ģʽ�쳣</h2>
+<h2>保護模式異常</h2>
 
-<p>#GP(0) - CS��DS��ES��FS �� GS ���е��ڴ��������Ч��ַ�Ƿ���</p>
+<p>#GP(0) - CS、DS、ES、FS 或 GS 段中的記憶體運算元有效地址非法。</p>
 
-<p>#SS(0) - SS ���еĵ�ַ�Ƿ���</p>
+<p>#SS(0) - SS 段中的地址非法。</p>
 
-<p>#PF(�������) - ҳ����</p>
+<p>#PF(錯誤程式碼) - 頁錯誤。</p>
 
-<p>#NM - ��� CR0 �е� TS ����Ϊ 1��</p>
+<p>#NM - 如果 CR0 中的 TS 設定為 1。</p>
 
-<p>#XM - ������������� SIMD �����쳣���� CR4 �е� OSXMMEXCPT �� 1��</p>
+<p>#XM - 如果發生無掩碼 SIMD 浮點異常，且 CR4 中的 OSXMMEXCPT 是 1。</p>
 
-<p>#UD - ������������� SIMD �����쳣���� CR4 �е� OSXMMEXCPT �� 0����� CR0 �е� EM ����Ϊ 1����� CR4 �е� OSFXSR �� 0����� CPUID ���ܱ�־ SSE2 �� 0��</p>
+<p>#UD - 如果發生無掩碼 SIMD 浮點異常，且 CR4 中的 OSXMMEXCPT 是 0。如果 CR0 中的 EM 設定為 1。如果 CR4 中的 OSFXSR 是 0。如果 CPUID 功能標誌 SSE2 是 0。</p>
 
-<p>#AC - ����ڵ�ǰ��Ȩ����Ϊ 3 ʱ����δ������ڴ����á�</p>
+<p>#AC - 如果在目前特權級別為 3 時進行未對齊的記憶體引用。</p>
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>實地址模式異常</h2>
 
-<p>�ж� 13 - ������������κβ��ֳ����ڴ� 0 �� 0FFFFH ����Ч��ַ�ռ�֮�⡣</p>
+<p>中斷 13 - 如果運算元的任何部分出現在從 0 到 0FFFFH 的有效地址空間之外。</p>
 
-<p>#NM - ��� CR0 �е� TS ����Ϊ 1��</p>
+<p>#NM - 如果 CR0 中的 TS 設定為 1。</p>
 
-<p>#XM - ������������� SIMD �����쳣���� CR4 �е� OSXMMEXCPT �� 1��</p>
+<p>#XM - 如果發生無掩碼 SIMD 浮點異常，且 CR4 中的 OSXMMEXCPT 是 1。</p>
 
-<p>#UD - ������������� SIMD �����쳣���� CR4 �е� OSXMMEXCPT �� 0����� CR0 �е� EM ����Ϊ 1����� CR4 �е� OSFXSR �� 0����� CPUID ���ܱ�־ SSE2 �� 0��</p>
+<p>#UD - 如果發生無掩碼 SIMD 浮點異常，且 CR4 中的 OSXMMEXCPT 是 0。如果 CR0 中的 EM 設定為 1。如果 CR4 中的 OSFXSR 是 0。如果 CPUID 功能標誌 SSE2 是 0。</p>
 
-<h2>�� 8086 ģʽ�쳣</h2>
+<h2>虛 8086 模式異常</h2>
 
-<p>��&ldquo;ʵ��ַģʽ&rdquo;�е��쳣��ͬ��</p>
+<p>與&ldquo;實地址模式&rdquo;中的異常相同。</p>
 
-<p>#PF(�������) - ҳ����</p>
+<p>#PF(錯誤程式碼) - 頁錯誤。</p>
 
-<p class="whs4">#AC - ����ڵ�ǰ��Ȩ����Ϊ 3 ʱ����δ������ڴ����á� </p>
+<p class="whs4">#AC - 如果在目前特權級別為 3 時進行未對齊的記憶體引用。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

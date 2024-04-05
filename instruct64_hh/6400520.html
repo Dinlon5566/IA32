@@ -7,7 +7,7 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400520.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:50 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
 <title>rse_new_frame</title>
@@ -116,7 +116,7 @@ else
 </script>
 <h2>rse_new_frame(current_frame_size,new_frame_size)</h2>
 
-<p class="whs1">�����µ�֡�����������κμĴ�������������֡�Ĵ�С��ȫ�� new_frame_size �������壨�������ò����ۼƣ������ new_frame_size ���� current_frame_size������Ч��ɾ��ķ����еļĴ�������С��֡���������򷢳�ǿ���� RSE �洢��ֱ�����㹻�ļĴ�������ʹ�á������� RSE �洢���п��ܻᱻ�жϡ�ǿ���� RSE �洢���ܵ����жϣ������ rse_store �е��б��� </p>
+<p class="whs1">定義新的幀，而不更改任何暫存器重新命名。新幀的大小完全由 new_frame_size 參數定義（連續呼叫不作累計）。如果 new_frame_size 大於 current_frame_size，且無效與乾淨的分割槽中的暫存器數量小於幀的增量，則發出強制性 RSE 儲存，直至有足夠的暫存器可以使用。產生的 RSE 儲存序列可能會被中斷。強制性 RSE 儲存可能導致中斷；請參閱 rse_store 中的列表。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

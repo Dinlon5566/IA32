@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_LDRSH.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:31 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>LDRSH - ���ؼĴ����з��Ű���</title>
+<title>LDRSH - 載入暫存器有符號半字</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nL - ָ��\nLDRSH");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nL - 指令\nLDRSH");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,16 +104,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">LDRSH - ���ؼĴ����з��Ű���</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題">LDRSH - 載入暫存器有符號半字</h1>
 
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <div>
 <p class=Preformatted><span class=Code>LDR[condition]SH dest, addr_mode</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,7 +126,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="notational_conventions.html#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 個條件之一。請參閱<a HREF="notational_conventions.html#Condition Code Status">條件程式碼狀態</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -136,7 +136,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>目標暫存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -146,26 +146,26 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ѱַģʽ 3��<a HREF="Address_Miscellaneous_Loads_and_Stores_Overview.html">����������洢</a> </td></tr>
+<p CLASS=CellBodyLeft>定址模式 3：<a HREF="Address_Miscellaneous_Loads_and_Stores_Overview.html">其它載入與儲存</a> </td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-LDRSH ָ����ִ� <em CLASS=SourceItalic>addr_mode</em> ���ص� <em CLASS=SourceItalic>dest</em>�����ְ����з�����չ��ʽ��չ�� 32 λ�֣��Եõ�Ҫ������ 16 λ�ڴ����ݡ����������ַ�Ĵ������������� PC ���Ѱַ��condition ��������Чֵ������ָ��� NOP�� 
+LDRSH 指令將半字從 <em CLASS=SourceItalic>addr_mode</em> 載入到 <em CLASS=SourceItalic>dest</em>。半字按照有符號擴充套件方式擴充套件成 32 位字，以得到要處理的 16 位記憶體數據。如果用作基址暫存器，它還啟用 PC 相對定址。condition 必須是有效值；否則將指令當作 NOP。 
 </div>
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="Note.gif"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif"> 備註</h3>
 
-<p>�����ͼ������Ч�ļ��ػ�洢���ݷ��ʣ�������������ֹ�쳣�����ʵ��ϵͳ����Э������ʱ���ö����飬���Ҵ���������λ [0] �ĵ�ַ�������ɶ����쳣����ַ������ֶ��롣</p>
+<p>如果試圖進行無效的載入或儲存數據訪問，則產生數據終止異常。如果實現系統控制協處理器時啟用對齊檢查，並且存在設定了位 [0] 的地址，則產生對齊異常。地址必須半字對齊。</p>
 
-<h2>Ѱַģʽ</h2>
+<h2>定址模式</h2>
 
-�����&ldquo;Ѱַģʽ 3������������洢&rdquo;
+請參閱&ldquo;定址模式 3：其它載入與儲存&rdquo;
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -232,7 +232,7 @@ LDRSH ָ����ִ� <em CLASS=SourceItalic>addr_mode</em> ���ص� <em CLASS=Source
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� </h2>
+<h2>編碼 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -375,13 +375,13 @@ LDRSH ָ����ִ� <em CLASS=SourceItalic>addr_mode</em> ���ص� <em CLASS=Source
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.globl funcldrsh<br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.align 0<br> 4 <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@ * * * LDRSH (Adressing Mode 3) * * * <br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example, CODE, READONLY<br> 7 <br> 8 &#xA0;&#xA0;&#xA0;00000000 &#xA0;&#xA0;E3A0000A &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R0, #10<br> 9 &#xA0;&#xA0;&#xA0;00000004 &#xA0;&#xA0;E3A01001 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R1, #1<br> 10 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E5801000 &#xA0;&#xA0;STR &#xA0;&#xA0;&#xA0;R1, [R0]<br> 11 &#xA0;&#xA0;00000012 &#xA0;&#xA0;E1D020F0 &#xA0;&#xA0;LDRSH &#xA0;R2, [R0]<br> 12 <br> 13 &#xA0;&#xA0;00000016 &#xA0;&#xA0;E3A0100A &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R1, #10<br> 14 &#xA0;&#xA0;00000020 &#xA0;&#xA0;E3A02002 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R2, #2<br> 15 &#xA0;&#xA0;00000024 &#xA0;&#xA0;E5812000 &#xA0;&#xA0;STR &#xA0;&#xA0;&#xA0;R2, [R1]<br> 16 &#xA0;&#xA0;00000028 &#xA0;&#xA0;E15138FC &#xA0;&#xA0;LDRSH &#xA0;R3, [R1, #0x8c]<br> 17 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END</span> </p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
-<a href="Address_Miscellaneous_Loads_and_Stores_Overview.html">�����Ѱַģʽ 3��<a HREF="Address_Miscellaneous_Loads_and_Stores_Overview.html#Miscellaneous Loads and Stores">����������洢</a></a>
+<a href="Address_Miscellaneous_Loads_and_Stores_Overview.html">請參閱定址模式 3：<a HREF="Address_Miscellaneous_Loads_and_Stores_Overview.html#Miscellaneous Loads and Stores">其它載入與儲存</a></a>
 </div>
 </div>
 

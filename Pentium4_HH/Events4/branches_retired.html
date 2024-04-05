@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/branches_retired.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:38:18 GMT -->
 <head>
 
-<title>ʧЧ�ķ�֧</title>
+<title>失效的分支</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta NAME=MS-HAID CONTENT="E4 Branches Retired -- Pentium  4 Processor">
 <meta NAME=MS-HAID CONTENT="E4 Group - Key CPI-Limiting">
 <meta NAME=MS-HAID CONTENT="Branch Instructions Retired">
@@ -88,7 +88,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������¼�\n���ܵ����¼� - ����\n��Ҫ CPI �����¼�\nʧЧ�ķ�֧");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器事件\n效能調整事件 - 基本\n主要 CPI 限制事件\n失效的分支");
 
 	}
 	if (window.writeBtnStyle)
@@ -111,17 +111,17 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1 VALUE="?2000 Intel Corporation"><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">ʧЧ�ķ�֧</h1>
+<h1 VALUE="?2000 Intel Corporation"><img src="p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">失效的分支</h1>
 
-<p><span style="font-weight: bold;"><B>�߳��ض���</B></span>��<a href="Thread_Specific.html">TS</a></p>
+<p><span style="font-weight: bold;"><B>執行緒特定性</B></span>：<a href="Thread_Specific.html">TS</a></p>
 
-<p>���¼�ͳ��ʧЧ�ķ�ָ֧��������֧��һ���ή��Ӧ�ó�������ܣ�����֧Ԥ��ʧ��ȴһ���ᡣ </p>
+<p>此事件統計失效的分支指令數。分支不一定會降低應用程式的效能，但分支預測失誤卻一定會。 </p>
 
-<p>���¼�ͨ���������ʵ�һ���֣������ڱ�ʾ����������</p>
+<p>此事件通常用作比率的一部分，或用於表示程式碼特徵。</p>
 
-<p>�߼������Ĵ��¼������Ķ���</p>
+<p>高級：更改此事件測量的對象</p>
 
-<p>Ĭ������£����¼�����������λ���򿪡�������ָ��һ����������λ��ͳ��ִ�С���ִ�С�Ԥ�⡢Ԥ��ʧ���ʧЧ��֧��������ϣ��������£�</p>
+<p>預設情況下，此事件的所有掩碼位都打開。您可以指定一個或多個掩碼位來統計執行、不執行、預測、預測失誤的失效分支的任意組合，具體如下：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="1" border="1" class="whs2">
@@ -129,49 +129,49 @@ else
 <tr>
 <td valign="middle" class="whs3">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">�¼�����λ</td>
+	style="margin-bottom: 0;">事件掩碼位</td>
 <td valign="middle" class="whs3">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">說明</td></tr>
 
 <tr>
 <td valign="top" class="whs4">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">λ 0��MMNP</td>
+	style="margin-bottom: 0;">位 0：MMNP</td>
 <td valign="top" class="whs4">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">Ԥ��Ĳ�ִ�з�֧</td></tr>
+	style="margin-bottom: 0;">預測的不執行分支</td></tr>
 
 <tr>
 <td valign="top" class="whs4">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">λ 1��MMNM</td>
+	style="margin-bottom: 0;">位 1：MMNM</td>
 <td valign="top" class="whs4">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">Ԥ��ʧ��Ĳ�ִ�з�֧</td></tr>
+	style="margin-bottom: 0;">預測失誤的不執行分支</td></tr>
 
 <tr>
 <td valign="top" class="whs4">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">λ 2��MMTP</td>
+	style="margin-bottom: 0;">位 2：MMTP</td>
 <td valign="top" class="whs4">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">Ԥ���ִ�з�֧</td></tr>
+	style="margin-bottom: 0;">預測的執行分支</td></tr>
 
 <tr>
 <td valign="top" class="whs4">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">λ 3��MMTM</td>
+	style="margin-bottom: 0;">位 3：MMTM</td>
 <td valign="top" class="whs4">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">Ԥ��ʧ���ִ�з�֧</td></tr>
+	style="margin-bottom: 0;">預測失誤的執行分支</td></tr>
 </table>
 
-<p>�����йش��¼�����ϸ��Ϣ�������<a href="mispredicted_branches_retired.html">ʧЧ��Ԥ��ʧ���֧</a>��</p>
+<p>如需有關此事件的詳細資訊，請參閱<a href="mispredicted_branches_retired.html">失效的預測失誤分支</a>。</p>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','ʧЧ�Ķ����������δ����','2nd-level_cache_load_misses_retired.htm','ʧЧ�ļ���','loads_retired.htm','ʧЧ��ָ��','Instructions_retired.htm','ʧЧ��Ԥ��ʧ���֧','mispredicted_branches_retired.htm','ʱ���źţ�������ʱ���źţ�','Clockticks.htm');return false;" title="������Ҫ CPI �����¼�"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%85%b6%e5%ae%83%e4%b8%bb%e8%a6%81_cpi_%e9%99%90%e5%88%b6%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=136 alt="������Ҫ CPI �����¼�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','失效的二級快取載入未命中','2nd-level_cache_load_misses_retired.htm','失效的載入','loads_retired.htm','失效的指令','Instructions_retired.htm','失效的預測失誤分支','mispredicted_branches_retired.htm','時鐘訊號（非休眠時鐘訊號）','Clockticks.htm');return false;" title="其它主要 CPI 限制事件"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%85%b6%e5%ae%83%e4%b8%bb%e8%a6%81_cpi_%e9%99%90%e5%88%b6%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=136 alt="其它主要 CPI 限制事件"></a>
 
 
  </p>

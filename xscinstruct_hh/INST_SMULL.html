@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_SMULL.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:31 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>SMULL - �з��ų��˷�</title>
+<title>SMULL - 有符號長乘法</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nS - ָ��\nSMULL");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nS - 指令\nSMULL");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,16 +104,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">SMULL - �з��ų��˷�</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題">SMULL - 有符號長乘法</h1>
 
 <div>
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted><span CLASS=Code>SMULL[condition][S] dest_lo, dest_hi, op1, op2</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,7 +126,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ��<br> �����<a HREF="notational_conventions.html#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 個條件之一。<br> 請參閱<a HREF="notational_conventions.html#Condition Code Status">條件程式碼狀態</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -136,7 +136,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�������������־��λ [20]��</td></tr>
+<p CLASS=CellBodyLeft>更新條件程式碼標誌（位 [20]）</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -146,7 +146,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�� 32 λ��Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>低 32 位的目標暫存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -156,7 +156,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�� 32 λ��Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>高 32 位的目標暫存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -166,7 +166,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>������һ���������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含第一個運算元的暫存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -175,20 +175,20 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�����ڶ����������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含第二個運算元的暫存器</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p CLASS=Body>SMULL ָ��ִ���з��Ż��޷��Ų����� <em CLASS=SourceItalic>op1</em> �� <em CLASS=SourceItalic>op2</em> �ĳ˷����˷��� 64 λ���д�� <em CLASS=SourceItalic>dest_lo</em> �� <em CLASS=SourceItalic>dest_hi</em>��condition ��������Чֵ������ָ��� NOP��</p>
+<p CLASS=Body>SMULL 指令執行有符號或無符號運算元 <em CLASS=SourceItalic>op1</em> 與 <em CLASS=SourceItalic>op2</em> 的乘法。乘法的 64 位結果寫入 <em CLASS=SourceItalic>dest_lo</em> 與 <em CLASS=SourceItalic>dest_hi</em>。condition 必須是有效值；否則將指令當作 NOP。</p>
 
-<h2>Ѱַģʽ</h2>
+<h2>定址模式</h2>
 
-�޲�����
+無運算元
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -255,7 +255,7 @@ else
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� </h2>
+<h2>編碼 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -398,7 +398,7 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.globl funcsmull<br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.align 0<br> 4 <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@ * * * SMULL * * * <br> 6 <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example, CODE, READONLY<br> 8 <br> 9 &#xA0;&#xA0;&#xA0;00000000 &#xA0;&#xA0;E3A00000 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R0, #0xF00D<br> 10 &#xA0;&#xA0;00000004 &#xA0;&#xA0;E3A01000 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R1, #0xBEEF<br> 11 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E3A02000 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R2, #0xE667A579<br> 12 <br> 13 &#xA0;&#xA0;00000012 &#xA0;&#xA0;F4D67890 &#xA0;&#xA0;SMULL &#xA0;&#xA0;&#xA0;R3, R4, R0, R2<br> 14 &#xA0;&#xA0;00000016 &#xA0;&#xA0;E0D65190 &#xA0;&#xA0;SMULLS &#xA0;&#xA0;R5, R6, R0, R1<br> 15 <br> 16 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END</span> </p>
 </div>

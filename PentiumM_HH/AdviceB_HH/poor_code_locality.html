@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/AdviceB_HH/poor_code_locality.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:32 GMT -->
 <head>
 
-<title>���������Բ���</title>
+<title>程式碼區域性不佳</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="02 12, 2003 3:53:57 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -94,7 +94,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\n����Ӣ�ض�(R) ����(R) M �������Ľ���\n���������Բ���");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n關於英特爾(R) 奔騰(R) M 處理器的建議\n程式碼區域性不佳");
 
 	}
 	if (window.writeBtnStyle)
@@ -117,11 +117,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" alt="Ӣ�ض�(R) ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">���������Բ���</h1>
+<h1><img src="TA_logo.gif" alt="英特爾(R) 調優助手主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">程式碼區域性不佳</h1>
 
-<p>Ƶ������һ��ָ���δ���У���ʾ���ܴ���ͨ������ִ�е�ָ�������Ҳ����˵��ͨ�����ƴ��������ԣ����������ܵĻ��ᡣ</p>
+<p>頻繁發生一級指令快取未命中，表示可能存在通過減少執行的指令工作集（也就是說，通過改善程式碼區域性）來改善效能的機會。</p>
 
-<p><span style="font-weight: bold;"><B>����������У���ϸ�ھ���ʵ�������壺</B></span><br>���������̣�<a href="../EventsB/l2_cache_instruction_fetches.html" style="x-condition: eclipse;">��������ָ���ȡ</a>/<a href="../EventsB/instructions_retired.html" style="x-condition: eclipse;">ʧЧ��ָ��</a>�����ѡ�ֵ 0.01 Ӧ��Ϊ���ã�ֵ 0.05 Ӧ��Ϊ���ѡ�</p>
+<p><span style="font-weight: bold;"><B>在以下情況中，此細節具有實質性意義：</B></span><br>計數器的商（<a href="../EventsB/l2_cache_instruction_fetches.html" style="x-condition: eclipse;">二級快取指令獲取</a>/<a href="../EventsB/instructions_retired.html" style="x-condition: eclipse;">失效的指令</a>）不佳。值 0.01 應視為良好，值 0.05 應視為不佳。</p>
 
 <h3 class=NoteTipHead
 	style="margin-left: 40px;"><span style="font-weight: bold;"><B><script type="text/javascript" language="JavaScript"><!--
@@ -129,17 +129,17 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4))
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='tip.gif' width='17px' height='18px' border='0' class='img_whs2'>");}
 else
 {   document.write("<img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs2'>");}
-//--></script><noscript><img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs2'></noscript> ����</B></span></h3>
+//--></script><noscript><img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs2'></noscript> 建議</B></span></h3>
 
 <ol>
 	
 	<ul type="disc" class="whs3">
 		
-		<li class=kadov-p><p>����ͨ���������ָʾ����������ؼ�����Ƕ�ķ�������Ƕ�ᵼ�´������͡����������Ƕ����ʹִ�е�ָ������ܸ��õ��ʺ�һ��ָ���Ĵ�С������ܻ�������ܡ�</p></li>
+		<li class=kadov-p><p>考慮通過程式碼編譯指示或編譯器開關減少內嵌的方法。內嵌會導致程式碼膨脹。如果減少內嵌可以使執行的指令工作集能更好地適合一級指令快取的大小，這可能會改善效能。</p></li>
 		
-		<li class=kadov-p><p>�跨���µ�������ṹ��/������㷨����ȷ���ڽ�����һ����������֮ǰ��ÿ����Ч�������ζ��ѳ�����á�������ע�⣬��ʱ������Ҫ�ڴ���������������������֮��������ԡ�</p></li>
+		<li class=kadov-p><p>設法重新調整程式碼結構且/或更改演算法，以確保在進入下一個程式碼區段之前，每個有效程式碼區段都已充分利用。不過請注意，有時可能需要在程式碼區域性與數據區域性之間進行折衷。</p></li>
 		
-		<li class=kadov-p><p>����ʹ�ô�С�Ż����б��롣&ldquo;�Ż���С&rdquo;�����־������ִ�е�ָ����� - �������Ż���Сѡ����ܻ����������潵�����ܣ������ڽ��д����Ż�֮������ؼ�����ܡ�</p></li>
+		<li class=kadov-p><p>考慮使用大小優化進行編譯。&ldquo;優化大小&rdquo;編譯標誌將減少執行的指令工作集 - 不過，優化大小選項可能會在其它方面降低效能，所以在進行此項優化之後，請務必檢查效能。</p></li>
 	</ul>
 </ol>
 

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400302.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
 
-<title>mov pr - �ƶ�ν��ָ��</title>
+<title>mov pr - 移動謂詞指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:55:03 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nM - ָ��\nmov pr - �ƶ�ν��ָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nM - 指令\nmov pr - 移動謂詞指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,16 +116,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">�ƶ�ν��ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">移動謂詞指令</h1>
 
 <p><span style="font-weight: bold;"><B>mov pr</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400303.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400303.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字型慣例</a>
  </p>
 
-<p>ָ������ I</p>
+<p>指令型別 I</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) mov <span style="font-style: italic;"><I>r1</I></span> = pr from_form</p>
 
@@ -138,28 +138,28 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>說明</B></span></p>
 
-<p>Դ���������Ƶ�Ŀ��Ĵ�����</p>
+<p>源運算元複製到目標暫存器。</p>
 
-<p>Ҫ��ν���Ƶ� <span style="x-condition: eclipse;">GR</span>��<script type="text/javascript"
+<p>要將謂詞移到 <span style="x-condition: eclipse;">GR</span>，<script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A1');
-//--></script> �� <span style="x-condition: eclipse;">PR</span> i ���Ƶ� GR <span style="font-style: italic;"><I>r1</I></span> �е�λ�� i��<script 
+//--></script> 則將 <span style="x-condition: eclipse;">PR</span> i 複製到 GR <span style="font-style: italic;"><I>r1</I></span> 中的位置 i。<script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A2');
 //--></script></p>
 
-<p>Ҫ�Ƶ�ν�ʣ�Դ������������ͨ�üĴ�����Ҳ���������������� to_form �У�Դ�������� GR <span   style="font-style: italic;"><I>r2��</I></span>����ֻд�������� <span style="font-style: italic;"><I>mask</I></span> 17 ָ������Щν�ʡ�ֵ <span style="font-style: italic;"><I>mask</I></span> 17 �� <span style="font-style: italic;"><I>imm16</I></span> �ֶ��е�ָ���б��룬�磺<span style="font-style: italic;"><I>imm16</I></span> = <span   style="font-style: italic;"><I>mask</I></span> 17 &gt;&gt; 1��ν�ʼĴ��� 0 ����һ��ֵ <span style="font-style: italic;"><I>mask</I></span> 17 ��������չ��ʽ������չ����� <span style="font-style: italic;"><I>mask</I></span>17 �������Чλ������ѭ��ν�ʵ�����λ��������� GR <span style="font-style: italic;"><I>r2</I></span> �Ļ����쳣��NaT λΪ 1������ִ��&ldquo;�Ĵ��� NaT ʹ��&rdquo;����Ĵ�����</p>
+<p>要移到謂詞，源運算元可以是通用暫存器，也可以是立即數。在 to_form 中，源運算元是 GR <span   style="font-style: italic;"><I>r2，</I></span>並且只寫入立即數 <span style="font-style: italic;"><I>mask</I></span> 17 指定的那些謂詞。值 <span style="font-style: italic;"><I>mask</I></span> 17 在 <span style="font-style: italic;"><I>imm16</I></span> 欄位中的指令中編碼，如：<span style="font-style: italic;"><I>imm16</I></span> = <span   style="font-style: italic;"><I>mask</I></span> 17 &gt;&gt; 1。謂詞暫存器 0 總是一。值 <span style="font-style: italic;"><I>mask</I></span> 17 按符號擴充套件方式進行擴充套件。因此 <span style="font-style: italic;"><I>mask</I></span>17 的最高有效位是所有循環謂詞的掩碼位。如果出現 GR <span style="font-style: italic;"><I>r2</I></span> 的緩發異常（NaT 位為 1），則執行&ldquo;暫存器 NaT 使用&rdquo;錯誤的處理。</p>
 
-<p>�� to_rotate_form �У�ֻ��д�� 48 ��ѭ��ν�ʡ�Դ������ȡ�� <span style="font-style: italic;"><I>imm44</I></span> ���������˲������� <span style="font-style: italic;"><I>imm28</I></span> �ֶ��е�ָ���б��룬ʹ�ã�<span style="font-style: italic;"><I>imm28</I></span> = <span   style="font-style: italic;"><I>imm44</I></span> &gt;&gt; 16������ 16 λ��Ӧ��̬ν�ʡ���������������չ������ǰ 21 ��ν�ʡ�Դ�������е�λ�� i ���Ƶ� <span style="x-condition: eclipse;">PR</span><script 
+<p>在 to_rotate_form 中，只能寫入 48 個循環謂詞。源運算元取自 <span style="font-style: italic;"><I>imm44</I></span> 運算元（此運算元在 <span style="font-style: italic;"><I>imm28</I></span> 欄位中的指令中編碼，使得：<span style="font-style: italic;"><I>imm28</I></span> = <span   style="font-style: italic;"><I>imm44</I></span> &gt;&gt; 16）。低 16 位對應靜態謂詞。立即數經符號擴充套件以設定前 21 個謂詞。源運算元中的位置 i 複製到 <span style="x-condition: eclipse;">PR</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A3');
-//--></script> i��</p>
+//--></script> i。</p>
 
-<p>��ָ���ʱ�����ǽ�&ldquo;��ǰ֡���&rdquo;(CFM.rrb.pr) �е�ν��ѭ����ַ������������</p>
+<p>此指令工作時就像是將&ldquo;目前幀標記&rdquo;(CFM.rrb.pr) 中的謂詞循環基址當成零那樣。</p>
 
 
 <!--(HR)============================================================-->

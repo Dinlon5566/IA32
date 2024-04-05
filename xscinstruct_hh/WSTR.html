@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -95,7 +95,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nW - ָ��\nWSTR");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nW - 指令\nWSTR");
 
 	}
 	if (window.writeBtnStyle)
@@ -120,50 +120,50 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>WSTR - �洢 WMMX �Ĵ���</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>WSTR - 儲存 WMMX 暫存器</h1>
 
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted>WSTRlength[condition] op1D, address_mode<br> WSTR op1C, &lt;address_mode&gt;  </p>
 
-<p>���У� </p>
+<p>其中： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
 
 <tr>
 <td class="whs3"><i style="font-style: italic;">length</i></td>
-<td class="whs3">��������ݳ��ȣ������������ַ�֮һָ����<br> B -- ���� 8 λ�ֽ�����<br> H -- ���� 16 λ��������<br> W -- ���� 32 λ������<br> D -- ���� 64 λ˫������</td></tr>
+<td class="whs3">所需的數據長度，可以由以下字元之一指定：<br> B -- 載入 8 位位元組數據<br> H -- 載入 16 位半字數據<br> W -- 載入 32 位字數據<br> D -- 載入 64 位雙字數據</td></tr>
 
 <tr>
 <td class="whs3"><i style="font-style: italic;">condition</i></td>
-<td class="whs3">��ѡ��16 ������֮һ�������<a HREF="Conditional_Execution.html">����ִ��</a>��</td></tr>
+<td class="whs3">可選。16 個條件之一。請參閱<a HREF="Conditional_Execution.html">條件執行</a>。</td></tr>
 
 <tr>
 <td class="whs3">op1D</td>
-<td class="whs3">Դ��������&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�������ݼĴ���</td></tr>
+<td class="whs3">源運算元，&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術數據暫存器</td></tr>
 
 <tr>
 <td class="whs3">op1C</td>
-<td class="whs3">Դ��������&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�������ƼĴ���</td></tr>
+<td class="whs3">源運算元，&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術控制暫存器</td></tr>
 
 <tr>
 <td class="whs3">address_mode</td>
-<td class="whs3">��ַģʽ 5 - ������洢Э������</td></tr>
+<td class="whs3">地址模式 5 - 載入與儲存協處理器</td></tr>
 </table>
 
 &nbsp; 
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>ִ�д�Դ�Ĵ�����op1D �� op1C�����ڴ�λ�õĴ洢���ڴ��ַ�ɵ�ַģʽ����ָ����<br> ���ݼĴ��� op1D ���Դ洢 8��16��32 �� 64 λ����ֵ�������ƼĴ��� op1C ֻ�洢 32 λ����ֵ��<br><br>ָ����ָ�����κ�������������������״̬ƥ�䣬����ִ��ָ� </p>
+<p>執行從源暫存器（op1D 或 op1C）到記憶體位置的儲存，記憶體地址由地址模式參數指定。<br> 數據暫存器 op1D 可以儲存 8、16、32 及 64 位數據值，而控制暫存器 op1C 只儲存 32 位數據值。<br><br>指令中指定的任何條件必須與條件程式碼狀態匹配，否則不執行指令。 </p>
 
 &nbsp; 
 
-<br>���ݵ�ַ��&ldquo;Ӣ�ض� XScale(R)&rdquo;�������ɣ����� &lt;address_mode&gt; ��Э�������Ĵ����ļ�����洢ʹ�õĵ�ַģʽ 5����ָ��Ĵ��� Rn ������ַ��ƫ��������ַ������ʹ�õ�ƫ�����������ֽ�Ϊ��λָ��������������������� W �� D �޶�����ƫ�����������ֵı������������Ա� 4 ����������ָ������ʹ������˫�ּ��ر��壬��ƫ������Χ (0 - 0x3FC) �����ֽ�����ֵȼ��ر����ƫ������Χ (0 - 0xFF)��������±���<b><br>��ַģʽ�����ƫ���������ָ�����</b> 
+<br>數據地址由&ldquo;英特爾 XScale(R)&rdquo;核心產生，其中 &lt;address_mode&gt; 是協處理器暫存器的載入與儲存使用的地址模式 5。此指令將暫存器 Rn 用作基址與偏移量。地址計算中使用的偏移量總是以位元組為單位指定給彙編器。不過，對於 W 與 D 限定符，偏移量必須是字的倍數（即，可以被 4 整除）。此指令允許使用字與雙字載入變體，其偏移量範圍 (0 - 0x3FC) 大於位元組與半字等載入變體的偏移量範圍 (0 - 0xFF)。請參閱下表。<b><br>地址模式彙編器偏移量規格與指令編碼</b> 
  
 
 <!--(Table)=========================================================-->
@@ -173,15 +173,15 @@ else
 <th class="whs5">
 <div align="center" class="whs6">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>�޶���</font> 
+		face=Verdana>限定符</font> 
 </div></th>
 <th class="whs5">
 <div align="center" class="whs6">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>�����</font> 
+		face=Verdana>彙編器</font> 
 </div>
 <div align="center" class="whs6">
-ƫ������λ
+偏移量單位
 </div>
 <div align="center" class="whs6">
 (AS_offset) 
@@ -189,18 +189,18 @@ else
 <th class="whs5">
 <div align="center" class="whs6">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>�����ƫ����</font> 
+		face=Verdana>彙編器偏移量</font> 
 </div>
 <div align="center" class="whs6">
-����
+限制
 </div></th>
 <th class="whs5">
 <div align="center" class="whs6">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>ָ��</font> 
+		face=Verdana>指令</font> 
 </div>
 <div align="center" class="whs6">
-����
+編碼
 </div>
 <div align="center" class="whs6">
 (offset_8)
@@ -213,7 +213,7 @@ B
 </div></td>
 <td class="whs3">
 <div align="center" class="whs6">
-�ֽ�
+位元組
 </div></td>
 <td class="whs3">
 <div align="center" class="whs6">
@@ -231,7 +231,7 @@ H
 </div></td>
 <td class="whs3">
 <div align="center" class="whs6">
-�ֽ�
+位元組
 </div></td>
 <td class="whs3">
 <div align="center" class="whs6">
@@ -249,7 +249,7 @@ W
 </div></td>
 <td class="whs3">
 <div align="center" class="whs6">
-�ֽ�
+位元組
 </div></td>
 <td class="whs3">
 <div align="center" class="whs6">
@@ -270,7 +270,7 @@ D
 </div></td>
 <td class="whs3">
 <div align="center" class="whs6">
-�ֽ�
+位元組
 </div></td>
 <td class="whs3">
 <div align="center" class="whs6">
@@ -287,7 +287,7 @@ AS_offset[9:2]
 
 &nbsp; 
 
-<br>��������ƫ�����������������ƣ������ʹ��һ��������ָ����磬�ӷ�/�������޸ĵ�ַ��<br> <br> ��ַӦ����Ҫ�洢����������ֽ�/����/�ֱ߽���롣���������������δ�����ַ���壬��Ӧ������ϵ͵� <i>address</i> λ�����򽫷���δ�����ַ���塣<br><br> �������δ�������壬�����������
+<br>如果所需的偏移量不滿足以上限制，則必須使用一條單獨的指令（例如，加法/減法）修改地址。<br> <br> 地址應該與要儲存的數據項的位元組/半字/字邊界對齊。如果主核心上啟用未對齊地址陷阱，則應該清除較低的 <i>address</i> 位，否則將發生未對齊地址陷阱。<br><br> 如果禁用未對齊陷阱，則發生以下情況
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -296,12 +296,12 @@ AS_offset[9:2]
 <th class="whs5">
 <div align="center" class="whs6">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>�޶���</font> 
+		face=Verdana>限定符</font> 
 </div></th>
 <th class="whs5">
 <div align="center" class="whs6">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>δ������Ϊ</font> 
+		face=Verdana>未對齊行為</font> 
 </div></th></tr>
 
 <tr>
@@ -311,7 +311,7 @@ B
 </div></td>
 <td class="whs3">
 <div align="center" class="whs6">
-�Ӳ�����
+從不對齊
 </div></td></tr>
 
 <tr>
@@ -321,15 +321,15 @@ H,W,D
 </div></td>
 <td class="whs3">
 <div align="center" class="whs6">
-�޷�Ԥ֪
+無法預知
 </div></td></tr>
 </table>
 
 &nbsp; 
 
-<p>Ӣ�ض�&#xAE; ���� MMX&#x2122; �������ƼĴ����Ĵ洢�������֣����Ҳ��ð�����ִ�С�<br></p>
+<p>英特爾&#xAE; 無線 MMX&#x2122; 技術控制暫存器的儲存僅限於字，並且不得按條件執行。<br></p>
 
-<h2>���� - WSTR&lt;B,H,W,D&gt;<b> </b></h2>
+<h2>編碼 - WSTR&lt;B,H,W,D&gt;<b> </b></h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -551,7 +551,7 @@ offset_8
 
 &nbsp; 
 
-<h2>���ֶα���</h2>
+<h2>子欄位編碼</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -560,17 +560,17 @@ offset_8
 <th class="whs5">
 <div align="center" class="whs6">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>�޶���</font> 
+		face=Verdana>限定符</font> 
 </div></th>
 <th class="whs5">
 <div align="center" class="whs6">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>�ֶ�</font> 
+		face=Verdana>欄位</font> 
 </div></th>
 <th class="whs5">
 <div align="center" class="whs6">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>ֵ</font> 
+		face=Verdana>值</font> 
 </div></th></tr>
 
 <tr>
@@ -630,9 +630,9 @@ N,M
 </div></td></tr>
 </table>
 
-�� V5 ���ݵ�&ldquo;Ӣ�ض� XScale(R)&rdquo;΢��ϵ�ṹ��ָ���� P��U��W �Լ� offset_8 ���롣 
+如 V5 相容的&ldquo;英特爾 XScale(R)&rdquo;微體系結構中指定的 P、U、W 以及 offset_8 編碼。 
 
-<h2>���� - WSTRW wCx,</h2>
+<h2>編碼 - WSTRW wCx,</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -850,16 +850,16 @@ offset_8
 
 &nbsp; 
 
-<h2>���ֶα���</h2>
+<h2>子欄位編碼</h2>
 
-�� V5 ���ݵ�&ldquo;Ӣ�ض� XScale(R)&rdquo;΢��ϵ�ṹ��ָ���� P��U��W �Լ� offset_8 ���롣 
+如 V5 相容的&ldquo;英特爾 XScale(R)&rdquo;微體系結構中指定的 P、U、W 以及 offset_8 編碼。 
 
-<h2>Ӱ��� SIMD ��־</h2>
+<h2>影響的 SIMD 標誌</h2>
 
-��Ӱ�� SIMD PSR ��־ (wCASF) ��&ldquo;����&rdquo;��־ (wCSSF)�� 
+不影響 SIMD PSR 標誌 (wCASF) 或&ldquo;飽和&rdquo;標誌 (wCSSF)。 
  
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted
 	style="font-family: 'Courier New';">if (B specified) then</p>
@@ -886,7 +886,7 @@ offset_8
 <p class=Preformatted
 	style="margin-left: 40px;">Mem[&lt;address_mode&gt;] = <i>op1</i>[63:0];</p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
 <a HREF="WLDR.html">WLDR</a> 
 

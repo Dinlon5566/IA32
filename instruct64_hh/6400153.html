@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400153.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:49 GMT -->
 <head>
 
-<title>wtop �� wexit ��֧����</title>
+<title>wtop 與 wexit 分支型別</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="06 6, 2001 4:00:37 PM">
 <meta name=topic-status content=Complete>
 <meta name=topic-priority content=2>
@@ -113,11 +113,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h2>wtop �� wexit ��֧����</h2>
+<h2>wtop 與 wexit 分支型別</h2>
 
-<p>��ȷ���Ƿ�Ҫ��֧���⣬��Щ��֧���͵���Ϊ��ȫ��ͬ������ br.wtop������޶�ν��Ϊһ�� EC ����һ����ִ�з�֧������ br.wexit����������෴�������޶�ν��Ϊһ�� EC ����һʱ��ִ�У�������ִ�С�</p>
+<p>除確定是否要分支以外，這些分支型別的行為完全相同。對於 br.wtop，如果限定謂詞為一或 EC 大於一，則執行分支。對於 br.wexit，情況正好相反。它在限定謂詞為一或 EC 大於一時不執行，否則便會執行。</p>
 
-<p class="whs1">��Щ��֧����Ҳ����ʹ���޶�ν���� EC ���ƼĴ���ѭ�����϶���ʼ��������ʼ�׶Σ��޶�ν�����㻹��һȡ����ѭ���ı�̷������ں��Ľ׶Σ��޶�ν����һ���ڽ����׶Σ��޶�ν��Ϊ�㣬EC �ݼ����޶�ν�ʵ������� EC ����һ�������ִ�� br.wtop �� br.wexit��EC �������ĵݼ�����ִ�����ļĴ���ѭ��������޶�ν���� EC ��Ϊ�㣬��Ĵ���ѭ��ֹͣ����Щ���������ö��������ַ�֧���Զ�����ˣ���� <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400005.htm">WTOP �� WEXIT ��֧���͵Ĳ���</a>�� </p>
+<p class="whs1">這些分支型別也可以使用限定謂詞與 EC 控制暫存器循環並斷定初始化。在起始階段，限定謂詞是零還是一取決於循環的程式設計方案。在覈心階段，限定謂詞是一。在結束階段，限定謂詞為零，EC 遞減。限定謂詞等於零且 EC 等於一的情況下執行 br.wtop 或 br.wexit，EC 進行最後的遞減，並執行最後的暫存器循環。如果限定謂詞與 EC 均為零，則暫存器循環停止。這些其它的作用對於這兩種分支而言都是如此，詳見 <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400005.htm">WTOP 與 WEXIT 分支型別的操作</a>。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

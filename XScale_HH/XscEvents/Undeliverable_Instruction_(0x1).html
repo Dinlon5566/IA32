@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/XScale_HH/XscEvents/Undeliverable_Instruction_(0x1).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:52 GMT -->
 <head>
 
-<title>ָ����޷������¼� (0x1)</title>
+<title>指令快取無法傳遞事件 (0x1)</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="06 5, 2002 3:02:01 PM">
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
 <meta name=generator-major-version content=0.1>
@@ -92,7 +92,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض� XScale(R) ΢��ϵ�ṹ \nӢ�ض� XScale(R) ΢��ϵ�ṹ�¼�\nָ���¼�\nָ����޷����� (0x1)");
+	addTocInfo("參考\n處理器事件與建議\n英特爾 XScale(R) 微體系結構 \n英特爾 XScale(R) 微體系結構事件\n指令事件\n指令快取無法傳遞 (0x1)");
 
 	}
 	if (window.writeBtnStyle)
@@ -117,14 +117,14 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>ָ����޷������¼� (0x1)</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>指令快取無法傳遞事件 (0x1)</h1>
 
 <p class="whs2">ICACHE_ITLB_MISS_STALL</p>
 
-<p>����ָ���δ���л�ָ�� TLB δ���е���ָ����޷�����ָ��ʱ���ᴥ�����¼���ֻҪ���ڷ�֧Ԥ��ʧ����Ҳ�ᰴ 1 ����������ָ����޷�����ָ���ִ�ж����ڷ���ָ��ʱ������Ҳ�������</p>
+<p>由於指令快取未命中或指令 TLB 未命中導致指令快取無法傳遞指令時，會觸發此事件。只要存在分支預測失誤，它也會按 1 遞增。由於指令快取無法傳遞指令而執行多週期發出指令時，計數也會遞增。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

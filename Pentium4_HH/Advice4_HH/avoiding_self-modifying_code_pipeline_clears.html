@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/avoiding_self-modifying_code_pipeline_clears.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:24:40 GMT -->
 <head>
 
-<title>���������޸Ĵ���ܵ����</title>
+<title>避免自我修改程式碼管道清除</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -79,7 +79,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n���������޸Ĵ���ܵ����");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n關於英特爾(R) 奔騰(R) 4 處理器的建議\n關於英特爾(R) 奔騰(R) 4 處理器的建議\n避免自我修改程式碼管道清除");
 
 	}
 	if (window.writeBtnStyle)
@@ -102,11 +102,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" alt="Ӣ�ض�&#xAE; ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">���������޸Ĵ���ܵ����</h1>
+<h1><img src="TA_logo.gif" alt="英特爾&#xAE; 調優助手主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">避免自我修改程式碼管道清除</h1>
 
 &nbsp;
 
-<p>����Ӣ�ض�(R) ��ϵ�ṹ��������Ҫ�������޸Ĵ��������ȷִ�У����ᵼ�����Ե����ܳͷ������ǽ����������ݷ��ڲ�ͬ��ҳ�ϡ������ܱ��������޸Ĵ��롣���Ҫ�޸Ĵ��룬�뾡��һ������ɣ���ȷ��ִ���޸ĵĴ�����Ҫ�޸ĵĴ��봦�ڲ�ͬ��ҳ�ϣ������������ 1K �������С������й���ϸ��Ϣ������� <span style="font-style: italic;"><I>Intel(R) Pentium(R) 4 Processor Optimization Reference Manual</I></span>��Ӣ�ض�(R) ����(R) 4 �������Ż��ο��ֲᣩ�ĵ� 2 �¡�</p>
+<p>按照英特爾(R) 體系結構處理器的要求，自我修改程式碼可以正確執行，但會導致明顯的效能懲罰。總是將程式碼與數據放在不同的頁上。儘可能避免自我修改程式碼。如果要修改程式碼，請儘量一次性完成，並確保執行修改的程式碼與要修改的程式碼處在不同的頁上，或至少在相隔 1K 的區域中。如需有關詳細資訊，請參閱 <span style="font-style: italic;"><I>Intel(R) Pentium(R) 4 Processor Optimization Reference Manual</I></span>（英特爾(R) 奔騰(R) 4 處理器優化參考手冊）的第 2 章。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

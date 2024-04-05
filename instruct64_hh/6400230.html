@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400230.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:00 GMT -->
 <head>
 
-<title>fpcmp - ���㲢�бȽ�ָ��</title>
+<title>fpcmp - 浮點並行比較指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:50:57 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nF - ָ��\nfpcmp - ���㲢�бȽ�ָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nF - 指令\nfpcmp - 浮點並行比較指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,15 +116,15 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">���㲢�бȽ�ָ��</h1>
+<h1><img src="itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">浮點並行比較指令</h1>
 
 <p><span style="font-weight: bold;"><B>fpcmp</B></span></p>
 
-<p><a HREF="6400231.html">����</a> <a HREF="6400126.html">�������</a></p>
+<p><a HREF="6400231.html">操作</a> <a HREF="6400126.html">字型慣例</a></p>
 
-<p>ָ������ F</p>
+<p>指令型別 F</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) fpcmp.<span style="x-condition: eclipse;">frel</span><script type="text/javascript"
 	language=JavaScript1.2><!--
@@ -139,20 +139,20 @@ kadovFilePopupInit('A2');
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>說明</B></span></p>
 
-<p>���� <span style="x-condition: eclipse;">frel</span> ָ����ʮ���ֹ�ϵ֮һ���Ƚ�<span style="font-style: italic;"><I>f2</I></span> �� FR <span style="font-style: italic;"><I>f3</I></span> ����Чλ�ֶ��е����Ե�����Դ������<script type="text/javascript"
+<p>按照 <span style="x-condition: eclipse;">frel</span> 指定的十二種關係之一，比較<span style="font-style: italic;"><I>f2</I></span> 與 FR <span style="font-style: italic;"><I>f3</I></span> 的有效位欄位中的兩對單精度源運算元<script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A3');
-//--></script>������Ƚ�����Ϊ�棬��������߼������ 32 �� 1 ��ɵ����룬������� 32 �� 0 ��ɵ����롣�˽��д�� FR <span style="font-style: italic;"><I>f1</I></span> ����Чλ�ֶ��е�һ�� 32 λ������FR <span style="font-style: italic;"><I>f1</I></span> ��ָ���ֶ�����Ϊ 2.063 (0x1003E) ��ƫ��ָ����FR <span style="font-style: italic;"><I>f1</I></span> �ķ����ֶ�����Ϊ�� (0)��</p>
+//--></script>。如果比較條件為真，則產生的邏輯結果是 32 個 1 組成的掩碼，否則產生 32 個 0 組成的掩碼。此結果寫入 FR <span style="font-style: italic;"><I>f1</I></span> 的有效位欄位中的一對 32 位整數。FR <span style="font-style: italic;"><I>f1</I></span> 的指數欄位設定為 2.063 (0x1003E) 的偏置指數，FR <span style="font-style: italic;"><I>f1</I></span> 的符號欄位設定為正 (0)。</p>
 
-<p>��ϵ���ÿ��<a href="6400036.html" style="x-condition: eclipse;">�Ƚ�����</a>���ж��塣<script 
+<p>關係針對每種<a href="6400036.html" style="x-condition: eclipse;">比較型別</a>進行定義。<script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A4');
-//--></script>����ʮ���ֹ�ϵ�У��������еĶ�ֱ����Ӳ����ʵ�֡���һЩʵ������α������������Щ�����������ֻ���л�һ��Դ������ָʾ����/���л�һ��ν������ָʾ����Ȼ��ʹ�þ���ʵ�ֵĹ�ϵ��</p>
+//--></script>在這十二種關係中，並非所有的都直接在硬體中實現。有一些實際上是偽操作。對於這些操作，彙編器只是切換一下源運算元指示符且/或切換一下謂詞型別指示符，然後使用具體實現的關係。</p>
 
-<p>��� FR <span style="font-style: italic;"><I>f2</I></span> �� FR <span   style="font-style: italic;"><I>f3</I></span> �� NaTVal���� FR <span style="font-style: italic;"><I>f1</I></span> ����Ϊ NaTVal�������Ǽ���Ľ����</p>
+<p>如果 FR <span style="font-style: italic;"><I>f2</I></span> 或 FR <span   style="font-style: italic;"><I>f3</I></span> 是 NaTVal，則將 FR <span style="font-style: italic;"><I>f1</I></span> 設定為 NaTVal，而不是計算的結果。</p>
 
 
 <!--(HR)============================================================-->

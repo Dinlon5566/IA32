@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Counting_Clock_Cycles.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:32 GMT -->
 <head>
 
-<title>ͳ��ʱ������</title>
+<title>統計時鐘週期</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="03 6, 2002 9:21:57 AM">
 <meta NAME=MS-HAID CONTENT=Events4>
 <meta name=topic-status content="In Progress">
@@ -28,7 +28,7 @@
 <meta name=page-count content=1>
 <meta name=layout-height content=945>
 <meta name=layout-width content=668>
-<meta name=x-ignored-words content="MMX;SIMD;Aliasing;modulo;aliasing;Pentium;pipelined;mispredicted;NetBurst;irets;BTB;DTLB;micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;UC;uncacheable;WC;MMNP;MMNM;Mispredicted;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;Clockticks;clocktick;VTune;clockticks;MOCLEAR;prefetching;misprediction;PGO;pseudo-LRU;developer.intel.com;index.htm;Vol;RFO;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;prefetch;Micro-ops;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;LSC;SSC;USC;ULC;SSE;denormal;denormaled;DELIVERBit;;BSQ;writeback;Uncacheable;encodings;ITLB;PGO's;RGBA;C++*;?;a(i;y;enddo;cacheability;index.htm.;��ops;��op;prefetched;CPUID;resynchronize;Memory_Flag;ELIHW;TC-built;TC-delivered;uops;declspec(align(n;intrinsics;Uops;NBOGUS;EMON_UOPS_RETIRED;WB;WB-type;microarchitecture;RFOs;IOQ;SMP;prefetcher;frontside;FSB;XAPIC;FSB's;IOQ_allocation;BSQ_allocation;BSQ_active_entries;BSQ_cache_reference;Writeback;IOQ_active_entries;Writebacks;chipset;non-prefetch;prefetches;BSQ_cache_rerference;Prefetches;overcounting;allocation-to-deallocation;deallocation;dqword;RDTSC;CCCR">
+<meta name=x-ignored-words content="MMX;SIMD;Aliasing;modulo;aliasing;Pentium;pipelined;mispredicted;NetBurst;irets;BTB;DTLB;micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;UC;uncacheable;WC;MMNP;MMNM;Mispredicted;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;Clockticks;clocktick;VTune;clockticks;MOCLEAR;prefetching;misprediction;PGO;pseudo-LRU;developer.intel.com;index.htm;Vol;RFO;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;prefetch;Micro-ops;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;LSC;SSC;USC;ULC;SSE;denormal;denormaled;DELIVERBit;;BSQ;writeback;Uncacheable;encodings;ITLB;PGO's;RGBA;C++*;?;a(i;y;enddo;cacheability;index.htm.;μops;μop;prefetched;CPUID;resynchronize;Memory_Flag;ELIHW;TC-built;TC-delivered;uops;declspec(align(n;intrinsics;Uops;NBOGUS;EMON_UOPS_RETIRED;WB;WB-type;microarchitecture;RFOs;IOQ;SMP;prefetcher;frontside;FSB;XAPIC;FSB's;IOQ_allocation;BSQ_allocation;BSQ_active_entries;BSQ_cache_reference;Writeback;IOQ_active_entries;Writebacks;chipset;non-prefetch;prefetches;BSQ_cache_rerference;Prefetches;overcounting;allocation-to-deallocation;deallocation;dqword;RDTSC;CCCR">
 
 
 <!--(Links)=========================================================-->
@@ -85,7 +85,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������¼�\n���ܵ����¼� - ����\n��Ҫ CPI �����¼�\nͳ��ʱ������");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器事件\n效能調整事件 - 基本\n主要 CPI 限制事件\n統計時鐘週期");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,61 +108,61 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">ͳ��ʱ������</h1>
+<h1><img src="p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">統計時鐘週期</h1>
 
-<p>���ڼ�����Ҳ����ʱ���źţ��ǲ�������ִ��ʱ��Ļ�����Ҳ��ÿָ��ʱ�������� (CPI) ��Ч�ʱ��ʵ�һ���֡���Ӣ�ض�(R) ����(R) 4 ��Ӣ�ض�(R) ��ǿ(TM) �������ϣ�ĳЩ������ʱ�ӿ��ܻ����ض��������ֹͣ&ldquo;����&rdquo;��</p>
+<p>週期計數，也就是時鐘訊號，是測量程式執行時間的基礎，也是每指令時鐘週期數 (CPI) 等效率比率的一部分。在英特爾(R) 奔騰(R) 4 與英特爾(R) 至強(TM) 處理器上，某些處理器時鐘可能會在特定的情況下停止&ldquo;跳動&rdquo;：</p>
 
 <ul type="disc" class="whs2">
 	
-	<li class=kadov-p><p>��������ͣ�������� I/O �ڼ䣬�����̶�ȡ�����ṩ����ʱ CPU û���������񣬴�ʱ���������ܻ���ͣ���Ա��ʡ���ܡ�</p></li>
+	<li class=kadov-p><p>處理器暫停，例如在 I/O 期間，給磁碟讀取請求提供服務時 CPU 沒有其它任務，此時處理器可能會暫停，以便節省電能。</p></li>
 	
-	<li class=kadov-p><p>��������������״̬��������Ϊ����ͣһ��ʱ�䣬������Ϊ��Դ����������һ���֡� &nbsp;</p></li>
+	<li class=kadov-p><p>處理器處於休眠狀態，或是因為已暫停一段時間，或是作為電源管理方案的一部分。 &nbsp;</p></li>
 </ul>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs3"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs3"> 備註</h3>
 
-<p class="whs4">�����в�ͬ�Ĳ�Σ�����������У���������ʱ���ǩ������ֹͣ������</p>
+<p class="whs4">休眠有不同的層次，在深層休眠中，處理器的時間標籤計數器停止計數。</p>
 
 <p>&nbsp;</p>
 
-<p>��������ʱʹ�õ�ʱ������ͳ�ƻ��������֣�</p>
+<p>監視效能時使用的時鐘週期統計機制有三種：</p>
 
 <ul type="disc" class="whs2">
 	
-	<li class=kadov-p><p>����ͣʱ���ź� - ָ�����߼���������������ͣ״̬��������</p></li>
+	<li class=kadov-p><p>非暫停時鐘訊號 - 指定的邏輯處理器不處於暫停狀態的週期數</p></li>
 	
-	<li class=kadov-p><p>������ʱ���ź� - �����������������κ�����ģʽ��������</p></li>
+	<li class=kadov-p><p>非休眠時鐘訊號 - 物理處理器不處於任何休眠模式的週期數</p></li>
 	
-	<li class=kadov-p><p>ʱ���ǩ������ - �����������������������״̬��������</p></li>
+	<li class=kadov-p><p>時間標籤計數器 - 物理處理器不處於深層休眠狀態的週期數</p></li>
 </ul>
 
-<p>ǰ���ֻ���ʹ�����ܼ�������ʱ���ǩ������ͨ��ָ�� RDTSC ���ʡ� &nbsp;</p>
+<p>前兩種機制使用效能計數器。時間標籤計數器通過指令 RDTSC 訪問。 &nbsp;</p>
 
-<p>�������൱ I/O ����Ӧ�ó��������ܻ����Щ���ʸ���Ȥ��</p>
+<p>對於有相當 I/O 量的應用程式，您可能會對這些比率感興趣：</p>
 
 <ul type="disc" class="whs2">
 	
-	<li class=kadov-p><p>����ͣ CPI������ͣʱ���ź�/ʧЧָ����� CPU ����ʹ��ʱ���׶ε� CPI��</p></li>
+	<li class=kadov-p><p>非暫停 CPI：非暫停時鐘訊號/失效指令測量 CPU 正在使用時各階段的 CPI。</p></li>
 	
-	<li class=kadov-p><p>������ CPI��������ʱ���ź�/ʧЧָ�����������װ�������κ�����ģʽʱ���׶ε� CPI��</p></li>
+	<li class=kadov-p><p>非休眠 CPI：非休眠時鐘訊號/失效指令測量物理封裝不處於任何休眠模式時各階段的 CPI。</p></li>
 	
-	<li class=kadov-p><p>���� CPI��ʱ���ǩ�������ź�/ʧЧָ����������������ʱ��� CPI�������ȴ� I/O ʱ������ͣ����Щʱ�Ρ�</p></li>
+	<li class=kadov-p><p>名義 CPI：時間標籤計數器訊號/失效指令測量整個程式持續時間的 CPI，包括等待 I/O 時機器暫停的那些時段。</p></li>
 </ul>
 
-<h2>������ʱ���ź������ͣʱ���ź�</h2>
+<h2>非休眠時鐘訊號與非暫停時鐘訊號</h2>
 
-<p>���ÿ��������װ֧��һ���߼����������ڴ��������£�����ͣ�������ʱ���źŲ����ļ����ǵȼ۵ġ���֧��&ldquo;���̼߳���&rdquo;�Ĵ������ϣ�ÿ��������װ��֧������������߼���������&ldquo;���̼߳���&rdquo;��Ϊÿ�������������ṩ�����߼��������������������߼�����������ͬʱִ�������̣߳���һ���߼����������ܻ���ͣ���Ա�ȥִ����һ���߼������������������������߼�������֮�乲��ִ����Դ�� </p>
+<p>如果每個物理封裝支援一個邏輯處理器，在大多數情況下，非暫停與非休眠時鐘訊號產生的計數是等價的。在支援&ldquo;超執行緒技術&rdquo;的處理器上，每個物理封裝可支援兩個或更多邏輯處理器。&ldquo;超執行緒技術&rdquo;僅為每個物理處理器提供兩個邏輯處理器。儘管這兩個邏輯處理器都能同時執行兩個執行緒，但一個邏輯處理器可能會暫停，以便去執行另一個邏輯處理器，而不會在這兩個邏輯處理器之間共享執行資源。 </p>
 
-<p>����ͣʱ���źſɼ����޶�����ͳ��ÿ���߼��������Ĵ�����ʱ����������ֻҪ�߼�������������ͣ״̬�������ܰ���һ�����߼���������ɵ���ͣ״̬��ת�����õ�ʱ�����ڣ��� </p>
+<p>非暫停時鐘訊號可加以限定，以統計每個邏輯處理器的處理器時鐘週期數，只要邏輯處理器不在暫停狀態（它可能包含一部分邏輯處理器完成到暫停狀態的轉換所用的時鐘週期）。 </p>
 
-<p>������ʱ���źŻ��� CCCR �еĹ��˻��ƣ�ֻҪһ���߼�������δ��ͣ�����ͻ����������</p>
+<p>非休眠時鐘訊號基於 CCCR 中的過濾機制，只要一個邏輯處理器未暫停，它就會持續遞增。</p>
 
-<h2>ʱ���ǩ������</h2>
+<h2>時間標籤計數器</h2>
 
-<p>ֻҪδ�����������ţ���ϵͳ�����ϴ��ڻ��ʱ���źţ�ʱ���ǩ��������������������ʹ�� RDTSC ָ���ȡ�����ζ�ȡ��ֵ֮��Ĳ��죨ģ�� 2**64���������ζ�ȡ֮���ʱ����������</p>
+<p>只要未聲言休眠引腳，或系統匯流排上存在活動的時鐘訊號，時間標籤計數器便會遞增。它可以使用 RDTSC 指令讀取。兩次讀取的值之間的差異（模數 2**64）給出兩次讀取之間的時鐘週期數。</p>
 
-<p>ʱ���ǩ�������������ʱ���źż��������������Ӧ������ʵ�ϵ�һ�¡�������������װ�е������߼�����������ͬʱ��ͣ����ʱ�ᵼ��оƬ�еĴ󲿷�������������ܼ���Ӳ�����ϵ硣����������£���Ϊϵͳ�������Դ��ڻ��ʱ���źţ�ʱ���ǩ�����������Գ�������������Ϊ���ܼ���Ӳ����Ȼ�ϵ磬������ʱ���źű㲻�ٵ�����</p>
+<p>時間標籤計數器與非休眠時鐘訊號計數在所有情況下應保持事實上的一致。不過，物理封裝中的兩個邏輯處理器可能同時暫停，此時會導致晶片中的大部分元件（包括效能監視硬體）斷電。在這種情況下，因為系統匯流排上仍存在活動的時鐘訊號，時間標籤計數器可能仍持續遞增；但因為效能監視硬體已然斷電，非休眠時鐘訊號便不再遞增。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

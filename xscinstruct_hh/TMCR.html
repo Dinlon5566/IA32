@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -101,7 +101,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nT - ָ��\nTMCR");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nT - 指令\nTMCR");
 
 	}
 	if (window.writeBtnStyle)
@@ -126,16 +126,16 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>TMCR - MCR �ϵĴ���ָ��ӳ��</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>TMCR - MCR 上的傳輸指令對映</h1>
 
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted>TMCR[Condition] dest, op1</p>
 
-���У�
+其中：
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -156,7 +156,7 @@ else
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-<p class=TableCell>��ѡ��16 ������֮һ������ģ�<a href="Conditional_Execution.html">����ִ��</a>�� </p>
+<p class=TableCell>可選。16 個條件之一。請參閱：<a href="Conditional_Execution.html">條件執行</a>。 </p>
 </div></td></tr>
 
 <tr>
@@ -166,7 +166,7 @@ else
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-<p class=TableCell>Ŀ�꣬&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�������ƼĴ��� </p>
+<p class=TableCell>目標，&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術控制暫存器 </p>
 </div></td></tr>
 
 <tr>
@@ -176,21 +176,21 @@ else
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-<p class=TableCell>Դ��������&ldquo;Ӣ�ض� XScale(R)&rdquo;�������ݼĴ��� </p>
+<p class=TableCell>源運算元，&ldquo;英特爾 XScale(R)&rdquo;核心數據暫存器 </p>
 </div></td></tr>
 </table>
 
 &nbsp; 
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-TMCR ��ӳ�䵽&ldquo;Ӣ�ض� XScale(R)&ldquo;���� MCR ָ���һ��αָ�����Ϊ����������ṩ�ģ�TMCR �� op1&ldquo;Ӣ�ض� XScale(R)&rdquo;���ļĴ��������ݴ��䵽 32 λ dest&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�������ƼĴ�����<br><br> ָ����ָ�����κ�������������������״̬��ƥ�䣬����ִ�и�ָ� 
+TMCR 是對映到&ldquo;英特爾 XScale(R)&ldquo;核心 MCR 指令的一個偽指令，它是為方便起見而提供的；TMCR 將 op1&ldquo;英特爾 XScale(R)&rdquo;核心暫存器的內容傳輸到 32 位 dest&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術控制暫存器。<br><br> 指令中指定的任何條件必須與條件程式碼狀態相匹配，否則不執行該指令。 
 
-<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs6"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs6"> 備註</h3>
 
-����&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�����Ŀ��ƼĴ������������ݼĴ�������ʹ�� TEXTRM��TINSR��TMRRC �� TMCRR�� 
+用於&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術的控制暫存器；對於數據暫存器，則使用 TEXTRM、TINSR、TMRRC 及 TMCRR。 
 
-<h2>���� - TMCR </h2>
+<h2>編碼 - TMCR </h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -389,15 +389,15 @@ Cond
 </tr>
 </table>
 
-<h2>Ӱ��� SIMD ��־</h2>
+<h2>影響的 SIMD 標誌</h2>
 
-��Ӱ�� SIMD PSR ��־ (wCASF) ��&ldquo;����&rdquo;��־ (wCSSF)���������ָ��Ϊ&ldquo;Ŀ��&rdquo;�Ĵ��� (wCx)���� wCASF �� wCSSF �����¡� 
+不影響 SIMD PSR 標誌 (wCASF) 或&ldquo;飽和&rdquo;標誌 (wCSSF)，但如果它指定為&ldquo;目標&rdquo;暫存器 (wCx)，則 wCASF 或 wCSSF 將更新。 
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted><span style="font-style: italic;"><I>dest</I></span>[31:0]=<span style="font-style: italic;"><I>op1</I></span> </p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
 <p><a HREF="TMCRR.html">TMCRR</a></p>
 

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Logical_Shift_Left_by_Register_(AM_1).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:47:08 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>���Ĵ����߼����� (AM 1)</title>
+<title>按暫存器邏輯左移 (AM 1)</title>
 
 <!--(Meta)==========================================================-->
 
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nѰַģʽ\n���ݴ���������\n���Ĵ����߼����� (AM 1)");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n定址模式\n數據處理運算元\n按暫存器邏輯左移 (AM 1)");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,14 +105,14 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������"><a NAME=73555></a>���Ĵ����߼����� (AM 1)</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題"><a NAME=73555></a>按暫存器邏輯左移 (AM 1)</h1>
 
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted><span class=Code>op2, LSL op3</span> </p>
 
-<p CLASS=Body>���У� </p>
+<p CLASS=Body>其中： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -124,7 +124,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ������Ҫ��λ��ֵ�ļĴ�����</td></tr>
+<p CLASS=CellBodyLeft>指定包含要移位的值的暫存器。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -133,7 +133,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ʾ�߼����ơ�</td></tr>
+<p CLASS=CellBodyLeft>表示邏輯左移。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -142,18 +142,18 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ��������λֵ�ļĴ�����</td></tr>
+<p CLASS=CellBodyLeft>指定包含移位值的暫存器。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-���ݴ���������&ldquo;���Ĵ����߼�����&rdquo;ִ�����²�����α����˵������
+數據處理運算元&ldquo;按暫存器邏輯左移&rdquo;執行以下操作（偽程式碼說明）：
 
 <p CLASS=Preformatted-Code>if op3[7:0] == 0 then<br> &#xA0;&#xA0;addr_mode = op2<br> &#xA0;&#xA0;shifter_carry_out = C Flag<br> else if op3[7:0] &lt; 32 then<br> &#xA0;&#xA0;addr_mode = op2 Logical_Shift_Left op3[7:0]<br> &#xA0;&#xA0;shifter_carry_out = op2[32 - op3[7:0]]<br> else if op3[7:0] == 32 then<br> &#xA0;&#xA0;addr_mode = 0<br> &#xA0;&#xA0;shifter_carry_out = op2[0]<br> else /*op3[7:0] &gt;32 */<br> &#xA0;&#xA0;addr_mode = 0<br> &#xA0;&#xA0;shifter_carry_out = 0</p>
 
-<p CLASS=Body>�����ݴ����������ṩ�Ĵ������Զ��Ŀɱ���ݺ��ֵ��</p>
+<p CLASS=Body>此數據處理運算元提供暫存器乘以二的可變次冪后的值。</p>
 
-<p CLASS=Body>��ָ������������Ĵ��� <em CLASS=SourceItalic>op2</em> ��ֵ����ֵ���ռĴ��� <em CLASS=SourceItalic>op3</em> �����Ч�ֽ��е�ֵ���й��߼����ơ����ڳ��Ŀ�λ�в����㡣����Ƴ���λ����λ���Ľ�λ�������λ������ 32�����λ�����㡣�����λ������ 0�����λ�� C ��־��</p>
+<p CLASS=Body>此指令運算元代表暫存器 <em CLASS=SourceItalic>op2</em> 的值，此值按照暫存器 <em CLASS=SourceItalic>op3</em> 最低有效位元組中的值進行過邏輯左移。在騰出的空位中插入零。最後移出的位是移位器的進位。如果移位量大於 32，則此位等於零。如果移位量等於 0，則進位是 C 標誌。</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -174,7 +174,7 @@ else
 <col class="whs2">
 <col class="whs2">
 
-<h2>���� </h2>
+<h2>編碼 </h2>
 
 <tr class="whs3">
 <td ROWSPAN=1
@@ -411,21 +411,21 @@ else
 </tr>
 </table>
 
-<h3 class=NoteTipHead><img src="Caution.gif">&nbsp;ע��</h3>
+<h3 class=NoteTipHead><img src="Caution.gif">&nbsp;注意</h3>
 </div>
 
 <div>
-<p>��� <em CLASS=Source>R15</em> ָ��Ϊ�Ĵ��� <em CLASS=SourceItalic>dest</em>��<em CLASS=SourceItalic>op3</em>��<em CLASS=SourceItalic>op2</em> �� <em CLASS=SourceItalic>op1</em>�����������޷�Ԥ֪��</p>
+<p>如果 <em CLASS=Source>R15</em> 指定為暫存器 <em CLASS=SourceItalic>dest</em>、<em CLASS=SourceItalic>op3</em>、<em CLASS=SourceItalic>op2</em> 或 <em CLASS=SourceItalic>op1</em>，則結果將會無法預知。</p>
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p CLASS=Preformatted><span class=Code>ADC &#xA0;&#xA0;&#xA0;R3, R14, R9, LSL R2</span></p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
-<a href="Address_Data_Processing_Operands_Overview_1.html">�����Ѱַģʽ 1�����ݴ���������</a><a href="Inst_Overview_of_Instructions.html" CLASS="XRef" style="font-weight: normal;"><br> ����Ļ����ָ��</a> 
+<a href="Address_Data_Processing_Operands_Overview_1.html">請參閱定址模式 1：數據處理運算元</a><a href="Inst_Overview_of_Instructions.html" CLASS="XRef" style="font-weight: normal;"><br> 請參閱彙編器指令</a> 
 
 <p>&nbsp;</p>
 </div>

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400309.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:48 GMT -->
 <head>
 
-<title>mux 操作</title>
+<title>mux 鎿嶄綔</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:55:17 PM">
 <meta name=topic-status content=Complete>
 <meta name=topic-priority content=2>
@@ -97,7 +97,7 @@ else
 		document.location.reload();
 //-->
 </script>
-mux 操作 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a> 
+mux 鎿嶄綔 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">瀛楀瀷鎱ｄ緥</a> 
 
 <br>if (PR[<i>qp</i>]) { <br> <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400444.htm">check_target_register</a>; <br> <br> if (one_byte_form) { <br> x[0] = <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400568.htm">GR</a>[<i>r2</i>]{7:0}; <br> x[1] = GR[<i>r2</i>]{15:8}; <br> x[2] = GR[<i>r2</i>]{23:16}; <br> x[3] = GR[<i>r2</i>]{31:24}; <br> x[4] = GR[<i>r2</i>]{39:32}; <br> x[5] = GR[<i>r2</i>]{47:40}; <br> x[6] = GR[<i>r2</i>]{55:48}; <br> x[7] = GR[<i>r2</i>]{63:56}; <br> <br> switch (<i>mbtype</i>) { <br> case &lsquo;@rev': <br> GR[<i>r1</i>] = <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400448.htm">concatenate8</a>( x[0], x[1], x[2], x[3], <br> x[4], x[5], x[6], x[7]); <br> break; <br> <br> case &lsquo;@mix': <br> GR[<i>r1</i>] = concatenate8( x[7], x[3], x[5], x[1], <br> x[6], x[2], x[4], x[0]); <br> break; <br> <br> case &lsquo;@shuf': <br> GR[<i>r1</i>] = concatenate8( x[7], x[3], x[6], x[2], <br> x[5], x[1], x[4], x[0]); <br> break; <br> <br> case &lsquo;@alt': <br> GR[<i>r1</i>] = concatenate8( x[7], x[5], x[3], x[1], <br> x[6], x[4], x[2], x[0]); <br> break; <br> <br> case &lsquo;@brcst': <br> GR[<i>r1</i>] = concatenate8( x[0], x[0], x[0], x[0], <br> x[0], x[0], x[0], x[0]); <br> break; <br> } <br> } else { // two_byte_form <br> x[0] = GR[<i>r2</i>]{15:0}; <br> x[1] = GR[<i>r2</i>]{31:16}; <br> x[2] = GR[<i>r2</i>]{47:32}; <br> x[3] = GR[<i>r2</i>]{63:48}; <br> <br> res[0] = x[mhtype8{1:0}]; <br> res[1] = x[mhtype8{3:2}]; <br> res[2] = x[mhtype8{5:4}]; <br> res[3] = x[mhtype8{7:6}]; <br> <br> GR[<i>r1</i>] = <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400447.htm">concatenate4</a>(res[3], res[2], res[1], res[0]); <br> } <br> GR[<i>r1</i>].nat = GR[<i>r2</i>].nat; <br> } 
 

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400310.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>nop - �޲���ָ��</title>
+<title>nop - 無操作指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -94,7 +94,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nN - ָ��\nnop - �޲���ָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nN - 指令\nnop - 無操作指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -117,16 +117,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">�޲���ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">無操作指令</h1>
 
 <p><span style="font-weight: bold;"><B>nop</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400311.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400311.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字型慣例</a>
  </p>
 
-<p>ָ������ I��B��M��F��X</p>
+<p>指令型別 I、B、M、F、X</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) nop <span style="font-style: italic;"><I>imm21</I></span> pseudo-op</p>
 
@@ -145,18 +145,18 @@ else
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>說明</B></span></p>
 
-<p>��ִ���κβ�����</p>
+<p>不執行任何操作。</p>
 
-<p>������ <span style="font-style: italic;"><I>imm21</I></span> �� <span 
- style="font-style: italic;"><I>imm62</I></span> �����������ڳ��������������ǡ�Ӳ�����������</p>
+<p>立即數 <span style="font-style: italic;"><I>imm21</I></span> 或 <span 
+ style="font-style: italic;"><I>imm62</I></span> 可以由軟體在程式程式碼中用作標記。硬體會忽略它。</p>
 
-<p>���� x_unit_form��ָ������ L ָ��۰��� <span style="font-style: italic;"><I>imm62</I></span> �ĸ� 41 λ��</p>
+<p>對於 x_unit_form，指令束的 L 指令槽包含 <span style="font-style: italic;"><I>imm62</I></span> 的高 41 位。</p>
 
-<p>nop.i ָ������� MLI ģ�����б��룬��ʱ����Ը�ָ������ L ָ��ۡ�</p>
+<p>nop.i 指令可以在 MLI 模板束中編碼，此時會忽略該指令束的 L 指令槽。</p>
 
-<p class="whs3">��ָ����������ʽ��ÿ�ֶ�ֻ�����ض����͵�ִ�е�Ԫ��ִ�С����Ҫִ�еĵ�Ԫ���Ͳ���Ҫ�������ʹ��α������ </p>
+<p class="whs3">此指令有五種形式，每種都只能在特定型別的執行單元上執行。如果要執行的單元型別不重要，則可以使用偽操作。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

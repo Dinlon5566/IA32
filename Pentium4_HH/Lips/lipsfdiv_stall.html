@@ -8,12 +8,12 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/lipsfdiv_stall.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:50 GMT -->
 <head>
 
-<title>FDIV/FLDCW ָ��</title>
+<title>FDIV/FLDCW 指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
-<meta NAME=MS-HAID CONTENT="����ͷ�">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
+<meta NAME=MS-HAID CONTENT="浮點懲罰">
 <meta name=date content="03 7, 2002 5:22:09 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -120,28 +120,28 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> FDIV/FLDCW ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> FDIV/FLDCW 指令</h1>
 
-<p><span style="font-weight: bold;"><B>fdiv/fldcw_Stall</B></span> ��ʾһ�ֳͷ�״̬��</p>
+<p><span style="font-weight: bold;"><B>fdiv/fldcw_Stall</B></span> 表示一種懲罰狀態。</p>
 
-<p>Ϊ�䷢�� <span style="font-weight: bold;"><B>fdiv/fldcw_Stall</B></span> �ĸ���ָ����ǰһ�� FDIV �� FLDCW ָ�����ִ����<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#latency" style="x-condition: WebHelp;">�ӳ�</a>ʱ������֮ǰ�޷���ʼִ�С�FDIV �� FLDCW ��ִ��ʱ���޷�ִ�������κθ���ָ�</p>
+<p>為其發出 <span style="font-weight: bold;"><B>fdiv/fldcw_Stall</B></span> 的浮點指令在前一個 FDIV 或 FLDCW 指令完成執行其<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#latency" style="x-condition: WebHelp;">延遲</a>時鐘週期之前無法開始執行。FDIV 或 FLDCW 在執行時，無法執行其它任何浮點指令。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>����</B></span></h3>
+	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>建議</B></span></h3>
 
-<p class="whs3">��������ָ��ԭ��������ֳͷ�״̬��</p>
+<p class="whs3">按照以下指導原則避免這種懲罰狀態：</p>
 
 <ol>
 	
 	<ul type="disc" class="whs4">
 		
-		<li class=kadov-p><p>��������ṹ��ʹ���� FLDCW �� FDIV ָ��ִ�����ӳ�ʱ�������ڼ�ִ������ָ�</p></li>
+		<li class=kadov-p><p>調整程式碼結構，使得在 FLDCW 或 FDIV 指令執行其延遲時鐘週期期間執行整數指令。</p></li>
 		
-		<li class=kadov-p><p>����������ָ��������� FLDCW �� FDIV ָ��ִ�����֮��ִ�С�</p></li>
+		<li class=kadov-p><p>將其它浮點指令僅安排在 FLDCW 或 FDIV 指令執行完畢之後執行。</p></li>
 	</ul>
 </ol>
 
-<p>ʾ����</p>
+<p>示例：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells>
@@ -149,16 +149,16 @@ else
 <tr>
 <td valign="top" class="whs5">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ԭʼ����</td>
+	style="margin-bottom: 0;">原始程式碼</td>
 <td valign="top" class="whs5">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td>
+	style="margin-bottom: 0;">週期</td>
 <td valign="top" class="whs5">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">�Ż�����</td>
+	style="margin-bottom: 0;">優化程式碼</td>
 <td valign="top" class="whs5">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td></tr>
+	style="margin-bottom: 0;">週期</td></tr>
 
 <tr>
 <td valign="top" class="whs5">
@@ -200,22 +200,22 @@ else
 
 <tr>
 <td COLSPAN="2" valign="top" class="whs5">
-<p class="whs7">FDIV ��ִ��ʱ���޷�ִ�������κ�<i><span style="font-style: normal;">����</span></i><span   style="font-style: normal;"></span> ָ���ˣ�&ldquo;ָ�� 2&rdquo;��ͣ 38 �����ڣ�ֱ�� FDIV ���ִ�С�<b><br>ִ��ʱ���ܼƣ�42 ������</td>
+<p class="whs7">FDIV 在執行時，無法執行其它任何<i><span style="font-style: normal;">浮點</span></i><span   style="font-style: normal;"></span> 指令。因此，&ldquo;指令 2&rdquo;暫停 38 個週期，直至 FDIV 完成執行。<b><br>執行時間總計：42 個週期</td>
 <td COLSPAN="2" valign="top" class="whs5">
-<p class="whs7">����ṹ��������������������ָ������ͬ FDIV ����ִ�С�<b><br>ִ��ʱ���ܼƣ�39 ������</b></td>
+<p class="whs7">程式碼結構已重新整理，這樣整數指令便可以同 FDIV 並行執行。<b><br>執行時間總計：39 個週期</b></td>
 </tr>
 </table>
 
 <p class="whs7">
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','FMUL ��ͣ','lipsfmul_stall.htm','MMX(TM) ��������ת��','lipspro_mmx_trans.htm','����ָ���� FXCH ֮��','lipsint_fxch.htm','������ͣ�Եȴ� FST ������','lipsfst_dep.htm','�������','lipsfp_dep.htm');return false;" title="����ͷ�"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_浮点惩罚.gif" border=0 height=20 width=58 alt="����ͷ�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','FMUL 暫停','lipsfmul_stall.htm','MMX(TM) 技術程式碼轉換','lipspro_mmx_trans.htm','整數指令在 FXCH 之後','lipsint_fxch.htm','浮點暫停以等待 FST 運算元','lipsfst_dep.htm','浮點相關','lipsfp_dep.htm');return false;" title="浮點懲罰"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_嫻偣鎯╃綒.gif" border=0 height=20 width=58 alt="浮點懲罰"></a>
 
 
  </p>
 
 <p class="whs7">
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','�� MMX(TM) �����ı���(R) ������','pentium(r)_with_mmx(tm_technology_processor.htm','����(R) ������','pentium(r)_processor.htm');return false;" title="Ӱ��Ĵ�����"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_影响的处理器.gif" border=0 height=20 width=82 alt="Ӱ��Ĵ�����"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','含 MMX(TM) 技術的奔騰(R) 處理器','pentium(r)_with_mmx(tm_technology_processor.htm','奔騰(R) 處理器','pentium(r)_processor.htm');return false;" title="影響的處理器"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_褰卞搷鐨勫鐞嗗櫒.gif" border=0 height=20 width=82 alt="影響的處理器"></a>
 
 
  </p>

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/ADD(7)_(Thumb).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:47:09 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>ADD(7) (Thumb) - �ӷ�</title>
+<title>ADD(7) (Thumb) - 加法</title>
 
 <!--(Meta)==========================================================-->
 
@@ -83,7 +83,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n16 λָ��\nA - ָ��\nADD(7) (Thumb)");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n16 位指令\nA - 指令\nADD(7) (Thumb)");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,17 +106,17 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">ADD(7) (Thumb*) - �ӷ�</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題">ADD(7) (Thumb*) - 加法</h1>
 
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <div>
 <p class=Preformatted>ADD SP, (#value * 4)</p>
 </div>
 
 <div>
-<p>���У�</p>
+<p>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,29 +126,29 @@ else
 <p CLASS=CellBodyLeft><em CLASS=Source
 							style="font-style: italic;">SP</em> </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>������һ���������ļĴ�����Ҳ��Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>包含第一個運算元的暫存器，也是目標暫存器</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
 <p CLASS=CellBodyLeft><em CLASS=SourceItalic
 							style="font-style: italic;">value</em> </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>7 λ�������������ڶ�����������[0..508] ��Χ�� 4 ���κα�����</td></tr>
+<p CLASS=CellBodyLeft>7 位立即數，代表第二個運算元。[0..508] 範圍內 4 的任何倍數。</td></tr>
 </table>
 </div>
 
 <div>
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>ADD ָ��ı� <em CLASS=SourceItalic>value</em> �� SP ��ӣ�����洢�� SP�� </p>
+<p>ADD 指令將四倍 <em CLASS=SourceItalic>value</em> 與 SP 相加，結果儲存到 SP。 </p>
 
-<h2>Ѱַģʽ</h2>
+<h2>定址模式</h2>
 
-<p>�޲������� </p>
+<p>無運算元。 </p>
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -196,7 +196,7 @@ else
 </div>
 
 <div>
-<h2>����</h2>
+<h2>編碼</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs3">
@@ -255,20 +255,20 @@ else
 
 <div>
 <div>
-<h2>ʾ�� </h2>
+<h2>示例 </h2>
 </div>
 
 <p class=Preformatted><span>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funadd <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0 <br> 4 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example,CODE,READONLY <br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;CODE16 <br> 7 <br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1 <br> 9 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Adjust the SP address by 32<br> 1 &#xA0;&#xA0;&#xA0;000000000 &#xA0;&#xA0;&#xA0;F7C5 &#xA0;&#xA0;&#xA0;ADD &#xA0;&#xA0;SP, #Ox20</span> </p>
 
-<h2>������Ϣ </h2>
+<h2>更多資訊 </h2>
 
-<a href="ADC_(Thumb).html" CLASS="XRef">����� ADC ָ��</a><a href="ADD(1)_(Thumb).html" CLASS="XRef"><br> ����� ADD(1) ָ��</a><a href="ADD(2)_(Thumb).html" CLASS="XRef"><br> ����� ADD(2) ָ��</a><a href="ADD(3)_(Thumb).html"><br> ����� ADD(3) ָ��</a><a href="ADD(4)_(Thumb).html" CLASS="XRef"><br> ����� ADD(4) ָ��</a><a href="ADD(5)_(Thumb).html"><br> ����� ADD(5) ָ��</a><a href="ADD(6)_(Thumb).html" CLASS="XRef"><br> ����� ADD(6) ָ��</a>
+<a href="ADC_(Thumb).html" CLASS="XRef">請參閱 ADC 指令</a><a href="ADD(1)_(Thumb).html" CLASS="XRef"><br> 請參閱 ADD(1) 指令</a><a href="ADD(2)_(Thumb).html" CLASS="XRef"><br> 請參閱 ADD(2) 指令</a><a href="ADD(3)_(Thumb).html"><br> 請參閱 ADD(3) 指令</a><a href="ADD(4)_(Thumb).html" CLASS="XRef"><br> 請參閱 ADD(4) 指令</a><a href="ADD(5)_(Thumb).html"><br> 請參閱 ADD(5) 指令</a><a href="ADD(6)_(Thumb).html" CLASS="XRef"><br> 請參閱 ADD(6) 指令</a>
 
-<br><a href="SUB(1)_(Thumb).html">����� SUB(1) ָ�� </a>
+<br><a href="SUB(1)_(Thumb).html">請參閱 SUB(1) 指令 </a>
 
-<br><a href="SUB(2)_(Thumb).html" CLASS="XRef">����� SUB(2) ָ��</a><a href="SUB(3)_(Thumb).html" CLASS="XRef"><br> ����� SUB(3) ָ��</a> 
+<br><a href="SUB(2)_(Thumb).html" CLASS="XRef">請參閱 SUB(2) 指令</a><a href="SUB(3)_(Thumb).html" CLASS="XRef"><br> 請參閱 SUB(3) 指令</a> 
 
-<br><a href="SUB(4)_(Thumb).html">����� SUB(4) ָ��</a> 
+<br><a href="SUB(4)_(Thumb).html">請參閱 SUB(4) 指令</a> 
 </div>
 
 <script type="text/javascript" language="javascript1.2">

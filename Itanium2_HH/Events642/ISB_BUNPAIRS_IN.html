@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\n�ڴ��¼�\nһ��ָ�����Ԥȡ�¼�\nISB_BUNPAIRS_IN");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 安騰(R) 2 處理器\n英特爾(R) 安騰(R) 2 處理器事件\n記憶體事件\n一級指令快取與預取事件\nISB_BUNPAIRS_IN");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,14 +108,14 @@ else
 
 &nbsp; 
 
-<br><b   style="font-weight: bold;">���⣺</b>�Ӷ�������д�� FE �ĳɶ�ָ����<b style="font-weight: bold;"><br> ���</b>һ��ָ�����Ԥȡ�¼�<b style="font-weight: bold;"><br> IAR/DAR/OPC��</b>Y/N/N<b style="font-weight: bold;"><br> �¼����룺</b>0x46<b style="font-weight: bold;"><br> ���ÿ����������</b>1 
+<br><b   style="font-weight: bold;">標題：</b>從二級快取寫入 FE 的成對指令束<b style="font-weight: bold;"><br> 類別：</b>一級指令快取與預取事件<b style="font-weight: bold;"><br> IAR/DAR/OPC：</b>Y/N/N<b style="font-weight: bold;"><br> 事件程式碼：</b>0x46<b style="font-weight: bold;"><br> 最大每週期增量：</b>1 
 
-<p><b style="font-weight: bold;">���壺</b>�ṩ�Ӷ������棨�����ϣ�д��ǰ�˵ĳɶ�ָ������32 �ֽڣ����������й���Ϣ��</p>
+<p><b style="font-weight: bold;">定義：</b>提供從二級快取（及以上）寫入前端的成對指令束（32 位元組）的數量的有關資訊。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> 備註</h3>
 
-<p class="whs2">��������߱�ǳ������ȡ������¼�ʹ�� IBRP0 �޶�����������߱�ǳ�Ԥȡƥ�䣬����¼�ʹ�� IBRP1 �޶��� </p>
+<p class="whs2">如果快取線標記成隨需獲取，則此事件使用 IBRP0 限定；如果快取線標記成預取匹配，則此事件使用 IBRP1 限定。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

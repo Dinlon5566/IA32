@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/lipsmmx_mul.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:52 GMT -->
 <head>
 
-<title>MMX(TM) �˷�ָ��</title>
+<title>MMX(TM) 乘法指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta NAME=MS-HAID CONTENT="Pairing Issues">
 <meta NAME=MS-HAID CONTENT="MMX(TM) Technology Penalties">
 <meta name=date content="04 8, 2003 2:35:25 PM">
@@ -120,19 +120,19 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/TA_logo.gif" align="right" width="36px" height="36px" border="0" class="img_whs1"> MMX(TM) �˷�ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/TA_logo.gif" align="right" width="36px" height="36px" border="0" class="img_whs1"> MMX(TM) 乘法指令</h1>
 
-<span style="font-weight: bold;"><B>MM_Mul</B></span> ��ʾһ��������Ƴ�ͻ�� 
+<span style="font-weight: bold;"><B>MM_Mul</B></span> 表示一種配對限制衝突。 
 
-<p>Ϊ�䷢�� <span style="font-weight: bold;"><B>MM_Mul</B></span> ��ָ��ʹ�� MMX(TM) �����˷�����ǰһ��ָ��Ҳʹ�ó˷�������ˣ�ָ���޷���ԡ�</p>
+<p>為其發出 <span style="font-weight: bold;"><B>MM_Mul</B></span> 的指令使用 MMX(TM) 技術乘法器。前一條指令也使用乘法器。因此，指令無法配對。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>����</B></span></h3>
+	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>建議</B></span></h3>
 
-<p class="whs3">��������ṹ��ʹ��ʹ�� MMX �����˷����ҷ��� U �ܵ��� MMX ָ���Ҳʹ�� MMX �����˷����� MMX ָ��֮ǰ�� 
+<p class="whs3">調整程式碼結構，使得使用 MMX 技術乘法器且發到 U 管道的 MMX 指令不在也使用 MMX 技術乘法器的 MMX 指令之前。 
  </p>
 
-<p>ʾ����</p>
+<p>示例：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells>
@@ -140,16 +140,16 @@ else
 <tr>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;"><b style="font-weight: bold;">ԭʼ����</b></td>
+	style="margin-bottom: 0;"><b style="font-weight: bold;">原始程式碼</b></td>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;"><b style="font-weight: bold;">����</b></td>
+	style="margin-bottom: 0;"><b style="font-weight: bold;">週期</b></td>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;"><b style="font-weight: bold;">�Ż�����</b></td>
+	style="margin-bottom: 0;"><b style="font-weight: bold;">優化程式碼</b></td>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;"><b style="font-weight: bold;">����</b></td></tr>
+	style="margin-bottom: 0;"><b style="font-weight: bold;">週期</b></td></tr>
 
 <tr>
 <td valign="top" class="whs4">
@@ -187,15 +187,15 @@ else
 
 <tr>
 <td COLSPAN="2" valign="top" class="whs4">
-<p class="whs5">PMADDWD �� PMULLW ָ���޷���ԣ����Ƕ�ʹ�� MMX(TM) �����˷�����<b><br>ִ��ʱ���ܼƣ�3 ������</b></td>
+<p class="whs5">PMADDWD 與 PMULLW 指令無法配對；它們都使用 MMX(TM) 技術乘法器。<b><br>執行時間總計：3 個週期</b></td>
 <td COLSPAN="2" valign="top" class="whs4">
-<p class="whs5">����˳�򾭹����µ������������ڵ�����ָ��㲻ͬʱʹ�� MMX �����˷�����<b><br>ִ��ʱ���ܼƣ�2 ������</b></td>
+<p class="whs5">程式碼順序經過重新調整，這樣相鄰的兩條指令便不同時使用 MMX 技術乘法器。<b><br>執行時間總計：2 個週期</b></td>
 </tr>
 </table>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','�� MMX(TM) �����ı���(R) ������','pentium(r)_with_mmx(tm_technology_processor.htm');return false;" title="Ӱ��Ĵ�����"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_影响的处理器.gif" border=0 height=20 width=82 alt="Ӱ��Ĵ�����"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','含 MMX(TM) 技術的奔騰(R) 處理器','pentium(r)_with_mmx(tm_technology_processor.htm');return false;" title="影響的處理器"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_褰卞搷鐨勫鐞嗗櫒.gif" border=0 height=20 width=82 alt="影響的處理器"></a>
 
 
  </p>

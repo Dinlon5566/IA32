@@ -8,18 +8,18 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/about_bus_events_and_memory_events.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:39 GMT -->
 <head>
 
-<title>���������¼����ڴ��¼�</title>
+<title>關於匯流排事件與記憶體事件</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="02 6, 2003 4:39:56 PM">
 <meta NAME=MS-HAID CONTENT=Events4>
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
 <meta name=topic-comment content>
-<meta name=topic-id content="About Bus Events and �ڴ��¼�">
+<meta name=topic-id content="About Bus Events and 記憶體事件">
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
 <meta name=generator-major-version content=0.1>
 <meta name=generator-minor-version content=1>
@@ -28,7 +28,7 @@
 <meta name=page-count content=1>
 <meta name=layout-height content=2710>
 <meta name=layout-width content=668>
-<meta name=x-ignored-words content="MMX;SIMD;Aliasing;modulo;aliasing;Pentium;pipelined;mispredicted;NetBurst;irets;BTB;DTLB;micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;UC;uncacheable;WC;MMNP;MMNM;Mispredicted;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;Clockticks;clocktick;VTune;clockticks;MOCLEAR;prefetching;misprediction;PGO;pseudo-LRU;developer.intel.com;index.htm;Vol;RFO;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;prefetch;Micro-ops;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;LSC;SSC;USC;ULC;SSE;denormal;denormaled;DELIVERBit;;BSQ;writeback;Uncacheable;encodings;ITLB;PGO's;RGBA;C++*;?;a(i;y;enddo;cacheability;index.htm.;��ops;��op;prefetched;CPUID;resynchronize;Memory_Flag;ELIHW;TC-built;TC-delivered;uops;declspec(align(n;intrinsics;Uops;NBOGUS;EMON_UOPS_RETIRED;WB;WB-type;microarchitecture;RFOs;IOQ;SMP;prefetcher;frontside;FSB;XAPIC;FSB's;IOQ_allocation;BSQ_allocation;BSQ_active_entries;BSQ_cache_reference;Writeback;IOQ_active_entries;Writebacks;chipset;non-prefetch;prefetches;BSQ_cache_rerference;Prefetches;overcounting;allocation-to-deallocation;deallocation;dqword;RDTSC;CCCR;HW;Microcode;microcode;undercount;WC-type;DWord">
+<meta name=x-ignored-words content="MMX;SIMD;Aliasing;modulo;aliasing;Pentium;pipelined;mispredicted;NetBurst;irets;BTB;DTLB;micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;UC;uncacheable;WC;MMNP;MMNM;Mispredicted;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;Clockticks;clocktick;VTune;clockticks;MOCLEAR;prefetching;misprediction;PGO;pseudo-LRU;developer.intel.com;index.htm;Vol;RFO;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;prefetch;Micro-ops;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;LSC;SSC;USC;ULC;SSE;denormal;denormaled;DELIVERBit;;BSQ;writeback;Uncacheable;encodings;ITLB;PGO's;RGBA;C++*;?;a(i;y;enddo;cacheability;index.htm.;μops;μop;prefetched;CPUID;resynchronize;Memory_Flag;ELIHW;TC-built;TC-delivered;uops;declspec(align(n;intrinsics;Uops;NBOGUS;EMON_UOPS_RETIRED;WB;WB-type;microarchitecture;RFOs;IOQ;SMP;prefetcher;frontside;FSB;XAPIC;FSB's;IOQ_allocation;BSQ_allocation;BSQ_active_entries;BSQ_cache_reference;Writeback;IOQ_active_entries;Writebacks;chipset;non-prefetch;prefetches;BSQ_cache_rerference;Prefetches;overcounting;allocation-to-deallocation;deallocation;dqword;RDTSC;CCCR;HW;Microcode;microcode;undercount;WC-type;DWord">
 
 
 <!--(Links)=========================================================-->
@@ -86,7 +86,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������¼�\n���ܵ����¼� - �߼��¼�\n���������¼����ڴ��¼�");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器事件\n效能調整事件 - 高級事件\n關於匯流排事件與記憶體事件");
 
 	}
 	if (window.writeBtnStyle)
@@ -109,139 +109,139 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1 class=Overview><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" width="48px" height="60px" align="right" border="0" class="img_whs1">���������¼����ڴ��¼�</h1>
+<h1 class=Overview><img src="p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" width="48px" height="60px" align="right" border="0" class="img_whs1">關於匯流排事件與記憶體事件</h1>
 
-<p>��������ܶ���(R) 4 ��Ӣ�ض�(R) ��ǿ(TM) �������¼��Ĺ������������ڴ����ڴ���������߻�������������ܵķ�������Щ�¼��ǳ����á� </p>
+<p>本主題介紹多款奔騰(R) 4 與英特爾(R) 至強(TM) 處理器事件的工作機理，對於處理記憶體訪問與匯流排活動管理的軟體效能的分析，這些事件非常有用。 </p>
 
-<p>Ϊ��ȷ�����������¼���ص��¼����������������С��������Ŀ��ʱ�ڲ�ͬ�Ķ����з��䡢�Լ�������Ԥȡ���Ӱ������������ݻ�Ƚ��а�����</p>
+<p>為正確解釋與匯流排事件相關的事件計數，理解事務大小、各個專案何時在不同的佇列中分配、以及分割槽和預取如何影響計數等項內容會比較有幫助。</p>
 
-<p>����Ľṹͼ��Ҫ��ʾ���ӵ�ǰ��������ϵͳ�� IOQ ��Ԫ�Լ�&ldquo;�������ж���&rdquo;(BSQ) ��Ԫ��ͬ IOQ �ӿڣ��ĸ�����ϵͳ��ͼʾ����һ��˫�� SMP ���á� </p>
+<p>下面的結構圖簡要顯示連線到前端匯流排子系統中 IOQ 單元以及&ldquo;匯流排序列佇列&rdquo;(BSQ) 單元（同 IOQ 介面）的各個子系統。圖示中是一個雙向 SMP 配置。 </p>
 
-<p><img src="bus_events.gif" alt="���ӵ�ǰ��������ϵͳ�� IOQ ��Ԫ�� BSQ ��Ԫ����ϵͳ" x-maintain-ratio="TRUE" width="476px" height="330px" border="0" class="img_whs2"></p>
+<p><img src="bus_events.gif" alt="連線到前端匯流排子系統中 IOQ 單元與 BSQ 單元的子系統" x-maintain-ratio="TRUE" width="476px" height="330px" border="0" class="img_whs2"></p>
 
-<p>һ������δ������д�أ�Ҳ�����������ã����¶Զ�����������á�BSQ ��Ҫ����Ĵ��������Ļ�Ԥȡ�������ŵ�ǰ������ (FSB) �ϣ��򱾵� XAPIC �С��������������Ƭ�ڼ��ɵģ��� BSQ Ҳ��Ŷ��������д�������ջص��������ݣ���FSB �� IOQ ����ѽ���ǰ�����ߵ������������۵������¼��������� IOQ_allocation �� BSQ_allocation��IOQ_active_entries��BSQ_active_entries��BSQ_cache_reference��������Щ�� <span style="font-style: italic;"><I><a href="../../Reference_HH/Intel_s_Software_Developer_s_Manuals.html" style="x-condition: eclipse;">IA-32 Ӣ�ض���ϵ�ṹ����������Ա�ֲ� </I></span>�� 3 ��</a><span   style="font-style: italic;"><I></I></span>�� 3 ��</a>�о��м�����</p>
+<p>一級快取未命中與寫回（也稱作核心引用）導致對二級快取的引用。BSQ 將要滿足的處理器核心或預取器請求存放到前端匯流排 (FSB) 上，或本地 XAPIC 中。如果三級快取是片內整合的，則 BSQ 也存放二級快取的寫回請求（收回的污損數據）。FSB 的 IOQ 存放已進入前端匯流排的請求。下面討論的許多事件均衍生自 IOQ_allocation 與 BSQ_allocation、IOQ_active_entries、BSQ_active_entries、BSQ_cache_reference，所有這些在 <span style="font-style: italic;"><I><a href="../../Reference_HH/Intel_s_Software_Developer_s_Manuals.html" style="x-condition: eclipse;">IA-32 英特爾體系結構軟件開發人員手冊 </I></span>第 3 卷</a><span   style="font-style: italic;"><I></I></span>第 3 卷</a>中均有記述。</p>
 
-<p>���������������� 64 �ֽڣ�����һ�������ߵĴ�С����С�Ĵ�С���������֣����磬���ɻ�����д����϶�ȡ�����ɻ��桢ֱдʽ��д����ʽд�룬�Լ����е� I/O��д�������������洢���Լ�д����ϴ洢�ȿ����������Ļ����ߣ�Ҳ������һ���֡������뻺�������޹أ�����ͬ�ǻ������ݹ������������,д�أ������ջ���������ݣ��� RFO �����ڳ���洢Ϊȡ������Ȩ�����еĶ�ȡ����ǻ��������޹ء�</p>
+<p>核心引用名義上是 64 位元組，這是一級快取線的大小。更小的大小被稱作部分，例如，不可快取與寫入組合讀取、不可快取、直寫式與防寫式寫入，以及所有的 I/O。寫回鎖、數據流儲存，以及寫入組合儲存既可以是完整的快取線，也可以是一部分。部分與快取引用無關，它們同非快取數據關聯。與此類似,寫回（由於收回污損的數據）及 RFO （由於程式儲存為取得所有權而進行的讀取）與非快取數據無關。</p>
 
-<p>��������¼�����Դ��IOQ_allocation��BSQ_allocation��IOQ_active_entries��BSQ_active_entries �� BSQ_cache_reference��ժҪ�г���ͬ�¼���ͳ�����õ����ȣ�</p>
+<p>下面基於事件的來源（IOQ_allocation、BSQ_allocation、IOQ_active_entries、BSQ_active_entries 或 BSQ_cache_reference）摘要列出不同事件中統計引用的粒度：</p>
 
 <ul type="disc" class="whs3">
 	
-	<li class=kadov-p><p>���ڳ�����ض����еĶ�ȡ</p></li>
+	<li class=kadov-p><p>由於程式載入而進行的讀取</p></li>
 	
 	<ul type="disc" class="whs3">
 		
-		<li class=kadov-p-CSubBullet><p class=SubBullet>BSQ_cache_reference��128 �ֽ�δ���У�64 �ֽ�����</p></li>
+		<li class=kadov-p-CSubBullet><p class=SubBullet>BSQ_cache_reference：128 位元組未命中，64 位元組命中</p></li>
 		
-		<li class=kadov-p-CSubBullet><p class=SubBullet>BSQ_allocation��128 �ֽ����л�δ���У����ֵ����л�δ���и�СһЩ</p></li>
+		<li class=kadov-p-CSubBullet><p class=SubBullet>BSQ_allocation：128 位元組命中或未命中，部分的命中或未命中更小一些</p></li>
 		
-		<li class=kadov-p-CSubBullet><p class=SubBullet>BSQ_active_entries��64 �ֽ����л�δ���У����ֵ����л�δ���и�СһЩ</p></li>
+		<li class=kadov-p-CSubBullet><p class=SubBullet>BSQ_active_entries：64 位元組命中或未命中，部分的命中或未命中更小一些</p></li>
 		
-		<li class=kadov-p-CSubBullet><p class=SubBullet>IOQ_allocation��IOQ_active_entries��64 �ֽڣ����ֵ����л�δ���и�СһЩ</p></li>
+		<li class=kadov-p-CSubBullet><p class=SubBullet>IOQ_allocation、IOQ_active_entries：64 位元組，部分的命中或未命中更小一些</p></li>
 	</ul>
 	
-	<li class=kadov-p><p>���ڳ���д������еĶ�ȡ (RFO)</p></li>
+	<li class=kadov-p><p>由於程式寫入而進行的讀取 (RFO)</p></li>
 	
 	<ul type="disc" class="whs3">
 		
-		<li class=kadov-p-CSubBullet><p class=SubBullet>BSQ_cache_reference��64 �ֽ����л�δ����</p></li>
+		<li class=kadov-p-CSubBullet><p class=SubBullet>BSQ_cache_reference：64 位元組命中或未命中</p></li>
 		
-		<li class=kadov-p-CSubBullet><p class=SubBullet>BSQ_allocation��64 �ֽ����л�δ���У����ֵ����л�δ���и�СһЩ</p></li>
+		<li class=kadov-p-CSubBullet><p class=SubBullet>BSQ_allocation：64 位元組命中或未命中，部分的命中或未命中更小一些</p></li>
 		
-		<li class=kadov-p-CSubBullet><p class=SubBullet>BSQ_active_entries��64 �ֽ����л�δ���У����ֵ����л�δ���и�СһЩ</p></li>
+		<li class=kadov-p-CSubBullet><p class=SubBullet>BSQ_active_entries：64 位元組命中或未命中，部分的命中或未命中更小一些</p></li>
 		
-		<li class=kadov-p-CSubBullet><p class=SubBullet>IOQ_allocation��IOQ_active_entries��64 �ֽ����л�δ���У����ֵ����л�δ���и�СһЩ</p></li>
+		<li class=kadov-p-CSubBullet><p class=SubBullet>IOQ_allocation、IOQ_active_entries：64 位元組命中或未命中，部分的命中或未命中更小一些</p></li>
 	</ul>
 	
-	<li class=kadov-p><p>д�أ������ջأ�</p></li>
+	<li class=kadov-p><p>寫回（污損收回）</p></li>
 	
 	<ul type="disc" class="whs3">
 		
-		<li class=kadov-p-CSubBullet><p class=SubBullet>BSQ_allocation��64 �ֽ� </p></li>
+		<li class=kadov-p-CSubBullet><p class=SubBullet>BSQ_allocation：64 位元組 </p></li>
 		
-		<li class=kadov-p-CSubBullet><p class=SubBullet>BSQ_active_entries��64 �ֽ�</p></li>
+		<li class=kadov-p-CSubBullet><p class=SubBullet>BSQ_active_entries：64 位元組</p></li>
 		
-		<li class=kadov-p-CSubBullet><p class=SubBullet>IOQ_allocation��IOQ_active_entries��64 �ֽ� </p></li>
+		<li class=kadov-p-CSubBullet><p class=SubBullet>IOQ_allocation、IOQ_active_entries：64 位元組 </p></li>
 	</ul>
 </ul>
 
-<p>IOQ ����ļ������ܳ�����Ӧ�� BSQ ����ļ��������ж���ԭ�����а����� </p>
+<p>IOQ 分配的計數可能超過相應的 BSQ 分配的計數，這有多種原因，其中包括： </p>
 
 <ul type="disc" class="whs3">
 	
-	<li class=kadov-p><p>���֣��� FSB IOQ �У��κ�С�� 64 �ֽڵ������ֳ�һ���˸����֣�ÿ�����ֶ���Ϊһ���˷�֮һ�ֽڿ鵥��ͳ�ơ�����鿴���ô˽��۵��¼����б����뵥������İ�ť���� BSQ �У����ֵķ����Ϊһ��<br>
+	<li class=kadov-p><p>部分：在 FSB IOQ 中，任何小於 64 位元組的事務會分成一到八個部分，每個部分都作為一個八分之一位元組塊單獨統計。如需檢視適用此結論的事件的列表，請單擊下面的按鈕。在 BSQ 中，部分的分配計為一。<br>
 	
 	
-	<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','д�루�˴�������(AT-E)','Writes_from_the_Processor.htm','���߷��ʣ����д�����(AT-E)','bus_accesses_from_all_agents.htm','���߷��ʣ��˴�������(AT-E)','bus_accesses_from_the_processor.htm','���� UC���˴�������(AT-E)','all_uc_from_the_processor.htm','���� WC���˴�������(AT-E)','all_wc_from_the_processor.htm','��ȡ���˴�������(AT-E)','Reads_from_the_Processor.htm','��Ԥȡ���߷��ʣ��˴�������(AT-E)','non-prefetch_bus_accesses_from_the_processor.htm','��Ԥȡ��ȡ���˴�������(AT-E)','Reads_Non-prefetch_from_the_Processor.htm');return false;" title="IOQ_allocation �¼�"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_ioq_allocation_%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=124 alt="IOQ_allocation �¼�"></a>
+	<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','寫入（此處理器）(AT-E)','Writes_from_the_Processor.htm','匯流排訪問（所有代理）(AT-E)','bus_accesses_from_all_agents.htm','匯流排訪問（此處理器）(AT-E)','bus_accesses_from_the_processor.htm','所有 UC（此處理器）(AT-E)','all_uc_from_the_processor.htm','所有 WC（此處理器）(AT-E)','all_wc_from_the_processor.htm','讀取（此處理器）(AT-E)','Reads_from_the_Processor.htm','非預取匯流排訪問（此處理器）(AT-E)','non-prefetch_bus_accesses_from_the_processor.htm','非預取讀取（此處理器）(AT-E)','Reads_Non-prefetch_from_the_Processor.htm');return false;" title="IOQ_allocation 事件"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_ioq_allocation_%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=124 alt="IOQ_allocation 事件"></a>
 
 	
 	 </p></li>
 	
-	<li class=kadov-p><p>��ͬ�������С���ǲ��ֳ������������ BSQ �еķ���ÿ 128 �ֽڼ�Ϊ 1���� FSB IOQ �еķ���ÿ 64 �ֽڼ�Ϊ 1������ FSB IOQ �� BSQ_allocation��RFO �ķ���ÿ 64 �ֽڼ�Ϊ 1�� &nbsp;</p></li>
+	<li class=kadov-p><p>不同的事務大小：非部分程式載入請求在 BSQ 中的分配每 128 位元組計為 1，在 FSB IOQ 中的分配每 64 位元組計為 1。對於 FSB IOQ 與 BSQ_allocation，RFO 的分配每 64 位元組計為 1。 &nbsp;</p></li>
 	
-	<li class=kadov-p><p>���ԣ����оƬ��Ҫ�����ԣ�ÿ����һ�� FSB IOQ �����Ϊһ��</p></li>
+	<li class=kadov-p><p>重試：如果晶片組要求重試，每重試一次 FSB IOQ 分配計為一。</p></li>
 </ul>
 
-<p>����������ֵ��ע�����������ܴ���û�� FSB IOQ ����� BSQ ���䡣��һ���� UC ��ȡ��д�뱾�� XAPIC �Ĵ������ڶ�������ǣ���������ߴӶ����������ջص���Ƭ�ڼ��ɵ��������������У������һ�� BSQ ��Ŀ��������Ҫ�κ� FSB ����������� FSB IOQ ��û�з��䡣���� FSB IOQ �� BSQ��д�� (WB) �ڴ�����д�������������������������������Ƶ�ʵ�һ��ָʾ�����ں���д�����������Ӧ�ó�����˵���������������ܷ�������Ȼ��û����������ʱ��������������Ͳ��ᷢ����</p>
+<p>這裡有兩種值得注意的情況，可能存在沒有 FSB IOQ 分配的 BSQ 分配。第一種是 UC 讀取與寫入本地 XAPIC 暫存器。第二種情況是，如果快取線從二級快取中收回但在片內整合的三級快取中命中，則分配一個 BSQ 專案，但不需要任何 FSB 事務，且因此在 FSB IOQ 中沒有分配。對於 FSB IOQ 與 BSQ，寫回 (WB) 記憶體型別寫入事務的數量差異可能是這種情況發生頻率的一種指示。對於很少寫入三級快取的應用程式來說，這種情況不大可能發生；當然，沒有三級快取時，這種情況根本就不會發生。</p>
 
-<h2>�ض����¼��ı�ע</h2>
+<h2>特定於事件的備註</h2>
 
-<p><a href="bus_accesses_from_the_processor.html">���������߷���</a>�¼���<a href="Reads_Non-prefetch_from_the_Processor.html">��������Ԥȡ��ȡ</a>�¼�֮��Ĳ�����������Ӳ��Ԥȡ�������� &nbsp;&nbsp;</p>
+<p><a href="bus_accesses_from_the_processor.html">處理器匯流排訪問</a>事件與<a href="Reads_Non-prefetch_from_the_Processor.html">處理器非預取讀取</a>事件之間的差異名義上是硬體預取的數量。 &nbsp;&nbsp;</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> 備註</h3>
 
-<p class="whs5">���� CPUID ����� 0xf07 ֮��������BSQ_cache_reference �¼��в�ͳ��Ӳ��Ԥȡ��</p>
+<p class="whs5">對於 CPUID 編號在 0xf07 之後的情況，BSQ_cache_reference 事件中不統計硬體預取。</p>
 
 <p>&nbsp;</p>
 
-<p>���漸�ν��ܻ��ڱ��� 4 ���������ܼ����¼� &quot;BSQ_cache_rerference&quot; �Ķ�������߶ȣ����¼��������¼���&ldquo;IA-32 Ӣ�ض���ϵ�ṹ����������Ա�ֲ�&rdquo;�� 3 �����м�������Щ�¼��У�</p>
+<p>下面幾段介紹基於奔騰 4 處理器效能監視事件 &quot;BSQ_cache_rerference&quot; 的多個衡量尺度（或事件），該事件在&ldquo;IA-32 英特爾體系結構軟件開發人員手冊&rdquo;第 3 卷中有記述。這些事件有：</p>
 
 <ul>
 	
-	<li class=kadov-p-CLinkBul><p class=LinkBul><a href="2nd_level_cache_read_misses.html">���������ȡδ����</a></p></li>
+	<li class=kadov-p-CLinkBul><p class=LinkBul><a href="2nd_level_cache_read_misses.html">二級快取讀取未命中</a></p></li>
 	
-	<li class=kadov-p-CLinkBul><p class=LinkBul><a href="2nd-Level_Cache_Read_References.html">���������ȡ����</a></p></li>
+	<li class=kadov-p-CLinkBul><p class=LinkBul><a href="2nd-Level_Cache_Read_References.html">二級快取讀取引用</a></p></li>
 	
-	<li class=kadov-p-CLinkBul><p class=LinkBul><a href="3rd-level_cache_read_misses.html">���������ȡδ����</a></p></li>
+	<li class=kadov-p-CLinkBul><p class=LinkBul><a href="3rd-level_cache_read_misses.html">三級快取讀取未命中</a></p></li>
 	
-	<li class=kadov-p-CLinkBul><p class=LinkBul><a href="3rd-level_cache_read_references.html">���������ȡ����</a></p></li>
+	<li class=kadov-p-CLinkBul><p class=LinkBul><a href="3rd-level_cache_read_references.html">三級快取讀取引用</a></p></li>
 	
-	<li class=kadov-p-CLinkBul><p class=LinkBul><a href="2nd-level_cache_reads_hit_shared.html">���������ȡ���й����Ļ�����</a></p></li>
+	<li class=kadov-p-CLinkBul><p class=LinkBul><a href="2nd-level_cache_reads_hit_shared.html">二級快取讀取命中共享的快取線</a></p></li>
 	
-	<li class=kadov-p-CLinkBul><p class=LinkBul><a href="2nd-level_cache_reads_hit_modified.html">���������ȡ�����޸ĵĻ�����</a></p></li>
+	<li class=kadov-p-CLinkBul><p class=LinkBul><a href="2nd-level_cache_reads_hit_modified.html">二級快取讀取命中修改的快取線</a></p></li>
 	
-	<li class=kadov-p-CLinkBul><p class=LinkBul><a href="2nd-level_cache_reads_hit_exclusive.html">���������ȡ���ж�ռ�Ļ�����</a></p></li>
+	<li class=kadov-p-CLinkBul><p class=LinkBul><a href="2nd-level_cache_reads_hit_exclusive.html">二級快取讀取命中獨佔的快取線</a></p></li>
 	
-	<li class=kadov-p-CLinkBul><p class=LinkBul><a href="3rd-level_cache_reads_hit_shared.html">���������ȡ���й����Ļ�����</a></p></li>
+	<li class=kadov-p-CLinkBul><p class=LinkBul><a href="3rd-level_cache_reads_hit_shared.html">三級快取讀取命中共享的快取線</a></p></li>
 	
-	<li class=kadov-p-CLinkBul><p class=LinkBul><a href="3rd-level_cache_reads_hit_modified.html">���������ȡ�����޸ĵĻ�����</a></p></li>
+	<li class=kadov-p-CLinkBul><p class=LinkBul><a href="3rd-level_cache_reads_hit_modified.html">三級快取讀取命中修改的快取線</a></p></li>
 	
-	<li class=kadov-p-CLinkBul><p class=LinkBul><a href="3rd-level_cache_reads_hit_exclusive.html">���������ȡ���ж�ռ�Ļ�����</a></p></li>
+	<li class=kadov-p-CLinkBul><p class=LinkBul><a href="3rd-level_cache_reads_hit_exclusive.html">三級快取讀取命中獨佔的快取線</a></p></li>
 </ul>
 
-<p>��Ϊ�����������������棨����У���һ�������Ч��ָ�꣬BSQ_cache_reference ���ܺ����ô����ڱ��� 4 ��Ӣ�ض���ǿ�������У���Ӧ��ʹ�������㻺�����б��ʻ򻺴�δ���б��ʡ� &nbsp;</p>
+<p>作為二級快取與三級快取（如果有）的一個相對有效性指標，BSQ_cache_reference 可能很有用處。在奔騰 4 與英特爾至強處理器中，不應該使用它計算快取命中比率或快取未命中比率。 &nbsp;</p>
 
-<p>BSQ_cache_reference �¼������ֳ����ȡ��д��δ���С�δ���еĳ���д������ȡʣ��Ļ����ߣ����ϲ��µ����ݡ�������Ҫ�����������Ȩ��ȡ (RFO)������ BSQ_cache_reference Ӳ���������ȡ�� RFO �������������������߶�ȡ������Ҳ��������ͳ�Ƶġ� &nbsp;</p>
+<p>BSQ_cache_reference 事件不區分程式讀取與寫入未命中。未命中的程式寫入必須獲取剩餘的快取線，併合並新的數據。這樣的要求稱作是所有權讀取 (RFO)。對於 BSQ_cache_reference 硬體，程式讀取與 RFO 看起來都像是數據總線讀取，並且也就是這樣統計的。 &nbsp;</p>
 
-<p>BSQ_cache_reference �¼����ܻ������۲쵽ͳ�ƹ��������������������������������ǻ��� BSQ ����ġ��Ӷ�����ȡδ����ͨ��ÿ 128 �ֽڻ����� BSQ ����ͳ��һ�Σ���������һ����������������������ȡ��д�� (RFO) ����������д�� (RFO) δ���У���ÿ 64 �ֽڻ�����ͳ��һ�Σ����������õĴ�С����ʹ�ö�ȡδ���е��¼�����ͬ��ȡ��д�� (RFO) ������д�� (RFO) δ���е��¼�������ȣ����Ƕ�ͳ������������������ϵĲ�ƥ�䲢�������ܾ�����ʹ�ý�����δ������������й���������ø�Ϊ���ѡ�����û�֪�� 128 �ֽڻ������е��������������ڱ˴�֮��ܿ����ã�����Խ�δ���м��������� 64 �ֽڵ����ȣ��Ӷ�����ȡδ���е����������� &nbsp;</p>
+<p>BSQ_cache_reference 事件可能會遭遇觀察到統計過量或不足的情況。正如上文所述，引用是基於 BSQ 分配的。從而，讀取未命中通常每 128 位元組快取線 BSQ 分配統計一次（不論引用一個還是兩個扇區）；但讀取與寫入 (RFO) 命中與大多數寫入 (RFO) 未命中，則每 64 位元組快取線統計一次，即核心引用的大小。這使得讀取未命中的事件計數同讀取與寫入 (RFO) 命中與寫入 (RFO) 未命中的事件計數相比，像是多統計了兩倍。這個粒度上的不匹配並不總是能糾正，使得將程式未命中與程式命中關聯起來變得更為困難。如果使用者知道 128 位元組快取線中的兩個扇區總是在彼此之後很快引用，則可以將未命中計數調整到 64 位元組的粒度，從而將讀取未命中的數量翻倍。 &nbsp;</p>
 
-<p>Ԥȡ��������Ϊ���л�δ����ͳ�ƣ�CPUID ���Ϊ 0xf21 �ı��� 4 ��Ӣ�ض���ǿ���������������������������CPUID ���Ϊ 0xf07 �ı��� 4 ������������汾�Ĵ������������������⣺�Ѿ�Ԥȡ�Ļ����߶�ȡ����Ϊδ����ͳ���⣬����Ϊ����ͳ�ƣ��Ӷ�ʹ�����е�ͳ�Ʒ����������� &nbsp;</p>
+<p>預取本身不作為命中或未命中統計，CPUID 編號為 0xf21 的奔騰 4 與英特爾至強處理器就是這樣的情況。不過，CPUID 編號為 0xf07 的奔騰 4 處理器及更早版本的處理器存在這樣的問題：已經預取的快取線讀取除作為未命中統計外，還作為命中統計，從而使得命中的統計發生過量現象。 &nbsp;</p>
 
-<p>����д���ڴ��ͣ�FSB IOQ ָ���ķ�Ԥȡ��ȡ�����������ɼ��ػ� RFO ���µ�����㻺��δ���������ĺܺý���ֵ��</p>
+<p>對於寫回記憶體型，FSB IOQ 指出的非預取讀取事務數量是由載入或 RFO 導致的最外層快取未命中數量的很好近似值。</p>
 
-<h2>���߻</h2>
+<h2>匯流排活動</h2>
 
-<p>&ldquo;�߼�����&rdquo;����е������¼��ṩ�������ڽ��е���������ĺ����߶���Ϣ����Щ�߶������Ϻ������ǽ��� BSQ ��δ���еĶ˵����ӳ٣�Ҳ���ǣ����ڴ����������е�������� BSQ ��Ŀ�ķ��䵽ȡ���������ʱ����ۼƺ͡����ǿ��Գ�����Ӧ�����������߶ȣ�ͳ�Ʒ������������Դ�Ź���ÿ�������ƽ���ӳ١���������Ϊ�������������ȡ������ǰ��ɣ��ù���ֵ���ܻ����Ը���ȡ�������ȡ��������أ��ĵ�һ�����ݿ�����������������ӳٰ���ȡ�����俪�����Լ���ȡ��һ�� 128 �ֽڻ����ߵ�ʱ�䣬������Ԥȡ�ڽ�������ʱ���õġ������ڽ�������Ԥȡ���ȼ�С�������ȡ������������һ���ܴ�Ŀ��ܣ��������ʺܸߵ�ϵͳ�ϣ��ڽ�������Ԥȡ����ȵ��ô���������һ�������ٲ����ڡ� </p>
+<p>&ldquo;高級匯流排&rdquo;類別中的許多事件提供各種正在進行的匯流排事務的衡量尺度資訊。這些尺度名義上衡量的是進入 BSQ 的未命中的端到端延遲，也就是，用於處理器中所有單獨事務的 BSQ 專案的分配到取消分配持續時間的累計和。它們可以除以相應的事務數量尺度（統計分配數量），以大概估計每個事務的平均延遲。不過，因為整個事務必須在取消分配前完成，該估計值可能會明顯高於取得隨需獲取（例如載入）的第一個數據塊所需的週期數。該延遲包括取消分配開銷，以及獲取另一半 128 位元組快取線的時間，這是在預取鄰近的扇區時呼叫的。由於鄰近扇區的預取優先順序小於隨需獲取，所以有這樣一個很大的可能：在利用率很高的系統上，鄰近扇區的預取必須等到該處理器的下一個匯流排仲裁週期。 </p>
 
-<p>������������߶ȵ��û���ͨ���������ǽ������������ BSQ �ӳ���ԱȽ϶����������ݡ�ϣ�����������ڻ������ͷ������û���ע�⣬����<a href="UC_Reads_Chunk_Underway_(BSQ).html">���� UC ���ȡ</a>��<a href="Write_WC_Partial_Underway_(BSQ).html">���в���д�� WC</a> �߶ȣ���֪���¼�������ȷ������ BSQ �ӳٵ���Ա仯Ӧ���������ڴ������ѷ����ı��ָʾ���ڲ�õ� FSB �ӳ��У������ڴ����ܸı���ܻ�õ���ӳ��Ҳ���ܵò�����ӳ��</p>
+<p>現行匯流排事務尺度的使用者可通過採用它們進行所有事務的 BSQ 延遲相對比較而獲得最佳數據。希望進行逐週期或逐型別分析的使用者請注意，對於<a href="UC_Reads_Chunk_Underway_(BSQ).html">現行 UC 塊讀取</a>與<a href="Write_WC_Partial_Underway_(BSQ).html">現行部分寫入 WC</a> 尺度，已知此事件並不精確。所有 BSQ 延遲的相對變化應視作總體記憶體效能已發生改變的指示。在測得的 FSB 延遲中，這種記憶體效能改變可能會得到反映，也可能得不到反映。</p>
 
-<p>���ڼ�����������ı��� 4 ��Ӣ�ض���ǿ�������汾��������еĶ���д�أ������Ļ����ߣ����� BSQ ��Ŀ������ֻ�ǳ�Ϊ���߷��ʵ���Щ��Ҳ������δ���У��������ڶ���������Ƶ��ʧ��δ���У���Ԥȡ�ࣩܶ��ȴ���������������еĸ��أ�����Խ��Ͳ�õ� BSQ �ӳ�ƽ��ֵ���������������ã����� BSQ ��Ŀ������Ϊ����������ˣ���Ч�����������δ��������Ƭ�ڼ��ɻ���ĸ��ص����ء�</p>
+<p>對於整合三級快取的奔騰 4 與英特爾至強處理器版本，會給所有的二級寫回（更換的快取線）分配 BSQ 專案，而不只是成為匯流排訪問的那些（也是三級未命中）。對於在二級快取中頻繁失誤（未命中，或預取很多），卻在三級快取中命中的負載，這可以降低測得的 BSQ 延遲平均值。由於這樣的引用，所有 BSQ 專案都將成為匯流排事務，因此，此效果不大可能是未命中所有片內整合快取的負載的因素。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> 備註</h3>
 
-<p class="whs5">ͳ�� BSQ_allocation �� BSQ_active_entries �����ȿ��ܻ᲻ͬ���Ӷ����¶��ڷǲ��ֳ�����أ�ͳ�Ƶ��ӳ������ܻᳬ��������</p>
+<p class="whs5">統計 BSQ_allocation 與 BSQ_active_entries 的粒度可能會不同，從而導致對於非部分程式載入，統計的延遲量可能會超出兩倍。</p>
 
 <script type="text/javascript" language="JavaScript" title="WebHelpRelatedTopics"><!--
 if (parseInt(navigator.appVersion) >= 3 && typeof (WritePopupMenuLayer) == "function")

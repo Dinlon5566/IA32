@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/characterizing_the_trace_cache_delivery_performance.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:43 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>ȷ�����ٻ��洫����������</title>
+<title>確定跟蹤快取傳遞效能特徵</title>
 
 <!--(Meta)==========================================================-->
 
@@ -103,15 +103,15 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>ȷ�����ٻ��洫����������</h1>
+<h1>確定跟蹤快取傳遞效能特徵</h1>
 
-<p>�����Ҫ������Ϣ��ȷ�����ٻ��洫�������������Դ����ִ�����²��裺 </p>
+<p>如果需要附加資訊來確定跟蹤快取傳遞效能問題的來源，請執行以下步驟： </p>
 
 <ul type="disc" class="whs1">
 	
-	<li class=kadov-p><p>���ȣ�ȷ��û�����ߴ������⡣�����δ�о�&ldquo;<span>��</span>��������&rdquo;��ͬʱҲδ�о�&ldquo;���ٻ��洫�ݰٷֱ�&rdquo;����ɼ������¼������ݣ��������ݾ������˴���������ʱ���źš����ٻ��洫��ģʽ��</p></li>
+	<li class=kadov-p><p>首先，確保沒有匯流排頻寬問題。如果尚未研究&ldquo;<span>總</span>線利用率&rdquo;，同時也未研究&ldquo;跟蹤快取傳遞百分比&rdquo;，請採集以下事件的數據：匯流排數據就緒（此處理器）、時鐘訊號、跟蹤快取傳遞模式。</p></li>
 	
-	<li class=kadov-p><p>������������ʲ��ǵ��´�&ldquo;���ٻ���&rdquo;�����ԭ����ͨ���ɼ������¼����о����ٻ���δ���������֧Ԥ����ʣ�ͬʱ�о�&ldquo;���ٻ��洫�ݰٷֱ�&rdquo;��ʱ���źš����ٻ��洫��ģʽ��ʧЧ�ķ�֧��ʧЧ��Ԥ��ʧ���֧�����ٻ���δ���С�</p></li>
+	<li class=kadov-p><p>如果匯流排利用率不是導致此&ldquo;跟蹤快取&rdquo;問題的原因，請通過採集以下事件，研究跟蹤快取未命中數與分支預測比率，同時研究&ldquo;跟蹤快取傳遞百分比&rdquo;：時鐘訊號、跟蹤快取傳遞模式、失效的分支、失效的預測失誤分支、跟蹤快取未命中。</p></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc39.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:44 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>CMPS/CMPSB/CMPSW/CMPSD - �Ƚ��ַ���������</title>
+<title>CMPS/CMPSB/CMPSW/CMPSD - 比較字串運算元</title>
 
 <!--(Meta)==========================================================-->
 
@@ -96,7 +96,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nC - ָ��\nCMPS/CMPSB/CMPSW/CMPSD - �Ƚ��ַ���������");
+	addTocInfo("參考\n指令集\nIA-32 指令\nC - 指令\nCMPS/CMPSB/CMPSW/CMPSD - 比較字串運算元");
 
 	}
 	if (window.writeBtnStyle)
@@ -119,7 +119,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>CMPS/CMPSB/CMPSW/CMPSD - �Ƚ��ַ���������</h1>
+<h1>CMPS/CMPSB/CMPSW/CMPSD - 比較字串運算元</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -127,13 +127,13 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">������</td>
+	style="margin-bottom: 0;">操作碼</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">說明</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -144,7 +144,7 @@ else
 	style="margin-bottom: 0;">CMPS m8, m8</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�Ƚ�λ�ڵ�ַ DS:(E)SI ���ֽ���λ�ڵ�ַ ES:(E)DI ���ֽڣ�����Ӧ����״̬��־</td></tr>
+	style="margin-bottom: 0;">比較位於地址 DS:(E)SI 的位元組與位於地址 ES:(E)DI 的位元組，並相應設定狀態標誌</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -155,7 +155,7 @@ else
 	style="margin-bottom: 0;">CMPS m16, m16</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�Ƚ�λ�ڵ�ַ DS:(E)SI ������λ�ڵ�ַ ES:(E)DI ���֣�����Ӧ����״̬��־</td></tr>
+	style="margin-bottom: 0;">比較位於地址 DS:(E)SI 的字與位於地址 ES:(E)DI 的字，並相應設定狀態標誌</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -166,7 +166,7 @@ else
 	style="margin-bottom: 0;">CMPS m32, m32</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�Ƚ�λ�ڵ�ַ DS:(E)SI ��˫����λ�ڵ�ַ ES:(E)DI ��˫�֣�����Ӧ����״̬��־</td></tr>
+	style="margin-bottom: 0;">比較位於地址 DS:(E)SI 的雙字與位於地址 ES:(E)DI 的雙字，並相應設定狀態標誌</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -177,7 +177,7 @@ else
 	style="margin-bottom: 0;">CMPSB</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�Ƚ�λ�ڵ�ַ DS:(E)SI ���ֽ���λ�ڵ�ַ ES:(E)DI ���ֽڣ�����Ӧ����״̬��־</td></tr>
+	style="margin-bottom: 0;">比較位於地址 DS:(E)SI 的位元組與位於地址 ES:(E)DI 的位元組，並相應設定狀態標誌</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -188,7 +188,7 @@ else
 	style="margin-bottom: 0;">CMPSW</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�Ƚ�λ�ڵ�ַ DS:(E)SI ������λ�ڵ�ַ ES:(E)DI ���֣�����Ӧ����״̬��־</td></tr>
+	style="margin-bottom: 0;">比較位於地址 DS:(E)SI 的字與位於地址 ES:(E)DI 的字，並相應設定狀態標誌</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -199,22 +199,22 @@ else
 	style="margin-bottom: 0;">CMPSD</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�Ƚ�λ�ڵ�ַ DS:(E)SI ��˫����λ�ڵ�ַ ES:(E)DI ��˫�֣�����Ӧ����״̬��־</td></tr>
+	style="margin-bottom: 0;">比較位於地址 DS:(E)SI 的雙字與位於地址 ES:(E)DI 的雙字，並相應設定狀態標誌</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>�Ƚϵ�һ��Դ������ָ�����ֽڡ��ֻ�˫����ڶ���Դ������ָ�����ֽڡ��ֻ�˫�֣������ݽ������ EFLAGS �Ĵ����е�״̬��־������Դ��������λ���ڴ档��һ��Դ�������ĵ�ַ�� DS:ESI �� DS:SI �Ĵ����ж�ȡ������ȡ����ָ��ĵ�ַ��С���ԣ��ֱ�Ϊ 32 �� 16�����ڶ���Դ�������ĵ�ַ�� ES:EDI �� ES:DI �Ĵ����ж�ȡ������Ҳȡ����ָ��ĵ�ַ��С���ԣ���DS �ο����ÿ��ǰ׺���ǣ��� ES �β��ܸ��ǡ�</p>
+<p>比較第一個源運算元指定的位元組、字或雙字與第二個源運算元指定的位元組、字或雙字，並根據結果設定 EFLAGS 暫存器中的狀態標誌。兩個源運算元都位於記憶體。第一個源運算元的地址從 DS:ESI 或 DS:SI 暫存器中讀取（具體取決於指令的地址大小屬性，分別為 32 或 16）。第二個源運算元的地址從 ES:EDI 或 ES:DI 暫存器中讀取（具體也取決於指令的地址大小屬性）。DS 段可以用跨段字首覆蓋，但 ES 段不能覆蓋。</p>
 
-<p>�ڻ����뼶�𣬴�ָ����������������ʽ��&ldquo;��ʽ������&rdquo;��ʽ��&ldquo;�޲�����&rdquo;��ʽ����ʽ��������ʽ���� CMPS ���Ƿ�ָ����������ȷָ������Դ�����������Դ������Ӧ���Ǳ�ʾԴ������ֵ��С��λ�õķ��š��ṩ����ʽ��������ʽ��Ϊ�˱��ڼ�¼��������ע�⣬����ʽ�ṩ�ļ�¼���ܻ�������⡣Ҳ����˵��Դ���������ű���ָ�����������ֽڡ��ֻ�˫�֣�����ȷ<span style="font-weight: bold;"><B>����</B></span>����С����������ָ����ȷ��<span style="font-weight: bold;"><B>λ��</B></span>��Դ��������λ�������� DS:(E)SI �� ES:(E)DI �Ĵ���ָ�������ұ�����ִ���ַ����Ƚ�ָ��֮ǰ��ȷ������Щ�Ĵ�����</p>
+<p>在彙編程式碼級別，此指令允許採用兩種形式：&ldquo;顯式運算元&rdquo;形式與&ldquo;無運算元&rdquo;形式。顯式運算元形式（由 CMPS 助記符指定）可以明確指定兩個源運算元。這裡，源運算元應該是表示源運算元值大小與位置的符號。提供此顯式運算元形式是爲了便於記錄；不過請注意，此形式提供的記錄可能會令人誤解。也就是說，源運算元符號必須指定運算元（位元組、字或雙字）的正確<span style="font-weight: bold;"><B>型別</B></span>（大小），但不必指定正確的<span style="font-weight: bold;"><B>位置</B></span>。源運算元的位置總是由 DS:(E)SI 與 ES:(E)DI 暫存器指定，而且必須在執行字串比較指令之前正確載入這些暫存器。</p>
 
-<p>�޲�������ʽ�ṩ&ldquo;�����ʽ&rdquo;���ֽڡ��ּ�˫�ְ� CMPS ָ�������������ٶ� DS:(E)SI �� ES:(E)DI �Ĵ���ָ��Դ��������λ�á�Դ�������Ĵ�Сʹ�����Ƿ���ѡ��CMPSB���ֽڱȽϣ���CMPSW���ֱȽϣ��� CMPSD��˫�ֱȽϣ���</p>
+<p>無運算元形式提供&ldquo;簡短形式&rdquo;的位元組、字及雙字版 CMPS 指令。這裡，處理器還假定 DS:(E)SI 與 ES:(E)DI 暫存器指定源運算元的位置。源運算元的大小使用助記符來選擇：CMPSB（位元組比較）、CMPSW（字比較）或 CMPSD（雙字比較）。</p>
 
-<p>�Ƚ�֮�󣬸��� EFLAGS �Ĵ����� DF ��־�����ã�(E)SI �� (E)DI �Ĵ������Զ�������ݼ�������� DF ��־Ϊ 0���� (E)SI �� (E)DI �Ĵ������������ DF ��־Ϊ 1���� (E)SI �� (E)DI �Ĵ����ݼ����������ֽڲ������Ĵ���������ݼ� 1�������ֲ�����������ݼ� 2������˫�ֲ������������ݼ� 4��</p>
+<p>比較之後，根據 EFLAGS 暫存器中 DF 標誌的設定，(E)SI 與 (E)DI 暫存器會自動遞增或遞減。（如果 DF 標誌為 0，則 (E)SI 與 (E)DI 暫存器遞增；如果 DF 標誌為 1，則 (E)SI 與 (E)DI 暫存器遞減）。對於位元組操作，暫存器遞增或遞減 1；對於字操作，遞增或遞減 2；對於雙字操作，則遞增或遞減 4。</p>
 
-<p>ͨ���� REP ǰ׺��ͷ��CMPS��CMPSB��CMPSW �� CMPSD ָ������ڳɿ�Ƚ� ECX �ֽڡ��ֻ�˫�֡���������������������� LOOP �ṹ��ʹ����Щָ��˽ṹ���ڽ�����һ���Ƚ�֮ǰ������״̬��־������ִ��һЩ�����������й� REP ǰ׺��˵��������ı��µ� <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct32_hh/vc276.htm">REP/REPE/REPZ/REPNE/REPNZ - �ظ��ַ�������ǰ׺</a>��</p>
+<p>通過以 REP 字首打頭，CMPS、CMPSB、CMPSW 及 CMPSD 指令可用於成塊比較 ECX 位元組、字或雙字。不過，更常見的情況是在 LOOP 結構中使用這些指令，此結構會在進行下一個比較之前，根據狀態標誌的設定執行一些操作。如需有關 REP 字首的說明，請參閱本章的 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct32_hh/vc276.htm">REP/REPE/REPZ/REPNE/REPNZ - 重複字串操作字首</a>。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted>temp <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -298,35 +298,35 @@ else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'>");}
 //--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript> (E)DI - 4; <br> FI;<br> FI;</p>
 
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
-<p>CF��OF��SF��ZF��AF �� PF ��־���ݱȽϵ���ʱ������á�</p>
+<p>CF、OF、SF、ZF、AF 及 PF 標誌根據比較的臨時結果設定。</p>
 
-<h2>����ģʽ�쳣</h2>
+<h2>保護模式異常</h2>
 
-<p>#GP(0) - ����ڴ��������Ч��ַ���� CS��DS��ES��FS �� GS �����ơ���� DS��ES��FS �� GS �Ĵ��������յĶ�ѡ������</p>
+<p>#GP(0) - 如果記憶體運算元有效地址超出 CS、DS、ES、FS 或 GS 段限制。如果 DS、ES、FS 或 GS 暫存器包含空的段選擇器。</p>
 
-<p>#SS(0) - ����ڴ��������Ч��ַ���� SS �����ơ�</p>
+<p>#SS(0) - 如果記憶體運算元有效地址超出 SS 段限制。</p>
 
-<p>#PF(�������) - �������ҳ����</p>
+<p>#PF(錯誤程式碼) - 如果發生頁錯誤。</p>
 
-<p>#AC(0) - ������ö����鲢�ڵ�ǰ��Ȩ����Ϊ 3 ʱ����δ������ڴ����á�</p>
+<p>#AC(0) - 如果啟用對齊檢查並在目前特權級別為 3 時進行未對齊的記憶體引用。</p>
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>實地址模式異常</h2>
 
-<p>#GP - ����ڴ��������Ч��ַ���� CS��DS��ES��FS �� GS �����ơ�</p>
+<p>#GP - 如果記憶體運算元有效地址超出 CS、DS、ES、FS 或 GS 段限制。</p>
 
-<p>#SS - ����ڴ��������Ч��ַ���� SS �����ơ�</p>
+<p>#SS - 如果記憶體運算元有效地址超出 SS 段限制。</p>
 
-<h2>�� 8086 ģʽ�쳣</h2>
+<h2>虛 8086 模式異常</h2>
 
-<p>#GP(0) - ����ڴ��������Ч��ַ���� CS��DS��ES��FS �� GS �����ơ�</p>
+<p>#GP(0) - 如果記憶體運算元有效地址超出 CS、DS、ES、FS 或 GS 段限制。</p>
 
-<p>#SS(0) - ����ڴ��������Ч��ַ���� SS �����ơ�</p>
+<p>#SS(0) - 如果記憶體運算元有效地址超出 SS 段限制。</p>
 
-<p>#PF(�������) - �������ҳ����</p>
+<p>#PF(錯誤程式碼) - 如果發生頁錯誤。</p>
 
-<p class="whs4">#AC(0) - ��������ö����������½���δ������ڴ����á� </p>
+<p class="whs4">#AC(0) - 如果在啟用對齊檢查的情況下進行未對齊的記憶體引用。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

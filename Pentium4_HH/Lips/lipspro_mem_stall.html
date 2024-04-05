@@ -8,13 +8,13 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/lipspro_mem_stall.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:38:27 GMT -->
 <head>
 
-<title>�����Ĵ洢ת��</title>
+<title>阻塞的儲存轉發</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta NAME=MS-HAID CONTENT="Pentium(R) II and Pentium Pro Processor Penalties">
-<meta NAME=MS-HAID CONTENT="�ڴ�ͷ�">
+<meta NAME=MS-HAID CONTENT="記憶體懲罰">
 <meta NAME=MS-HAID CONTENT="Data Misalignment Penalties">
 <meta name=date content="05 25, 2003 2:25:31 PM">
 <meta name=topic-status content="In Progress">
@@ -104,7 +104,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������ĳͷ�\n�����Ĵ洢ת��");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器的懲罰\n阻塞的儲存轉發");
 
 	}
 	if (window.writeBtnStyle)
@@ -127,29 +127,29 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1">�ڴ���ͣ</h1>
+<h1><img src="TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1">記憶體暫停</h1>
 
-<p><span style="font-weight: bold;"><B>Store_Forwarding_Blocked</B></span> ��һ�����档</p>
+<p><span style="font-weight: bold;"><B>Store_Forwarding_Blocked</B></span> 是一個警告。</p>
 
-<p>Ϊ�䷢�� <span style="font-weight: bold;"><B>Store_Forwarding_Blocked</B></span> ��ָ����ǰһ��������д���ص��ڴ�ռ��ָ��֮���ȡ���ݡ�����������֮һ��ʵ������������ͣ��</p>
+<p>為其發出 <span style="font-weight: bold;"><B>Store_Forwarding_Blocked</B></span> 的指令在前一條將數據寫入重疊記憶體空間的指令之後讀取數據。如果以下情況之一屬實，將發生此暫停：</p>
 
 <ul>
 	
-	<li class=kadov-p><p>��ȡָ���д��ָ���Ŀ���ڴ��ַ����ͬ��</p></li>
+	<li class=kadov-p><p>讀取指令和寫入指令的目標記憶體地址不相同。</p></li>
 	
-	<li class=kadov-p><p>��ȡ��д��ָ���Ŀ���ڴ��ַ����ͬ�ĵ�ַ���룬����ȡ�����ݴ���д������ݡ�</p></li>
+	<li class=kadov-p><p>讀取和寫入指令的目標記憶體地址與相同的地址對齊，但讀取的數據大於寫入的數據。</p></li>
 </ul>
 
-<h4>�洢ת���еĴ�С���������</h4>
+<h4>儲存轉發中的大小與對齊限制</h4>
 
-<p><img src="store_forward.gif" alt="�洢ת���еĴ�С���������" x-maintain-ratio="TRUE" width="582px" height="338px" border="0" class="img_whs2"></p>
+<p><img src="store_forward.gif" alt="儲存轉發中的大小與對齊限制" x-maintain-ratio="TRUE" width="582px" height="338px" border="0" class="img_whs2"></p>
 
-<p>�����й���ϸ��Ϣ�������<a href="../../Reference_HH/Intel_s_Software_Developer_s_Manuals.html" style="x-condition: eclipse;">����Ӣ�ض�(R) (R) ����(R) 4 �������ֲ�</a>��</p>
+<p>如需有關詳細資訊，請參閱<a href="../../Reference_HH/Intel_s_Software_Developer_s_Manuals.html" style="x-condition: eclipse;">線上英特爾(R) (R) 奔騰(R) 4 處理器手冊</a>。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs3"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs3"> 備註</h3>
 
-<p class="whs4">���ں�&ldquo;��������������ָ���������չָ�&rdquo;(SSE3) ��Ӣ�ض�(R) ����(R) 4 �������ϣ�ֻͬ�������� b) �� c) �йء�Ҳ����˵��������������вŻᷢ���ͷ���С����Ԫ�ص�д������ͬ��ַ�Ĵ�����Ԫ�ض�ȡ��</p>
+<p class="whs4">對於含&ldquo;第三代數據流單指令多數據擴充套件指令集&rdquo;(SSE3) 的英特爾(R) 奔騰(R) 4 處理器上，只同上述情形 b) 與 c) 有關。也就是說，僅在以下情況中才會發生懲罰：小數據元素的寫入後跟相同地址的大數據元素讀取。</p>
 
 <h3 class=NoteTipHead
 	style="margin-left: 40px;"><script type="text/javascript" language="JavaScript"><!--
@@ -157,25 +157,25 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4))
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='tip.gif' width='17px' height='18px' border='0' class='img_whs5'>");}
 else
 {   document.write("<img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs5'>");}
-//--></script><noscript><img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs5'></noscript><span style="font-weight: bold;"><B>����</B></span></h3>
+//--></script><noscript><img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs5'></noscript><span style="font-weight: bold;"><B>建議</B></span></h3>
 
-<p class="whs4">ʹ������ָ��֮һ��ȡҪʹ�� MMX(TM) ����ָ��������ݣ�</p>
+<p class="whs4">使用以下指令之一讀取要使用 MMX(TM) 技術指令處理的數據：</p>
 
 <ul>
 	
 	<ul type="disc" class="whs6">
 		
-		<li class=kadov-p><p>��ȡ 64 λ�������� MMX ����ָ����� MOVQ MM0, m64����</p></li>
+		<li class=kadov-p><p>讀取 64 位運算元的 MMX 技術指令（例如 MOVQ MM0, m64）。</p></li>
 		
-		<li class=kadov-p><p>���������ڴ���������κ� MMX ����ָ��ļĴ���-�ڴ���ʽ������ PMADDWD MM0, m64����</p></li>
+		<li class=kadov-p><p>操作四字記憶體運算元的任何 MMX 技術指令的暫存器-記憶體形式（例如 PMADDWD MM0, m64）。</p></li>
 	</ul>
 </ul>
 
-<p class="whs4">ʹ��д�� 64 λ�������� MMX ����ָ��д�� 64 λ���֣����� MOVQ MM0, m64����</p>
+<p class="whs4">使用寫入 64 位運算元的 MMX 技術指令寫入 64 位四字（例如 MOVQ MM0, m64）。</p>
 
-<h3>ʾ���������ڴ��С��ͣ����</h3>
+<h3>示例（避免記憶體大小暫停）：</h3>
 
-<p>��ʾ������ȡ������д���Զ�ĵ���ѭ���У��Ӷ�������ͣ��</p>
+<p>此示例將讀取放在離寫入很遠的單獨循環中，從而避免暫停：</p>
 
 <p class="whs7">&nbsp;</p>
 
@@ -185,10 +185,10 @@ else
 <tr>
 <td valign="top" class="whs9">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ԭʼ����</td>
+	style="margin-bottom: 0;">原始程式碼</td>
 <td valign="top" class="whs9">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">�Ż�����</td></tr>
+	style="margin-bottom: 0;">優化程式碼</td></tr>
 
 <tr>
 <td valign="top" class="whs9">
@@ -219,14 +219,14 @@ rst1[i] = *(unsigned long *) &amp;array[i *2];
 
 <tr>
 <td valign="top" class="whs9">
-<p class="whs7">��ÿһ��ѭ���У��˴��뽫 2 ���ֽ�д�� array[i] �ĵ�ַ���� 2 ���ֽ�д���ַ array[i] ��ƫ�������� array[i+1]����Ȼ��ӵ�ַ array[i] ��ȡ 4 ���ֽڡ�ÿ�ζ�ȡ������һ����ͣ��</td>
+<p class="whs7">在每一遍循環中，此程式碼將 2 個位元組寫入 array[i] 的地址，將 2 個位元組寫入地址 array[i] 的偏移量（即 array[i+1]），然後從地址 array[i] 讀取 4 個位元組。每次讀取都導致一次暫停。</td>
 <td valign="top" class="whs9">
-<p class="whs7">�˴����ڵ�һ��ѭ���ڽ����е�����д����������Ԫ�أ��Ӷ�������ͣ��<br>Ȼ�����ڵ�����ѭ����ִ�����еĶ�ȡ��</td></tr>
+<p class="whs7">此程式碼在第一個循環內將所有的數據寫入兩個陣列元素，從而避免暫停。<br>然後，它在單獨的循環中執行所有的讀取。</td></tr>
 </table>
 
-<h3>ʾ���������ڴ������ͣ����</h3>
+<h3>示例（避免記憶體對齊暫停）：</h3>
 
-<p>��ʾ������ȡ����������ǰ���д���Զ��λ�ã��Ӷ�������ͣ��</p>
+<p>此示例將讀取放在離它們前面的寫入很遠的位置，從而避免暫停。</p>
 
 <p class="whs7">&nbsp;</p>
 
@@ -236,10 +236,10 @@ rst1[i] = *(unsigned long *) &amp;array[i *2];
 <tr>
 <td valign="top" class="whs9">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ԭʼ����</td>
+	style="margin-bottom: 0;">原始程式碼</td>
 <td valign="top" class="whs9">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">�Ż�����</td></tr>
+	style="margin-bottom: 0;">優化程式碼</td></tr>
 
 <tr>
 <td valign="top" class="whs9">
@@ -268,20 +268,20 @@ rst2[i] = *(unsigned short *)
 
 <tr>
 <td valign="top" class="whs9">
-<p class="whs7">��ÿһ��ѭ���У��˴��뽫 2 ���ֽ�д���ַ array[i]��Ȼ��ӵ�ַ array[i] ��ƫ�������� array[i] + 1����ȡ 2 ���ֽڡ�<br>ÿ�ζ�ȡ������һ����ͣ��</td>
+<p class="whs7">在每一遍循環中，此程式碼將 2 個位元組寫入地址 array[i]，然後從地址 array[i] 的偏移量（即 array[i] + 1）讀取 2 個位元組。<br>每次讀取都導致一次暫停。</td>
 <td valign="top" class="whs9">
-<p class="whs7">�˴���������һ��ѭ���ڽ����е�����д���ַ array[i]���Ӷ�������ͣ��<br>Ȼ������һ��������ѭ���У��Ӹõ�ַ��ƫ�Ƶ�ִַ�����еĶ�ȡ��</td></tr>
+<p class="whs7">此程式碼首先在一個循環內將所有的數據寫入地址 array[i]，從而避免暫停。<br>然後，它在一個單獨的循環中，從該地址的偏移地址執行所有的讀取。</td></tr>
 </table>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','MMX(TM) ���� MOV �����','lipsmmx_mov_dep.htm','���ݿ��ͻ','lipsbank_conflict.htm');return false;" title="�ڴ�ͷ�"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%86%85%e5%ad%98%e6%83%a9%e7%bd%9a.gif" border=0 height=20 width=58 alt="�ڴ�ͷ�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','MMX(TM) 技術 MOV 相關性','lipsmmx_mov_dep.htm','數據塊衝突','lipsbank_conflict.htm');return false;" title="記憶體懲罰"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%86%85%e5%ad%98%e6%83%a9%e7%bd%9a.gif" border=0 height=20 width=58 alt="記憶體懲罰"></a>
 
  &nbsp;</p>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 ������','p_processor.htm','����(R) 4 ������','pentium(r)_4_processor.htm','����(R) II ������','pentium(r)_ii_processor.htm','����(R) III ������','pentium(r)_iii_processor.htm','����(R) M ������','pentium(r)_m_processor.htm','����(R) Pro ������','pentium(r)_pro_processor.htm');return false;" title="Ӱ��Ĵ�����"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%bd%b1%e5%93%8d%e7%9a%84%e5%a4%84%e7%90%86%e5%99%a8.gif" border=0 height=20 width=82 alt="Ӱ��Ĵ�����"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','含第三代數據流單指令多數據擴充套件指令集 (SSE3) 的英特爾(R) 奔騰(R) 4 處理器','p_processor.htm','奔騰(R) 4 處理器','pentium(r)_4_processor.htm','奔騰(R) II 處理器','pentium(r)_ii_processor.htm','奔騰(R) III 處理器','pentium(r)_iii_processor.htm','奔騰(R) M 處理器','pentium(r)_m_processor.htm','奔騰(R) Pro 處理器','pentium(r)_pro_processor.htm');return false;" title="影響的處理器"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%bd%b1%e5%93%8d%e7%9a%84%e5%a4%84%e7%90%86%e5%99%a8.gif" border=0 height=20 width=82 alt="影響的處理器"></a>
 
 
  </p>

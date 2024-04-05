@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/streaming_simd_extensions_input_assists.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:52 GMT -->
 <head>
 
-<title>��������ָ���������չָ�����Э��</title>
+<title>數據流單指令多數據擴充套件指令集輸入協助</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -79,7 +79,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n����Ӣ�ض�(R) ����(R) 4 ��������ϸ��\n��������ָ���������չָ�����Э��");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n關於英特爾(R) 奔騰(R) 4 處理器的建議\n關於英特爾(R) 奔騰(R) 4 處理器的細節\n數據流單指令多數據擴充套件指令集輸入協助");
 
 	}
 	if (window.writeBtnStyle)
@@ -102,21 +102,21 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/TA_logo.gif" alt="Ӣ�ض�&#xAE; ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">��������ָ���������չָ�����Э��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/TA_logo.gif" alt="英特爾&#xAE; 調優助手主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">數據流單指令多數據擴充套件指令集輸入協助</h1>
 
-<p>����Э����Ҫ΢����Э�������ᵼ�����Ե����ܳͷ�����ע��ʹ�� Microsoft ��Ӣ�ض������±�����ͨ�����Ծ��������⡣<br>���ڲ���&ldquo;���̼߳���&rdquo;��ϵͳ��ദ����ϵͳ�����Ƶ�Ӱ������ܼƴ�����ʱ��Ӱ�죨ϵͳ�������߼�/����������֮�ͣ���������&ldquo;ʵ��ִ��&rdquo;ʱ��Ӱ�졣��ˣ��ڲ���&ldquo;���̼߳���&rdquo;��ϵͳ��ദ����ϵͳ�ϣ��ܿ��ܻῴ��ϸ�ڵ�ʱ��Ӱ����ڶԸ���ʵ��ִ��ʱ���Ӱ�졣��ע�⣬�ڵ�������ϵͳ�ϣ�������ʱ����ʵ��ִ��ʱ����ͬ��</p>
+<p>輸入協助需要微程式碼協助，它會導致明顯的效能懲罰。備註：使用 Microsoft 或英特爾的最新編譯器通常可以糾正此問題。<br>對於採用&ldquo;超執行緒技術&rdquo;的系統或多處理器系統，估計的影響代表總計處理器時間影響（系統上所有邏輯/物理處理器之和），而不是&ldquo;實際執行&rdquo;時間影響。因此，在採用&ldquo;超執行緒技術&rdquo;的系統或多處理器系統上，很可能會看到細節的時間影響大於對負載實際執行時間的影響。請注意，在單處理器系統上，處理器時間與實際執行時間相同。</p>
 
 &nbsp; 
 
 <br>&nbsp; 
  
 
-<br><b>����������ԣ�</b><br> <br>��ϸ�����������ܼ�����������أ�<br> <br>�����ͺ� 0��1�������������£�<br> <br> SSEInputAssists ����Ӱ�� = ((<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/streaming_simd_extensions_input_assists.htm" style="x-condition: eclipse;">��������ָ���������չָ�����Э�� (TI)</a>*1300)/<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Clockticks.htm" style="x-condition: eclipse;">ʱ���ź�</a>)*100<b><br> �ϵ�ֵ��</b>0.2<b><br> �ϸ�ֵ��</b>2<br><br> �����ͺ� 2�������������£�<br> <br> SSEInputAssists ����Ӱ�� = ((<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/streaming_simd_extensions_input_assists.htm" style="x-condition: eclipse;">��������ָ���������չָ�����Э�� (TI)</a>*650)/<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Clockticks.htm" style="x-condition: eclipse;">ʱ���ź�</a>)*100<b><br> �ϵ�ֵ��</b>0.2<b><br> �ϸ�ֵ��</b>2<br><br>��&ldquo;SSEInputAssists ����Ӱ��&rdquo;<b>�ϸ�</b>ʱ����ϸ�ھ���ʵ�������塣<b><br><br>���飺</b> 
+<br><b>計數器相關性：</b><br> <br>此細節與以下效能計數器函式相關：<br> <br>對於型號 0、1，函式定義如下：<br> <br> SSEInputAssists 效能影響 = ((<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/streaming_simd_extensions_input_assists.htm" style="x-condition: eclipse;">數據流單指令多數據擴充套件指令集輸入協助 (TI)</a>*1300)/<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Clockticks.htm" style="x-condition: eclipse;">時鐘訊號</a>)*100<b><br> 較低值：</b>0.2<b><br> 較高值：</b>2<br><br> 對於型號 2，函式定義如下：<br> <br> SSEInputAssists 效能影響 = ((<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/streaming_simd_extensions_input_assists.htm" style="x-condition: eclipse;">數據流單指令多數據擴充套件指令集輸入協助 (TI)</a>*650)/<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Clockticks.htm" style="x-condition: eclipse;">時鐘訊號</a>)*100<b><br> 較低值：</b>0.2<b><br> 較高值：</b>2<br><br>在&ldquo;SSEInputAssists 效能影響&rdquo;<b>較高</b>時，此細節具有實質性意義。<b><br><br>建議：</b> 
 
 <ul>
 	
 	<li class=kadov-p
-		class=kadov-p><a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/avoiding_sse_denormals.htm">���� SSE �ǹ��</a></li>
+		class=kadov-p><a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/avoiding_sse_denormals.htm">避免 SSE 非規格化</a></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

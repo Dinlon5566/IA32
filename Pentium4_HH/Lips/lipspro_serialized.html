@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/lipspro_serialized.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:38:27 GMT -->
 <head>
 
-<title>���л�ָ��</title>
+<title>序列化指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta NAME=MS-HAID CONTENT="Pentium(R) II and Pentium Pro Processor Penalties">
 <meta NAME=MS-HAID CONTENT="Misalignment Penalties">
 <meta name=date content="04 8, 2003 2:36:08 PM">
@@ -97,7 +97,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������ĳͷ�\n���л�ָ��");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器的懲罰\n序列化指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -120,33 +120,33 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> ���л�ָ��</h1>
+<h1><img src="TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> 序列化指令</h1>
 
-<p><span style="font-weight: bold;"><B>Serialized_Instruction</B></span> ��һ�����档</p>
+<p><span style="font-weight: bold;"><B>Serialized_Instruction</B></span> 是一個警告。</p>
 
-<p>Ϊ�䷢�� <span style="font-weight: bold;"><B>Serialized_Instruction</B></span> ��ָ������л����������л�ʱ��ִ�л�һֱ�ӳٵ�ǰ�������ָ���ִ�в�ʧЧ���������ǵĽ����д���ڴ档</p>
+<p>為其發出 <span style="font-weight: bold;"><B>Serialized_Instruction</B></span> 的指令導致序列化。發生序列化時，執行會一直延遲到前面的所有指令都已執行並失效，並且它們的結果已寫回記憶體。</p>
 
-<p>����ָ��ᵼ�����л���</p>
+<p>以下指令會導致序列化：</p>
 
 <ul>
 	
-	<li class=kadov-p><p>�� lock ǰ׺�Ķ�ȡ - �޸� - д��ָ��</p></li>
+	<li class=kadov-p><p>帶 lock 字首的讀取 - 修改 - 寫入指令</p></li>
 	
-	<li class=kadov-p><p>ʹ���ڴ�������� XCHG</p></li>
+	<li class=kadov-p><p>使用記憶體運算元的 XCHG</p></li>
 	
-	<li class=kadov-p><p>�Ƶ����ƻ���ԼĴ����� MOV ָ��</p></li>
+	<li class=kadov-p><p>移到控制或除錯暫存器的 MOV 指令</p></li>
 </ul>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>����</B></span></h3>
+	style="margin-left: 40px;"><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>建議</B></span></h3>
 
-<p class="whs3">�����ܽ���ȡ - �޸� - д���滻������ָ�����У����ڴ����������Ĵ������޸ļĴ�����Ȼ�󽫼Ĵ������ƻ��ڴ档</p>
+<p class="whs3">儘可能將讀取 - 修改 - 寫入替換成以下指令序列：將記憶體運算元移入暫存器，修改暫存器，然後將暫存器複製回記憶體。</p>
 
-<p class="whs3">����<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#Semaphore" style="x-condition: WebHelp;">�ź���</a>ģ��ʱ������ʹ�ô� lock ǰ׺�Ķ�ȡ - �޸� - д��ָ�</p>
+<p class="whs3">建立<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#Semaphore" style="x-condition: WebHelp;">訊號量</a>模型時，必須使用帶 lock 字首的讀取 - 修改 - 寫入指令。</p>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','����(R) 4 ������','pentium(r)_4_processor.htm','����(R) II ������','pentium(r)_ii_processor.htm','����(R) III ������','pentium(r)_iii_processor.htm','����(R) M ������','pentium(r)_m_processor.htm','����(R) Pro ������','pentium(r)_pro_processor.htm');return false;" title="Ӱ��Ĵ�����"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%bd%b1%e5%93%8d%e7%9a%84%e5%a4%84%e7%90%86%e5%99%a8.gif" border=0 height=20 width=82 alt="Ӱ��Ĵ�����"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','奔騰(R) 4 處理器','pentium(r)_4_processor.htm','奔騰(R) II 處理器','pentium(r)_ii_processor.htm','奔騰(R) III 處理器','pentium(r)_iii_processor.htm','奔騰(R) M 處理器','pentium(r)_m_processor.htm','奔騰(R) Pro 處理器','pentium(r)_pro_processor.htm');return false;" title="影響的處理器"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%bd%b1%e5%93%8d%e7%9a%84%e5%a4%84%e7%90%86%e5%99%a8.gif" border=0 height=20 width=82 alt="影響的處理器"></a>
 
 
  </p>

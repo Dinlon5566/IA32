@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/reducing_cache_misses.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:33 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>���ٻ���δ����</title>
+<title>減少快取未命中</title>
 
 <!--(Meta)==========================================================-->
 
@@ -103,27 +103,27 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">���ٻ���δ���У���������ǿ</h1>
+<h1><img src="p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">減少快取未命中：區域性增強</h1>
 
-<p>���ܻ���δ���б��ʿ��ܽϵͣ���������ͨ�����ڵȴ���������δ���еĹ����л����൱һ����ִ��ʱ�䡣ͨ����ǿ����������Լ��ٻ���δ������һ����Ҫ���Ż���������ȡ���´�ʩ���Լ��ٻ���δ���У�</p>
+<p>儘管快取未命中比率可能較低，但處理器通常會在等待處理快取未命中的過程中花費相當一部分執行時間。通過增強程式的區域性減少快取未命中是一種主要的優化方法。採取以下措施可以減少快取未命中：</p>
 
 <ul type="disc" class="whs2">
 	
-	<li class=kadov-p><p>��������ʹ�þ�����С�����ݴ�С</p></li>
+	<li class=kadov-p><p>在陣列中使用盡可能小的數據大小</p></li>
 	
-	<li class=kadov-p><p>�ʵ���֯���룬ʹͬʱ��Ҫ��ֵ�洢���ڽ���λ��</p></li>
+	<li class=kadov-p><p>適當組織程式碼，使同時需要的值儲存在鄰近的位置</p></li>
 	
-	<li class=kadov-p><p>�ʵ�����㷨��ʹ�ڲ�ѭ���з��ʵĹ�������С</p></li>
+	<li class=kadov-p><p>適當設計演算法，使內部循環中訪問的工作集更小</p></li>
 	
-	<li class=kadov-p><p><span style="font-weight: bold;"><B>�û�/Դ���������� 6</B></span>����Ӱ��� H��ͨ���� H���򿪱������е�ѭ���Ż�������ǿǶ��ѭ���������ԡ�</p></li>
+	<li class=kadov-p><p><span style="font-weight: bold;"><B>使用者/原始碼編碼規則 6</B></span>。（影響度 H，通用性 H）打開編譯器中的循環優化，以增強巢狀循環的區域性。</p></li>
 </ul>
 
 <ul type="disc" class="whs2">
 	
-	<li class=kadov-p><p><span style="font-weight: bold;"><B>�û�/Դ���������� 7</B></span>����Ӱ��� H��ͨ���� H��ѭ��ģ�黯��ѭ��������ѭ��ʱ����ϲ����Ż���������ɱ�����ʵ�֡��Ż����ݽṹ��ʹ֮�ɷ���һ���������������һ���ڡ�</p></li>
+	<li class=kadov-p><p><span style="font-weight: bold;"><B>使用者/原始碼編碼規則 7</B></span>。（影響度 H，通用性 H）循環模組化、循環互換、循環時滯與合併等優化技術最好由編譯器實現。優化數據結構，使之可放入一級快取或二級快取的一半內。</p></li>
 </ul>
 
-<p><a HREF="memory_operands.html">�ڴ������</a>���ܻᵼ�����ݻ���δ���У��Ӷ����³ͷ���</p>
+<p><a HREF="memory_operands.html">記憶體運算元</a>可能會導致數據快取未命中，從而導致懲罰。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

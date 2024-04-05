@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc312.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:45 GMT -->
 <head>
 
-<title>SYSEXIT - ��ϵͳ������ڿ���ת��</title>
+<title>SYSEXIT - 從系統呼叫入口快速轉出</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:22:35 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -27,7 +27,7 @@
 <meta name=page-count content=1>
 <meta name=layout-height content=1780>
 <meta name=layout-width content=792>
-<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;EFLAGS;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;��F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;��;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FSUB;FSUBP;FISUB;Dest;FSUBR;FSUBRP;FISUBR;FLDZ--Load;EB;EC;EE;FLDZ;FLDPI;FCLEX;FNCLEX--Clear;FNCLEX*;PE;UE;OE;ZE;IE;FNCLEX;MS-DOS*;MXCRS;FNINIT*;coprocessor;FPUControlWord;FPUStatusWord;FPUTagWord;FPUDataPointer;FPUInstructionPointer;FPULastInstructionOpcode;FINIT;FNINIT;MXCSR;FSAVE;FNSAVE--Store;FNSAVE*;FNSAVE;FNINIT--Initialize;coprocessors;FPUs;FWAIT;DEST[FPUControlWord;DEST[FPUStatusWord;DEST[FPUTagWord;DEST[FPUDataPointer;DEST[FPUInstructionPointer;DEST[FPULastInstructionOpcode;nonwritable;FSTCW;FNSTCW--Store;FNSTCW*;FNSTCW;FNSTENV--Store;FSTENV;FNSTENV*;FNSTENV;FNSTSW--Store;FNSTSW*;FNSTSW;FPREM;FXAM;FSTSW;denormalized;MOV--Move;ModR;M;m;PG;PGE;PSE;PAE;PDPTRs;MOV;reg;TLB;Lookaside;TLBs;GD;FSTP--Store;FST;FSTP;significand;FUCOMIP--Compare;FUCOMIP;FCOMI;FCOMIP;FUCOMI;FUCOMPP--Unordered;FUCOMP;FUCOMPP;FWAIT--Wait;MP;INSB;INSW;INSD--Input;INSD;CPL;IOPL;VM;TSS;CL;BL;CH;DH;BH;CX;BX;SP;EBX;EBP;mm--An;XLAT;LIDT;LGDT;GDTR;IDTR;ith;DPL=;C;W;Y;INTRA-PRIVILEGE-LEVEL-INTERRUPT;flag*;Push(CS;Push(IP;IDT(Descriptor;vector_number;GP((DEST;EXT;GP((vector_number;NP((vector_number;GDT;GP(TSS;NP(TSS;Push(error;GP(selector;NP(selector;GP(new;GP(CodeSegmentSelector;INTER-PREVILEGE-LEVEL-INTERRUPT;TSSstackAddress;TS(current;NewSS;NewESP;TS(EXT;RPL;TS(SS;LDT;SS(SS;selector+EXT;SS(segment;TSS(NewSS;Gate(CS;IP;Push(far;Push(EFLAGS;Push(ErrorCode;ELSE(*;CodeSegmentDescriptor(DPL;CS(RPL;RF;tempEFLAGS;TempSS;TempESP;Push(GS;Push(FS;Push(DS;Push(ES;Push(TempSS;Push(TempESP;Push(TempEFlags;Push(EIP;Gate(instruction;ErrorCode;SS(selector;TS(selector;TSS's;INT;n;CE;IDT;VME;Microsoft*;EIP;IRET;DPL;GOTO;TF;CMC;LIDT--Load;SFENCE--Store;IDTR(Limit;IDTR(Base;GDTR(Limit;GDTR(Base;SIDT--Store;SGDT;SIDT;mm_loadr_ps;mm_cmpgt_ss;Intrinsics;intrinsics;xmm;declspec;ps;ss;z;y;w;t;mm_load_ps(a;immediates;Intra-privilege;Pop(;tempEIP;tempCS;tempEFLAGS(VM;VIF;EFLAGS(IF;EFLAGS(IOPL;EFLAGS(VM;RETURN-TO-OUTER-PRIVILGE-LEVEL;GP(SSselector;LODSD--Load;LODSD;LOOPcc--Loop;LOOPE;LOOPZ;LOOPNE;LOOPNZ;AddressSize;BranchCond;SignExtend(DEST;LSS--Load;SegmentRegister(DescriptorValidBit;Offset(SRC;XCHG--Exchange;MOVSD--Move;rw;rb;SI's;AddressSize--The;StackAddrSize--Represents;SRC--Represents;DEST--Represents;ZeroExtend(value;ZeroExtend;SignExtend(value;SignExtend;SaturateSignedWordToSignedByte--Converts;SaturateSignedDwordToSignedWord--Converts;SaturateSignedWordToUnsignedByte--Converts;FFH;SaturateToSignedByte--Represents;SaturateToSignedWord--Represents;SaturateToUnsignedByte--Represents;SaturateToUnsignedWord--Represents;LowOrderWord(DEST;HighOrderWord(DEST;Push(value;PUSH--Push;POP--Pop;PopRegisterStack--Marks;Switch-Tasks--Performs;Bit(BitBase;BitOffset;Bit[EAX;BIT[EAX;BitBase;GBits;DIV;EWBE#;EFLAGS(RF;SegmentSelector;IRETD;LODS;LODSB;LODSW;cb;LOOPcc;LDS;LES;LFS;LGS;LSS;ProtectedMode;SegementSelector;SegmentSelector(SRC;SegmentDescriptor([SRC;SegmentRegister;NullSelector;software*;XCHG;BSWAP;MOVSB;MOVSW;MOVS;MOVSD;Encodings;OUTSB;OUTSW;OUTSD;prefetched;PADDB;PADDW;FC;FD;FE;PADDD;PADDSW--Packed;SaturateToSignedByte;SaturateToSignedWord;PADDSB;PADDSW;PADDUSW--Packed;SaturateToUnsignedByte;SaturateToUnSignedByte;SaturateToUnsignedWord;SaturateToUnSignedWord;PADDUSB;PADDUSW;PAVGW--Packed;PAVGB;PAVGW;PCMPEQB;PCMPEQW;PCMPEQD;PCMPGTD--Packed;FFFFFFFFH;DCMPGTD;PCMPGTB;PCMPGTW;PCMPGTD;POPA;POPAD;PUSHA;PUSHAD;POPFD--Pop;POPF;POPFD;PUSHF;PUSHFD;unaffected*;PSLLQ--Packed;ZeroExtend(DEST;PSLLW;PSLLD;PSLLQ;quadwords;int;PSRAD--Packed;PSRAW;PSRAD;PSRLQ--Packed;PSRLW;PSRLD;PSRLQ;PSUBD--Packed;PSUBB;PSUBW;PSUBD;PSUBSW--Packed;PSUBSB;PSUBSW;PSUBUSW--Packed;MMX;PSUBUSB;PSUBUSW;PUNPCKHQDQ--;PUNPCKHW;PUNPCKHBW;PUNPCKHWD;PUNPCKHDQ;PUNPCKHQDQ;PUNPCKLQDQ--;PUNPCKLBW;PUNPCKLWD;PUNPCKLDQ;PUNPCKLQDQ;Push(ECX;Push(EDX;Push(EBX;Push(Temp;Push(EBP;Push(ESI;Push(EDI;Push(AX;Push(CX;Push(DX;Push(BX;Push(BP;Push(SI;Push(DI;Push(EAX;PUSHFD--Push;push(EFLAGS;stack*;EFLAG;IDIV;Coprocessor;NMI;INTR;NP;MC;XF;STOS;nonmatching;AE;SCAS;non-EAX;REPNZ;JECXZ;JZ;JNZ;JNE;CountReg;LSB(DEST;LSB(SRC;MSB;RCL;RCR;ROL;ROR;tempCOUNT;tempCF;MSB(DEST;ELIHW;XOR;ROR--Rotate;SCASB;SCASD--Scan;ES(E;SCASW;SCASD;SAL;SAR;divide*;SHL;SHR;tempDEST;infinity*;Denormalized;misaligned;MOVUPS;Denormal;CPUID.XMM;mm_setcsr(unsigned;EFLAGS.AC;CPUID.XMM(EDX;LDMXCSR;FZ;underflows;FXRSTOR;STOSD--Store;STOSB;STOSW;STOSD;FLD--Load;ExtendedReal(SRC;FLD;FLDCW--Load;FLDCW;FPU's;FLDENV--Load;SRC[FPUControlWord;SRC[FPUStatusWord;SRC[FPUTagWord;SRC[FPUDataPointer;SRC[FPUInstructionPointer;SRC[FPULastInstructionOpcode;FLDENV;FNOP--No;FNOP;FPATAN--Partial;Arctangent;arctangent;FPATAN;FPREM--Partial;LeastSignificantBits(Q;modulus;Q;Std;N;QQ;ADDSD--Scalar;mm_add_sd;ADDSD;FPTAN--Partial;FPTAN;FRNDINT--Round;FRNDINT;FRSTOR--Restore;FRSTOR;FSCALE--Scale;FSCALE;FXTRACT;FSIN;FB;FSINCOS;FCOS;FSQRT;ADDSS;SSE;FTST--TEST;FTST;FXCH--Exchange;FXCH;IP-offset;FXSAVE;DP;FTW;FSW;FCW;AND--Logical;iw;bitwise;little-endian;FP;non-TOS;xx;FXTRACT--Extract;superset;logb(x;Significand;logbx;HLT--Halt;HLT;IDIV--Signed;EAX=Quotient;EDX=Remainder;OpernadSize;SignedModulus;EDXE;IMUL--Signed;IMUL;MUL;NumberOfOperands;size*;IN--Input;INC--Increment;INC;FF;ANDPD--Bitwise;ANDPD;BitwiseAND;Bitwise;INVD--Invalidate;INVD;WBINVD;Flush(InternalCaches;SignalFlush(ExternalCaches;INVLPG--Invalidate;INVLPG;lookaside;Flush(RelevantTLBEntries;Jcc--Jump;JA;JAE;JB;JBE;JC;JCXZ;JE;JG;SF=OF;JGE;JL;JLE;JNA;JNAE;JNB;JNBE;JNC;JNG;JNGE;JNL;JNLE;JNO;JNP;JNS;JP;JPE;JPO;JS;cw;Jcc;opcodes;JMP;FARLABEL;cacheability;EA;cp;jump--A;LFENCE;MFENCE;SFENCE;WB;WC;PREFETCHh;specualtive;LLDT;LDTR;LAR;VERR;VERW;LSL;LDTR(SegmentSelector;LDTR(SegmentDescriptor;ADDPD;ANDNPD;prepended;ADC;BTC;BTR;BTS;CMPXCHG;NEG;SBB;XADD;LOCK#;AssertLOCK#(DurationOfAccompaningInstruction;LSL--Load;LTR;TSSsegmentDescriptor(busy;TaskRegister(SegmentSelector;TaskRegister(SegmentDescriptor;MASKMOVDQU;UC;WP;MASKMOVQ;MAXPD--Maximum;MAXPD;MAXPS;ANDN;Single-FP;ANDNPS;MAXSD;MAXSS;Wait_On_Following_Loads_And_Stores_Until(preceding_loads_and_stores_globally_visible;MINPD;MINPS;MINSD;MINSS;Sreg;seg;ARPL;DEST[RPL;SRC[RPL;MOVAPD--Move;MOVAPD;MOVUPD;void_mm_store_pd(double;MOVAPS;void_mm_store_ps;MOVD;XXM;MOVDQA;MOVDQU;mmx;MOVHLPS--;MOVHLPS;MOVHPD;MOVHPS;MOVLHPS;doubleword-integers;ArrayIndex;LowerBound;UppderBound;MOVLPD;nvalue;mm_loadl_pd;mm_storel_pd;MOVLPS;mm_loadl_pi;mm_storel_pi;MOVMSKPD;mm_movemask_pd;MOVMSKPS;MOVNTDQ;uncacheable;MOVNTI;MOVNTPD;MOVNTPS;MOVNTQ--Move;MOVNTQ;MOVQ;BC;BSF;mm_load_sd;mm_store_sd;MOVSS;MOVSX;BF;MOVZX;MULPD;BD;BSR;MULPS;mem;MULSD;MULSS;NOP;ORPD;ORPS;EF;big-endian;SaturateSignedWordToUnsignedByte;PACKUSWB;��;PADDQ;PAND;PANDN;BT;modulo;PEXTRW;SEL;imm;d;PINSRW;PMADDWD;PMADD;PMAXSW;PMAXUB;PMINSW;MINSW;PMINUB;PMOVMSKB;PMULHUW;PMULHW;PMULLW;PMULLU;PMULUDQ;POR;PREFETCHNTA;NTA;prefetch;Prefetches;CLFLUSH;WRMSR;CR;PSADBW;Doublewords;PSHUFD;PSHUFHW;encodings;PSHUFLW;PSHUFW;PSLLDQ;PSRLDQ;intrasegment;call--A;intersegment;switch--A;KBytes;GP(segment;newESP;CallGate(CS;newSS;Push(oldSS;Push(parameters;Push(oldCS;InstructionPointer;oldESP;oldEIP;CodeSegment(DPL;CallGateSize;oldIP;GP(task;NP(task;PSUBQ;PXOR;RCPPS;RCPSS;RCCPS;RDMSR;MSR;unimplemented;MSRs;PMC[ECX;RDPMC;PCE;RDPCM;RDTSC;TSD;SS(StackSegmentSelector;ReturnCodeSegmentSelector(RPL;tempESP;tempSS;RSM;SMM;SSM;ProcessorState;RSQRTPS;RSQRTSS;SAHF;SETL;SETLE;SETNA;SETNAE;SETNB;SETNBE;SETNC;SETNE;SETNG;SETNGE;SETNL;SETNLE;SETNO;SETNP;SETNS;SETNZ;SETO;SETP;SETPE;SETPO;SETZ;SETcc;decrementing;SETB;SETBE;SETC;SETE;SETG;multiprecision;BIT[DEST;DOWNTO;Bit(DEST;BIT[SRC;SHLD;BIT[inBits;SHRD;SHUFPD;SHUFPS;SLDT;SMSW;SQRTPD;SQRTPS;SQRTSD;CLD;SQRTSS;SQRT;STC;STD;STI;maskable;CLI;mode*;STR;SUBPD;SUBPS;SUBSD;SUBSS;SYSENTER;SYSEXIT;DLLs;GB;SEP;EFLAGS.VM;EFLAGS.IF;CS.SEL;CS.SEL.CPL;CS.SEL.BASE;CS.SEL.LIMIT;CS.SEL.G;KB;CS.SEL.S;CS.SEL.TYPE_xCRA;CS.SEL.D;CS.SEL.DPL;CS.SEL.RPL;CS.SEL.P;SS.SEL;SS.SEL.BASE;SS.SEL.LIMIT;SS.SEL.G;SS.SEL.S;SS.SEL.TYPE_xCRA;SS.SEL.D;SS.SEL.DPL;SS.SEL.RPL;SS.SEL.P;SYSENTER_ESP_MSR;SYSENTER_EIP_MSR;SYSENTER_CS_MSR;SS.SEL.CPL">
+<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;EFLAGS;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;±F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;±;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FSUB;FSUBP;FISUB;Dest;FSUBR;FSUBRP;FISUBR;FLDZ--Load;EB;EC;EE;FLDZ;FLDPI;FCLEX;FNCLEX--Clear;FNCLEX*;PE;UE;OE;ZE;IE;FNCLEX;MS-DOS*;MXCRS;FNINIT*;coprocessor;FPUControlWord;FPUStatusWord;FPUTagWord;FPUDataPointer;FPUInstructionPointer;FPULastInstructionOpcode;FINIT;FNINIT;MXCSR;FSAVE;FNSAVE--Store;FNSAVE*;FNSAVE;FNINIT--Initialize;coprocessors;FPUs;FWAIT;DEST[FPUControlWord;DEST[FPUStatusWord;DEST[FPUTagWord;DEST[FPUDataPointer;DEST[FPUInstructionPointer;DEST[FPULastInstructionOpcode;nonwritable;FSTCW;FNSTCW--Store;FNSTCW*;FNSTCW;FNSTENV--Store;FSTENV;FNSTENV*;FNSTENV;FNSTSW--Store;FNSTSW*;FNSTSW;FPREM;FXAM;FSTSW;denormalized;MOV--Move;ModR;M;m;PG;PGE;PSE;PAE;PDPTRs;MOV;reg;TLB;Lookaside;TLBs;GD;FSTP--Store;FST;FSTP;significand;FUCOMIP--Compare;FUCOMIP;FCOMI;FCOMIP;FUCOMI;FUCOMPP--Unordered;FUCOMP;FUCOMPP;FWAIT--Wait;MP;INSB;INSW;INSD--Input;INSD;CPL;IOPL;VM;TSS;CL;BL;CH;DH;BH;CX;BX;SP;EBX;EBP;mm--An;XLAT;LIDT;LGDT;GDTR;IDTR;ith;DPL=;C;W;Y;INTRA-PRIVILEGE-LEVEL-INTERRUPT;flag*;Push(CS;Push(IP;IDT(Descriptor;vector_number;GP((DEST;EXT;GP((vector_number;NP((vector_number;GDT;GP(TSS;NP(TSS;Push(error;GP(selector;NP(selector;GP(new;GP(CodeSegmentSelector;INTER-PREVILEGE-LEVEL-INTERRUPT;TSSstackAddress;TS(current;NewSS;NewESP;TS(EXT;RPL;TS(SS;LDT;SS(SS;selector+EXT;SS(segment;TSS(NewSS;Gate(CS;IP;Push(far;Push(EFLAGS;Push(ErrorCode;ELSE(*;CodeSegmentDescriptor(DPL;CS(RPL;RF;tempEFLAGS;TempSS;TempESP;Push(GS;Push(FS;Push(DS;Push(ES;Push(TempSS;Push(TempESP;Push(TempEFlags;Push(EIP;Gate(instruction;ErrorCode;SS(selector;TS(selector;TSS's;INT;n;CE;IDT;VME;Microsoft*;EIP;IRET;DPL;GOTO;TF;CMC;LIDT--Load;SFENCE--Store;IDTR(Limit;IDTR(Base;GDTR(Limit;GDTR(Base;SIDT--Store;SGDT;SIDT;mm_loadr_ps;mm_cmpgt_ss;Intrinsics;intrinsics;xmm;declspec;ps;ss;z;y;w;t;mm_load_ps(a;immediates;Intra-privilege;Pop(;tempEIP;tempCS;tempEFLAGS(VM;VIF;EFLAGS(IF;EFLAGS(IOPL;EFLAGS(VM;RETURN-TO-OUTER-PRIVILGE-LEVEL;GP(SSselector;LODSD--Load;LODSD;LOOPcc--Loop;LOOPE;LOOPZ;LOOPNE;LOOPNZ;AddressSize;BranchCond;SignExtend(DEST;LSS--Load;SegmentRegister(DescriptorValidBit;Offset(SRC;XCHG--Exchange;MOVSD--Move;rw;rb;SI's;AddressSize--The;StackAddrSize--Represents;SRC--Represents;DEST--Represents;ZeroExtend(value;ZeroExtend;SignExtend(value;SignExtend;SaturateSignedWordToSignedByte--Converts;SaturateSignedDwordToSignedWord--Converts;SaturateSignedWordToUnsignedByte--Converts;FFH;SaturateToSignedByte--Represents;SaturateToSignedWord--Represents;SaturateToUnsignedByte--Represents;SaturateToUnsignedWord--Represents;LowOrderWord(DEST;HighOrderWord(DEST;Push(value;PUSH--Push;POP--Pop;PopRegisterStack--Marks;Switch-Tasks--Performs;Bit(BitBase;BitOffset;Bit[EAX;BIT[EAX;BitBase;GBits;DIV;EWBE#;EFLAGS(RF;SegmentSelector;IRETD;LODS;LODSB;LODSW;cb;LOOPcc;LDS;LES;LFS;LGS;LSS;ProtectedMode;SegementSelector;SegmentSelector(SRC;SegmentDescriptor([SRC;SegmentRegister;NullSelector;software*;XCHG;BSWAP;MOVSB;MOVSW;MOVS;MOVSD;Encodings;OUTSB;OUTSW;OUTSD;prefetched;PADDB;PADDW;FC;FD;FE;PADDD;PADDSW--Packed;SaturateToSignedByte;SaturateToSignedWord;PADDSB;PADDSW;PADDUSW--Packed;SaturateToUnsignedByte;SaturateToUnSignedByte;SaturateToUnsignedWord;SaturateToUnSignedWord;PADDUSB;PADDUSW;PAVGW--Packed;PAVGB;PAVGW;PCMPEQB;PCMPEQW;PCMPEQD;PCMPGTD--Packed;FFFFFFFFH;DCMPGTD;PCMPGTB;PCMPGTW;PCMPGTD;POPA;POPAD;PUSHA;PUSHAD;POPFD--Pop;POPF;POPFD;PUSHF;PUSHFD;unaffected*;PSLLQ--Packed;ZeroExtend(DEST;PSLLW;PSLLD;PSLLQ;quadwords;int;PSRAD--Packed;PSRAW;PSRAD;PSRLQ--Packed;PSRLW;PSRLD;PSRLQ;PSUBD--Packed;PSUBB;PSUBW;PSUBD;PSUBSW--Packed;PSUBSB;PSUBSW;PSUBUSW--Packed;MMX;PSUBUSB;PSUBUSW;PUNPCKHQDQ--;PUNPCKHW;PUNPCKHBW;PUNPCKHWD;PUNPCKHDQ;PUNPCKHQDQ;PUNPCKLQDQ--;PUNPCKLBW;PUNPCKLWD;PUNPCKLDQ;PUNPCKLQDQ;Push(ECX;Push(EDX;Push(EBX;Push(Temp;Push(EBP;Push(ESI;Push(EDI;Push(AX;Push(CX;Push(DX;Push(BX;Push(BP;Push(SI;Push(DI;Push(EAX;PUSHFD--Push;push(EFLAGS;stack*;EFLAG;IDIV;Coprocessor;NMI;INTR;NP;MC;XF;STOS;nonmatching;AE;SCAS;non-EAX;REPNZ;JECXZ;JZ;JNZ;JNE;CountReg;LSB(DEST;LSB(SRC;MSB;RCL;RCR;ROL;ROR;tempCOUNT;tempCF;MSB(DEST;ELIHW;XOR;ROR--Rotate;SCASB;SCASD--Scan;ES(E;SCASW;SCASD;SAL;SAR;divide*;SHL;SHR;tempDEST;infinity*;Denormalized;misaligned;MOVUPS;Denormal;CPUID.XMM;mm_setcsr(unsigned;EFLAGS.AC;CPUID.XMM(EDX;LDMXCSR;FZ;underflows;FXRSTOR;STOSD--Store;STOSB;STOSW;STOSD;FLD--Load;ExtendedReal(SRC;FLD;FLDCW--Load;FLDCW;FPU's;FLDENV--Load;SRC[FPUControlWord;SRC[FPUStatusWord;SRC[FPUTagWord;SRC[FPUDataPointer;SRC[FPUInstructionPointer;SRC[FPULastInstructionOpcode;FLDENV;FNOP--No;FNOP;FPATAN--Partial;Arctangent;arctangent;FPATAN;FPREM--Partial;LeastSignificantBits(Q;modulus;Q;Std;N;QQ;ADDSD--Scalar;mm_add_sd;ADDSD;FPTAN--Partial;FPTAN;FRNDINT--Round;FRNDINT;FRSTOR--Restore;FRSTOR;FSCALE--Scale;FSCALE;FXTRACT;FSIN;FB;FSINCOS;FCOS;FSQRT;ADDSS;SSE;FTST--TEST;FTST;FXCH--Exchange;FXCH;IP-offset;FXSAVE;DP;FTW;FSW;FCW;AND--Logical;iw;bitwise;little-endian;FP;non-TOS;xx;FXTRACT--Extract;superset;logb(x;Significand;logbx;HLT--Halt;HLT;IDIV--Signed;EAX=Quotient;EDX=Remainder;OpernadSize;SignedModulus;EDXE;IMUL--Signed;IMUL;MUL;NumberOfOperands;size*;IN--Input;INC--Increment;INC;FF;ANDPD--Bitwise;ANDPD;BitwiseAND;Bitwise;INVD--Invalidate;INVD;WBINVD;Flush(InternalCaches;SignalFlush(ExternalCaches;INVLPG--Invalidate;INVLPG;lookaside;Flush(RelevantTLBEntries;Jcc--Jump;JA;JAE;JB;JBE;JC;JCXZ;JE;JG;SF=OF;JGE;JL;JLE;JNA;JNAE;JNB;JNBE;JNC;JNG;JNGE;JNL;JNLE;JNO;JNP;JNS;JP;JPE;JPO;JS;cw;Jcc;opcodes;JMP;FARLABEL;cacheability;EA;cp;jump--A;LFENCE;MFENCE;SFENCE;WB;WC;PREFETCHh;specualtive;LLDT;LDTR;LAR;VERR;VERW;LSL;LDTR(SegmentSelector;LDTR(SegmentDescriptor;ADDPD;ANDNPD;prepended;ADC;BTC;BTR;BTS;CMPXCHG;NEG;SBB;XADD;LOCK#;AssertLOCK#(DurationOfAccompaningInstruction;LSL--Load;LTR;TSSsegmentDescriptor(busy;TaskRegister(SegmentSelector;TaskRegister(SegmentDescriptor;MASKMOVDQU;UC;WP;MASKMOVQ;MAXPD--Maximum;MAXPD;MAXPS;ANDN;Single-FP;ANDNPS;MAXSD;MAXSS;Wait_On_Following_Loads_And_Stores_Until(preceding_loads_and_stores_globally_visible;MINPD;MINPS;MINSD;MINSS;Sreg;seg;ARPL;DEST[RPL;SRC[RPL;MOVAPD--Move;MOVAPD;MOVUPD;void_mm_store_pd(double;MOVAPS;void_mm_store_ps;MOVD;XXM;MOVDQA;MOVDQU;mmx;MOVHLPS--;MOVHLPS;MOVHPD;MOVHPS;MOVLHPS;doubleword-integers;ArrayIndex;LowerBound;UppderBound;MOVLPD;nvalue;mm_loadl_pd;mm_storel_pd;MOVLPS;mm_loadl_pi;mm_storel_pi;MOVMSKPD;mm_movemask_pd;MOVMSKPS;MOVNTDQ;uncacheable;MOVNTI;MOVNTPD;MOVNTPS;MOVNTQ--Move;MOVNTQ;MOVQ;BC;BSF;mm_load_sd;mm_store_sd;MOVSS;MOVSX;BF;MOVZX;MULPD;BD;BSR;MULPS;mem;MULSD;MULSS;NOP;ORPD;ORPS;EF;big-endian;SaturateSignedWordToUnsignedByte;PACKUSWB;¨;PADDQ;PAND;PANDN;BT;modulo;PEXTRW;SEL;imm;d;PINSRW;PMADDWD;PMADD;PMAXSW;PMAXUB;PMINSW;MINSW;PMINUB;PMOVMSKB;PMULHUW;PMULHW;PMULLW;PMULLU;PMULUDQ;POR;PREFETCHNTA;NTA;prefetch;Prefetches;CLFLUSH;WRMSR;CR;PSADBW;Doublewords;PSHUFD;PSHUFHW;encodings;PSHUFLW;PSHUFW;PSLLDQ;PSRLDQ;intrasegment;call--A;intersegment;switch--A;KBytes;GP(segment;newESP;CallGate(CS;newSS;Push(oldSS;Push(parameters;Push(oldCS;InstructionPointer;oldESP;oldEIP;CodeSegment(DPL;CallGateSize;oldIP;GP(task;NP(task;PSUBQ;PXOR;RCPPS;RCPSS;RCCPS;RDMSR;MSR;unimplemented;MSRs;PMC[ECX;RDPMC;PCE;RDPCM;RDTSC;TSD;SS(StackSegmentSelector;ReturnCodeSegmentSelector(RPL;tempESP;tempSS;RSM;SMM;SSM;ProcessorState;RSQRTPS;RSQRTSS;SAHF;SETL;SETLE;SETNA;SETNAE;SETNB;SETNBE;SETNC;SETNE;SETNG;SETNGE;SETNL;SETNLE;SETNO;SETNP;SETNS;SETNZ;SETO;SETP;SETPE;SETPO;SETZ;SETcc;decrementing;SETB;SETBE;SETC;SETE;SETG;multiprecision;BIT[DEST;DOWNTO;Bit(DEST;BIT[SRC;SHLD;BIT[inBits;SHRD;SHUFPD;SHUFPS;SLDT;SMSW;SQRTPD;SQRTPS;SQRTSD;CLD;SQRTSS;SQRT;STC;STD;STI;maskable;CLI;mode*;STR;SUBPD;SUBPS;SUBSD;SUBSS;SYSENTER;SYSEXIT;DLLs;GB;SEP;EFLAGS.VM;EFLAGS.IF;CS.SEL;CS.SEL.CPL;CS.SEL.BASE;CS.SEL.LIMIT;CS.SEL.G;KB;CS.SEL.S;CS.SEL.TYPE_xCRA;CS.SEL.D;CS.SEL.DPL;CS.SEL.RPL;CS.SEL.P;SS.SEL;SS.SEL.BASE;SS.SEL.LIMIT;SS.SEL.G;SS.SEL.S;SS.SEL.TYPE_xCRA;SS.SEL.D;SS.SEL.DPL;SS.SEL.RPL;SS.SEL.P;SYSENTER_ESP_MSR;SYSENTER_EIP_MSR;SYSENTER_CS_MSR;SS.SEL.CPL">
 
 
 <!--(Links)=========================================================-->
@@ -96,7 +96,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nS - ָ��\nSYSEXIT - ��ϵͳ������ڿ���ת��");
+	addTocInfo("參考\n指令集\nIA-32 指令\nS - 指令\nSYSEXIT - 從系統呼叫入口快速轉出");
 
 	}
 	if (window.writeBtnStyle)
@@ -119,7 +119,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>SYSEXIT - ��ϵͳ������ڿ���ת��</h1>
+<h1>SYSEXIT - 從系統呼叫入口快速轉出</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -127,13 +127,13 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">������</td>
+	style="margin-bottom: 0;">操作碼</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">說明</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -144,49 +144,49 @@ else
 	style="margin-bottom: 0;">SYSEXIT</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��&ldquo;ϵͳ�������&rdquo;ת��</td></tr>
+	style="margin-bottom: 0;">從&ldquo;系統呼叫入口&rdquo;轉出</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>SYSEXIT ָ�����ڱ���<font   style="font-family: Verdana, Arial, Helvetica, sans-serif;" 	face=Verdana>(R)</font> II �������������&ldquo;����ϵͳ����&rdquo;���ܵ�һ���֡�SYSEXIT ָ����Ż�������������ܴӱ����� 0 (CPL <script type="text/javascript" language="JavaScript"><!--
+<p>SYSEXIT 指令是在奔騰<font   style="font-family: Verdana, Arial, Helvetica, sans-serif;" 	face=Verdana>(R)</font> II 處理器上引入的&ldquo;快速系統呼叫&rdquo;功能的一部分。SYSEXIT 指令經過優化，能以最佳效能從保護環 0 (CPL <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='arrwleft.gif' width='13px' height='16px' border='0' class='img_whs3'>");}
 else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'>");}
-//--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> 0) ת�������� 3 (CPL <script type="text/javascript" language="JavaScript"><!--
+//--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> 0) 轉到保護環 3 (CPL <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='arrwleft.gif' width='13px' height='16px' border='0' class='img_whs3'>");}
 else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'>");}
-//--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> 3)��</p>
+//--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> 3)。</p>
 
-<p>���ݲ���ϵͳ���ض����ͺ�ר�üĴ�����ͨ�üĴ�����ָ����ֵ��SYSEXIT ָ���������¼Ĵ�����</p>
+<p>根據操作系統在特定的型號專用暫存器或通用暫存器中指定的值，SYSEXIT 指令設定以下暫存器。</p>
 
-<p>CS �Ĵ�������Ϊ 16 �� SYSENTER_CS_MSR ��ֵ֮��EIP �Ĵ�������Ϊ EDX �Ĵ����а�����ֵ��SS �Ĵ�������Ϊ 24 �� SYSENTER_CS_MSR ��ֵ֮��ESP �Ĵ�������Ϊ ECX �Ĵ����а�����ֵ��</p>
+<p>CS 暫存器設定為 16 與 SYSENTER_CS_MSR 的值之和EIP 暫存器設定為 EDX 暫存器中包含的值。SS 暫存器設定為 24 與 SYSENTER_CS_MSR 的值之和ESP 暫存器設定為 ECX 暫存器中包含的值。</p>
 
-<p>�������������ں˶�ջ�򷵻ص�ַ��Ϣ��Ҳ�������κμĴ�����</p>
+<p>處理器不儲存內核堆疊或返回地址資訊，也不儲存任何暫存器。</p>
 
-<p>SYSENTER �� SYSEXIT ָ�����һ�Ե���/���أ���ˣ��û�����ִ�е�ϵͳ����&ldquo;���&rdquo;���̣�ͨ���ڹ������ DLL �У����븺��ԭ����ļĴ���״̬���Դ���һ��ϵͳ����/���ء�</p>
+<p>SYSENTER 與 SYSEXIT 指令不構成一對呼叫/返回；因此，使用者程式碼執行的系統呼叫&ldquo;存根&rdquo;例程（通常在共享庫或 DLL 中）必須負責還原所需的暫存器狀態，以建立一對系統呼叫/返回。</p>
 
-<p>SYSEXIT ָ������ת���� CPL <script type="text/javascript" language="JavaScript"><!--
+<p>SYSEXIT 指令總是轉換到 CPL <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='arrwleft.gif' width='13px' height='16px' border='0' class='img_whs3'>");}
 else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'>");}
-//--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> 3 ��ͨ����ģʽ�û�����SYSEXIT ֻ���� CPL <script type="text/javascript" language="JavaScript"><!--
+//--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> 3 普通保護模式使用者級別。SYSEXIT 只能在 CPL <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='arrwleft.gif' width='13px' height='16px' border='0' class='img_whs3'>");}
 else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'>");}
-//--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> 0 ʱ�ӱ���ģʽ�����ָ��Ҫ�����ϵͳ��������������</p>
+//--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> 0 時從保護模式啟用。此指令要求操作系統滿足以下條件：</p>
 
 <ul>
 	
-	<p>Ŀ�껷 3 ����ε� CS ѡ������ 32 λ��ӳ�����ͨ 0-4 GB ��ַ�ռ䣬����ӵ��ִ�С���ȡ�Լ�������Ȩ�ޡ�Ŀ�껷 3 ��ջ�ε� SS ѡ������ 32 λ��ӳ�����ͨ 0-4 GB ��ַ�ռ䣬����ӵ����չ����ȡ�Լ�д��Ȩ�ޡ�</p>
+	<p>目標環 3 程式碼段的 CS 選擇器是 32 位，對映成普通 0-4 GB 地址空間，並且擁有執行、讀取以及非相容許可權。目標環 3 堆疊段的 SS 選擇器是 32 位，對映成普通 0-4 GB 地址空間，並且擁有擴充套件、讀取以及寫入許可權。</p>
 </ul>
 
-<p>����ϵͳ��������������ã�</p>
+<p>操作系統必須進行以下設定：</p>
 
 <p class="whs4">&nbsp;</p>
 
@@ -197,27 +197,27 @@ else
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>����</td>
+	align=center>名稱</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>˵��</td></tr>
+	align=center>說明</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">CS ѡ����</td>
+	style="margin-bottom: 0;">CS 選擇器</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">Ŀ�껷 3 CS ѡ�������������� 16 �� SYSENTER_CS_MSR ��ֵ֮�͡�</td></tr>
+	style="margin-bottom: 0;">目標環 3 CS 選擇器。它被賦予 16 與 SYSENTER_CS_MSR 的值之和。</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">SS ѡ����</td>
+	style="margin-bottom: 0;">SS 選擇器</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">Ŀ�껷 3 SS ѡ�������������� 24 �� SYSENTER_CS_MSR ��ֵ֮�͡�</td></tr>
+	style="margin-bottom: 0;">目標環 3 SS 選擇器。它被賦予 24 與 SYSENTER_CS_MSR 的值之和。</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -225,7 +225,7 @@ else
 	style="margin-bottom: 0;">EIP</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">Ŀ�껷 3 ���� EIP������Ŀ����ڣ������� EDX �Ĵ����а�����ֵ��</td></tr>
+	style="margin-bottom: 0;">目標環 3 返回 EIP。這是目標入口，被賦予 EDX 暫存器中包含的值。</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -233,35 +233,35 @@ else
 	style="margin-bottom: 0;">ESP</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">Ŀ�껷 3 ���� ESP������Ŀ����ڣ������� ECX �Ĵ����а�����ֵ��</td></tr>
+	style="margin-bottom: 0;">目標環 3 返回 ESP。這是目標入口，被賦予 ECX 暫存器中包含的值。</td></tr>
 </table>
 
-<p>����ܵĴ�������� CPUID ��λ 11&ldquo;SYSENTER ����&rdquo;(SEP) ָ������⵽���� SEP λ�Ĳ���ϵͳ�������жϴ�������ϵ�����ͺ��Ƿ���ϣ���ȷ��ȷʵ�ṩ SYSENTER/SYSEXIT ָ���������� SYSENTER ָ���˵������������ Pro ���������ͺ� <script type="text/javascript" language="JavaScript"><!--
+<p>此項功能的存在與否由 CPUID 的位 11&ldquo;SYSENTER 存在&rdquo;(SEP) 指出。檢測到存在 SEP 位的操作系統還必須判斷處理器的系列與型號是否符合，以確保確實提供 SYSENTER/SYSEXIT 指令，具體如關於 SYSENTER 指令的說明所述。奔騰 Pro 處理器（型號 <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='arrwleft.gif' width='13px' height='16px' border='0' class='img_whs3'>");}
 else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'>");}
-//--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> 1������һ�� SEP CPUID ����λ������֧�� SYSENTER/SYSEXIT ָ�</p>
+//--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> 1）返回一組 SEP CPUID 功能位，但不支援 SYSENTER/SYSEXIT 指令。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted>SYSEXIT<br> IF SYSENTER_CS_MSR == 0 THEN #GP(0)<br> IF CR0.PE == 0 THEN #GP(0)<br> IF CPL &lt;&gt; 0 THEN #GP(0)<br> <br> // Changing CS:EIP and SS:ESP is required<br> <br> CS.SEL := (SYSENTER_CS_MSR + 16) // Selector for return CS<br> CS.SEL.RPL := 3<br> <br> // Set rest of CS to a fixed value<br> CS.SEL.BASE := 0 // Flat segment<br> CS.SEL.LIMIT := 0xFFFF // 4G limit<br> CS.SEL.G := 1 // 4 KB granularity<br> CS.SEL.S := 1<br> CS.SEL.TYPE_xCRA := 1011 // Execute, Read, Non-Conforming Code<br> CS.SEL.D := 1 // 32 bit code<br> CS.SEL.DPL := 3<br> CS.SEL.P := 1<br> <br> SS.SEL := (SYSENTER_CS_MSR + 24)<br> SS.SEL.RPL := 3<br> <br> // Set rest of SS to a fixed value<br> SS.SEL.BASE := 0 // Flat segment<br> SS.SEL.LIMIT := 0xFFFF // 4G limit<br> SS.SEL.G := 1 // 4 KB granularity<br> SS.SEL.S := 1<br> SS.SEL.TYPE_xCRA := 0011 // Expand Up, Read/Write, Data<br> SS.SEL.D := 1 // 32 bit stack<br> SS.SEL.DPL := 3<br> SS.SEL.CPL := 3<br> SS.SEL.P := 1<br> <br> ESP := ECX<br> EIP := EDX</p>
 
-<h2>�쳣</h2>
+<h2>異常</h2>
 
-<p>#GP(0) - ��� SYSENTER_CS_MSR �����㡣</p>
+<p>#GP(0) - 如果 SYSENTER_CS_MSR 包含零。</p>
 
-<h2>��ֵ�쳣</h2>
+<h2>數值異常</h2>
 
-<p>�ޡ�</p>
+<p>無。</p>
 
-<h2>����ģʽ�쳣</h2>
+<h2>保護模式異常</h2>
 
-<p>#GP(0) - ��� CPL ��Ϊ�㡣</p>
+<p>#GP(0) - 如果 CPL 不為零。</p>
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>實地址模式異常</h2>
 
-<p class="whs4">#GP(0) - ���δ���ñ���ģʽ�� 
+<p class="whs4">#GP(0) - 如果未啟用保護模式。 
  </p>
 
 <script type="text/javascript" language="javascript1.2">

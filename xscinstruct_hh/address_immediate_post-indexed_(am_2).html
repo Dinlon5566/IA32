@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/address_immediate_post-indexed_(am_2).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:48 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>�������º��ַ (AM 2)</title>
+<title>立即數事後變址 (AM 2)</title>
 
 <!--(Meta)==========================================================-->
 
@@ -84,7 +84,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nѰַģʽ\n������洢�ֻ��޷����ֽ�\n�������º��ַ (AM 2)");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n定址模式\n載入與儲存字或無符號位元組\n立即數事後變址 (AM 2)");
 
 	}
 	if (window.writeBtnStyle)
@@ -107,14 +107,14 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������"><a NAME=pgfId-1069351></a><a NAME=35264></a>�������º��ַ (AM 2)</h1>
+<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題"><a NAME=pgfId-1069351></a><a NAME=35264></a>立即數事後變址 (AM 2)</h1>
 
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted><span class=Code>[basereg], #+/-value</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -127,7 +127,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ��������ַ�ļĴ�����</td></tr>
+<p CLASS=CellBodyLeft>指定包含基址的暫存器。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -137,20 +137,20 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ�� 12 λ������ƫ�������� <em CLASS=SourceItalic>basereg</em> ��ֵһ��ʹ�ã����γɵ�ַ��</td></tr>
+<p CLASS=CellBodyLeft>指定 12 位立即數偏移量，與 <em CLASS=SourceItalic>basereg</em> 的值一起使用，以形成地址。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-Ѱַģʽ&ldquo;�������º��ַ&rdquo;ִ�����²�����α����˵������
+定址模式&ldquo;立即數事後變址&rdquo;執行以下操作（偽程式碼說明）：
 
 <p CLASS=Preformatted-Code>addr = basereg<br> if ConditionPassed (condition) then<br> if U == 1 then<br> &#xA0;&#xA0;&#xA0;basereg = basereg + value<br> else/* U == 0 */<br> &#xA0;&#xA0;&#xA0;basereg = basereg - value</p>
 
-<p CLASS=Body>��Ѱַģʽʹ�û�ַ�Ĵ��� <em CLASS=SourceItalic>basereg</em> ��ֵ��Ϊ�ڴ���ʵ�ַ��</p>
+<p CLASS=Body>此定址模式使用基址暫存器 <em CLASS=SourceItalic>basereg</em> 的值作為記憶體訪問地址。</p>
 
-<p CLASS=Body>���ָ����ָ������������������״̬ƥ�䣬��������ƫ������ֵ��ӵ���ַ�Ĵ��� <em CLASS=SourceItalic>basereg</em> ��ֵ������м�ȥ��Ȼ����д�� <em CLASS=SourceItalic>basereg</em>��</p>
+<p CLASS=Body>如果指令中指定的條件與條件程式碼狀態匹配，則立即數偏移量的值會加到基址暫存器 <em CLASS=SourceItalic>basereg</em> 的值，或從中減去。然後它寫回 <em CLASS=SourceItalic>basereg</em>。</p>
 
-<p CLASS=Body>���ڴ��Զ�����ָ��ֵ�������ָ����ʣ���Ѱַģʽ�ǳ����á�</p>
+<p CLASS=Body>對於帶自動更新指針值的陣列的指針訪問，此定址模式非常有用。</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -171,7 +171,7 @@ else
 <col class="whs2">
 <col class="whs2">
 
-<h2>���� </h2>
+<h2>編碼 </h2>
 
 <tr class="whs3">
 <td ROWSPAN=1
@@ -384,32 +384,32 @@ else
 </tr>
 </table>
 
-<p CLASS=Body>B λ��ʾ�޷����ֽ� (<em CLASS=Source> B==1</em> ) ���ַ��� (<em CLASS=Source> B==0</em> )��</p>
+<p CLASS=Body>B 位表示無符號位元組 (<em CLASS=Source> B==1</em> ) 或字訪問 (<em CLASS=Source> B==0</em> )。</p>
 
-<p CLASS=Body>L λ��ʾ&ldquo;����&rdquo;(<em CLASS=Source> L==1</em> ) ��&ldquo;�洢&rdquo;(<em CLASS=Source> L==0</em> ) ָ�</p>
+<p CLASS=Body>L 位表示&ldquo;載入&rdquo;(<em CLASS=Source> L==1</em> ) 或&ldquo;儲存&rdquo;(<em CLASS=Source> L==0</em> ) 指令。</p>
 
-<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif"> ��ע</h3>
+<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif"> 備註</h3>
 
-<p>ָ�� <em CLASS=Source>LDRBT</em>��<em CLASS=Source>LDRT</em>��<em CLASS=Source>STRBT</em> �� <em CLASS=Source>STRT</em> ��֧���º��ַѰַģʽ��������Щָ�����λģʽ���������޸ģ�<br> bit[21]��W λ���� 1�������������� 0��</p>
+<p>指令 <em CLASS=Source>LDRBT</em>、<em CLASS=Source>LDRT</em>、<em CLASS=Source>STRBT</em> 及 <em CLASS=Source>STRT</em> 僅支援事後變址定址模式。對於這些指令，上述位模式會作如下修改：<br> bit[21]（W 位）是 1，而不是上述的 0。</p>
 
-���ڽ�֧���º��ַѰַģʽ��<em CLASS=Source> LDRBT</em>��<em CLASS=Source>LDRT</em>��<em CLASS=Source>STRBT</em> �� <em CLASS=Source>STRT</em>����ָ��﷨ <em CLASS=Source>[basereg]</em> ���� <em CLASS=Source>[basereg], #0</em> ����д��������������ָ��﷨ <em CLASS=Source>[basereg]</em> <em 
- CLASS=Bold>����</em>���� <em CLASS=Source>[basereg], #0</em> ����д�� 
+對於僅支援事後變址定址模式（<em CLASS=Source> LDRBT</em>、<em CLASS=Source>LDRT</em>、<em CLASS=Source>STRBT</em> 或 <em CLASS=Source>STRT</em>）的指令，語法 <em CLASS=Source>[basereg]</em> 視作 <em CLASS=Source>[basereg], #0</em> 的縮寫。對於其它所有指令，語法 <em CLASS=Source>[basereg]</em> <em 
+ CLASS=Bold>不得</em>視作 <em CLASS=Source>[basereg], #0</em> 的縮寫。 
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Caution.gif"> ע��</h3>
+<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Caution.gif"> 注意</h3>
 
-��� <em CLASS=Source>R15</em> ָ��Ϊ�Ĵ��� <em CLASS=SourceItalic>basereg</em>�����������޷�Ԥ֪�� 
+如果 <em CLASS=Source>R15</em> 指定為暫存器 <em CLASS=SourceItalic>basereg</em>，則結果將會無法預知。 
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p CLASS=Preformatted><span class=Code>LDR &#xA0;&#xA0;&#xA0;R9, [R7], #5</span></p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
-<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.htm">�����Ѱַģʽ 2��������洢�ֻ��޷����ֽ�</a><a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Inst_Overview_of_Instructions.htm" CLASS="XRef" style="font-weight: normal;"><br> ����Ļ����ָ��</a> 
+<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.htm">請參閱定址模式 2：載入與儲存字或無符號位元組</a><a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Inst_Overview_of_Instructions.htm" CLASS="XRef" style="font-weight: normal;"><br> 請參閱彙編器指令</a> 
 </div>
 
 <script type="text/javascript" language="javascript1.2">

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/pipeline_clears_from_memory_ordering_issues.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:42 GMT -->
 <head>
 
-<title>�ڴ�˳�����⵼�µĹܵ����</title>
+<title>記憶體順序問題導致的管道清除</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -80,7 +80,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n����Ӣ�ض�(R) ����(R) 4 ��������ϸ��\n�ڴ�˳�����⵼�µĹܵ����");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n關於英特爾(R) 奔騰(R) 4 處理器的建議\n關於英特爾(R) 奔騰(R) 4 處理器的細節\n記憶體順序問題導致的管道清除");
 
 	}
 	if (window.writeBtnStyle)
@@ -103,16 +103,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" alt="Ӣ�ض�&#xAE; ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">�ڴ�˳�����⵼�µĹܵ����</h1>
+<h1><img src="TA_logo.gif" alt="英特爾&#xAE; 調優助手主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">記憶體順序問題導致的管道清除</h1>
 
-<p>�ܵ������ڴ�˳����������������������˸���Ӱ�졣�ڲ���&ldquo;���̼߳���&rdquo;�Ĵ������ϣ���ͨ����ʾ�����ٹ����������̷߳�����ͬ�������в�ͬ�Ļ��޹ص�����ʱ���������ٹ���������������ᵼ�¼ٹ����� </p>
+<p>管道由於記憶體順序問題而清除，對效能造成了負面影響。在採用&ldquo;超執行緒技術&rdquo;的處理器上，這通常表示發生假共享。兩個執行緒訪問相同快取線中不同的或無關的數據時，將發生假共享。有兩種情況會導致假共享。 </p>
 
 <li class=kadov-p
-	class=kadov-p>��� 1����һ������ǣ�����ͬ�Ļ������ϣ�ͬʱ����һ���̵߳�ͬ��������һ���̵߳��߳�ר�����ݡ�һ���߳��޸�ͬ������ʱ�������߱��&ldquo;����&rdquo;״̬�����ұ���д��ÿ���߼����������������ڲ���&ldquo;���̼߳���&rdquo;��ϵͳ�ϣ���ᵼ�»������ջأ��Ա��ֻ���һ���ԡ��ڶദ����ϵͳ�ϣ���ᵼ���ڴ�˳����������ͻ��������ϵͳ���������ǹ��������Ե����ܳͷ���</li>
+	class=kadov-p>情況 1：第一種情況是，在相同的快取線上，同時存在一個執行緒的同步鎖與另一個執行緒的執行緒專用數據。一個執行緒修改同步變數時，快取線變成&ldquo;污損&rdquo;狀態，並且必須寫到每個邏輯或物理處理器。在採用&ldquo;超執行緒技術&rdquo;的系統上，這會導致快取線收回，以保持快取一致性。在多處理器系統上，這會導致記憶體順序機器清除衝突。這兩種系統都有與它們關聯的明顯的效能懲罰。</li>
 
 <li class=kadov-p
 	class=kadov-p>
-��� 2���ڶ�������ǣ�������ͬ�����߳�֮������湲�������ǳ�����󣬲���Ҳ�ᵼ�����Ե����ܳͷ������ڲ���&ldquo;���̼߳���&rdquo;��ϵͳ��ദ����ϵͳ�����Ƶ�Ӱ������ܼƴ�����ʱ��Ӱ�죨ϵͳ�������߼�/����������֮�ͣ���������&ldquo;ʵ��ִ��&rdquo;ʱ��Ӱ�졣��ˣ��ڲ���&ldquo;���̼߳���&rdquo;��ϵͳ��ദ����ϵͳ�ϣ��ܿ��ܻῴ��ϸ�ڵ�ʱ��Ӱ����ڶԸ���ʵ��ִ��ʱ���Ӱ�졣��ע�⣬�ڵ�������ϵͳ�ϣ�������ʱ����ʵ��ִ��ʱ����ͬ�� 
+情況 2：第二種情況是，兩個不同步的執行緒之間存在真共享。這是程式錯誤，並且也會導致明顯的效能懲罰。對於採用&ldquo;超執行緒技術&rdquo;的系統或多處理器系統，估計的影響代表總計處理器時間影響（系統上所有邏輯/物理處理器之和），而不是&ldquo;實際執行&rdquo;時間影響。因此，在採用&ldquo;超執行緒技術&rdquo;的系統或多處理器系統上，很可能會看到細節的時間影響大於對負載實際執行時間的影響。請注意，在單處理器系統上，處理器時間與實際執行時間相同。 
 
 <br>&nbsp; 
  
@@ -120,12 +120,12 @@ else
 <br>&nbsp; 
  
 
-<br><b>����������ԣ�</b><br><br>��ϸ�����������ܼ�����������أ�<br> <br> MemoryOrderMachineClear ����Ӱ�� = (<a href="../Events4/memory_order_machine_clear.html" style="x-condition: eclipse;">�ڴ�˳��������</a>*500)/<a href="../Events4/Clockticks.html" style="x-condition: eclipse;">ʱ���ź�</a>)*100<b><br> �ϵ�ֵ��</b>0.2<b><br> �ϸ�ֵ��</b>2<br><br> ��&ldquo;MemoryOrderMachineClear ����Ӱ��&rdquo;<b>�ϸ�</b>ʱ����ϸ�ھ���ʵ�������塣<b><br><br> ���飺 </b>
+<br><b>計數器相關性：</b><br><br>此細節與以下效能計數器函式相關：<br> <br> MemoryOrderMachineClear 效能影響 = (<a href="../Events4/memory_order_machine_clear.html" style="x-condition: eclipse;">記憶體順序機器清除</a>*500)/<a href="../Events4/Clockticks.html" style="x-condition: eclipse;">時鐘訊號</a>)*100<b><br> 較低值：</b>0.2<b><br> 較高值：</b>2<br><br> 在&ldquo;MemoryOrderMachineClear 效能影響&rdquo;<b>較高</b>時，此細節具有實質性意義。<b><br><br> 建議： </b>
 
 <ul>
 	
 	<li class=kadov-p
-		class=kadov-p><a HREF="avoiding_memory_ordering_pipeline_clears.html">�����ڴ�˳��ܵ����</a></li>
+		class=kadov-p><a HREF="avoiding_memory_ordering_pipeline_clears.html">避免記憶體順序管道清除</a></li>
 </ul>
 </li>
 

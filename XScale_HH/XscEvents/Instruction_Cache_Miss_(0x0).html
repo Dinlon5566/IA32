@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/XScale_HH/XscEvents/Instruction_Cache_Miss_(0x0).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:52 GMT -->
 <head>
 
-<title>ָ���δ�����¼� (0x0)</title>
+<title>指令快取未命中事件 (0x0)</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 9, 2001 2:50:36 PM">
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
 <meta name=generator-major-version content=0.1>
@@ -92,7 +92,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض� XScale(R) ΢��ϵ�ṹ \nӢ�ض� XScale(R) ΢��ϵ�ṹ�¼�\nָ���¼�\nָ���δ���� (0x0)");
+	addTocInfo("參考\n處理器事件與建議\n英特爾 XScale(R) 微體系結構 \n英特爾 XScale(R) 微體系結構事件\n指令事件\n指令快取未命中 (0x0)");
 
 	}
 	if (window.writeBtnStyle)
@@ -117,14 +117,14 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>ָ���δ�����¼� (0x0)</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>指令快取未命中事件 (0x0)</h1>
 
 <p class="whs2">L1I_MISS</p>
 
-<p>�����ָ���һ��ָ���򻺳�����ʱ���ᴥ�����¼�������ָ���ʱ������ָ���ڻ������У������¼����Ϊδ���С���ͳ�����ɴ��ⲿ�ڴ浽�����ߵĶ�ȡ��ָ����ʣ�����ָ���δ���С����ɻ�������ָ���ȡ�Լ�<span style="font-style: italic;"><I>����������ָ���Ļ�����</I></span> �����Ļ�������䡣����&ldquo;Ӣ�ض� XScale(R)&rdquo;���ĵĹܵ����ԣ�ָ����ȡ���Ʋ��Եģ����������ɴӲ�ִ�е��ڴ��ȡ�����¼�Ҳͳ����Щ��ȡ����ȡ�������е����б��������С�</p>
+<p>所需的指令不在一級指令快取或緩衝區中時，會觸發此事件。禁用指令快取時，除非指令在緩衝區中，否則事件會計為未命中。它統計產生從外部記憶體到快取線的讀取的指令訪問，包括指令快取未命中、不可快取程式碼的指令獲取以及<span style="font-style: italic;"><I>載入與鎖定指令快取的快取線</I></span> 函式的快取線填充。由於&ldquo;英特爾 XScale(R)&rdquo;核心的管道特性，指令快取讀取是推測性的，並可能產生從不執行的記憶體讀取。此事件也統計這些讀取。獲取緩衝區中的命中被視作命中。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

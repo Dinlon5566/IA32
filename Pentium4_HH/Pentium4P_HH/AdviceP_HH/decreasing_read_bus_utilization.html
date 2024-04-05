@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/decreasing_read_bus_utilization.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:53 GMT -->
 <head>
 
-<title>���Ͷ�ȡ����������</title>
+<title>降低讀取匯流排利用率</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -79,7 +79,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\n����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 ������\n����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 �������Ľ���\n����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 �������Ľ���\n���Ͷ�ȡ����������");
+	addTocInfo("參考\n處理器事件與建議\n含第三代數據流單指令多數據擴充套件指令集 (SSE3) 的英特爾(R) 奔騰(R) 4 處理器\n含第三代數據流單指令多數據擴充套件指令集 (SSE3) 的英特爾(R) 奔騰(R) 4 處理器的建議\n含第三代數據流單指令多數據擴充套件指令集 (SSE3) 的英特爾(R) 奔騰(R) 4 處理器的建議\n降低讀取匯流排利用率");
 
 	}
 	if (window.writeBtnStyle)
@@ -102,7 +102,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="Ӣ�ض�&#xAE; ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">���Ͷ�ȡ����������</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="英特爾&#xAE; 調優助手主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">降低讀取匯流排利用率</h1>
 
 &nbsp;
 
@@ -110,11 +110,11 @@ else
 
 <ul class=noindent>
 	
-	<li class=kadov-p>ȷ���ڴ��νṹ�������á�����ڴ����ý���δ���л��棬������ܶ����������������Ե�Ӱ�졣�ɼ������¼������ݣ�ʧЧ��һ���������δ���С�ʧЧ�Ķ����������δ���С�ʧЧ�ļ��ء�ʱ���źš�</li>
+	<li class=kadov-p>確保記憶體層次結構表現良好。如果記憶體引用接連未命中快取，則這可能對匯流排事務數有明顯的影響。採集以下事件的數據：失效的一級快取載入未命中、失效的二級快取載入未命中、失效的載入、時鐘訊號。</li>
 	
-	<li class=kadov-p>Ӣ�ض�(R) ����(R) 4 �������䱸Ӳ��Ԥȡ��������߾���һ������������ʵĹ���������ȣ���Ӧ�ó�������ܡ�</li>
+	<li class=kadov-p>英特爾(R) 奔騰(R) 4 處理器配備硬體預取器，可提高具有一定特徵（如訪問的規律性與幅度）的應用程式的效能。</li>
 	
-	<li class=kadov-p>��д��֮��Ķ�ȡͬ��ȡ֮���д��֮�䣬�����ڵ�ת������ʱ�����ڡ�������ܣ��뽫��ȡ��ϳɿ飬��д��Ҳ��ϳɿ顣<br>
+	<li class=kadov-p>在寫入之後的讀取同讀取之後的寫入之間，都存在掉轉（死）時鐘週期。如果可能，請將讀取組合成塊，將寫入也組合成塊。<br>
 	</li>
 </ul>
 

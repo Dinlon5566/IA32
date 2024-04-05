@@ -4,9 +4,9 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/avoiding_dtlb_page_walk_misses.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:24:40 GMT -->
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=GB2312">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-<title>���� DTLB ҳ��ѯδ����</title>
+<title>避免 DTLB 頁查詢未命中</title>
   <link rel='stylesheet' href='MSL_styl_ns.css'>
 <script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
 <!--
@@ -52,7 +52,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n���� DTLB ҳ��ѯδ����");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n關於英特爾(R) 奔騰(R) 4 處理器的建議\n關於英特爾(R) 奔騰(R) 4 處理器的建議\n避免 DTLB 頁查詢未命中");
 
 	}
 	if (window.writeBtnStyle)
@@ -75,14 +75,14 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" alt="Ӣ�ض�&#xAE; ������������" x-maintain-ratio="TRUE" style="border: none; width: 36px; height: 36px; float: right;" width="36" height="36" align="right" border="0">���� DTLB ҳ��ѯδ����</h1><br>
+<h1><img src="TA_logo.gif" alt="英特爾&#xAE; 調優助手主題" x-maintain-ratio="TRUE" style="border: none; width: 36px; height: 36px; float: right;" width="36" height="36" align="right" border="0">避免 DTLB 頁查詢未命中</h1><br>
 
-<p>Ҫ��С�� DTLB δ���У�����С�����ݵĴ�С�������ԣ�ʹ�ã�</p>
+<p>要最小化 DTLB 未命中，請最小化數據的大小和區域性，使得：</p>
 
   <ul class="noindent">
-<li>���ݷֲ������ٵ�ҳ�ϣ�����</li>
+<li>數據分佈在最少的頁上，並且</li>
 
-<li>���ݷֲ���ҳ��С�� DTLB ��Ŀ����<br> <br></li>
+<li>數據分佈的頁數小於 DTLB 專案數。<br> <br></li>
   </ul>
 <script type="text/javascript" language="javascript1.2">
 <!--

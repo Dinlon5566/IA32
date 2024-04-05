@@ -8,15 +8,15 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/split_loads_retired.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:38:19 GMT -->
 <head>
 
-<title>ʧЧ�Ĳ�ּ��� (AT-E)</title>
+<title>失效的拆分載入 (AT-E)</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta NAME=MS-HAID CONTENT="E4 Group - Memory ADVANCED">
 <meta NAME=MS-HAID CONTENT=Events4>
 <meta NAME=MS-HAID CONTENT="E4 Split Loads Retired">
-<meta NAME=MS-HAID CONTENT="E4 Group - ָʾ����ȱ�ݵ��¼�">
+<meta NAME=MS-HAID CONTENT="E4 Group - 指示編碼缺陷的事件">
 <meta name=date content="07 8, 2002 11:45:27 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -31,7 +31,7 @@
 <meta name=page-count content=1>
 <meta name=layout-height content=420>
 <meta name=layout-width content=668>
-<meta name=x-ignored-words content="MMX;SIMD;Aliasing;modulo;aliasing;Pentium;pipelined;mispredicted;NetBurst;irets;BTB;DTLB;micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;UC;uncacheable;WC;MMNP;MMNM;Mispredicted;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;Clockticks;clocktick;VTune;clockticks;MOCLEAR;prefetching;misprediction;PGO;pseudo-LRU;developer.intel.com;index.htm;Vol;RFO;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;prefetch;Micro-ops;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;LSC;SSC;USC;ULC;SSE;denormal;denormaled;DELIVERBit;;BSQ;writeback;Uncacheable;encodings;ITLB;PGO's;RGBA;C++*;?;a(i;y;enddo;cacheability;index.htm.;��ops;��op;prefetched;CPUID;resynchronize;Memory_Flag;ELIHW;TC-built;TC-delivered;uops;declspec(align(n;intrinsics">
+<meta name=x-ignored-words content="MMX;SIMD;Aliasing;modulo;aliasing;Pentium;pipelined;mispredicted;NetBurst;irets;BTB;DTLB;micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;UC;uncacheable;WC;MMNP;MMNM;Mispredicted;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;Clockticks;clocktick;VTune;clockticks;MOCLEAR;prefetching;misprediction;PGO;pseudo-LRU;developer.intel.com;index.htm;Vol;RFO;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;prefetch;Micro-ops;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;LSC;SSC;USC;ULC;SSE;denormal;denormaled;DELIVERBit;;BSQ;writeback;Uncacheable;encodings;ITLB;PGO's;RGBA;C++*;?;a(i;y;enddo;cacheability;index.htm.;μops;μop;prefetched;CPUID;resynchronize;Memory_Flag;ELIHW;TC-built;TC-delivered;uops;declspec(align(n;intrinsics">
 
 
 <!--(Links)=========================================================-->
@@ -87,7 +87,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������¼�\n���ܵ����¼� - ����\nָʾ����ȱ�ݵ��¼�\nʧЧ�Ĳ�ּ���");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器事件\n效能調整事件 - 基本\n指示編碼缺陷的事件\n失效的拆分載入");
 
 	}
 	if (window.writeBtnStyle)
@@ -110,23 +110,23 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">ʧЧ�Ĳ�ּ���</h1>
+<h1><img src="p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">失效的拆分載入</h1>
 
-<p><span style="font-weight: bold;"><B>�߳��ض���</B></span>��<a href="Thread_Independent_due_to_ESCR_Restriction_TI_E.html">AT-E</a> SAAT_CR_ESCR1</p>
+<p><span style="font-weight: bold;"><B>執行緒特定性</B></span>：<a href="Thread_Independent_due_to_ESCR_Restriction_TI_E.html">AT-E</a> SAAT_CR_ESCR1</p>
 
-<p>���¼�ͳ�Ƶ��²�ּ��ص�ʧЧָ��������ȡ����ֵʱ���������������һ���������У�����һ������������һ���������У����ʱ�ᷢ����ּ��ء����ڲ�ּ��ػ�ǿ�ƴ������ֱ��ȡ���������ߣ�Ȼ����������������ճ����������˻ή�����ܡ������������߶�ȡ����Ҫ�ȴ�һ�������ߣ���ʹ����δͨ��������ʽ��ȷ���룩��ȡ��������</p>
+<p>此事件統計導致拆分載入的失效指令數。讀取數據值時，如果部分數據在一個快取線中，而另一部分數據在另一個快取線中，則此時會發生拆分載入。由於拆分載入會強制處理器分別讀取兩個快取線，然後將兩部分數據重新貼上起來，因此會降低效能。從兩個快取線讀取數據要比從一個快取線（即使數據未通過其它方式正確對齊）讀取慢幾倍。</p>
 
-<p>ͨ������£���������������ݣ�����绺���߽߱����ֵ������������� C �� C++ ָ�������ת��������ʹ�� SIMD �ڲ�����ʱ���ɸ������ݴ�С�����ͣ�������������ʽ����ָ��ĵ�ַ�����Խ�߽�Ŀ����Ի����󡣶����պ�Ҫ��������ת�����Ա㵱�������ֵ���з��ʵ�С����ֵ������ʹ�� <span class=Code>__declspec(align(n))</span> ���Զ������ǵ������ṹ���Ӷ����ͷ�����ֵĿ����ԣ�Ҳ���ǣ���������Ϊĳ������ʱ��Ȼ�����������������������ͽ��з��ʣ��Ӷ�����Ĭ�ϵ��������ͣ���ʱ�������������������������޷����������������й�ʹ�ô����Ե���ϸ��Ϣ������ı������ĵ��� 
+<p>通常情況下，編譯器會對齊數據，以免跨快取線邊界放置值。不過，如果將 C 或 C++ 指針的型別轉換（例如使用 SIMD 內部函式時）成更大數據大小的型別，或是以其它方式處理指針的地址，則跨越邊界的可能性會增大。對於日後要進行型別轉換，以便當作更大的值進行訪問的小數據值，可以使用 <span class=Code>__declspec(align(n))</span> 屬性對齊它們的陣列或結構，從而降低發生拆分的可能性，也就是，數據聲明為某種型別時，然後您決定將它當作其它型別進行訪問，從而覆蓋預設的數據型別，此時編譯器會相信您，但它可能無法正常工作。如需有關使用此屬性的詳細資訊，請參閱編譯器文件。 
  </p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" width="20px" height="20px" border="0" class="img_whs2"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" width="20px" height="20px" border="0" class="img_whs2"> 備註</h3>
 
-<p class="whs3">�ڱ���(R) 4 �������ϣ�ÿ��һ�����ݻ����߶����� 64 �ֽڵ����ݣ����ÿ����������ʼ�������ݵ�ַ���� 64 �ı����� </p>
+<p class="whs3">在奔騰(R) 4 處理器上，每個一級數據快取線都包含 64 位元組的數據，因此每個快取線起始處的數據地址都是 64 的倍數。 </p>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','64k/M �ص���ͻ����Ӱ��','64k_aliasing_conflicts.htm','64k/M �ص���ͻ����Ӱ��','../Pentium4P_HH/EventsP/64k_aliasing_conflicts.htm','x87 ����Э��','x87_input_assists.htm','x87 ���Э��','x87_output_assists.htm','ʧЧ�� MOB �����ط�','mob_load_replays_retired.htm','��������ָ���������չָ�����Э�� (TI)','streaming_simd_extensions_input_assists.htm');return false;" title="����ָʾ����ȱ�ݵ��¼�"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%85%b6%e5%ae%83%e6%8c%87%e7%a4%ba%e7%bc%96%e7%a0%81%e7%bc%ba%e9%99%b7%e7%9a%84%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=142 alt="����ָʾ����ȱ�ݵ��¼�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','64k/M 重疊衝突性能影響','64k_aliasing_conflicts.htm','64k/M 重疊衝突性能影響','../Pentium4P_HH/EventsP/64k_aliasing_conflicts.htm','x87 輸入協助','x87_input_assists.htm','x87 輸出協助','x87_output_assists.htm','失效的 MOB 載入重發','mob_load_replays_retired.htm','數據流單指令多數據擴充套件指令集輸入協助 (TI)','streaming_simd_extensions_input_assists.htm');return false;" title="其它指示編碼缺陷的事件"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%85%b6%e5%ae%83%e6%8c%87%e7%a4%ba%e7%bc%96%e7%a0%81%e7%bc%ba%e9%99%b7%e7%9a%84%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=142 alt="其它指示編碼缺陷的事件"></a>
 
 
  </p>

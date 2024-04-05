@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/mob_load_replays.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:10 GMT -->
 <head>
 
-<title>MOB �����ط� (AT-E)</title>
+<title>MOB 載入重發 (AT-E)</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="02 6, 2003 4:40:11 PM">
 <meta name=topic-status content=Complete>
 <meta name=topic-priority content=-1>
@@ -22,7 +22,7 @@
 <meta name=MS-HAID content="E4 Group - Memory ADVANCED">
 <meta name=MS-HAID content="E4 MOB Loads Replays">
 <meta name=MS-HAID content=Events4>
-<meta name=MS-HAID content="Pentium4_�ڴ��¼�">
+<meta name=MS-HAID content="Pentium4_記憶體事件">
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
 <meta name=generator-major-version content=0.1>
 <meta name=generator-minor-version content=1>
@@ -89,7 +89,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������¼�\n���ܵ����¼� - �߼��¼�\n�ڴ��¼�\nMOB �����ط�");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器事件\n效能調整事件 - 高級事件\n記憶體事件\nMOB 載入重發");
 
 	}
 	if (window.writeBtnStyle)
@@ -112,15 +112,15 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">MOB �����ط��������Ĵ洢ת���ط��� </h1>
+<h1><img src="p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">MOB 載入重發（阻塞的儲存轉發重發） </h1>
 
-<p><span style="font-weight: bold;"><B>�߳��ض���</B></span>��<a href="Thread_Independent_due_to_ESCR_Restriction_TI_E.html">AT-E</a></p>
+<p><span style="font-weight: bold;"><B>執行緒特定性</B></span>：<a href="Thread_Independent_due_to_ESCR_Restriction_TI_E.html">AT-E</a></p>
 
-<p>���¼�ͳ���ڴ�˳�򻺳��� (MOB) �����ط����ز����Ĵ�����Ĭ������£����¼����Ϊͳ����������еļ��ص��µ� MOB �ط����洢������ת�����̷�����������ע�⣬���¼�ͳ���ط�����������ָ������һ��ָ��������ɶ���ط�������αָ��Ҳ�������ط���αָ���Ƿ�����֧Ԥ��ʧ��֮���Ʋ�ִ�е�ָ���ˣ���ص��¼�<a HREF="mob_load_replays_retired.html">ʧЧ�� MOB �����ط�</a>�����ã������ṩ����Ϣͨ��Ҳ�����á� </p>
+<p>此事件統計記憶體順序緩衝區 (MOB) 導致重發載入操作的次數。預設情況下，此事件程式設計為統計以下情況中的載入導致的 MOB 重發：儲存至載入轉發過程發生阻塞。請注意，此事件統計重發數，而不是指令數。一條指令可能產生多個重發，甚至偽指令也能產生重發，偽指令是發生分支預測失誤之後按推測執行的指令。因此，相關的事件<a HREF="mob_load_replays_retired.html">失效的 MOB 載入重發</a>更常用，並且提供的資訊通常也更有用。 </p>
 
-<h3>�߼������Ĵ��¼������Ķ���</h3>
+<h3>高級：更改此事件測量的對象</h3>
 
-<p>Ĭ������£�&ldquo;MOB �����ط�&rdquo;�¼�ֻͳ�Ʋ������ݻ�δ����ĵ�ַ���µ��ط��������Խ������ó�ͳ�������ط����������±���ʾ��</p>
+<p>預設情況下，&ldquo;MOB 載入重發&rdquo;事件只統計部分數據或未對齊的地址導致的重發。您可以將它配置成統計其它重發，具體如下表所示：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="1" border="1" class="whs2">
@@ -128,54 +128,54 @@ else
 <tr>
 <td valign="middle" class="whs3">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">�¼�����λ</td>
+	style="margin-bottom: 0;">事件掩碼位</td>
 <td valign="middle" class="whs3">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">說明</td></tr>
 
 <tr>
 <td valign="middle" class="whs3">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">λ 1��NO_STA</td>
+	style="margin-bottom: 0;">位 1：NO_STA</td>
 <td valign="middle" class="whs3">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">δ֪�洢��ַ���µ��ط�</td></tr>
+	style="margin-bottom: 0;">未知儲存地址導致的重發</td></tr>
 
 <tr>
 <td valign="middle" class="whs3">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">λ 3��NO_STD</td>
+	style="margin-bottom: 0;">位 3：NO_STD</td>
 <td valign="middle" class="whs3">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">δ֪�洢���ݵ��µ��ط�</td></tr>
+	style="margin-bottom: 0;">未知儲存數據導致的重發</td></tr>
 
 <tr>
 <td valign="middle" class="whs3">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">λ 4��PARTIAL_DATA</td>
+	style="margin-bottom: 0;">位 4：PARTIAL_DATA</td>
 <td valign="middle" class="whs3">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">������洢����֮������ݷ��ʲ����ص����µ��ط�</td></tr>
+	style="margin-bottom: 0;">載入與儲存操作之間的數據訪問部分重疊導致的重發</td></tr>
 
 <tr>
 <td valign="middle" class="whs3">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">λ 5��UNALGN_ADDR</td>
+	style="margin-bottom: 0;">位 5：UNALGN_ADDR</td>
 <td valign="middle" class="whs3">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">������洢����֮�����Ե�ַ�ĵ� 4 λ��ƥ�䵼�µ��ط�</td></tr>
+	style="margin-bottom: 0;">載入與儲存操作之間線性地址的低 4 位不匹配導致的重發</td></tr>
 </table>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs4"> ��ʾ</h3>
+	style="margin-left: 40px;"><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs4"> 提示</h3>
 
 <ul type="disc" class="whs5">
 	
 	<ul type="disc" class="whs5">
 		
-		<li class=kadov-p><p>�����й���Щ����ᵼ��&ldquo;MOB �����ط�&rdquo;�Լ���ι�ܵ���ϸ��Ϣ�������<a href="mob_load_replays_retired.html">ʧЧ�� MOB �����ط�</a>��</p></li>
+		<li class=kadov-p><p>如需有關哪些情況會導致&ldquo;MOB 載入重發&rdquo;以及如何規避的詳細資訊，請參閱<a href="mob_load_replays_retired.html">失效的 MOB 載入重發</a>。</p></li>
 		
-		<li class=kadov-p><p>�����й���ϸ��Ϣ����������´�����<a href="../../Reference_HH/Intel_s_Software_Developer_s_Manuals.html" style="x-condition: eclipse;">�Ż��ο��ֲ�</a>��</p></li>
+		<li class=kadov-p><p>如需有關詳細資訊，請參閱最新處理器<a href="../../Reference_HH/Intel_s_Software_Developer_s_Manuals.html" style="x-condition: eclipse;">優化參考手冊</a>。</p></li>
 	</ul>
 </ul>
 

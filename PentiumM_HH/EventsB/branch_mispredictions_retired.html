@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/branch_mispredictions_retired.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:38:17 GMT -->
 <head>
 
-<title>ʧЧ�ķ�֧Ԥ��ʧ��</title>
+<title>失效的分支預測失誤</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="02 24, 2003 12:01:36 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -98,7 +98,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M �������¼�\n��֧�¼�\nʧЧ�ķ�֧Ԥ��ʧ��");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n英特爾(R) 奔騰(R) M 處理器事件\n分支事件\n失效的分支預測失誤");
 
 	}
 	if (window.writeBtnStyle)
@@ -121,38 +121,38 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>ʧЧ�ķ�֧Ԥ��ʧ��</h1>
+<h1>失效的分支預測失誤</h1>
 
-<p>���¼���������Ԥ��ʧ���ִ����ϵ�����ʧЧ�ķ�֧Ԥ��ʧ���������</p>
+<p>此事件測量由於預測失誤而執行完畢的所有失效的分支預測失誤。這包括：</p>
 
 <ul>
 	
-	<li class=kadov-p><p>����Ԥ��Ϊ&ldquo;ִ��&rdquo;����ȴ����ʧЧ֮��ŷ��ֱ�&ldquo;��Ӧִ��&rdquo;�ķ�֧��</p></li>
+	<li class=kadov-p><p>錯誤預測為&ldquo;執行&rdquo;，而卻僅在失效之後才發現本&ldquo;不應執行&rdquo;的分支。</p></li>
 	
-	<li class=kadov-p><p>����Ԥ��Ϊ&ldquo;��ִ��&rdquo;����ȴ����ʧЧ֮��ŷ��ֱ�Ӧ&ldquo;ִ��&rdquo;�ķ�֧��</p></li>
+	<li class=kadov-p><p>錯誤預測為&ldquo;不執行&rdquo;，而卻僅在失效之後才發現本應&ldquo;執行&rdquo;的分支。</p></li>
 </ul>
 
-<p class="whs1">��ֻ�Ժ��֧��Ч�� </p>
+<p class="whs1">這隻對宏分支有效。 </p>
 
-<h3 class=NoteTipHead><img src="tip.gif" alt="��ʾ" x-maintain-ratio="TRUE" width="17px" height="18px" align="left" border="0" class="img_whs2"> ��ʾ</h3>
+<h3 class=NoteTipHead><img src="tip.gif" alt="提示" x-maintain-ratio="TRUE" width="17px" height="18px" align="left" border="0" class="img_whs2"> 提示</h3>
 
-<p class="whs3">Ҫ�Ż���֧��Ԥ���ԣ�</p>
+<p class="whs3">要優化分支可預測性：</p>
 
 <ul type="disc" class="whs4">
 	
-	<li class=kadov-p><p class="whs1">���վ�̬��֧Ԥ��<span style="margin-bottom: 0;">���裨���ִ������ǰ��ִ�У���������ṹ�����Ʒ�֧��Ԥ���Բ��Ż�ָ��ԤȡЧ����</span></p></li>
+	<li class=kadov-p><p class="whs1">按照靜態分支預測<span style="margin-bottom: 0;">假設（向後執行與向前不執行）調整程式碼結構，改善分支可預測性並優化指令預取效果。</span></p></li>
 	
-	<li class=kadov-p><p class="whs1">������ʹ��Զ���������뷵�ء�</p></li>
+	<li class=kadov-p><p class="whs1">避免混合使用遠、近呼叫與返回。</p></li>
 	
-	<li class=kadov-p><p class="whs1">����ͨ��ѹ�뷵�ص�ַ����ת<span style="margin-bottom: 0;">��Ŀ����ʵ�ֵ��á�Ӳ�����Խ������뷵��ָ����ԣ��Ӷ����ƿ�Ԥ���ԡ�</span></p></li>
+	<li class=kadov-p><p class="whs1">避免通過壓入返回地址並跳轉<span style="margin-bottom: 0;">到目標來實現呼叫。硬體可以將呼叫與返回指令配對，從而改善可預測性。</span></p></li>
 	
-	<li class=kadov-p><p class="whs1">�������ȴ�ѭ����ʹ�� &quot;pause&quot; ָ�</p></li>
+	<li class=kadov-p><p class="whs1">在自旋等待循環中使用 &quot;pause&quot; 指令。</p></li>
 	
-	<li class=kadov-p><p class="whs1">���ݱ��뽨����Ƕ������</p></li>
+	<li class=kadov-p><p class="whs1">根據編碼建議內嵌函式。</p></li>
 	
-	<li class=kadov-p><p class="whs1">������֧��</p></li>
+	<li class=kadov-p><p class="whs1">消除分支。</p></li>
 	
-	<li class=kadov-p><p class="whs1">�����ӵ��á�</p></li>
+	<li class=kadov-p><p class="whs1">避免間接呼叫。</p></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

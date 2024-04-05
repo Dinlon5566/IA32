@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\n�ڴ��¼�\nһ��ָ�����Ԥȡ�¼�\nL1I_FETCH_ISB_HIT");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 安騰(R) 2 處理器\n英特爾(R) 安騰(R) 2 處理器事件\n記憶體事件\n一級指令快取與預取事件\nL1I_FETCH_ISB_HIT");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,14 +106,14 @@ else
 </script>
 <h1>L1I_FETCH_ISB_HIT</h1>
 
-<b style="font-weight: bold;">���⣺</b>���л�ͨ�� ISB ��&ldquo;ʵʱ&rdquo;ָ���ȡ<b style="font-weight: bold;"><br> ���</b>һ��ָ�����Ԥȡ�¼�<b style="font-weight: bold;"><br> IAR/DAR/OPC��</b>Y/N/N<b style="font-weight: bold;"><br> �¼����룺</b>0x66<b style="font-weight: bold;"><br> ���ÿ����������</b>1 
+<b style="font-weight: bold;">標題：</b>命中或通過 ISB 的&ldquo;實時&rdquo;指令獲取<b style="font-weight: bold;"><br> 類別：</b>一級指令快取與預取事件<b style="font-weight: bold;"><br> IAR/DAR/OPC：</b>Y/N/N<b style="font-weight: bold;"><br> 事件程式碼：</b>0x66<b style="font-weight: bold;"><br> 最大每週期增量：</b>1 
 
-<p><b style="font-weight: bold;">���壺</b>�ṩ���л�ͨ�� ISB��ָ��������������ָ���ȡ���й���Ϣ��������ͳ��&ldquo;�ؼ�ͨ��&rdquo;��Ҳ���ǣ��ܵ�������ͣ�Եȴ��Ӷ������洫�����ݵ��κ�ʱ�䡣����ͳ��&ldquo;ʵʱͨ��&rdquo;��Ҳ���ǣ��������漰ʱ��Ҫʹ�õ�ָ���ָ�����ݣ�������ͣǰ�˹ܵ���ʱ��</p>
+<p><b style="font-weight: bold;">定義：</b>提供命中或通過 ISB（指令流緩衝區）的指令獲取的有關資訊。它將不統計&ldquo;關鍵通過&rdquo;，也就是，管道必須暫停以等待從二級快取傳遞數據的任何時間。它將統計&ldquo;實時通過&rdquo;，也就是，二級快取及時給要使用的指令傳遞指令數據，而不暫停前端管道的時候。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> 備註</h3>
 
-<p class="whs2">���䵽&ldquo;ָ���&rdquo;��1 �����ڳ��ȣ���ͬʱ���� ISB �������ȡ����ͳ�ƣ�ԭ�����ڣ����ڷ�֧Ԥ���Ŀ�ģ����뽫������Ϊ�������С���������߱�ǳ������ȡ������¼�ʹ�� IBRP0 �޶�����������߱�ǳ�Ԥȡƥ�䣬����¼�ʹ�� IBRP1 �޶��� </p>
+<p class="whs2">傳輸到&ldquo;指令快取&rdquo;（1 個週期長度）的同時命中 ISB 的隨需獲取不作統計，原因在於，出於分支預測的目的，必須將它們視為快取命中。如果快取線標記成隨需獲取，則此事件使用 IBRP0 限定；如果快取線標記成預取匹配，則此事件使用 IBRP1 限定。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

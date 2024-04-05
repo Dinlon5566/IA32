@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/ERB/er_branch_mispredic_branch_retired.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:54 GMT -->
 <head>
 
-<title>ʧЧ�ķ�ָ֧�����</title>
+<title>失效的分支指令比率</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=MS-HAID content="Event Ratio">
 <meta name=MS-HAID content="Instructions Retired">
 <meta name=MS-HAID content="Branch Instructions Retired">
@@ -98,8 +98,8 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M ���������¼�����\n��֧ͳ�Ʊ���\nʧЧ�ķ�ָ֧��");
-addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M ���������¼�����\n�������ܵ�������\nʧЧ�ķ�ָ֧��");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n英特爾(R) 奔騰(R) M 處理器的事件比率\n分支統計比率\n失效的分支指令");
+addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n英特爾(R) 奔騰(R) M 處理器的事件比率\n基本效能調整比率\n失效的分支指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -122,11 +122,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/ERB/er_logo.gif" alt="�¼���������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">ʧЧ�ķ�ָ֧��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/ERB/er_logo.gif" alt="事件比率主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">失效的分支指令</h1>
 
-<p><a href="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/branch_instructions_retired.htm">ʧЧ�ķ�ָ֧��</a> / <a href="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/instructions_retired.htm">ʧЧ��ָ��</a></p>
+<p><a href="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/branch_instructions_retired.htm">失效的分支指令</a> / <a href="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/instructions_retired.htm">失效的指令</a></p>
 
-<p>һ����˵����Щ����Դ�Ծ���ḻ�����ܹ���ʦ�ľ��飺</p>
+<p>一般來說，這些數字源自經驗豐富的效能工程師的經驗：</p>
 
 <p class="whs2">&nbsp;</p>
 
@@ -136,10 +136,10 @@ else
 <tr>
 <td valign="top" width="50%" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td>
+	style="margin-bottom: 0;">良好</td>
 <td valign="top" width="50%" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td></tr>
+	style="margin-bottom: 0;">不佳</td></tr>
 
 <tr>
 <td valign="top" width="50%" class="whs4">
@@ -148,9 +148,9 @@ else
 <p class="whs2">0.30</td></tr>
 </table>
 
-<p>�����ָ֧����ʲ��ѣ�����һ����ʾ�����ش��������⣬����Ƶ��������֧Ԥ��ʧ��</p>
+<p>如果分支指令比率不佳，並不一定表示存在重大效能問題，除非頻繁發生分支預測失誤。</p>
 
-<p>���ڷ�ָ֧����ʲ��ѵĴ��룬����ָͬ�����صı����Լ���֧Ԥ���ʡ�</p>
+<p>對於分支指令比率不佳的程式碼，請檢查同指令快取相關的比率以及分支預測率。</p>
 
 <p>&nbsp;</p>
 

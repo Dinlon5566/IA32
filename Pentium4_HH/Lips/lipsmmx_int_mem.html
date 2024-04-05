@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/lipsmmx_int_mem.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:52 GMT -->
 <head>
 
-<title>MMX(TM) ָ��ʹ�������Ĵ������ڴ�</title>
+<title>MMX(TM) 指令使用整數暫存器或記憶體</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta NAME=MS-HAID CONTENT="Pairing Issues">
 <meta NAME=MS-HAID CONTENT="MMX(TM) Technology Penalties">
 <meta name=date content="09 6, 2001 4:22:27 PM">
@@ -120,11 +120,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/TA_logo.gif" align="right" width="36px" height="36px" border="0" class="img_whs1"> MMX(TM) ָ��ʹ�������Ĵ������ڴ�</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/TA_logo.gif" align="right" width="36px" height="36px" border="0" class="img_whs1"> MMX(TM) 指令使用整數暫存器或記憶體</h1>
 
-<p><span style="font-weight: bold;"><B>MM_Int_Mem</B></span> ��ʾһ��������Ƴ�ͻ��</p>
+<p><span style="font-weight: bold;"><B>MM_Int_Mem</B></span> 表示一種配對限制衝突。</p>
 
-<p>Ϊ�䷢�� <span style="font-weight: bold;"><B>MM_Int_Mem</B></span> �� MMX(TM) ����ָ��д����ȡ�����Ĵ������ڴ档�������� <a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#U_pipe" style="x-condition: WebHelp;">U �ܵ�</a>ʱ����ȡ��д�������Ĵ������ڴ�� MMX ����ָ��ſ���ͬ���� MMX ����ָ����ԡ�ʹ�������Ĵ������ڴ�������� MMX ����ָ����Զ�޷�ͬ����ָ����ԡ�</p>
+<p>為其發出 <span style="font-weight: bold;"><B>MM_Int_Mem</B></span> 的 MMX(TM) 技術指令寫入或讀取整數暫存器或記憶體。僅當發到 <a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#U_pipe" style="x-condition: WebHelp;">U 管道</a>時，讀取或寫入整數暫存器或記憶體的 MMX 技術指令才可以同其它 MMX 技術指令配對。使用整數暫存器或記憶體運算元的 MMX 技術指令永遠無法同整數指令配對。</p>
 
 <h3 class=NoteTipHead
 	style="margin-left: 40px;"><script type="text/javascript" language="JavaScript"><!--
@@ -132,13 +132,13 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4))
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='tip.gif' width='17px' height='18px' border='0' class='img_whs2'>");}
 else
 {   document.write("<img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs2'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs2'></noscript><span style="font-weight: bold;"><B>����</B></span></h3>
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs2'></noscript><span style="font-weight: bold;"><B>建議</B></span></h3>
 
-<p class="whs3">��������˳���Ա㽫ʹ�������Ĵ����� MMX ����ָ��� U �ܵ�����λ������ MMX ����ָ��֮ǰ�� </p>
+<p class="whs3">調整程式碼順序，以便將使用整數暫存器的 MMX 技術指令發到 U 管道，並位於其它 MMX 技術指令之前。 </p>
 
 <p class="whs4">
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','�� MMX(TM) �����ı���(R) ������','pentium(r)_with_mmx(tm_technology_processor.htm');return false;" title="Ӱ��Ĵ�����"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_影响的处理器.gif" border=0 height=20 width=82 alt="Ӱ��Ĵ�����"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','含 MMX(TM) 技術的奔騰(R) 處理器','pentium(r)_with_mmx(tm_technology_processor.htm');return false;" title="影響的處理器"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_褰卞搷鐨勫鐞嗗櫒.gif" border=0 height=20 width=82 alt="影響的處理器"></a>
 
 
  </p>

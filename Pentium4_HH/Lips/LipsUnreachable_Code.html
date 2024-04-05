@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/LipsUnreachable_Code.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:52 GMT -->
 <head>
 
-<title>δִ�е�ָ��</title>
+<title>未執行的指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="04 7, 2003 8:37:11 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -80,7 +80,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������ĳͷ�\nδִ�е�ָ��");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器的懲罰\n未執行的指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -103,17 +103,17 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> δִ�е�ָ��</h1>
+<h1><img src="TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> 未執行的指令</h1>
 
-<p><span style="font-weight: bold;"><B>Unreachable_Code</B></span> ��ʾ<a HREF="Static_Assembly_Analysis.html">��̬����</a>�ڼ��⵽��һ��״̬��</p>
+<p><span style="font-weight: bold;"><B>Unreachable_Code</B></span> 表示<a HREF="Static_Assembly_Analysis.html">靜態分析</a>期間檢測到的一種狀態。</p>
 
-<p>Ϊ�䷢�� <span style="font-weight: bold;"><B>Unreachable_Code</B></span> ��ָ����Ϊ����һ��<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#basic_block" style="x-condition: WebHelp;">����ָ���</a>֮ǰ�������ڸ��Ŀ�������ָ��֮�����Կ�����Զ�޷�ִ�С���������ת�뷵��ָ����Ǹ��Ŀ�������ָ���һЩ���ӡ�</p>
+<p>為其發出 <span style="font-weight: bold;"><B>Unreachable_Code</B></span> 的指令因為在下一個<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#basic_block" style="x-condition: WebHelp;">基本指令塊</a>之前，並且在更改控制流的指令之後，所以可能永遠無法執行。無條件跳轉與返回指令就是更改控制流的指令的一些例子。</p>
 
-<p>���ڼ����ת��δ�����Ĵ����е�Ŀ��ָ�&ldquo;VTune(TM) ���ܷ�����&rdquo;Ҳ���ܻ�ָʾ�˳ͷ�״̬��</p>
+<p>對於間接跳轉或未分析的程式碼行的目標指令，&ldquo;VTune(TM) 效能分析器&rdquo;也可能會指示此懲罰狀態。</p>
 
-<p>ʾ����</p>
+<p>示例：</p>
 
-<p>�ڱ����У�MOV ָ����κη�֧��Ŀ�ꡣ����Զ����ִ�С�</p>
+<p>在本例中，MOV 指令不是任何分支的目標。它永遠不會執行。</p>
 
 <pre CLASS=Code>
 <p class=Preformatted>
@@ -121,7 +121,7 @@ ret
 wmov eax, 1</p>
 </pre>
 
-<p>Ӱ�����еĴ�������</p>
+<p>影響所有的處理器。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

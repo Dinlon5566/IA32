@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/AdviceB_HH/significant_floating_point_activity.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:12 GMT -->
 <head>
 
-<title>��������</title>
+<title>浮點活動明顯</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="02 12, 2003 11:54:56 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -93,7 +93,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\n����Ӣ�ض�(R) ����(R) M �������Ľ���\n��������");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n關於英特爾(R) 奔騰(R) M 處理器的建議\n浮點活動明顯");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,11 +116,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" alt="Ӣ�ض�(R) ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">������������</h1>
+<h1><img src="TA_logo.gif" alt="英特爾(R) 調優助手主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">浮點操作活動明顯</h1>
 
-<p>�����������Ա�ʾ��������ר����Ը����㷨���Ż������� </p>
+<p>浮點操作活動明顯表示可能適用專門針對浮點演算法的優化方法。 </p>
 
-<p><span style="font-weight: bold;"><B>����������У���ϸ�ھ���ʵ�������壺</B></span><br>���������̣�<a href="../ERB/er_floating_point.html" style="x-condition: eclipse;">ʧЧ�ĸ������/ʧЧ��ָ��</a>���ϸߡ�ֵ 0.00 Ӧ��Ϊ�ϵͣ�ֵ 0.95 Ӧ��Ϊ�ϸߡ�</p>
+<p><span style="font-weight: bold;"><B>在以下情況中，此細節具有實質性意義：</B></span><br>計數器的商（<a href="../ERB/er_floating_point.html" style="x-condition: eclipse;">失效的浮點操作/失效的指令</a>）較高。值 0.00 應視為較低，值 0.95 應視為較高。</p>
 
 <h3 class=NoteTipHead
 	style="margin-left: 40px;"><span style="font-weight: bold;"><B><script type="text/javascript" language="JavaScript"><!--
@@ -128,25 +128,25 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4))
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='tip.gif' width='17px' height='18px' border='0' class='img_whs2'>");}
 else
 {   document.write("<img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs2'>");}
-//--></script><noscript><img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs2'></noscript> ����</B></span></h3>
+//--></script><noscript><img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs2'></noscript> 建議</B></span></h3>
 
 <ol>
 	
 	<ul type="disc" class="whs3">
 		
-		<li class=kadov-p><p>����ʹ��ѹ�����&ldquo;��������ָ���������չָ�&rdquo;(SSE) �� SSE2 ���롣����ʹ�ñ��� SSE �������ʹ�ó��渡�������ܻή�����ܣ�����ȡ����ָ����������������ʹ�ñ������� <span class=Code>/QxW</span> ��־�������Ӱ�졣ԭ�����ڣ��ۺϴ���� x87 ���롢���� SSE ���벻ͬ�����޷����д��ڴ浽�Ĵ����Ĳ�����ͨ������£�ʹ��ѹ�����뼫�п��ܸ������ܡ�</p></li>
+		<li class=kadov-p><p>考慮使用壓縮版的&ldquo;數據流單指令多數據擴充套件指令集&rdquo;(SSE) 或 SSE2 程式碼。由於使用標量 SSE 程式碼而不使用常規浮點程式碼可能會降低效能（具體取決於指令混合情況），因此請使用編譯器的 <span class=Code>/QxW</span> 標誌檢查效能影響。原因在於，熔合程式碼跟 x87 程式碼、標量 SSE 程式碼不同，它無法進行從記憶體到暫存器的操作。通常情況下，使用壓縮程式碼極有可能改善效能。</p></li>
 		
-		<li class=kadov-p><p>�о�ռ�ô󲿷�ִ��ʱ���ѭ��Ƕ�׵Ļ����룬���˽������ִ������Щ���͵�ת���������ǻ�����ִ��������Щ�Ż���</p></li>
+		<li class=kadov-p><p>研究佔用大部分執行時間的循環巢狀的彙編程式碼，以瞭解編譯器執行了哪些型別的轉換，並考慮還可能執行其它哪些優化。</p></li>
 		
-		<li class=kadov-p><p>���ǽ����ӳٸ������������滻�ɸ�������㡣<br>�跨�����ӳٸ����������㣨��������滻�ɸ�������㣨����Ե����������ҪƵ��ִ�г���������ȷ�б�Ҫ�������벻Ҫʹ�ýϸߵľ��ȡ���˫���ȣ�64 λ������չ˫���ȣ�80 λ����ȣ������ȣ�32 λ���ĳ����ٶȸ��죬����ֻ����һ����ڴ�ռ䡣��ע�⣬�����������ͣ����磬�� double ���ĳ� float�������Զ�����ִ����������ʱ�ľ��ȡ����ȿ�ͨ�����ĸ���״̬�Ĵ����������á����ͳ�����������һ�ְ취��ʹ�� SSE ������ѹ������ָ������й���ϸ��Ϣ������Ĵ�������&ldquo;����Ա�ο��ֲ�&rdquo;��</p></li>
+		<li class=kadov-p><p>考慮將長延遲浮點算術運算替換成更快的運算。<br>設法將長延遲浮點算術運算（如除法）替換成更快的運算（如乘以倒數）。如果要頻繁執行除法，除非確有必要，否則請不要使用較高的精度。與雙精度（64 位）或擴充套件雙精度（80 位）相比，單精度（32 位）的除法速度更快，並且只消耗一半的記憶體空間。請注意，更改數據型別（例如，從 double 更改成 float）不會自動更改執行算術運算時的精度。精度可通過更改浮點狀態暫存器進行設定。降低除法開銷的另一種辦法是使用 SSE 標量或壓縮除法指令。如需有關詳細資訊，請參閱處理器的&ldquo;程式設計師參考手冊&rdquo;。</p></li>
 		
-		<li class=kadov-p><p>���������Ҫִ�� float �� int ת������ȷ��ʹ�� float �� int ����ת�����̡����ຯ���������Ĺ����������������Ĺ�������ȷ�� float �� int ��ת�������ٶȽϿ졣��ע�⣬���� FORTRAN �� C ���Ե����巽���ԭ��float �� int ��ת�����ܻᰵ�з�������˿��ܲ�����ע�⵽������ float �� int ��ת������ʱ��ͨ���鿴&ldquo;VTune&#x2122; ���ܷ�����&rdquo;��������Ƿ�������� <span class=Code>_ftol()</span>�����Լ����Ƿ��� float �� int ת��������ĳЩ����������Ӣ�ض�(R) C++ ����������������������Ƕ�ģ���˸��Ѽ�����ת����ʹ�� SSE ָ����Խ�������⣬SSE ָ��ʹ�ýض�ת��ָ� &nbsp;</p></li>
+		<li class=kadov-p><p>如果程式碼需要執行 float 到 int 轉換，請確保使用 float 到 int 快速轉換例程。許多函式庫所做的工作都超過必需做的工作，請確保 float 到 int 的轉換例程速度較快。請注意，由於 FORTRAN 與 C 語言的語義方面的原因，float 到 int 的轉換可能會暗中發生，因此可能不容易注意到發生了 float 到 int 的轉換。有時候，通過檢視&ldquo;VTune&#x2122; 效能分析器&rdquo;的輸出中是否出現例程 <span class=Code>_ftol()</span>，可以檢測出是否發生 float 到 int 轉換。對於某些編譯器（如英特爾(R) C++ 編譯器），由於例程是內嵌的，因此更難檢測此種轉換。使用 SSE 指令可以解決此問題，SSE 指令使用截斷轉換指令。 &nbsp;</p></li>
 		
-		<li class=kadov-p><p>ȷ��Ӧ�ó����е���������ȷ�ķ�Χ�ڡ���ֵ������Χ�ᵼ�·ǳ��ߵĿ��������ʹ��&ldquo;��������ָ���������չָ�&rdquo;(SSE)�������ڴ�������ֵ���볢��ʹ�� SSE �����Ϊ��ģʽ�� </p></li>
+		<li class=kadov-p><p>確保應用程式中的數據在正確的範圍內。數值超出範圍會導致非常高的開銷。如果使用&ldquo;數據流單指令多數據擴充套件指令集&rdquo;(SSE)，並且在處理浮點值，請嘗試使用 SSE 的清除為零模式。 </p></li>
 		
-		<li class=kadov-p><p>������ʹ��&ldquo;Ӣ�ض�(R) MKL&rdquo;����ѧ�ں˿⣩����Щ��������ೣ�õ����Դ������̣��� BLAS3��LAPACK �ȵȡ�</p></li>
+		<li class=kadov-p><p>儘可能使用&ldquo;英特爾(R) MKL&rdquo;（數學內核庫）。這些庫包含許多常用的線性代數例程，如 BLAS3、LAPACK 等等。</p></li>
 		
-		<li class=kadov-p><p>���Ǳ�����������ʸ�����������йر�����������ʸ��������ϸ��Ϣ������ı������ĵ���Ŀǰ������Ӣ�ض�(R) C++ ��������ʸ��������ͨ�������п��� -QxW ���</p></li>
+		<li class=kadov-p><p>考慮編譯器驅動的向量化。如需有關編譯器驅動的向量化的詳細資訊，請參閱編譯器文件。目前，對於英特爾(R) C++ 編譯器，向量化功能通過命令列開關 -QxW 啟用。</p></li>
 	</ul>
 </ol>
 

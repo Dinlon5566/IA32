@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/ev3_092.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:36 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>�洢����������</title>
+<title>儲存緩衝區阻塞</title>
 
 <!--(Meta)==========================================================-->
 
@@ -91,7 +91,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M �������¼�\n�洢�������¼�\n�洢����������");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n英特爾(R) 奔騰(R) M 處理器事件\n儲存緩衝區事件\n儲存緩衝區阻塞");
 
 	}
 	if (window.writeBtnStyle)
@@ -114,20 +114,20 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>�洢����������</h1>
+<h1>儲存緩衝區阻塞</h1>
 
-<p>���¼�ָ�����ر�������ִֹͣ�еĴ�����ԭ�������</p>
+<p>此事件指出載入被阻塞並停止執行的次數。原因包括：</p>
 
 <ul>
 	
-	<li class=kadov-P><p>ǰһ���洢��ַδ֪��</p></li>
+	<li class=kadov-P><p>前一個儲存地址未知。</p></li>
 	
-	<li class=kadov-P><p>ǰһ���洢��ַ��֪�г�ͻ������δ֪��</p></li>
+	<li class=kadov-P><p>前一個儲存地址已知有衝突且數據未知。</p></li>
 	
-	<li class=kadov-P><p>ǰһ���洢����س�ͻ��������ز���ȫ�ص���</p></li>
+	<li class=kadov-P><p>前一個儲存與載入衝突，但與載入不完全重疊。</p></li>
 </ul>
 
-<p class="whs1">��������������ʸߣ����賬�� 10%������Կ��������������룬�Ա����ͬ��λ�÷ֿ�д�����ȡ�����°������ݽṹ��Ƕ��ѭ��Ҳ�����ų����ִ���������� </p>
+<p class="whs1">如果載入阻塞比率高，假設超過 10%，則可以考慮重新整理程式碼，以便從相同的位置分開寫入與讀取。重新安排數據結構或巢狀循環也可以排除這種錯誤的阻塞。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

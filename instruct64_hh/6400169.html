@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400169.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:45 GMT -->
 <head>
 
-<title>dep - ���ָ��</title>
+<title>dep - 存放指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="03 6, 2002 12:41:17 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -94,7 +94,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nD - ָ��\ndep - ���ָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nD - 指令\ndep - 存放指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -128,16 +128,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">���ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">存放指令</h1>
 
 <p><span style="font-weight: bold;"><B>dep</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400170.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400170.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字型慣例</a>
  </p>
 
-<p>ָ������ I</p>
+<p>指令型別 I</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) dep <span style="font-style: italic;"><I>r1</I></span> = <span style="font-style: italic;"><I>r2</I></span>, <span style="font-style: italic;"><I>r3</I></span>, <span style="font-style: italic;"><I>pos6</I></span>, <span style="font-style: italic;"><I>len4</I></span> merge_form, register_form</p>
 
@@ -152,18 +152,18 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>說明</B></span></p>
 
-<p>�� merge_form �У�ȡ�Ե�һ��Դ���������Ҷ���λ�ֶε�ֵ��ŵ� <span style="x-condition: eclipse;">GR</span><span style="font-style: italic;"><I>r3</I></span> ��ֵ�У���������λ��λ���ϣ�������� GR <span style="font-style: italic;"><I>r1</I></span>��<script type="text/javascript"
+<p>在 merge_form 中，取自第一個源運算元的右對齊位欄位的值存放到 <span style="x-condition: eclipse;">GR</span><span style="font-style: italic;"><I>r3</I></span> 的值中，放在任意位的位置上，結果放入 GR <span style="font-style: italic;"><I>r1</I></span>。<script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A1');
-//--></script> �� register_form �У���һ��Դ�������� GR <span style="font-style: italic;"><I>r2</I></span>������ imm_form �У����� <span style="font-style: italic;"><I>imm1</I></span> ָ���ķ�����չֵ��ȫһ��ȫ�㣩����ŵ�λ�ֶδ� <span style="font-style: italic;"><I>pos6</I></span> ������ָ��λ��λ�ÿ�ʼ������ len ������ָ����λ������ࣨ���������Чλ����չ����ע�⣬�� register_form �У�len �ķ�Χ�� 1-16���� imm_form �У����� 1-64��<span style="font-style: italic;"><I>pos6</I></span> �������ķ�Χ�� 0 �� 63��</p>
+//--></script> 在 register_form 中，第一個源運算元是 GR <span style="font-style: italic;"><I>r2</I></span>；而在 imm_form 中，它是 <span style="font-style: italic;"><I>imm1</I></span> 指定的符號擴充套件值（全一或全零）。存放的位欄位從 <span style="font-style: italic;"><I>pos6</I></span> 立即數指定位的位置開始，按照 len 立即數指定的位數向左側（朝向最高有效位）擴充套件。請注意，在 register_form 中，len 的範圍是 1-16；在 imm_form 中，則是 1-64。<span style="font-style: italic;"><I>pos6</I></span> 立即數的範圍是 0 到 63。</p>
 
-<p>�� zero_form �У�ȡ�� GR <span style="font-style: italic;"><I>r2</I></span> ��ֵ���� register_form �У��� <span style="font-style: italic;"><I>imm8</I></span> �еķ�����չֵ���� imm_form �У����Ҷ���λ�ֶδ�ŵ� GR <span style="font-style: italic;"><I>r1</I></span>������ GR <span style="font-style: italic;"><I>r1</I></span> ���������е�λ���Ϊ�㡣��ŵ�λ�ֶδ� <span style="font-style: italic;"><I>pos6</I></span> ������ָ��λ��λ�ÿ�ʼ������ len ������ָ����λ������ࣨ���������Чλ����չ��len �������ķ�Χ�� 1-64��<span   style="font-style: italic;"><I>pos6</I></span> �������ķ�Χ�� 0 �� 63��</p>
+<p>在 zero_form 中，取自 GR <span style="font-style: italic;"><I>r2</I></span> 的值（在 register_form 中）或 <span style="font-style: italic;"><I>imm8</I></span> 中的符號擴充套件值（在 imm_form 中）的右對齊位欄位存放到 GR <span style="font-style: italic;"><I>r1</I></span>，並將 GR <span style="font-style: italic;"><I>r1</I></span> 中其它所有的位清除為零。存放的位欄位從 <span style="font-style: italic;"><I>pos6</I></span> 立即數指定位的位置開始，按照 len 立即數指定的位數向左側（朝向最高有效位）擴充套件。len 立即數的範圍是 1-64，<span   style="font-style: italic;"><I>pos6</I></span> 立即數的範圍是 0 到 63。</p>
 
-<p>�����ŵ�λ�ֶ���չ��Ŀ���λ 63 ֮�⣬�� len + <span style="font-style: italic;"><I>pos6</I></span> &gt; 64�����ŵ�λ�ֶ��е������Ч len + <span style="font-style: italic;"><I>pos6</I></span> - 64 λ�ᱻ�ضϡ�len ��������ָ����ʹ�� lenminus1 �����ʾ��</p>
+<p>如果存放的位欄位擴充套件到目標的位 63 之外，即 len + <span style="font-style: italic;"><I>pos6</I></span> &gt; 64，則存放的位欄位中的最高有效 len + <span style="font-style: italic;"><I>pos6</I></span> - 64 位會被截斷。len 立即數在指令中使用 lenminus1 編碼表示。</p>
 
-<p class="whs3"><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400018.htm" style="x-condition: eclipse;">�����˴��鿴 dep t = s, r, 36, 16 ������ʾ����</a><script type="text/javascript"
+<p class="whs3"><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400018.htm" style="x-condition: eclipse;">單擊此處檢視 dep t = s, r, 36, 16 操作的示例。</a><script type="text/javascript"
 														language=JavaScript1.2><!--
 kadovFilePopupInit('A2');
 //--></script> 

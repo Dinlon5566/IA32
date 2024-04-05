@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc316.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:19 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>UD2 - δ�����ָ��</title>
+<title>UD2 - 未定義的指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -93,7 +93,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nU - ָ��\nUD2 - δ�����ָ��");
+	addTocInfo("參考\n指令集\nIA-32 指令\nU - 指令\nUD2 - 未定義的指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,7 +116,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>UD2 - δ�����ָ��</h1>
+<h1>UD2 - 未定義的指令</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -124,13 +124,13 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">������</td>
+	style="margin-bottom: 0;">操作碼</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">說明</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -141,26 +141,26 @@ else
 	style="margin-bottom: 0;">UD2</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">������������Ч�쳣</td></tr>
+	style="margin-bottom: 0;">觸發操作碼無效異常</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>������Ч�Ĳ����롣�ṩ��ָ����Ϊ������������ʱ��ʽ������Ч�Ĳ����롣��ָ��Ĳ����뱣�����ڴ�Ŀ�ġ�</p>
+<p>產生無效的操作碼。提供此指令是爲了在軟體測試時顯式產生無效的操作碼。此指令的操作碼保留用於此目的。</p>
 
-<p>��������������Ч�쳣���⣬��ָ���� NOP ָ����ͬ��</p>
+<p>除觸發操作碼無效異常以外，此指令與 NOP 指令相同。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted>#UD (* Generates invalid opcode exception *);</p>
 
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
-<p>�ޡ�</p>
+<p>無。</p>
 
-<h2>�쳣�����в���ģʽ��</h2>
+<h2>異常（所有操作模式）</h2>
 
-<p class="whs3">#UD - ��ָ��ȷ�������в���ģʽ�ж�������������Ч�쳣�� </p>
+<p class="whs3">#UD - 此指令確保在所有操作模式中都觸發操作碼無效異常。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

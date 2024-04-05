@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400159.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:45 GMT -->
 <head>
 
-<title>clrrrb - Çå³ý RRB Ö¸Áî</title>
+<title>clrrrb - æ¸…é™¤ RRB æŒ‡ä»¤</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="01 16, 2003 10:48:50 AM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -94,7 +94,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("²Î¿¼\nÖ¸Áî¼¯\nÓ¢ÌØ¶û(R) °²ÌÚ(R) Ö¸Áî\nC - Ö¸Áî\nclrrrb - Çå³ý RRB Ö¸Áî");
+	addTocInfo("åƒè€ƒ\næŒ‡ä»¤é›†\nè‹±ç‰¹çˆ¾(R) å®‰é¨°(R) æŒ‡ä»¤\nC - æŒ‡ä»¤\nclrrrb - æ¸…é™¤ RRB æŒ‡ä»¤");
 
 	}
 	if (window.writeBtnStyle)
@@ -128,16 +128,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="°²ÌÚ(R) ´¦ÀíÆ÷Ö÷Ìâ" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">Çå³ý RRB Ö¸Áî</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="å®‰é¨°(R) è™•ç†å™¨ä¸»é¡Œ" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">æ¸…é™¤ RRB æŒ‡ä»¤</h1>
 
 <p><span style="font-weight: bold;"><B>clrrrb</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400160.htm">²Ù×÷</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">×ÖÌå¹ßÀý</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400160.htm">æ“ä½œ</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">å­—åž‹æ…£ä¾‹</a>
  </p>
 
-<p>Ö¸ÁîÀàÐÍ B</p>
+<p>æŒ‡ä»¤åž‹åˆ¥ B</p>
 
-<p><span style="font-weight: bold;"><B>¸ñÊ½</B></span></p>
+<p><span style="font-weight: bold;"><B>æ ¼å¼</B></span></p>
 
 <p CLASS=Preformatted>clrrrb all_form</p>
 
@@ -148,18 +148,18 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>ËµÃ÷</B></span></p>
+<p><span style="font-weight: bold;"><B>èªªæ˜Ž</B></span></p>
 
-<p>ÔÚ all_form ÖÐ£¬¼Ä´æÆ÷ÖØÃüÃû»ùÖ·¼Ä´æÆ÷£¨CFM.rrb.gr¡¢CFM.rrb.<span 
+<p>åœ¨ all_form ä¸­ï¼Œæš«å­˜å™¨é‡æ–°å‘½ååŸºå€æš«å­˜å™¨ï¼ˆCFM.rrb.grã€CFM.rrb.<span 
  style="x-condition: eclipse;">fr</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A1');
-//--></script> ÒÔ¼° CFM.rrb.pr£©»á±»Çå³ý¡£ÔÚ pred_form ÖÐ£¬ÓÃÓÚÎ½´ÊµÄµ¥¸ö¼Ä´æÆ÷ÖØÃüÃû»ùÖ·¼Ä´æÆ÷ (CFM.rrb.pr) »á±»Çå³ý¡£</p>
+//--></script> ä»¥åŠ CFM.rrb.prï¼‰æœƒè¢«æ¸…é™¤ã€‚åœ¨ pred_form ä¸­ï¼Œç”¨æ–¼è¬‚è©žçš„å–®å€‹æš«å­˜å™¨é‡æ–°å‘½ååŸºå€æš«å­˜å™¨ (CFM.rrb.pr) æœƒè¢«æ¸…é™¤ã€‚</p>
 
-<p>´ËÖ¸Áî±ØÐëÊÇÖ¸Áî×éÖÐµÄ×îºóÒ»ÌõÖ¸Áî£¬·ñÔò½«Ö´ÐÐ&ldquo;·Ç·¨²Ù×÷&rdquo;´íÎóµÄ´¦Àí¡£</p>
+<p>æ­¤æŒ‡ä»¤å¿…é ˆæ˜¯æŒ‡ä»¤çµ„ä¸­çš„æœ€å¾Œä¸€æ¢æŒ‡ä»¤ï¼Œå¦å‰‡å°‡åŸ·è¡Œ&ldquo;éžæ³•æ“ä½œ&rdquo;éŒ¯èª¤çš„è™•ç†ã€‚</p>
 
-<p class="whs3">´ËÖ¸ÁîÎÞ·¨¶Ï¶¨¡£ </p>
+<p class="whs3">æ­¤æŒ‡ä»¤ç„¡æ³•æ–·å®šã€‚ </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

@@ -8,12 +8,12 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/lipsfmul_stall.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:49 GMT -->
 <head>
 
-<title>FMUL ��ͣ</title>
+<title>FMUL 暫停</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
-<meta NAME=MS-HAID CONTENT="����ͷ�">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
+<meta NAME=MS-HAID CONTENT="浮點懲罰">
 <meta name=date content="09 6, 2001 4:16:25 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -118,18 +118,18 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> FMUL ��ͣ</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> FMUL 暫停</h1>
 
-<p><span style="font-weight: bold;"><B>fmul_Stall</B></span> ��ʾһ�ֳͷ�״̬��</p>
+<p><span style="font-weight: bold;"><B>fmul_Stall</B></span> 表示一種懲罰狀態。</p>
 
-<p>FMUL �� FMUL/FXCH ָ���������ǰһ������ִ��ʱ��FMUL ָ����ӳ�һ�����ڡ�������Ϊ�˷���ֻ��ÿ��һ�����ڽ���һ���²�������</p>
+<p>FMUL 或 FMUL/FXCH 指令對正好在前一個週期執行時，FMUL 指令會延遲一個週期。這是因為乘法器只能每隔一個週期接受一對新運算元。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>����</B></span></h3>
+	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>建議</B></span></h3>
 
-<p class="whs3">��Ҫ�� FMUL ������һ�� FMUL ָ��֮��Ҳ��Ҫ���� FMUL/FXCH ָ���֮��</p>
+<p class="whs3">不要將 FMUL 放在另一條 FMUL 指令之後，也不要放在 FMUL/FXCH 指令對之後。</p>
 
-<p>ʾ����</p>
+<p>示例：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells>
@@ -137,16 +137,16 @@ else
 <tr>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ԭʼ����</td>
+	style="margin-bottom: 0;">原始程式碼</td>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td>
+	style="margin-bottom: 0;">週期</td>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">�Ż�����</td>
+	style="margin-bottom: 0;">優化程式碼</td>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td></tr>
+	style="margin-bottom: 0;">週期</td></tr>
 
 <tr>
 <td valign="top" class="whs4">
@@ -185,22 +185,22 @@ fxch st(1)</b>
 
 <tr>
 <td COLSPAN="2" valign="top" class="whs4">
-<p class="whs5">&ldquo;ָ�� 3&rdquo;����� FXCH ָ��ύ�� <a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#TOS" style="x-condition: WebHelp;">TOS</a> �����ݡ����������� FMUL ��ͣ��FMUL D ��ִ��֮ǰ����ͣһ�����ڡ�<b><br>ִ��ʱ���ܼƣ�5 ������</td>
+<p class="whs5">&ldquo;指令 3&rdquo;後面的 FXCH 指令會交換 <a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#TOS" style="x-condition: WebHelp;">TOS</a> 的內容。不過，由於 FMUL 暫停，FMUL D 在執行之前會暫停一個週期。<b><br>執行時間總計：5 個週期</td>
 <td COLSPAN="2" valign="top" class="whs4">
-<p class="whs5">ͨ��������֯���룬ʹ�� FMUL D��ָ�� 4�������� FMUL/FXCH ָ��Ժ��棬�Ӷ�������ͣ��<b><br>ִ��ʱ���ܼƣ�4 ������</b></td>
+<p class="whs5">通過重新組織程式碼，使得 FMUL D（指令 4）不跟在 FMUL/FXCH 指令對後面，從而避免暫停。<b><br>執行時間總計：4 個週期</b></td>
 </tr>
 </table>
 
 <p class="whs5">
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','FDIV/FLDCW ָ��','lipsfdiv_stall.htm','MMX(TM) ��������ת��','lipspro_mmx_trans.htm','����ָ���� FXCH ֮��','lipsint_fxch.htm','������ͣ�Եȴ� FST ������','lipsfst_dep.htm','�������','lipsfp_dep.htm');return false;" title="����ͷ�"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_浮点惩罚.gif" border=0 height=20 width=58 alt="����ͷ�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','FDIV/FLDCW 指令','lipsfdiv_stall.htm','MMX(TM) 技術程式碼轉換','lipspro_mmx_trans.htm','整數指令在 FXCH 之後','lipsint_fxch.htm','浮點暫停以等待 FST 運算元','lipsfst_dep.htm','浮點相關','lipsfp_dep.htm');return false;" title="浮點懲罰"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_嫻偣鎯╃綒.gif" border=0 height=20 width=58 alt="浮點懲罰"></a>
 
 
  </p>
 
 <p class="whs5">
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','�� MMX(TM) �����ı���(R) ������','pentium(r)_with_mmx(tm_technology_processor.htm','����(R) ������','pentium(r)_processor.htm');return false;" title="Ӱ��Ĵ�����"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_影响的处理器.gif" border=0 height=20 width=82 alt="Ӱ��Ĵ�����"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','含 MMX(TM) 技術的奔騰(R) 處理器','pentium(r)_with_mmx(tm_technology_processor.htm','奔騰(R) 處理器','pentium(r)_processor.htm');return false;" title="影響的處理器"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_褰卞搷鐨勫鐞嗗櫒.gif" border=0 height=20 width=82 alt="影響的處理器"></a>
 
 
  </p>

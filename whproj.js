@@ -68,7 +68,7 @@ function window_OnLoad()
 	if(nPos!=-1)
 		gaProj[0].sPPath=gsName.substring(0,nPos+1);
 	else
-		alert("¼ÓÔØµ¼º½×é¼şÊ±·¢Éú´íÎó¡£ÇëÖØĞÂÉú³É WebHelp¡£");
+		alert("è¼‰å…¥å°èˆªå…ƒä»¶æ™‚ç™¼ç”ŸéŒ¯èª¤ã€‚è«‹é‡æ–°ç”¢ç”Ÿ WebHelpã€‚");
 	patchPath(gaProj);
 	if(parent&&parent!=this&& typeof(parent.putProjectInfo)=="function")
 	{

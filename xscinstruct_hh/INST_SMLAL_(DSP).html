@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_SMLAL_(DSP).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:31 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>SMLALxy - DSP ָ��</title>
+<title>SMLALxy - DSP 指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -93,7 +93,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nS - ָ��\nSMLALxy");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nS - 指令\nSMLALxy");
 
 	}
 	if (window.writeBtnStyle)
@@ -118,19 +118,19 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'></noscript>SMLALxy - DSP ָ��</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'></noscript>SMLALxy - DSP 指令</h1>
 
 <div>
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted><span CLASS=Code>SMLALxy [condition] dest_lo, dest_hi, op1, op2</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -143,8 +143,8 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>B��<br> x==0<br> ʹ�� op1 ��λ [15:0]</p>
-<p CLASS=CellBodyLeft>T��<br> x==0<br> ʹ�� op1 ��λ [31:16]</td></tr>
+<p CLASS=CellBodyLeft>B：<br> x==0<br> 使用 op1 的位 [15:0]</p>
+<p CLASS=CellBodyLeft>T：<br> x==0<br> 使用 op1 的位 [31:16]</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -153,8 +153,8 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>B��<br> x==0<br> ʹ�� op2 ��λ [15:0]</p>
-<p CLASS=CellBodyLeft>T��<br> x==0<br> ʹ�� op2 ��λ [31:16]</td></tr>
+<p CLASS=CellBodyLeft>B：<br> x==0<br> 使用 op2 的位 [15:0]</p>
+<p CLASS=CellBodyLeft>T：<br> x==0<br> 使用 op2 的位 [31:16]</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -163,7 +163,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ��<br> �����<a HREF="notational_conventions.html#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 個條件之一。<br> 請參閱<a HREF="notational_conventions.html#Condition Code Status">條件程式碼狀態</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -172,7 +172,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�����ۼ�ֵ�ĵ� 32 λ�ļĴ�����Ҳ�ǵ� 32 λ��Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>包含累加值的低 32 位的暫存器，也是低 32 位的目標暫存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -181,26 +181,26 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�����ۼ�ֵ�ĸ� 32 λ�ļĴ�����Ҳ�Ǹ� 32 λ��Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>包含累加值的高 32 位的暫存器，也是高 32 位的目標暫存器</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p CLASS=Body>SMLAL<em CLASS=Italic>xy</em> ָ��ʹ���з��� 16 λ������ <em CLASS=SourceItalic>op1</em> �� <em CLASS=SourceItalic>op2</em> ִ�г˷����˷��� 32 λ����ӵ� <em CLASS=SourceItalic>op3</em> �а����� 32 λֵ���˷��� 32 λ������з�����չ�����ӵ� <em CLASS=SourceItalic>dest_lo</em> �� <em CLASS=SourceItalic>dest_hi</em>����д�� <em CLASS=SourceItalic>dest_lo</em> �� <em CLASS=SourceItalic>dest_hi</em>��condition ��������Чֵ������ָ��� NOP��</p>
+<p CLASS=Body>SMLAL<em CLASS=Italic>xy</em> 指令使用有符號 16 位運算元 <em CLASS=SourceItalic>op1</em> 與 <em CLASS=SourceItalic>op2</em> 執行乘法。乘法的 32 位結果加到 <em CLASS=SourceItalic>op3</em> 中包含的 32 位值。乘法的 32 位結果進行符號擴充套件，並加到 <em CLASS=SourceItalic>dest_lo</em> 與 <em CLASS=SourceItalic>dest_hi</em>。和寫入 <em CLASS=SourceItalic>dest_lo</em> 與 <em CLASS=SourceItalic>dest_hi</em>。condition 必須是有效值；否則將指令當作 NOP。</p>
 </div>
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="Note.gif" border="0"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif" border="0"> 備註</h3>
 
-��ָ�������硣��������ʱ�����ģ�� 264��
+此指令不檢測上溢。發生上溢時，結果模除 264。
 
-<h2>Ѱַģʽ</h2>
+<h2>定址模式</h2>
 
-�޲�����
+無運算元
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -267,7 +267,7 @@ else
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
 
-<h2>���� </h2>
+<h2>編碼 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -410,7 +410,7 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.globl funcsmlalxy<br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.align 0<br> 4 <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@ * * * SMLALxy * * * <br> 6 <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example, CODE, READONLY<br> 8 <br> 9 &#xA0;&#xA0;&#xA0;00000000 &#xA0;&#xA0;E3A00000 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R0, #0xF00D<br> 10 &#xA0;&#xA0;00000004 &#xA0;&#xA0;E3A01000 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R1, #0xBEEF<br> 11 <br> 12 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E5678086 &#xA0;&#xA0;SMLALBB &#xA0;&#xA0;R5, R6, R0, R1<br> 13 &#xA0;&#xA0;00000012 &#xA0;&#xA0;E10710A8 &#xA0;&#xA0;SMLALBT &#xA0;&#xA0;R7, R8, R0, R1<br> 14 &#xA0;&#xA0;00000016 &#xA0;&#xA0;E10910EA &#xA0;&#xA0;SMLALTT &#xA0;&#xA0;R9, R10, R0, R1<br> 15 <br> 16 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END</span> </p>
 </div>

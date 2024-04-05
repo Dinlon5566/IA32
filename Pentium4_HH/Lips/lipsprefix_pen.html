@@ -8,13 +8,13 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/lipsprefix_pen.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:29 GMT -->
 <head>
 
-<title>ǰ׺�ͷ�ָʾ��</title>
+<title>字首懲罰指示符</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="09 6, 2001 4:36:16 PM">
-<meta NAME=MS-HAID CONTENT="ǰ׺�ͷ�">
+<meta NAME=MS-HAID CONTENT="字首懲罰">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -119,42 +119,42 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> ǰ׺�ͷ�ָʾ��</h1>
+<h1><img src="TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> 字首懲罰指示符</h1>
 
-<p><span style="font-weight: bold;"><B>Prefix_Pen</B></span> ��ʾһ�ֳͷ�״̬��</p>
+<p><span style="font-weight: bold;"><B>Prefix_Pen</B></span> 表示一種懲罰狀態。</p>
 
-<p>Ϊ�䷢�� <span style="font-weight: bold;"><B>Prefix_Pen</B></span> ��ָ�����ǰ׺����ǰ׺��ָ������ӻ�ȡʱ�䡣</p>
+<p>為其發出 <span style="font-weight: bold;"><B>Prefix_Pen</B></span> 的指令帶有字首。帶字首的指令會增加獲取時間。</p>
 
-<p>�ڱ���(R) �������뺬 MMX �����ı��ڴ������ϣ�����������Ρ���ַ��С���Ǽ���������С����ǰ׺��ָ��ᵼ��ǰ׺�ͷ������ʾ�� 32 λģʽִ�����е� 16 λָ��ʱ��Ҳ�������<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#Prefix" style="x-condition: WebHelp;">ǰ׺</a>�ͷ���</p>
+<p>在奔騰(R) 處理器與含 MMX 技術的奔騰處理器上，帶鎖定、跨段、地址大小覆蓋及運算元大小覆蓋字首的指令會導致字首懲罰。這表示按 32 位模式執行所有的 16 位指令時，也都會產生<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#Prefix" style="x-condition: WebHelp;">字首</a>懲罰。</p>
 
-<p>�ڱ��ڴ������ϣ���ǰ׺��ָ�����⻨��һ�����ڡ�</p>
+<p>在奔騰處理器上，帶字首的指令會額外花費一個週期。</p>
 
-<p>�ں� MMX(TM) �����ı��ڴ������ϣ����ǰ׺�Ѿ��� <a HREF="FIFO_Buffer.html">FIFO ������</a>��׼����������û��ǰ׺�ͷ������򣬲�������С���ǿ��ܻᵼ���㵽 3 �����ڵ���ͣ���������е�ǰ׺���ܻᵼ��һ�����ڵ���ͣ��</p>
+<p>在含 MMX(TM) 技術的奔騰處理器上，如果字首已經在 <a HREF="FIFO_Buffer.html">FIFO 緩衝區</a>中準備就緒，則沒有字首懲罰。否則，運算元大小覆蓋可能會導致零到 3 個週期的暫停。其它所有的字首可能會導致一個週期的暫停。</p>
 
-<p>ָ���ֶ��г���˫�ֽڲ�����ӳ�� (0F) ���ᵼ�³ͷ���</p>
+<p>指令欄位中出現雙位元組操作碼對映 (0F) 不會導致懲罰。</p>
 
-<p>�ں� MMX �����ı��ڴ������ϣ�&ldquo;VTune(TM) ���ܷ�����&rdquo;�������¼��裺��ÿ��<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#basic_block" style="x-condition: WebHelp;">����ָ���</a>�Ŀ�ͷ����û��ǰ׺�ͷ�����Ϊָ���Ѿ��� FIFO ��������׼����������</p>
+<p>在含 MMX 技術的奔騰處理器上，&ldquo;VTune(TM) 效能分析器&rdquo;作出以下假設：在每個<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#basic_block" style="x-condition: WebHelp;">基本指令塊</a>的開頭處，沒有字首懲罰（因為指令已經在 FIFO 緩衝區中準備就緒）。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>����</B></span></h3>
+	style="margin-left: 40px;"><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>建議</B></span></h3>
 
-<p class="whs3">��������ʹ�ô�ǰ׺��ָ���ѭ����ָ��ԭ��</p>
+<p class="whs3">儘量避免使用帶字首的指令。遵循以下指導原則：</p>
 
 <ol>
 	
 	<ul type="disc" class="whs4">
 		
-		<li class=kadov-p><p>��Ҫ�� 32 λģʽ�������������ͣ�Ҳ��Ҫ�� 16 λģʽ���ó��������͡�</p></li>
+		<li class=kadov-p><p>不要按 32 位模式引用字數據型別，也不要按 16 位模式引用長數據型別。</p></li>
 		
-		<li class=kadov-p><p>��Ҫ��<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#Segment_register" style="x-condition: WebHelp;">�μĴ���</a>���<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#General_registers" style="x-condition: WebHelp;">ͨ�üĴ���</a>��</p></li>
+		<li class=kadov-p><p>不要用<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#Segment_register" style="x-condition: WebHelp;">段暫存器</a>替代<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#General_registers" style="x-condition: WebHelp;">通用暫存器</a>。</p></li>
 		
-		<li class=kadov-p><p>������ʹ�� DS �μĴ����������ݶΡ�ʹ�������μĴ�����ָ���һ���ֽڵĿ��ǰ׺��</p></li>
+		<li class=kadov-p><p>儘可能使用 DS 段暫存器訪問數據段。使用其它段暫存器的指令帶一個位元組的跨段字首。</p></li>
 		
-		<li class=kadov-p><p>����ǰ׺��ָ����ڶ�����ָ����棬�Ա���ǰ׺�ͷ���</p></li>
+		<li class=kadov-p><p>將帶字首的指令放在多週期指令後面，以避免字首懲罰。</p></li>
 	</ul>
 </ol>
 
-<p>ʾ����</p>
+<p>示例：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells>
@@ -162,16 +162,16 @@ else
 <tr>
 <td valign="top" class="whs5">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ԭʼ����</td>
+	style="margin-bottom: 0;">原始程式碼</td>
 <td valign="top" class="whs5">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td>
+	style="margin-bottom: 0;">週期</td>
 <td valign="top" class="whs5">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">�Ż�����</td>
+	style="margin-bottom: 0;">優化程式碼</td>
 <td valign="top" class="whs5">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td></tr>
+	style="margin-bottom: 0;">週期</td></tr>
 
 <tr>
 <td valign="top" class="whs5">
@@ -205,9 +205,9 @@ else
 
 <tr>
 <td COLSPAN="2" valign="top" class="whs5">
-<p class="whs6">��Щָ��� 32 λģʽʹ�� 16 λ�Ĵ��������������ˣ����ǵĲ����붼��ǰ׺���ڱ���(R) �������ϣ�ִ�д�ǰ׺��ָ��Ҫ���⻨��һ�����ڡ�<b><br>ִ��ʱ���ܼƣ�6 �����ڣ��ڱ��ڴ������ϣ�</b></td>
+<p class="whs6">這些指令都按 32 位模式使用 16 位暫存器與運算元。因此，它們的操作碼都帶字首。在奔騰(R) 處理器上，執行帶字首的指令要額外花費一個週期。<b><br>執行時間總計：6 個週期（在奔騰處理器上）</b></td>
 <td COLSPAN="2" valign="top" class="whs5">
-<p class="whs6">���뾭�����±�д���Ա���ǰ׺�ͷ���<b><br>ִ��ʱ���ܼƣ�3 �����ڣ��ڱ��ڴ������ϣ�</b></td>
+<p class="whs6">程式碼經過重新編寫，以避免字首懲罰。<b><br>執行時間總計：3 個週期（在奔騰處理器上）</b></td>
 </tr>
 </table>
 
@@ -215,14 +215,14 @@ else
 
 <p class="whs6">
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','ǰ׺','LipsPrefix.htm');return false;" title="ǰ׺�ͷ�"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%89%8d%e7%bc%80%e6%83%a9%e7%bd%9a.gif" border=0 height=20 width=58 alt="ǰ׺�ͷ�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','字首','LipsPrefix.htm');return false;" title="字首懲罰"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%89%8d%e7%bc%80%e6%83%a9%e7%bd%9a.gif" border=0 height=20 width=58 alt="字首懲罰"></a>
 
 
  </p>
 
 <p class="whs6">
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','�� MMX(TM) �����ı���(R) ������','pentium(r)_with_mmx(tm_technology_processor.htm','����(R) ������','pentium(r)_processor.htm');return false;" title="Ӱ��Ĵ�����"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%bd%b1%e5%93%8d%e7%9a%84%e5%a4%84%e7%90%86%e5%99%a8.gif" border=0 height=20 width=82 alt="Ӱ��Ĵ�����"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','含 MMX(TM) 技術的奔騰(R) 處理器','pentium(r)_with_mmx(tm_technology_processor.htm','奔騰(R) 處理器','pentium(r)_processor.htm');return false;" title="影響的處理器"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%bd%b1%e5%93%8d%e7%9a%84%e5%a4%84%e7%90%86%e5%99%a8.gif" border=0 height=20 width=82 alt="影響的處理器"></a>
 
 
  </p>

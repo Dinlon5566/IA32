@@ -9,11 +9,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/XScale_HH/LipsXSc/CorIP_RESOURCE.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:45 GMT -->
 <head>
 
-<title>WMMX Э�������ӿڹܵ���Դ�ӳٳͷ�/����</title>
+<title>WMMX 協處理器介面管道資源延遲懲罰/警告</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="04 14, 2003 11:31:12 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -84,7 +84,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض� XScale(R) ΢��ϵ�ṹ \nӢ�ض�(R) ���� MMX(TM) ָ��ͷ�\nWMMX Э�������ӿڹܵ���Դ�ӳٳͷ�/����");
+	addTocInfo("參考\n處理器事件與建議\n英特爾 XScale(R) 微體系結構 \n英特爾(R) 無線 MMX(TM) 指令集懲罰\nWMMX 協處理器介面管道資源延遲懲罰/警告");
 
 	}
 	if (window.writeBtnStyle)
@@ -107,38 +107,38 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="XS_logo.gif" alt="Ӣ�ض� XScale(R) ��������" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">WMMX Э�������ӿڹܵ���Դ�ӳٳͷ�/����</h1>
+<h1><img src="XS_logo.gif" alt="英特爾 XScale(R) 技術主題" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">WMMX 協處理器介面管道資源延遲懲罰/警告</h1>
 
 <h2>XSCW_CorIP_RESOURCE</h2>
 
-<h3>����</h3>
+<h3>解釋</h3>
 
-<p>&ldquo;WMMX Э�������ӿ�&rdquo;�ܵ������������ TMRC/TMRRC ����Ļ�������Ŀǰ�������㹻�����ĸ� TMRC ����ֵ��32 λ�������� TMRRC ����ֵ��64 λ����</p>
+<p>&ldquo;WMMX 協處理器介面&rdquo;管道包含允許多個 TMRC/TMRRC 掛起的緩衝區。目前緩衝區足夠容納四個 TMRC 數據值（32 位）或兩個 TMRRC 數據值（64 位）。</p>
 
-<p>�����������������&ldquo;Э�������ӿ�&rdquo;�ܵ�����ͣ���ܳͷ���ָ����ܱ���Ϊ�ȴ���������Դ��ɿ��ö����Ѷ�������ʱ�����ڡ� </p>
+<p>如果緩衝區已滿，則&ldquo;協處理器介面&rdquo;管道會暫停。受懲罰的指令可能必須為等待緩衝區資源變成可用而花費多個額外的時鐘週期。 </p>
 
-<h3><img id="_x0000_i1025" src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs2"> ��ע</h3>
-
-<ul type="disc" class="whs3">
-	
-	<li class=kadov-p-CNote><p class=Note
-								style="margin-left: 0px;">��&ldquo;�ͷ�/����&rdquo;��������&ldquo;Ӣ�ض�(R) ���� MMX(TM) ָ�&rdquo;��</p></li>
-	
-	<li class=kadov-p><p>ÿ�����ڽ����һ�� 32 λ����������Ϊ TMRC ֻ��Ҫһ�� 32 λ��������ֻ���������������� TMRRC �Ż��ܵ�������Դ�����Ӱ�졣 &nbsp;</p></li>
-</ul>
-
-<h3><img id="_x0000_i1026" src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs4"> ����</h3>
+<h3><img id="_x0000_i1025" src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs2"> 備註</h3>
 
 <ul type="disc" class="whs3">
 	
 	<li class=kadov-p-CNote><p class=Note
-								style="margin-left: 0px;">������ܣ������¸�ָ����������ڳ���������Դ֮ǰ������ӳ����ڡ�</p></li>
+								style="margin-left: 0px;">此&ldquo;懲罰/警告&rdquo;僅適用於&ldquo;英特爾(R) 無線 MMX(TM) 指令集&rdquo;。</p></li>
 	
-	<li class=kadov-p-CNote><p class=Note
-								style="margin-left: 0px;">���𷢳��������������� TMRRC��</p></li>
+	<li class=kadov-p><p>每個週期將清空一個 32 位緩衝區。因為 TMRC 只需要一個 32 位緩衝區，只有兩個以上連續的 TMRRC 才會受到這種資源不足的影響。 &nbsp;</p></li>
 </ul>
 
-<h3>ʾ��</h3>
+<h3><img id="_x0000_i1026" src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs4"> 建議</h3>
+
+<ul type="disc" class="whs3">
+	
+	<li class=kadov-p-CNote><p class=Note
+								style="margin-left: 0px;">如果可能，請重新給指令排序，以填補騰出緩衝區資源之前額外的延遲週期。</p></li>
+	
+	<li class=kadov-p-CNote><p class=Note
+								style="margin-left: 0px;">請勿發出兩個以上連續的 TMRRC。</p></li>
+</ul>
+
+<h3>示例</h3>
 
 <p class=Preformatted><span class=code>TMRRC &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R4, R5, wR10</span></p>
 

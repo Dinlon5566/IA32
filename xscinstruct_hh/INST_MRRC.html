@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_MRRC.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:46:42 GMT -->
 <head>
 
-<title>MRRC - DSP ָ��</title>
+<title>MRRC - DSP 指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="02 16, 2003 12:33:52 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -94,7 +94,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nM - ָ��\nMRRC");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nM - 指令\nMRRC");
 
 	}
 	if (window.writeBtnStyle)
@@ -119,19 +119,19 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>MRRC ָ�� - DSP ָ��</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>MRRC 指令 - DSP 指令</h1>
 
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <div>
 <p class=Preformatted><span CLASS=Code>MRRC[condition] cpname, cpopcode, dest1, dest2, cpsource</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -144,7 +144,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="notational_conventions.html#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 個條件之一。請參閱<a HREF="notational_conventions.html#Condition Code Status">條件程式碼狀態</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -154,7 +154,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Э������������ (p0..p15)</td></tr>
+<p CLASS=CellBodyLeft>協處理器的名稱 (p0..p15)</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -164,7 +164,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Э������ <em CLASS=SourceItalic>cpname</em> �Ĳ���</td></tr>
+<p CLASS=CellBodyLeft>協處理器 <em CLASS=SourceItalic>cpname</em> 的操作</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -174,7 +174,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��һ��Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>第一個目標暫存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -184,7 +184,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�ڶ���Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>第二個目標暫存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -194,26 +194,26 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ԴЭ�������Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>源協處理器暫存器</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p CLASS=Body>MRRC ָ� <em CLASS=SourceItalic>cpsource</em> �е�ֵ�ƶ��� <em CLASS=SourceItalic>dest1</em> �� <em CLASS=SourceItalic>dest2</em>��condition ��������Чֵ������ָ��� NOP��</p>
+<p CLASS=Body>MRRC 指令將 <em CLASS=SourceItalic>cpsource</em> 中的值移動到 <em CLASS=SourceItalic>dest1</em> 與 <em CLASS=SourceItalic>dest2</em>。condition 必須是有效值；否則將指令當作 NOP。</p>
 </div>
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="Note.gif" width="20px" height="20px" border="0" class="img_whs3"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif" width="20px" height="20px" border="0" class="img_whs3"> 備註</h3>
 
-���û��Э����������ִ�д�ָ�������δ�����ָ���쳣��ֻ��λ [31:08] �ǻ���Ӣ�ض� XScale(R) ΢��ϵ�ṹ�Ĵ���������ġ� 
+如果沒有協處理器可以執行此指令，則產生未定義的指令異常。只有位 [31:08] 是基於英特爾 XScale(R) 微體系結構的處理器定義的。 
 
-<h2>Ѱַģʽ</h2>
+<h2>定址模式</h2>
 
-�޲�����
+無運算元
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -280,7 +280,7 @@ else
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
 
-<h2>���� </h2>
+<h2>編碼 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -411,7 +411,7 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funcmrrc<br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0<br> 4 <br> 5 <br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@ * * * MRRC * * *<br> 7 <br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA cp_move, CODE, READONLY<br> 9 <br> 10 &#xA0;&#xA0;00000000 &#xA0;&#xA0;E3A01001 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R1, #1<br> 11 &#xA0;&#xA0;00000004 &#xA0;&#xA0;E3A02002 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R2, #2<br> 12 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E3A03003 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R3, #3<br> 13 <br> 14 &#xA0;&#xA0;00000012 &#xA0;&#xA0;EC421051 &#xA0;&#xA0;MCRR &#xA0;&#xA0;p0, 5, R1, R2, c1<br> 15 &#xA0;&#xA0;00000016 &#xA0;&#xA0;EC432162 &#xA0;&#xA0;MCRR &#xA0;&#xA0;p1, 6, R2, R3, c2<br> 16 <br> 17 &#xA0;&#xA0;00000020 &#xA0;&#xA0;EC554001 &#xA0;&#xA0;MRRC &#xA0;&#xA0;p0, 0, R4, R5, c1<br> 18 &#xA0;&#xA0;00000024 &#xA0;&#xA0;EC576112 &#xA0;&#xA0;MRRC &#xA0;&#xA0;p1, 1, R6, R7, c2<br> 19 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END</span> </p>
 </div>

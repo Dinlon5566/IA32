@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -97,7 +97,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nW - ָ��\nWUNPCKEL");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nW - 指令\nWUNPCKEL");
 
 	}
 	if (window.writeBtnStyle)
@@ -122,48 +122,48 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>WUNPCKEL - ��չ</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>WUNPCKEL - 擴充套件</h1>
 
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted>WUNPCKELsignlength[condition] dest, op1  </p>
 
-<p>���У� </p>
+<p>其中： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
 
 <tr>
 <td class="whs3">sign</td>
-<td class="whs3">ȷ������&ldquo;�з���&rdquo;����&ldquo;�޷���&rdquo;�������㣺<br> S -- �з���<br> U -- �޷���</td></tr>
+<td class="whs3">確定進行&ldquo;有符號&rdquo;還是&ldquo;無符號&rdquo;算術運算：<br> S -- 有符號<br> U -- 無符號</td></tr>
 
 <tr>
 <td class="whs3"><i style="font-style: italic;">length</i></td>
-<td class="whs3">��������ݳ��ȣ������������ַ�֮һָ����<br> B -- ���� 8 λ���ֽڣ�SIMD ����<br> H -- ���� 16 λ�����֣�SIMD ����<br> W -- ���� 32 λ���֣�SIMD ����</td></tr>
+<td class="whs3">所需的數據長度，可以由以下字元之一指定：<br> B -- 操作 8 位（位元組）SIMD 數據<br> H -- 操作 16 位（半字）SIMD 數據<br> W -- 操作 32 位（字）SIMD 數據</td></tr>
 
 <tr>
 <td class="whs3"><i style="font-style: italic;">condition</i></td>
-<td class="whs3">��ѡ��16 ������֮һ�������<a HREF="Conditional_Execution.html">����ִ��</a></td></tr>
+<td class="whs3">可選。16 個條件之一。請參閱<a HREF="Conditional_Execution.html">條件執行</a></td></tr>
 
 <tr>
 <td class="whs3">dest</td>
-<td class="whs3">Ŀ�꣬&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�������ݼĴ���</td></tr>
+<td class="whs3">目標，&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術數據暫存器</td></tr>
 
 <tr>
 <td class="whs3">op1</td>
-<td class="whs3">Դ��������&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�������ݼĴ���</td></tr>
+<td class="whs3">源運算元，&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術數據暫存器</td></tr>
 </table>
 
 &nbsp; 
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>��Դ�Ĵ��� op1 �°벿�ֵ� 8 λ��16 λ�� 32 λʧ��ֵ��������չ�������չ��ʽ��չ��ԭ�����ȵ����������� 16 λ������չ�� 32 λ�֡��������Ŀ��Ĵ��� dest��<br><br>ָ����ָ�����κ�������������������״̬ƥ�䣬����ִ��ָ� </p>
+<p>將源暫存器 op1 下半部分的 8 位、16 位或 32 位失量值按照零擴充套件或符號擴充套件方式擴充套件到原來長度的兩倍。例如 16 位半字擴充套件到 32 位字。結果放入目標暫存器 dest。<br><br>指令中指定的任何條件必須與條件程式碼狀態匹配，否則不執行指令。 </p>
 
-<h2>����</h2>
+<h2>編碼</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -374,7 +374,7 @@ wws0
 
 &nbsp; 
 
-<h2>���ֶα���</h2>
+<h2>子欄位編碼</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -383,17 +383,17 @@ wws0
 <th class="whs5">
 <div align="center" class="whs6">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>�޶���</font> 
+		face=Verdana>限定符</font> 
 </div></th>
 <th class="whs5">
 <div align="center" class="whs6">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>�ֶ�</font> 
+		face=Verdana>欄位</font> 
 </div></th>
 <th class="whs5">
 <div align="center" class="whs6">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>ֵ</font> 
+		face=Verdana>值</font> 
 </div></th>
 <th class="whs5">
 <div align="center" class="whs6">
@@ -458,7 +458,7 @@ ww
 <tr>
 <td class="whs3">
 <div align="center" class="whs6">
-����
+保留
 </div></td>
 <td class="whs3">
 <div align="center" class="whs6">
@@ -510,9 +510,9 @@ s
 </div></td></tr>
 </table>
 
-<h2>Ӱ��� SIMD ��־</h2>
+<h2>影響的 SIMD 標誌</h2>
 
-���ݽ���ֶ����� N �� Z ��־������� C �� V ��־�� 
+根據結果欄位設定 N 與 Z 標誌，並清除 C 與 V 標誌。 
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -521,12 +521,12 @@ s
 <th class="whs5">
 <div align="center" class="whs6">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>��־</font> 
+		face=Verdana>標誌</font> 
 </div></th>
 <th class="whs5">
 <div align="center" class="whs6">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>����</font> 
+		face=Verdana>操作</font> 
 </div></th></tr>
 
 <tr>
@@ -536,7 +536,7 @@ N
 </div></td>
 <td class="whs3">
 <div align="center" class="whs6">
-�������ս������
+根據最終結果設定
 </div></td></tr>
 
 <tr>
@@ -546,7 +546,7 @@ Z
 </div></td>
 <td class="whs3">
 <div align="center" class="whs6">
-�������ս������
+根據最終結果設定
 </div></td></tr>
 
 <tr>
@@ -556,7 +556,7 @@ C
 </div></td>
 <td class="whs3">
 <div align="center" class="whs6">
-���
+清除
 </div></td></tr>
 
 <tr>
@@ -566,13 +566,13 @@ V
 </div></td>
 <td class="whs3">
 <div align="center" class="whs6">
-���
+清除
 </div></td></tr>
 </table>
 
 &nbsp; 
 
-<br>���ݽ���� SIMD �������� SIMD ��־��������ʾ��
+<br>根據結果的 SIMD 寬度設定 SIMD 標誌（如下所示）
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -581,12 +581,12 @@ V
 <th class="whs5">
 <div align="center" class="whs6">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>�޶���</font> 
+		face=Verdana>限定符</font> 
 </div></th>
 <th class="whs5">
 <div align="center" class="whs6">
 <font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
-		face=Verdana>SIMD ��־</font> 
+		face=Verdana>SIMD 標誌</font> 
 </div></th></tr>
 
 <tr>
@@ -622,7 +622,7 @@ SIMD64
 
 . 
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted><font style="font-family: 'Courier New';" 							face="Courier New">WUNPCKELB <i>dest</i></font>, <i>op1</i></p>
 
@@ -634,7 +634,7 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4))
 else
 {   document.write("<img src='WUNPCKEL.gif' x-maintain-ratio='TRUE' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='524px' height='369px' border='0' class='img_whs7'>");}
 //--></script><noscript><img src='WUNPCKEL.gif' x-maintain-ratio='TRUE' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='524px' height='369px' border='0' class='img_whs7'></noscript>
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
 <a href="WALIGNI.html">WALIGNI</a><a href="WALIGNR.html"><br> WALIGNR</a><a href="WPACK.html"><br> WPACK</a><a href="WSHUFH.html"><br> WSHUFH</a> 
 

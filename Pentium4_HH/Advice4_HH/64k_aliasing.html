@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/64k_aliasing.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:24:18 GMT -->
 <head>
 
-<title>64K �ص�</title>
+<title>64K 重疊</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -80,7 +80,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n����Ӣ�ض�(R) ����(R) 4 ��������ϸ��\n64K �ص�");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n關於英特爾(R) 奔騰(R) 4 處理器的建議\n關於英特爾(R) 奔騰(R) 4 處理器的細節\n64K 重疊");
 
 	}
 	if (window.writeBtnStyle)
@@ -103,37 +103,37 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" alt="Ӣ�ض�(R) ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">64K �ص�</h1>
+<h1><img src="TA_logo.gif" alt="英特爾(R) 調優助手主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">64K 重疊</h1>
 
-<p>��Ϊ�������Ѿ��������ݣ����Ҹ����ݵ����Ե�ַ��λ 0-15 ��ֵ��Ҫ����һ����������ݵ���ͬ�������޷��������ݡ���������&ldquo;���̼߳���&rdquo;��HT ��������ϵͳ���Ƚ�&ldquo;�رճ��̼߳���&rdquo;�ĵ�������ϵͳ��&ldquo;�򿪳��̼߳���&rdquo;�ĵ�������ϵͳʱ�����ܻᷢ�� 64K �ص��¼����������ӡ���ĿǰΪֹ���о���������������� 2-4 ����Χ�ڣ�������Щ���������ȡ����������ٶ�����Ч�������������� 64K �ص��¼��������� 5 �����ϵ���Щ����������������ܹ�ȡ����������ٶ���������&ldquo;���̼߳���&rdquo;ʱ��������������ܻᵼ�� 64K �ص��������ӣ�</p>
+<p>因為快取中已經存在數據，並且該數據的線性地址的位 0-15 的值與要放入一級快取的數據的相同，所以無法放入數據。對於啟用&ldquo;超執行緒技術&rdquo;（HT 技術）的系統，比較&ldquo;關閉超執行緒技術&rdquo;的單處理器系統與&ldquo;打開超執行緒技術&rdquo;的單處理器系統時，可能會發現 64K 重疊事件數明顯增加。到目前為止的研究表明，如果增量在 2-4 倍範圍內，糾正這些情況並不能取得有意義的速度提升效果。不過，對於 64K 重疊事件的增量在 5 倍以上的那些情況，糾正它們則能夠取得有意義的速度提升。打開&ldquo;超執行緒技術&rdquo;時，有兩種情況可能會導致 64K 重疊顯著增加：</p>
 
 <li class=kadov-p
-	class=kadov-p>��� 1������ϵͳ�������� 1 �� 2 MB �߽磨��ģ�� 64K�����̶߳�ջ�ռ䡣��ˣ�һ���̵߳Ķ�ջ����λ��һ�����棬�ҵڶ����̷߳������ջ����ʱ�������������ͼ���ڶ����̵߳����ݷ���һ�����棬���������� 64K �ص��¼������飺�������½������������ 64K �ص���Ӱ�졣</li>
+	class=kadov-p>情況 1：操作系統建立對齊 1 或 2 MB 邊界（可模除 64K）的執行緒堆疊空間。因此，一個執行緒的堆疊數據位於一級快取，且第二個執行緒訪問其堆疊數據時，如果處理器試圖將第二個執行緒的數據放入一級快取，則它將遇到 64K 重疊事件。建議：採用以下建議消除或減少 64K 重疊的影響。</li>
 
 <li class=kadov-p
 	class=kadov-p>
-��� 2����ʱҲ������ÿ���̷߳��ʵ����ݽṹǡ����� 64K��ÿ�������̷߳������ 64K �����ݽṹʱ���������������� 64K �ص��ͷ������飺�������½������������ 64K �ص���Ӱ�졣 
+情況 2：有時也可能是每個執行緒訪問的數據結構恰好相距 64K。每當兩個執行緒訪問相距 64K 的數據結構時，處理器都將招致 64K 重疊懲罰。建議：採用以下建議消除或減少 64K 重疊的影響。 
 
-<p>����δ��&ldquo;���̼߳���&rdquo;��ϵͳ�����������������������Ӱ����ܻ��зǳ���Ĳ��</p>
+<p>對於未打開&ldquo;超執行緒技術&rdquo;的系統，以下兩種情況產生的效能影響可能會有非常大的差別：</p>
 </li>
 
 <li class=kadov-p
-	class=kadov-p>��� 1��64K �ص���Ҫ�ɼ�����ɵĴ��������¡����ؿ��ܻ�ͬ�����������ü������󻺳������������� 64K �ص��¼������ɼ���ȫ�Ǽ��أ�����ڼ�����洢�����������Ĵ��������£����������������Ӱ��΢����΢�����飺�����о������������⡣ </li>
+	class=kadov-p>情況 1：64K 重疊主要由載入組成的程式碼所導致。載入可能會同其它載入爭用載入請求緩衝區。如果大多數 64K 重疊事件都是由幾乎全是載入（相對於載入與儲存交叉的情況）的程式碼所導致，則這種情況的效能影響微乎其微。建議：繼續研究其它效能問題。 </li>
 
 <li class=kadov-p
 	class=kadov-p>
-��� 2��64K �ص��ɼ�����洢��ϳɵĴ��������¡���Ҫ���󻺳����ļ��ؿ��ܻ��ڴ洢֮��ֹͣ��ǰ���洢����ʧЧ���ͷŻ��棬���ز��ܼ������������� 64K �ص��¼������ɼ�����洢����Ĵ��������µģ�����������µ�����Ӱ��ǳ����������飺�������½������������ 64K �ص���Ӱ�졣��ע�⣬ʹ�� Microsoft* ��Ӣ�ض�(R) �����±��������������ڽ��ͻ�������Щ���͵��¼���<br>���ڲ���&ldquo;���̼߳���&rdquo;��ϵͳ��ദ����ϵͳ�����Ƶ�Ӱ������ܼƴ�����ʱ��Ӱ�죨ϵͳ�������߼�/����������֮�ͣ���������&ldquo;ʵ��ִ��&rdquo;ʱ��Ӱ�졣��ˣ��ڲ���&ldquo;���̼߳���&rdquo;��ϵͳ��ദ����ϵͳ�ϣ��ܿ��ܻῴ��ϸ�ڵ�ʱ��Ӱ����ڶԸ���ʵ��ִ��ʱ���Ӱ�졣��ע�⣬�ڵ�������ϵͳ�ϣ�������ʱ����ʵ��ִ��ʱ����ͬ��<br>Ӣ�ض�(R) ����(R) 4 �������ܹ�ȡ�ø����ܵķ���֮һ�ǣ��ֹ۵ؼ�����һ����ʵ�ָ������ܵ���������ʵ�����ķ���֮һ��Ԥ���֧�Ľ���������ڷ�֧�õ�����֮ǰ��ƾ�Ʋ���һ��·��ִ�С���һ�ַ���������ִ��ĳЩ�ڴ��������Щ�ڴ���ص����ܼ����¼�ͬʱͳ���Ʋ��Բ����Լ����Ʋ��Բ�������˲����ļ����Ȳ�ͳ���Ʋ��Բ���ʱ�ĸ�������ִ���ڴ�����ᵼ�¸�����Ʋ��Բ�������Ϊ�¼���������ܻᵼ�¼�����δ�������Ʋ�ʱ��õļ���ֵ�������磬���������᳢ܻ��ƾ�Ʋ�����ִ�м��ء�����һ���������Ѿ�����ʹ����ͬ���Ե�ַλ 0-15 �����ݡ����⣬�������ڴ������ڽ���ָ����٣��Ҵ�������û�л����ȷ�ĵ�ַ����˴������ļ��ص�ַ���Ǵ���ġ�������ص��� 64K �ص��¼����� 64K �ص��¼�������������Ʋ��Ե�ʣ����û���Ʋ⣬�򲻻ᷢ�� 64K �ص��¼�������ϵ�ṹ�ĽǶȿ�������ͳ�ƹ����������ʹ��û���Ʋ�ʱָ������� 64KB �ص����������Ʋ���ָ��Ҳ�ᱨ��˵���� 64KB �ص���ͻ����ʵ�ϣ�����΢��ϵ�ṹ���������¼��ľ�ȷ��ʾ����ָ��ȷʵ������ 64K �ص���ͻ�� 
+情況 2：64K 重疊由載入與儲存混合成的程式碼所導致。需要請求緩衝區的載入可能會在儲存之後停止不前。儲存必須失效並釋放快取，載入才能繼續。如果大多數 64K 重疊事件都是由載入與儲存交叉的程式碼所導致的，則這種情況下的效能影響非常顯著。建議：採用以下建議消除或減少 64K 重疊的影響。請注意，使用 Microsoft* 或英特爾(R) 的最新編譯器可能有助於降低或消除這些型別的事件。<br>對於採用&ldquo;超執行緒技術&rdquo;的系統或多處理器系統，估計的影響代表總計處理器時間影響（系統上所有邏輯/物理處理器之和），而不是&ldquo;實際執行&rdquo;時間影響。因此，在採用&ldquo;超執行緒技術&rdquo;的系統或多處理器系統上，很可能會看到細節的時間影響大於對負載實際執行時間的影響。請注意，在單處理器系統上，處理器時間與實際執行時間相同。<br>英特爾(R) 奔騰(R) 4 處理器能夠取得高效能的方法之一是，樂觀地假設有一種能實現更佳效能的條件。它實現這點的方法之一是預測分支的結果，並且在分支得到解析之前，憑推測沿一條路徑執行。另一種方法是無序執行某些記憶體操作。有些記憶體相關的效能監視事件同時統計推測性操作以及非推測性操作，因此產生的計數比不統計推測性操作時的更大。無序執行記憶體操作會導致更多的推測性操作（計為事件），這可能會導致計數比未發生此推測時獲得的計數值更大。例如，處理器可能會嘗試憑推測無序執行載入。假設一級快取中已經存在使用相同線性地址位 0-15 的數據。此外，假設由於程式碼正在進行指針跟蹤，且處理器還沒有獲得正確的地址，因此處理器的載入地址還是錯誤的。如果載入導致 64K 重疊事件，則 64K 重疊事件會遞增。由於推測的緣故，如果沒有推測，則不會發生 64K 重疊事件。從體系結構的角度看，這是統計過量情況：即使在沒有推測時指令不會遇到 64KB 重疊，但由於推測活動，指令也會報告說遇到 64KB 重疊衝突。事實上，它是微體系結構級發生的事件的精確表示：此指令確實導致了 64K 重疊衝突。 
  
 
 <br>&nbsp; 
  
 
-<br><b>����������ԣ�</b><br><br>��ϸ�����������ܼ�����������أ�<br> <br> Aliasing64K ����Ӱ�� = ((<a href="../Events4/64k_aliasing_conflicts.html" style="x-condition: eclipse;">64k �ص���ͻ</a>*12)/<a href="../Events4/Clockticks.html" style="x-condition: eclipse;">ʱ���ź�</a>)*100<b><br> �ϵ�ֵ��</b>0.2<b><br> �ϸ�ֵ��</b>2<br><br>��&ldquo;Aliasing64K ����Ӱ��&rdquo;<b>�ϸ�</b>ʱ����ϸ�ھ���ʵ�������塣<b><br><br>���飺 </b>
+<br><b>計數器相關性：</b><br><br>此細節與以下效能計數器函式相關：<br> <br> Aliasing64K 效能影響 = ((<a href="../Events4/64k_aliasing_conflicts.html" style="x-condition: eclipse;">64k 重疊衝突</a>*12)/<a href="../Events4/Clockticks.html" style="x-condition: eclipse;">時鐘訊號</a>)*100<b><br> 較低值：</b>0.2<b><br> 較高值：</b>2<br><br>在&ldquo;Aliasing64K 效能影響&rdquo;<b>較高</b>時，此細節具有實質性意義。<b><br><br>建議： </b>
 
 <ul>
 	
 	<li class=kadov-p
-		class=kadov-p><a href="64k_aliasing.html">���� 64K �ص�</a></li>
+		class=kadov-p><a href="64k_aliasing.html">避免 64K 重疊</a></li>
 </ul>
 </li>
 

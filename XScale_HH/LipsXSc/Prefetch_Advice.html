@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/XScale_HH/LipsXSc/Prefetch_Advice.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:32 GMT -->
 <head>
 
-<title>PLD �����뽨��</title>
+<title>PLD 警告與建議</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="02 16, 2003 12:39:52 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -95,7 +95,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض� XScale(R) ΢��ϵ�ṹ \nӢ�ض� XScale(R) ΢��ϵ�ṹ�ͷ�\nPLD �����뽨��");
+	addTocInfo("參考\n處理器事件與建議\n英特爾 XScale(R) 微體系結構 \n英特爾 XScale(R) 微體系結構懲罰\nPLD 警告與建議");
 
 	}
 	if (window.writeBtnStyle)
@@ -120,58 +120,58 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>�������ݻ���δ���е�Ԥȡ����</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>避免數據快取未命中的預取建議</h1>
 
 <h2>XSC_PLD_Advice</h2>
 
-<h3>����</h3>
+<h3>解釋</h3>
 
-<p class=msonormal>���Ҫ���ص����ݲ������ݻ����У�����ָ��������ӳٻ᳤�൱�ࡣ���ݻ���δ�����¼����ཫ�������ܼ����½���ʹ�� PLD ָ�����Ԥ�Ȼ�ȡ��������ݣ���Ч���������ݻ���δ�������� 
+<p class=msonormal>如果要載入的數據不在數據快取中，載入指令產生的延遲會長相當多。數據快取未命中事件過多將導致效能急劇下降。使用 PLD 指令可以預先獲取所需的數據，有效地消除數據快取未命中現象。 
  </p>
 
-<h3><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs2"> ����</h3>
+<h3><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs2"> 建議</h3>
 
 <ul type="disc" class="whs3">
 	
-	<li class=kadov-p-Cmsonormal><p class=msonormal>XSC_PLD_S1 - Ԥȡ��������</p></li>
+	<li class=kadov-p-Cmsonormal><p class=msonormal>XSC_PLD_S1 - 預取連續載入</p></li>
 </ul>
 
 <p class=msonormal
-	style="margin-left: 40px;">�������� 4 �����ϵļ������ײ������ݻ���δ���С� </p>
+	style="margin-left: 40px;">連續發出 4 次以上的載入容易產生數據快取未命中。 </p>
 
 <ul type="disc" class="whs3">
 	
-	<li class=kadov-p-Cmsonormal><p class=msonormal>XSC_PLD_S2 - Ԥȡ�����洢</p></li>
+	<li class=kadov-p-Cmsonormal><p class=msonormal>XSC_PLD_S2 - 預取連續儲存</p></li>
 </ul>
 
 <p class=msonormal
-	style="margin-left: 40px;">ָ��д�ػ���ʱ���������� 8 �����ϵĴ洢���ײ������ݻ���δ���С�</p>
+	style="margin-left: 40px;">指定寫回快取時，連續發出 8 次以上的儲存容易產生數據快取未命中。</p>
 
 <ul type="disc" class="whs3">
 	
-	<li class=kadov-p-Cmsonormal><p class=msonormal>XSC_PLD_S3 - Ԥȡ��Խ�����ߵ����ڼ���ָ����ڴ��ַ��</p></li>
+	<li class=kadov-p-Cmsonormal><p class=msonormal>XSC_PLD_S3 - 預取跨越快取線的相鄰載入指令的記憶體地址。</p></li>
 </ul>
 
 <p class=msonormal
-	style="margin-left: 40px;">�����������ָ����ڴ��ַ��Խ�����ߣ�32 ���ֽڣ�����������������ָ�����ڣ���ܿ��ܲ������ݻ���δ���С�</p>
+	style="margin-left: 40px;">如果兩條載入指令的記憶體地址跨越快取線（32 個位元組），並且這兩條載入指令相鄰，則很可能產生數據快取未命中。</p>
 
-<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs4"> ��ע</h3>
+<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs4"> 備註</h3>
 
 <ul type="disc" class="whs3">
 	
-	<li class=kadov-p-Cmsonormal><p class=msonormal>��������˵��ÿ��&ldquo;����&rdquo;ָ����ܷ������ݻ���δ���У�����ʵ��ִ��ʱ�������Ըߵ�ָ��δ�ؾͻᵼ�����ݻ���δ���С�</p></li>
+	<li class=kadov-p-Cmsonormal><p class=msonormal>從理論上說，每條&ldquo;載入&rdquo;指令都可能發生數據快取未命中，而在實際執行時，可能性高的指令未必就會導致數據快取未命中。</p></li>
 	
-	<li class=kadov-p-Cmsonormal><p class=msonormal>PLD ��һ����ʾָ�������֤���������ݡ� </p></li>
+	<li class=kadov-p-Cmsonormal><p class=msonormal>PLD 是一條提示指令，它不保證將載入數據。 </p></li>
 	
-	<li class=kadov-p-Cmsonormal><p class=msonormal>&ldquo;VTune(TM) ���ܷ�����&rdquo;��ָ����Ҫ PLD ָ������Ὠ��Ӧ����������� PLD ָ�</p></li>
+	<li class=kadov-p-Cmsonormal><p class=msonormal>&ldquo;VTune(TM) 效能分析器&rdquo;僅指出需要 PLD 指令，它不會建議應該在哪裡插入 PLD 指令。</p></li>
 	
-	<li class=kadov-p-Cmsonormal><p class=msonormal>����ʾ PLD ָ��� XSC_PLD_advice</p></li>
+	<li class=kadov-p-Cmsonormal><p class=msonormal>不顯示 PLD 指令的 XSC_PLD_advice</p></li>
 </ul>
 
-<h3>ʾ�� 1</h3>
+<h3>示例 1</h3>
 
 <p class=Preformatted><span class=Code>LDR &#xA0;R0, [R1, #0x0] &#xA0;</span></p>
 
@@ -183,7 +183,7 @@ else
 
 <p class=Preformatted><span class=Code>LDR &#xA0;R7, [R1, #-0xfff] &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;; XSC_SUCC_LoadStore, XSC_PLD_S1</span></p>
 
-<h3>ʾ�� 2</h3>
+<h3>示例 2</h3>
 
 <p class=Preformatted><span class=Code>STR &#xA0;R0, [R1, #0x0] &#xA0;</span></p>
 
@@ -203,13 +203,13 @@ else
 
 <p class=Preformatted><span class=Code>STR &#xA0;R0, [R3, R4, LSL #30] &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;; XSC_SUCC_LoadStore, XSC_PLD_S2</span> </p>
 
-<h3 class=Preformatted>ʾ�� 3</h3>
+<h3 class=Preformatted>示例 3</h3>
 
 <p class=Preformatted><span class=Code>LDR &#xA0;R0, [R1, #0x0] &#xA0;</span></p>
 
 <p class=Preformatted><span class=Code>LDR &#xA0;R2, [R1, #0xef1] &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;; XSC_PLD_S3</span></p>
 
-<h3 class=Preformatted>ʾ�� 4</h3>
+<h3 class=Preformatted>示例 4</h3>
 
 <p class=Preformatted><span class=Code>LDC &#xA0;p6,C4,[R0,#0x1*4]</span></p>
 
@@ -217,7 +217,7 @@ else
 
 <p class=Preformatted><span class=Code>LDC &#xA0;p6,C6,[R0,#0xe1*4] &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;; XSC_PLD_S3</span></p>
 
-<h3 class=Preformatted>ʾ�� 5</h3>
+<h3 class=Preformatted>示例 5</h3>
 
 <p class=Preformatted><span class=Code>LDC &#xA0;p6,C4,[R0,#0x1*4]</span></p>
 
@@ -227,7 +227,7 @@ else
 
 <p class=Preformatted><span class=Code>//not showing XSC_PLD_S3 for base register R0 changed</span></p>
 
-<h3>ʾ�� 6</h3>
+<h3>示例 6</h3>
 
 <p class=Preformatted><span class=Code>LDR &#xA0;R0, [R1, #0x0] &#xA0;</span></p>
 

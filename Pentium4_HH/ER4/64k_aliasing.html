@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/ER4/64k_aliasing.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:32:12 GMT -->
 <head>
 
-<title>64k �ص���ͻ����Ӱ��</title>
+<title>64k 重疊衝突性能影響</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=MS-HAID content="64K Aliasing Conflicts">
 <meta name=date content="06 30, 2002 10:29:49 AM">
 <meta name=topic-status content="In Progress">
@@ -100,7 +100,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 ���������¼�����\n�������ܵ�������\nָʾ����ȱ�ݵ��¼�����\n64k �ص���ͻ");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器的事件比率\n基本效能調整比率\n指示編碼缺陷的事件比率\n64k 重疊衝突");
 
 	}
 	if (window.writeBtnStyle)
@@ -123,11 +123,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1"><img src="er_logo.gif" alt="�¼���������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs2">64k �ص���ͻ����Ӱ��</h1>
+<h1><img src="p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1"><img src="er_logo.gif" alt="事件比率主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs2">64k 重疊衝突性能影響</h1>
 
-<p>((<a href="../Events4/64k_aliasing_conflicts.html">64k �ص���ͻ</a>*12) / <a href="../Events4/Clockticks.html">ʱ���ź�</a>)*100</p>
+<p>((<a href="../Events4/64k_aliasing_conflicts.html">64k 重疊衝突</a>*12) / <a href="../Events4/Clockticks.html">時鐘訊號</a>)*100</p>
 
-<p>һ����˵����Щ����Դ�Ծ���ḻ�����ܹ���ʦ�ľ��飺</p>
+<p>一般來說，這些數字源自經驗豐富的效能工程師的經驗：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="60%" class="whs3">
@@ -135,10 +135,10 @@ else
 <tr>
 <td valign="top" width="50%" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td>
+	style="margin-bottom: 0;">下限</td>
 <td valign="top" width="50%" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td></tr>
+	style="margin-bottom: 0;">上限</td></tr>
 
 <tr>
 <td valign="top" width="50%" class="whs4">
@@ -147,37 +147,37 @@ else
 <p>2</td></tr>
 </table>
 
-<p>�˱��ʵ�ֵ�ϸ�ʱ����ʾ��Ϊ�������Ѿ��������ݣ����Ҹ����ݵ����Ե�ַ��λ 0-15 ��λֵ��Ҫ��������ݵ���ͬ�������޷������ݷ���һ�����档����Ӱ�������������п����кܴ�ͬ��</p>
+<p>此比率的值較高時，表示因為快取中已經存在數據，而且該數據的線性地址的位 0-15 的位值與要放入的數據的相同，所以無法將數據放入一級快取。效能影響在以下情形中可能有很大不同。</p>
 
-<h2><span style="font-style: italic;"><I>����</I></span> ���̼߳�����ϵͳ</h2>
+<h2><span style="font-style: italic;"><I>不含</I></span> 超執行緒技術的系統</h2>
 
 <ul type="disc" class="whs6">
 	
-	<li class=kadov-p><p><span style="font-weight: bold;"><B>��� 1</B></span>��64K �ص���Ҫ�ɼ�����ɵĴ��뵼�¡����ؿ��ܻ�ͬ�����������ü������󻺳������������� 64K �ص��¼������ɼ���ȫ�Ǽ��أ�����ڼ�����洢�����������Ĵ��������£����������������Ӱ��΢����΢��<span style="font-weight: bold;"><B><br> ����</B></span>��������������������⡣�����δ�ɼ�<a href="../Events4/about_secondary_events_for_tuning.html">���������¼�</a>�����ݣ�����вɼ���</p></li>
+	<li class=kadov-p><p><span style="font-weight: bold;"><B>情況 1</B></span>：64K 重疊主要由載入組成的程式碼導致。載入可能會同其它載入爭用載入請求緩衝區。如果大多數 64K 重疊事件都是由幾乎全是載入（相對於載入與儲存交叉的情況）的程式碼所導致，則這種情況的效能影響微乎其微。<span style="font-weight: bold;"><B><br> 建議</B></span>：繼續檢查其它效能問題。如果尚未採集<a href="../Events4/about_secondary_events_for_tuning.html">輔助調整事件</a>的數據，請進行採集。</p></li>
 	
-	<li class=kadov-p><p><span style="font-weight: bold;"><B>��� 2</B></span>��64K �ص��ɼ�����洢�����ɵĴ��뵼�¡���Ҫ���󻺳����ļ��ؿ��ܻ��ڴ洢֮��ֹͣ��ǰ���洢����ʧЧ���ӻ������ͷų�ȥ�����ز��ܼ������������� 64K �ص��¼������ɽ���ִ�м�����洢�Ĵ��뵼�£�����������µ�����Ӱ��Ƚ�������<span 
- style="font-weight: bold;"><B><br>����</B></span>��<a href="../Advice4_HH/avoiding_64k_aliasing.html" style="x-condition: eclipse;">�����򽵵� 64K �ص���Ӱ��</a>��</p></li>
+	<li class=kadov-p><p><span style="font-weight: bold;"><B>情況 2</B></span>：64K 重疊由載入與儲存混合組成的程式碼導致。需要請求緩衝區的載入可能會在儲存之後停止不前。儲存必須失效並從快取中釋放出去，載入才能繼續。如果大多數 64K 重疊事件都是由交叉執行載入與儲存的程式碼導致，則這種情況下的效能影響比較顯著。<span 
+ style="font-weight: bold;"><B><br>建議</B></span>：<a href="../Advice4_HH/avoiding_64k_aliasing.html" style="x-condition: eclipse;">消除或降低 64K 重疊的影響</a>。</p></li>
 </ul>
 
-<h2>�����̼߳�����ϵͳ</h2>
+<h2>含超執行緒技術的系統</h2>
 
-<p>��������&ldquo;���̼߳���&rdquo;��ϵͳ���Ƚ�&ldquo;�رճ��̼߳���&rdquo;�ĵ�������ϵͳ��&ldquo;�򿪳��̼߳���&rdquo;�ĵ�������ϵͳʱ�����ܻᷢ�� 64K �ص��¼��������������ӡ�Ŀǰ���о������������������ 2-4 ����Χ�ڣ�������Щ���������ȡ����������ٶ�����Ч�������������� 64K �ص��¼��������� 5 �����ϵ���Щ����������������ܹ�ȡ����������ٶ���������&ldquo;���̼߳���&rdquo;ʱ��������������ܻᵼ�� 64K �ص��������ӣ� </p>
+<p>對於啟用&ldquo;超執行緒技術&rdquo;的系統，比較&ldquo;關閉超執行緒技術&rdquo;的單處理器系統與&ldquo;打開超執行緒技術&rdquo;的單處理器系統時，可能會發現 64K 重疊事件的數量明顯增加。目前的研究表明，如果增加量在 2-4 倍範圍內，糾正這些情況並不能取得有意義的速度提升效果。不過，對於 64K 重疊事件的增量在 5 倍以上的那些情況，糾正它們則能夠取得有意義的速度提升。打開&ldquo;超執行緒技術&rdquo;時，有兩種情況可能會導致 64K 重疊顯著增加： </p>
 
 <ul type="disc" class="whs6">
 	
-	<li class=kadov-p><p><span style="font-weight: bold;"><B>��� 1</B></span>������ϵͳ�������� 1 �� 2 MB �߽磨����ģ���� 64K�����̶߳�ջ�ռ䡣��ˣ�һ���̵߳Ķ�ջ����λ��һ�����棬�ҵڶ����̷߳������ջ����ʱ�������������ͼ���ڶ����̵߳����ݷ���һ�����棬������� 64K �ص��¼���<span style="font-weight: bold;"><B><br>����</B></span>�������򽵵� 64K �ص���Ӱ�졣</p></li>
+	<li class=kadov-p><p><span style="font-weight: bold;"><B>情況 1</B></span>：操作系統建立對齊 1 或 2 MB 邊界（它的模數是 64K）的執行緒堆疊空間。因此，一個執行緒的堆疊數據位於一級快取，且第二個執行緒訪問其堆疊數據時，如果處理器試圖將第二個執行緒的數據放入一級快取，則會遇到 64K 重疊事件。<span style="font-weight: bold;"><B><br>建議</B></span>：消除或降低 64K 重疊的影響。</p></li>
 	
-	<li class=kadov-p><p><span style="font-weight: bold;"><B>��� 2</B></span>��Ҳ�п�����ÿ���߳����ڷ��ʵ����ݽṹǡ����� 64K��ÿ�������̷߳������ 64K �����ݽṹʱ���������������� 64K �ص��ͷ���<span style="font-weight: bold;"><B><br>����</B></span>�������򽵵� 64K �ص���Ӱ�졣</p></li>
+	<li class=kadov-p><p><span style="font-weight: bold;"><B>情況 2</B></span>：也有可能是每個執行緒正在訪問的數據結構恰好相距 64K。每當兩個執行緒訪問相距 64K 的數據結構時，處理器都將招致 64K 重疊懲罰。<span style="font-weight: bold;"><B><br>建議</B></span>：消除或降低 64K 重疊的影響。</p></li>
 </ul>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="tip.gif" alt="��ʾ" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs7"> ��ʾ</h3>
+	style="margin-left: 40px;"><img src="tip.gif" alt="提示" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs7"> 提示</h3>
 
-<p class="whs8">ʹ�����µı��������Խ��ͻ�������Щ���͵��¼���</p>
+<p class="whs8">使用最新的編譯器可以降低或消除這些型別的事件。</p>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','64k/M �ص���ͻ����Ӱ��','../Events4/64k_aliasing_conflicts.htm','64k/M �ص���ͻ����Ӱ��','../Pentium4P_HH/EventsP/64k_aliasing_conflicts.htm','ʱ���źţ�������ʱ���źţ�','../Events4/Clockticks.htm','����ͣʱ���ź�','../Events4/non-halted_clocktick.htm');return false;" title="����¼�"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e7%9b%b8%e5%85%b3%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=58 alt="����¼�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','64k/M 重疊衝突性能影響','../Events4/64k_aliasing_conflicts.htm','64k/M 重疊衝突性能影響','../Pentium4P_HH/EventsP/64k_aliasing_conflicts.htm','時鐘訊號（非休眠時鐘訊號）','../Events4/Clockticks.htm','非暫停時鐘訊號','../Events4/non-halted_clocktick.htm');return false;" title="相關事件"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e7%9b%b8%e5%85%b3%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=58 alt="相關事件"></a>
 
 
  </p>

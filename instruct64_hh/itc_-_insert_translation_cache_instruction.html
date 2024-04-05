@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/itc_-_insert_translation_cache_instruction.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
 
-<title>itc - ����ת�뻺��ָ��</title>
+<title>itc - 插入轉譯快取指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="02 6, 2003 4:21:09 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -85,7 +85,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nI - ָ��\nitc - ����ת�뻺��ָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nI - 指令\nitc - 插入轉譯快取指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,13 +108,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">����ת�뻺��ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">插入轉譯快取指令</h1>
 
 <p class="whs2">itc</p>
 
-<p class="whs3"><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itc-operation.htm">����</a> <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a></p>
+<p class="whs3"><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itc-operation.htm">操作</a> <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字型慣例</a></p>
 
-<p class="whs2">��ʽ</p>
+<p class="whs2">格式</p>
 
 <p class=Preformatted>(qp)itc.ir 2 instruction_form M41</p>
 
@@ -125,38 +125,38 @@ else
 <hr class="whs4">
 
 
-<p><b style="font-weight: bold;">˵��</b></p>
+<p><b style="font-weight: bold;">說明</b></p>
 
-<p class="whs3"><b><span style="font-weight: normal;">��һ����Ŀ����ָ�������ת�뻺�档GR r 2 ָ��ת�������</span></b><b><span style="font-weight: normal;">��ַ���֡�ITIR ָ����������ҳ��С�Լ�����</span></b><b><span   style="font-weight: normal;">��Ϣ�������ַ�� IFA �Ĵ���ָ��������Ĵ�����</span></b><b><span style="font-weight: normal;"> IFA{63:61} ѡ�񡣴���������</span></b><b><span style="font-weight: normal;">�ض��ھ���ʵ�ְ汾���滻�㷨ȷ��Ҫ�滻����Ŀ��</span></b></p>
+<p class="whs3"><b><span style="font-weight: normal;">將一個專案插入指令或數據轉譯快取。GR r 2 指定轉譯的物理</span></b><b><span style="font-weight: normal;">地址部分。ITIR 指定保護鍵、頁大小以及其它</span></b><b><span   style="font-weight: normal;">資訊。虛擬地址由 IFA 暫存器指定，區域暫存器由</span></b><b><span style="font-weight: normal;"> IFA{63:61} 選擇。處理器根據</span></b><b><span style="font-weight: normal;">特定於具體實現版本的替換演算法確定要替換的專案。</span></b></p>
 
-<p class="whs3"><b style="font-weight: normal;"><span style="font-weight: normal;"></span><span class=code 								style="font-weight: normal;">itc</span><span   style="font-weight: normal;"> ָ����ⲿ���ɵ������</span><span class=code 				style="font-weight: normal;">ptc.g��ptc.ga</span><span   style="font-weight: normal;">���Ŀɼ��ԣ�</span></b><b><span style="font-weight: normal;">�����ں������ڴ����֮ǰ�������������ĽǶȿ��������ȡ�������ơ�</span></b><b><span style="font-weight: normal;">��ʱ����Ҫʹ�����л����Ա�۲쵽���ڵ�ת��ĸ����á�</span></b></p>
+<p class="whs3"><b style="font-weight: normal;"><span style="font-weight: normal;"></span><span class=code 								style="font-weight: normal;">itc</span><span   style="font-weight: normal;"> 指令對外部產生的清除（</span><span class=code 				style="font-weight: normal;">ptc.g、ptc.ga</span><span   style="font-weight: normal;">）的可見性，</span></b><b><span style="font-weight: normal;">必須在後續的記憶體操作之前發生。從軟體的角度看，這與獲取語義相似。</span></b><b><span style="font-weight: normal;">此時仍需要使用序列化，以便觀察到存在的轉譯的副作用。</span></b></p>
 
-<p class="whs3"><b style="font-weight: normal;"><span class=code 	style="font-weight: normal;">itc</span><span   style="font-weight: normal;"> </span></b><b><span style="font-weight: normal;">������ָ�����е����һ��ָ���������Ϊ��������</span></b><b><span style="font-weight: normal;">˳�����壩δ���塣</span></b></p>
+<p class="whs3"><b style="font-weight: normal;"><span class=code 	style="font-weight: normal;">itc</span><span   style="font-weight: normal;"> </span></b><b><span style="font-weight: normal;">必須是指令組中的最後一條指令；否則其行為（包括其</span></b><b><span style="font-weight: normal;">順序語義）未定義。</span></b></p>
 
-<p>TLB ��������κ��ص�����Ŀ��������<span style="font-style: italic;"><I></I></span><span style="font-style: italic;"><I><a href="https://www.hgy413.com/hgydocs/IA32/Reference_HH/Intel_s_Software_Developer_s_Manuals.htm" style="x-condition: eclipse;">Ӣ�ض�(R) ����(R) ��ϵ�ṹ����������Ա�ֲ�</a></I></span> �� 2 ��������</p>
+<p>TLB 首先清除任何重疊的專案，具體如<span style="font-style: italic;"><I></I></span><span style="font-style: italic;"><I><a href="https://www.hgy413.com/hgydocs/IA32/Reference_HH/Intel_s_Software_Developer_s_Manuals.htm" style="x-condition: eclipse;">英特爾(R) 安騰(R) 體系結構軟件開發人員手冊</a></I></span> 第 2 卷所述。</p>
 
-<p class="whs3"><b><span style="font-weight: normal;">�����������Ȩ����ִ�У����� PSR.ic Ϊ��ʱ����ָ��ſ���ִ�С�</span></b></p>
+<p class="whs3"><b><span style="font-weight: normal;">僅當在最高特權級別執行，並且 PSR.ic 為零時，此指令才可以執行。</span></b></p>
 
-<p class="whs3"><b style="font-weight: normal;"><span style="font-weight: normal;">Ϊȷ��ת��˳�����У���������ȷ�� PSR.ic ����Ϊ 0��ֱ�� </span><span class=code 								style="font-weight: normal;">rfi</span><span   style="font-weight: normal;"> ����Ҫת���</span></b><b><span style="font-weight: normal;">ָ�</span></b></p>
+<p class="whs3"><b style="font-weight: normal;"><span style="font-weight: normal;">為確保轉發順利進行，軟體必須確保 PSR.ic 持續為 0，直至 </span><span class=code 								style="font-weight: normal;">rfi</span><span   style="font-weight: normal;"> 到需要轉譯的</span></b><b><span style="font-weight: normal;">指令。</span></b></p>
 
-<p><b style="font-weight: bold;">�ж�</b></p>
+<p><b style="font-weight: bold;">中斷</b></p>
 
 <ul type="disc" class="whs5">
 	
-	<li class=kadov-p><p class="whs3"><b><span style="font-weight: normal;">&ldquo;�������&rdquo;��ֹ</span></b></p></li>
+	<li class=kadov-p><p class="whs3"><b><span style="font-weight: normal;">&ldquo;機器檢查&rdquo;終止</span></b></p></li>
 	
-	<li class=kadov-p><p class="whs3"><b><span style="font-weight: normal;">&ldquo;�����ļĴ���/�ֶ�&rdquo;����</span></b></p></li>
+	<li class=kadov-p><p class="whs3"><b><span style="font-weight: normal;">&ldquo;保留的暫存器/欄位&rdquo;錯誤</span></b></p></li>
 	
-	<li class=kadov-p><p class="whs3"><b><span style="font-weight: normal;">&ldquo;��Ȩ����&rdquo;����</span></b></p></li>
+	<li class=kadov-p><p class="whs3"><b><span style="font-weight: normal;">&ldquo;特權操作&rdquo;錯誤</span></b></p></li>
 	
-	<li class=kadov-p><p class="whs3"><b><span style="font-weight: normal;">&ldquo;δʹ�õ����ݵ�ַ&rdquo;����</span></b></p></li>
+	<li class=kadov-p><p class="whs3"><b><span style="font-weight: normal;">&ldquo;未使用的數據地址&rdquo;錯誤</span></b></p></li>
 	
-	<li class=kadov-p><p class="whs3"><b style="font-weight: normal;">&ldquo;�Ĵ��� NaT ʹ��&rdquo;����</b></p></li>
+	<li class=kadov-p><p class="whs3"><b style="font-weight: normal;">&ldquo;暫存器 NaT 使用&rdquo;錯誤</b></p></li>
 </ul>
 
-<p class="whs2"><b><span style="font-weight: bold;"><B>���л�</B></span></b></p>
+<p class="whs2"><b><span style="font-weight: bold;"><B>序列化</B></span></b></p>
 
-<p class="whs3"><b><span style="font-weight: normal;">���� instruction_form������ص�ָ���ȡ����֮ǰ���������뷢��ָ��</b><b style="font-weight: normal;">���л����������� data_form���ڷ���ͬ��ת����ص����ݷ��ʻ�Ƿ�������֮ǰ���������뷢���������л�������</b></span></p>
+<p class="whs3"><b><span style="font-weight: normal;">對於 instruction_form，在相關的指令獲取訪問之前，軟體必須發出指令</b><b style="font-weight: normal;">序列化操作。對於 data_form，在發出同新轉譯相關的數據訪問或非訪問引用之前，軟體必須發出數據序列化操作。</b></span></p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

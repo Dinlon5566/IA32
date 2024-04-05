@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/lipsimp_output_dep.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:51 GMT -->
 <head>
 
-<title>��ʽ������</title>
+<title>隱式輸出相關</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta NAME=MS-HAID CONTENT="Flow and Output Dependencies">
 <meta name=date content="09 6, 2001 4:20:23 PM">
 <meta name=topic-status content="In Progress">
@@ -118,20 +118,20 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> ��ʽ������</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> 隱式輸出相關</h1>
 
-<p><span style="font-weight: bold;"><B>Imp_Output_Dep</B></span> ��ʾһ��������Ƴ�ͻ��</p>
+<p><span style="font-weight: bold;"><B>Imp_Output_Dep</B></span> 表示一種配對限制衝突。</p>
 
-<p>Ϊ�䷢�� <span style="font-weight: bold;"><B>Imp_Output_Dep</B></span> ��ָ����ʽд��ļĴ�����ǰһ��ָ�����ͬ���������ν�������ء������ص�������ָ���޷���ԡ�</p>
+<p>為其發出 <span style="font-weight: bold;"><B>Imp_Output_Dep</B></span> 的指令隱式寫入的暫存器與前一條指令的相同。這就是所謂的輸出相關。輸出相關導致兩條指令無法配對。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>����</B></span></h3>
+	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>建議</B></span></h3>
 
-<p class="whs3">����������������ԣ������µ���ָ��˳��ͨ������ʹ����ͬ�Ĵ�����ָ�����������������ø��Ĵ�������塣 </p>
+<p class="whs3">分析程式的輸出相關性，以重新調整指令順序。通過隔開使用相同暫存器的指令提高配對數，而不用更改程式碼的語義。 </p>
 
 <p class="whs4">
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','�� MMX(TM) �����ı���(R) ������','pentium(r)_with_mmx(tm_technology_processor.htm','����(R) ������','pentium(r)_processor.htm');return false;" title="Ӱ��Ĵ�����"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_影响的处理器.gif" border=0 height=20 width=82 alt="Ӱ��Ĵ�����"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','含 MMX(TM) 技術的奔騰(R) 處理器','pentium(r)_with_mmx(tm_technology_processor.htm','奔騰(R) 處理器','pentium(r)_processor.htm');return false;" title="影響的處理器"><img src="https://www.hgy413.com/hgydocs/IA32/ss_btn_褰卞搷鐨勫鐞嗗櫒.gif" border=0 height=20 width=82 alt="影響的處理器"></a>
 
 
  </p>

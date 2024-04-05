@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc127.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:45 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>FXAM - ���</title>
+<title>FXAM - 檢查</title>
 
 <!--(Meta)==========================================================-->
 
@@ -95,7 +95,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nF - ָ��\nFXAM - ���");
+	addTocInfo("參考\n指令集\nIA-32 指令\nF - 指令\nFXAM - 檢查");
 
 	}
 	if (window.writeBtnStyle)
@@ -118,7 +118,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>FXAM - ���</h1>
+<h1>FXAM - 檢查</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -126,13 +126,13 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">������</td>
+	style="margin-bottom: 0;">操作碼</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">說明</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -143,12 +143,12 @@ else
 	style="margin-bottom: 0;">FXAM</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">ȷ�� ST(0) �е�ֵ�����ֵ����</td></tr>
+	style="margin-bottom: 0;">確定 ST(0) 中的值或數字的類別</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>��� ST(0) �Ĵ��������ݣ������� FPU ״̬���е����������־ C0��C2 �� C3���Ա�ʾ�Ĵ����е�ֵ�����ֵ����������±�����</p>
+<p>檢查 ST(0) 暫存器的內容，並設定 FPU 狀態字中的條件程式碼標誌 C0、C2 及 C3，以表示暫存器中的值或數字的類別（請參閱下表）。</p>
 
 <p class="whs3">&nbsp;</p>
 
@@ -159,7 +159,7 @@ else
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>���</td>
+	align=center>類別</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
@@ -177,7 +177,7 @@ else
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
-	align=center>��֧��</td>
+	align=center>不支援</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
@@ -213,7 +213,7 @@ else
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
-	align=center>�����������</td>
+	align=center>規格化有限數字</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
@@ -231,7 +231,7 @@ else
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
-	align=center>�����</td>
+	align=center>無窮大</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
@@ -249,7 +249,7 @@ else
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
-	align=center>��</td>
+	align=center>零</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
@@ -267,7 +267,7 @@ else
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
-	align=center>��</td>
+	align=center>空</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
@@ -285,7 +285,7 @@ else
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
-	align=center>�ǹ����</td>
+	align=center>非規格化數</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
@@ -300,9 +300,9 @@ else
 	align=center>0</td></tr>
 </table>
 
-<p>���ۼĴ���Ϊ�ջ�����C1 ��־������Ϊ ST(0) �е�ֵ�ķ��š�</p>
+<p>無論暫存器為空或滿，C1 標誌都設定為 ST(0) 中的值的符號。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted>C1 <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -346,27 +346,27 @@ else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'>");}
 //--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'></noscript> 110;<br> ESAC;</p>
 
-<h2>Ӱ��� FPU ��־</h2>
+<h2>影響的 FPU 標誌</h2>
 
-<p>C1 - ST(0) ��ֵ�ķ��š� </p>
+<p>C1 - ST(0) 中值的符號。 </p>
 
-<p>C0��C2��C3 - ������ϱ���</p>
+<p>C0、C2、C3 - 請參閱上表。</p>
 
-<h2>�����쳣</h2>
+<h2>浮點異常</h2>
 
-<p>�ޡ�</p>
+<p>無。</p>
 
-<h2>����ģʽ�쳣</h2>
+<h2>保護模式異常</h2>
 
-<p>#NM - ��� CR0 �е� EM �� TS ����Ϊ 1��</p>
+<p>#NM - 如果 CR0 中的 EM 或 TS 設定為 1。</p>
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>實地址模式異常</h2>
 
-<p>#NM - ��� CR0 �е� EM �� TS ����Ϊ 1��</p>
+<p>#NM - 如果 CR0 中的 EM 或 TS 設定為 1。</p>
 
-<h2>�� 8086 ģʽ�쳣</h2>
+<h2>虛 8086 模式異常</h2>
 
-<p class="whs3">#NM - ��� CR0 �е� EM �� TS ����Ϊ 1�� </p>
+<p class="whs3">#NM - 如果 CR0 中的 EM 或 TS 設定為 1。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

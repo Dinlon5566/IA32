@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/data_memory_references_all.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:19 GMT -->
 <head>
 
-<title>�����ڴ����ã����У�</title>
+<title>數據記憶體引用（所有）</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="06 7, 2001 1:53:01 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -91,7 +91,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M �������¼�\n���������¼�\n�����ڴ�����\n�����ڴ����ã����У�");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n英特爾(R) 奔騰(R) M 處理器事件\n二級快取事件\n數據記憶體引用\n數據記憶體引用（所有）");
 
 	}
 	if (window.writeBtnStyle)
@@ -114,13 +114,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>�����ڴ����ã����У�</h1>
+<h1>數據記憶體引用（所有）</h1>
 
-<p>���¼���ʾ L1 ���ݵ����������ڴ����ã��������κ��ڴ������Լ����κ��ڴ����͵����м��ء�</p>
+<p>此事件表示 L1 數據的所有數據記憶體引用，包括從任何記憶體型別以及到任何記憶體型別的所有載入。</p>
 
-<p>&ldquo;VTune(TM) ���ܷ�����&rdquo;����ʵ��ִ��ʱ��ͳ���ڴ���ʡ����磬���ر�δ֪�Ĵ洢��ַ������Ȼ������ͬ�ĵ�ַ�ϴ���ǰһ��δ���Ļ���δ���ж�����ѹ����Ȼ���յõ�ִ�У�������ͳ��һ�Ρ�</p>
+<p>&ldquo;VTune(TM) 效能分析器&rdquo;僅在實際執行時才統計記憶體訪問。例如，載入被未知的儲存地址阻塞，然後因相同的地址上存在前一個未決的快取未命中而被擠壓，雖然最終得到執行，但僅會統計一次。</p>
 
-<p class="whs1">�˼��������� I/O ���ʵȷ��ڴ���ʡ� </p>
+<p class="whs1">此計數不包括 I/O 訪問等非記憶體訪問。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

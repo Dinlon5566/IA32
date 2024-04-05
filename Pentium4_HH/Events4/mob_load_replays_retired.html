@@ -8,12 +8,12 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/mob_load_replays_retired.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:38:16 GMT -->
 <head>
 
-<title>ʧЧ�� MOB �����ط�</title>
+<title>失效的 MOB 載入重發</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
-<meta NAME=MS-HAID CONTENT="E4 Group - ָʾ����ȱ�ݵ��¼�">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
+<meta NAME=MS-HAID CONTENT="E4 Group - 指示編碼缺陷的事件">
 <meta NAME=MS-HAID CONTENT="E4 MOB Loads Replays Retired">
 <meta NAME=MS-HAID CONTENT=Events4>
 <meta name=date content="02 6, 2003 4:40:35 PM">
@@ -30,7 +30,7 @@
 <meta name=page-count content=1>
 <meta name=layout-height content=1079>
 <meta name=layout-width content=668>
-<meta name=x-ignored-words content="MMX;SIMD;Aliasing;modulo;aliasing;Pentium;pipelined;mispredicted;NetBurst;irets;BTB;DTLB;micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;UC;uncacheable;WC;MMNP;MMNM;Mispredicted;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;Clockticks;clocktick;VTune;clockticks;MOCLEAR;prefetching;misprediction;PGO;pseudo-LRU;developer.intel.com;index.htm;Vol;RFO;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;prefetch;Micro-ops;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;LSC;SSC;USC;ULC;SSE;denormal;denormaled;DELIVERBit;;BSQ;writeback;Uncacheable;encodings;ITLB;PGO's;RGBA;C++*;?;a(i;y;enddo;cacheability;index.htm.;��ops;��op;prefetched;CPUID;resynchronize;Memory_Flag;ELIHW;TC-built;TC-delivered;uops;declspec(align(n;intrinsics;Uops;NBOGUS;EMON_UOPS_RETIRED;WB;WB-type;microarchitecture;RFOs;IOQ;SMP;prefetcher;frontside;FSB;XAPIC;FSB's;IOQ_allocation;BSQ_allocation;BSQ_active_entries;BSQ_cache_reference;Writeback;IOQ_active_entries;Writebacks;chipset;non-prefetch;prefetches;BSQ_cache_rerference;Prefetches;overcounting;allocation-to-deallocation;deallocation;dqword;RDTSC;CCCR">
+<meta name=x-ignored-words content="MMX;SIMD;Aliasing;modulo;aliasing;Pentium;pipelined;mispredicted;NetBurst;irets;BTB;DTLB;micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;UC;uncacheable;WC;MMNP;MMNM;Mispredicted;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;Clockticks;clocktick;VTune;clockticks;MOCLEAR;prefetching;misprediction;PGO;pseudo-LRU;developer.intel.com;index.htm;Vol;RFO;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;prefetch;Micro-ops;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;LSC;SSC;USC;ULC;SSE;denormal;denormaled;DELIVERBit;;BSQ;writeback;Uncacheable;encodings;ITLB;PGO's;RGBA;C++*;?;a(i;y;enddo;cacheability;index.htm.;μops;μop;prefetched;CPUID;resynchronize;Memory_Flag;ELIHW;TC-built;TC-delivered;uops;declspec(align(n;intrinsics;Uops;NBOGUS;EMON_UOPS_RETIRED;WB;WB-type;microarchitecture;RFOs;IOQ;SMP;prefetcher;frontside;FSB;XAPIC;FSB's;IOQ_allocation;BSQ_allocation;BSQ_active_entries;BSQ_cache_reference;Writeback;IOQ_active_entries;Writebacks;chipset;non-prefetch;prefetches;BSQ_cache_rerference;Prefetches;overcounting;allocation-to-deallocation;deallocation;dqword;RDTSC;CCCR">
 
 
 <!--(Links)=========================================================-->
@@ -85,7 +85,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������¼�\n���ܵ����¼� - ����\nָʾ����ȱ�ݵ��¼�\nʧЧ�� MOB �����ط�");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器事件\n效能調整事件 - 基本\n指示編碼缺陷的事件\n失效的 MOB 載入重發");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,42 +108,42 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">ʧЧ�� MOB �����ط���ʧЧ�������Ĵ洢������ת����</h1>
+<h1><img src="p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">失效的 MOB 載入重發（失效的阻塞的儲存至載入轉發）</h1>
 
-<p><span style="font-weight: bold;"><B>�߳��ض���</B></span>��<a href="Thread_Specific.html">TS</a></p>
+<p><span style="font-weight: bold;"><B>執行緒特定性</B></span>：<a href="Thread_Specific.html">TS</a></p>
 
-<p>���¼�ͳ������ʧЧ�ļ���ָ����������δ��ѭ�洢������ת�������ƣ��������ڴ�˳�򻺳��� (MOB) �ط���ָ��ж���ԭ����ܻᵼ�� MOB �ط������¼����Ϊͳ�����¼��ص��µ� MOB �ط����洢������ת�����̱������ļ��ء� </p>
+<p>此事件統計以下失效的載入指令數：由於未遵循儲存至載入轉發的限制，而遇到記憶體順序緩衝區 (MOB) 重發的指令。有多種原因可能會導致 MOB 重發。此事件程式設計為統計以下載入導致的 MOB 重發：儲存至載入轉發過程被阻塞的載入。 </p>
 
-<p>Ӣ�ض�(R) ����(R) 4 ���������ô洢������ת��������ʹ���ض����ڴ���ز���������һ���洢�������޸Ĺ������ݵĵ�ַ���м��أ����صȵ�����д�뻺�漴����ɡ��洢������ת������ĳɹ������ܵ���С����뷽������ơ� 
+<p>英特爾(R) 奔騰(R) 4 處理器採用儲存至載入轉發技術，使得特定的記憶體載入操作（從上一個儲存操作剛修改過其數據的地址進行載入）不必等到數據寫入快取即可完成。儲存至載入轉發情況的成功與否會受到大小與對齊方面的限制。 
  </p>
 
-<h3><span class=Big>�洢������ת������ͼ</span> 
+<h3><span class=Big>儲存至載入轉發限制圖</span> 
  </h3>
 
 <p class=LinkBul><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='image5.gif' x-maintain-ratio='TRUE' alt='�洢������ת������' width='453px' height='374px' border='1' class='img_whs2'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='image5.gif' x-maintain-ratio='TRUE' alt='儲存至載入轉發限制' width='453px' height='374px' border='1' class='img_whs2'>");}
 else
-{   document.write("<img src='image5.gif' x-maintain-ratio='TRUE' alt='�洢������ת������' style='border-left-style:Solid;border-left-width:1px;border-right-style:Solid;border-right-width:1px;border-top-style:Solid;border-top-width:1px;border-bottom-style:Solid;border-bottom-width:1px;' width='453px' height='374px' border='1' class='img_whs2'>");}
-//--></script><noscript><img src='image5.gif' x-maintain-ratio='TRUE' alt='�洢������ת������' style='border-left-style:Solid;border-left-width:1px;border-right-style:Solid;border-right-width:1px;border-top-style:Solid;border-top-width:1px;border-bottom-style:Solid;border-bottom-width:1px;' width='453px' height='374px' border='1' class='img_whs2'></noscript></p>
+{   document.write("<img src='image5.gif' x-maintain-ratio='TRUE' alt='儲存至載入轉發限制' style='border-left-style:Solid;border-left-width:1px;border-right-style:Solid;border-right-width:1px;border-top-style:Solid;border-top-width:1px;border-bottom-style:Solid;border-bottom-width:1px;' width='453px' height='374px' border='1' class='img_whs2'>");}
+//--></script><noscript><img src='image5.gif' x-maintain-ratio='TRUE' alt='儲存至載入轉發限制' style='border-left-style:Solid;border-left-width:1px;border-right-style:Solid;border-right-width:1px;border-top-style:Solid;border-top-width:1px;border-bottom-style:Solid;border-bottom-width:1px;' width='453px' height='374px' border='1' class='img_whs2'></noscript></p>
 
 <p>&nbsp;</p>
 
-<p>δ��ѭ�洢������ת������ʱ���ڴ���ز�����������ͣ�� </p>
+<p>未遵循儲存至載入轉發限制時，記憶體載入操作將發生暫停。 </p>
 
-<p>���磺</p>
+<p>例如：</p>
 
-<p>���� 32 λѹ���� RGBA ��ɫֵʱ����Ҫִ�е�һ��������ܾͻ������˱���ȱ�ݡ�ĳЩ�������ܻ������µĺ�ɫֵ������� 8 λֵ�洢���ڴ�λ�ã�Ȼ��������� 32 λֵ���洢��С������ֵ��Ȼ����ػذ������洢���ݵĽϴ������ʱ���������洢������ת����������ΪҪ���صĲ������ݿ���λ���ڴ�ϵͳ���κεط������桢DRAM���� </p>
+<p>處理 32 位壓縮的 RGBA 顏色值時經常要執行的一項任務可能就會遇到此編碼缺陷。某些操作可能會產生新的紅色值，將這個 8 位值儲存到記憶體位置，然後讀回整個 32 位值。儲存較小的數據值，然後載入回包含所儲存數據的較大運算元時，會阻塞儲存至載入轉發。這是因為要載入的部分數據可能位於記憶體系統的任何地方（快取、DRAM）。 </p>
 
-<p>�ڱ����У�Ҫ��������������� 32 λ�����������ĸ���ɫֵ�Ĵ�����Ȼ��ȫ�� 32 λд���ڴ档Ҫ���ô洢������ת������صļ��ز�����Ҫ���ص����ݴ�С������ǰһ���洢����ͬ���СһЩ�����Ҽ�����洢����ʼ��ַ������ͬ�� </p>
+<p>在本例中，要避免阻塞，請完成 32 位整數中所有四個顏色值的處理，然後將全部 32 位寫入記憶體。要啟用儲存至載入轉發，相關的載入操作所要載入的數據大小必須與前一個儲存的相同或更小一些，並且載入與儲存的起始地址必須相同。 </p>
 
-<p>�ڱ��� 4 �������Լ� P6 ϵ�д������ϣ�ͨ���Ľ�Ӧ�ó�����ڴ����ģʽ������ѭ�洢������ת�����ƣ����Դ��������ܡ�ʹ��&ldquo;Ӣ�ض�������&rdquo;��5.0 �����ϰ汾���� Microsoft* Visual C++* ��������7.0 �����ϰ汾��������������洢������ת����ͻ�������</p>
+<p>在奔騰 4 處理器以及 P6 系列處理器上，通過改進應用程式的記憶體訪問模式，以遵循儲存至載入轉發限制，可以大幅提高效能。使用&ldquo;英特爾編譯器&rdquo;（5.0 或以上版本）或 Microsoft* Visual C++* 編譯器（7.0 或以上版本）可以消除許多儲存至載入轉發衝突的情況。</p>
 
-<p>�����й���ϸ��Ϣ����������´�����<a href="../../Reference_HH/Intel_s_Software_Developer_s_Manuals.html" style="x-condition: eclipse;">�Ż��ο��ֲ�</a>��</p>
+<p>如需有關詳細資訊，請參閱最新處理器<a href="../../Reference_HH/Intel_s_Software_Developer_s_Manuals.html" style="x-condition: eclipse;">優化參考手冊</a>。</p>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','64k/M �ص���ͻ����Ӱ��','64k_aliasing_conflicts.htm','64k/M �ص���ͻ����Ӱ��','../Pentium4P_HH/EventsP/64k_aliasing_conflicts.htm','x87 ����Э��','x87_input_assists.htm','x87 ���Э��','x87_output_assists.htm','ʧЧ�Ĳ�ּ��� (AT-E)','split_loads_retired.htm','��������ָ���������չָ�����Э�� (TI)','streaming_simd_extensions_input_assists.htm');return false;" title="����ָʾ����ȱ�ݵ��¼�"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%85%b6%e5%ae%83%e6%8c%87%e7%a4%ba%e7%bc%96%e7%a0%81%e7%bc%ba%e9%99%b7%e7%9a%84%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=142 alt="����ָʾ����ȱ�ݵ��¼�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','64k/M 重疊衝突性能影響','64k_aliasing_conflicts.htm','64k/M 重疊衝突性能影響','../Pentium4P_HH/EventsP/64k_aliasing_conflicts.htm','x87 輸入協助','x87_input_assists.htm','x87 輸出協助','x87_output_assists.htm','失效的拆分載入 (AT-E)','split_loads_retired.htm','數據流單指令多數據擴充套件指令集輸入協助 (TI)','streaming_simd_extensions_input_assists.htm');return false;" title="其它指示編碼缺陷的事件"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%85%b6%e5%ae%83%e6%8c%87%e7%a4%ba%e7%bc%96%e7%a0%81%e7%bc%ba%e9%99%b7%e7%9a%84%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=142 alt="其它指示編碼缺陷的事件"></a>
 
 
  </p>

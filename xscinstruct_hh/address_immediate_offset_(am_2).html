@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/address_immediate_offset_(am_2).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:54 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>������ƫ���� (AM 2)</title>
+<title>立即數偏移量 (AM 2)</title>
 
 <!--(Meta)==========================================================-->
 
@@ -84,7 +84,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nѰַģʽ\n������洢�ֻ��޷����ֽ�\n������ƫ���� (AM 2)");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n定址模式\n載入與儲存字或無符號位元組\n立即數偏移量 (AM 2)");
 
 	}
 	if (window.writeBtnStyle)
@@ -107,14 +107,14 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������"><a NAME=pgfId-1012959></a><a NAME=61466></a>������ƫ���� (AM 2)</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題"><a NAME=pgfId-1012959></a><a NAME=61466></a>立即數偏移量 (AM 2)</h1>
 
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted><span class=Code>[basereg, #+/-value]</span> </p>
 
-<p CLASS=Body>���У� </p>
+<p CLASS=Body>其中： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells width="97.83%" border="1" class="whs1">
@@ -129,7 +129,7 @@ else
 <td ROWSPAN=1
 	COLSPAN=1
 	width=631>
-<p CLASS=CellBodyLeft>ָ��������ַ�ļĴ�����</td></tr>
+<p CLASS=CellBodyLeft>指定包含基址的暫存器。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -139,16 +139,16 @@ else
 <td ROWSPAN=1
 	COLSPAN=1
 	width=631>
-<p CLASS=CellBodyLeft>ָ�� 12 λ������ƫ�������� <em CLASS=SourceItalic>basereg</em> ��ֵһ��ʹ�ã����γɵ�ַ��</td></tr>
+<p CLASS=CellBodyLeft>指定 12 位立即數偏移量，與 <em CLASS=SourceItalic>basereg</em> 的值一起使用，以形成地址。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-Ѱַģʽ&ldquo;������ƫ����&rdquo;ִ�����²�����α����˵������
+定址模式&ldquo;立即數偏移量&rdquo;執行以下操作（偽程式碼說明）：
 
 <p CLASS=Preformatted-Code>if U == 1 then<br> &#xA0;&#xA0;addr = basereg + value<br> else /* U == 0 */<br> &#xA0;&#xA0;addr = basereg - value</p>
 
-<p CLASS=Body>��Ѱַģʽ��������ƫ������ֵ�ӵ���ַ�Ĵ��� <em CLASS=SourceItalic>basereg</em> ��ֵ������м�ȥ���Լ����ַ�������ڷ��ʽṹ�ֶΡ����ʶ�ջ֡�еĲ�����ֲ����������ƫ�������㣬�����ɵĵ�ַ�ǻ�ַ�Ĵ��� <em CLASS=SourceItalic>basereg</em> ��ֵ��</p>
+<p CLASS=Body>此定址模式將立即數偏移量的值加到基址暫存器 <em CLASS=SourceItalic>basereg</em> 的值，或從中減去，以計算地址。它用於訪問結構欄位、訪問堆疊幀中的參數與區域性變數。如果偏移量是零，則產生的地址是基址暫存器 <em CLASS=SourceItalic>basereg</em> 的值。</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs3">
@@ -169,7 +169,7 @@ else
 <col class="whs4">
 <col class="whs4">
 
-<h2>����</h2>
+<h2>編碼</h2>
 
 <tr>
 <td ROWSPAN=1
@@ -395,27 +395,27 @@ else
 </tr>
 </table>
 
-<p CLASS=Body>B λ��ʾ�޷����ֽ� (<em CLASS=Source> B == 1</em> ) ���ַ��� (<em CLASS=Source> B == 0</em> )��</p>
+<p CLASS=Body>B 位表示無符號位元組 (<em CLASS=Source> B == 1</em> ) 或字訪問 (<em CLASS=Source> B == 0</em> )。</p>
 
-<p CLASS=Body>L λ��ʾ&ldquo;����&rdquo;(<em CLASS=Source> L == 1</em> ) ��&ldquo;�洢&rdquo;(<em CLASS=Source> L == 0</em> ) ָ�</p>
+<p CLASS=Body>L 位表示&ldquo;載入&rdquo;(<em CLASS=Source> L == 1</em> ) 或&ldquo;儲存&rdquo;(<em CLASS=Source> L == 0</em> ) 指令。</p>
 
-<h3 class=NoteTipHead><img src="Note.gif"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif"> 備註</h3>
 
-<p>�﷨ <em CLASS=Source>[basereg]</em> ���� <em CLASS=Source>[basereg, #0]</em> ����д�����ָ���ǽ�����ʹ���º��ַѰַģʽ֮һ��ָ�<em CLASS=Source>LDRBT</em>��<em CLASS=Source>LDRT</em>��<em CLASS=Source>STRBT</em> �� <em CLASS=Source>STRT</em>�������﷨ <em CLASS=Source>[basereg]</em> <em CLASS=Bold>����</em> ���� <em CLASS=Source>[basereg, #0]</em> ����д��</p>
+<p>語法 <em CLASS=Source>[basereg]</em> 視作 <em CLASS=Source>[basereg, #0]</em> 的縮寫。如果指令是僅允許使用事後變址定址模式之一的指令（<em CLASS=Source>LDRBT</em>、<em CLASS=Source>LDRT</em>、<em CLASS=Source>STRBT</em> 或 <em CLASS=Source>STRT</em>），則語法 <em CLASS=Source>[basereg]</em> <em CLASS=Bold>不能</em> 視作 <em CLASS=Source>[basereg, #0]</em> 的縮寫。</p>
 
-��� <em CLASS=Source>R15</em> ָ��Ϊ�Ĵ��� <em CLASS=SourceItalic>basereg</em>����ʹ�õ�ֵ�ǵ�ǰָ��ĵ�ַ�� 8��
+如果 <em CLASS=Source>R15</em> 指定為暫存器 <em CLASS=SourceItalic>basereg</em>，則使用的值是目前指令的地址加 8。
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p CLASS=Preformatted><span class=Code>LDR &#xA0;&#xA0;&#xA0;R3, [R1, #0xFF]</span></p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
-<a href="Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.html">�����Ѱַģʽ 2��������洢�ֻ��޷����ֽ�</a> 
+<a href="Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.html">請參閱定址模式 2：載入與儲存字或無符號位元組</a> 
 
-<br><a href="Inst_Overview_of_Instructions.html">����Ļ����ָ��</a> 
+<br><a href="Inst_Overview_of_Instructions.html">請參閱彙編器指令</a> 
  
 
 <p>&nbsp;</p>

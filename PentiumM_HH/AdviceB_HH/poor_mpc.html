@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/AdviceB_HH/poor_mpc.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:04 GMT -->
 <head>
 
-<title>ÿ����ʧЧ��΢���� (UPI) ����</title>
+<title>每週期失效的微操作 (UPI) 不佳</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="09 26, 2002 11:46:35 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -27,7 +27,7 @@
 <meta name=page-count content=1>
 <meta name=layout-height content=428>
 <meta name=layout-width content=666>
-<meta name=x-ignored-words content="TLB;prefetch;developer.intel.com.;Pentium;lll;Mispredictions;Micro-Ops;PGBO;Qxi;cmov;fcmov;read(;write(;setcc;SIMD;Chroma;MMX;mispredictions;inlining;BTB;eax;Clockticks;Microsoft*;int;DRDY;Mis-aligned;misaligned;DCU;codecs;Misaligned;MOVs;SHIFTs;��-ops">
+<meta name=x-ignored-words content="TLB;prefetch;developer.intel.com.;Pentium;lll;Mispredictions;Micro-Ops;PGBO;Qxi;cmov;fcmov;read(;write(;setcc;SIMD;Chroma;MMX;mispredictions;inlining;BTB;eax;Clockticks;Microsoft*;int;DRDY;Mis-aligned;misaligned;DCU;codecs;Misaligned;MOVs;SHIFTs;μ-ops">
 
 
 <!--(Links)=========================================================-->
@@ -97,7 +97,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\n����Ӣ�ض�(R) ����(R) M �������Ľ���\nÿ����ʧЧ��΢����ָ�겻��");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n關於英特爾(R) 奔騰(R) M 處理器的建議\n每週期失效的微操作指標不佳");
 
 	}
 	if (window.writeBtnStyle)
@@ -120,11 +120,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" alt="Ӣ�ض�(R) ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">ÿ����ʧЧ��΢���� (UPI) ����</h1>
+<h1><img src="TA_logo.gif" alt="英特爾(R) 調優助手主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">每週期失效的微操作 (UPI) 不佳</h1>
 
-<p>ƽ��ÿ����ʧЧ��΢�������ϵ͡���ʱ�����л����޸Ĵ��������ָ���ڴ������е�ִ��Ч�ʡ�</p>
+<p>平均每週期失效的微運算元較低。此時可能有機會修改程式碼以提高指令在處理器中的執行效率。</p>
 
-<p><span style="font-weight: bold;"><B>����������У���ϸ�ھ���ʵ�������壺</B></span><br>���������̣�ʧЧ��΢����/ʱ���źţ����ѡ�ֵ 2 Ӧ��Ϊ���ã�ֵ 0.3 Ӧ��Ϊ���ѡ�</p>
+<p><span style="font-weight: bold;"><B>在以下情況中，此細節具有實質性意義：</B></span><br>計數器的商（失效的微操作/時鐘訊號）不佳。值 2 應視為良好，值 0.3 應視為不佳。</p>
 
 <h3 class=NoteTipHead
 	style="margin-left: 40px;"><span style="font-weight: bold;"><B><script type="text/javascript" language="JavaScript"><!--
@@ -132,11 +132,11 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4))
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='tip.gif' width='17px' height='18px' border='0' class='img_whs2'>");}
 else
 {   document.write("<img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs2'>");}
-//--></script><noscript><img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs2'></noscript> ����</B></span></h3>
+//--></script><noscript><img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs2'></noscript> 建議</B></span></h3>
 
-<p class="whs3">ʹ���㷨���Ľ����Ż�֮�������΢��ϵ�ṹ�����Ż�ʱ����һ��Ӧ�����о� UPI �� CPI����Ϊ UPI û�� STRING ָ�һ��ָ����ܻ����������ڣ������⣬�������Ǳ� CPI ���õ���������ָ�ꡣ </p>
+<p class="whs3">使用演算法更改進行優化之後，在針對微體系結構進行優化時，第一步應該是研究 UPI 或 CPI。因為 UPI 沒有 STRING 指令（一條指令可能花費許多週期）的問題，所以它是比 CPI 更好的效能問題指標。 </p>
 
-<p class="whs3">���� UPI ���ѵ�ÿ�����򣬼���ڴ�����¼����֧����¼������˽�Ϊʲô UPI �᲻�ѡ� </p>
+<p class="whs3">對於 UPI 不佳的每個區域，檢查記憶體相關事件與分支相關事件，以瞭解為什麼 UPI 會不佳。 </p>
 
 <p class="whs4">&nbsp;</p>
 

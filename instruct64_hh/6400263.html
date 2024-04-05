@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400263.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:13 GMT -->
 <head>
 
-<title>fswap - ���㽻��ָ��</title>
+<title>fswap - 浮點交換指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:52:19 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nF - ָ��\nfswap - ���㽻��ָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nF - 指令\nfswap - 浮點交換指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,16 +116,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">���㽻��ָ��</h1>
+<h1><img src="itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">浮點交換指令</h1>
 
 <p><span style="font-weight: bold;"><B>fswap</B></span></p>
 
-<p><a HREF="6400264.html">����</a> <a HREF="6400126.html">�������</a>
+<p><a HREF="6400264.html">操作</a> <a HREF="6400126.html">字型慣例</a>
  </p>
 
-<p>ָ������ F</p>
+<p>指令型別 F</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) fswap <span style="font-style: italic;"><I>f1</I></span> = <span style="font-style: italic;"><I>f2</I></span>, <span style="font-style: italic;"><I>f3</I></span> <span style="x-condition: eclipse;">swap_form</span><script type="text/javascript"
 	language=JavaScript1.2><!--
@@ -147,31 +147,31 @@ kadovFilePopupInit('A3');
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>說明</B></span></p>
 
-<p>���� <span style="x-condition: eclipse;">swap_form</span><script 
+<p>對於 <span style="x-condition: eclipse;">swap_form</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A4');
-//--></script>��<span style="font-style: italic;"><I>f2</I></span> �е���൥����ֵ�� FR <span style="font-style: italic;"><I>f3</I></span> �е��Ҳ൥����ֵ������Ȼ�󽻻������Ķԡ�</p>
+//--></script>，<span style="font-style: italic;"><I>f2</I></span> 中的左側單精度值與 FR <span style="font-style: italic;"><I>f3</I></span> 中的右側單精度值串聯。然後交換串聯的對。</p>
 
-<p>���� <span style="x-condition: eclipse;">swap_nl_form</span><script 
+<p>對於 <span style="x-condition: eclipse;">swap_nl_form</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A5');
-//--></script>���� FR <span style="font-style: italic;"><I>f2</I></span> �е���൥����ֵ�� FR <span style="font-style: italic;"><I>f3</I></span> �е��Ҳ൥����ֵ������Ȼ�󽻻������Ķԣ������ĵ�����ֵȡ����</p>
+//--></script>，是 FR <span style="font-style: italic;"><I>f2</I></span> 中的左側單精度值與 FR <span style="font-style: italic;"><I>f3</I></span> 中的右側單精度值串聯。然後交換串聯的對，且左側的單精度值取反。</p>
 
-<p>���� <span style="x-condition: eclipse;">swap_nr_form</span><script 
+<p>對於 <span style="x-condition: eclipse;">swap_nr_form</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A6');
-//--></script>���� FR <span style="font-style: italic;"><I>f2</I></span> �е���൥����ֵ�� FR <span style="font-style: italic;"><I>f3</I></span> �е��Ҳ൥����ֵ������Ȼ�󽻻������Ķԣ����Ҳ�ĵ�����ֵȡ����</p>
+//--></script>，是 FR <span style="font-style: italic;"><I>f2</I></span> 中的左側單精度值與 FR <span style="font-style: italic;"><I>f3</I></span> 中的右側單精度值串聯。然後交換串聯的對，且右側的單精度值取反。</p>
 
-<p>�������е���ʽ��FR <span style="font-style: italic;"><I>f1</I></span> ��ָ���ֶξ�����Ϊ 2.063 (0x1003E) ��ƫ��ָ����FR <span style="font-style: italic;"><I>f1</I></span> �ķ����ֶξ�����Ϊ�� (0)��</p>
+<p>對於所有的形式，FR <span style="font-style: italic;"><I>f1</I></span> 的指數欄位均設定為 2.063 (0x1003E) 的偏置指數，FR <span style="font-style: italic;"><I>f1</I></span> 的符號欄位均設定為正 (0)。</p>
 
-<p>�������е���ʽ����� FR <span style="font-style: italic;"><I>f2</I></span> �� FR <span style="font-style: italic;"><I>f3</I></span> �� NaTVal���� FR <span   style="font-style: italic;"><I>f1</I></span> ����Ϊ NaTVal�������Ǽ���Ľ����</p>
+<p>對於所有的形式，如果 FR <span style="font-style: italic;"><I>f2</I></span> 或 FR <span style="font-style: italic;"><I>f3</I></span> 是 NaTVal，則 FR <span   style="font-style: italic;"><I>f1</I></span> 設定為 NaTVal，而不是計算的結果。</p>
 
-<p><a href="6400042.html" style="x-condition: eclipse;">�����˴��鿴������ʽ�� fswap ������ʾ����</a><script 
+<p><a href="6400042.html" style="x-condition: eclipse;">單擊此處檢視所有形式的 fswap 操作的示例。</a><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A7');

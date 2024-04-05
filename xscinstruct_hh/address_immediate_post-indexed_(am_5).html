@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/address_immediate_post-indexed_(am_5).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:48 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>�������º��ַ (AM 5)</title>
+<title>立即數事後變址 (AM 5)</title>
 
 <!--(Meta)==========================================================-->
 
@@ -94,7 +94,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nѰַģʽ\n������洢Э������\n�������º��ַ (AM 5)");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n定址模式\n載入與儲存協處理器\n立即數事後變址 (AM 5)");
 
 	}
 	if (window.writeBtnStyle)
@@ -119,17 +119,17 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'></noscript><a NAME=pgfId-1012063></a><a NAME=10225></a>�������º��ַ (AM 5)</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'></noscript><a NAME=pgfId-1012063></a><a NAME=10225></a>立即數事後變址 (AM 5)</h1>
 
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted><span class=Code>[basereg], #+/-value*4</span> </p>
 
-<p CLASS=Body>���У� </p>
+<p CLASS=Body>其中： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -142,7 +142,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ��������ַ�ļĴ�����</td></tr>
+<p CLASS=CellBodyLeft>指定包含基址的暫存器。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -152,20 +152,20 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ�� 8 λ������ƫ���������� 4 ���� <em CLASS=SourceItalic>basereg</em> ��ֵһ��ʹ�ã����γɵ�ַ�� </td></tr>
+<p CLASS=CellBodyLeft>指定 8 位立即數偏移量，乘以 4 后與 <em CLASS=SourceItalic>basereg</em> 的值一起使用，以形成地址。 </td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-Ѱַģʽ&ldquo;�������º��ַ&rdquo;ִ�����²�����α����˵������
+定址模式&ldquo;立即數事後變址&rdquo;執行以下操作（偽程式碼說明）：
 
 <p CLASS=Preformatted-Code>if ConditionPassed (condition) then<br> &#xA0;start_addr = basereg<br> &#xA0;if U == 1 then<br> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;basereg = basereg + value * 4<br> &#xA0;else /* U == 0 */<br> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;basereg = basereg - value * 4<br> &#xA0;addr = start_addr<br> &#xA0;while (NotFinished (coprocessor[cpnum]))<br> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;addr = addr + 4<br> &#xA0;end_addr = addr</p>
 
-<p CLASS=Body>��Ѱַģʽ����������ַ���С���һ����ַ�ǻ�ַ�Ĵ��� <em CLASS=Subscript>basereg</em> ��ֵ��������ַ��ǰһ����ַ�����ĵõ���������ִ�е�Э����������ָ������źš�������Э����������Է���Э��������������ݡ�</p>
+<p CLASS=Body>此定址模式建立連續地址序列。第一個地址是基址暫存器 <em CLASS=Subscript>basereg</em> 的值。後續地址由前一個地址遞增四得到。這會持續執行到協處理器發出指令結束訊號。這樣，協處理器便可以訪問協處理器定義的數據。</p>
 
-<p CLASS=Body>���ָ����ָ������������������״̬ƥ�䣬��������ƫ���������ĺ�ӵ���ַ�Ĵ��� <em CLASS=SourceItalic>basereg</em> ��ֵ������м�ȥ��</p>
+<p CLASS=Body>如果指令中指定的條件與條件程式碼狀態匹配，則立即數偏移量乘以四後加到基址暫存器 <em CLASS=SourceItalic>basereg</em> 的值，或從中減去。</p>
 
-<p CLASS=Body>Э����������Ҫ����г��� 16 ���ֵĴ��䡣</p>
+<p CLASS=Body>協處理器不得要求進行超過 16 個字的傳輸。</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -186,7 +186,7 @@ else
 <col class="whs3">
 <col class="whs3">
 
-<h2>���� </h2>
+<h2>編碼 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -424,27 +424,27 @@ else
 </tr>
 </table>
 
-<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif" border="0"> ��ע</h3>
+<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif" border="0"> 備註</h3>
 
-<p>N λ������Э�������� </p>
+<p>N 位依賴於協處理器。 </p>
 
-L λ��ʾ&ldquo;����&rdquo;(<em CLASS=Source> L == 1</em> ) ��&ldquo;�洢&rdquo;(<em CLASS=Source> L == 0</em> ) ָ� 
+L 位表示&ldquo;載入&rdquo;(<em CLASS=Source> L == 1</em> ) 或&ldquo;儲存&rdquo;(<em CLASS=Source> L == 0</em> ) 指令。 
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Caution.gif" border="0">&nbsp;ע��</h3>
+<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Caution.gif" border="0">&nbsp;注意</h3>
 
-��� <em CLASS=Source>R15</em> ָ��Ϊ�Ĵ��� <em CLASS=SourceItalic>basereg</em>�����������޷�Ԥ֪�� 
+如果 <em CLASS=Source>R15</em> 指定為暫存器 <em CLASS=SourceItalic>basereg</em>，則結果將會無法預知。 
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p CLASS=Preformatted><span class=Code>LDCL &#xA0;&#xA0;&#xA0;P15, CR0, [R4], #</span>4</p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
-<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Load_and_Store_Coprocessor_Overview.htm">�����Ѱַģʽ 5��������洢Э������</a><a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Inst_Overview_of_Instructions.htm" CLASS="XRef" style="font-weight: normal;"><br> ����Ļ��������</a> 
+<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Load_and_Store_Coprocessor_Overview.htm">請參閱定址模式 5：載入與儲存協處理器</a><a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Inst_Overview_of_Instructions.htm" CLASS="XRef" style="font-weight: normal;"><br> 請參閱彙編器操作</a> 
 </div>
 
 <script type="text/javascript" language="javascript1.2">

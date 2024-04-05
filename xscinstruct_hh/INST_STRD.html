@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_STRD.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:24 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>STRD - DSP ָ��</title>
+<title>STRD - DSP 指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nS - ָ��\nSTRD");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nS - 指令\nSTRD");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,16 +104,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">STRD - DSP ָ��</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題">STRD - DSP 指令</h1>
 
 <div>
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted><span CLASS=Code>STR[condition]D dest, addr_mode</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,7 +126,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="notational_conventions.html#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 個條件之一。請參閱<a HREF="notational_conventions.html#Condition Code Status">條件程式碼狀態</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -136,7 +136,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Դ�Ĵ�����ָ��ż����ŵļĴ�����</td></tr>
+<p CLASS=CellBodyLeft>源暫存器，指定偶數編號的暫存器。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -146,7 +146,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ѱַģʽ 3��<a href="Address_Miscellaneous_Loads_and_Stores_Overview.html">����������洢</a></td></tr>
+<p CLASS=CellBodyLeft>定址模式 3：<a href="Address_Miscellaneous_Loads_and_Stores_Overview.html">其它載入與儲存</a></td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -156,27 +156,27 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft><em CLASS=SourceItalic>addr_mode</em> ʹ�õĻ�ַ�Ĵ��� 
+<p CLASS=CellBodyLeft><em CLASS=SourceItalic>addr_mode</em> 使用的基址暫存器 
  </td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p CLASS=Body>STRD ָ� ARM* ���ļĴ����� <em CLASS=SourceItalic>source</em> �洢�� <em CLASS=SourceItalic>addr_mode</em>��<em CLASS=SourceItalic>source</em> ָ����ż����ŵļĴ����ĺ���������ź���������ŵļĴ����������б� 2 �Ĵ��� STM �����Ѱַģʽ����ʹ�ã�����һ���ֵĵ�ַ����˫�ֶ��룻�����Ա� 8 ������condition ��������Чֵ������ָ��� NOP��</p>
+<p CLASS=Body>STRD 指令將 ARM* 核心暫存器從 <em CLASS=SourceItalic>source</em> 儲存到 <em CLASS=SourceItalic>addr_mode</em>。<em CLASS=SourceItalic>source</em> 指定的偶數編號的暫存器的後面緊跟接著後續奇數編號的暫存器。儘管有比 2 暫存器 STM 更多的定址模式可以使用，但第一個字的地址必須雙字對齊；即可以被 8 整除。condition 必須是有效值；否則將指令當作 NOP。</p>
 </div>
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="Note.gif"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif"> 備註</h3>
 
-�����ͼ������Ч�ļ��ػ�洢���ݷ��ʣ�������������ֹ�쳣�����ʵ��ϵͳ����Э������ʱ���ö����飬���Ҵ���λ [01:0] != 0b00 �ĵ�ַ�������ɶ����쳣�����ʵ��ϵͳ����Э������ʱ���ö����飬���Ҵ���λ [02:0] != 0b100 �ĵ�ַ������ܻ����ɶ����쳣���洢��ַ����˫�ֶ��롣 
+如果試圖進行無效的載入或儲存數據訪問，則產生數據終止異常。如果實現系統控制協處理器時啟用對齊檢查，並且存在位 [01:0] != 0b00 的地址，則產生對齊異常。如果實現系統控制協處理器時啟用對齊檢查，並且存在位 [02:0] != 0b100 的地址，則可能會產生對齊異常。儲存地址必須雙字對齊。 
 
-<h2>Ѱַģʽ</h2>
+<h2>定址模式</h2>
 
-�����&ldquo;Ѱַģʽ 3������������洢&rdquo;�� 
+請參閱&ldquo;定址模式 3：其它載入與儲存&rdquo;。 
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影響的標誌</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -243,7 +243,7 @@ else
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� </h2>
+<h2>編碼 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -386,13 +386,13 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funstr <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0 <br> 4 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@ **** STRD (Addressing Mode 3) **** <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; <br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example,CODE,READONLY <br> 7 <br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1 <br> 9 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Store two 32-bit words from R8 &amp; R9 to 2 consecutive<br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; addresses starting 28 bytes above that held in R10<br> 11 &#xA0;&#xA0;00000000 &#xA0;&#xA0;E14A81FC &#xA0;&#xA0;STRD &#xA0;&#xA0;R8, [R10,#28] <br> 12 <br> 13 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Store two 32-bit words from R1 &amp; R2 to 2 consecutive<br> 14 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; addresses starting at address held in R4, <br> 15 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; then increment R4 by an offset given by R2<br> 16 &#xA0;&#xA0;00000004 &#xA0;E0C410F2 &#xA0;&#xA0;STRD &#xA0;&#xA0;&#xA0;R1, [R4], R2 <br> 17 <br> 18 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Store two 32-bit words from R0 &amp; R1 to 2 consecutive<br> 19 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; addresses starting at address given by R3 minus<br> 20 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; an offset held in R2 <br> 21 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Write final address back to R3 <br> 22 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E1A300F2 &#xA0;&#xA0;STRD &#xA0;&#xA0;R0, [R3,R2]!</span> </p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
-<a href="Address_Miscellaneous_Loads_and_Stores_Overview.html">�����Ѱַģʽ 3������������洢 </a>
+<a href="Address_Miscellaneous_Loads_and_Stores_Overview.html">請參閱定址模式 3：其它載入與儲存 </a>
 </div>
 </div>
 

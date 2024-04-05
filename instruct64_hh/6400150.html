@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400150.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:32:04 GMT -->
 <head>
 
-<title>ia ��֧����</title>
+<title>ia 分支型別</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="03 16, 2003 12:21:57 PM">
 <meta name=topic-status content=Complete>
 <meta name=topic-priority content=2>
@@ -125,28 +125,28 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h2>ia ��֧����</h2>
+<h2>ia 分支型別</h2>
 
-<p>�������ϵͳδ���ط�֧����˷�֧������ִ�С���֧�������Ǽ��� IA-32 ָ���ͨ���� PSR ��Ϊ 1�������� BR <span style="font-style: italic;"><I>b2</I></span>{31:0} ��������������Ŀ���ַ��ʼ���� IA-32 ָ�����޶�ν�ʲ��� PR 0��������&ldquo;�Ƿ�����&rdquo;�����������ָ�ת����PSR.di Ϊ 1����������&ldquo;���õ�ָ�ת��&rdquo;����</p>
+<p>如果操作系統未攔截分支，則此分支無條件執行。分支的作用是啟用 IA-32 指令集（通過將 PSR 設為 1），並從 BR <span style="font-style: italic;"><I>b2</I></span>{31:0} 包含的虛擬線性目標地址開始處理 IA-32 指令。如果限定謂詞不是 PR 0，則產生&ldquo;非法操作&rdquo;錯誤。如果禁用指令集轉換（PSR.di 為 1），則產生&ldquo;禁用的指令集轉換&rdquo;錯誤。</p>
 
-<p>IA-32 Ŀ����Ч��ַ�ɵ�ǰ���벿�ε���Ի�ַ���㣬�� EIP{31:0} = BR <span style="font-style: italic;"><I>b2</I></span>{31:0} &ndash; CSD.base�� ��� PSR.di Ϊ 0��IA-32 ָ�������һȨ�޼��������롣��� PSR.dfh Ϊ 1��IA-32 Ŀ��ָ���������� FP �Ĵ���������ָ�ת���ڼ䣬���ᷢ���Ĵ������л�����Ȩ������ġ�</p>
+<p>IA-32 目標有效地址由目前程式碼部段的相對基址計算，即 EIP{31:0} = BR <span style="font-style: italic;"><I>b2</I></span>{31:0} &ndash; CSD.base。 如果 PSR.di 為 0，IA-32 指令集可在任一許可權級別內輸入。如果 PSR.dfh 為 1，IA-32 目標指令會產生禁用 FP 暫存器錯誤。在指令集轉換期間，不會發生暫存器庫切換與特權級別更改。</p>
 
-<p>��������ȷ���ڷ�����֧֮ǰ������������� (CSD) ��ѡ�������Ѽ��ء����Ŀ�� EIP ֵ������������ƣ�����ڴ������Ȩ��ͻ������ IA-32 ָ�������� IA-32_Exception(GPFault)������ 16 λ IA-32 ����ʱ����� BR <span style="font-style: italic;"><I>b2</I></span> ���� CSD.base �� 64K �ֽڷ�Χ�ڣ�����Ŀ��ָ�������� GPFault��ֱ����һ�� IA-32 ָ��ɹ����֮��EFLAG.rf �Ż��޸ġ��� br.ia ���ִ��֮�󣬵�һ�� IA-32 ָ�ʼִ��֮ǰ��PSR.da��PSR.id��PSR.ia��PSR.dd �� PSR.ed �����Ϊ�㡣ֱ��Ŀ�� IA-32 ָ��ɹ����֮��EFLAG.rf �Ż������</p>
+<p>軟體必須確保在發佈分支之前，程式碼段描述符 (CSD) 與選擇器均已載入。如果目標 EIP 值超出程式碼段限制，或存在程式碼段特權衝突，則在 IA-32 指令上產生 IA-32_Exception(GPFault)。進入 16 位 IA-32 程式碼時，如果 BR <span style="font-style: italic;"><I>b2</I></span> 不在 CSD.base 的 64K 位元組範圍內，則在目標指令上產生 GPFault。直到第一個 IA-32 指令成功完成之後，EFLAG.rf 才會修改。在 br.ia 完成執行之後，第一個 IA-32 指令開始執行之前，PSR.da、PSR.id、PSR.ia、PSR.dd 及 PSR.ed 都清除為零。直到目標 IA-32 指令成功完成之後，EFLAG.rf 才會清除。</p>
 
-<p>�� IA-32 ��������һ���ڴ���������ڰ���(R) ϵͳ�������ڴ�����֮�䣬�����Ҫȷ���ڴ�˳�������������ڷ�֧֮ǰ���� mf ָ���������ȷ�������� IA-32 ָ���ȡ�ܿ���Ӣ�ض�(R) ����(R) ָ����ɵ�ָ����д�롣br.ia ��ִ��ָ�����л���������������ȷ����ǰ�� GR��FR �� <span style="x-condition: eclipse;">AR</span><script type="text/javascript"
+<p>在 IA-32 處理器的一致記憶體引用與基於安騰(R) 系統的無序記憶體引用之間，如果需要確定記憶體順序，則軟體必須在分支之前發出 mf 指令。處理器不確保後續的 IA-32 指令獲取能看見英特爾(R) 安騰(R) 指令集產生的指令流寫入。br.ia 不執行指令序列化操作。處理器不確保先前對 GR、FR 及 <span style="x-condition: eclipse;">AR</span><script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A1');
-//--></script>��д�루��ʹ����ͬһָ�����У��ᱻ��һ�� IA-32 ָ��۲쵽��br.ia ������ʽ��ȡ���е� AR����������ͬ��ָ�����ڣ��� br.ia��������д�� AR��</p>
+//--></script>的寫入（即使是在同一指令組中）會被第一條 IA-32 指令觀察到。br.ia 可能隱式讀取所有的 AR，所以在相同的指令組內（如 br.ia）不允許寫入 AR。</p>
 
-<p>IA-32 ָ���ִ�л�ٻ� ALAT �����ݡ�����������������ָ�ת������������ ALAT ֵ������ IA-32 ����ʱ�������� ALAT �����е���Ŀ������Ĵ�����ջ�����κ�����Ĵ��������� br.ia ָ��������&ldquo;�Ƿ�����&rdquo;����ִ�� IA-32 ָ��ڼ䣬��ٻ���ǰ�Ĵ�����ջ֡��ʣ�µ����мĴ�������ǰ�Ĵ�����ջ֡ǿ����Ϊ�㡣Ҫ�������Ĵ����ļĴ����ļ��������ڷ��� br.ia ָ��֮ǰ���� flushrs ָ�Ҫ��ǿָ�ת�������ܣ����������ܹ�ͬʱ�������ڰ���ϵͳ������Ĵ�����ջ�� IA-32 ָ����������������� 1����֤ flushrs Ϊ br.ia ֮ǰ��ָ���飬2��br.ia �ڵ�һ�� B ����С�br.ia Ӧ��һֱ�� &ldquo;static-taken&rdquo; ��Ĭ����ʾ���ڵ�һ�� B �����ִ�У������������ܾͻ��½���</p>
+<p>IA-32 指令集的執行會毀壞 ALAT 的內容。軟體不得依賴經歷指令集轉換保留下來的 ALAT 值。進入 IA-32 程式碼時，將忽略 ALAT 中現有的專案。如果暫存器堆疊包含任何污損暫存器，則在 br.ia 指令上產生&ldquo;非法操作&rdquo;錯誤。執行 IA-32 指令集期間，會毀壞目前暫存器堆疊幀中剩下的所有暫存器。目前暫存器堆疊幀強制設為零。要清除污損暫存器的暫存器檔案，必須在發出 br.ia 指令之前發出 flushrs 指令。要增強指令集轉換的效能，並且軟體能夠同時啟動基於安騰系統的清除暫存器堆疊與 IA-32 指令集，請滿足以下條件 1）保證 flushrs 為 br.ia 之前的指令組，2）br.ia 在第一個 B 插槽中。br.ia 應該一直在 &ldquo;static-taken&rdquo; 的預設提示下在第一個 B 插槽中執行，否則處理器效能就會下降。</p>
 
-<p class="whs1">��� br.ia �ڻ��ڰ��ڵ�ϵͳ�ϵ����κ����壨���磬&ldquo;����&rdquo;���塢&ldquo;ִ�з�֧&rdquo;�����&ldquo;δʹ�õ�ָ���ַ&rdquo;���壩���� IIP ������ԭʼ�� 64 λĿ�� IP������ֵ���Ǵ� 32 λ����չ�������� </p>
+<p class="whs1">如果 br.ia 在基於安騰的系統上導致任何陷阱（例如，&ldquo;單步&rdquo;陷阱、&ldquo;執行分支&rdquo;陷阱或&ldquo;未使用的指令地址&rdquo;陷阱），則 IIP 將包含原始的 64 位目標 IP。（此值不是從 32 位零擴充套件而來）。 </p>
 
-<p class="whs1">�ڷ�֧�� IA-32 ָ�֮ǰ������������ȷ���� PSR��������������δ���塣</p>
+<p class="whs1">在分支到 IA-32 指令集之前，軟體必須正確設定 PSR；否則處理器操作未定義。</p>
 
-<p class="whs1"> �����й���ϸ��Ϣ������� <span style="font-style: italic;"><I>Intel(R) Itanium(R) Architecture</I></span></p>
+<p class="whs1"> 如需有關詳細資訊，請參閱 <span style="font-style: italic;"><I>Intel(R) Itanium(R) Architecture</I></span></p>
 
-<p class="whs1"><span style="font-style: italic;"><I>Software Developer&rsquo;s Manual</I></span>��Ӣ�ض�(R) ����(R) ��ϵ�ṹ����������Ա�ֲᣩ�� 2 ���� 2:19 ҳ�ϵı� 3-2&ldquo;������״̬�Ĵ����ֶ�&rdquo;��</p>
+<p class="whs1"><span style="font-style: italic;"><I>Software Developer&rsquo;s Manual</I></span>（英特爾(R) 安騰(R) 體系結構軟件開發人員手冊）第 2 卷第 2:19 頁上的表 3-2&ldquo;處理器狀態暫存器欄位&rdquo;。</p>
 
 <p class="whs1"></p>
 

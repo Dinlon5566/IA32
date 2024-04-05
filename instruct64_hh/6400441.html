@@ -7,7 +7,7 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400441.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:48 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
 <title>alat_write</title>
@@ -116,7 +116,7 @@ else
 </script>
 <h2>alat_write(rtype,raddr,paddr,size)</h2>
 
-<p class="whs1">ʹ�� rtype ָ���ļĴ������͡�raddr ָ���ļĴ�����ַ��paddr ָ���������ڴ��ַ�Լ� size ָ���ķ��ʴ�С������һ���µ� ALAT ��޷���ֵ���˺�����֤���ڸ����� raddr ֻ����һ�� ALAT ���� ld.c.nc��ldf.c.nc �� ldfp.c.nc ָ��� raddr �����е� ALAT ��ļĴ������ƥ�䣬����ָ��Ĵ�С��/�� paddr ��������Ŀ�Ĳ�ͬ����˺������ܻᱣ�����е���Ŀ��Ҳ���ܻ�ʹ֮ʧЧ����ʹ�ø�ָ���ָ���� size �� paddr д���µ�� </p>
+<p class="whs1">使用 rtype 指定的暫存器型別、raddr 指定的暫存器地址、paddr 指定的實體記憶體地址以及 size 指定的訪問大小，分配一個新的 ALAT 項。無返回值。此函式保證對於給定的 raddr 只存在一個 ALAT 項。如果 ld.c.nc、ldf.c.nc 或 ldfp.c.nc 指令的 raddr 與現有的 ALAT 項的暫存器標記匹配，但該指令的大小與/或 paddr 與現有專案的不同，則此函式可能會保留現有的專案，也可能會使之失效，並使用該指令的指定的 size 與 paddr 寫入新的項。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

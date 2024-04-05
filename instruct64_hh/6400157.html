@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400157.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:45 GMT -->
 <head>
 
-<title>chk.a - �߼����ؼ��ָ��</title>
+<title>chk.a - 高級載入檢查指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="11 12, 2001 11:18:29 AM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nC - ָ��\nchk.a - �߼����ؼ��ָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nC - 指令\nchk.a - 高級載入檢查指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,16 +116,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">�Ʋ���ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">推測檢查指令</h1>
 
 <p><span style="font-weight: bold;"><B>chk</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400158.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400158.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字型慣例</a>
  </p>
 
-<p>ָ������ I��M</p>
+<p>指令型別 I、M</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) chk.s <span style="font-style: italic;"><I>r2</I></span>, <span style="font-style: italic;"><I>target25</I></span> pseudo-op</p>
 
@@ -150,21 +150,21 @@ kadovFilePopupInit('A2');
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>說明</B></span></p>
 
-<p>�����ƻ������Ʋ����Ľ���Ƿ�ɹ���������ʧ�ܣ���ִ��ָ�� <span style="font-style: italic;"><I>target25</I></span> �ķ�֧��</p>
+<p>檢查控制或數據推測計算的結果是否成功。如果檢查失敗，則執行指向 <span style="font-style: italic;"><I>target25</I></span> 的分支。</p>
 
-<p>�� control_form �У��ɹ���Դ�Ĵ����� NaT ָʾȷ������� GR <span style="font-style: italic;"><I>r2</I></span> ��Ӧ�� NaT λ�� 1���� gr_form �У������� FR <span style="font-style: italic;"><I>f2</I></span> ���� NaTVal���� fr_form �У�������ʧ�ܡ�</p>
+<p>在 control_form 中，成功由源暫存器的 NaT 指示確定。如果 GR <span style="font-style: italic;"><I>r2</I></span> 對應的 NaT 位是 1（在 gr_form 中），或者 FR <span style="font-style: italic;"><I>f2</I></span> 包含 NaTVal（在 fr_form 中），則檢查失敗。</p>
 
-<p>�� data_form �У��ɹ��� ALAT ȷ����ALAT ʹ��ͨ�üĴ���ָʾ�� <span style="font-style: italic;"><I>r1</I></span>���� gr_form �У��򸡵�Ĵ���ָʾ�� <span style="font-style: italic;"><I>f1</I></span>���� fr_form �У����в�ѯ����������κ� ALAT ��Ŀƥ�䣬����ʧ�ܡ���Щʵʩ�汾���ܻ��ṩ�����Ƿ��� ALAT ��Ŀƥ������¼��ʧ�ܵ�ѡ�ʹ��ͨ�üĴ���ָʾ�� r0 �򸡵�Ĵ���ָʾ�� f0 �� f1 �� chk.a ����ʧ�ܡ�</p>
+<p>在 data_form 中，成功由 ALAT 確定。ALAT 使用通用暫存器指示符 <span style="font-style: italic;"><I>r1</I></span>（在 gr_form 中）或浮點暫存器指示符 <span style="font-style: italic;"><I>f1</I></span>（在 fr_form 中）進行查詢。如果不與任何 ALAT 專案匹配，則檢查失敗。有些實施版本可能會提供不管是否有 ALAT 專案匹配均導致檢查失敗的選項。使用通用暫存器指示符 r0 或浮點暫存器指示符 f0 或 f1 的 chk.a 總是失敗。</p>
 
-<p>������� <span style="font-style: italic;"><I>target64</I></span> ������ָ��Ҫִ�еķ�֧�ı�ǩ���ڷ�ָ֧���У�����Ϊ�з���������λ���� (<span style="font-style: italic;"><I>imm21</I></span>) ���룬����Ŀ���֧���������ָ��ķ�֧��֮�� (<span   style="font-style: italic;"><I>imm21</I></span> = <span style="font-style: italic;"><I>target25</I></span> - IP &gt;&gt; 4)��</p>
+<p>彙編程式碼的 <span style="font-style: italic;"><I>target64</I></span> 運算元指定要執行的分支的標籤。在分支指令中，它作為有符號立即數位移量 (<span style="font-style: italic;"><I>imm21</I></span>) 編碼，放在目標分支束與包含此指令的分支束之間 (<span   style="font-style: italic;"><I>imm21</I></span> = <span style="font-style: italic;"><I>target25</I></span> - IP &gt;&gt; 4)。</p>
 
-<p>��ָ��ķ�֧��Ϊ����ѡ��ʵʩ�����ָ��Ӧ�÷�����֧������֧��Ϊȴδʵʩ����ִ��&ldquo;�Ʋ��Բ���&rdquo;����Ĵ�����<span style="font-style: italic;"><I>imm21</I></span> ָ����ִֵ������չ��������&ldquo;�ж����������ƼĴ���&rdquo;(IIM)������������� IIM ִֵ�з�����չ�����������ӵ� IIP Ȼ���ٷ��أ��Դ���ģ���֧��</p>
+<p>此指令的分支行為可以選擇不實施。如果指令應該發生分支，但分支行為卻未實施，則執行&ldquo;推測性操作&rdquo;錯誤的處理，<span style="font-style: italic;"><I>imm21</I></span> 指定的值執行零擴充套件，並放入&ldquo;中斷立即數控制暫存器&rdquo;(IIM)。錯誤處理程式給 IIM 值執行符號擴充套件，並將它新增到 IIP 然後再返回，以此來模擬分支。</p>
 
-<p>���ͨ�üĴ����� control_form ��ʽ�Ĵ�ָ������� I ��Ԫ���� M ��Ԫ�ϱ��롣���Ҫִ�еĵ�Ԫ���Ͳ���Ҫ�������ʹ��α������</p>
+<p>檢查通用暫存器的 control_form 形式的此指令可以在 I 單元或者 M 單元上編碼。如果要執行的單元型別不重要，則可以使用偽操作。</p>
 
-<p>���� data_form�������ĳ�� ALAT ��Ŀƥ�䣬����Ի��� <span style="font-style: italic;"><I>aclr</I></span> ��ɷ���ֵѡ��ʹƥ��� ALAT ��ĿʧЧ��</p>
+<p>對於 data_form，如果與某個 ALAT 專案匹配，則可以基於 <span style="font-style: italic;"><I>aclr</I></span> 完成符的值選擇使匹配的 ALAT 專案失效。</p>
 
 
 <!--(HR)============================================================-->

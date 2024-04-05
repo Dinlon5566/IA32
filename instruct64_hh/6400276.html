@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400276.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>invala - ʹ ALAT ʧЧָ��</title>
+<title>invala - 使 ALAT 失效指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -94,7 +94,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nI - ָ��\ninvala - ʹ ALAT ʧЧָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nI - 指令\ninvala - 使 ALAT 失效指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -117,16 +117,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">ʹ ALAT ʧЧָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">使 ALAT 失效指令</h1>
 
 <p><span style="font-weight: bold;"><B>invala</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400277.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400277.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字型慣例</a>
  </p>
 
-<p>ָ������ M</p>
+<p>指令型別 M</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) invala complete_form</p>
 
@@ -139,11 +139,11 @@ else
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>說明</B></span></p>
 
-<p>ʹ ALAT ����ѡ��һ��������ĿʧЧ��</p>
+<p>使 ALAT 中所選的一個或多個專案失效。</p>
 
-<p class="whs3">�� complete_form �У����е� ALAT �ʧЧ���� entry_form �У�ʹ��ͨ�üĴ���ָʾ�� <span style="font-style: italic;"><I>r1</I></span> (gr_form) �򸡵�Ĵ���ָʾ�� <span style="font-style: italic;"><I>f1</I></span> (fr_form) ��ѯ ALAT��������κ�ƥ��� ALAT ���ʹ֮ʧЧ�� </p>
+<p class="whs3">在 complete_form 中，所有的 ALAT 項都失效。在 entry_form 中，使用通用暫存器指示符 <span style="font-style: italic;"><I>r1</I></span> (gr_form) 或浮點暫存器指示符 <span style="font-style: italic;"><I>f1</I></span> (fr_form) 查詢 ALAT，如果有任何匹配的 ALAT 項，則使之失效。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

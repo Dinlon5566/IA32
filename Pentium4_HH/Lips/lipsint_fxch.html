@@ -8,12 +8,12 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/lipsint_fxch.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:32:04 GMT -->
 <head>
 
-<title>����ָ���� FXCH ֮��</title>
+<title>整數指令在 FXCH 之後</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
-<meta NAME=MS-HAID CONTENT="����ͷ�">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
+<meta NAME=MS-HAID CONTENT="浮點懲罰">
 <meta name=date content="09 6, 2001 4:20:47 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -118,20 +118,20 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" align="right" width="36px" height="36px" border="0" class="img_whs1"> ����ָ���� <span style="font-weight: bold;"><B>FXCH</B></span> ֮��</h1>
+<h1><img src="TA_logo.gif" align="right" width="36px" height="36px" border="0" class="img_whs1"> 整數指令在 <span style="font-weight: bold;"><B>FXCH</B></span> 之後</h1>
 
-<p><span style="font-weight: bold;"><B>Int_fxch</B></span> ��ʾһ�ֳͷ�״̬��</p>
+<p><span style="font-weight: bold;"><B>Int_fxch</B></span> 表示一種懲罰狀態。</p>
 
-<p>����ָ�������Ե� FXCH ָ��֮��ʱ������䷢�� <span style="font-weight: bold;"><B>Int_fxch</B></span>����ᵼ��һ�����ڵ���ͣ��</p>
+<p>整數指令跟在配對的 FXCH 指令之後時，會給其發出 <span style="font-weight: bold;"><B>Int_fxch</B></span>。這會導致一個週期的暫停。</p>
 
-<p>FXCH ָ���Ŀ��Ĵ�����ջ�� (TOS) �Ĵ��������ݡ����δ��ʽָ��Ŀ��Ĵ�������ʹ�� st(1)��</p>
+<p>FXCH 指令交換目標暫存器與棧頂 (TOS) 暫存器的內容。如果未顯式指定目標暫存器，則使用 st(1)。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>����</B></span></h3>
+	style="margin-left: 40px;"><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>建議</B></span></h3>
 
-<p class="whs3">��������ṹ��ʹ������ָ�������Ե� FXCH ָ��֮��</p>
+<p class="whs3">調整程式碼結構，使得整數指令不跟在配對的 FXCH 指令之後。</p>
 
-<p>ʾ����</p>
+<p>示例：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells>
@@ -139,10 +139,10 @@ else
 <tr>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ԭʼ����</td>
+	style="margin-bottom: 0;">原始程式碼</td>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">�Ż�����</td></tr>
+	style="margin-bottom: 0;">優化程式碼</td></tr>
 
 <tr>
 <td valign="top" class="whs4">
@@ -172,21 +172,21 @@ fld DWORD PTR _fe</p>
 
 <tr>
 <td valign="top" class="whs4">
-<p class="whs5">����ָ�� ADD ���� FXCH ָ��֮���������ͣһ�����ڡ�</td>
+<p class="whs5">整數指令 ADD 跟在 FXCH 指令之後，因此它暫停一個週期。</td>
 <td valign="top" class="whs4">
-<p class="whs5">���Ż��Ĵ����У�ָ���˳�򾭹����µ��������Ա�����ͣ��FXCH λ�ڸ���ָ�����������ָ��֮ǰ��</td></tr>
+<p class="whs5">在優化的程式碼中，指令的順序經過重新調整，可以避免暫停。FXCH 位於浮點指令而不是整數指令之前。</td></tr>
 </table>
 
 <p class="whs5">
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','FDIV/FLDCW ָ��','lipsfdiv_stall.htm','FMUL ��ͣ','lipsfmul_stall.htm','MMX(TM) ��������ת��','lipspro_mmx_trans.htm','������ͣ�Եȴ� FST ������','lipsfst_dep.htm','�������','lipsfp_dep.htm');return false;" title="����ͷ�"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e6%b5%ae%e7%82%b9%e6%83%a9%e7%bd%9a.gif" border=0 height=20 width=58 alt="����ͷ�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','FDIV/FLDCW 指令','lipsfdiv_stall.htm','FMUL 暫停','lipsfmul_stall.htm','MMX(TM) 技術程式碼轉換','lipspro_mmx_trans.htm','浮點暫停以等待 FST 運算元','lipsfst_dep.htm','浮點相關','lipsfp_dep.htm');return false;" title="浮點懲罰"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e6%b5%ae%e7%82%b9%e6%83%a9%e7%bd%9a.gif" border=0 height=20 width=58 alt="浮點懲罰"></a>
 
 
  </p>
 
 <p class="whs5">
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','�� MMX(TM) �����ı���(R) ������','pentium(r)_with_mmx(tm_technology_processor.htm','����(R) ������','pentium(r)_processor.htm');return false;" title="Ӱ��Ĵ�����"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%bd%b1%e5%93%8d%e7%9a%84%e5%a4%84%e7%90%86%e5%99%a8.gif" border=0 height=20 width=82 alt="Ӱ��Ĵ�����"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','含 MMX(TM) 技術的奔騰(R) 處理器','pentium(r)_with_mmx(tm_technology_processor.htm','奔騰(R) 處理器','pentium(r)_processor.htm');return false;" title="影響的處理器"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%bd%b1%e5%93%8d%e7%9a%84%e5%a4%84%e7%90%86%e5%99%a8.gif" border=0 height=20 width=82 alt="影響的處理器"></a>
 
 
  </p>

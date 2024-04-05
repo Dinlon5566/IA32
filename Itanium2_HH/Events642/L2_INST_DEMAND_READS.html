@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\n�ڴ��¼�\nһ��ָ�����Ԥȡ�¼�\nL2_INST_DEMAND_READS");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 安騰(R) 2 處理器\n英特爾(R) 安騰(R) 2 處理器事件\n記憶體事件\n一級指令快取與預取事件\nL2_INST_DEMAND_READS");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,14 +106,14 @@ else
 </script>
 <h1>L2_INST_DEMAND_READS</h1>
 
-<b style="font-weight: bold;">���⣺</b>����ָ�������ȡ����<b style="font-weight: bold;"><br> ���</b>һ��ָ�����Ԥȡ�¼�<b style="font-weight: bold;"><br> IAR/DAR/OPC��</b>Y/N/N<b style="font-weight: bold;"><br> �¼����룺</b>0x42<b style="font-weight: bold;"><br> ���ÿ����������</b>1 
+<b style="font-weight: bold;">標題：</b>二級指令隨需獲取請求<b style="font-weight: bold;"><br> 類別：</b>一級指令快取與預取事件<b style="font-weight: bold;"><br> IAR/DAR/OPC：</b>Y/N/N<b style="font-weight: bold;"><br> 事件程式碼：</b>0x42<b style="font-weight: bold;"><br> 最大每週期增量：</b>1 
 
-<p><b style="font-weight: bold;">���壺</b>ͳ�� L1I �����ȡδ���е��µĶ� L2 ��ָ�������������¼�ͳ��ͬʱδ���� L1I �� ISB �������ȡ�������������Ƿ����� RAB��</p>
+<p><b style="font-weight: bold;">定義：</b>統計 L1I 隨需獲取未命中導致的對 L2 的指令請求數。此事件統計同時未命中 L1I 與 ISB 的隨需獲取數，不論它們是否命中 RAB。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> 備註</h3>
 
-<p class="whs2">��������ȡû�� L1ITLB δ���У��� <a href="L2_INST_DEMAND_READS.html">L2_INST_DEMAND_READS</a> �� <a HREF="L1I_READS.html">L1I_READS</a> ������������������ȡû�� L2ITLB δ���У��� <a href="L2_INST_DEMAND_READS.html">L2_INST_DEMAND_READS</a> ������ <a HREF="L1I_READS.html">L1I_READS</a> ���棬��� 3-4 ��ʱ�����ڣ�����֮ǰ��δ��������� iwalk���⽫����һЩ�ӳ٣�ֱ��δ���� iwalk ������ϣ�����������ȡ�� L2ITLB δ���У��� <a href="L2_INST_DEMAND_READS.html">L2_INST_DEMAND_READS</a> �� <a HREF="L1I_READS.html">L1I_READS</a> ֮���ƫ���ǲ�ȷ���ġ� </p>
+<p class="whs2">如果隨需獲取沒有 L1ITLB 未命中，則 <a href="L2_INST_DEMAND_READS.html">L2_INST_DEMAND_READS</a> 與 <a HREF="L1I_READS.html">L1I_READS</a> 緊緊相連。如果隨需獲取沒有 L2ITLB 未命中，則 <a href="L2_INST_DEMAND_READS.html">L2_INST_DEMAND_READS</a> 將跟在 <a HREF="L1I_READS.html">L1I_READS</a> 後面，相隔 3-4 個時鐘週期（除非之前有未決的已清除 iwalk；這將增加一些延遲，直至未決的 iwalk 處理完畢）。如果隨需獲取有 L2ITLB 未命中，則 <a href="L2_INST_DEMAND_READS.html">L2_INST_DEMAND_READS</a> 與 <a HREF="L1I_READS.html">L1I_READS</a> 之間的偏離是不確定的。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

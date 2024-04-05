@@ -7,14 +7,14 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/loads_retired.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:38:26 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>ʧЧ�ļ���</title>
+<title>失效的載入</title>
 
 <!--(Meta)==========================================================-->
 
-<meta NAME=MS-HAID CONTENT="E4 Group - �ڴ��¼�">
+<meta NAME=MS-HAID CONTENT="E4 Group - 記憶體事件">
 <meta NAME=MS-HAID CONTENT=Events4>
 <meta NAME=MS-HAID CONTENT="E4 Loads Retired">
 <meta NAME=MS-HAID CONTENT="E4 Group - Key CPI-Limiting">
@@ -84,8 +84,8 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������¼�\n���ܵ����¼� - ����\n��Ҫ CPI �����¼�\nʧЧ�ļ���");
-addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������¼�\n���ܵ����¼� - ����\n�ڴ��¼�\nʧЧ�ļ���");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器事件\n效能調整事件 - 基本\n主要 CPI 限制事件\n失效的載入");
+addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器事件\n效能調整事件 - 輔助\n記憶體事件\n失效的載入");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,22 +108,22 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" align="right" height="60px" align="right" border="0" class="img_whs1">ʧЧ�ļ���</h1>
+<h1><img src="p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" align="right" height="60px" align="right" border="0" class="img_whs1">失效的載入</h1>
 
-<p><span style="font-weight: bold;"><B>�߳��ض���</B></span>��<a href="Thread_Specific.html">TS</a></p>
+<p><span style="font-weight: bold;"><B>執行緒特定性</B></span>：<a href="Thread_Specific.html">TS</a></p>
 
-<p>���¼�ͳ��ǰ�˱�ǵ�ʧЧ�ļ��ز�������Դ���������ڴ��ַ��&ldquo;��������ָ���������չָ�&rdquo;(SSE) ָ��� x87 ָ���Ϊһ�μ��أ��ҷֱ��Ϊһ�� SSE �� x87 ָ�</p>
+<p>此事件統計前端標記的失效的載入運算元。源運算元是記憶體地址的&ldquo;數據流單指令多數據擴充套件指令集&rdquo;(SSE) 指令或 x87 指令計為一次載入，且分別計為一條 SSE 或 x87 指令。</p>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','ʧЧ�Ķ����������δ����','2nd-level_cache_load_misses_retired.htm','ʧЧ�ķ�֧','branches_retired.htm','ʧЧ��ָ��','Instructions_retired.htm','ʧЧ��Ԥ��ʧ���֧','mispredicted_branches_retired.htm','ʱ���źţ�������ʱ���źţ�','Clockticks.htm');return false;" title="������Ҫ CPI �����¼�"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%85%b6%e5%ae%83%e4%b8%bb%e8%a6%81_cpi_%e9%99%90%e5%88%b6%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=136 alt="������Ҫ CPI �����¼�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','失效的二級快取載入未命中','2nd-level_cache_load_misses_retired.htm','失效的分支','branches_retired.htm','失效的指令','Instructions_retired.htm','失效的預測失誤分支','mispredicted_branches_retired.htm','時鐘訊號（非休眠時鐘訊號）','Clockticks.htm');return false;" title="其它主要 CPI 限制事件"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%85%b6%e5%ae%83%e4%b8%bb%e8%a6%81_cpi_%e9%99%90%e5%88%b6%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=136 alt="其它主要 CPI 限制事件"></a>
 
 
 </p>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','DTLB ҳ��ѯ (TI)','page_walk_dtlb_all_misses.htm','ITLB ҳ��ѯ (TI)','page_walk_miss_itlb.htm','ʧЧ��һ���������δ����','1st-level_cache_load_misses_retired.htm','ʧЧ�Ĳ�ִ洢 (AT-E)','split_stores_retired.htm');return false;" title="�����ڴ��¼�"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%85%b6%e5%ae%83%e5%86%85%e5%ad%98%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=82 alt="�����ڴ��¼�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','DTLB 頁查詢 (TI)','page_walk_dtlb_all_misses.htm','ITLB 頁查詢 (TI)','page_walk_miss_itlb.htm','失效的一級快取載入未命中','1st-level_cache_load_misses_retired.htm','失效的拆分儲存 (AT-E)','split_stores_retired.htm');return false;" title="其它記憶體事件"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%85%b6%e5%ae%83%e5%86%85%e5%ad%98%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=82 alt="其它記憶體事件"></a>
 
 
 </p>

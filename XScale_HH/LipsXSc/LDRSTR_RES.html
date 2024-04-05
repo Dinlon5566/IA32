@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/XScale_HH/LipsXSc/LDRSTR_RES.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:45 GMT -->
 <head>
 
-<title>WMMX ����/�洢����ͷ�/����</title>
+<title>WMMX 載入/儲存結果懲罰/警告</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="04 14, 2003 11:57:31 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -84,7 +84,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض� XScale(R) ΢��ϵ�ṹ \nӢ�ض�(R) ���� MMX(TM) ָ��ͷ�\nWMMX ����/�洢����ͷ�/����");
+	addTocInfo("參考\n處理器事件與建議\n英特爾 XScale(R) 微體系結構 \n英特爾(R) 無線 MMX(TM) 指令集懲罰\nWMMX 載入/儲存結果懲罰/警告");
 
 	}
 	if (window.writeBtnStyle)
@@ -107,33 +107,33 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="XS_logo.gif" alt="Ӣ�ض� XScale(R) ��������" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">WMMX ����/�洢����ͷ�/����</h1>
+<h1><img src="XS_logo.gif" alt="英特爾 XScale(R) 技術主題" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">WMMX 載入/儲存結果懲罰/警告</h1>
 
 <h2>XSCW_LDRSTR_RES</h2>
 
-<h3>����</h3>
+<h3>解釋</h3>
 
-<p>��ָ� WMMX ����/�洢ָ��Ľ������Դ���������ڽ������֮ǰ���ܵ���ͣ��ָ��ִ��Ҫ���⻨�Ѽ������ڡ�</p>
-
-<h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs2"> ����</h3>
-
-<p class="whs3">������ܣ������¸�ָ���������ʹ�üĴ�����ָ��ִ��֮ǰ�Ķ����ӳ����ڡ�</p>
+<p>此指令將 WMMX 載入/儲存指令的結果用作源運算元。在結果出來之前，管道暫停，指令執行要額外花費幾個週期。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> ��ע</h3>
+	style="margin-left: 40px;"><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs2"> 建議</h3>
+
+<p class="whs3">如果可能，請重新給指令排序，以填補使用暫存器的指令執行之前的額外延遲週期。</p>
+
+<h3 class=NoteTipHead
+	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> 備註</h3>
 
 <ul type="disc" class="whs5">
 	
 	<ul type="disc" class="whs5">
 		
-		<li class=kadov-p><p>�� ARM ���ĵ� Load ָ��һ�������Ҫ���ص����ݲ������ݻ����У�WMMX ����ָ��Ľ���ӳٻ᳤�ܶࡣ��ˣ������ WMMX ����ָ����ʹ�� WMMX ���ؽ����ָ����ྡ���ܵ�Զ�����⣬������ʹ�� PLD ָ���ȷ�� WMMX ����ָ���е����ݷ�����ִ��ʱ�ܹ����л��档�����й���ϸ��Ϣ������� <a HREF="Prefetch_Advice.html">PLD �����뽨��</a>��</p></li>
+		<li class=kadov-p><p>與 ARM 核心的 Load 指令一樣，如果要載入的數據不在數據快取中，WMMX 載入指令的結果延遲會長很多。因此，最好讓 WMMX 載入指令與使用 WMMX 載入結果的指令相距儘可能地遠。此外，還可以使用 PLD 指令，以確保 WMMX 載入指令中的數據訪問在執行時能夠命中快取。如需有關詳細資訊，請參閱 <a HREF="Prefetch_Advice.html">PLD 警告與建議</a>。</p></li>
 		
-		<li class=kadov-p><p>��&ldquo;�ͷ�/����&rdquo;��������&ldquo;Ӣ�ض�(R) ���� MMX(TM) ָ�&rdquo;��</p></li>
+		<li class=kadov-p><p>此&ldquo;懲罰/警告&rdquo;僅適用於&ldquo;英特爾(R) 無線 MMX(TM) 指令集&rdquo;。</p></li>
 	</ul>
 </ul>
 
-<h3>ʾ�� 1 </h3>
+<h3>示例 1 </h3>
 
 <p class=Preformatted><span class=Code>ADD &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R0, R2, R3</span></p>
 
@@ -143,7 +143,7 @@ else
 
 <p class=Preformatted><span class=Code>SUB &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R8, R4, R3</span></p>
 
-<h4>����Է���</h4>
+<h4>替代性方案</h4>
 
 <p class=Preformatted><span class=Code>WLDRB &#xA0;&#xA0;&#xA0;wR2, [R1, #0x8]</span></p>
 
@@ -153,7 +153,7 @@ else
 
 <p class=Preformatted><span class=Code>WSUB &#xA0;&#xA0;&#xA0;&#xA0;wR4, wR2, wR0</span></p>
 
-<h3>ʾ�� 2</h3>
+<h3>示例 2</h3>
 
 <p class=Preformatted><span class=Code>WSTRB &#xA0;&#xA0;&#xA0;wR2, [R1, #0x8]!</span></p>
 

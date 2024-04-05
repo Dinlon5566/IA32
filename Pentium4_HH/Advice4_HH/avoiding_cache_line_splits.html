@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/avoiding_cache_line_splits.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:24:40 GMT -->
 <head>
 
-<title>���⻺���߲��</title>
+<title>避免快取線拆分</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
 <meta name=generator-major-version content=0.1>
 <meta name=generator-minor-version content=1>
@@ -79,7 +79,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n���⻺���߲��");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n關於英特爾(R) 奔騰(R) 4 處理器的建議\n關於英特爾(R) 奔騰(R) 4 處理器的建議\n避免快取線拆分");
 
 	}
 	if (window.writeBtnStyle)
@@ -102,26 +102,26 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" alt="Ӣ�ض�(R) ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">���⻺���߲��</h1>
+<h1><img src="TA_logo.gif" alt="英特爾(R) 調優助手主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">避免快取線拆分</h1>
 
 &nbsp;
 
-<p>Ϊȡ��������ܣ��밴���·����������ݣ�</p>
+<p>為取得最佳效能，請按以下方法對齊數據：</p>
 
-<li class=kadov-p>���κε�ַ������ 8 λ����</li>
+<li class=kadov-p>在任何地址處對齊 8 位數據</li>
 
-<li class=kadov-p>���� 16 λ���ݣ�ʹ֮�����ڶ�������ֽ�����</li>
+<li class=kadov-p>對齊 16 位數據，使之包含在對齊的四位元組字內</li>
 
-<li class=kadov-p>���� 32 λ���ݣ�ʹ���ַ��Ϊ�ĵı���</li>
+<li class=kadov-p>對齊 32 位數據，使其基址成為四的倍數</li>
 
-<li class=kadov-p>���� 64 λ���ݣ�ʹ���ַ��Ϊ�˵ı���</li>
+<li class=kadov-p>對齊 64 位數據，使其基址成為八的倍數</li>
 
-<li class=kadov-p>���� 80 λ���ݣ�ʹ���ַ��Ϊʮ���ı���</li>
+<li class=kadov-p>對齊 80 位數據，使其基址成為十六的倍數</li>
 
 <li class=kadov-p>
-���� 128 λ���ݣ�ʹ���ַ��Ϊʮ���ı���
+對齊 128 位數據，使其基址成為十六的倍數
 
-<p>�����й���ϸ��Ϣ������� <i>Intel(R) Pentium(R) 4 and Intel(R) Xeon(TM) Processor Optimization Manual</i>��Ӣ�ض�(R) ����(R) 4 ��Ӣ�ض�(R) ��ǿ(TM) �������Ż��ֲᣩ�ĵ� 2 �¡�</p>
+<p>如需有關詳細資訊，請參閱 <i>Intel(R) Pentium(R) 4 and Intel(R) Xeon(TM) Processor Optimization Manual</i>（英特爾(R) 奔騰(R) 4 與英特爾(R) 至強(TM) 處理器優化手冊）的第 2 章。</p>
 </li>
 
 <script type="text/javascript" language="javascript1.2">

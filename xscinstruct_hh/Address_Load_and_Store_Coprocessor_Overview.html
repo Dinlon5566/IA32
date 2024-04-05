@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Load_and_Store_Coprocessor_Overview.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:46:54 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>���� - ������洢Э������</title>
+<title>概述 - 載入與儲存協處理器</title>
 
 <!--(Meta)==========================================================-->
 
@@ -97,7 +97,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nѰַģʽ\n������洢Э������\n������洢Э����������");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n定址模式\n載入與儲存協處理器\n載入與儲存協處理器概述");
 
 	}
 	if (window.writeBtnStyle)
@@ -122,21 +122,21 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'></noscript><a name="Load and Store Coprocessor"></a>������洢Э����������</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'></noscript><a name="Load and Store Coprocessor"></a>載入與儲存協處理器概述</h1>
 
 <div>
-<p CLASS=Body>&ldquo;������洢Э������&rdquo;Ѱַģʽ�ֳ� 4 ����ģʽ���������ڼ��������洢Э������ָ��ĵ�ַ����Ѱַģʽ��һ���﷨�ں��������ṩ��</p>
+<p CLASS=Body>&ldquo;載入與儲存協處理器&rdquo;定址模式分成 4 個子模式。它們用於計算載入與儲存協處理器指令的地址。此定址模式的一般語法在後續部分提供。</p>
 
 <div>
-<h2>һ���﷨</h2>
+<h2>一般語法</h2>
 
 <div>
 <p CLASS=Preformatted><span class=Code>opcode [condition] [L] cpname, cpdest, addr_mode </span></p>
 
-<p CLASS=Body>���У� </p>
+<p CLASS=Body>其中： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -148,7 +148,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ��ָ�������</td></tr>
+<p CLASS=CellBodyLeft>指定指令操作。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -157,7 +157,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="notational_conventions.html#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 個條件之一。請參閱<a HREF="notational_conventions.html#Condition Code Status">條件程式碼狀態</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -166,7 +166,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ��λ [22]��N λ��<br>��� L ����Ϊ 1���� N λ��Ϊ 1����ָ�������ػ򳤴洢����� L δ��λ���� N λ���㣬��ָ���̼��ػ�̴洢�������й���ϸ��Ϣ�������<a href="INST_LDC.html" CLASS="XRef">&nbsp;LDC/LDC2 ָ��</a>�� <a href="INST_STC.html" CLASS="XRef">STC/STC2 ָ��</a>��</td></tr>
+<p CLASS=CellBodyLeft>指定位 [22]、N 位：<br>如果 L 設定為 1，則 N 位置為 1，並指定長載入或長儲存。如果 L 未置位，則 N 位是零，並指定短載入或短儲存。如需有關詳細資訊，請參閱<a href="INST_LDC.html" CLASS="XRef">&nbsp;LDC/LDC2 指令</a>與 <a href="INST_STC.html" CLASS="XRef">STC/STC2 指令</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -176,7 +176,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Э���������� (p0..p15)</td></tr>
+<p CLASS=CellBodyLeft>協處理器名稱 (p0..p15)</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -185,12 +185,12 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ��Ŀ��Э�������Ĵ�����</td></tr>
+<p CLASS=CellBodyLeft>指定目標協處理器暫存器。</td></tr>
 </table>
 
 <p CLASS=Body>&nbsp;</p>
 
-<p CLASS=Body>addr_mode ������ 6 ����ģʽ֮һ�� </p>
+<p CLASS=Body>addr_mode 是以下 6 種子模式之一： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -198,10 +198,10 @@ else
 <tr>
 <th ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellHeadingCenter>��ģʽ</th>
+<p CLASS=CellHeadingCenter>子模式</th>
 <th ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellHeadingCenter>˵��</th></tr>
+<p CLASS=CellHeadingCenter>說明</th></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -210,7 +210,7 @@ else
 							style="font-style: italic;">&#xA0;[basereg, #+/-value*4]</em> </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ƫ����ѡ�<br> ������ַ���С���һ����ַ�ǽ� 8 λ������ƫ���������ĺ�ӵ���ַ�Ĵ���������м�ȥ�������ĵ�ַ��ǰһ����ַ�����ĵõ���<a href="address_immediate_offset_(am_5).html">����ļ�����洢Э��������������ƫ���� (AM 5)</a>��</td></tr>
+<p CLASS=CellBodyLeft>偏移量選項：<br> 建立地址序列。第一個地址是將 8 位立即數偏移量乘以四後加到基址暫存器，或從中減去。後續的地址由前一個地址遞增四得到。<a href="address_immediate_offset_(am_5).html">請參閱載入與儲存協處理器：立即數偏移量 (AM 5)</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -219,7 +219,7 @@ else
 							style="font-style: italic;">&nbsp;[basereg #+/-value*4]!</em> </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>���ȱ�ַѡ�<br>������ַ���С���һ����ַ�ǽ� 8 λ������ƫ���������ĺ�ӵ���ַ�Ĵ���������м�ȥ�����������ĳ����������ֵд�ػ�ַ�Ĵ����������ĵ�ַ��ǰһ����ַ�����ĵõ���<a href="address_immediate_pre-indexed_(am_5).html">����ļ�����洢Э�����������������ȱ�ַ (AM 5)</a>��</td></tr>
+<p CLASS=CellBodyLeft>事先變址選項：<br>建立地址序列。第一個地址是將 8 位立即數偏移量乘以四後加到基址暫存器，或從中減去。如果傳遞了某個條件，則將值寫回基址暫存器。後續的地址由前一個地址遞增四得到。<a href="address_immediate_pre-indexed_(am_5).html">請參閱載入與儲存協處理器：立即數事先變址 (AM 5)</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -228,7 +228,7 @@ else
 							style="font-style: italic;">&nbsp;[basereg], #+/-value*4</em> </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�º��ַѡ�<br> ������ַ���С��������ĳ�����������һ����ַ�ǽ� 8 λ������ƫ���������ĺ�ӵ���ַ�Ĵ���������м�ȥ��Ȼ��ֵд�ػ�ַ�Ĵ�����<br>�����ĵ�ַ��ǰһ����ַ�����ĵõ���<a href="address_immediate_post-indexed_(am_5).html">����ļ�����洢Э���������������º��ַ (AM 5)</a>��</td></tr>
+<p CLASS=CellBodyLeft>事後變址選項：<br> 建立地址序列。如果傳遞某個條件，則第一個地址是將 8 位立即數偏移量乘以四後加到基址暫存器，或從中減去。然後將值寫回基址暫存器。<br>後續的地址由前一個地址遞增四得到。<a href="address_immediate_post-indexed_(am_5).html">請參閱載入與儲存協處理器：立即數事後變址 (AM 5)</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -237,15 +237,15 @@ else
 							style="font-style: italic;">&nbsp;[basereg], option</em> </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�Ǳ�ַѡ�<br> ������ַ���С���һ����ַ�ǻ�ַ�Ĵ��� <em CLASS=SourceItalic>basereg</em> ��ֵ�������ĵ�ַ��ǰһ����ַ�����ĵõ�����ַ�Ĵ��������£���˸���λ������ <em CLASS=SourceItalic>option</em> ����ָ������Э������ѡ�<a href="Address_Unindexed_(AM_5).html">����ļ�����洢Э���������Ǳ�ַ (AM 5)</a>��</td></tr>
+<p CLASS=CellBodyLeft>非變址選項：<br> 建立地址序列。第一個地址是基址暫存器 <em CLASS=SourceItalic>basereg</em> 的值。後續的地址由前一個地址遞增四得到。基址暫存器不更新，因此各個位可以由 <em CLASS=SourceItalic>option</em> 用於指定其它協處理器選項。<a href="Address_Unindexed_(AM_5).html">請參閱載入與儲存協處理器：非變址 (AM 5)</a>。</td></tr>
 </table>
 </div>
 </div>
 
 <div>
-<h2>һ�����</h2>
+<h2>一般編碼</h2>
 
-<p CLASS=Body>�±���ʾ��Ѱַģʽ�ı��룺</p>
+<p CLASS=Body>下表顯示此定址模式的編碼：</p>
 
 <p CLASS=Body>&nbsp;&nbsp;</p>
 
@@ -268,7 +268,7 @@ else
 <col class="whs3">
 <col class="whs3">
 
-<h3 class=NoteTipHead>���� - Ѱַģʽ 5 </h3>
+<h3 class=NoteTipHead>編碼 - 定址模式 5 </h3>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" width="20" class="whs4">
@@ -408,7 +408,7 @@ else
 </tr>
 </table>
 
-<p CLASS=Body>���У� </p>
+<p CLASS=Body>其中： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -421,7 +421,7 @@ else
 <td ROWSPAN=1
 	COLSPAN=1>
 <p CLASS=CellBodyLeft><em CLASS=Source
-							style="font-style: italic;">P == 0</em> ��ʾ�º��ַѰַ����ַ�Ĵ�����ֵ�����ڴ��ַ��ƫ����Ӧ���ڻ�ַ�Ĵ�����ֵ����д�ػ�ַ�Ĵ�����<em CLASS=Source><br>P == 1</em> ��ʾƫ����Ѱַ�����ȱ�ַѰַ�������� W λȷ�������ڴ��ַ��ͨ����ƫ����Ӧ���ڻ�ַ�Ĵ���ֵ�����ɵġ�</td></tr>
+							style="font-style: italic;">P == 0</em> 表示事後變址定址。基址暫存器的值用作記憶體地址。偏移量應用於基址暫存器的值，並寫回基址暫存器。<em CLASS=Source><br>P == 1</em> 表示偏移量定址或事先變址定址。（這由 W 位確定）。記憶體地址是通過將偏移量應用於基址暫存器值而產生的。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -430,7 +430,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ʾ�ǽ�ƫ�����ӵ���ַ���Ǵ��м�ȥ��<br> ��� <em CLASS=Source>U == 1</em>����ƫ�����ӵ���ַ�ϡ�<br>��� <em CLASS=Source>U == 0</em>����ƫ�����ӻ�ַ�м�ȥ��</td></tr>
+<p CLASS=CellBodyLeft>表示是將偏移量加到基址還是從中減去：<br> 如果 <em CLASS=Source>U == 1</em>，則偏移量加到基址上。<br>如果 <em CLASS=Source>U == 0</em>，則偏移量從基址中減去。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -439,7 +439,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��λ��������Э�������ĺ��塣����ʹ�ô�λ����Ҫ����Ĳ�ͬ��С��ֵ��</td></tr>
+<p CLASS=CellBodyLeft>此位有依賴於協處理器的含義。建議使用此位區分要傳輸的不同大小的值。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -448,7 +448,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>���������壺<br> P == 0��<br> ��� W == 0����ִ�зǱ�ַѰַ��Ϊ�� U λ������ U == 1��������δ������޷�Ԥ֪��<br>��� W == 1����ִ���º��ַѰַ��<br>P == 1��<br> ��� W == 0�����ַ�Ĵ��������£�ƫ����Ѱַ����<br>��� W == 1��������ڴ��ַ��д�ػ�ַ�Ĵ��������ȱ�ַѰַ����</td></tr>
+<p CLASS=CellBodyLeft>有兩個含義：<br> P == 0：<br> 如果 W == 0，則執行非變址定址。為此 U 位必須是 U == 1，否則結果未定義或無法預知。<br>如果 W == 1，則執行事後變址定址。<br>P == 1：<br> 如果 W == 0，則基址暫存器不更新（偏移量定址）。<br>如果 W == 1，計算的記憶體地址將寫回基址暫存器（事先變址定址）。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -457,7 +457,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ʾ���ػ�洢��<em CLASS=Source><br> L==1</em> ��ʾ���ء�<em CLASS=Source><br>L==0</em> ��ʾ�洢��</td></tr>
+<p CLASS=CellBodyLeft>表示載入或儲存：<em CLASS=Source><br> L==1</em> 表示載入。<em CLASS=Source><br>L==0</em> 表示儲存。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -466,12 +466,12 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Э���������</td></tr>
+<p CLASS=CellBodyLeft>協處理器編號</td></tr>
 </table>
 
 <p CLASS=Body>&nbsp;</p>
 
-<p CLASS=Body>W λ�ĺ���ȡ���� P �����ã� </p>
+<p CLASS=Body>W 位的含義取決於 P 的設定： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -499,10 +499,10 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ִ�зǱ�ַѰַ��Ϊ�� U λ������ <em CLASS=Source>U == 1</em>��������δ������޷�Ԥ֪��</td>
+<p CLASS=CellBodyLeft>執行非變址定址。為此 U 位必須是 <em CLASS=Source>U == 1</em>，否則結果未定義或無法預知。</td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ַ�Ĵ��������£�ƫ����Ѱַ����</td></tr>
+<p CLASS=CellBodyLeft>基址暫存器不更新（偏移量定址）。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -512,10 +512,10 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ִ���º��ַѰַ��</td>
+<p CLASS=CellBodyLeft>執行事後變址定址。</td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>������ڴ��ַд�ػ�ַ�Ĵ��������ȱ�ַѰַ����</td></tr>
+<p CLASS=CellBodyLeft>計算的記憶體地址寫回基址暫存器（事先變址定址）。</td></tr>
 </table>
 </div>
 </div>

@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -105,7 +105,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nT - ָ��\nTINSR");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nT - 指令\nTINSR");
 
 	}
 	if (window.writeBtnStyle)
@@ -130,16 +130,16 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>TINSR - ���������</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>TINSR - 傳輸與插入</h1>
 
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted>TINSR<span style="font-style: italic;"><I>length</I></span>[<span style="font-style: italic;"><I>Condition</I></span>]<span style="font-style: italic;"><I> dest, op1</I></span>, <span style="font-style: italic;"><I>#Imm3 </I></span></p>
 
-<p>���У� </p>
+<p>其中： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -159,15 +159,15 @@ else
  
 </div></td>
 <td class="whs3">
-<p class=TableCell>��������ݳ��ȣ������������ַ�֮һָ���� </p>
+<p class=TableCell>所需的數據長度，可以由以下字元之一指定： </p>
 <div align="left" class="whs5">
-<p class=TableCell>B -- ���� 8 λ���ֽڣ����� </p>
+<p class=TableCell>B -- 插入 8 位（位元組）操作 </p>
 </div>
 <div align="left" class="whs5">
-<p class=TableCell>H -- ���� 16 λ�����֣����� </p>
+<p class=TableCell>H -- 插入 16 位（半字）操作 </p>
 </div>
 <div align="left" class="whs5">
-<p class=TableCell>W -- ���� 32 λ���֣����� </p>
+<p class=TableCell>W -- 插入 32 位（字）操作 </p>
 </div></td></tr>
 
 <tr>
@@ -186,7 +186,7 @@ else
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-<p class=TableCell>��ѡ��16 ������֮һ������ģ�<a href="Conditional_Execution.html">����ִ��</a>�� </p>
+<p class=TableCell>可選。16 個條件之一。請參閱：<a href="Conditional_Execution.html">條件執行</a>。 </p>
 </div></td></tr>
 
 <tr>
@@ -196,7 +196,7 @@ dest
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-<p class=TableCell>Ŀ�꣬&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�������ݼĴ��� </p>
+<p class=TableCell>目標，&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術數據暫存器 </p>
 </div></td></tr>
 
 <tr>
@@ -206,7 +206,7 @@ op1
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-<p class=TableCell>Դ��������&ldquo;Ӣ�ض� XScale(R)&rdquo;�������ݼĴ���
+<p class=TableCell>源運算元，&ldquo;英特爾 XScale(R)&rdquo;核心數據暫存器
  </p>
 </div></td></tr>
 
@@ -216,20 +216,20 @@ op1
 Imm3 
 </div></td>
 <td class="whs3">
-<p class=TableCell>ָ�������ĸ��ֽ�/����/�֡�</td></tr>
+<p class=TableCell>指定插入哪個位元組/半字/字。</td></tr>
 </table>
 
 &nbsp; 
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-��&ldquo;Ӣ�ض� XScale(R)&rdquo;����Դ������ op1 ���� 8-/16-/32 λ���ݣ�����������&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;����Ŀ��Ĵ��� dest �� 3 λ������ָ����λ�á�<br><br> ָ����ָ�����κ�������������������״̬��ƥ�䣬����ִ�и�ָ� 
+從&ldquo;英特爾 XScale(R)&rdquo;核心源處理器 op1 傳輸 8-/16-/32 位數據，並將它插入&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術目標暫存器 dest 中 3 位立即數指定的位置。<br><br> 指令中指定的任何條件必須與條件程式碼狀態相匹配，否則不執行該指令。 
 
-<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs6"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs6"> 備註</h3>
 
-&ldquo;Ŀ��&rdquo;�Ĵ�����������һЩ�ֶα��ֲ��䡣 
+&ldquo;目標&rdquo;暫存器中其它的一些欄位保持不變。 
 
-<h2>����</h2>
+<h2>編碼</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -430,7 +430,7 @@ ww0
 
 <p>&nbsp;</p>
 
-<h2>���ֶα��� </h2>
+<h2>子欄位編碼 </h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -438,15 +438,15 @@ ww0
 <tr bgcolor="#CCCCCC" class="whs7">
 <th class="whs8">
 <div align="center" class="whs10">
-�޶���
+限定符
 </div></th>
 <th class="whs8">
 <div align="center" class="whs10">
-�ֶ�
+欄位
 </div></th>
 <th class="whs8">
 <div align="center" class="whs10">
-ֵ
+值
 </div></th></tr>
 
 <tr>
@@ -494,7 +494,7 @@ ww
 <tr>
 <td class="whs3">
 <div align="center" class="whs11">
-����
+保留
 </div></td>
 <td class="whs3">
 <div align="center" class="whs11">
@@ -516,16 +516,16 @@ bbb
 </div></td>
 <td class="whs3">
 <div align="center" class="whs11">
-3 λƫ����
+3 位偏移量
 </div></td></tr>
 </table>
 
-<h2>Ӱ��� SIMD ��־</h2>
+<h2>影響的 SIMD 標誌</h2>
 
-��Ӱ�� SIMD PSR ��־ (wCASF) ��&ldquo;����&rdquo;��־ (wCSSF)�� 
+不影響 SIMD PSR 標誌 (wCASF) 或&ldquo;飽和&rdquo;標誌 (wCSSF)。 
  
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted
 	style="font-size: 10pt;">if (B Specified) then</p>
@@ -545,7 +545,7 @@ bbb
 <p class=Preformatted
 	style="font-size: 10pt; margin-left: 40px;"><span style="font-style: italic;"><I>dest</I></span>[Word #Imm3[0]] = <span style="font-style: italic;"><I>op1</I></span>[31:0]</p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
 <p><a HREF="TBCST.html">TBCST</a></p>
 

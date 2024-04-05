@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/split_store_replays.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:35 GMT -->
 <head>
 
-<title>��ִ洢�ط�</title>
+<title>拆分儲存重發</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 8, 2002 1:04:05 PM">
 <meta name=topic-status content=Complete>
 <meta name=topic-priority content=-1>
@@ -22,7 +22,7 @@
 <meta name=MS-HAID content="E4 Group - Memory ADVANCED">
 <meta name=MS-HAID content="E4 Split Store Replays">
 <meta name=MS-HAID content=Events4>
-<meta name=MS-HAID content="Pentium4_�ڴ��¼�">
+<meta name=MS-HAID content="Pentium4_記憶體事件">
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
 <meta name=generator-major-version content=0.1>
 <meta name=generator-minor-version content=1>
@@ -98,7 +98,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������¼�\n���ܵ����¼� - �߼��¼�\n�ڴ��¼�\n��ִ洢�ط�");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器事件\n效能調整事件 - 高級事件\n記憶體事件\n拆分儲存重發");
 
 	}
 	if (window.writeBtnStyle)
@@ -121,13 +121,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">��ִ洢�ط�</h1>
+<h1><img src="p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">拆分儲存重發</h1>
 
-<p class="whs2">���¼�ͳ���ɲ�ִ洢���µ��ڲ������ط�����д������ֵʱ��������ݵ�һ������һ���������У���һ��������һ���������У���ᷢ����ִ洢����ע�⣬���¼�ͳ���ط�����������ָ������һ��ָ��������ɶ���ط�������αָ��Ҳ�������ط���αָ���Ƿ�����֧Ԥ��ʧ��֮���Ʋ�ִ�е�ָ���ˣ���ص��¼�<a HREF="split_stores_retired.html">ʧЧ�Ĳ�ִ洢</a>������ã������ṩ����Ϣͨ��Ҳ�����á�</p>
+<p class="whs2">此事件統計由拆分儲存導致的內部機器重發數。寫入數據值時，如果數據的一部分在一個快取線中，另一部分在另一個快取線中，則會發生拆分儲存。請注意，此事件統計重發數，而不是指令數。一條指令可能產生多個重發，甚至偽指令也能產生重發，偽指令是發生分支預測失誤之後按推測執行的指令。因此，相關的事件<a HREF="split_stores_retired.html">失效的拆分儲存</a>會更常用，並且提供的資訊通常也更有用。</p>
 
-<h3>�߼������Ĵ��¼������Ķ���</h3>
+<h3>高級：更改此事件測量的對象</h3>
 
-<p>Ĭ������£�&ldquo;��ִ洢�ط�&rdquo;�¼�ֻͳ�Ʋ�ִ洢������������ͨ�������¼�����λ���������ó�ͳ�Ʋ�ּ��ء����ɻ��� (UC) ��ֻ� UC ���أ��������±���ʾ��</p>
+<p>預設情況下，&ldquo;拆分儲存重發&rdquo;事件只統計拆分儲存數。您還可以通過設定事件掩碼位，將它配置成統計拆分載入、不可快取 (UC) 拆分或 UC 載入，具體如下表所示：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="1" border="1" class="whs3">
@@ -135,42 +135,42 @@ else
 <tr>
 <td valign="middle" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">�¼�����λ</td>
+	style="margin-bottom: 0;">事件掩碼位</td>
 <td valign="middle" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">說明</td></tr>
 
 <tr>
 <td valign="middle" class="whs4">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">λ 0��LSC</td>
+	style="margin-bottom: 0;">位 0：LSC</td>
 <td valign="middle" class="whs4">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">���ز�����</td></tr>
+	style="margin-bottom: 0;">載入拆分完成</td></tr>
 
 <tr>
 <td valign="middle" class="whs4">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">λ 1��SSC</td>
+	style="margin-bottom: 0;">位 1：SSC</td>
 <td valign="middle" class="whs4">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�洢������</td></tr>
+	style="margin-bottom: 0;">儲存拆分完成</td></tr>
 
 <tr>
 <td valign="middle" class="whs4">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">λ 2��USC</td>
+	style="margin-bottom: 0;">位 2：USC</td>
 <td valign="middle" class="whs4">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">UC ������</td></tr>
+	style="margin-bottom: 0;">UC 拆分完成</td></tr>
 
 <tr>
 <td valign="middle" class="whs4">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">λ 3��ULC</td>
+	style="margin-bottom: 0;">位 3：ULC</td>
 <td valign="middle" class="whs4">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">UC �������</td></tr>
+	style="margin-bottom: 0;">UC 載入完成</td></tr>
 </table>
 
 <script type="text/javascript" language="javascript1.2">

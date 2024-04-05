@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/AdviceB_HH/misaligned_memory_references.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:11 GMT -->
 <head>
 
-<title>δ������ڴ�����</title>
+<title>未對齊的記憶體引用</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="01 15, 2003 12:59:18 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -27,7 +27,7 @@
 <meta name=page-count content=1>
 <meta name=layout-height content=910>
 <meta name=layout-width content=676>
-<meta name=x-ignored-words content="TLB;prefetch;developer.intel.com.;Pentium;lll;Mispredictions;Micro-Ops;PGBO;Qxi;cmov;fcmov;read(;write(;setcc;SIMD;Chroma;MMX;mispredictions;inlining;BTB;eax;Clockticks;Microsoft*;int;DRDY;Mis-aligned;misaligned;DCU;codecs;Misaligned;MOVs;SHIFTs;��-ops;float-to-int;SSE;SSE's;vectorization;QxK;non-SIMD">
+<meta name=x-ignored-words content="TLB;prefetch;developer.intel.com.;Pentium;lll;Mispredictions;Micro-Ops;PGBO;Qxi;cmov;fcmov;read(;write(;setcc;SIMD;Chroma;MMX;mispredictions;inlining;BTB;eax;Clockticks;Microsoft*;int;DRDY;Mis-aligned;misaligned;DCU;codecs;Misaligned;MOVs;SHIFTs;μ-ops;float-to-int;SSE;SSE's;vectorization;QxK;non-SIMD">
 
 
 <!--(Links)=========================================================-->
@@ -101,7 +101,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\n����Ӣ�ض�(R) ����(R) M �������Ľ���\nδ������ڴ�����");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n關於英特爾(R) 奔騰(R) M 處理器的建議\n未對齊的記憶體引用");
 
 	}
 	if (window.writeBtnStyle)
@@ -124,9 +124,9 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" alt="Ӣ�ض�(R) ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">δ������ڴ�����</h1>
+<h1><img src="TA_logo.gif" alt="英特爾(R) 調優助手主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">未對齊的記憶體引用</h1>
 
-<p>��Ӣ�ض�(R) ����(R) M �������ϣ���Խ�����߽߱��δ������ʻᵼ�³ͷ���&ldquo;���ݻ��浥Ԫ&rdquo;(DCU) ����ǿ�Խ 64 �ֽڻ����߽߱���ڴ���ʡ�δ����ķ��ʿ��ܵ��� DCU ��֣������±��� M ��������ͣ��</p>
+<p>在英特爾(R) 奔騰(R) M 處理器上，跨越快取線邊界的未對齊訪問會導致懲罰。&ldquo;數據快取單元&rdquo;(DCU) 拆分是跨越 64 位元組快取線邊界的記憶體訪問。未對齊的訪問可能導致 DCU 拆分，並導致奔騰 M 處理器暫停。</p>
 
 <h3 class=NoteTipHead
 	style="margin-left: 40px;"><script type="text/javascript" language="JavaScript"><!--
@@ -134,51 +134,51 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4))
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='note.gif' width='20px' height='20px' border='0' class='img_whs2'>");}
 else
 {   document.write("<img src='note.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='20px' height='20px' border='0' class='img_whs2'>");}
-//--></script><noscript><img src='note.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='20px' height='20px' border='0' class='img_whs2'></noscript> ��ע</h3>
+//--></script><noscript><img src='note.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='20px' height='20px' border='0' class='img_whs2'></noscript> 備註</h3>
 
-<p class="whs3">ĳЩ�㷨������Ƶ������е�&ldquo;�˶�����&rdquo;��&ldquo;�˶�����&rdquo;�㷨�����������ڵ���Ƶ������δ��������á���ĳЩ����£��ܼ���δ�������õ�����Ա������ʵ����Ҫ��ʱ�������������ܻ���ࡣ</p>
+<p class="whs3">某些演算法（如視訊編解碼中的&ldquo;運動估計&rdquo;與&ldquo;運動補償&rdquo;演算法）天生傾向於導致頻繁發生未對齊的引用。在某些情況下，能減少未對齊引用的替代性編碼策略實際需要的時鐘週期總數可能會更多。</p>
 
-<p><span style="font-weight: bold;"><B>����������У���ϸ�ھ���ʵ�������壺</B></span><br>���������̡�<a href="../ERB/misaligned_references_ratio.html" style="x-condition: eclipse;">δ����������ڴ�����/�����ڴ����ã����У�</a>�����ѡ�ֵ 0.00 Ӧ��Ϊ���ã�ֵ 0.002 Ӧ��Ϊ���ѡ�</p>
+<p><span style="font-weight: bold;"><B>在以下情況中，此細節具有實質性意義：</B></span><br>計數器的商【<a href="../ERB/misaligned_references_ratio.html" style="x-condition: eclipse;">未對齊的數據記憶體引用/數據記憶體引用（所有）</a>】不佳。值 0.00 應視為良好，值 0.002 應視為不佳。</p>
 
 <h3 class=NoteTipHead><span style="font-weight: bold;"><B><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='tip.gif' width='17px' height='18px' border='0' class='img_whs4'>");}
 else
 {   document.write("<img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs4'>");}
-//--></script><noscript><img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs4'></noscript> ����</B></span></h3>
+//--></script><noscript><img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs4'></noscript> 建議</B></span></h3>
 
 <ul>
 	
-	<li class=kadov-p><p><span style="font-weight: bold;"><B>������ܣ����ڴ��ж������ݡ�</B></span><br> ȷ��������ȷ���롣����㷨��������δ������������ã�������Ҫ������������Σ��뽫δ��������ݸ��Ƶ������λ�ã����ڶ���������ϲ��������⣬����⽫ 80 λ�����㣩ֵ�洢��δ�����λ�á�����ע�⣬����ĳЩ���������ڶ�ջ�ϴ洢 64 λ���ݿ��ܻᵼ��δ��������ã���</p></li>
+	<li class=kadov-p><p><span style="font-weight: bold;"><B>如果可能，在記憶體中對齊數據。</B></span><br> 確保數據正確對齊。如果演算法天生具有未對齊的數據引用，並且需要訪問數據許多次，請將未對齊的數據複製到對齊的位置，並在對齊的數據上操作。此外，請避免將 80 位（浮點）值儲存到未對齊的位置。（請注意，對於某些編譯器，在堆疊上儲存 64 位數據可能會導致未對齊的引用）。</p></li>
 	
-	<li class=kadov-p><p><span style="font-weight: bold;"><B>����޷����ڴ��ж������ݣ��뿼�Ƿֶ�������ȡ���ݣ�ǿ��ʵ�ֶ���</B></span>��<br> ����޷����ڴ��ж������ݣ��뿼�Ƿֶ�������ȡ���ݣ���ʹ�� SHIFT �� OR ���㣬�Ա��� DCU �����߲�ֳͷ������磬������Ҫ��ȡ��ַ [62-69]����Խ��ַ 63 �� 64 ֮��� DCU �����߽߱磩�����轫��Щֵ�� {v7 v6 v5 v4 v3 v2 v1 v0}�����ǲ���Ҫ&ldquo;ɵɵ��&rdquo;��ȡ�� 8 ���ֽڣ����������� DCU �����߲�ֳͷ��Ĵ��ۣ������Զ�ȡ��������ĵ�ַ��r0=[56-63] �� r1=[64-71]�����ڣ�������ֵ�ֱ��ǣ�r1 = {s1 s0 v7 v6 v5 v4 v3 v2}��r0 = {v1 v0 t5 t4 t3 t2 t1 t0}����ʱ�����ǿ��Խ� r0 ���� 8*6 λ���õ� r0={0 0 0 0 0 0 v1 v0}���� r1 ���� 8*2 λ���õ� r1={v7 v6 v5 v4 v3 v2 0 0}�����ţ����Ƕ� r1 �� r2 ִ�� OR ���㣬�õ� {v7 v6 v5 v4 v3 v2 v1 v0}�������ڲ�������δ����ͷ�����������Ǳ��ȡ���� 8 ���ֽڣ�������ע�⣬����δ���뻨���� 2 �� MOV��2 �� SHIFT �� 1 �� OR����</p></li>
+	<li class=kadov-p><p><span style="font-weight: bold;"><B>如果無法在記憶體中對齊數據，請考慮分多個步驟讀取數據，強制實現對齊</B></span>。<br> 如果無法在記憶體中對齊數據，請考慮分多個步驟讀取數據，並使用 SHIFT 與 OR 運算，以避免 DCU 快取線拆分懲罰。例如，假設需要讀取地址 [62-69]（跨越地址 63 與 64 之間的 DCU 快取線邊界）。假設將這些值是 {v7 v6 v5 v4 v3 v2 v1 v0}。我們不需要&ldquo;傻傻地&rdquo;讀取這 8 個位元組，並付出遭受 DCU 快取線拆分懲罰的代價，而可以讀取兩個對齊的地址：r0=[56-63] 與 r1=[64-71]。現在，這兩個值分別是：r1 = {s1 s0 v7 v6 v5 v4 v3 v2}；r0 = {v1 v0 t5 t4 t3 t2 t1 t0}。此時，我們可以將 r0 右移 8*6 位，得到 r0={0 0 0 0 0 0 v1 v0}，將 r1 左移 8*2 位，得到 r1={v7 v6 v5 v4 v3 v2 0 0}。接著，我們對 r1 與 r2 執行 OR 運算，得到 {v7 v6 v5 v4 v3 v2 v1 v0}。這樣在不用遭受未對齊懲罰的情況下我們便讀取了這 8 個位元組（不過請注意，避免未對齊花費了 2 個 MOV、2 個 SHIFT 及 1 個 OR）。</p></li>
 	
-	<li class=kadov-p><p class="whs5">ȷ��������ȷ���롣</p></li>
+	<li class=kadov-p><p class="whs5">確保程式碼正確對齊。</p></li>
 </ul>
 
-<p class="whs6">���ʹ�û������д��</p>
+<p class="whs6">如果使用匯編程式碼編寫：</p>
 
 <ul>
 	
 	<ul type="disc" class="whs7">
 		
-		<li class=kadov-p><p>ͬ 16 �ֽڱ߽���಻��˸��ֽ�ʱ��ѭ����ڱ�ǩӦ�ò��� 16 �ֽڶ��뷽ʽ��</p></li>
+		<li class=kadov-p><p>同 16 位元組邊界相距不足八個位元組時，循環入口標籤應該採用 16 位元組對齊方式。</p></li>
 		
-		<li class=kadov-p><p>����������֧֮��ı�ǩ����Ҫ���롣</p></li>
+		<li class=kadov-p><p>跟在條件分支之後的標籤不需要對齊。</p></li>
 		
-		<li class=kadov-p><p>ͬ 16 �ֽڱ߽���಻����ֽ�ʱ��������������֧��������֮��ı�ǩӦ�ò��� 16 �ֽڶ��뷽ʽ��</p></li>
+		<li class=kadov-p><p>同 16 位元組邊界相距不足八位元組時，跟在無條件分支或函式呼叫之後的標籤應該採用 16 位元組對齊方式。</p></li>
 	</ul>
 </ul>
 
-<p class="whs6">���ʹ�ø��߼������Ա�д��</p>
+<p class="whs6">如果使用更高級的語言編寫：</p>
 
 <ul>
 	
 	<ul type="disc" class="whs7">
 		
-		<li class=kadov-p><p>ʹ�ý�ȷ�����ɵĴ����������Ϲ���ı�������</p></li>
+		<li class=kadov-p><p>使用將確保產生的程式碼滿足以上規則的編譯器。</p></li>
 		
-		<li class=kadov-p><p class="whs8">�ڱ��� M �������ϣ�����ʹ��ִ������С�� 2 ��ѭ��������ѭ����Ŀ��Ӧ�ö��� 16 �ֽڱ߽磬������޶�ʹ�ý���ȡ��ָ��ڱ��� M �������ϣ��������ƿ�����ִ�е�ָ�������Ӷ�����ÿ������ʧЧ��ָ���������齫�ؼ���ѭ����ڷ��ڻ����߽߱��ϡ����⣬��Ӧչ��ִ��ʱ�䲻�� 2 �����ڵ�ѭ���� </p></li>
+		<li class=kadov-p><p class="whs8">在奔騰 M 處理器上，避免使用執行週期小於 2 的循環。緊湊循環的目標應該對齊 16 位元組邊界，以最大限度使用將獲取的指令。在奔騰 M 處理器上，可以限制可用於執行的指令數，從而限制每個週期失效的指令數。建議將關鍵的循環入口放在快取線邊界上。此外，還應展開執行時間不足 2 個週期的循環。 </p></li>
 	</ul>
 </ul>
 

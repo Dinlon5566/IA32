@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400282.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
 
-<title>ldfp - ������ض�ָ��</title>
+<title>ldfp - 浮點載入對指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:53:51 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nL - ָ��\nldfp - ������ض�ָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nL - 指令\nldfp - 浮點載入對指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,16 +116,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">������ض�ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">浮點載入對指令</h1>
 
 <p><span style="font-weight: bold;"><B>ldfp</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400283.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400283.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字型慣例</a>
  </p>
 
-<p>ָ������ M</p>
+<p>指令型別 M</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) ldfps.<span style="x-condition: eclipse;">fldtype</span><script type="text/javascript"
 	language=JavaScript1.2><!--
@@ -150,39 +150,39 @@ kadovFilePopupInit('A2');
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>說明</B></span></p>
 
-<p>�� <span 
- style="x-condition: eclipse;">GR</span> <span style="font-style: italic;"><I>r3</I></span> �е�ֵָ���ĵ�ַ��ʼ�����ڴ��ȡ�� (single_form) ��ʮ�� (double_form/integer_form) ���ֽڡ�<script 
+<p>從 <span 
+ style="x-condition: eclipse;">GR</span> <span style="font-style: italic;"><I>r3</I></span> 中的值指定的地址開始，從記憶體讀取八 (single_form) 或十六 (double_form/integer_form) 個位元組。<script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A3');
-//--></script>���� single_form/double_form����ȡ��ֵ��Ϊһ�������ĸ���ֵ������������ integer_form������Ϊ����/���� FP ���ݴ�����ÿ�����־�ת���ɸ���Ĵ�����ʽ����͵�ַ�ϵ�ֵ���� <span style="x-condition: eclipse;">FR</span> <span style="font-style: italic;"><I>f1</I></span>����ߵ�ַ�ϵ�ֵ����� FR <span style="font-style: italic;"><I>f2</I></span>��<script type="text/javascript"
+//--></script>對於 single_form/double_form，讀取的值作為一對連續的浮點值處理；而對於 integer_form，則作為整數/並行 FP 數據處理。每個數字均轉換成浮點暫存器格式。最低地址上的值放入 <span style="x-condition: eclipse;">FR</span> <span style="font-style: italic;"><I>f1</I></span>，最高地址上的值則放入 FR <span style="font-style: italic;"><I>f2</I></span>。<script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A4');
 //--></script> <span style="x-condition: eclipse;">fldtype</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A5');
-//--></script> ��ɷ�ָ������ļ��ز�����</p>
+//--></script> 完成符指定特殊的載入操作。</p>
 
-<p>���ڷ��Ʋ��Լ������ͣ������ GR <span   style="font-style: italic;"><I>r3</I></span> ������ NaT λ�� 1����ִ��&ldquo;�Ĵ��� NaT ʹ��&rdquo;����Ĵ����������Ʋ��Լ������Ʋ��Ը߼����أ��������κδ��󣬶��һỺ���쳣��</p>
+<p>對於非推測性載入型別，如果與 GR <span   style="font-style: italic;"><I>r3</I></span> 關聯的 NaT 位是 1，則執行&ldquo;暫存器 NaT 使用&rdquo;錯誤的處理。對於推測性載入與推測性高級載入，不觸發任何錯誤，而且會緩發異常。</p>
 
-<p>�� base_update_form �У�GR <span style="font-style: italic;"><I>r3</I></span> �е�ֵ�ӵ���ʾ�����������������ݴ�С���������ϣ�����Ż� GR <span style="font-style: italic;"><I>r3</I></span>������֮�����ɴ˻�ַ�Ĵ����ĸ��£��Ҳ�Ӱ����ص�ַ��</p>
+<p>在 base_update_form 中，GR <span style="font-style: italic;"><I>r3</I></span> 中的值加到暗示的立即數（等於數據大小的兩倍）上，結果放回 GR <span style="font-style: italic;"><I>r3</I></span>。載入之後便完成此基址暫存器的更新，且不影響載入地址。</p>
 
 <p><span style="x-condition: eclipse;">ldhint</span><script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A6');
-//--></script> ��������ֵָ���ڴ���ʵ������ԡ��ڻ�ַ������ʽ�У��ᰵʾԤȡ��ʾ����ַ����֮�� GR <span style="font-style: italic;"><I>r3</I></span> �е�ֵָ���ĵ�ַ�䵱Ԥȡָ���Ļ�������ʾ����Ԥȡ����ʹ�� <span style="x-condition: eclipse;">ldhint</span> ָ������������ʾ��<script type="text/javascript"
+//--></script> 修正符的值指定記憶體訪問的區域性。在基址更新形式中，會暗示預取提示。基址更新之後 GR <span style="font-style: italic;"><I>r3</I></span> 中的值指定的地址充當預取指定的快取線提示。此預取操作使用 <span style="x-condition: eclipse;">ldhint</span> 指定的區域性提示。<script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A7');
-//--></script>Ԥȡ����������ʾ��Ӱ������ܣ��ھ���ʵ�ֵİ汾�п��ܻᱻ���ԡ�</p>
+//--></script>預取與區域性提示不影響程式功能，在具體實現的版本中可能會被忽略。</p>
 
-<p>�� no_base_update ��ʽ�У�GR <span style="font-style: italic;"><I>r3</I></span> �е�ֵ���޸ģ����Ҳ���ʾ�κ�Ԥȡ��ʾ��</p>
+<p>在 no_base_update 形式中，GR <span style="font-style: italic;"><I>r3</I></span> 中的值不修改，並且不暗示任何預取提示。</p>
 
-<p>PSR.mfl �� PSR.mfh λ����и��£��Է�ӳ FR <span style="font-style: italic;"><I>f1</I></span> �� FR <span style="font-style: italic;"><I>f2</I></span> ���޸ġ�</p>
+<p>PSR.mfl 與 PSR.mfh 位會進行更新，以反映 FR <span style="font-style: italic;"><I>f1</I></span> 與 FR <span style="font-style: italic;"><I>f2</I></span> 的修改。</p>
 
-<p>������Ŀ��Ĵ�����ѡ������һ�����ơ��Ĵ���ָʾ�� <span style="font-style: italic;"><I>f</I></span>1 �� <span style="font-style: italic;"><I>f</I></span>2 ����ָ��һ���������� FR ��һ��ż������ FR��ָ������ż���Ĵ����������Ĵ���������&ldquo;�Ƿ�����&rdquo;���󡣴�������ʩ���ڼĴ���ѭ��֮��������Ĵ�������ϡ����ʾ����� <span style="font-style: italic;"><I>f</I></span>1 �� <span style="font-style: italic;"><I>f</I></span>2 ��ָ����̬�Ĵ�������ָ��ѭ���Ĵ������� <span style="font-style: italic;"><I>f</I></span>1 �� <span style="font-style: italic;"><I>f</I></span>2 ����������/ż������ż��/��������� <span style="font-style: italic;"><I>f</I></span>1 �� <span style="font-style: italic;"><I>f</I></span>2 ָ��һ����̬�Ĵ�����һ��ѭ���Ĵ�����������ȡ���� CFM.rrb.fr����� CFM.rrb.fr ��ż��������������ͬ�ģ�<span   style="font-style: italic;"><I>f</I></span>1 �� <span style="font-style: italic;"><I>f</I></span>2 ��������/ż��ż/�档��� CFM.rrb.fr ���������� <span style="font-style: italic;"><I>f</I></span>1 �� <span style="font-style: italic;"><I>f</I></span>2 ������ż��/ż����������/���������� CFM.rrb.fr �п�Ԥ���ֵ������ 0��ʱ������ָ��һ����̬�Ĵ�����һ��ѭ���Ĵ�����</p>
+<p>這裡在目標暫存器的選擇上有一項限制。暫存器指示符 <span style="font-style: italic;"><I>f</I></span>1 與 <span style="font-style: italic;"><I>f</I></span>2 必須指定一個奇數物理 FR 與一個偶數物理 FR。指定兩個偶數暫存器或奇數暫存器將導致&ldquo;非法操作&rdquo;錯誤。此項限制施加在暫存器循環之後的物理暫存器編號上。這表示，如果 <span style="font-style: italic;"><I>f</I></span>1 與 <span style="font-style: italic;"><I>f</I></span>2 都指定靜態暫存器，或都指定循環暫存器，則 <span style="font-style: italic;"><I>f</I></span>1 與 <span style="font-style: italic;"><I>f</I></span>2 必須是奇數/偶數，或偶數/奇數。如果 <span style="font-style: italic;"><I>f</I></span>1 與 <span style="font-style: italic;"><I>f</I></span>2 指定一個靜態暫存器與一個循環暫存器，則限制取決於 CFM.rrb.fr。如果 CFM.rrb.fr 是偶數，則限制是相同的；<span   style="font-style: italic;"><I>f</I></span>1 與 <span style="font-style: italic;"><I>f</I></span>2 必須是奇/偶或偶/奇。如果 CFM.rrb.fr 是奇數，則 <span style="font-style: italic;"><I>f</I></span>1 與 <span style="font-style: italic;"><I>f</I></span>2 必須是偶數/偶數，或奇數/奇數。僅當 CFM.rrb.fr 有可預測的值（例如 0）時，才能指定一個靜態暫存器與一個循環暫存器。</p>
 
 
 <!--(HR)============================================================-->

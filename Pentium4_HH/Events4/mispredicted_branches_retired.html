@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/mispredicted_branches_retired.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:38:18 GMT -->
 <head>
 
-<title>ʧЧ��Ԥ��ʧ���֧</title>
+<title>失效的預測失誤分支</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta NAME=MS-HAID CONTENT="E4 Group - Key CPI-Limiting">
 <meta NAME=MS-HAID CONTENT="Branch Mispredictions Retired">
 <meta NAME=MS-HAID CONTENT="E4 Mispredicted Branches Retired">
@@ -99,7 +99,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������¼�\n���ܵ����¼� - ����\n��Ҫ CPI �����¼�\nʧЧ��Ԥ��ʧ���֧");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器事件\n效能調整事件 - 基本\n主要 CPI 限制事件\n失效的預測失誤分支");
 
 	}
 	if (window.writeBtnStyle)
@@ -122,33 +122,33 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">ʧЧ��Ԥ��ʧ���֧</h1>
+<h1><img src="p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">失效的預測失誤分支</h1>
 
-<p><span style="font-weight: bold;"><B>�߳��ض���</B></span>��<a href="Thread_Specific.html">TS</a></p>
+<p><span style="font-weight: bold;"><B>執行緒特定性</B></span>：<a href="Thread_Specific.html">TS</a></p>
 
-<p>���¼�ͳ�ƴ�����Ԥ��ʧ���ʧЧ��ָ֧���������ʾ������Ԥ�⽫ִ��ĳ��֧����ʵ��ȴδִ�У��������෴�����ڴ���������Ԥ���·����ʼִ��ָ����Ԥ��ʧ��ķ�֧�ᵼ��Ӧ�ó��������½�������Ԥ��ʧ��ʱ�����������붪���Ѿ�����Щָ������ɵ����й���������������ȷ��·��ִ�С�</p>
+<p>此事件統計處理器預測失誤的失效分支指令數。這表示處理器預測將執行某分支，但實際卻未執行，或者正相反。由於處理器沿著預測的路徑開始執行指令，因此預測失誤的分支會導致應用程式效能下降。發現預測失誤時，處理器必須丟棄已經在那些指令上完成的所有工作，並重新沿正確的路徑執行。</p>
 
-<p>ʹ��&ldquo;Ӣ�ض�(R) C++ ������&rdquo;��&ldquo;���������Ż�&rdquo;(PGO) ���ܿ��������ڽ���ָ����ʵ��µĻ���δ���С������йش���ܵ���ϸ��Ϣ������ı������ĵ��� </p>
+<p>使用&ldquo;英特爾(R) C++ 編譯器&rdquo;的&ldquo;檔案導引優化&rdquo;(PGO) 功能可能有助於降低指令訪問導致的快取未命中。如需有關此項功能的詳細資訊，請參閱編譯器文件。 </p>
 
-<p>Ҫȷ����֧Ԥ��ʧ����ʣ��뽫��Щ�¼�����������<a HREF="branches_retired.html">ʧЧ�ķ�֧</a>�¼���������Ҫȷ��ÿ��ָ���Ԥ��ʧ��ķ�֧�����뽫��Щ�¼�����������<a HREF="Instructions_retired.html">ʧЧ��ָ��</a>�¼��������� </p>
+<p>要確定分支預測失誤比率，請將這些事件的數量除以<a HREF="branches_retired.html">失效的分支</a>事件的數量。要確定每條指令的預測失誤的分支數，請將這些事件的數量除以<a HREF="Instructions_retired.html">失效的指令</a>事件的數量。 </p>
 
-<h3 class=NoteTipHead><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs2"> ��ʾ</h3>
+<h3 class=NoteTipHead><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs2"> 提示</h3>
 
 <ul type="disc" class="whs3">
 	
-	<li class=kadov-p><p class="whs4">PGO ����ҪĿ�����Ż��ִ�е�·���ϵĴ��룬�Ӷ�����ִ�еķ�֧��������&ldquo;����ָ���&rdquo;�Ĵ�С�����ܻ������ڽ��ʹ�����ڴ�ռ������������</p></li>
+	<li class=kadov-p><p class="whs4">PGO 的主要目的是優化最常執行的路徑上的程式碼，從而降低執行的分支數，增加&ldquo;基本指令塊&rdquo;的大小，可能還有助於降低程式碼的記憶體佔用量或工作集。</p></li>
 </ul>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','���ڷ�֧Ԥ��','../Advice4_HH/branch_prediction.htm','��֧Ԥ��ʧ������Ӱ��','../ER4/branch_mispredict_performance_impact.htm','��֧Ԥ��ʧ������Ӱ��','../Pentium4P_HH/ERP/branch_mispredict_performance_impact.htm','��֧Ԥ�����','../ER4/branch_prediction_rate.htm','��֧Ԥ�����','../Pentium4P_HH/ERP/Branch_Prediction_Rate.htm','������֧','../Advice4_HH/eliminating_branches.htm','Ԥ��ʧ��ķ�֧/ʧЧ��ָ��','../ER4/mispredicted_branches_per_instructions_retired.htm','Ԥ��ʧ��ķ�֧/ʧЧ��ָ��','../Pentium4P_HH/ERP/mispredicted_branches_per_instructions_retired.htm');return false;" title="�������"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e7%9b%b8%e5%85%b3%e4%b8%bb%e9%a2%98.gif" border=0 height=20 width=58 alt="�������"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','關於分支預測','../Advice4_HH/branch_prediction.htm','分支預測失誤效能影響','../ER4/branch_mispredict_performance_impact.htm','分支預測失誤效能影響','../Pentium4P_HH/ERP/branch_mispredict_performance_impact.htm','分支預測比率','../ER4/branch_prediction_rate.htm','分支預測比率','../Pentium4P_HH/ERP/Branch_Prediction_Rate.htm','消除分支','../Advice4_HH/eliminating_branches.htm','預測失誤的分支/失效的指令','../ER4/mispredicted_branches_per_instructions_retired.htm','預測失誤的分支/失效的指令','../Pentium4P_HH/ERP/mispredicted_branches_per_instructions_retired.htm');return false;" title="相關主題"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e7%9b%b8%e5%85%b3%e4%b8%bb%e9%a2%98.gif" border=0 height=20 width=58 alt="相關主題"></a>
 
 
  </p>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','ʧЧ�Ķ����������δ����','2nd-level_cache_load_misses_retired.htm','ʧЧ�ķ�֧','branches_retired.htm','ʧЧ�ļ���','loads_retired.htm','ʧЧ��ָ��','Instructions_retired.htm','ʱ���źţ�������ʱ���źţ�','Clockticks.htm');return false;" title="������Ҫ CPI �����¼�"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%85%b6%e5%ae%83%e4%b8%bb%e8%a6%81_cpi_%e9%99%90%e5%88%b6%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=136 alt="������Ҫ CPI �����¼�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','失效的二級快取載入未命中','2nd-level_cache_load_misses_retired.htm','失效的分支','branches_retired.htm','失效的載入','loads_retired.htm','失效的指令','Instructions_retired.htm','時鐘訊號（非休眠時鐘訊號）','Clockticks.htm');return false;" title="其它主要 CPI 限制事件"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%85%b6%e5%ae%83%e4%b8%bb%e8%a6%81_cpi_%e9%99%90%e5%88%b6%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=136 alt="其它主要 CPI 限制事件"></a>
 
 
  </p>

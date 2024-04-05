@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -114,7 +114,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nT - ָ��\nTBCST");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n指令\n32 位指令\nT - 指令\nTBCST");
 
 	}
 	if (window.writeBtnStyle)
@@ -139,16 +139,16 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>TBCST - �㲥</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特爾 XScale(R) 技術主題' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>TBCST - 廣播</h1>
 
-<h2 class=Body>�﷨</h2>
+<h2 class=Body>語法</h2>
 
 <p class=Preformatted>TBCST<span style="font-size: 10pt; font-style: italic;"><font size=2 style="font-size:10pt;"><I>length</I></font></span>[<span style="font-size: 10pt; font-style: italic;"><font size=2 style="font-size:10pt;"><I>condition</I></font></span>]<span style="font-size: 10pt; font-style: italic;"><font size=2 style="font-size:10pt;"><I> dest, op1</I></font></span> </p>
 
-<p class=Body>���У� 
+<p class=Body>其中： 
  </p>
 
 <!--(Table)=========================================================-->
@@ -170,17 +170,17 @@ else
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-��������ݳ��ȣ������������ַ�֮һָ����
+所需的數據長度，可以由以下字元之一指定：
  
 </div>
 <div align="left" class="whs5">
-B -- 8 λ���ֽڣ�SIMD ����
+B -- 8 位（位元組）SIMD 操作
 </div>
 <div align="left" class="whs5">
-H -- 16 λ�����֣�SIMD ����
+H -- 16 位（半字）SIMD 操作
 </div>
 <div align="left" class="whs5">
-W -- 32 λ���֣�SIMD ����
+W -- 32 位（字）SIMD 操作
 </div></td></tr>
 
 <tr>
@@ -199,7 +199,7 @@ W -- 32 λ���֣�SIMD ����
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-��ѡ��16 ������֮һ������ģ�<a HREF="Conditional_Execution.html">����ִ��</a>�� 
+可選。16 個條件之一。請參閱：<a HREF="Conditional_Execution.html">條件執行</a>。 
 </div></td></tr>
 
 <tr>
@@ -209,7 +209,7 @@ dest
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-Ŀ�꣬&ldquo;Ӣ�ض�<span>(R)</span><span style="vertical-align: super;"></span> ���� MMX&#x2122;&rdquo;�������ݼĴ���
+目標，&ldquo;英特爾<span>(R)</span><span style="vertical-align: super;"></span> 無線 MMX&#x2122;&rdquo;技術數據暫存器
 </div></td></tr>
 
 <tr>
@@ -219,15 +219,15 @@ op1
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-Դ��������&ldquo;Ӣ�ض� XScale(R)&rdquo;�������ݼĴ���
+源運算元，&ldquo;英特爾 XScale(R)&rdquo;核心數據暫存器
 </div></td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-��&ldquo;Ӣ�ض� XScale(R)&rdquo;����Դ�Ĵ��� op1 ��ֵ�㲥��&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;����Ŀ��Ĵ��� dest ��ÿ�� SIMD λ�á�<br>�ɲ��� 8��16 �� 32 λ����ֵ<br> <br>ָ����ָ�����κ�������������������״̬ƥ�䣬����ִ��ָ� 
+從&ldquo;英特爾 XScale(R)&rdquo;核心源暫存器 op1 將值廣播到&ldquo;英特爾(R) 無線 MMX&#x2122;&rdquo;技術目標暫存器 dest 的每個 SIMD 位置。<br>可操作 8、16 及 32 位數據值<br> <br>指令中指定的任何條件必須與條件程式碼狀態匹配，否則不執行指令。 
 
-<h2>����</h2>
+<h2>編碼</h2>
 
 <div class="whs6">
 <!--(Table)=========================================================-->
@@ -431,7 +431,7 @@ ww0
 </div>
 
 <div align="left" class="whs12">
-<h2>���ֶα��� </h2>
+<h2>子欄位編碼 </h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -439,15 +439,15 @@ ww0
 <tr bgcolor="#CCCCCC" class="whs8">
 <th class="whs9">
 <div align="center" class="whs13">
-�޶���
+限定符
 </div></th>
 <th class="whs9">
 <div align="center" class="whs13">
-�ֶ�
+欄位
 </div></th>
 <th class="whs9">
 <div align="center" class="whs13">
-ֵ
+值
 </div></th></tr>
 
 <tr>
@@ -495,7 +495,7 @@ ww
 <tr>
 <td class="whs3">
 <div align="center" class="whs14">
-����
+保留
 </div></td>
 <td class="whs3">
 <div align="center" class="whs14">
@@ -510,16 +510,16 @@ ww
 &nbsp; 
 </div>
 
-<h2>�쳣</h2>
+<h2>異常</h2>
 
-<p>�� </p>
+<p>無 </p>
 
-<h2>Ӱ��� SIMD ��־</h2>
+<h2>影響的 SIMD 標誌</h2>
 
-��Ӱ�� SIMD PSR ��־ (wCASF) ��&ldquo;����&rdquo;��־ (wCSSF)�� 
+不影響 SIMD PSR 標誌 (wCASF) 或&ldquo;飽和&rdquo;標誌 (wCSSF)。 
  
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted><span class=Code>TBCSTB <span style="font-style: italic;"><I>dest, <span style="font-style: italic;"><I>op1</I></span></I></span></span></p>
 
@@ -535,7 +535,7 @@ ww
 
 <p><img src="wmmxinstr26.gif" x-maintain-ratio="TRUE" width="316px" height="161px" border="0" class="img_whs17"></p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
 <span style="color: #0000ff;
 				font-size: 10pt;

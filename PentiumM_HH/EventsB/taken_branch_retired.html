@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/taken_branch_retired.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:42 GMT -->
 <head>
 
-<title>ʧЧ��ִ�з�֧</title>
+<title>失效的執行分支</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="06 7, 2001 1:53:20 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -92,7 +92,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M �������¼�\n��֧�¼�\nʧЧ��ִ�з�֧");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n英特爾(R) 奔騰(R) M 處理器事件\n分支事件\n失效的執行分支");
 
 	}
 	if (window.writeBtnStyle)
@@ -115,31 +115,31 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>ʧЧ��ִ�з�֧</h1>
+<h1>失效的執行分支</h1>
 
-<p>���ڴ��¼���&ldquo;VTune(TM) ���ܷ�����&rdquo;ͳ��ʧЧ������ɵ�ִ�еķ�֧�������������������ݵ���ִ�еķ�֧��</p>
+<p>對於此事件，&ldquo;VTune(TM) 效能分析器&rdquo;統計失效或已完成的執行的分支數。處理器將以下內容當作執行的分支：</p>
 
 <ul>
 	
-	<li class=kadov-p><p>����</p></li>
+	<li class=kadov-p><p>呼叫</p></li>
 	
-	<li class=kadov-p><p>ִ�е�������֧</p></li>
+	<li class=kadov-p><p>執行的條件分支</p></li>
 	
-	<li class=kadov-p><p>Ӳ���жϣ����� FLUSH#��</p></li>
+	<li class=kadov-p><p>硬體中斷（包括 FLUSH#）</p></li>
 	
-	<li class=kadov-p><p>�жϷ���</p></li>
+	<li class=kadov-p><p>中斷返回</p></li>
 	
-	<li class=kadov-p><p>��ת</p></li>
+	<li class=kadov-p><p>跳轉</p></li>
 	
-	<li class=kadov-p><p>����</p></li>
+	<li class=kadov-p><p>返回</p></li>
 	
-	<li class=kadov-p><p>������������</p></li>
+	<li class=kadov-p><p>段描述符載入</p></li>
 	
-	<li class=kadov-p><p>���л�ָ��</p></li>
+	<li class=kadov-p><p>序列化指令</p></li>
 	
-	<li class=kadov-p><p>�����ж�</p></li>
+	<li class=kadov-p><p>軟體中斷</p></li>
 	
-	<li class=kadov-p><p class="whs1">������������������ĳ����쳣 </p></li>
+	<li class=kadov-p><p class="whs1">啟用陷阱或錯誤處理程式的程式異常 </p></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Immediate_(AM_1).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:54 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>������ (AM 1)</title>
+<title>立即數 (AM 1)</title>
 
 <!--(Meta)==========================================================-->
 
@@ -83,7 +83,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nѰַģʽ\n���ݴ���������\n������ (AM 1)");
+	addTocInfo("參考\n指令集\n英特爾 XScale(R) 技術指令\n定址模式\n數據處理運算元\n立即數 (AM 1)");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,14 +106,14 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������"><a NAME=pgfId-1010339></a><a NAME=31908></a>������ (AM 1)</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特爾 XScale(R) 技術主題"><a NAME=pgfId-1010339></a><a NAME=31908></a>立即數 (AM 1)</h1>
 
 <div>
-<h2>�﷨</h2>
+<h2>語法</h2>
 
 <p class=Preformatted><span class=Code>#imm</span> </p>
 
-<p CLASS=Body>���У� </p>
+<p CLASS=Body>其中： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,16 +126,16 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ָ���б���ĳ���������ָ��Ϊ 8 λ������ (<em CLASS=Source> imm_8</em> ) �� 4 λ������ (<em CLASS=Source> rt_imm</em> )����ˣ�<em CLASS=SourceItalic>imm</em> �뽫 <em CLASS=Source>imm_8</em> ѭ������ (<em CLASS=Source> 2*rt_imm</em> ) λ�Ľ����ͬ��</td></tr>
+<p CLASS=CellBodyLeft>將指令中編碼的常數運算元指定為 8 位立即數 (<em CLASS=Source> imm_8</em> ) 與 4 位立即數 (<em CLASS=Source> rt_imm</em> )。因此，<em CLASS=SourceItalic>imm</em> 與將 <em CLASS=Source>imm_8</em> 循環右移 (<em CLASS=Source> 2*rt_imm</em> ) 位的結果相同。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-���ݴ���������&ldquo;������&rdquo;ִ�����²�����α����˵������
+數據處理運算元&ldquo;立即數&rdquo;執行以下操作（偽程式碼說明）：
 
 <p CLASS=Preformatted-Code>addr_mode = imm_8 Rotate_Right (rt_imm *2)<br> if rt_imm == 0 then<br> &#xA0;shifter_carry_out = C flag<br> else /* rt_imm != 0 */<br> &#xA0;shifter_carry_out = addr_mode[31]</p>
 
-<p CLASS=Body>�����ݴ�����������ָ���ж���ĳ�����������<em CLASS=SourceItalic>addr_mode</em> ��ֵ���� 8 λ������ѭ�����Ʋ����ġ�8 λ������ѭ����λ�� 32 λ�����κ�ż��λ��λ�á����ѭ����λ���������㣬����λ���Ľ�λ�� C ��־��ֵ������������Ϊ <em CLASS=SourceItalic>addr_mode</em> ֵ��λ [31]��</p>
+<p CLASS=Body>此數據處理運算元是指令中定義的常數運算元。<em CLASS=SourceItalic>addr_mode</em> 的值是由 8 位立即數循環右移產生的。8 位立即數循環移位到 32 位字中任何偶數位的位置。如果循環移位立即數是零，則移位器的進位是 C 標誌的值，否則它設定為 <em CLASS=SourceItalic>addr_mode</em> 值的位 [31]。</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -156,7 +156,7 @@ else
 <col class="whs2">
 <col class="whs2">
 
-<h2>���� </h2>
+<h2>編碼 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -370,22 +370,22 @@ else
 </tr>
 </table>
 
-<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs3">&nbsp;��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs3">&nbsp;備註</h3>
 
-���ڴ˸�ʽ���ԣ�Ψһ��Ч�� 32 λ�������ǿ���ͨ���� 8 λ������ѭ������ż��λ��õ�����Щ�������� 
+對於此格式而言，唯一有效的 32 位立即數是可以通過將 8 位立即數循環右移偶數位后得到的那些立即數。 
 
-<br>�� <em CLASS=SourceItalic>imm</em> ����Щֵ�������ж��ֱ��롣�������ʹ�ö�����룬�������������·�ʽѡ����ȷ���Ǹ���
+<br>對 <em CLASS=SourceItalic>imm</em> 的有些值，可以有多種編碼。如果可以使用多個編碼，則彙編器按照以下方式選擇正確的那個：
 
-<br>��� <em CLASS=SourceItalic>imm</em> ���� 0 �� 0xFF ֮�䣬��ʹ�ô� <em CLASS=Source>rt_imm == 0</em> �ı��롣���������ѡ��ñ��롣ѡ����һ�ֱ��뽫Ӱ����Щָ�����õ� C ��־�� 
+<br>如果 <em CLASS=SourceItalic>imm</em> 介於 0 與 0xFF 之間，則使用帶 <em CLASS=Source>rt_imm == 0</em> 的編碼。彙編器必須選擇該編碼。選擇另一種編碼將影響有些指令設定的 C 標誌。 
 
-<br>����ѡ�� <em CLASS=Source>rt_imm</em> ֵ��С�ı��롣��ѡ��Ӱ��ָ��ܡ� 
+<br>建議選擇 <em CLASS=Source>rt_imm</em> 值最小的編碼。此選擇不影響指令功能。 
 
-<p CLASS=Body>����ȷ�ı��������ʹ���﷨ֱ��ָ����ָ���ֶ��ṩ�ģ�</p>
+<p CLASS=Body>更精確的編碼控制是使用語法直接指定的指令欄位提供的：</p>
 
 <div>
 <p CLASS=Preformatted>#imm_8, rt_amount</p>
 
-<p CLASS=Preformatted>���У�</p>
+<p CLASS=Preformatted>其中：</p>
 </div>
 
 <div>
@@ -394,13 +394,13 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p CLASS=Preformatted><span class=Code>ADC &#xA0;&#xA0;R0, R11, #1</span></p>
 
-<h2>������Ϣ</h2>
+<h2>更多資訊</h2>
 
-<a href="Address_Data_Processing_Operands_Overview_1.html" CLASS="XRef">�����Ѱַģʽ 1�����ݴ���������</a><a href="Inst_Overview_of_Instructions.html" CLASS="XRef"><br> ����Ļ����ָ��</a> 
+<a href="Address_Data_Processing_Operands_Overview_1.html" CLASS="XRef">請參閱定址模式 1：數據處理運算元</a><a href="Inst_Overview_of_Instructions.html" CLASS="XRef"><br> 請參閱彙編器指令</a> 
 </div>
 
 <script type="text/javascript" language="javascript1.2">

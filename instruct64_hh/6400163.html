@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400163.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:45 GMT -->
 <head>
 
-<title>cmp4 - �Ƚ���ָ��</title>
+<title>cmp4 - 比較字指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="11 12, 2001 11:18:36 AM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nC - ָ��\ncmp4 - �Ƚ���ָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nC - 指令\ncmp4 - 比較字指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -115,16 +115,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">�Ƚ���ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">比較字指令</h1>
 
 <p><span style="font-weight: bold;"><B>cmp4</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400164.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400164.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字型慣例</a>
  </p>
 
-<p>ָ������ A</p>
+<p>指令型別 A</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) cmp4.<span style="x-condition: eclipse;">crel</span><script type="text/javascript"
 	language=JavaScript1.2><!--
@@ -145,39 +145,39 @@ kadovFilePopupInit('A2');
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>說明</B></span></p>
 
-<p>���� <span style="x-condition: eclipse;">crel</span> ָ����ʮ�ֹ�ϵ֮һ���Ƚ�����Դ�������е������Ч 32 λ��<script type="text/javascript"
+<p>按照 <span style="x-condition: eclipse;">crel</span> 指定的十種關係之一，比較兩個源運算元中的最低有效 32 位。<script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A3');
-//--></script>����Ƚ�����Ϊ�棬������Ĳ������Ϊ 1����֮��Ϊ 0���˽��д������ν�ʼĴ���Ŀ�ĵ� <span style="font-style: italic;"><I>p1</I></span> �� <span style="font-style: italic;"><I>p2</I></span>�����д��Ŀ�ĵصķ�ʽ�� <span 
- style="x-condition: eclipse;">ctype</span> ָ���ıȽ�����ȷ��<script 
+//--></script>如果比較條件為真，則產生的布爾結果為 1，反之則為 0。此結果寫入兩個謂詞暫存器目的地 <span style="font-style: italic;"><I>p1</I></span> 與 <span style="font-style: italic;"><I>p2</I></span>。結果寫入目的地的方式由 <span 
+ style="x-condition: eclipse;">ctype</span> 指定的比較型別確定<script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A4');
-//--></script>����<a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400161.htm">�Ƚ� (cmp)</a> ָ����������</p>
+//--></script>，如<a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400161.htm">比較 (cmp)</a> 指令中所述。</p>
 
-<p>�� register_form �У���һ���������� <span style="x-condition: eclipse;">GR</span><script type="text/javascript"
+<p>在 register_form 中，第一個運算元是 <span style="x-condition: eclipse;">GR</span><script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A5');
-//--></script> <span style="font-style: italic;"><I>r2</I></span>���� imm8_form �У���һ��������ȡ�Է�����չ�� <span style="font-style: italic;"><I>imm8</I></span> �����ֶΣ��� parallel_inequality_form �У���һ�������������� GR 0��</p>
+//--></script> <span style="font-style: italic;"><I>r2</I></span>；在 imm8_form 中，第一個運算元取自符號擴充套件的 <span style="font-style: italic;"><I>imm8</I></span> 編碼欄位；在 parallel_inequality_form 中，第一個運算元必須是 GR 0。</p>
 
-<p>ֻ�бȽ������ǲ�������֮һ���ҹ�ϵ�ǲ���ʽ��&gt;��&gt;=��&lt;��&lt;=��ʱ���Ż�ʹ�� parallel_inequality_form����<a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400161.htm">�Ƚ� (cmp)</a> ָ����<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400012.htm" style="x-condition: eclipse;">�������ͱȽϵ� 64 λ�ȽϹ�ϵ</a>����������<script 
+<p>只有比較型別是並行型別之一，且關係是不等式（&gt;、&gt;=、&lt;、&lt;=）時，才會使用 parallel_inequality_form，如<a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400161.htm">比較 (cmp)</a> 指令與<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400012.htm" style="x-condition: eclipse;">並行型別比較的 64 位比較關係</a>表格所述。<script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A6');
 //--></script></p>
 
-<p>�������ν�ʼĴ���Ŀ�ĵ���ͬ��<span style="font-style: italic;"><I>p1</I></span> �� <span style="font-style: italic;"><I>p2</I></span> ָ����ͬ��ν�ʼĴ��������޶�ν�������û�Ƚ����� (<span style="x-condition: eclipse;">ctype</span>) Ϊ unc����ָ�������&ldquo;�Ƿ�����&rdquo;����<script type="text/javascript"
+<p>如果兩個謂詞暫存器目的地相同（<span style="font-style: italic;"><I>p1</I></span> 與 <span style="font-style: italic;"><I>p2</I></span> 指定相同的謂詞暫存器）、限定謂詞已設定或比較型別 (<span style="x-condition: eclipse;">ctype</span>) 為 unc，則指令都將發生&ldquo;非法操作&rdquo;錯誤。<script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A7');
 //--></script></p>
 
-<p>����ʮ�ֹ�ϵ�У��������ж�ֱ����Ӳ����ʵ�֡���һЩʵ������α������ʵ�ֵĹ�ϵ�Լ���Щα�������ӳ�䵽���ǵ���Ϣ���<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400011.htm" style="x-condition: eclipse;">��׼�� UNC ���ͱȽϵ� 64 λ�ȽϹ�ϵ</a><script 
+<p>在這十種關係中，並非所有都直接在硬體中實現。有一些實際上是偽操作。實現的關係以及這些偽操作如何對映到它們的資訊詳見<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400011.htm" style="x-condition: eclipse;">標準與 UNC 型別比較的 64 位比較關係</a><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A8');
-//--></script>��<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400012.htm" style="x-condition: eclipse;">�������ͱȽϵ� 64 λ�ȽϹ�ϵ</a>��<script type="text/javascript"
+//--></script>與<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400012.htm" style="x-condition: eclipse;">並行型別比較的 64 位比較關係</a>。<script type="text/javascript"
 															language=JavaScript1.2><!--
 kadovFilePopupInit('A9');
 //--></script></p>

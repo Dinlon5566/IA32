@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/speculative_microcode_uops.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:38:26 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>�Ʋ���΢����΢����</title>
+<title>推測性微程式碼微操作</title>
 
 <!--(Meta)==========================================================-->
 
@@ -23,7 +23,7 @@
 <meta name=layout-height content=360>
 <meta name=layout-width content=613>
 <meta name=date content="06 24, 2002 9:48:22 AM">
-<meta name=x-ignored-words content="MMX;SIMD;Aliasing;modulo;aliasing;Pentium;pipelined;mispredicted;NetBurst;irets;BTB;DTLB;micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;UC;uncacheable;WC;MMNP;MMNM;Mispredicted;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;Clockticks;clocktick;VTune;clockticks;MOCLEAR;prefetching;misprediction;PGO;pseudo-LRU;developer.intel.com;index.htm;Vol;RFO;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;prefetch;Micro-ops;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;LSC;SSC;USC;ULC;SSE;denormal;denormaled;DELIVERBit;;BSQ;writeback;Uncacheable;encodings;ITLB;PGO's;RGBA;C++*;?;a(i;y;enddo;cacheability;index.htm.;��ops;��op;prefetched;CPUID;resynchronize;Memory_Flag;ELIHW;TC-built;TC-delivered;uops;declspec(align(n;intrinsics;Uops;NBOGUS;EMON_UOPS_RETIRED;WB;WB-type;microarchitecture;RFOs;IOQ;SMP;prefetcher;frontside;FSB;XAPIC;FSB's;IOQ_allocation;BSQ_allocation;BSQ_active_entries;BSQ_cache_reference;Writeback;IOQ_active_entries;Writebacks;chipset;non-prefetch;prefetches;BSQ_cache_rerference;Prefetches;overcounting;allocation-to-deallocation;deallocation;dqword;RDTSC;CCCR;HW;Microcode;microcode">
+<meta name=x-ignored-words content="MMX;SIMD;Aliasing;modulo;aliasing;Pentium;pipelined;mispredicted;NetBurst;irets;BTB;DTLB;micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;UC;uncacheable;WC;MMNP;MMNM;Mispredicted;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;Clockticks;clocktick;VTune;clockticks;MOCLEAR;prefetching;misprediction;PGO;pseudo-LRU;developer.intel.com;index.htm;Vol;RFO;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;prefetch;Micro-ops;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;LSC;SSC;USC;ULC;SSE;denormal;denormaled;DELIVERBit;;BSQ;writeback;Uncacheable;encodings;ITLB;PGO's;RGBA;C++*;?;a(i;y;enddo;cacheability;index.htm.;μops;μop;prefetched;CPUID;resynchronize;Memory_Flag;ELIHW;TC-built;TC-delivered;uops;declspec(align(n;intrinsics;Uops;NBOGUS;EMON_UOPS_RETIRED;WB;WB-type;microarchitecture;RFOs;IOQ;SMP;prefetcher;frontside;FSB;XAPIC;FSB's;IOQ_allocation;BSQ_allocation;BSQ_active_entries;BSQ_cache_reference;Writeback;IOQ_active_entries;Writebacks;chipset;non-prefetch;prefetches;BSQ_cache_rerference;Prefetches;overcounting;allocation-to-deallocation;deallocation;dqword;RDTSC;CCCR;HW;Microcode;microcode">
 
 
 <!--(Links)=========================================================-->
@@ -83,7 +83,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������¼�\n���ܵ����¼� - �߼��¼�\nǰ���¼�\n�Ʋ���΢����΢����");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器事件\n效能調整事件 - 高級事件\n前端事件\n推測性微程式碼微操作");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,14 +106,14 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" align="right" width="48px" height="60px" align="right" border="0" class="img_whs1">�Ʋ���΢����΢����</h1>
+<h1><img src="p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" align="right" width="48px" height="60px" align="right" border="0" class="img_whs1">推測性微程式碼微操作</h1>
 
-<p><span style="font-weight: bold;"><B>�߳��ض���</B></span>��<a href="Thread_Specific.html">TS</a> 
+<p><span style="font-weight: bold;"><B>執行緒特定性</B></span>：<a href="Thread_Specific.html">TS</a> 
  </p>
 
-<p>��ָ���ʾ��΢���� ROM ����΢�������У�ִ�е�Ԫ�������ȡ���񣩵��Ʋ���΢�����ٷֱȡ��Ʋ���΢�����ǿ���ִ�е�΢���������磬�����п��ܻ��������ִ��·����΢��������ֻ��ִ��һ��·����</p>
+<p>此指標表示從微程式碼 ROM 放入微操作佇列（執行單元從這裡獲取任務）的推測性微操作百分比。推測性微操作是可能執行的微操作。例如，佇列中可能會載入所有執行路徑的微操作，但只會執行一條路徑。</p>
 
-<p>���¼�������һ�������¼���</p>
+<p>此事件被視作一個特徵事件。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

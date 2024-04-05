@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/branch_mispredictions.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:24:59 GMT -->
 <head>
 
-<title>��֧Ԥ��ʧ��</title>
+<title>分支預測失誤</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -79,7 +79,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n����Ӣ�ض�(R) ����(R) 4 ��������ϸ��\n��֧Ԥ��ʧ��");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n關於英特爾(R) 奔騰(R) 4 處理器的建議\n關於英特爾(R) 奔騰(R) 4 處理器的細節\n分支預測失誤");
 
 	}
 	if (window.writeBtnStyle)
@@ -102,21 +102,21 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" alt="Ӣ�ض�&#xAE; ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">��֧Ԥ��ʧ��</h1>
+<h1><img src="TA_logo.gif" alt="英特爾&#xAE; 調優助手主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">分支預測失誤</h1>
 
-<p>��֧Ԥ��ʧ��������������Եĸ���Ӱ�죬��/���·�֧Ԥ���ʽϵ͡��������Ӱ��߶�ֵ�ϵͣ���ֵ�ý�һ���о������⡣<br>���ڲ���&ldquo;���̼߳���&rdquo;��ϵͳ��ദ����ϵͳ�����Ƶ�Ӱ������ܼƴ�����ʱ��Ӱ�죨ϵͳ�������߼�/����������֮�ͣ���������&ldquo;ʵ��ִ��&rdquo;ʱ��Ӱ�졣��ˣ��ڲ���&ldquo;���̼߳���&rdquo;��ϵͳ��ദ����ϵͳ�ϣ��ܿ��ܻῴ��ϸ�ڵ�ʱ��Ӱ����ڶԸ���ʵ��ִ��ʱ���Ӱ�졣��ע�⣬�ڵ�������ϵͳ�ϣ�������ʱ����ʵ��ִ��ʱ����ͬ��</p>
+<p>分支預測失誤會對效能造成明顯的負面影響，且/或導致分支預測率較低。如果效能影響尺度值較低，則不值得進一步研究此問題。<br>對於採用&ldquo;超執行緒技術&rdquo;的系統或多處理器系統，估計的影響代表總計處理器時間影響（系統上所有邏輯/物理處理器之和），而不是&ldquo;實際執行&rdquo;時間影響。因此，在採用&ldquo;超執行緒技術&rdquo;的系統或多處理器系統上，很可能會看到細節的時間影響大於對負載實際執行時間的影響。請注意，在單處理器系統上，處理器時間與實際執行時間相同。</p>
 
 &nbsp; 
 
 <br>&nbsp; 
  
 
-<br><b>����������ԣ�</b><br><br>��ϸ�����������ܼ�����������أ�<br> <br> ��֧Ԥ��ʧ������Ӱ�� = ((<a href="../Events4/mispredicted_branches_retired.html" style="x-condition: eclipse;">ʧЧ��Ԥ��ʧ���֧</a>*20)/<a href="../Events4/Clockticks.html" style="x-condition: eclipse;">ʱ���ź�</a>)*100<b><br> �ϵ�ֵ��</b>0.2<b><br> �ϸ�ֵ��</b>2<br><br> ��֧Ԥ����� = (100-((<a href="../Events4/mispredicted_branches_retired.html" style="x-condition: eclipse;">ʧЧ��Ԥ��ʧ���֧</a>/<a href="../Events4/branches_retired.html" style="x-condition: eclipse;">ʧЧ�ķ�֧</a>)*100))<b><br> �ϵ�ֵ��</b>75<b><br> �ϸ�ֵ��</b>95<br><br>��&ldquo;��֧Ԥ��ʧ������Ӱ��&rdquo;<b>�ϸ�</b><i>��</i>&ldquo;��֧Ԥ�����&rdquo;<b>�ϵ�</b>ʱ����ϸ�ھ���ʵ�������塣<b><br><br> ���飺</b> 
+<br><b>計數器相關性：</b><br><br>此細節與以下效能計數器函式相關：<br> <br> 分支預測失誤效能影響 = ((<a href="../Events4/mispredicted_branches_retired.html" style="x-condition: eclipse;">失效的預測失誤分支</a>*20)/<a href="../Events4/Clockticks.html" style="x-condition: eclipse;">時鐘訊號</a>)*100<b><br> 較低值：</b>0.2<b><br> 較高值：</b>2<br><br> 分支預測比率 = (100-((<a href="../Events4/mispredicted_branches_retired.html" style="x-condition: eclipse;">失效的預測失誤分支</a>/<a href="../Events4/branches_retired.html" style="x-condition: eclipse;">失效的分支</a>)*100))<b><br> 較低值：</b>75<b><br> 較高值：</b>95<br><br>在&ldquo;分支預測失誤效能影響&rdquo;<b>較高</b><i>或</i>&ldquo;分支預測比率&rdquo;<b>較低</b>時，此細節具有實質性意義。<b><br><br> 建議：</b> 
 
 <ul>
 	
 	<li class=kadov-p
-		class=kadov-p><a href="avoiding_branch_mispredictions.html">�����֧Ԥ��ʧ��</a></li>
+		class=kadov-p><a href="avoiding_branch_mispredictions.html">避免分支預測失誤</a></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

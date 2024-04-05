@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/avoiding_branch_mispredictions.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:51 GMT -->
 <head>
 
-<title>�����֧Ԥ��ʧ��</title>
+<title>避免分支預測失誤</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
 <meta name=generator-major-version content=0.1>
 <meta name=generator-minor-version content=1>
@@ -78,7 +78,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\n����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 ������\n����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 �������Ľ���\n����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 �������Ľ���\n�����֧Ԥ��ʧ��");
+	addTocInfo("參考\n處理器事件與建議\n含第三代數據流單指令多數據擴充套件指令集 (SSE3) 的英特爾(R) 奔騰(R) 4 處理器\n含第三代數據流單指令多數據擴充套件指令集 (SSE3) 的英特爾(R) 奔騰(R) 4 處理器的建議\n含第三代數據流單指令多數據擴充套件指令集 (SSE3) 的英特爾(R) 奔騰(R) 4 處理器的建議\n避免分支預測失誤");
 
 	}
 	if (window.writeBtnStyle)
@@ -101,30 +101,30 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="Ӣ�ض�(R) ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">�����֧Ԥ��ʧ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="英特爾(R) 調優助手主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">避免分支預測失誤</h1>
 
 &nbsp;
 
-<p>���֧Ԥ����ص����ܿ�ͨ�����·������ƣ�</p>
+<p>與分支預測相關的效能可通過以下方法改善：</p>
 
-<li class=kadov-p>�ô��������ݴ��ڲ�ͬ��ҳ��</li>
+<li class=kadov-p>讓程式碼與數據處在不同的頁上</li>
 
-<li class=kadov-p>������������֧</li>
+<li class=kadov-p>儘可能消除分支</li>
 
-<li class=kadov-p>�������Ŵ��벼�֣�ʹ֮���Ͼ�̬��֧Ԥ���㷨��Ҫ��</li>
+<li class=kadov-p>合理安排程式碼佈局，使之符合靜態分支預測演算法的要求</li>
 
-<li class=kadov-p>����޷���������ṹ�������ʵ��ĵط�ʹ�÷�֧������ʾ</li>
+<li class=kadov-p>如果無法調整程式碼結構，請在適當的地方使用分支方向提示</li>
 
-<li class=kadov-p>�������ȴ�ѭ����ʹ�� pause ָ��</li>
+<li class=kadov-p>在自旋等待循環中使用 pause 指令</li>
 
-<li class=kadov-p>��Ƕ���������������뷵�����</li>
+<li class=kadov-p>內嵌函式，並將呼叫與返回配對</li>
 
-<li class=kadov-p>������Ҫչ��ѭ����ʹ�ظ�ִ�е�ѭ���ĵ�������С�ڻ����ʮ������������������Ӵ���ƪ��</li>
+<li class=kadov-p>根據需要展開循環，使重複執行的循環的迭代次數小於或等於十六，除非這會顯著增加程式碼篇幅</li>
 
 <li class=kadov-p>
-�����ܸ�����֧��ʹ���ǵķ���Ƶ�ʲ�����ÿ 3 ��΢����һ��
+儘可能隔開分支，使它們的發生頻率不超過每 3 個微操作一次
 
-<p>�����й���ϸ��Ϣ������� <i>Intel(R) Pentium(R) 4 and Intel(R) Xeon(TM) Processor Optimization Manual</i>��Ӣ�ض�(R) ����(R) 4 ��Ӣ�ض�(R) ��ǿ(TM) �������Ż��ֲᣩ�ĵ� 2 �¡�</p>
+<p>如需有關詳細資訊，請參閱 <i>Intel(R) Pentium(R) 4 and Intel(R) Xeon(TM) Processor Optimization Manual</i>（英特爾(R) 奔騰(R) 4 與英特爾(R) 至強(TM) 處理器優化手冊）的第 2 章。</p>
 </li>
 
 <script type="text/javascript" language="javascript1.2">

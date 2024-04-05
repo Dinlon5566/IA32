@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/Loop_Unrolling.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:04 GMT -->
 <head>
 
-<title>ѭ��չ��</title>
+<title>循環展開</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="01 23, 2002 3:36:24 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -104,43 +104,43 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">ѭ��չ��</h1>
+<h1><img src="p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">循環展開</h1>
 
-<p>չ��ѭ���ĺô����£�</p>
-
-<ul type="disc" class="whs2">
-	
-	<li class=kadov-p><p>����չ���ܹ�������֧�Լ�һЩ�������ɱ����Ĵ��룬��˿���̯��һЩ��֧������</p></li>
-	
-	<li class=kadov-p><p>չ�����Ի������ȣ���ܵ�����ѭ�����ڸ�һЩ�ӳ١�������㹻�Ŀ��мĴ���ʹ�������ֻ״̬����Ϊͨ��չ���������չ¶�˹ؼ�·�����⽫�ǳ����á�</p></li>
-	
-	<li class=kadov-p><p>������������ǿ�Ԥ��ģ�����ѭ����û��������֧����Ӣ�ض�(R) ����(R) 4 ������������ȷԤ���������Ϊ 16 �λ���ٵ��ڲ�ѭ�����˳���֧����ˣ����ѭ���岻��̫�󣬲�����֪��̽��ĵ��������������չ���ڲ�ѭ����ֱ�����ǵĵ��������ﵽ���ֵ 16�����ڱ��� III ���� II ���������벻Ҫչ�������������� 4 ��ѭ����</p></li>
-</ul>
-
-<p>չ��ѭ���Ŀ��ܿ������£�</p>
+<p>展開循環的好處如下：</p>
 
 <ul type="disc" class="whs2">
 	
-	<li class=kadov-p><p>չ�����Ȼ�չ���ǳ����ѭ��ʱ�����ܵ��´���ƪ�����ӡ����չ�����ѭ�������ٷ�����ٻ��� (TC)���⽫�к����档</p></li>
+	<li class=kadov-p><p>由於展開能夠消除分支以及一些管理歸納變數的程式碼，因此可以攤銷一些分支開銷。</p></li>
 	
-	<li class=kadov-p><p>չ��ѭ�����а�����֧��ѭ��ʱ�������Ӷ� BTB �������������չ����ѭ���ĵ��������� 16 ����٣����֧Ԥ��Ӧ������ȷԤ��ѭ�����иı䷽��ķ�֧��</p></li>
+	<li class=kadov-p><p>展開可以積極排程（或管道化）循環以掩蓋一些延遲。如果有足夠的空閑暫存器使變數保持活動狀態，因為通過展開相關性鏈展露了關鍵路徑，這將非常有用。</p></li>
+	
+	<li class=kadov-p><p>如果迭代次數是可預測的，並且循環中沒有條件分支，則英特爾(R) 奔騰(R) 4 處理器可以正確預測迭代次數為 16 次或更少的內部循環的退出分支。因此，如果循環體不是太大，並且已知可探測的迭代次數，則可以展開內部循環，直到它們的迭代次數達到最大值 16。對於奔騰 III 或奔騰 II 處理器，請不要展開迭代次數大於 4 的循環。</p></li>
 </ul>
 
-<p><span style="font-weight: bold;"><B>���/������������� 12</B></span>����Ӱ��� H��ͨ���� M�� </p>
+<p>展開循環的可能開銷如下：</p>
 
-<p>ͨ������£���Сѭ��һֱչ������֧����ɱ����Ŀ���С��ѭ��ִ��ʱ���Լ 10%��</p>
+<ul type="disc" class="whs2">
+	
+	<li class=kadov-p><p>展開過度或展開非常大的循環時，可能導致程式碼篇幅增加。如果展開后的循環不能再放入跟蹤快取 (TC)，這將有害無益。</p></li>
+	
+	<li class=kadov-p><p>展開循環體中包含分支的循環時，會增加對 BTB 容量的需求。如果展開后循環的迭代次數是 16 或更少，則分支預測應該能正確預測循環體中改變方向的分支。</p></li>
+</ul>
 
-<p><span style="font-weight: bold;"><B>���/������������� 13</B></span>����Ӱ��� H��ͨ���� M�� </p>
+<p><span style="font-weight: bold;"><B>彙編/編譯器編碼規則 12</B></span>。（影響度 H，通用性 M） </p>
 
-<p>�������չ��ѭ����������ܻᵼ�� TC ������</p>
+<p>通常情況下，將小循環一直展開到分支與歸納變數的開銷小於循環執行時間的約 10%。</p>
 
-<p><span style="font-weight: bold;"><B>���/������������� 14</B></span>����Ӱ��� M��ͨ���� M����Ƶ��ִ�е�ѭ���������������Ԥ���ѭ��չ����ʹ������������ 16 ����٣�����������Ӵ���ƪ��ʹ�ù����������ٷ�����ٻ��档���ѭ�������һ�����ϵ�������֧����ͨ��չ��ʹ������������ 16/(������֧��)��</p>
+<p><span style="font-weight: bold;"><B>彙編/編譯器編碼規則 13</B></span>。（影響度 H，通用性 M） </p>
 
-<h2>ѭ��չ��ʾ��</h2>
+<p>避免過度展開循環，否則可能會導致 TC 反覆。</p>
 
-<p>����ѭ��չ��ʾ����ʾ�ڽ���չ����ͬʱ���ʹ�����Ż�������Ϊ���ܣ�</p>
+<p><span style="font-weight: bold;"><B>彙編/編譯器編碼規則 14</B></span>。（影響度 M，通用性 M）將頻繁執行的循環與迭代次數可以預測的循環展開，使迭代次數降到 16 或更少，除非這會增加程式碼篇幅使得工作集不能再放入跟蹤快取。如果循環體包含一個以上的條件分支，則通過展開使迭代次數等於 16/(條件分支數)。</p>
 
-<p>չ��֮ǰ��</p>
+<h2>循環展開示例</h2>
+
+<p>以下循環展開示例顯示在進行展開的同時如何使其它優化方法成為可能：</p>
+
+<p>展開之前：</p>
 
 <p><span class=Code>do i=1,100</span></p>
 
@@ -150,7 +150,7 @@ else
 
 <p><span class=Code>enddo</span></p>
 
-<p>չ��֮��</p>
+<p>展開之後</p>
 
 <p><span class=Code>do i=1,100,2</span></p>
 
@@ -160,7 +160,7 @@ else
 
 <p><span class=Code>enddo</span></p>
 
-<p>�ڱ����У�ִ�� 100 �ε�ѭ���� x ����ż����ŵ�ÿ��Ԫ�أ��� y ����ÿ��������ŵ�Ԫ�ء�ͨ��չ��ѭ����������ÿ��������ͬʱִ��������ֵ���Ӷ�����ѭ�����е�һ����֧��</p>
+<p>在本例中，執行 100 次的循環將 x 賦給偶數編號的每個元素，將 y 賦給每個奇數編號的元素。通過展開循環，可以在每個迭代中同時執行兩個賦值，從而消除循環體中的一個分支。</p>
 
 <p></p>
 

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/ERB/er_cycles_per_retired_instruction.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:38:21 GMT -->
 <head>
 
-<title>ÿʧЧָ��ʱ��������</title>
+<title>每失效指令時鐘週期數</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=MS-HAID content="Event Ratio">
 <meta name=MS-HAID content=CPI>
 <meta name=MS-HAID content=Clockticks>
@@ -102,8 +102,8 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M ���������¼�����\n�������\nÿʧЧָ��ʱ��������");
-addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M ���������¼�����\n�������ܵ�������\nÿʧЧָ��ʱ��������");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n英特爾(R) 奔騰(R) M 處理器的事件比率\n常規比率\n每失效指令時鐘週期數");
+addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n英特爾(R) 奔騰(R) M 處理器的事件比率\n基本效能調整比率\n每失效指令時鐘週期數");
 
 	}
 	if (window.writeBtnStyle)
@@ -126,15 +126,15 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="er_logo.gif" alt="�¼���������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">ÿʧЧָ��ʱ��������</h1>
+<h1><img src="er_logo.gif" alt="事件比率主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">每失效指令時鐘週期數</h1>
 
-<p><a href="../EventsB/clockticks.html">ʱ���ź�</a> / <a href="../EventsB/instructions_retired.html">ʧЧ��ָ��</a></p>
+<p><a href="../EventsB/clockticks.html">時鐘訊號</a> / <a href="../EventsB/instructions_retired.html">失效的指令</a></p>
 
-<p>�˱���Ҳ��Ϊ&ldquo;ÿָ��ʱ��������&rdquo;��Cycles per Instructions����� CPI����</p>
+<p>此比率也稱為&ldquo;每指令時鐘週期數&rdquo;（Cycles per Instructions，簡稱 CPI）。</p>
 
-<p>Ҫȷ�������ܵ�������������ʲô�ط�ʱ��CPI �ǵ�һ��Ҫ���ı��ʡ�CPI �������ñ�ʾ�����ִ���������졣</p>
+<p>要確定將效能調整精力集中在什麼地方時，CPI 是第一個要檢查的比率。CPI 比率良好表示程式碼的執行效能優異。</p>
 
-<p>һ����˵����Щ����Դ�Ծ���ḻ�����ܹ���ʦ�ľ��飺</p>
+<p>一般來說，這些數字源自經驗豐富的效能工程師的經驗：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="28.322%" class="whs2">
@@ -144,10 +144,10 @@ else
 <tr>
 <td valign="top" width="46.682%" class="whs5">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td>
+	style="margin-bottom: 0;">良好</td>
 <td valign="top" width="53.318%" class="whs6">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td></tr>
+	style="margin-bottom: 0;">不佳</td></tr>
 
 <tr>
 <td valign="top" width="46.682%" class="whs5">
@@ -156,13 +156,13 @@ else
 <p class=TableCell>4</td></tr>
 </table>
 
-<p>CPI ���ʲ��ѱ�ʾ�����������֮һ��</p>
+<p>CPI 比率不佳表示存在以下情況之一：</p>
 
 <ul>
 	
-	<li class=kadov-p><p>��ѡ�Ĵ����������ͨ���Ż����ڴ������ϸ���Ч��ִ�С�</p></li>
+	<li class=kadov-p><p>所選的程式碼或許可以通過優化，在處理器上更高效地執行。</p></li>
 	
-	<li class=kadov-p><p>��ѡ�Ĵ�������ַ���ָ���΢���롣</p></li>
+	<li class=kadov-p><p>所選的程式碼包含字串指令或微程式碼。</p></li>
 </ul>
 
 <p class="whs7">&nbsp;</p>

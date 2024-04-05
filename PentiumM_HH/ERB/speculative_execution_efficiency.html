@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/ERB/speculative_execution_efficiency.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:35 GMT -->
 <head>
 
-<title>�Ʋ���ִ��Ч��</title>
+<title>推測性執行效率</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -92,8 +92,8 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M ���������¼�����\n��֧ͳ�Ʊ���\n�Ʋ���ִ��Ч��");
-addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M ���������¼�����\n�������ܵ�������\n�Ʋ���ִ��Ч��");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n英特爾(R) 奔騰(R) M 處理器的事件比率\n分支統計比率\n推測性執行效率");
+addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n英特爾(R) 奔騰(R) M 處理器的事件比率\n基本效能調整比率\n推測性執行效率");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,11 +116,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="er_logo.gif" alt="�¼���������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">�Ʋ���ִ��Ч��</h1>
+<h1><img src="er_logo.gif" alt="事件比率主題" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">推測性執行效率</h1>
 
-<p><a href="../EventsB/instructions_retired.html">ʧЧ��ָ��</a> / <a href="../EventsB/instructions_decoded.html">�����ָ��</a></p>
+<p><a href="../EventsB/instructions_retired.html">失效的指令</a> / <a href="../EventsB/instructions_decoded.html">解碼的指令</a></p>
 
-<p>һ����˵����Щ����Դ�Ծ���ḻ�����ܹ���ʦ�ľ��飺</p>
+<p>一般來說，這些數字源自經驗豐富的效能工程師的經驗：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="51.696%" class="whs2">
@@ -132,9 +132,9 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) 
 
 <tr valign="top" class="whs4">
 <td width="50%" class="whs5">
-<h3 class=TableHead>����</td>
+<h3 class=TableHead>下限</td>
 <td width="50%" class="whs6">
-<h3 class=TableHead>����</td></tr>
+<h3 class=TableHead>上限</td></tr>
 
 <tr valign="top" class="whs4">
 <td width="50%" class="whs7">
@@ -148,28 +148,28 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) 
 
 <p>&nbsp;</p>
 
-<p>�˱��ʵ�ֵ�ϵ�ʱ����ʾ�Ʋ���ִ�е�Ч�ʲ��ߡ����ʾ�󲿷ּ���Ľ����������������Ҫ���¼��㡣��Ҫԭ����Ԥ��ʧ��ķ�֧��������ӵ��á������ת�����أ������ǵ��� CPU ���Ŵ����д����·��ִ�С�</p>
+<p>此比率的值較低時，表示推測性執行的效率不高。這表示大部分計算的結果都被丟棄，並且要重新計算。主要原因是預測失誤的分支（包括間接呼叫、間接跳轉及返回），它們導致 CPU 沿著程式碼中錯誤的路徑執行。</p>
 
-<h3 class="whs9"><img src="../LipsB/tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs10"> ����</h3>
+<h3 class="whs9"><img src="../LipsB/tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs10"> 建議</h3>
 
 <ol type="disc" class="whs11">
 	
 	<ul type="disc" class="whs12">
 		
-		<li class=kadov-p><p>��ƴ����Ը��Ʒ�֧��Ԥ���ԡ�</p></li>
+		<li class=kadov-p><p>設計程式碼以改善分支可預測性。</p></li>
 		
-		<li class=kadov-p><p>����ʹ�ñ�����ѡ�� <span class=Code>-Qxi</span>��</p></li>
+		<li class=kadov-p><p>考慮使用編譯器選項 <span class=Code>-Qxi</span>。</p></li>
 		
-		<li class=kadov-p><p>����ʹ��&ldquo;������������ָ����Ż�&rdquo;��</p></li>
+		<li class=kadov-p><p>考慮使用&ldquo;檔案導引基本指令塊優化&rdquo;。</p></li>
 		
-		<li class=kadov-p><p>���ǻ�༶��֧Ԥ�������</p></li>
+		<li class=kadov-p><p>考慮彙編級分支預測調整。</p></li>
 	</ul>
 </ol>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs13"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs13"> 備註</h3>
 
-<p class="whs14">���¼����ʽ���ĳЩӢ�ض�(R) ����(R) M ������(R) M ������֧�֡�</p>
+<p class="whs14">此事件比率僅有某些英特爾(R) 奔騰(R) M 與賽揚(R) M 處理器支援。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

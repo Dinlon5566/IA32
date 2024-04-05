@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/probe_-_probe_access_instruction.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>probe - ̽�����ָ��</title>
+<title>probe - 探測訪問指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -85,7 +85,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nP - ָ��\nprobe - ̽�����ָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nP - 指令\nprobe - 探測訪問指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,13 +108,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">̽�����ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">探測訪問指令</h1>
 
 <p class="whs2">probe</p>
 
-<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/probe-operation.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a></p>
+<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/probe-operation.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字型慣例</a></p>
 
-<p class="whs2">��ʽ</p>
+<p class="whs2">格式</p>
 
 <p class=Preformatted>(qp)probe.rr 1 =r3 , r2 read_form, register_form M38</p>
 
@@ -135,53 +135,53 @@ else
 <hr class="whs3">
 
 
-<p><b style="font-weight: bold;">˵��</b></p>
+<p><b style="font-weight: bold;">說明</b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">��ָ��ȷ���Ƿ�������ָ������Ȩ�����ȡ��д����ʸ����������ַ</b><b style="font-weight: normal;">�������������ָ���ķ��ʣ��� GR </span><span style="font-weight: normal; font-style: italic;"><I>r1</I></span> ����Ϊ 1����������Ϊ 0���� </b><b style="font-weight: normal;"><span style="font-weight: normal;">fault_form �У������������ָ���ķ��ʣ����ָ��ʲôҲ�������������������ָ����</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">���ʣ���ִ�д�������</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">此指令確定是否允許按指定的特權級別讀取或寫入訪問給定的虛擬地址</b><b style="font-weight: normal;">。如果允許進行指定的訪問，則 GR </span><span style="font-weight: normal; font-style: italic;"><I>r1</I></span> 設定為 1，否則設定為 0。在 </b><b style="font-weight: normal;"><span style="font-weight: normal;">fault_form 中，如果允許進行指定的訪問，則此指令什麼也不做；如果不允許進行指定的</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">訪問，則執行錯誤處理。</span></b></p>
 
-<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;">PSR.dt Ϊ 1 ʱ������ѯ DTLB �� VHPT �����е�ת����Ŀ��ȷ���Ƿ��������� GR </span><span style="font-weight: normal; font-style: italic;"><I>r2</I></span><span 
- style="font-weight: normal;"> λ {1:0} �� imm 2 ָ������Ȩ������� GR</span> <span style="font-weight: normal; font-style: italic;"><I>r3</I></span> <span style="font-weight: normal;">λ {60:0} ָ���������ַ�Լ� </span><span style="font-weight: normal;">GR </span><span style="font-weight: normal; font-style: italic;"><I>r3</I></span><span 
- style="font-weight: normal;"> λ {63:61} ȷ����ַ������Ĵ�������� </span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;">PSR.pk Ϊ 1���򻹻�ִ�б�������顣��ȡ��д����ʽָ����</span></b><b 
- style="font-weight: normal;"><span style="font-weight: normal;">ָ���Ǽ���ȡ����д�����Ȩ�ޣ�����ͬʱ�������ߡ�</span></b></p>
+<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;">PSR.dt 為 1 時，將查詢 DTLB 與 VHPT 中現有的轉譯專案，確定是否允許按照 GR </span><span style="font-weight: normal; font-style: italic;"><I>r2</I></span><span 
+ style="font-weight: normal;"> 位 {1:0} 或 imm 2 指定的特權級別訪問 GR</span> <span style="font-weight: normal; font-style: italic;"><I>r3</I></span> <span style="font-weight: normal;">位 {60:0} 指定的虛擬地址以及 </span><span style="font-weight: normal;">GR </span><span style="font-weight: normal; font-style: italic;"><I>r3</I></span><span 
+ style="font-weight: normal;"> 位 {63:61} 確定變址的區域暫存器。如果 </span></b><b style="font-weight: normal;"><span 
+ style="font-weight: normal;">PSR.pk 為 1，則還會執行保護鍵檢查。讀取或寫入形式指定此</span></b><b 
+ style="font-weight: normal;"><span style="font-weight: normal;">指令是檢查讀取還是寫入訪問許可權，還是同時檢查這二者。</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">PSR.dt Ϊ 0 ʱ�����ڴ�ʱ���� VHPT ��ѯ�������´���̽��Ὣ�Լ��ĵ�ַ���������������ַ����ѯ </b><b style="font-weight: normal;">DTLB������� DTLB �з���̽��ĵ�ַ�����´���̽�⽫�����ʵ���ֵ����������&ldquo;�������� TLB&rdquo;����PSR.dt Ϊ 0 ʱ���´���̽��Ὣ�Լ��ĵ�ַ����������������ַ�����Ҳ����� TLB ��ش���</b></span></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">PSR.dt 為 0 時，由於此時禁用 VHPT 查詢器，非致錯型探測會將自己的地址運算元用作虛擬地址僅查詢 </b><b style="font-weight: normal;">DTLB。如果在 DTLB 中發現探測的地址，非致錯型探測將返回適當的值，否則將產生&ldquo;備用數據 TLB&rdquo;錯誤。PSR.dt 為 0 時，致錯型探測會將自己的地址運算元當作實體地址，並且不產生 TLB 相關錯誤。</b></span></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">��δʵʩ�������ַ���з��´�̽�⣬�᷵�� 0����δʵʩ�������ַ��PSR.dt Ϊ 1 ʱ����δʵʩ��������ַ��PSR.dt Ϊ 0 ʱ�������´�̽�⣬�����&ldquo;δʵʩ�����ݵ�ַ&rdquo;����</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">對未實施的虛擬地址進行非致錯探測，會返回 0。對未實施的虛擬地址（PSR.dt 為 1 時）或未實施的實體地址（PSR.dt 為 0 時）進行致錯探測，會產生&ldquo;未實施的數據地址&rdquo;錯誤。</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">�����ָ����������������� ISR �е��޷���Ȩ��λ����������ɷ����� ISR ��ȡ��д��λ�����´���ֻ���´���ʽ probe ָ��ִ�д��������´���ʽ��ָ�������Щ���󣩣�&ldquo;δʹ�õ����ݵ�ַ&rdquo;����&ldquo;���ݼ�Ȩ��&rdquo;����&ldquo;���ݷ���Ȩ��&rdquo;����&ldquo;��������λ&rdquo;����&ldquo;���ݷ���λ&rdquo;�����Լ�&ldquo;���ݵ���&rdquo;����</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">如果此指令發生錯誤，則它將設定 ISR 中的無訪問許可權位，並根據完成符設定 ISR 讀取或寫入位。以下錯誤只由致錯形式 probe 指令執行處理（非致錯形式的指令不處理這些錯誤）：&ldquo;未使用的數據地址&rdquo;錯誤、&ldquo;數據鍵許可權&rdquo;錯誤、&ldquo;數據訪問許可權&rdquo;錯誤、&ldquo;數據污損位&rdquo;錯誤、&ldquo;數據訪問位&rdquo;錯誤以及&ldquo;數據除錯&rdquo;錯誤。</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">��ָ��ֻ��ʹ����ͬ����͵���Ȩ����̽�⡣���ָ������Ȩ������ߣ����ָ�С������ʹ�õ�ǰ��Ȩ����ִ��̽�⡣</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">此指令只能使用相同或更低的特權級別探測。如果指定的特權級別更高（數字更小），則使用目前特權級別執行探測。</span></b></p>
 
-<p class="whs2"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>�ж�</B></span></b></p>
+<p class="whs2"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>中斷</B></span></b></p>
 
 <ul type="disc" class="whs5">
 	
 	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;"><span 
- style="font-weight: normal;">&ldquo;�Ƿ�����&rdquo;����</span></b></p></li>
+ style="font-weight: normal;">&ldquo;非法操作&rdquo;錯誤</span></b></p></li>
 	
 	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;"><span 
- style="font-weight: normal;">&ldquo;���� NaT ҳʹ��&rdquo;����</span></b></p></li>
+ style="font-weight: normal;">&ldquo;數據 NaT 頁使用&rdquo;錯誤</span></b></p></li>
 	
 	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;"><span 
- style="font-weight: normal;">&ldquo;�Ĵ��� NaT ʹ��&rdquo;����&ldquo;���ݼ�δ����&rdquo;����</span></b></p></li>
+ style="font-weight: normal;">&ldquo;暫存器 NaT 使用&rdquo;錯誤；&ldquo;數據鍵未命中&rdquo;錯誤</span></b></p></li>
 	
 	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;"><span 
- style="font-weight: normal;">&ldquo;δʹ�õ����ݵ�ַ&rdquo;����&ldquo;���ݼ�Ȩ��&rdquo;����</span></b></p></li>
+ style="font-weight: normal;">&ldquo;未使用的數據地址&rdquo;錯誤；&ldquo;數據鍵許可權&rdquo;錯誤</span></b></p></li>
 	
 	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;"><span 
- style="font-weight: normal;">&ldquo;����Ƕ�� TLB&rdquo;����&ldquo;���ݷ���Ȩ��&rdquo;����</span></b></p></li>
+ style="font-weight: normal;">&ldquo;數據巢狀 TLB&rdquo;錯誤；&ldquo;數據訪問許可權&rdquo;錯誤</span></b></p></li>
 	
 	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;"><span 
- style="font-weight: normal;">&ldquo;�������� TLB&rdquo;����&ldquo;��������λ&rdquo;����</span></b></p></li>
+ style="font-weight: normal;">&ldquo;備用數據 TLB&rdquo;錯誤；&ldquo;數據污損位&rdquo;錯誤</span></b></p></li>
 	
 	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;"><span 
- style="font-weight: normal;">&ldquo;VHPT ����&rdquo;����&ldquo;���ݷ���λ&rdquo;����</span></b></p></li>
+ style="font-weight: normal;">&ldquo;VHPT 數據&rdquo;錯誤；&ldquo;數據訪問位&rdquo;錯誤</span></b></p></li>
 	
 	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;"><span 
- style="font-weight: normal;">&ldquo;���� TLB&rdquo;����&ldquo;���ݵ���&rdquo;����</span></b></p></li>
+ style="font-weight: normal;">&ldquo;數據 TLB&rdquo;錯誤；&ldquo;數據除錯&rdquo;錯誤</span></b></p></li>
 	
-	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;">&ldquo;����ҳ������&rdquo;����</b></p></li>
+	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;">&ldquo;數據頁不存在&rdquo;錯誤</b></p></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400284.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
 
-<title>lfetch - ������Ԥȡָ��</title>
+<title>lfetch - 快取線預取指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:53:57 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nL - ָ��\nlfetch - ������Ԥȡָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nL - 指令\nlfetch - 快取線預取指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,16 +116,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">������Ԥȡָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">快取線預取指令</h1>
 
 <p><span style="font-weight: bold;"><B>lfetch</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400285.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400285.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字型慣例</a>
  </p>
 
-<p>ָ������ M</p>
+<p>指令型別 M</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) lfetch.<span style="x-condition: eclipse;">lftype</span><script type="text/javascript"
 	language=JavaScript1.2><!--
@@ -150,34 +150,34 @@ kadovFilePopupInit('A2');
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>說明</B></span></p>
 
-<p>���� <span style="x-condition: eclipse;">GR</span> <span style="font-style: italic;"><I>r3</I></span> ��ֵָ���ĵ�ַ�Ļ������ƶ��������ڴ��νṹ����߼���<script type="text/javascript"
+<p>包含 <span style="x-condition: eclipse;">GR</span> <span style="font-style: italic;"><I>r3</I></span> 的值指定的地址的快取線移動到數據記憶體層次結構的最高級別。<script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A3');
 //--></script> <span style="x-condition: eclipse;">lfhint</span><script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A4');
-//--></script> ��������ֵָ���ڴ���ʵ������ԡ�</p>
+//--></script> 修正符的值指定記憶體訪問的區域性。</p>
 
-<p>��ȡ�ڴ����ΪҲ������ʵ�ҳ�������ڴ�����ȷ���������ߴ�Сȡ���ھ���ʵ�ֵİ汾����������ڻ���� 32 �ֽڼ��϶����ݡ��ڶ�ռ��ʽ�У��������������Ϊ��ռ״̬������Ԥ�Ʋ����޸ĸû������е�λ��ʱ����ʹ�ô��޶�����������������ߵ�ҳ����ڴ����Բ��ǿɻ��棬�������á�</p>
+<p>讀取記憶體的行為也由與訪問的頁關聯的記憶體屬性確定。快取線大小取決於具體實現的版本，但必須大於或等於 32 位元組加上二的冪。在獨佔形式中，快取線允許標記為獨佔狀態。程式預計不久修改該快取線中的位置時，會使用此限定符。如果包含快取線的頁面的記憶體屬性不是可快取，則不作引用。</p>
 
-<p><span style="x-condition: eclipse;">lftype</span> ��ɷ�ָ��ָ���Ƿ񴥷�ͨ���볣����ع����Ĵ���<script type="text/javascript"
+<p><span style="x-condition: eclipse;">lftype</span> 完成符指定指令是否觸發通常與常規載入關聯的錯誤。<script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A5');
 //--></script></p>
 
-<p>�ڻ�ַ������ʽ�У�����ȷ���ڴ��ַ֮��GR <span style="font-style: italic;"><I>r3</I></span> �е�ֵ����� <span style="font-style: italic;"><I>imm9</I></span>���� imm_base_update_form �У����� GR <span style="font-style: italic;"><I>r2</I></span>���� reg_base_update_form �У��о���������չ��ֵ���� reg_base_update_form �У�������� GR <span style="font-style: italic;"><I>r2</I></span> ��Ӧ�� NaT λ���� GR <span style="font-style: italic;"><I>r3</I></span> ��Ӧ�� NaT Ҳ������Ϊ 1 - ���ᴥ���κδ���</p>
+<p>在基址更新形式中，用於確定記憶體地址之後，GR <span style="font-style: italic;"><I>r3</I></span> 中的值會加上 <span style="font-style: italic;"><I>imm9</I></span>（在 imm_base_update_form 中）或是 GR <span style="font-style: italic;"><I>r2</I></span>（在 reg_base_update_form 中）中經過符號擴充套件的值。在 reg_base_update_form 中，如果設定 GR <span style="font-style: italic;"><I>r2</I></span> 對應的 NaT 位，則 GR <span style="font-style: italic;"><I>r3</I></span> 對應的 NaT 也會設定為 1 - 不會觸發任何錯誤。</p>
 
-<p>�� reg_base_update_form �� the imm_base_update_form �У���� GR <span style="font-style: italic;"><I>r3</I></span> ��Ӧ�� NaT λ������������֮�� GR <span style="font-style: italic;"><I>r3</I></span> �е�ֵָ���ĵ�ַ���䵱Ԥȡָ���Ļ����ߵ���ʾ����Ԥȡ����ʹ�� <span style="font-style: italic;"><I>lfhint</I></span> ָ������������ʾ��Ԥȡ��ʾ��Ӱ������ܣ��������κδ����ھ���ʵ�ֵİ汾�п��ܻᱻ���ԡ�</p>
+<p>在 reg_base_update_form 與 the imm_base_update_form 中，如果 GR <span style="font-style: italic;"><I>r3</I></span> 對應的 NaT 位被清除，則遞增之後 GR <span style="font-style: italic;"><I>r3</I></span> 中的值指定的地址將充當預取指定的快取線的提示。此預取操作使用 <span style="font-style: italic;"><I>lfhint</I></span> 指定的區域性提示。預取提示不影響程式功能，不觸發任何錯誤，在具體實現的版本中可能會被忽略。</p>
 
-<p>�� no_base_update_form �У�GR <span style="font-style: italic;"><I>r3</I></span> �е�ֵ�����޸ģ����Ҳ���ʾ�κ�Ԥȡ��ʾ��</p>
+<p>在 no_base_update_form 中，GR <span style="font-style: italic;"><I>r3</I></span> 中的值不會修改，並且不暗示任何預取提示。</p>
 
-<p>������� GR <span style="font-style: italic;"><I>r3</I></span> ��Ӧ�� NaT λ�����ڴ�״̬����Ӱ�졣�� reg_base_update_form �� imm_base_update_form �У���ִ�� GR <span style="font-style: italic;"><I>r3</I></span> ��֮���������������������ʾԤȡ��</p>
+<p>如果設定 GR <span style="font-style: italic;"><I>r3</I></span> 對應的 NaT 位，則記憶體狀態不受影響。在 reg_base_update_form 與 imm_base_update_form 中，會執行 GR <span style="font-style: italic;"><I>r3</I></span> 的之後遞增，並按以上所述提示預取。</p>
 
-<p>��δʹ�õĵ�ִַ���´��� lfetch��������&ldquo;δʹ�õ����ݵ�ַ&rdquo;���󡣶�δʹ�õĵ�ִַ�з��´��� lfetch ʱ����ִ���κδ����������Ҳ�����Ԥȡ���󣬵������ָ��������ִ�мĴ���֮�������</p>
+<p>對未使用的地址執行致錯型 lfetch，將導致&ldquo;未使用的數據地址&rdquo;錯誤。對未使用的地址執行非致錯型 lfetch 時，不執行任何錯誤處理，並且不發出預取請求，但如果有指定，它將執行暫存器之後遞增。</p>
 
-<p>lfetch ָ��ͬӲ��Ԥȡһ������������Ҫȷ��˳��Ĳ�����Ҳ����˵�����ǵ�˳��֮ͬǰ��֮����ڴ�����޹ء�</p>
+<p>lfetch 指令同硬體預取一樣，都不是需要確定順序的操作，也就是說，它們的順序同之前或之後的記憶體操作無關。</p>
 
 
 <!--(HR)============================================================-->

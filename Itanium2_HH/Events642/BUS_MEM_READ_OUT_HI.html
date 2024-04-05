@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -80,7 +80,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\nǰ�������¼�\nBUS_MEM_READ_OUT_HI");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 安騰(R) 2 處理器\n英特爾(R) 安騰(R) 2 處理器事件\n前端匯流排事件\nBUS_MEM_READ_OUT_HI");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,14 +105,14 @@ else
 </script>
 <h1>BUS_MEM_READ_OUT_HI</h1>
 
-<b style="font-weight: bold;">���⣺</b>δ���ڴ��ȡ���񣨸� 2 λ��<b style="font-weight: bold;"><br> ���</b>ǰ�������¼�<b style="font-weight: bold;"><br> IAR/DAR/OPC��</b>N/N/N<b style="font-weight: bold;"><br> �¼����룺</b>0x94<b style="font-weight: bold;"><br> ���ÿ����������</b>2 
+<b style="font-weight: bold;">標題：</b>未決記憶體讀取事務（高 2 位）<b style="font-weight: bold;"><br> 類別：</b>前端匯流排事件<b style="font-weight: bold;"><br> IAR/DAR/OPC：</b>N/N/N<b style="font-weight: bold;"><br> 事件程式碼：</b>0x94<b style="font-weight: bold;"><br> 最大每週期增量：</b>2 
 
-<p><b style="font-weight: bold;">���壺</b>ͳ��δ���ڴ��ȡ������������ 2 ÿ�����ڿ������ܼ� 16 �������¼�������λ�洢���˼�������Ϊͳ�ƴ��¼��������ڴ��ȡ����������ʱ���ڴ���δ��״̬���Ӷ�ȡ����δ�����������浽����һ����ȡ���ݿ鷵�ض������档</p>
+<p><b style="font-weight: bold;">定義：</b>統計未決記憶體讀取事務數。安騰 2 每個週期可以有總計 16 個此類事件。高兩位儲存到此計數器。為統計此事件，假設記憶體讀取訪問在以下時間內處於未決狀態：從讀取請求未命中三級快取到將第一個讀取數據塊返回二級快取。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> 備註</h3>
 
-<p class="whs2">�����ٲ��ɻ��棨�������κβ������������棩�����񡣴��¼�ּ����� <a HREF="BUS_MEM_READ.html">BUS_MEM_READ</a> [all,self] ʹ�ã��Լ���ƽ��ϵͳ�ڴ��ӳ� </p>
+<p class="whs2">不跟蹤不可快取（或其它任何不訪問三級快取）的事務。此事件旨在配合 <a HREF="BUS_MEM_READ.html">BUS_MEM_READ</a> [all,self] 使用，以計算平均系統記憶體延遲 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc100.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:44 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>FIST/FISTP - �洢����</title>
+<title>FIST/FISTP - 儲存整數</title>
 
 <!--(Meta)==========================================================-->
 
@@ -23,7 +23,7 @@
 <meta name=layout-height content=1802>
 <meta name=layout-width content=579>
 <meta name=date content="03 31, 2003 4:30:30 PM">
-<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;��F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;��;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC">
+<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;±F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;±;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC">
 
 
  <meta name="topic-status" content="In Progress">
@@ -101,7 +101,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nF - ָ��\nFIST/FISTP - �洢����");
+	addTocInfo("參考\n指令集\nIA-32 指令\nF - 指令\nFIST/FISTP - 儲存整數");
 
 	}
 	if (window.writeBtnStyle)
@@ -124,7 +124,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>FIST/FISTP - �洢����</h1>
+<h1>FIST/FISTP - 儲存整數</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -132,13 +132,13 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">������</td>
+	style="margin-bottom: 0;">操作碼</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">說明</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -149,7 +149,7 @@ else
 	style="margin-bottom: 0;">FIST <span style="font-style: italic;"><I>m16int</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� ST(0) �洢�� <span style="font-style: italic;"><I>m16int</I></span></td></tr>
+	style="margin-bottom: 0;">將 ST(0) 儲存到 <span style="font-style: italic;"><I>m16int</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -160,7 +160,7 @@ else
 	style="margin-bottom: 0;">FIST <span style="font-style: italic;"><I>m32int</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� ST(0) �洢�� <span style="font-style: italic;"><I>m32int</I></span></td></tr>
+	style="margin-bottom: 0;">將 ST(0) 儲存到 <span style="font-style: italic;"><I>m32int</I></span></td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -171,7 +171,7 @@ else
 	style="margin-bottom: 0;">FISTP <span style="font-style: italic;"><I>m16int</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� ST(0) �洢�� <span style="font-style: italic;"><I>m16int</I></span>���������Ĵ�����ջ</td></tr>
+	style="margin-bottom: 0;">將 ST(0) 儲存到 <span style="font-style: italic;"><I>m16int</I></span>，並彈出暫存器堆疊</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -182,7 +182,7 @@ else
 	style="margin-bottom: 0;">FISTP <span style="font-style: italic;"><I>m32int</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� ST(0) �洢�� <span style="font-style: italic;"><I>m32int</I></span>���������Ĵ�����ջ</td></tr>
+	style="margin-bottom: 0;">將 ST(0) 儲存到 <span style="font-style: italic;"><I>m32int</I></span>，並彈出暫存器堆疊</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -193,16 +193,16 @@ else
 	style="margin-bottom: 0;">FISTP <span style="font-style: italic;"><I>m64int</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� ST(0) �洢�� <span style="font-style: italic;"><I>m64int</I></span>���������Ĵ�����ջ</td></tr>
+	style="margin-bottom: 0;">將 ST(0) 儲存到 <span style="font-style: italic;"><I>m64int</I></span>，並彈出暫存器堆疊</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>說明</h2>
 
-<p>FIST ָ� ST(0) �Ĵ����е�ֵת�����з�����������������洢��Ŀ���������ֵ���԰����������������ʽ�洢��Ŀ�������ָ���洢Ŀ��ֵ��һ���ֽڵĵ�ַ��</p>
+<p>FIST 指令將 ST(0) 暫存器中的值轉換成有符號整數，並將結果儲存到目標運算元。值可以按字整數或短整數格式儲存。目標運算元指定儲存目標值第一個位元組的地址。</p>
 
-<p>FISTP ָ����ִ��ͬ FIST ָ����ͬ�Ĳ�����Ȼ�󵯳��Ĵ�����ջ��Ϊ�˵����Ĵ�����ջ���������� ST(0) �Ĵ������Ϊ�գ���ʹ��ջָ�� (TOP) ���� 1��FISTP ָ��Ҳ���԰���������ʽ�洢ֵ��</p>
+<p>FISTP 指令先執行同 FIST 指令相同的操作，然後彈出暫存器堆疊。爲了彈出暫存器堆疊，處理器將 ST(0) 暫存器標記為空，並使堆疊指針 (TOP) 遞增 1。FISTP 指令也可以按長整數格式儲存值。</p>
 
-<p>�±���ʾ��������ʽ�洢������ֵʱ�õ��Ľ����</p>
+<p>下表顯示按整數格式儲存各類數值時得到的結果。</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" width="82.051%" cellspacing="3" border="1" class="whs3">
@@ -225,7 +225,7 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4))
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='infinity.gif' width='9px' height='16px' border='0' class='img_whs6'>");}
 else
 {   document.write("<img src='infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='9px' height='16px' border='0' class='img_whs6'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='9px' height='16px' border='0' class='img_whs6'></noscript> ����� DEST ��ʽ����ֵ̫��</td>
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='9px' height='16px' border='0' class='img_whs6'></noscript> 或對於 DEST 格式而言值太大</td>
 <td valign="middle" width="44.453%" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">*</td></tr>
@@ -233,7 +233,7 @@ else
 <tr>
 <td valign="middle" width="55.547%" class="whs2">
 <p class=TableCell
-	style="margin-bottom: 0;">F �� &#x2212;1</td>
+	style="margin-bottom: 0;">F ≤ &#x2212;1</td>
 <td valign="middle" width="44.453%" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">-I</td></tr>
@@ -279,7 +279,7 @@ else
 <tr>
 <td valign="middle" width="55.547%" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">F �� +1</td>
+	style="margin-bottom: 0;">F ≥ +1</td>
 <td valign="middle" width="44.453%" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">+I</td></tr>
@@ -292,7 +292,7 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4))
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='infinity.gif' width='9px' height='16px' border='0' class='img_whs6'>");}
 else
 {   document.write("<img src='infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='9px' height='16px' border='0' class='img_whs6'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='9px' height='16px' border='0' class='img_whs6'></noscript> ����� DEST ��ʽ����ֵ̫��</td>
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='9px' height='16px' border='0' class='img_whs6'></noscript> 或對於 DEST 格式而言值太大</td>
 <td valign="middle" width="44.453%" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">*</td></tr>
@@ -306,22 +306,22 @@ else
 	style="margin-bottom: 0;">*</td></tr>
 </table>
 
-<p>��ע��F ��ʾ����ʵ����I ��ʾ������</p>
+<p>備註：F 表示有限實數。I 表示整數。</p>
 
-<p>* ��ʾ���������Ч (#IA) �쳣��</p>
+<p>* 表示浮點操作無效 (#IA) 異常。</p>
 
-<p>** 0 �� &plusmn;1������ȡ����ȡ��ģʽ��</p>
+<p>** 0 或 &plusmn;1，具體取決於取整模式。</p>
 
-<p>���Դ������ֵΪ������ֵ�������� FPU �����ֵ� RC �ֶ�ָ����ȡ��ģʽ��ȡ��Ϊ����ֵ��</p>
+<p>如果源運算元值為非整數值，將根據 FPU 控制字的 RC 欄位指定的取整模式，取整為整數值。</p>
 
-<p>���Ҫ�洢��ֵ����Ŀ���ʽ����̫���� <script type="text/javascript" language="JavaScript"><!--
+<p>如果要儲存的值對於目標格式而言太大、是 <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='infinity.gif' width='9px' height='16px' border='0' class='img_whs6'>");}
 else
 {   document.write("<img src='infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='9px' height='16px' border='0' class='img_whs6'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='9px' height='16px' border='0' class='img_whs6'></noscript>��NaN ��֧�ֵĸ�ʽ������������������Ч�쳣 (#IA) �����룬�����ɲ�����Ч�쳣�����Ҳ��Ὣ�κ�ֵ�洢��Ŀ��������������������Ч�쳣���������룬�����������ֵ�洢��Ŀ���������</p>
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='9px' height='16px' border='0' class='img_whs6'></noscript>、NaN 或不支援的格式，並且算術運算元無效異常 (#IA) 無掩碼，則產生操作無效異常，並且不會將任何值儲存到目標運算元。如果給操作無效異常設定了掩碼，則將無窮大整數值儲存到目標運算元。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted>DEST <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -335,61 +335,61 @@ else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs7'>");}
 //--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs7'></noscript> FISTP <br> THEN <br> PopRegisterStack;<br> FI;</p>
 
-<h2>Ӱ��� FPU ��־</h2>
+<h2>影響的 FPU 標誌</h2>
 
-<p>C1 - ���������ջ���磬������Ϊ 0��������ɲ���ȷ�쳣 (#P)�����ʾȡ������0 <script type="text/javascript" language="JavaScript"><!--
+<p>C1 - 如果發生堆疊下溢，則設定為 0。如果產生不精確異常 (#P)，則表示取整方向：0 <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='arrwleft.gif' width='13px' height='16px' border='0' class='img_whs7'>");}
 else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs7'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs7'></noscript>������ȡ����1<script type="text/javascript" language="JavaScript"><!--
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs7'></noscript>非向上取整：1<script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='arrwleft.gif' width='13px' height='16px' border='0' class='img_whs7'>");}
 else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs7'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs7'></noscript>����ȡ�����������Ϊ 0�� </p>
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs7'></noscript>向上取整。否則清除為 0。 </p>
 
-<p>C0��C2��C3 - δ���塣</p>
+<p>C0、C2、C3 - 未定義。</p>
 
-<h2>�����쳣</h2>
+<h2>浮點異常</h2>
 
-<p>#IS - ������ջ���硣</p>
+<p>#IS - 發生堆疊下溢。</p>
 
-<p>#IA - Դ����������Ŀ���ʽ����̫��Դ�������� NaN ֵ��֧�ֵĸ�ʽ��</p>
+<p>#IA - 源運算元對於目標格式而言太大；源運算元是 NaN 值或不支援的格式。</p>
 
-<p>#P - ֵ�޷���Ŀ���ʽ��ȷ��ʾ��</p>
+<p>#P - 值無法按目標格式精確表示。</p>
 
-<h2>����ģʽ�쳣</h2>
+<h2>保護模式異常</h2>
 
-<p>#GP(0) - ���Ŀ�������λ�ڲ���д�ĶΡ�����ڴ��������Ч��ַ���� CS��DS��ES��FS �� GS �����ơ���� DS��ES��FS���� GS �Ĵ������ڷ����ڴ棬�����������յĶ�ѡ������</p>
+<p>#GP(0) - 如果目標運算元位於不可寫的段。如果記憶體運算元有效地址超出 CS、DS、ES、FS 或 GS 段限制。如果 DS、ES、FS、或 GS 暫存器用於訪問記憶體，並且它包含空的段選擇器。</p>
 
-<p>#SS(0) - ����ڴ��������Ч��ַ���� SS �����ơ�</p>
+<p>#SS(0) - 如果記憶體運算元有效地址超出 SS 段限制。</p>
 
-<p>#NM - ��� CR0 �е� EM �� TS ����Ϊ 1��</p>
+<p>#NM - 如果 CR0 中的 EM 或 TS 設定為 1。</p>
 
-<p>#PF(�������) - �������ҳ����</p>
+<p>#PF(錯誤程式碼) - 如果發生頁錯誤。</p>
 
-<p>#AC(0) - ������ö����鲢�ڵ�ǰ��Ȩ����Ϊ 3 ʱ����δ������ڴ����á�</p>
+<p>#AC(0) - 如果啟用對齊檢查並在目前特權級別為 3 時進行未對齊的記憶體引用。</p>
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>實地址模式異常</h2>
 
-<p>#GP - ����ڴ��������Ч��ַ���� CS��DS��ES��FS �� GS �����ơ�</p>
+<p>#GP - 如果記憶體運算元有效地址超出 CS、DS、ES、FS 或 GS 段限制。</p>
 
-<p>#SS - ����ڴ��������Ч��ַ���� SS �����ơ�</p>
+<p>#SS - 如果記憶體運算元有效地址超出 SS 段限制。</p>
 
-<p>#NM - ��� CR0 �е� EM �� TS ����Ϊ 1��</p>
+<p>#NM - 如果 CR0 中的 EM 或 TS 設定為 1。</p>
 
-<h2>�� 8086 ģʽ�쳣</h2>
+<h2>虛 8086 模式異常</h2>
 
-<p>#GP(0) - ����ڴ��������Ч��ַ���� CS��DS��ES��FS �� GS �����ơ�</p>
+<p>#GP(0) - 如果記憶體運算元有效地址超出 CS、DS、ES、FS 或 GS 段限制。</p>
 
-<p>#SS(0) - ����ڴ��������Ч��ַ���� SS �����ơ�</p>
+<p>#SS(0) - 如果記憶體運算元有效地址超出 SS 段限制。</p>
 
-<p>#NM - ��� CR0 �е� EM �� TS ����Ϊ 1��</p>
+<p>#NM - 如果 CR0 中的 EM 或 TS 設定為 1。</p>
 
-<p>#PF(�������) - �������ҳ����</p>
+<p>#PF(錯誤程式碼) - 如果發生頁錯誤。</p>
 
-<p class="whs8">#AC(0) - ��������ö����������½���δ������ڴ����á� </p>
+<p class="whs8">#AC(0) - 如果在啟用對齊檢查的情況下進行未對齊的記憶體引用。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

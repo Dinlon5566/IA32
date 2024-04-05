@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400291.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
 
-<title>mov ar - �ƶ�Ӧ�üĴ���ָ��</title>
+<title>mov ar - 移動應用暫存器指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:54:17 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nM - ָ��\nmov ar - �ƶ�Ӧ�üĴ���ָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nM - 指令\nmov ar - 移動應用暫存器指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,16 +116,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">�ƶ�Ӧ�üĴ���ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">移動應用暫存器指令</h1>
 
 <p><span style="font-weight: bold;"><B>mov ar</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400292.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400292.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字型慣例</a>
  </p>
 
-<p>ָ������ I��M</p>
+<p>指令型別 I、M</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) mov <span style="font-style: italic;"><I>r1</I></span> = <span style="font-style: italic;"><I>ar3</I></span> pseudo-op</p>
 
@@ -150,24 +150,24 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>說明</B></span></p>
 
-<p>Դ���������Ƶ�Ŀ��Ĵ�����</p>
+<p>源運算元複製到目標暫存器。</p>
 
-<p>�� from_form �У�<span style="font-style: italic;"><I>ar3</I></span> ָ����Ӧ�üĴ������Ƶ� <span style="x-condition: eclipse;">GR</span><span style="font-style: italic;"><I>r1</I></span>���������Ӧ�� NaT λ��<script type="text/javascript"
+<p>在 from_form 中，<span style="font-style: italic;"><I>ar3</I></span> 指定的應用暫存器複製到 <span style="x-condition: eclipse;">GR</span><span style="font-style: italic;"><I>r1</I></span>，並清除對應的 NaT 位。<script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A1');
 //--></script></p>
 
-<p>�� to_form �У�GR <span style="font-style: italic;"><I>r2</I></span> �е�ֵ���� register_form �У������� <span style="font-style: italic;"><I>imm8</I></span> �о���������չ��ֵ���� immediate_form �У������� AR <span style="font-style: italic;"><I>ar3</I></span>���� register_form �У�������� GR <span style="font-style: italic;"><I>r2</I></span> ��Ӧ�� NaT λ���򴥷�&ldquo;�Ĵ��� NaT ʹ��&rdquo;����</p>
+<p>在 to_form 中，GR <span style="font-style: italic;"><I>r2</I></span> 中的值（在 register_form 中），或是 <span style="font-style: italic;"><I>imm8</I></span> 中經過符號擴充套件的值（在 immediate_form 中），放入 AR <span style="font-style: italic;"><I>ar3</I></span>。在 register_form 中，如果設定 GR <span style="font-style: italic;"><I>r2</I></span> 對應的 NaT 位，則觸發&ldquo;暫存器 NaT 使用&rdquo;錯誤。</p>
 
-<p>ÿ��ִ�е�Ԫ��M �� I�����ʶ�ֻ�ܷ��ʲ���Ӧ�üĴ�����<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400130.htm" style="x-condition: eclipse;">Ӧ�üĴ�������</a><script 
+<p>每個執行單元（M 或 I）訪問都只能訪問部分應用暫存器。<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400130.htm" style="x-condition: eclipse;">應用暫存器表格</a><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A3');
-//--></script>ָ������ִ�е�Ԫ���Է�����ЩӦ�üĴ������Ӵ���ĵ�Ԫ���ͷ���Ӧ�üĴ���ʱ�����ᵼ��&ldquo;�Ƿ�����&rdquo;����</p>
+//--></script>指出哪種執行單元可以訪問哪些應用暫存器。從錯誤的單元型別訪問應用暫存器時，將會導致&ldquo;非法操作&rdquo;錯誤。</p>
 
-<p>��ָ���ж�����ʽ����ʹ��α��������ָ��ִ�е�Ԫ�ı�Ҫ��AR �ķ������ǰ�ʾ��Ҫִ�����л���</p>
+<p>此指令有多種形式，它使用偽操作消除指定執行單元的必要。AR 的訪問總是暗示需要執行序列化。</p>
 
 
 <!--(HR)============================================================-->

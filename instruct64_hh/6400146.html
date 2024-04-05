@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400146.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:45 GMT -->
 <head>
 
-<title>br - ��ָ֧��</title>
+<title>br - 分支指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="03 6, 2002 12:41:04 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nB - ָ��\nbr - ��ָ֧��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nB - 指令\nbr - 分支指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,16 +116,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">��ָ֧��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">分支指令</h1>
 
 <p><span style="font-weight: bold;"><B>br</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400154.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400154.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字型慣例</a>
  </p>
 
-<p>ָ������ B</p>
+<p>指令型別 B</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>bp</I></span>) br.<span style="x-condition: eclipse;">btype</span><script type="text/javascript"
 	language=JavaScript1.2><!--
@@ -158,33 +158,33 @@ kadovFilePopupInit('A4');
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>說明</B></span></p>
 
-<p>�Է�֧������ֵ�����ݽ��ִ�з�֧�������ִ�������е���һ��ָ����߼�������˵����֧��ִ�и�����ָͬ������ǰ�����зǷ�ָ֧���ִ��֮����ִ�еķ�֧�ϣ�ִ�д�ָ��� 0 ��ʼ��</p>
+<p>對分支條件求值，根據結果執行分支，或繼續執行序列中的下一條指令。從邏輯意義上說，分支的執行跟在相同指令組中前面所有非分支指令的執行之後。在執行的分支上，執行從指令槽 0 開始。</p>
 
-<p>��֧������ IP ��Է�֧���ӷ�֧������ IP ��Է�֧������е� <span style="font-style: italic;"><I>target25</I></span> ������ָ��Ҫִ�еķ�֧�ı�ǩ���ڷ�ָ֧���У�����Ϊ�з���������λ���� (<span style="font-style: italic;"><I>imm21</I></span>) ���б��룬����Ŀ���֧���������ָ��ķ�֧��֮�� (<span   style="font-style: italic;"><I>imm21</I></span> = <span style="font-style: italic;"><I>target25</I></span> - IP &gt;&gt; 4)�����ڼ�ӷ�֧��Ŀ���ַȡ�� <span style="x-condition: eclipse;">BR</span><script 
+<p>分支可以與 IP 相對分支或間接分支。對於 IP 相對分支，彙編中的 <span style="font-style: italic;"><I>target25</I></span> 運算元指定要執行的分支的標籤。在分支指令中，它作為有符號立即數位移量 (<span style="font-style: italic;"><I>imm21</I></span>) 進行編碼，放在目標分支束與包含此指令的分支束之間 (<span   style="font-style: italic;"><I>imm21</I></span> = <span style="font-style: italic;"><I>target25</I></span> - IP &gt;&gt; 4)。對於間接分支，目標地址取自 <span style="x-condition: eclipse;">BR</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A5');
-//--></script> <span style="font-style: italic;"><I>b2</I></span>��</p>
+//--></script> <span style="font-style: italic;"><I>b2</I></span>。</p>
 
-<p>��������֧������α���������ǵı�����������֧���� (<span style="x-condition: eclipse;">btype</span><script type="text/javascript"
+<p>無條件分支有兩種偽操作。它們的編碼與條件分支類似 (<span style="x-condition: eclipse;">btype</span><script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A6');
-//--></script> = COND)��<span style="font-style: italic;"><I>bp</I></span> �ֶ�ָ�� <span style="x-condition: eclipse;">PR</span><script 
+//--></script> = COND)，<span style="font-style: italic;"><I>bp</I></span> 欄位指定 <span style="x-condition: eclipse;">PR</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A7');
-//--></script> 0������ <span style="x-condition: eclipse;">bwh</span><script type="text/javascript"
+//--></script> 0，並帶 <span style="x-condition: eclipse;">bwh</span><script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A8');
-//--></script> ��ʾ sptk��</p>
+//--></script> 提示 sptk。</p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400003.htm">������֧����</a></p>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400003.htm">基本分支型別</a></p>
 
-<p>��֧����ȷ����μ����֧�������Լ���֧�Ƿ�������Ч������д�����ӼĴ����������ڻ�����֧���ͣ���֧����ֻ��ָ����ν�ʼĴ����е�ֵ����Ϊ<span style="font-weight: bold;"><B>��֧ν��</B></span>����</p>
+<p>分支型別確定如何計算分支條件，以及分支是否有其它效果（如寫入鏈接暫存器）。對於基本分支型別，分支條件只是指定的謂詞暫存器中的值（稱為<span style="font-weight: bold;"><B>分支謂詞</B></span>）。</p>
 
-<p>������֧���Ͱ�����</p>
+<p>基本分支型別包括：</p>
 
 <ul>
 	
@@ -202,25 +202,25 @@ kadovFilePopupInit('A9');
 	<li class=kadov-p-CLinkBul><p CLASS=LinkBul><span style="x-condition: eclipse;">loops</span></p></li>
 </ul>
 
-<p>���ڷ�ָ֧�&ldquo;��д���&rdquo;(RAW) ��&ldquo;�ȶ���д&rdquo;(WAR) �������Ҫ�������в�ͬ��������ָͬ�����еĺ�����ָ֧����ԣ��Ƿ�ָ֧��� BR��<span 
+<p>對於分支指令，&ldquo;先寫後讀&rdquo;(RAW) 與&ldquo;先讀後寫&rdquo;(WAR) 在相關性要求方面略有不同。對於相同指令組中的後續分支指令而言，非分支指令對 BR、<span 
  style="x-condition: eclipse;">PR</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A10');
-//--></script>��ν�ʼĴ������� PFS �ĸ��Ķ��ǿɼ��ģ�Ҳ����˵����Щ��Դ��ʹ�������Ƶ� RAW��Ʃ��˵�����ӳٵıȽϷ�֧���о�����ˡ����� RAW Ҫ�������� LC��EC Ӧ�üĴ����Լ� RRB��</p>
+//--></script>（謂詞暫存器）及 PFS 的更改都是可見的，也就是說，這些資源可使用受限制的 RAW。譬如說，低延遲的比較分支序列就是如此。常規 RAW 要求適用於 LC、EC 應用暫存器以及 RRB。</p>
 
-<p>��ָ�����У������ȡ��д��ָ����ַ�֧���������� PR 63 �ϴ��� WAR ����ԡ����磬br.wtop �� br.wexit ����ʹ�� PR[63] ��Ϊ���޶�ν�ʣ����� PR[63] ��������ָͬ������ br.wtop �� br.wexit ֮ǰ�κη�֧���޶�ν�ʡ�</p>
+<p>在指令組中，如果讀取與寫入指令都出現分支，則不允許在 PR 63 上存在 WAR 相關性。例如，br.wtop 或 br.wexit 不得使用 PR[63] 作為其限定謂詞，並且 PR[63] 不得是相同指令組中 br.wtop 或 br.wexit 之前任何分支的限定謂詞。</p>
 
-<p>��������Է����Ŀ�ģ�ѭ���ͷ�֧���ǻ���Ч��д���������Դ�����������Ƿ�ִ�С�cloop �������ǻ���Ч��д�� LC��LC Ϊ 0 ʱ��cloop ��֧�������ֲ��䣬��Ӳ�����ܻᰴ��ʹ����ͬ��ֵ��д LC �İ취��ʵʩ������Ϊ��������ƣ�br.ctop �� br.cexit ������Ч��д�� LC��EC��RRB �Լ� PR[63]��br.wtop �� br.wexit ������Ч��д�� EC��RRB �Լ� PR[63]��</p>
+<p>出於相關性方面的目的，循環型分支總是會有效地寫入關聯的資源，無論它們是否執行。cloop 型別總是會有效地寫入 LC。LC 為 0 時，cloop 分支讓它保持不變，但硬體可能會按照使用相同的值重寫 LC 的辦法來實施這種行為。與此類似，br.ctop 與 br.cexit 總是有效地寫入 LC、EC、RRB 以及 PR[63]；br.wtop 與 br.wexit 總是有效地寫入 EC、RRB 以及 PR[63]。</p>
 
-<p>�����Ǹ��ַ�֧��ʾ��ɷ���ֵ��&ldquo;�Ƿ�Ԥ�����&rdquo;��ʾ������ɷ�<span style="x-condition: eclipse;"> (bwh)</span> ��ָ������<script type="text/javascript"
+<p>下面是各種分支提示完成符的值：&ldquo;是否預測策略&rdquo;提示（在完成符<span style="x-condition: eclipse;"> (bwh)</span> 中指明）、<script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A11');
-//--></script>  <span style="x-condition: eclipse;">˳��Ԥȡ��ʾ</span><script 
+//--></script>  <span style="x-condition: eclipse;">順序預取提示</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A12');
-//--></script> (ph<span class=BSSCPopup>) </span>�Լ�<span style="x-condition: eclipse;">��֧����ȡ����ʾ</span> (dh)</p>
+//--></script> (ph<span class=BSSCPopup>) </span>以及<span style="x-condition: eclipse;">分支快取取消提示</span> (dh)</p>
 
 
 <!--(HR)============================================================-->

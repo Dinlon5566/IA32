@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/l2_m-state_lines_evicted_(excluding_hardware-prefetched).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:04 GMT -->
 <head>
 
-<title>�ջصĶ��� M ״̬�����ߣ��ų�Ӳ��Ԥȡ�ģ�</title>
+<title>收回的二級 M 狀態快取線（排除硬體預取的）</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta NAME=MS-HAID CONTENT=L2_M-state_lines_evicted>
 <meta NAME=MS-HAID CONTENT=mstate>
 <meta name=date content="02 24, 2003 11:29:23 AM">
@@ -83,7 +83,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M �������¼�\n���������¼�\n�ջصĶ��� M ״̬�����ߣ��ų�Ӳ��Ԥȡ�ģ�");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n英特爾(R) 奔騰(R) M 處理器事件\n二級快取事件\n收回的二級 M 狀態快取線（排除硬體預取的）");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,16 +106,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>�ջصĶ��� M ״̬�����ߣ��ų�Ӳ��Ԥȡ�ģ�</h1>
+<h1>收回的二級 M 狀態快取線（排除硬體預取的）</h1>
 
 <p class="whs1">L2_M_LINES_OUT</p>
 
-<p>���¼�ͳ�ƴӶ��������ջص� M ״̬���޸ĵģ������ߵ�������������������һ����������ʹ����ͬ�Ļ����ߣ��������滻��Ե�ʣ������߻�� L2 �����ջأ�������Ӳ��Ԥȡ�ġ�</p>
+<p>此事件統計從二級快取收回的 M 狀態（修改的）快取線的數量。由於匯流排上另一個代理請求使用相同的快取線，或由於替換的緣故，快取線會從 L2 快取收回，不包括硬體預取的。</p>
 
-<p>M ״̬�������ջػᵼ�������Ϸ���д�������</p>
+<p>M 狀態快取線收回會導致匯流排上發生寫入操作。</p>
 
 <p>&nbsp; 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','�ջصĶ��� M ״̬������','l2_m-state_lines_evicted.htm','�ջصĶ��� M ״̬�����ߣ�����Ӳ��Ԥȡ�ģ�','l2_m-state_lines_evicted_(hardware-prefetched_only).htm');return false;" title="�����ջصĶ��� M ״̬�������¼�"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%85%b6%e5%ae%83%e6%94%b6%e5%9b%9e%e7%9a%84%e4%ba%8c%e7%ba%a7_m_%e7%8a%b6%e6%80%81%e7%bc%93%e5%ad%98%e7%ba%bf%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=196 alt="�����ջصĶ��� M ״̬�������¼�"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','收回的二級 M 狀態快取線','l2_m-state_lines_evicted.htm','收回的二級 M 狀態快取線（僅限硬體預取的）','l2_m-state_lines_evicted_(hardware-prefetched_only).htm');return false;" title="其它收回的二級 M 狀態快取線事件"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%85%b6%e5%ae%83%e6%94%b6%e5%9b%9e%e7%9a%84%e4%ba%8c%e7%ba%a7_m_%e7%8a%b6%e6%80%81%e7%bc%93%e5%ad%98%e7%ba%bf%e4%ba%8b%e4%bb%b6.gif" border=0 height=20 width=196 alt="其它收回的二級 M 狀態快取線事件"></a>
 
 
  </p>

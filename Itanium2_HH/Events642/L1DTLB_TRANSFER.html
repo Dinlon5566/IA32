@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -80,7 +80,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\nTLB �¼�\nL1DTLB_TRANSFER");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 安騰(R) 2 處理器\n英特爾(R) 安騰(R) 2 處理器事件\nTLB 事件\nL1DTLB_TRANSFER");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,14 +105,14 @@ else
 </script>
 <h1>L1DTLB_TRANSFER</h1>
 
-<b style="font-weight: bold;">���⣺</b>L1D_READS ͳ�Ƶķ������� L2DTLB �� L1DTLB δ����<b style="font-weight: bold;"><br> ���</b>TLB �¼�<b style="font-weight: bold;"><br> IAR/DAR/OPC��</b>Y/Y/Y<b style="font-weight: bold;"><br> �¼����룺</b>0xC0<b style="font-weight: bold;"><br> ���ÿ����������</b>1 
+<b style="font-weight: bold;">標題：</b>L1D_READS 統計的訪問命中 L2DTLB 的 L1DTLB 未命中<b style="font-weight: bold;"><br> 類別：</b>TLB 事件<b style="font-weight: bold;"><br> IAR/DAR/OPC：</b>Y/Y/Y<b style="font-weight: bold;"><br> 事件程式碼：</b>0xC0<b style="font-weight: bold;"><br> 最大每週期增量：</b>1 
 
-<p><b style="font-weight: bold;">���壺</b>ͳ�� L1D_READS ͳ�Ƶķ����У�δ���� L1DTLB ��ȴ���� L2DTLB �Ĵ�����</p>
+<p><b style="font-weight: bold;">定義：</b>統計 L1D_READS 統計的訪問中，未命中 L1DTLB 但卻命中 L2DTLB 的次數。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> 備註</h3>
 
-<p class="whs2">���������� 0&ldquo;L1D ����&rdquo;�¼���Ҫ�������¼��������е��¼�֮һ����ʹ�� PMD5 �������ڴ������� a;;b �У���� &quot;a&quot; ִ���쳣�������� &quot;b&quot; Ҫ����� L2DTLB-&gt;L1DTLB ���䣬��ִ�иô��䣬�����ڴ��¼���ͳ�ơ�����ͬ L1D_READS ����һ�¶��ԣ���ܱ�Ҫ��L1D_READS ��Ϊû�дﵽ &quot;b&quot; ������ͳ������ </p>
+<p class="whs2">這是有限組 0&ldquo;L1D 快取&rdquo;事件。要測量此事件，此組中的事件之一必須使用 PMD5 測量。在程式碼序列 a;;b 中，如果 &quot;a&quot; 執行異常處理，且 &quot;b&quot; 要求進行 L2DTLB-&gt;L1DTLB 傳輸，則執行該傳輸，但不在此事件中統計。對於同 L1D_READS 保持一致而言，這很必要，L1D_READS 因為沒有達到 &quot;b&quot; 而不會統計它。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

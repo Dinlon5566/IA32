@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/ptr_-_purge_translation_register_instruction.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
 
-<title>ptr - ���ת��Ĵ���ָ��</title>
+<title>ptr - 清除轉譯暫存器指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="02 6, 2003 4:21:21 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -85,7 +85,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nP - ָ��\nptr - ���ת��Ĵ���ָ��");
+	addTocInfo("參考\n指令集\n英特爾(R) 安騰(R) 指令\nP - 指令\nptr - 清除轉譯暫存器指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,13 +108,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">���ת��Ĵ���ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安騰(R) 處理器主題" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">清除轉譯暫存器指令</h1>
 
 <p class="whs2">ptr</p>
 
-<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/ptr-operation.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a></p>
+<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/ptr-operation.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字型慣例</a></p>
 
-<p class="whs2">��ʽ</p>
+<p class="whs2">格式</p>
 
 <p class=Preformatted>(qp)ptr.d r3 , r2 &#xA0;&#xA0;data_form M45</p>
 
@@ -125,45 +125,45 @@ else
 <hr class="whs3">
 
 
-<p><b style="font-weight: bold;">˵��</b></p>
+<p><b style="font-weight: bold;">說明</b></p>
 
-<p class="whs4"><span><b style="font-weight: normal;">��������ʽ�Ĵ�ָ���У�����������ת��Ĵ����뻺�棬</span><span style="font-weight: normal;">�Բ��������ַ��ҳ��Сָͬ������������ַ�������ַ��Χ���ֻ�ȫ���ص���������Ŀ��������Щ��Ŀ������ɾ����������ʽ�������Ӱ��ָ��</span></b><b><span style="font-weight: normal;">ת��Ĵ����е���Ŀ��</span></b></p>
+<p class="whs4"><span><b style="font-weight: normal;">在數據形式的此指令中，將搜索數據轉譯暫存器與快取，</span><span style="font-weight: normal;">以查詢虛擬地址與頁大小同指定的清除虛擬地址與清除地址範圍部分或全部重疊的所有專案。所有這些專案都將被刪除。數據形式的清除不影響指令</span></b><b><span style="font-weight: normal;">轉譯暫存器中的專案。</span></b></p>
 
-<p class="whs4"><span><b style="font-weight: normal;">��ָ����ʽ�Ĵ�ָ���У�������ָ��ת��Ĵ����뻺�棬</span><span style="font-weight: normal;">�Բ��������ַ��ҳ��Сָͬ������������ַ�������ַ��Χ���ֻ�ȫ���ص���������Ŀ��������Щ��Ŀ������ɾ����ָ����ʽ�������Ӱ������</span></b><b><span style="font-weight: normal;">ת��Ĵ����е���Ŀ��</span></b></p>
+<p class="whs4"><span><b style="font-weight: normal;">在指令形式的此指令中，將搜索指令轉譯暫存器與快取，</span><span style="font-weight: normal;">以查詢虛擬地址與頁大小同指定的清除虛擬地址與清除地址範圍部分或全部重疊的所有專案。所有這些專案都將被刪除。指令形式的清除不影響數據</span></b><b><span style="font-weight: normal;">轉譯暫存器中的專案。</span></b></p>
 
-<p class="whs4"><span><b style="font-weight: normal;">��������������ʽ�У�ָ��������ת�뻺�����������Ŀ�����ܻ���������ָ�������޻��࣬</span><span style="font-weight: normal;">����ɾ��ת�뻺���е�������Ŀ��</span></b></p>
+<p class="whs4"><span><b style="font-weight: normal;">此外在這兩種形式中，指令與數據轉譯快取中清除的專案都可能會比清除參數指定的上限還多，</span><span style="font-weight: normal;">包括刪除轉譯快取中的所有專案。</span></b></p>
 
-<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;">��������ַ�� GR r3 ��λ {60:0} ָ������������ʶ�� GR r3 ��λ {63:61} ѡ��GR</span><span style="font-weight: normal; font-style: italic;"><I> r2</I></span><span   style="font-weight: normal;"> ���ֽ�Ϊ��λ���� 1&lt;&lt;GR[</span><span style="font-weight: normal; font-style: italic;"><I>r2</I></span><span 
- style="font-weight: normal;">]{7:2}</span> <span style="font-weight: normal;">����ʽָ������ĵ�ַ��Χ��</span></b></p>
+<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;">清除虛擬地址由 GR r3 的位 {60:0} 指定，清除區域標識由 GR r3 的位 {63:61} 選擇。GR</span><span style="font-weight: normal; font-style: italic;"><I> r2</I></span><span   style="font-weight: normal;"> 以位元組為單位，按 1&lt;&lt;GR[</span><span style="font-weight: normal; font-style: italic;"><I>r2</I></span><span 
+ style="font-weight: normal;">]{7:2}</span> <span style="font-weight: normal;">的形式指定清除的地址範圍。</span></b></p>
 
-<p class="whs4"><b><span style="font-weight: normal;">��ָ��ֻ���������Ȩ����ִ�С�</span></b></p>
+<p class="whs4"><b><span style="font-weight: normal;">此指令只能在最高特權級別執行。</span></b></p>
 
-<p class="whs4"><b><span style="font-weight: normal;">���Ǳ��ز��������Ὣ����㲥���ദ����ϵͳ�е�������������</span></b></p>
+<p class="whs4"><b><span style="font-weight: normal;">這是本地操作，不會將清除廣播到多處理器系統中的其它處理器。</span></b></p>
 
-<p><b><span style="font-weight: normal;">������</span></b><span style="font-style: italic;"><I></I></span><span style="font-style: italic; x-condition: eclipse;"><I><a href="https://www.hgy413.com/hgydocs/IA32/Reference_HH/Intel_s_Software_Developer_s_Manuals.htm" style="x-condition: eclipse;">Ӣ�ض�(R) ����(R) ��ϵ�ṹ����������Ա�ֲ�</a></I></span><b><span style="font-weight: normal;"> �� 2 ���е�&ldquo;ת�뻺�� (TC)&rdquo;������</span></b></p>
+<p><b><span style="font-weight: normal;">具體如</span></b><span style="font-style: italic;"><I></I></span><span style="font-style: italic; x-condition: eclipse;"><I><a href="https://www.hgy413.com/hgydocs/IA32/Reference_HH/Intel_s_Software_Developer_s_Manuals.htm" style="x-condition: eclipse;">英特爾(R) 安騰(R) 體系結構軟件開發人員手冊</a></I></span><b><span style="font-weight: normal;"> 第 2 卷中的&ldquo;轉譯快取 (TC)&rdquo;所述。</span></b></p>
 
 <p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;"></span><span 
- style="font-weight: normal;">���������ܻ�ʹ��ת�뻺��������ת��Ĵ�������������ַӳ�䡣</span><span 
+ style="font-weight: normal;">處理器可能會使用轉譯快取來快取轉譯暫存器儲存的虛擬地址對映。</span><span 
  class=Code
 	style="font-weight: normal;">ptr.i</span><span 
- style="font-weight: normal;"> �� </span><span class=Code
+ style="font-weight: normal;"> 與 </span><span class=Code
 												style="font-weight: normal;">ptr.d</span><span 
- style="font-weight: normal;"> ָ�������������ת��Ĵ������Լ������ת��Ĵ���</b><b style="font-weight: normal;">���������ܰ�������Ӧ��ת�뻺���У���</b></span></p>
+ style="font-weight: normal;"> 指令清除處理器的轉譯暫存器，以及快取的轉譯暫存器</b><b style="font-weight: normal;">副本（可能包含在相應的轉譯快取中）。</b></span></p>
 
-<p><b style="font-weight: bold;">�ж�</b></p>
+<p><b style="font-weight: bold;">中斷</b></p>
 
 <ul type="disc" class="whs5">
 	
-	<li class=kadov-p><p><b><span style="font-weight: normal;">&ldquo;��Ȩ����&rdquo;���� </span></b></p></li>
+	<li class=kadov-p><p><b><span style="font-weight: normal;">&ldquo;特權操作&rdquo;錯誤 </span></b></p></li>
 	
-	<li class=kadov-p><p class="whs4"><b><span style="font-weight: normal;">&ldquo;δʹ�õ����ݵ�ַ&rdquo;����</span></b></p></li>
+	<li class=kadov-p><p class="whs4"><b><span style="font-weight: normal;">&ldquo;未使用的數據地址&rdquo;錯誤</span></b></p></li>
 	
-	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;">&ldquo;�Ĵ��� NaT ʹ��&rdquo;����</b></p></li>
+	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;">&ldquo;暫存器 NaT 使用&rdquo;錯誤</b></p></li>
 </ul>
 
-<p><b><b><span style="font-weight: bold;"><B>���л�</B></span></b></b></p>
+<p><b><b><span style="font-weight: bold;"><B>序列化</B></span></b></b></p>
 
-<p class="whs4"><b><span style="font-weight: normal;">����������ʽ���ڷ���ͬ�����ص�ָ��֮ǰ�����������ȷ����������л���������ȷ�������ɡ�����ָ����ʽ���ڻ�ȡͬ����йص�ָ��֮ǰ��</b><b style="font-weight: normal;">���������ȷ���ָ�����л���������ȷ�������ɡ�</b></span></p>
+<p class="whs4"><b><span style="font-weight: normal;">對於數據形式，在發出同清除相關的指令之前，軟體必須先發出數據序列化操作，以確保清除完成。對於指令形式，在獲取同清除有關的指令之前，</b><b style="font-weight: normal;">軟體必須先發出指令序列化操作，以確保清除完成。</b></span></p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/possible_spin_loop.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:36 GMT -->
 <head>
 
-<title>���ܵ�����ѭ��</title>
+<title>可能的自旋循環</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="05 25, 2003 2:23:15 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -94,7 +94,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������ĳͷ�\n���ܵ�����ѭ��");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器的懲罰\n可能的自旋循環");
 
 	}
 	if (window.writeBtnStyle)
@@ -122,24 +122,24 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4))
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='TA_logo.gif' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
 else
 {   document.write("<img src='TA_logo.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='TA_logo.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>���ܵ�����ѭ��</h1>
+//--></script><noscript><img src='TA_logo.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>可能的自旋循環</h1>
 
-<p><span style="font-weight: bold;"><B>Possible_Spin_Loop</B></span> ��һ�����档һ���߳����ڵȴ���һ���̵߳��źţ��˷� CPU ��Դ��</p>
+<p><span style="font-weight: bold;"><B>Possible_Spin_Loop</B></span> 是一個警告。一個執行緒正在等待另一個執行緒的訊號，浪費 CPU 資源。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs2"> ����</h3>
+	style="margin-left: 40px;"><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs2"> 建議</h3>
 
-<p class="whs3">Ӣ�ض�(R) ����(R) 4 ������</p>
+<p class="whs3">英特爾(R) 奔騰(R) 4 處理器</p>
 
-<p class="whs4">����������ѭ����ʹ�� <span class=Code>pause</span> ָ���֧��&ldquo;���̼߳���&rdquo;��HT �������Ĵ������ϣ���ָ�����ǵ�ǰ�߼��������ڳ����ٸ����ڣ��Ӷ��ͷ�&#xA0;CPU ��Դ��</p>
+<p class="whs4">考慮在自旋循環中使用 <span class=Code>pause</span> 指令。在支援&ldquo;超執行緒技術&rdquo;（HT 技術）的處理器上，此指令會給非當前邏輯處理器騰出幾百個週期，從而釋放&#xA0;CPU 資源。</p>
 
-<p class="whs3">����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 ������</p>
+<p class="whs3">含第三代數據流單指令多數據擴充套件指令集 (SSE3) 的英特爾(R) 奔騰(R) 4 處理器</p>
 
-<p class="whs4">����ʹ�� <span class=Code>monitor</span> �� <span class=Code>mwait</span> ָ���֧��&ldquo;���̼߳���&rdquo;��HT �������Ĵ������ϣ���Щָ�����ǵ�ǰ�߼������ڳ����ٸ����ڣ��Ӷ��ͷ�&#xA0;CPU ��Դ�������й���ϸ��Ϣ����������µ��Ż��ֲᡣ</p>
+<p class="whs4">考慮使用 <span class=Code>monitor</span> 與 <span class=Code>mwait</span> 指令。在支援&ldquo;超執行緒技術&rdquo;（HT 技術）的處理器上，這些指令會給非當前邏輯處理騰出幾百個週期，從而釋放&#xA0;CPU 資源。如需有關詳細資訊，請參閱最新的優化手冊。</p>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 ������','p_processor.htm','����(R) 4 ������','pentium(r)_4_processor.htm');return false;" title="Ӱ��Ĵ�����"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%bd%b1%e5%93%8d%e7%9a%84%e5%a4%84%e7%90%86%e5%99%a8.gif" border=0 height=20 width=82 alt="Ӱ��Ĵ�����"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','含第三代數據流單指令多數據擴充套件指令集 (SSE3) 的英特爾(R) 奔騰(R) 4 處理器','p_processor.htm','奔騰(R) 4 處理器','pentium(r)_4_processor.htm');return false;" title="影響的處理器"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%bd%b1%e5%93%8d%e7%9a%84%e5%a4%84%e7%90%86%e5%99%a8.gif" border=0 height=20 width=82 alt="影響的處理器"></a>
 
 
  </p>

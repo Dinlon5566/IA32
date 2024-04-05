@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/About_Branch_Events.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:49 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>���ڷ�֧�¼�</title>
+<title>關於分支事件</title>
 
 <!--(Meta)==========================================================-->
 
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\n��֧�¼�\n���ڷ�֧�¼�");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 安騰(R) 2 處理器\n英特爾(R) 安騰(R) 2 處理器事件\n分支事件\n關於分支事件");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,19 +105,19 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1 class=Overview><img src="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/itanium2_60b.gif" alt="����(R) 2 ����������" x-maintain-ratio="TRUE" align="right" width="48px" height="60px" align="right" border="0" class="img_whs1">���ڷ�֧�¼�</h1>
+<h1 class=Overview><img src="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/itanium2_60b.gif" alt="安騰(R) 2 處理器主題" x-maintain-ratio="TRUE" align="right" width="48px" height="60px" align="right" border="0" class="img_whs1">關於分支事件</h1>
 
-<p>��ע�⣬���ڷ�֧�¼���������ν��ֵ��Σ�ʧЧ����ζ���ѵ��ﲢ�ύ��֧������Ԥ������ϸ�ڰ����ڳɶԵļ������С�Ҫ��ȡ��ȷ��Ԥ��ʧ�����������ִ�����²�����BR_MISPRED_DETAIL.[umask] -BR_MISPRED_DETAIL2.[umask]��</p>
+<p>請注意，對於分支事件，不論其謂詞值如何，失效均意味著已到達並提交分支。關於預測結果的細節包含在成對的監視器中。要獲取精確的預測失誤計數，必須執行以下測量：BR_MISPRED_DETAIL.[umask] -BR_MISPRED_DETAIL2.[umask]。</p>
 
-<p>ͨ����ÿ����Ԫ����ִ�д�����㣬���Ի�ȡ BR_MISPRED_DETAIL �¼�����ʵֵ��</p>
+<p>通過對每個單元掩碼執行此項計算，可以獲取 BR_MISPRED_DETAIL 事件的真實值。</p>
 
-<p>��ȡ BR_PATH_PRED ��ʵֵ�ķ������в�ͬ��ָ�����д��ڶ����֧����Ԥ�⽫ִ������һ��ʱ����Ÿ��ߵ����ж˿ڶ���ǿ�ƽ���Ԥ��Ĳ�ִ��ģʽ��������ʵ��֪�����ǵ���ʵԤ����Ϣ��</p>
+<p>獲取 BR_PATH_PRED 真實值的方法略有不同。指令束中存在多個分支，且預測將執行其中一個時，編號更高的所有埠都會強制進入預測的不執行模式，而不用實際知道它們的真實預測資訊。</p>
 
-<p>��ʵ�� OKPRED_NOTTAKEN Ԥ��·����Ϣ����ͨ��ִ�����¼����ȡ��BR_PATH_PRED.[��֧����].OKPRED_NOTTAKEN - BR_PATH_PRED2.[��֧����].UNKNOWNPRED_NOTTAKEN������ʱʹ�ø������¼�ָ������ͬ&ldquo;��֧����&rdquo;��ALL��IPREL��RETURN��NRETIND����</p>
+<p>真實的 OKPRED_NOTTAKEN 預測路徑資訊可以通過執行以下計算獲取：BR_PATH_PRED.[分支型別].OKPRED_NOTTAKEN - BR_PATH_PRED2.[分支型別].UNKNOWNPRED_NOTTAKEN，計算時使用給兩個事件指定的相同&ldquo;分支型別&rdquo;（ALL、IPREL、RETURN、NRETIND）。</p>
 
-<p>���Ƶأ���ʵ�� MISPRED_TAKEN Ԥ��·����Ϣ����ͨ��ִ�����¼����ȡ��BR_PATH_PRED.[��֧����].MISPRED_TAKEN - BR_PATH_PRED2.[��֧����].UKNOWNPRED_TAKEN������ʱʹ�ø������¼�ѡ�����ͬ&ldquo;��֧����&rdquo;��ALL��IPREL��RETURN��NRETIND����</p>
+<p>類似地，真實的 MISPRED_TAKEN 預測路徑資訊可以通過執行以下計算獲取：BR_PATH_PRED.[分支型別].MISPRED_TAKEN - BR_PATH_PRED2.[分支型別].UKNOWNPRED_TAKEN，計算時使用給兩個事件選擇的相同&ldquo;分支型別&rdquo;（ALL、IPREL、RETURN、NRETIND）。</p>
 
-<p>BRANCH_EVENT ͳ��&ldquo;��֧���ٻ�����&rdquo;����&ldquo;��֧ EAR&rdquo;��������¼�������</p>
+<p>BRANCH_EVENT 統計&ldquo;分支跟蹤緩衝區&rdquo;（即&ldquo;分支 EAR&rdquo;）捕獲的事件數量。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/dtlb_store_misses_retired.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:50 GMT -->
 <head>
 
-<title>ʧЧ�� DTLB �洢δ����</title>
+<title>失效的 DTLB 儲存未命中</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="05 13, 2002 11:21:41 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -22,7 +22,7 @@
 <meta name=MS-HAID content="E4 Group - Memory ADVANCED">
 <meta name=MS-HAID content="E4 DTLB Store Misses Retired">
 <meta name=MS-HAID content=Events4>
-<meta name=MS-HAID content="Pentium4_�ڴ��¼�">
+<meta name=MS-HAID content="Pentium4_記憶體事件">
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
 <meta name=generator-major-version content=0.1>
 <meta name=generator-minor-version content=1>
@@ -89,7 +89,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������¼�\n���ܵ����¼� - �߼��¼�\n�ڴ��¼�\nʧЧ�� DTLB �洢δ����");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) 4 處理器\n英特爾(R) 奔騰(R) 4 處理器事件\n效能調整事件 - 高級事件\n記憶體事件\n失效的 DTLB 儲存未命中");
 
 	}
 	if (window.writeBtnStyle)
@@ -112,31 +112,31 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">ʧЧ�� DTLB �洢δ����</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/p4p60hw.gif" alt="奔騰(R) 4 處理器主題" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">失效的 DTLB 儲存未命中</h1>
 
-<p><span style="font-weight: bold;"><B>�߳��ض���</B></span>��<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Thread_Specific.htm">TS</a></p>
+<p><span style="font-weight: bold;"><B>執行緒特定性</B></span>：<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Thread_Specific.htm">TS</a></p>
 
-<p>��������ת���ѯ������ (DTLB) δ���е�ʧЧ�Ĵ洢ָ�������������ύ 32 λ�������ݵ�ַʱ�����Ƚ����ύ�� DTLB����ִ�л����ѯ֮ǰ��TLB ���洢��Ԫ������ 32 λ���Ե�ַת���� 36 λ�����ڴ��ַ��DTLB ��С��ṹȡ���ڴ���������ơ�Ϊת�� 32 λ���Ե�ַ��DTLB δ����Ҫ������ڴ���ʣ��Ի�ȡ����ϵͳҳĿ¼�������Ϣ�� </p>
+<p>遇到數據轉譯查詢緩衝區 (DTLB) 未命中的失效的儲存指令數。處理器提交 32 位線性數據地址時，首先將它提交到 DTLB。在執行快取查詢之前，TLB 將儲存單元產生的 32 位線性地址轉換成 36 位實體記憶體地址。DTLB 大小與結構取決於處理器的設計。為轉譯 32 位線性地址，DTLB 未命中要求進行記憶體訪問，以獲取操作系統頁目錄與表格資訊。 </p>
 
-<p>DTLB δ���в���һ����ζ�Ż���δ���С� </p>
-
-<h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Caution.gif" alt="ע��" x-maintain-ratio="TRUE" width="24px" height="23px" border="0" class="img_whs2"> ע��</h3>
-
-<p class="whs3">������ڴ���ʿ��ܻ�Ӱ�� CPI�� </p>
+<p>DTLB 未命中並不一定意味著快取未命中。 </p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/tip.gif" alt="��ʾ" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs4"> ��ʾ</h3>
+	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Caution.gif" alt="注意" x-maintain-ratio="TRUE" width="24px" height="23px" border="0" class="img_whs2"> 注意</h3>
 
-<p class="whs5">Ϊ��С�� DTLB δ���У�����С�����ݺ������С���Ա㣺</p>
+<p class="whs3">額外的記憶體訪問可能會影響 CPI。 </p>
+
+<h3 class=NoteTipHead
+	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/tip.gif" alt="提示" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs4"> 提示</h3>
+
+<p class="whs5">為最小化 DTLB 未命中，請最小化數據和區域大小，以便：</p>
 
 <ul type="disc" class="whs6">
 	
 	<ul type="disc" class="whs6">
 		
-		<li class=kadov-p><p>���ݷֲ������ٵ�ҳ�� </p></li>
+		<li class=kadov-p><p>數據分佈在最少的頁上 </p></li>
 		
-		<li class=kadov-p><p>���ݷֲ���ҳ��С�� DTLB ����</p></li>
+		<li class=kadov-p><p>數據分佈的頁數小於 DTLB 項數</p></li>
 	</ul>
 </ul>
 

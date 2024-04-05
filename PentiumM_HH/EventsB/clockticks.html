@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/clockticks.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:09 GMT -->
 <head>
 
-<title>ʱ���ź�</title>
+<title>時鐘訊號</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="02 24, 2003 11:26:53 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M �������¼�\nʱ���¼�\nʱ���ź�");
+	addTocInfo("參考\n處理器事件與建議\n英特爾(R) 奔騰(R) M 處理器\n英特爾(R) 奔騰(R) M 處理器事件\n時鐘事件\n時鐘訊號");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,17 +105,17 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>ʱ���ź�</h1>
+<h1>時鐘訊號</h1>
 
 <p class="whs1">CPU_CLK_UNHALTED</p>
 
-<p class="whs2">���¼������������ó�ͳ�ƴ�������ʱ���źţ�����������ʱ��Ĳ�����</p>
+<p class="whs2">此事件將計數器設定成統計處理器的時鐘訊號，以啟動基於時間的採樣。</p>
 
-<p>ʱ���ź�Ҳ��Ϊʱ�����ڻ� CPU ���ڣ��Ǵ�������ʶ�����Сʱ�䵥λ��������Ҳ���ڱ�ʾ������ִ��һ��ָ�������ʱ�䡣 </p>
+<p>時鐘訊號也稱為時鐘週期或 CPU 週期，是處理器能識別的最小時間單位。此術語也用於表示處理器執行一條指令所需的時間。 </p>
 
-<p>ʱ���ź�������ؼ��¼����ʵ���ɲ��֡�</p>
+<p>時鐘訊號是許多關鍵事件比率的組成部分。</p>
 
-<p>��Ӣ�ض�(R) ����(R) M �������У�ʱ���ź�ͳ�ƴ�����������ͣ״̬��ʱ���ź��������������ϵͳ (OS) �У���������ʹ�� <span class=Code>HLT</span> ָ����ʵ�֡�����Щ����ϵͳ�У����������ʱ���źŲ������ڡ���Ϊ��һ�㣬�����ܻᷢ��ʱ���źż����������ϵĵͣ�ͬ���ڲ���ʱ���봦����Ƶ�ʵó�������ֵ��ȥ��Զ�� </p>
+<p>在英特爾(R) 奔騰(R) M 處理器中，時鐘訊號統計處理器不在暫停狀態的時鐘訊號數。在許多操作系統 (OS) 中，空閑任務都使用 <span class=Code>HLT</span> 指令來實現。在這些操作系統中，空閑任務的時鐘訊號不計在內。因為這一點，您可能會發現時鐘訊號計數出乎意料的低，同基於採樣時間與處理器頻率得出的期望值相去甚遠。 </p>
 
 <p>&nbsp;</p>
 

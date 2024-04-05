@@ -7,7 +7,7 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400522.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:47:09 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
 <title>rse_restore_frame</title>
@@ -116,7 +116,7 @@ else
 </script>
 <h2>rse_restore_frame(preserved_sol,growth)</h2>
 
-<p class="whs1">�������������嵱ǰ֡��Ҫ����ɷ�֧���ػ� rfi ���£�preserved_sol ���� RSE.BOF ���ж��ٸ��Ĵ���Ҫ��ԭ��growth ���嵱ǰ֡��Ҫ�������ٸ��Ĵ�����growth ����Ϊ������preserved_sol ָ�������ļĴ�������ǳ�Ҫ��ԭ���Ĵ����������ᵼ�� preserved_sol ���Ĵ������� GR[32] ֮ǰ��������Ϊ GR[32]����ʱ����� AR[BSP]��ʹ֮�����洢�� GR[32] �ı��ݴ洢��Ԫ��ַ�����������ɾ��ļĴ�����С�� preserved_sol������뷢��ǿ���� RSE ���أ�֮���µĵ�ǰ֡�Żᱻ��Ϊ����Ч�ġ��˺�����ִ��ǿ���� RSE ���ء���� (AR[PFS].sof - AR[PFS].sol) &gt; (RSE.N_STACKED_PHYS - rse_number_of_dirty_regs())����˹��̷��� TRUE���� RSE �������ڷ�֧����ָ���Ϸ�����rfi ��û����������� </p>
+<p class="whs1">這兩個參數定義目前幀將要如何由分支返回或 rfi 更新：preserved_sol 定義 RSE.BOF 下有多少個暫存器要還原；growth 定義目前幀上要增長多少個暫存器（growth 可能為負）。preserved_sol 指定數量的暫存器將標記成要還原。暫存器重新命名會導致 preserved_sol 個暫存器中在 GR[32] 之前的重新命名為 GR[32]。此時會更新 AR[BSP]，使之包含儲存新 GR[32] 的備份儲存單元地址。如果污損與乾淨的暫存器數小於 preserved_sol，則必須發出強制性 RSE 載入，之後新的當前幀才會被認為是有效的。此函式不執行強制性 RSE 載入。如果 (AR[PFS].sof - AR[PFS].sol) &gt; (RSE.N_STACKED_PHYS - rse_number_of_dirty_regs())，則此過程返回 TRUE。此 RSE 條件僅在分支返回指令上發生。rfi 中沒有這種情況。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--
