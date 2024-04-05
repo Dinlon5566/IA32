@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/non-halted_system_cpi.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:50 GMT -->
 <head>
 
-<title>·ÇÔÝÍ£ÏµÍ³ CPI</title>
+<title>éžæš‚åœç³»ç»Ÿ CPI</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -79,7 +79,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("²Î¿¼\n´¦ÀíÆ÷ÊÂ¼þÓë½¨Òé\nº¬µÚÈý´úÊý¾ÝÁ÷µ¥Ö¸Áî¶àÊý¾ÝÀ©Õ¹Ö¸Áî¼¯ (SSE3) µÄÓ¢ÌØ¶û(R) ±¼ÌÚ(R) 4 ´¦ÀíÆ÷\nº¬µÚÈý´úÊý¾ÝÁ÷µ¥Ö¸Áî¶àÊý¾ÝÀ©Õ¹Ö¸Áî¼¯ (SSE3) µÄÓ¢ÌØ¶û(R) ±¼ÌÚ(R) 4 ´¦ÀíÆ÷µÄ½¨Òé\n¹ØÓÚº¬µÚÈý´úÊý¾ÝÁ÷µ¥Ö¸Áî¶àÊý¾ÝÀ©Õ¹Ö¸Áî¼¯ (SSE3) µÄÓ¢ÌØ¶û(R) ±¼ÌÚ(R) 4 ´¦ÀíÆ÷µÄÏ¸½Ú\n·ÇÔÝÍ£ÏµÍ³ CPI");
+	addTocInfo("å‚è€ƒ\nå¤„ç†å™¨äº‹ä»¶ä¸Žå»ºè®®\nå«ç¬¬ä¸‰ä»£æ•°æ®æµå•æŒ‡ä»¤å¤šæ•°æ®æ‰©å±•æŒ‡ä»¤é›† (SSE3) çš„è‹±ç‰¹å°”(R) å¥”è…¾(R) 4 å¤„ç†å™¨\nå«ç¬¬ä¸‰ä»£æ•°æ®æµå•æŒ‡ä»¤å¤šæ•°æ®æ‰©å±•æŒ‡ä»¤é›† (SSE3) çš„è‹±ç‰¹å°”(R) å¥”è…¾(R) 4 å¤„ç†å™¨çš„å»ºè®®\nå…³äºŽå«ç¬¬ä¸‰ä»£æ•°æ®æµå•æŒ‡ä»¤å¤šæ•°æ®æ‰©å±•æŒ‡ä»¤é›† (SSE3) çš„è‹±ç‰¹å°”(R) å¥”è…¾(R) 4 å¤„ç†å™¨çš„ç»†èŠ‚\néžæš‚åœç³»ç»Ÿ CPI");
 
 	}
 	if (window.writeBtnStyle)
@@ -102,19 +102,19 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="Ó¢ÌØ¶û&#xAE; µ÷ÓÅÖúÊÖÖ÷Ìâ" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">·ÇÔÝÍ£ÏµÍ³ CPI</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="è‹±ç‰¹å°”&#xAE; è°ƒä¼˜åŠ©æ‰‹ä¸»é¢˜" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">éžæš‚åœç³»ç»Ÿ CPI</h1>
 
-<p>´Ë±ÈÂÊ´ú±íÃ¿Ö¸Áî·ÇÔÝÍ£Ê±ÖÓÐÅºÅÊý (CPI)¡£·ÇÔÝÍ£Ê±ÖÓÐÅºÅÍ³¼ÆÂß¼­´¦ÀíÆ÷Î´ÔÝÍ£Ê±µÄÊ±ÖÓÖÜÆÚ¡£¶ÔÓÚ¹Ø±Õ&ldquo;³¬Ïß³Ì¼¼Êõ&rdquo;(HT ¼¼Êõ) µÄ´¦ÀíÆ÷£¬ÓÉÓÚ´¦ÀíÆ÷Ã¿¸öÊ±ÖÓÖÜÆÚ×î¶à¿ÉÒÔÈÃ 3 ÌõÖ¸ÁîÊ§Ð§£¬Òò´Ë·ÇÔÝÍ£ CPI µÄÀíÂÛÏÂÏÞÊÇ 0.33¡£´ò¿ª&ldquo;HT ¼¼Êõ&rdquo;Ê±£¬ÓÉÓÚÃ¿ÎïÀíÊ±ÖÓÐÅºÅ¿ÉÒÔÍ³¼Æµ½ 2 ¸öÂß¼­Ê±ÖÓÐÅºÅ£¬Òò´ËÀíÂÛÏÂÏÞÊÇ 0.66¡£Êµ¼ÊÉÏ£¬Ó¦ÓÃ³ÌÐòºÜÉÙÄÜ¹»±Æ½ü CPI µÄÀíÂÛÖµ¡£¶ÔÓÚµ¥ÎïÀí´¦ÀíÆ÷ÏµÍ³£¬¹Ø±Õ&ldquo;HT ¼¼Êõ&rdquo;Ê±£¬1.0 ×óÓÒµÄ CPI Ó¦ÊÓÎªÁ¼ºÃ£»´ò¿ª&ldquo;HT ¼¼Êõ&rdquo;Ê±£¬2.0 ×óÓÒÓ¦ÊÓÎªÁ¼ºÃ¡£Ê¹ÓÃ Microsoft »òÓ¢ÌØ¶ûµÄ×îÐÂ±àÒëÆ÷¿ÉÒÔÏÔÖø¸ÄÉÆÓ¢ÌØ¶û(R) ±¼ÌÚ(R) 4 ´¦ÀíÆ÷ÉÏµÄÐÔÄÜ¡£<br>±¸×¢£º </p>
-
-<li class=kadov-p
-	class=kadov-p>CPI »ùÓÚÏµÍ³½øÐÐ¼ÆËã¡£Ëü´ú±íÏµÍ³ÖÐËùÓÐÂß¼­´¦ÀíÆ÷µÄÊ±ÖÓÐÅºÅ×ÜÊý³ýÒÔÏµÍ³ÖÐËùÓÐÂß¼­´¦ÀíÆ÷Ê§Ð§µÄÖ¸Áî×ÜÊý¡£</li>
+<p>æ­¤æ¯”çŽ‡ä»£è¡¨æ¯æŒ‡ä»¤éžæš‚åœæ—¶é’Ÿä¿¡å·æ•° (CPI)ã€‚éžæš‚åœæ—¶é’Ÿä¿¡å·ç»Ÿè®¡é€»è¾‘å¤„ç†å™¨æœªæš‚åœæ—¶çš„æ—¶é’Ÿå‘¨æœŸã€‚å¯¹äºŽå…³é—­&ldquo;è¶…çº¿ç¨‹æŠ€æœ¯&rdquo;(HT æŠ€æœ¯) çš„å¤„ç†å™¨ï¼Œç”±äºŽå¤„ç†å™¨æ¯ä¸ªæ—¶é’Ÿå‘¨æœŸæœ€å¤šå¯ä»¥è®© 3 æ¡æŒ‡ä»¤å¤±æ•ˆï¼Œå› æ­¤éžæš‚åœ CPI çš„ç†è®ºä¸‹é™æ˜¯ 0.33ã€‚æ‰“å¼€&ldquo;HT æŠ€æœ¯&rdquo;æ—¶ï¼Œç”±äºŽæ¯ç‰©ç†æ—¶é’Ÿä¿¡å·å¯ä»¥ç»Ÿè®¡åˆ° 2 ä¸ªé€»è¾‘æ—¶é’Ÿä¿¡å·ï¼Œå› æ­¤ç†è®ºä¸‹é™æ˜¯ 0.66ã€‚å®žé™…ä¸Šï¼Œåº”ç”¨ç¨‹åºå¾ˆå°‘èƒ½å¤Ÿé€¼è¿‘ CPI çš„ç†è®ºå€¼ã€‚å¯¹äºŽå•ç‰©ç†å¤„ç†å™¨ç³»ç»Ÿï¼Œå…³é—­&ldquo;HT æŠ€æœ¯&rdquo;æ—¶ï¼Œ1.0 å·¦å³çš„ CPI åº”è§†ä¸ºè‰¯å¥½ï¼›æ‰“å¼€&ldquo;HT æŠ€æœ¯&rdquo;æ—¶ï¼Œ2.0 å·¦å³åº”è§†ä¸ºè‰¯å¥½ã€‚ä½¿ç”¨ Microsoft æˆ–è‹±ç‰¹å°”çš„æœ€æ–°ç¼–è¯‘å™¨å¯ä»¥æ˜¾è‘—æ”¹å–„è‹±ç‰¹å°”(R) å¥”è…¾(R) 4 å¤„ç†å™¨ä¸Šçš„æ€§èƒ½ã€‚<br>å¤‡æ³¨ï¼š </p>
 
 <li class=kadov-p
-	class=kadov-p>Èç¹ûÃ¿¸öÎïÀí·â×°Ö§³ÖÒ»¸öÂß¼­´¦ÀíÆ÷£¬ÔÚ´ó¶àÊýÇé¿öÏÂ£¬&ldquo;·ÇÔÝÍ£&rdquo;Óë&ldquo;·ÇÐÝÃß&rdquo;³ß¶È²úÉúµÄ¼ÆÊýÊÇµÈ¼ÛµÄ¡£´ò¿ª&ldquo;HT ¼¼Êõ&rdquo;Ê±£¬Èç¹ûÂß¼­´¦ÀíÆ÷ÔÝÍ££¬Ôò·ÇÔÝÍ£Ê±ÖÓÐÅºÅÊÂ¼þ½«²»ÔÙµÝÔö£¬Ö±µ½´¦ÀíÆ÷ÍË³öÔÝÍ£×´Ì¬£¬¶øÔÚÔÝÍ£×´Ì¬ÖÐ£¬·ÇÐÝÃßÊ±ÖÓÐÅºÅÊÂ¼þ½«¼ÌÐøµÝÔö¡£ </li>
+	class=kadov-p>CPI åŸºäºŽç³»ç»Ÿè¿›è¡Œè®¡ç®—ã€‚å®ƒä»£è¡¨ç³»ç»Ÿä¸­æ‰€æœ‰é€»è¾‘å¤„ç†å™¨çš„æ—¶é’Ÿä¿¡å·æ€»æ•°é™¤ä»¥ç³»ç»Ÿä¸­æ‰€æœ‰é€»è¾‘å¤„ç†å™¨å¤±æ•ˆçš„æŒ‡ä»¤æ€»æ•°ã€‚</li>
+
+<li class=kadov-p
+	class=kadov-p>å¦‚æžœæ¯ä¸ªç‰©ç†å°è£…æ”¯æŒä¸€ä¸ªé€»è¾‘å¤„ç†å™¨ï¼Œåœ¨å¤§å¤šæ•°æƒ…å†µä¸‹ï¼Œ&ldquo;éžæš‚åœ&rdquo;ä¸Ž&ldquo;éžä¼‘çœ &rdquo;å°ºåº¦äº§ç”Ÿçš„è®¡æ•°æ˜¯ç­‰ä»·çš„ã€‚æ‰“å¼€&ldquo;HT æŠ€æœ¯&rdquo;æ—¶ï¼Œå¦‚æžœé€»è¾‘å¤„ç†å™¨æš‚åœï¼Œåˆ™éžæš‚åœæ—¶é’Ÿä¿¡å·äº‹ä»¶å°†ä¸å†é€’å¢žï¼Œç›´åˆ°å¤„ç†å™¨é€€å‡ºæš‚åœçŠ¶æ€ï¼Œè€Œåœ¨æš‚åœçŠ¶æ€ä¸­ï¼Œéžä¼‘çœ æ—¶é’Ÿä¿¡å·äº‹ä»¶å°†ç»§ç»­é€’å¢žã€‚ </li>
 
 <li class=kadov-p
 	class=kadov-p>
-Ã¿¸öº¬&ldquo;HT ¼¼Êõ&rdquo;µÄÎïÀí´¦ÀíÆ÷Ã¿ÎïÀíÊ±ÖÓÐÅºÅÉú³ÉÁ½¸öÂß¼­´¦ÀíÆ÷Ê±ÖÓÐÅºÅ¡£±È½Ï¾ßÓÐ²»Í¬ÊýÁ¿Âß¼­»òÎïÀí CPU µÄÏµÍ³µÄ CPI Ê±£¬±ØÐë½«ÕâÒ»µã¿¼ÂÇ½øÈ¥¡£ 
+æ¯ä¸ªå«&ldquo;HT æŠ€æœ¯&rdquo;çš„ç‰©ç†å¤„ç†å™¨æ¯ç‰©ç†æ—¶é’Ÿä¿¡å·ç”Ÿæˆä¸¤ä¸ªé€»è¾‘å¤„ç†å™¨æ—¶é’Ÿä¿¡å·ã€‚æ¯”è¾ƒå…·æœ‰ä¸åŒæ•°é‡é€»è¾‘æˆ–ç‰©ç† CPU çš„ç³»ç»Ÿçš„ CPI æ—¶ï¼Œå¿…é¡»å°†è¿™ä¸€ç‚¹è€ƒè™‘è¿›åŽ»ã€‚ 
 
 <br>&nbsp; 
  
@@ -122,12 +122,12 @@ else
 <br>&nbsp; 
  
 
-<br><b>¼ÆÊýÆ÷Ïà¹ØÐÔ£º</b><br><br>´ËÏ¸½ÚÓëÒÔÏÂÐÔÄÜ¼ÆÊýÆ÷º¯ÊýÏà¹Ø£º<br> <br> ·ÇÔÝÍ£ CPI = <a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/non-halted_clocktick.htm" style="x-condition: eclipse;">·ÇÔÝÍ£Ê±ÖÓÐÅºÅ</a>/<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Instructions_retired.htm" style="x-condition: eclipse;">Ê§Ð§µÄÖ¸Áî</a><b><br> ½ÏµÍÖµ£º</b>0.01<b><br> ½Ï¸ßÖµ£º</b>0.1 <br><br>ÔÚ&ldquo;·ÇÔÝÍ£ CPI&rdquo;<b>½Ï¸ß</b>Ê±£¬´ËÏ¸½Ú¾ßÓÐÊµÖÊÐÔÒâÒå¡£<b><br><br> ½¨Òé£º </b>
+<br><b>è®¡æ•°å™¨ç›¸å…³æ€§ï¼š</b><br><br>æ­¤ç»†èŠ‚ä¸Žä»¥ä¸‹æ€§èƒ½è®¡æ•°å™¨å‡½æ•°ç›¸å…³ï¼š<br> <br> éžæš‚åœ CPI = <a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/non-halted_clocktick.htm" style="x-condition: eclipse;">éžæš‚åœæ—¶é’Ÿä¿¡å·</a>/<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Instructions_retired.htm" style="x-condition: eclipse;">å¤±æ•ˆçš„æŒ‡ä»¤</a><b><br> è¾ƒä½Žå€¼ï¼š</b>0.01<b><br> è¾ƒé«˜å€¼ï¼š</b>0.1 <br><br>åœ¨&ldquo;éžæš‚åœ CPI&rdquo;<b>è¾ƒé«˜</b>æ—¶ï¼Œæ­¤ç»†èŠ‚å…·æœ‰å®žè´¨æ€§æ„ä¹‰ã€‚<b><br><br> å»ºè®®ï¼š </b>
 
 <ul>
 	
 	<li class=kadov-p
-		class=kadov-p><a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/more_measurements.htm" style="x-condition: eclipse;">È·¶¨¾ßÌåÓ¦²ÉÈ¡ÄÄÐ©²½ÖèÒÔ¸ÄÉÆÐÔÄÜÊ±ÒªÖ´ÐÐµÄ¸ü¶à²âÁ¿</a></li>
+		class=kadov-p><a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/more_measurements.htm" style="x-condition: eclipse;">ç¡®å®šå…·ä½“åº”é‡‡å–å“ªäº›æ­¥éª¤ä»¥æ”¹å–„æ€§èƒ½æ—¶è¦æ‰§è¡Œçš„æ›´å¤šæµ‹é‡</a></li>
 </ul>
 </li>
 

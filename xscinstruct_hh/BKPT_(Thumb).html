@@ -7,7 +7,7 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/BKPT_(Thumb).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:43 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
 <title>BKPT (Thumb)</title>
@@ -107,9 +107,9 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">BKPT (Thumb*) - �ϵ�</h1>
+<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">BKPT (Thumb*) - 断点</h1>
 
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <div>
 <div>
@@ -117,7 +117,7 @@ else
 </div>
 
 <div>
-<p>���У�</p>
+<p>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,27 +126,27 @@ else
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
 <p CLASS=CellBodyLeft>value</td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>8 λ������</td></tr>
+<p CLASS=CellBodyLeft>8 位立即数</td></tr>
 </table>
 </div>
 
 <div>
-<h2>˵��</h2>
+<h2>说明</h2>
 
-<p>BKPT ָ����ͣ��������Ԥȡ��ֹʸ���ϰ�װ���쳣����������ܻ�ʹ�ô˶ϵ㡣 
+<p>BKPT 指令暂停处理器。预取终止矢量上安装的异常处理程序可能会使用此断点。 
  </p>
 
-<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif" width="20px" height="20px" border="0" class="img_whs3"> ��ע</h3>
+<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif" width="20px" height="20px" border="0" class="img_whs3"> 备注</h3>
 
-<p>�������Ӳ�������ϵ㣬����ܲ�����Ԥȡ��ֹʸ����</p>
+<p>如果调试硬件处理断点，则可能不进入预取终止矢量。</p>
 
-<h2>Ѱַģʽ </h2>
+<h2>寻址模式 </h2>
 
-<p>�޲������� </p>
+<p>无操作数。 </p>
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -194,7 +194,7 @@ else
 </div>
 
 <div>
-<h2>����</h2>
+<h2>编码</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs4">
@@ -284,7 +284,7 @@ else
 
 <div>
 <div>
-<h2>ʾ�� </h2>
+<h2>示例 </h2>
 </div>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funbic <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0 <br> 4 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example,CODE,READONLY <br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;CODE16 <br> 7<br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1 <br> 9 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Breakout into Debug Mode <br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; The debugger has access to the <br> 11 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; value -- 26 -- for its own use &#xA0;<br> 12 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;BKPT &#xA0;&#xA0;&#xA0;26 </span></p>

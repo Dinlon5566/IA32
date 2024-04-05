@@ -9,11 +9,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/XScale_HH/LipsXSc/MemCP_RESOURCE.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:45 GMT -->
 <head>
 
-<title>WMMX �ڴ���ƹܵ���Դ�ӳٳͷ�/����</title>
+<title>WMMX 内存控制管道资源延迟惩罚/警告</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="04 14, 2003 12:01:08 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -85,7 +85,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض� XScale(R) ΢��ϵ�ṹ \nӢ�ض�(R) ���� MMX(TM) ָ��ͷ�\nWMMX �ڴ���ƹܵ���Դ�ӳٳͷ�/����");
+	addTocInfo("参考\n处理器事件与建议\n英特尔 XScale(R) 微体系结构 \n英特尔(R) 无线 MMX(TM) 指令集惩罚\nWMMX 内存控制管道资源延迟惩罚/警告");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,43 +108,43 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="XS_logo.gif" alt="Ӣ�ض� XScale(R) ��������" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">WMMX �ڴ���ƹܵ���Դ�ӳٳͷ�/����</h1>
+<h1><img src="XS_logo.gif" alt="英特尔 XScale(R) 技术主题" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">WMMX 内存控制管道资源延迟惩罚/警告</h1>
 
 <h2>XSCW_MemCP_RESOURCE</h2>
 
-<p>&ldquo;WMMX �ڴ����&rdquo;�ܵ�����Э��&ldquo;WMMX Э������&rdquo;��������֮��ļ���/�洢����ڴ���ⲿ�ӿ�Ϊ 32 λ�����&ldquo;WMMX Э������&rdquo;������ 64 λ&ldquo;����/�洢&rdquo;�����л��� 32 λ�ڴ�&ldquo;����/�洢&rdquo;��&ldquo;WMMX Э������&rdquo;������ʱ�洢��һ�� 32 λ��ֱ������Ҳ�����ڶ��� 32 λ���ݡ�ÿ���Ա�������ʽ�������� WLDRD ָ��ʱ���ڶ��� WLDRD ����һ�����ڵ���ͣ��ʵ���ϣ����� LDRD һ����WLDRD ������κ��ڴ���������ܴ�����Դ���Ƶ�Ӱ�졣</p>
+<p>&ldquo;WMMX 内存控制&rdquo;管道负责协调&ldquo;WMMX 协处理器&rdquo;与主核心之间的加载/存储活动。内存的外部接口为 32 位，因此&ldquo;WMMX 协处理器&rdquo;发出的 64 位&ldquo;加载/存储&rdquo;会序列化成 32 位内存&ldquo;加载/存储&rdquo;。&ldquo;WMMX 协处理器&rdquo;必须暂时存储第一个 32 位，直到核心也发出第二个 32 位数据。每当以背靠背方式发出两条 WLDRD 指令时，第二条 WLDRD 会有一个周期的暂停。实际上，就像 LDRD 一样，WLDRD 后面的任何内存操作都会受此种资源限制的影响。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img id="_x0000_i1025" src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs2"> ����</h3>
+	style="margin-left: 40px;"><img id="_x0000_i1025" src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs2"> 建议</h3>
 
 <ul type="disc" class="whs3">
 	
 	<ul type="disc" class="whs3">
 		
-		<li class=kadov-p><p>���������µ���ָ��˳�������������ڡ�</p></li>
+		<li class=kadov-p><p>尽可能重新调整指令顺序，以填补额外的周期。</p></li>
 		
-		<li class=kadov-p><p>��Ҫ������ WLDRD ���淢���κ��ڴ����ָ�</p></li>
+		<li class=kadov-p><p>不要紧跟在 WLDRD 后面发出任何内存操作指令。</p></li>
 	</ul>
 </ul>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img id="_x0000_i1026" src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> ��ע </h3>
+	style="margin-left: 40px;"><img id="_x0000_i1026" src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> 备注 </h3>
 
-<p class="whs5">��&ldquo;�ͷ�/����&rdquo;��������&ldquo;Ӣ�ض�(R) ���� MMX(TM) ָ�&rdquo;��</p>
+<p class="whs5">此&ldquo;惩罚/警告&rdquo;仅适用于&ldquo;英特尔(R) 无线 MMX(TM) 指令集&rdquo;。</p>
 
-<h3>ʾ�� 1</h3>
+<h3>示例 1</h3>
 
 <p class=Preformatted><span class=code>WLDRD &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;wR3, [R3, #0xFC]</span></p>
 
 <p class=Preformatted><span class=code>WLDRB &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;wR11, [R11], #0x8 &#xA0;&#xA0;&#xA0;<span style="mso-tab-count: 1;">&#xA0;</span>;; XSCW_MemCP_RESOURCE</span></p>
 
-<h3>ʾ�� 2</h3>
+<h3>示例 2</h3>
 
 <p class=Preformatted><span class=code>WLDRD &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;wR3, [R3, #0x8]</span></p>
 
 <p class=Preformatted><span class=code>LDREQ &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R10, [R11], #0x8 &#xA0;&#xA0;&#xA0;<span style="mso-tab-count: 1;">&#xA0;&#xA0;</span>;; XSCW_MemCP_RESOURCE</span></p>
 
-<h3>ʾ�� 3</h3>
+<h3>示例 3</h3>
 
 <p class=Preformatted><span class=code>WLDRD &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;wR3, [R3, #0x8]</span></p>
 

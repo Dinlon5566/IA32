@@ -7,7 +7,7 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_EOR.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:43 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
 <title>EOR</title>
@@ -94,7 +94,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nE - ָ��\nEOR");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nE - 指令\nEOR");
 
 	}
 	if (window.writeBtnStyle)
@@ -119,19 +119,19 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特尔 XScale(R) 技术主题' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'></noscript>EOR - ���</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特尔 XScale(R) 技术主题' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif' alt='英特尔 XScale(R) 技术主题' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'></noscript>EOR - 异或</h1>
 
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <div>
 <p class=Preformatted><span class=Code>EOR[condition][S] dest, op1, addr_mode</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -144,7 +144,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 个条件之一。请参阅<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">条件代码状态</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -154,7 +154,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�������������־��λ [20]��</td></tr>
+<p CLASS=CellBodyLeft>更新条件代码标志（位 [20]）</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -164,7 +164,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>目标寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -174,7 +174,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>������һ���������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含第一个操作数的寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -184,20 +184,20 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ѱַģʽ 1��<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">���ݴ���������</a></td></tr>
+<p CLASS=CellBodyLeft>寻址模式 1：<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">数据处理操作数</a></td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-EOR ָ��� <em   CLASS=SourceItalic>op1</em> ͬ <em CLASS=SourceItalic>addr_mode</em> ��ִֵ����λ&ldquo;���&rdquo;������洢�� <em CLASS=SourceItalic>dest</em>��condition ��������Чֵ������ָ��� NOP�� 
+EOR 指令对 <em   CLASS=SourceItalic>op1</em> 同 <em CLASS=SourceItalic>addr_mode</em> 的值执行逐位&ldquo;异或&rdquo;。结果存储到 <em CLASS=SourceItalic>dest</em>。condition 必须是有效值；否则将指令当作 NOP。 
 
-<h2>Ѱַģʽ</h2>
+<h2>寻址模式</h2>
 
-�����&ldquo;Ѱַģʽ 1 - ���ݴ���������&rdquo;�� 
+请参阅&ldquo;寻址模式 1 - 数据处理操作数&rdquo;。 
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -264,7 +264,7 @@ EOR ָ��� <em   CLASS=SourceItalic>op1</em> ͬ <em CLASS=SourceItalic>addr_mode
 <!--(Table)=========================================================-->
 <table x-use-null-cells height="105" border="1" class="whs3">
 
-<h2>����</h2>
+<h2>编码</h2>
 
 <tr>
 <td ROWSPAN=1
@@ -371,13 +371,13 @@ EOR ָ��� <em   CLASS=SourceItalic>op1</em> ͬ <em CLASS=SourceItalic>addr_mode
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funceor<br> 4 <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0<br> 6 <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@ * * * EOR (Addressing Mode 1) * * *<br> 8 <br> 9 <br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example, CODE, READONLY<br> 11 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1<br> 12 &#xA0;&#xA0;00000000 &#xA0;&#xA0;E3A0B001 &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;&#xA0;R11, &#xA0;#1<br> 13 &#xA0;&#xA0;00000004 &#xA0;&#xA0;E3A0C002 &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;&#xA0;R12, &#xA0;#2<br> 14 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E22C0001 &#xA0;&#xA0;&#xA0;EOR &#xA0;&#xA0;&#xA0;&#xA0;R0, &#xA0;R12, #1<br> 15 <br> 16 &#xA0;&#xA0;00000012 &#xA0;&#xA0;E3A0B003 &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;&#xA0;R11, &#xA0;#3<br> 17 &#xA0;&#xA0;00000016 &#xA0;&#xA0;E0371000 &#xA0;&#xA0;&#xA0;EORS &#xA0;&#xA0;&#xA0;R1, R7, R0<br> 18 <br> 19 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END</span> </p>
 
-<h2>������Ϣ</h2>
+<h2>更多信息</h2>
 
-<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">�����Ѱַģʽ 1�����ݴ���������</a> 
+<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">请参阅寻址模式 1：数据处理操作数</a> 
 </div>
 </div>
 

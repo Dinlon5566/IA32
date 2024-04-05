@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400303.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:48 GMT -->
 <head>
 
-<title>mov pr 操作</title>
+<title>mov pr 鎿嶄綔</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:55:07 PM">
 <meta name=topic-status content=Complete>
 <meta name=topic-priority content=2>
@@ -97,7 +97,7 @@ else
 		document.location.reload();
 //-->
 </script>
-mov pr 操作 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a> 
+mov pr 鎿嶄綔 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">瀛椾綋鎯緥</a> 
 
 <br>if (PR[<i>qp</i>]) { <br> if (from_form) { <br> <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400444.htm">check_target_register</a>; <br> <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400568.htm">GR</a>[<i>r1</i>] = 1; // PR[0] is always 1 <br> for (i = 1; i &lt;= 63; i++) { <br> GR[<i>r1</i>]{i} = PR[<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400515.htm">pr_phys_to_virt</a>(i)]; <br> } <br> GR[<i>r1</i>].nat = 0; <br> } else if (to_form) { <br> if (GR[<i>r2</i>].nat) <br> register_nat_consumption_fault(0); <br> tmp_src = <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400526.htm">sign_ext</a>(<i>mask17</i>, 17); <br> for (i = 1; i &lt;= 63; i++) { <br> if (tmp_src{i}) <br> PR[<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400515.htm">pr_phys_to_virt</a>(i)] = GR[<i>r2</i>]{i}; <br> } <br> } else { // to_rotate_form <br> tmp_src = sign_ext(<i>imm44</i>, 44); <br> for (i = 16; i &lt;= 63; i++) { <br> PR[pr_phys_to_virt(i)] = tmp_src{i}; <br> } <br> } <br> } 
 

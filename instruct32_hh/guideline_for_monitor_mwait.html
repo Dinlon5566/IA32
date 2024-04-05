@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/guideline_for_monitor_mwait.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:48 GMT -->
 <head>
 
-<title>MONITOR/MWAIT ָ��ԭ��</title>
+<title>MONITOR/MWAIT 指导原则</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="05 12, 2003 1:06:05 PM">
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
 <meta name=generator-major-version content=0.1>
@@ -101,41 +101,41 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>MONITOR/MWAIT ָ��ԭ��</h1>
+<h1>MONITOR/MWAIT 指导原则</h1>
 
-<p>�ṩ <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct32_hh/MONITOR--Setup_Monitor_Address.htm">MONITOR</a> �� <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct32_hh/MWAIT--Monitor_Wait.htm">MWAIT</a> Ŀ����Ϊ�˸��ƶ������֮���ͬ�����ں�&ldquo;��������������ָ���������չָ�&rdquo;(SSE3) ��Ӣ�ض�&#xAE; ����&#xAE; 4 ��������ʵ���У�MONITOR/MWAIT ��Ŀ���ǹ�ϵͳ���������ṩ����Ч���߳�ͬ��ԭ����MONITOR �������ڼ���д�ش洢�ĵ�ַ��Χ��MWAIT ����ָʾ�����߳����ڵȴ��Ե�ַ��Χ��MONITOR ָ��壩��д�ش洢��</p>
+<p>提供 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct32_hh/MONITOR--Setup_Monitor_Address.htm">MONITOR</a> 与 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct32_hh/MWAIT--Monitor_Wait.htm">MWAIT</a> 目的是为了改善多个代理之间的同步。在含&ldquo;第三代数据流单指令多数据扩展指令集&rdquo;(SSE3) 的英特尔&#xAE; 奔腾&#xAE; 4 处理器的实现中，MONITOR/MWAIT 的目标是供系统软件用于提供更有效的线程同步原件。MONITOR 定义用于监视写回存储的地址范围。MWAIT 用于指示软件线程正在等待对地址范围（MONITOR 指令定义）的写回存储。</p>
 
-<h2>MONITOR/MWAIT ��ַ��Χ��ȷ��</h2>
+<h2>MONITOR/MWAIT 地址范围的确定</h2>
 
-<p>����Ӧ֪�� MONITOR/MWAIT Ҫ����д��������׼ȷ���ȡ�������ʹ�õ�����ȴ�������������ĳ��ȶ�ʱ�����ܻᵼ�´���Ļ��ѣ����������ط��봥����������ݱ�������д�������£����෴����������򳤶ȴ��ڴ�������ʱ�����ܻᵼ���޷���ʱ���Ѵ�������CPUID ����ȷ�����������׼ȷ���ȡ��˳�����ϵͳ�е��κλ����ߴ�С��û�й�ϵ��������Ӧ�ö�����Ӱ�����κμ��衣���� CPUID �ṩ�Ĵ�С������ϵͳ/����Ӧ��̬���京�ʵ�����϶�Ľṹ�������ȷ�ķ��䵼�����⣬��ѡ��ʹ�� MONTIOR/MWAIT��</p>
+<p>软件应知道 MONITOR/MWAIT 要监视写入的区域的准确长度。分配与使用的区域比处理器触发区域的长度短时，可能会导致错误的唤醒（由于向错误地放入触发区域的数据变量进行写入所导致）。相反，分配的区域长度大于触发区域时，可能会导致无法适时唤醒处理器。CPUID 可以确定触发区域的准确长度。此长度与系统中的任何缓存线大小都没有关系，软件不应该对它的影响作任何假设。基于 CPUID 提供的大小，操作系统/软件应动态分配含适当填充间隙的结构。如果正确的分配导致问题，请选择不使用 MONTIOR/MWAIT。</p>
 
-<p>���ڻ��ڵ���Ⱥ����ϵͳ��Ӧ��ʹ�õ�������������Ҫ�󣻿���Ԥ����Ϊ�������Ⱥ����ϵͳ�������ݲ��ֻ���Ӹ��ӡ���������ϵͳ�У�����оƬ��ʵ�ֵĻ��ƣ��������ӻ����ߴ�С���ܲ���������Ҫ�� 
+<p>对于基于单个群集的系统，应该使用单个长度来满足要求；可以预见，为包含多个群集的系统设置数据布局会更加复杂。在这样的系统中，根据芯片组实现的机制，单个监视缓存线大小可能不足以满足要求。 
  </p>
 
-<p>ͨ������£�����������һ�����ݱ�����д�롣ȷ����Щ�����ڼ��������������е�λ�÷ǳ���Ҫ��Ϊ����д�������������µĴ����ѣ�������Ҫ�ڼ��ӵı�����Χ��������϶����Ҳ��Ϊ��϶���� </p>
+<p>通常情况下，软件将监视一组数据变量的写入。确定这些变量在监视器触发区域中的位置非常必要。为消除写入其它变量导致的错误唤醒，软件需要在监视的变量周围添加填充间隙。这也称为间隙区域。 </p>
 
-<p>������ģ�<a HREF="https://www.hgy413.com/hgydocs/IA32/instruct32_hh/vc46.htm">CPUID - CPU ��ʶ</a></p>
+<p>另请参阅：<a HREF="https://www.hgy413.com/hgydocs/IA32/instruct32_hh/vc46.htm">CPUID - CPU 标识</a></p>
 
-<h2>���� MWAIT �Ļ���</h2>
+<h2>来自 MWAIT 的唤醒</h2>
 
-<p>����¼����Դ�����ַ��Χ��д����⣩���ܵ��»���ִ�� MWAIT �Ĵ���������Щ������</p>
+<p>多个事件（对触发地址范围的写入除外）可能导致唤醒执行 MWAIT 的处理器。这些包括：</p>
 
 <ul type="disc" class="whs1">
 	
-	<li class=kadov-p><p>�ⲿ�жϣ�NMI��SMI��INIT��BINIT��MCERR</p></li>
+	<li class=kadov-p><p>外部中断：NMI、SMI、INIT、BINIT、MCERR</p></li>
 	
-	<li class=kadov-p><p>����&ldquo;�������&rdquo;���ڵĴ�����ֹ</p></li>
+	<li class=kadov-p><p>包括&ldquo;机器检查&rdquo;在内的错误、终止</p></li>
 	
-	<li class=kadov-p><p>��ϵ�ṹ����� TLB ʧЧ������д�� CR0��CR3��CR4���Լ�ĳЩ MSR д��</p></li>
+	<li class=kadov-p><p>体系结构层面的 TLB 失效，包括写入 CR0、CR3、CR4，以及某些 MSR 写入</p></li>
 	
-	<li class=kadov-p><p>����ϵͳ������Զ���õ��µ�����ת��</p></li>
+	<li class=kadov-p><p>快速系统调用与远调用导致的自行转换</p></li>
 </ul>
 
-<p>��Դ��������¼�����&ldquo;�¶ȼ�����&rdquo;����оƬ�������� STP-CLK# ���Բ��ᵼ�����&ldquo;�������¼�δ��&rdquo;λ��������������󲻻ᵼ�����&ldquo;�������¼�δ��&rdquo;λ�� </p>
+<p>电源管理相关事件（如&ldquo;温度监视器&rdquo;）或芯片组驱动的 STP-CLK# 声言不会导致清除&ldquo;监视器事件未决&rdquo;位。调试陷阱与错误不会导致清除&ldquo;监视器事件未决&rdquo;位。 </p>
 
-<p>������ʾ MONITOR/MWAIT �ĵ����÷���</p>
+<p>下例显示 MONITOR/MWAIT 的典型用法。</p>
 
-<h3>MONITOR/MWAIT �÷�α����</h3>
+<h3>MONITOR/MWAIT 用法伪代码</h3>
 
 <p class=Preformatted>// Trigger[MONITORDATARANGE] is the memory address range that will be  </p>
 

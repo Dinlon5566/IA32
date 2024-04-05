@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/memory_operands.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:04 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>�ڴ������</title>
+<title>内存操作数</title>
 
 <!--(Meta)==========================================================-->
 
@@ -23,7 +23,7 @@
 <meta name=layout-height content=297>
 <meta name=layout-width content=694>
 <meta name=date content="04 24, 2003 1:39:41 PM">
-<meta name=x-ignored-words content="TC;Pentium;developer.intel.com;index.htm.;Aliasing;aliasing;Mispredictions;micro-ops;SIMD;Clockticks;prefetcher;prefetching;prefetch;intrinsics;MMX;modulo;pipelined;mispredicted;NetBurst;irets;BTB;Mispredicted;DTLB;Micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;Denormal;denormals;SSE;Denormalized;index.htm;a(i;y;enddo;UC;uncacheable;WC;MMNP;MMNM;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;clocktick;VTune;clockticks;MOCLEAR;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;LSC;SSC;USC;ULC;denormal;denormaled;DELIVERBit;BSQ;writeback;Uncacheable;encodings;misprediction;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;ITLB;?;cacheability;��op">
+<meta name=x-ignored-words content="TC;Pentium;developer.intel.com;index.htm.;Aliasing;aliasing;Mispredictions;micro-ops;SIMD;Clockticks;prefetcher;prefetching;prefetch;intrinsics;MMX;modulo;pipelined;mispredicted;NetBurst;irets;BTB;Mispredicted;DTLB;Micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;Denormal;denormals;SSE;Denormalized;index.htm;a(i;y;enddo;UC;uncacheable;WC;MMNP;MMNM;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;clocktick;VTune;clockticks;MOCLEAR;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;LSC;SSC;USC;ULC;denormal;denormaled;DELIVERBit;BSQ;writeback;Uncacheable;encodings;misprediction;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;ITLB;?;cacheability;μop">
 
 
  <meta name="topic-status" content="In Progress">
@@ -103,9 +103,9 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">�ڴ������</h1>
+<h1><img src="p4p60hw.gif" alt="奔腾(R) 4 处理器主题" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">内存操作数</h1>
 
-<p>��Ϊ������ֽڵ�˫���ȸ�����������»����� MOB ��ֳͷ��Ŀ����Ա�δ������ֽڵĲ�������С�����Ծ��и��õ����ܡ��ڴ�������ϵĸ������Ҫ����ڴ���ظò���������ᵼ�¶����΢��������ǰ�˴�����Щ΢����Ӱ�졣���⣬�ڴ���������ܻᵼ�����ݻ���δ���У��Ӷ����³ͷ���</p>
+<p>因为对齐八字节的双精度浮点操作数导致缓存与 MOB 拆分惩罚的可能性比未对齐八字节的操作数更小，所以具有更好的性能。内存操作数上的浮点操作要求从内存加载该操作数。这会导致额外的微操作，对前端带宽有些微负面影响。此外，内存操作数可能会导致数据缓存未命中，从而导致惩罚。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

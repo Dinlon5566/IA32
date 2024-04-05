@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/ADD(3)_(Thumb).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:59 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>ADD(3) (Thumb) - �ӷ�</title>
+<title>ADD(3) (Thumb) - 加法</title>
 
 <!--(Meta)==========================================================-->
 
@@ -83,7 +83,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n16 λָ��\nA - ָ��\nADD(3) (Thumb)");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n16 位指令\nA - 指令\nADD(3) (Thumb)");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,17 +106,17 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">ADD(3) (Thumb*) - �ӷ�</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">ADD(3) (Thumb*) - 加法</h1>
 
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <div>
 <p class=Preformatted><span class=Code>A</span>DD dest, op1, op2</p>
 </div>
 
 <div>
-<p>���У�</p>
+<p>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,36 +126,36 @@ else
 <p CLASS=CellBodyLeft><em CLASS=SourceItalic
 							style="font-style: italic;">dest</em> </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>目标寄存器</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
 <p CLASS=CellBodyLeft><em CLASS=SourceItalic
 							style="font-style: italic;">op1</em> </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>������һ���������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含第一个操作数的寄存器</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
 <p CLASS=CellBodyLeft><em CLASS=SourceItalic
 							style="font-style: italic;">op2</em> </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>�����ڶ����������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含第二个操作数的寄存器</td></tr>
 </table>
 </div>
 
 <div>
-<h2>˵��</h2>
+<h2>说明</h2>
 
-<p>�˸�ʽ�� ADD ָ� <em CLASS=SourceItalic>op1</em> �� <em CLASS=SourceItalic>op2</em> ��ӣ�����洢�� <em CLASS=SourceItalic>dest</em>�� </p>
+<p>此格式的 ADD 指令将 <em CLASS=SourceItalic>op1</em> 与 <em CLASS=SourceItalic>op2</em> 相加，结果存储到 <em CLASS=SourceItalic>dest</em>。 </p>
 
-<h2>Ѱַģʽ</h2>
+<h2>寻址模式</h2>
 
-<p>�޲������� </p>
+<p>无操作数。 </p>
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -203,7 +203,7 @@ else
 </div>
 
 <div>
-<h2>����</h2>
+<h2>编码</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs3">
@@ -270,20 +270,20 @@ else
 
 <div>
 <div>
-<h2>ʾ�� </h2>
+<h2>示例 </h2>
 </div>
 
 <p class=Preformatted><span>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text <br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funadd <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0 <br> 4 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;<br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example,CODE,READONLY <br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;CODE16 <br> 7 <br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1 <br> 9 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Add registers R3 and R4 together<br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; place result in R7 <br> 11 &#xA0;&#xA0;&#xA0;00000000 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;F7C3 &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;R3, #Ox45<br> 12 &#xA0;&#xA0;&#xA0;00000002 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;247B &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;R4, #123 <br> 13 &#xA0;&#xA0;&#xA0;00000004 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;191F &#xA0;&#xA0;&#xA0;ADD &#xA0;&#xA0;R7, R3, R4</span> </p>
 
-<h2>������Ϣ</h2>
+<h2>更多信息</h2>
 
-<a href="ADC_(Thumb).html" CLASS="XRef">����� ADC ָ��</a><a href="ADD(1)_(Thumb).html" CLASS="XRef"><br> ����� ADD(1) ָ��</a><a href="ADD(2)_(Thumb).html"><br> ����� ADD(2) ָ��</a><a href="ADD(4)_(Thumb).html"><br> ����� ADD(4) ָ��</a><a href="ADD(5)_(Thumb).html" CLASS="XRef"><br> ����� ADD(5) ָ��</a><a href="ADD(6)_(Thumb).html"><br> ����� ADD(6) ָ��</a><a href="ADD(7)_(Thumb).html" CLASS="XRef"><br> ����� ADD(7) ָ��</a> 
+<a href="ADC_(Thumb).html" CLASS="XRef">请参阅 ADC 指令</a><a href="ADD(1)_(Thumb).html" CLASS="XRef"><br> 请参阅 ADD(1) 指令</a><a href="ADD(2)_(Thumb).html"><br> 请参阅 ADD(2) 指令</a><a href="ADD(4)_(Thumb).html"><br> 请参阅 ADD(4) 指令</a><a href="ADD(5)_(Thumb).html" CLASS="XRef"><br> 请参阅 ADD(5) 指令</a><a href="ADD(6)_(Thumb).html"><br> 请参阅 ADD(6) 指令</a><a href="ADD(7)_(Thumb).html" CLASS="XRef"><br> 请参阅 ADD(7) 指令</a> 
 
-<br><a href="SUB(1)_(Thumb).html">����� SUB(1) ָ�� </a>
+<br><a href="SUB(1)_(Thumb).html">请参阅 SUB(1) 指令 </a>
 
-<br><a href="SUB(2)_(Thumb).html" CLASS="XRef">����� SUB(2) ָ��</a><a href="SUB(3)_(Thumb).html" CLASS="XRef"><br> ����� SUB(3) ָ��</a> 
+<br><a href="SUB(2)_(Thumb).html" CLASS="XRef">请参阅 SUB(2) 指令</a><a href="SUB(3)_(Thumb).html" CLASS="XRef"><br> 请参阅 SUB(3) 指令</a> 
 
-<br><a href="SUB(4)_(Thumb).html">����� SUB(4) ָ��</a> 
+<br><a href="SUB(4)_(Thumb).html">请参阅 SUB(4) 指令</a> 
 </div>
 
 <script type="text/javascript" language="javascript1.2">

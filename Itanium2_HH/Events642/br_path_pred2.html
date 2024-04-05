@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\n��֧�¼�\nBR_PATH_PRED2");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 安腾(R) 2 处理器\n英特尔(R) 安腾(R) 2 处理器事件\n分支事件\nBR_PATH_PRED2");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,24 +108,24 @@ else
 
 &nbsp; 
 
-<br><b   style="font-weight: bold;">���⣺</b>FE ��֧·��Ԥ��ϸ�ڣ�δ֪Ԥ�������<b style="font-weight: bold;"><br> ���</b>��֧�¼�<b style="font-weight: bold;"><br> IAR/DAR/OPC��</b>Y/N/Y<b style="font-weight: bold;"><br> �¼����룺</b>0x6A<b style="font-weight: bold;"><br> ���ÿ����������</b>2 
+<br><b   style="font-weight: bold;">标题：</b>FE 分支路径预测细节（未知预测组件）<b style="font-weight: bold;"><br> 类别：</b>分支事件<b style="font-weight: bold;"><br> IAR/DAR/OPC：</b>Y/N/Y<b style="font-weight: bold;"><br> 事件代码：</b>0x6A<b style="font-weight: bold;"><br> 最大每周期增量：</b>2 
 
-<p><b style="font-weight: bold;">���壺</b>���¼����� BR_PATH_PREDICTION �¼���</p>
+<p><b style="font-weight: bold;">定义：</b>此事件伴随 BR_PATH_PREDICTION 事件。</p>
 
-<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> ��ע</h3>
+<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> 备注</h3>
 
-ָ�����д��ڶ����֧����Ԥ�⽫ִ������һ��ʱ����Ÿ��ߵ����ж˿ڶ���ǿ�ƽ���Ԥ��Ĳ�ִ��ģʽ��������ʵ��֪�����ǵ���ʵԤ����Ϣ��<br>��ʵ�� OKPRED_NOTTAKEN Ԥ��·����Ϣ����ͨ��ִ�����¼����ȡ��<br>BR_PATH_PRED.[��֧����].OKPRED_NOTTAKEN - <a HREF="br_path_pred2.html">BR_PATH_PRED2.</a>[��֧����].UNKNOWNPRED_NOTTAKEN������ʱʹ�ø������¼�ָ������ͬ&ldquo;��֧����&rdquo;��ALL��IPREL��RETURN��NRETIND����<br> ���Ƶأ���ʵ�� MISPRED_TAKEN Ԥ��·����Ϣ����ͨ��ִ�����¼����ȡ��<br>BR_PATH_PRED.[branch type].MISPRED_TAKEN - <a HREF="br_path_pred2.html">BR_PATH_PRED2</a>.[branch type].UKNOWNPRED_TAKEN������ʱʹ�ø������¼�ָ������ͬ&ldquo;��֧����&rdquo;��ALL��IPREL��RETURN��NRETIND���� 
+指令束中存在多个分支，且预测将执行其中一个时，编号更高的所有端口都会强制进入预测的不执行模式，而不用实际知道它们的真实预测信息。<br>真实的 OKPRED_NOTTAKEN 预测路径信息可以通过执行以下计算获取：<br>BR_PATH_PRED.[分支类型].OKPRED_NOTTAKEN - <a HREF="br_path_pred2.html">BR_PATH_PRED2.</a>[分支类型].UNKNOWNPRED_NOTTAKEN，计算时使用给两个事件指定的相同&ldquo;分支类型&rdquo;（ALL、IPREL、RETURN、NRETIND）。<br> 类似地，真实的 MISPRED_TAKEN 预测路径信息可以通过执行以下计算获取：<br>BR_PATH_PRED.[branch type].MISPRED_TAKEN - <a HREF="br_path_pred2.html">BR_PATH_PRED2</a>.[branch type].UKNOWNPRED_TAKEN，计算时使用给两个事件指定的相同&ldquo;分支类型&rdquo;（ALL、IPREL、RETURN、NRETIND）。 
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells width="100%" class="whs2">
 
 <tr>
 <td>
-<h3 CLASS=TableHead>��չ</td>
+<h3 CLASS=TableHead>扩展</td>
 <td>
 <h3 CLASS=TableHead>PMC.umask</td>
 <td>
-<h3 CLASS=TableHead>˵��</td></tr>
+<h3 CLASS=TableHead>说明</td></tr>
 
 <tr>
 <td>
@@ -133,7 +133,7 @@ else
 <td>
 <p>b00x0</td>
 <td>
-<p>���з�֧���ͣ�·��Ԥ��δ֪�Ҳ�ִ�еķ�֧��Ӱ�� OKPRED_NOTTAKEN��</td></tr>
+<p>所有分支类型，路径预测未知且不执行的分支（影响 OKPRED_NOTTAKEN）</td></tr>
 
 <tr>
 <td>
@@ -141,7 +141,7 @@ else
 <td>
 <p>b00x1</td>
 <td>
-<p>���з�֧���ͣ�·��Ԥ��δ֪��ִ�еķ�֧��Ӱ�� MISPRED_TAKEN��</td></tr>
+<p>所有分支类型，路径预测未知且执行的分支（影响 MISPRED_TAKEN）</td></tr>
 
 <tr>
 <td>
@@ -149,7 +149,7 @@ else
 <td>
 <p>b01x0</td>
 <td>
-<p>���� IP ��Է�֧��·��Ԥ��δ֪�Ҳ�ִ�еķ�֧��Ӱ�� OKPRED_NOTTAKEN��</td></tr>
+<p>仅限 IP 相对分支，路径预测未知且不执行的分支（影响 OKPRED_NOTTAKEN）</td></tr>
 
 <tr>
 <td>
@@ -157,7 +157,7 @@ else
 <td>
 <p>b01x1</td>
 <td>
-<p>���� IP ��Է�֧��·��Ԥ��δ֪��ִ�еķ�֧��Ӱ�� MISPRED_TAKEN��</td></tr>
+<p>仅限 IP 相对分支，路径预测未知且执行的分支（影响 MISPRED_TAKEN）</td></tr>
 
 <tr>
 <td>
@@ -165,7 +165,7 @@ else
 <td>
 <p>b10x0</td>
 <td>
-<p>���޷����ͷ�֧��·��Ԥ��δ֪�Ҳ�ִ�еķ�֧��Ӱ�� OKPRED_NOTTAKEN��</td></tr>
+<p>仅限返回型分支，路径预测未知且不执行的分支（影响 OKPRED_NOTTAKEN）</td></tr>
 
 <tr>
 <td>
@@ -173,7 +173,7 @@ else
 <td>
 <p>b10x1</td>
 <td>
-<p>���޷����ͷ�֧��·��Ԥ��δ֪��ִ�еķ�֧��Ӱ�� MISPRED_TAKEN��</td></tr>
+<p>仅限返回型分支，路径预测未知且执行的分支（影响 MISPRED_TAKEN）</td></tr>
 
 <tr>
 <td>
@@ -181,7 +181,7 @@ else
 <td>
 <p>b11x0</td>
 <td>
-<p>���޷Ƿ����ͼ�ӷ�֧��·��Ԥ��δ֪�Ҳ�ִ�еķ�֧��Ӱ�� OKPRED_NOTTAKEN��</td></tr>
+<p>仅限非返回型间接分支，路径预测未知且不执行的分支（影响 OKPRED_NOTTAKEN）</td></tr>
 
 <tr>
 <td>
@@ -189,7 +189,7 @@ else
 <td>
 <p>b11x1</td>
 <td>
-<p>���޷Ƿ����ͼ�ӷ�֧��·��Ԥ��δ֪��ִ�еķ�֧��Ӱ�� MISPRED_TAKEN��</td></tr>
+<p>仅限非返回型间接分支，路径预测未知且执行的分支（影响 MISPRED_TAKEN）</td></tr>
 </table>
 
 <script type="text/javascript" language="javascript1.2">

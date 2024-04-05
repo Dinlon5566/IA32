@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/loadrs_-_Load_Register_Stack_Instruction.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>loadrs - ���ؼĴ�����ջָ��</title>
+<title>loadrs - 加载寄存器堆栈指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -85,7 +85,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nL - ָ��\nloadrs - ���ؼĴ�����ջָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nL - 指令\nloadrs - 加载寄存器堆栈指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,13 +108,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">���ؼĴ�����ջָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">加载寄存器堆栈指令</h1>
 
 <p class="whs2">loadrs</p>
 
-<p class="whs3"><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/loadrs-operation.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a></p>
+<p class="whs3"><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/loadrs-operation.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a></p>
 
-<p class="whs2">��ʽ</p>
+<p class="whs2">格式</p>
 
 <p class=Preformatted>loadrs M25</p>
 
@@ -123,68 +123,68 @@ else
 <hr class="whs4">
 
 
-<p><b style="font-weight: bold;">˵��</b></p>
+<p><b style="font-weight: bold;">说明</b></p>
 
-<p class="whs3"><b style="font-weight: normal;"><span style="font-weight: normal;">��ָ��ȷ����ǰ BSP ����ָ���������ֽڣ��Ĵ���ֵ��/�� NaT ���ϣ�</span></b><b style="font-weight: normal;"><span   style="font-weight: normal;">�Ѿ��ӱ��ݴ洢��Ԫ���ص���ջ��ͨ�üĴ����С�</span></b><b style="font-weight: normal;"><span   style="font-weight: normal;">���صļĴ�������Ĵ�����ջ�������������ջ����������</span></b><b 
- style="font-weight: normal;"><span style="font-weight: normal;">ͨ�üĴ�������ǳ���Ч�����ᱣ�浽���ݴ洢��Ԫ��</span></b></p>
+<p class="whs3"><b style="font-weight: normal;"><span style="font-weight: normal;">此指令确保当前 BSP 以下指定数量的字节（寄存器值与/或 NaT 集合）</span></b><b style="font-weight: normal;"><span   style="font-weight: normal;">已经从备份存储单元加载到堆栈的通用寄存器中。</span></b><b style="font-weight: normal;"><span   style="font-weight: normal;">加载的寄存器放入寄存器堆栈的污损分区。堆栈的其它所有</span></b><b 
+ style="font-weight: normal;"><span style="font-weight: normal;">通用寄存器都标记成无效，不会保存到备份存储单元。</span></b></p>
 
-<p class="whs3"><b style="font-weight: normal;"><span style="font-weight: normal;">Ҫ���ص��ֽ����� RSC Ӧ�üĴ��������ֶ� </span></b><b style="font-weight: normal;"><span style="font-weight: normal;">(RSC.loadrs) ��ָ�������ݴ洢��Ԫ��ַ���� 8 �ֽڶ��룬��˽����� <span class=Code>loadrs</span> �ֶεĵ� 3 λ</span></b><b style="font-weight: normal;"><span style="font-weight: normal;"></span><span 
- style="font-weight: normal;"> (RSC.loadrs{2:0})����ָ������ڽ���ջ�е�ǰ֮֡������мĴ������ó���Ч��</span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;">�� RSC.loadrs ����Ϊ�㼴�ɡ�</span></b></p>
+<p class="whs3"><b style="font-weight: normal;"><span style="font-weight: normal;">要加载的字节数在 RSC 应用寄存器的子字段 </span></b><b style="font-weight: normal;"><span style="font-weight: normal;">(RSC.loadrs) 中指定。备份存储单元地址总是 8 字节对齐，因此将忽略 <span class=Code>loadrs</span> 字段的低 3 位</span></b><b style="font-weight: normal;"><span style="font-weight: normal;"></span><span 
+ style="font-weight: normal;"> (RSC.loadrs{2:0})。此指令可用于将堆栈中当前帧之外的所有寄存器设置成无效，</span></b><b style="font-weight: normal;"><span 
+ style="font-weight: normal;">将 RSC.loadrs 设置为零即可。</span></b></p>
 
-<p class="whs3"><b style="font-weight: normal;"><span style="font-weight: normal;">�������κ�����£���ָ������&ldquo;�Ƿ�����&rdquo;����</span></b></p>
+<p class="whs3"><b style="font-weight: normal;"><span style="font-weight: normal;">在以下任何情况下，此指令会产生&ldquo;非法操作&rdquo;错误：</span></b></p>
 
 <ul type="disc" class="whs5">
 	
 	<li class=kadov-p><p class="whs3"><b style="font-weight: normal;"><span 
- style="font-weight: normal;">RSE ����ǿ�ƶ���ģʽ�£�RSC.mode ��Ϊ�㣩��</span></b></p></li>
+ style="font-weight: normal;">RSE 不在强制惰性模式下（RSC.mode 不为零）。</span></b></p></li>
 	
 	<li class=kadov-p><p class="whs3"><b style="font-weight: normal;"><span 
- style="font-weight: normal;">CFM.sof �� RSC.loadrs ����Ϊ�㡣</span></b></p></li>
+ style="font-weight: normal;">CFM.sof 与 RSC.loadrs 都不为零。</span></b></p></li>
 	
 	<li class=kadov-p><p class="whs3"><b style="font-weight: normal;"><span 
- style="font-weight: normal;">���Լ��صļĴ�����������������ջ�Ĵ���</span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;">�ļ��п��õļĴ�������</span></b></p></li>
+ style="font-weight: normal;">尝试加载的寄存器数量超过物理堆栈寄存器</span></b><b style="font-weight: normal;"><span 
+ style="font-weight: normal;">文件中可用的寄存器数。</span></b></p></li>
 </ul>
 
-<p class="whs3"><b style="font-weight: normal;"><span style="font-weight: normal;">��ָ�������ָ�����еĵ�һ��ָ����ұ�����ģ�壨��ָ��� 0 ֮����һ��ֹͣ����</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">ָ��� 0 ��ָ��� 1 �У�����</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">�����δ����ġ���ָ���޷��϶���</span></b></p>
+<p class="whs3"><b style="font-weight: normal;"><span style="font-weight: normal;">此指令必须是指令组中的第一条指令，并且必须在模板（在指令槽 0 之后有一个停止）的</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">指令槽 0 或指令槽 1 中；否则</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">结果是未定义的。此指令无法断定。</span></b></p>
 
-<span style="font-weight: bold;"><B>�ж�</B></span> 
+<span style="font-weight: bold;"><B>中断</B></span> 
 
 <ul type="disc" class="whs5">
 	
 	<li class=kadov-p
-		class=kadov-p><b style="font-weight: normal;">&ldquo;�Ƿ�����&rdquo;���� </b></li>
+		class=kadov-p><b style="font-weight: normal;">&ldquo;非法操作&rdquo;错误 </b></li>
 	
 	<li class=kadov-p
-		class=kadov-p><b style="font-weight: normal;">&ldquo;���� NaT ҳʹ��&rdquo;����</b></li>
+		class=kadov-p><b style="font-weight: normal;">&ldquo;数据 NaT 页使用&rdquo;错误</b></li>
 	
 	<li class=kadov-p
-		class=kadov-p><b style="font-weight: normal;"><span style="font-weight: normal;">&ldquo;δʹ�õ����ݵ�ַ&rdquo;���� </span></b></li>
+		class=kadov-p><b style="font-weight: normal;"><span style="font-weight: normal;">&ldquo;未使用的数据地址&rdquo;错误 </span></b></li>
 	
 	<li class=kadov-p
-		class=kadov-p><b style="font-weight: normal;"><span style="font-weight: normal;">&ldquo;���ݼ�δ����&rdquo;����</span></b></li>
+		class=kadov-p><b style="font-weight: normal;"><span style="font-weight: normal;">&ldquo;数据键未命中&rdquo;错误</span></b></li>
 	
 	<li class=kadov-p
-		class=kadov-p><b style="font-weight: normal;"><span style="font-weight: normal;">&ldquo;����Ƕ�� TLB&rdquo;���� </span></b></li>
+		class=kadov-p><b style="font-weight: normal;"><span style="font-weight: normal;">&ldquo;数据嵌套 TLB&rdquo;错误 </span></b></li>
 	
 	<li class=kadov-p
-		class=kadov-p><b style="font-weight: normal;"><span style="font-weight: normal;">&ldquo;���ݼ�Ȩ��&rdquo;����</span></b></li>
+		class=kadov-p><b style="font-weight: normal;"><span style="font-weight: normal;">&ldquo;数据键权限&rdquo;错误</span></b></li>
 	
 	<li class=kadov-p
-		class=kadov-p><b style="font-weight: normal;"><span style="font-weight: normal;">&ldquo;�������� TLB&rdquo;���� </span></b></li>
+		class=kadov-p><b style="font-weight: normal;"><span style="font-weight: normal;">&ldquo;备用数据 TLB&rdquo;错误 </span></b></li>
 	
 	<li class=kadov-p
-		class=kadov-p><b style="font-weight: normal;"><span style="font-weight: normal;">&ldquo;���ݷ���Ȩ��&rdquo;����</span></b></li>
+		class=kadov-p><b style="font-weight: normal;"><span style="font-weight: normal;">&ldquo;数据访问权限&rdquo;错误</span></b></li>
 	
 	<li class=kadov-p
-		class=kadov-p><b style="font-weight: normal;"><span style="font-weight: normal;">&ldquo;VHPT ����&rdquo;����&ldquo;���ݷ���λ&rdquo;����</span></b></li>
+		class=kadov-p><b style="font-weight: normal;"><span style="font-weight: normal;">&ldquo;VHPT 数据&rdquo;错误；&ldquo;数据访问位&rdquo;错误</span></b></li>
 	
 	<li class=kadov-p
-		class=kadov-p><b style="font-weight: normal;"><span style="font-weight: normal;">&ldquo;���� TLB&rdquo;����&ldquo;���ݵ���&rdquo;����</span></b></li>
+		class=kadov-p><b style="font-weight: normal;"><span style="font-weight: normal;">&ldquo;数据 TLB&rdquo;错误；&ldquo;数据调试&rdquo;错误</span></b></li>
 	
 	<li class=kadov-p
-		class=kadov-p><span style="font-weight: normal;"><b style="font-weight: normal;">&ldquo;����ҳ������&rdquo;����</b></span></li>
+		class=kadov-p><span style="font-weight: normal;"><b style="font-weight: normal;">&ldquo;数据页不存在&rdquo;错误</b></span></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

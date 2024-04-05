@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/ERB/abouteventratios_for_intel(r)_b_processors.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:35 GMT -->
 <head>
 
-<title>����Ӣ�ض�(R) ����(R) M ���������¼�����</title>
+<title>关于英特尔(R) 奔腾(R) M 处理器的事件比率</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="02 22, 2003 1:10:33 AM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-check-list content="First Draft,Added To TOC,Links,Index keywords,See Also keywords,Images,Browse Sequences">
@@ -112,7 +112,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M ���������¼�����\n����Ӣ�ض�(R) ����(R) M ���������¼�����");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) M 处理器\n英特尔(R) 奔腾(R) M 处理器的事件比率\n关于英特尔(R) 奔腾(R) M 处理器的事件比率");
 
 	}
 	if (window.writeBtnStyle)
@@ -135,33 +135,33 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1 class=Overview><img src="er_logo.gif" alt="�¼���������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">����Ӣ�ض�(R) ����(R) M ���������¼�����</h1>
+<h1 class=Overview><img src="er_logo.gif" alt="事件比率主题" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">关于英特尔(R) 奔腾(R) M 处理器的事件比率</h1>
 
-<p class="whs2">����������£����������¼�����ͬ�����¼��Ĺ�ϵ��Ӧ�ó���ִ���ڼ䷢����ԭʼ�¼�����û��ʲô���塣�¼����������ڸ��õ��˽�Ӧ�ó�������ܡ�</p>
+<p class="whs2">在许多情况下，如果不检查事件比率同其它事件的关系，应用程序执行期间发生的原始事件数量没有什么意义。事件比率有助于更好地了解应用程序的性能。</p>
 
-<h2>ȷ���Ż�����</h2>
+<h2>确定优化机会</h2>
 
-<p class="whs2">ʹ���¼�����ȷ���Ż�����ʱ����Щ��Ӧ��ִ�еĻ������裺</p>
+<p class="whs2">使用事件比率确定优化机会时，这些是应该执行的基本步骤：</p>
 
 <ol type="1" class="whs3">
 	
-	<li class=kadov-p><p class="whs2">���ÿָ��ʱ�������� (CPI) ���ʣ����˽��Ż������һ��ָʾ��</p></li>
+	<li class=kadov-p><p class="whs2">检查每指令时钟周期数 (CPI) 比率，以了解优化机会的一般指示。</p></li>
 	
-	<li class=kadov-p><p class="whs2">��� CPI ���ʽϸߣ�����΢����/ָ����ʡ�����˱��ʽϸߣ���˴����п���û���κ��Ż����ᡣ</p></li>
+	<li class=kadov-p><p class="whs2">如果 CPI 比率较高，则检查微操作/指令比率。如果此比率较高，则此代码中可能没有任何优化机会。</p></li>
 	
-	<li class=kadov-p><p class="whs2">��� CPI ���ʽϸߣ���΢����/ָ����ʽϵͣ����ʾ�˴����д����Ż����ᡣ���������йصı��ʣ��������ĸ�����ʣ�MMX ��������� MMX(TM) �������ʡ�</p></li>
+	<li class=kadov-p><p class="whs2">如果 CPI 比率较高，而微操作/指令比率较低，则表示此代码中存在优化机会。检查与代码有关的比率：浮点代码的浮点比率，MMX 技术代码的 MMX(TM) 技术比率。</p></li>
 </ol>
 
-<p class="whs2">ÿ������������һ����Լ��ӵ��¼�����ˣ�ÿ������������ʹ�õ��¼�����������ͬ��</p>
+<p class="whs2">每个处理器都有一组可以监视的事件。因此，每个处理器可以使用的事件比率有所不同。</p>
 
-<p class="whs2">Ϊ���������ÿ�����������ṩһ��Ԥ������¼����ʡ�</p>
+<p class="whs2">为方便起见，每个处理器都提供一组预定义的事件比率。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" alt="��ע" width="20px" height="20px" border="0" class="img_whs4"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" alt="备注" width="20px" height="20px" border="0" class="img_whs4"> 备注</h3>
 
-<p class="whs5">��Щ���ܼ����¼�ּ���������ܵ���ʱ�Ĳο�������ļ�����ֵ�޷���֤����׼ȷ��ֻ����������ʱ����Բο�����֪�Ĳ�һ�����������ص�λ����������</p>
+<p class="whs5">这些性能监视事件旨在用作性能调整时的参考。报告的计数器值无法保证绝对准确，只能用作调整时的相对参考。已知的不一致现象会在相关的位置作记述。</p>
 
-<p class="whs6">�������ڣ�25 January 2006 A</p>
+<p class="whs6">更新日期：25 January 2006 A</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/data_memory_references_all.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:19 GMT -->
 <head>
 
-<title>�����ڴ����ã����У�</title>
+<title>数据内存引用（所有）</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="06 7, 2001 1:53:01 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -91,7 +91,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M �������¼�\n���������¼�\n�����ڴ�����\n�����ڴ����ã����У�");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) M 处理器\n英特尔(R) 奔腾(R) M 处理器事件\n二级缓存事件\n数据内存引用\n数据内存引用（所有）");
 
 	}
 	if (window.writeBtnStyle)
@@ -114,13 +114,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>�����ڴ����ã����У�</h1>
+<h1>数据内存引用（所有）</h1>
 
-<p>���¼���ʾ L1 ���ݵ����������ڴ����ã��������κ��ڴ������Լ����κ��ڴ����͵����м��ء�</p>
+<p>此事件表示 L1 数据的所有数据内存引用，包括从任何内存类型以及到任何内存类型的所有加载。</p>
 
-<p>&ldquo;VTune(TM) ���ܷ�����&rdquo;����ʵ��ִ��ʱ��ͳ���ڴ���ʡ����磬���ر�δ֪�Ĵ洢��ַ������Ȼ������ͬ�ĵ�ַ�ϴ���ǰһ��δ���Ļ���δ���ж�����ѹ����Ȼ���յõ�ִ�У�������ͳ��һ�Ρ�</p>
+<p>&ldquo;VTune(TM) 性能分析器&rdquo;仅在实际执行时才统计内存访问。例如，加载被未知的存储地址阻塞，然后因相同的地址上存在前一个未决的缓存未命中而被挤压，虽然最终得到执行，但仅会统计一次。</p>
 
-<p class="whs1">�˼��������� I/O ���ʵȷ��ڴ���ʡ� </p>
+<p class="whs1">此计数不包括 I/O 访问等非内存访问。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

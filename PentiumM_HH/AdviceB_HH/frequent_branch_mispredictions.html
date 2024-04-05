@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/AdviceB_HH/frequent_branch_mispredictions.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:24:46 GMT -->
 <head>
 
-<title>Ƶ��������֧Ԥ��ʧ��</title>
+<title>频繁发生分支预测失误</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="02 12, 2003 11:46:45 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -95,7 +95,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\n����Ӣ�ض�(R) ����(R) M �������Ľ���\nƵ��������֧Ԥ��ʧ��");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) M 处理器\n关于英特尔(R) 奔腾(R) M 处理器的建议\n频繁发生分支预测失误");
 
 	}
 	if (window.writeBtnStyle)
@@ -118,39 +118,39 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" alt="Ӣ�ض�(R) ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">Ƶ��������֧Ԥ��ʧ��</h1>
+<h1><img src="TA_logo.gif" alt="英特尔(R) 调优助手主题" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">频繁发生分支预测失误</h1>
 
-<p>���Ʒ�֧�Ŀ�Ԥ���Կ��ܻ����������ܴ������Ե�Ӱ�졣</p>
+<p>改善分支的可预测性可能会给代码的性能带来明显的影响。</p>
 
-<p class="whs2">����������У���ϸ�ھ���ʵ�������壺</p>
+<p class="whs2">在以下情况中，此细节具有实质性意义：</p>
 
-<p>�������ı��ʣ�ʧЧ�ķ�֧Ԥ��ʧ��/ʧЧ��΢���������ѡ�ֵ 0.005 Ӧ��Ϊ���ã�ֵ 0.025 Ӧ��Ϊ���ѡ�</p>
+<p>计数器的比率（失效的分支预测失误/失效的微操作）不佳。值 0.005 应视为良好，值 0.025 应视为不佳。</p>
 
 <h3 class=NoteTipHead><span style="font-weight: bold;"><B><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='tip.gif' width='17px' height='18px' border='0' class='img_whs3'>");}
 else
 {   document.write("<img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs3'>");}
-//--></script><noscript><img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs3'></noscript> ����</B></span></h3>
+//--></script><noscript><img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs3'></noscript> 建议</B></span></h3>
 
 <ul>
 	
-	<li class=kadov-p><p>����ʹ��&ldquo;Ӣ�ض�(R) ������&rdquo;��&ldquo;������������ָ����Ż�&rdquo;(PGBO) ѡ�����µ�������ָ���ṹ��ʹ�����ķ�֧���١�</p></li>
+	<li class=kadov-p><p>考虑使用&ldquo;英特尔(R) 编译器&rdquo;的&ldquo;档案导引基本指令块优化&rdquo;(PGBO) 选项重新调整基本指令块结构，使产生的分支更少。</p></li>
 	
-	<li class=kadov-p><p>����ʹ��&ldquo;Ӣ�ض�������&rdquo;ѡ�� <span   class=Code>-Qxi</span>������ָ֧���滻�� <span class=Code>cmov</span> �� <span class=Code>fcmov</span> ָ�</p></li>
+	<li class=kadov-p><p>考虑使用&ldquo;英特尔编译器&rdquo;选项 <span   class=Code>-Qxi</span>，将分支指令替换成 <span class=Code>cmov</span> 与 <span class=Code>fcmov</span> 指令。</p></li>
 	
-	<li class=kadov-p><p>��ƴ����Ը��Ʒ�֧��Ԥ���ԡ� 
+	<li class=kadov-p><p>设计代码以改善分支可预测性。 
  </p></li>
 	
 	<ul>
 		
-		<li class=kadov-p><p>ȷ��ÿ�� CALL ָ���ƥ��� return��</p></li>
+		<li class=kadov-p><p>确保每条 CALL 指令都有匹配的 return。</p></li>
 		
-		<li class=kadov-p><p>�������������ָ�</p></li>
+		<li class=kadov-p><p>避免混用数据与指令。</p></li>
 		
-		<li class=kadov-p><p>չ���ǳ��̵�ѭ����</p></li>
+		<li class=kadov-p><p>展开非常短的循环。</p></li>
 		
-		<li class=kadov-p><p>��֧�������Ԥ�������ʱ���뿼��ʹ������ <span class=Code>MOV</span> ָ�&ldquo;��������ָ���������չָ�&rdquo;(SSE) ��&ldquo;MMX(TM) ����&rdquo;ָ���޸Ĵ����Ա����֧��<br> ���磬�����´��룺</p></li>
+		<li class=kadov-p><p>分支基于随机预测的数据时，请考虑使用条件 <span class=Code>MOV</span> 指令、&ldquo;数据流单指令多数据扩展指令集&rdquo;(SSE) 或&ldquo;MMX(TM) 技术&rdquo;指令修改代码以避免分支。<br> 例如，将以下代码：</p></li>
 	</ul>
 </ul>
 
@@ -164,7 +164,7 @@ else
 
 <p class="whs5">&nbsp;</p>
 
-<p class="whs4">���ĳ����°汾��</p>
+<p class="whs4">更改成以下版本：</p>
 
 <p class="whs4"><span class=Code>int val [2]={x,y};</span></p>
 
@@ -172,7 +172,7 @@ else
 
 <ul>
 	
-	<li class=kadov-p><p>�ڻ������У����Կ��ǽ���ָ֧���滻�� <span class=Code>cmov</span>��<span class=Code>fcmov</span> �� <span class=Code>setcc</span> ָ��Ӷ��������ǡ���������Щ����£���������ʹ�� SIMD �Ƚϣ��������룩���߼�ָ���/��/�ǣ����Բ�������ִ�в���������鿴ʾ���������&ldquo;MMX(TM) ��������&rdquo;�ĵ��е�&ldquo;ɫ�ȼ���&rdquo;���֣����ĵ������� <a href="http://developer.intel.com/">http://developer.intel.com</a> ���ҵ��� 
+	<li class=kadov-p><p>在汇编代码中，可以考虑将分支指令替换成 <span class=Code>cmov</span>、<span class=Code>fcmov</span> 及 <span class=Code>setcc</span> 指令，从而消除它们。此外在有些情况下，您还可以使用 SIMD 比较（创建掩码）与逻辑指令（与/或/非），以布尔运算执行操作。如需查看示例，请参阅&ldquo;MMX(TM) 技术概述&rdquo;文档中的&ldquo;色度键控&rdquo;部分，此文档可以在 <a href="http://developer.intel.com/">http://developer.intel.com</a> 上找到。 
  </p></li>
 </ul>
 

@@ -112,7 +112,7 @@ function addButton(sType, nStyle, sText, sHref, sOnClick, sOnMouseOver, sOnLoad,
 	{
 		if (canGo(false))
 		{
-			var sTitle = "上一主题";
+			var sTitle = "涓婁竴涓婚";
 			goPrev = new button(sText, nWidth, nHeight, sImg1, sImg2, sImg3);
 			sButton = "<a title=\"" + sTitle + "\" class=\"whtbtnprev\" href=\"javascript:void(0);\" onclick=\"goAvenue(false);return false;\">";
 			if (nStyle == BTN_TEXT)
@@ -126,7 +126,7 @@ function addButton(sType, nStyle, sText, sHref, sOnClick, sOnMouseOver, sOnLoad,
 	{
 		if (canGo(true))
 		{
-			var sTitle = "下一主题";
+			var sTitle = "涓嬩竴涓婚";
 			goNext = new button(sText, nWidth, nHeight, sImg1, sImg2, sImg3);
 			sButton = "<a title=\"" + sTitle + "\" class=\"whtbtnnext\" href=\"javascript:void(0);\" onclick=\"goAvenue(true);return false;\">";
 			if (nStyle == BTN_TEXT)
@@ -140,7 +140,7 @@ function addButton(sType, nStyle, sText, sHref, sOnClick, sOnMouseOver, sOnLoad,
 	{
 		if (isTopicOnly())
 		{
-			var sTitle = "显示导航组件";
+			var sTitle = "鏄剧ず瀵艰埅缁勪欢";
 			goShow = new button(sText, nWidth, nHeight, sImg1, sImg2, sImg3);
 			sButton = "<a title=\"" + sTitle + "\" class=\"whtbtnshow\" href=\"javascript:void(0);\" onclick=\"show();return false;\">";
 			if (nStyle == BTN_TEXT)
@@ -154,7 +154,7 @@ function addButton(sType, nStyle, sText, sHref, sOnClick, sOnMouseOver, sOnLoad,
 	{
 		if (!isTopicOnly())
 		{
-			var sTitle = "隐藏导航组件";
+			var sTitle = "闅愯棌瀵艰埅缁勪欢";
 			goHide = new button(sText, nWidth, nHeight, sImg1, sImg2, sImg3);
 			sButton = "<a title=\"" + sTitle + "\" class=\"whtbtnhide\" href=\"javascript:void(0);\" onclick=\"hide();return false;\">";
 			if (nStyle == BTN_TEXT)
@@ -169,7 +169,7 @@ function addButton(sType, nStyle, sText, sHref, sOnClick, sOnMouseOver, sOnLoad,
 		
 		if (isShowHideEnable())
 		{
-			var sTitle = "显示导航组件";
+			var sTitle = "鏄剧ず瀵艰埅缁勪欢";
 			goShowNav = new button(sText, nWidth, nHeight, sImg1, sImg2, sImg3);
 			sButton = "<a title=\"" + sTitle + "\" class=\"whtbtnshownav\" href=\"javascript:void(0);\" onclick=\"showHidePane(true);return false;\">";
 			if (nStyle == BTN_TEXT)
@@ -183,7 +183,7 @@ function addButton(sType, nStyle, sText, sHref, sOnClick, sOnMouseOver, sOnLoad,
 	{
 		if (isShowHideEnable())
 		{
-			var sTitle = "隐藏导航组件";
+			var sTitle = "闅愯棌瀵艰埅缁勪欢";
 			goHideNav = new button(sText, nWidth, nHeight, sImg1, sImg2, sImg3);
 			sButton = "<a title=\"" + sTitle + "\" class=\"whtbtnhidenav\" href=\"javascript:void(0);\" onclick=\"showHidePane(false);return false;\">";
 			if (nStyle == BTN_TEXT)
@@ -197,7 +197,7 @@ function addButton(sType, nStyle, sText, sHref, sOnClick, sOnMouseOver, sOnLoad,
 	{
 		if (gaPaths.length > 0)
 		{
-			var sTitle = "同步主题";
+			var sTitle = "鍚屾涓婚";
 			goSync = new button(sText, nWidth, nHeight, sImg1, sImg2, sImg3);
 			sButton = "<a title=\""+ sTitle + "\" class=\"whtbtnsynctoc\" href=\"javascript:void(0);\" onclick=\"syncWithShow();return false;\">";
 			if (nStyle == BTN_TEXT)

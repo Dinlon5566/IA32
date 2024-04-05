@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400304.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
 
-<title>mov um - �ƶ��û�����ָ��</title>
+<title>mov um - 移动用户掩码指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:55:09 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nM - ָ��\nmov um - �ƶ��û�����ָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nM - 指令\nmov um - 移动用户掩码指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,16 +116,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">�ƶ��û�����ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">移动用户掩码指令</h1>
 
 <p><span style="font-weight: bold;"><B>mov psr.um</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400305.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400305.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a>
  </p>
 
-<p>ָ������ M</p>
+<p>指令类型 M</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) mov <span style="font-style: italic;"><I>r1</I></span> = psr.um from_form</p>
 
@@ -136,23 +136,23 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>说明</B></span></p>
 
-<p>Դ���������Ƶ�Ŀ��Ĵ�����</p>
+<p>源操作数复制到目标寄存器。</p>
 
-<p>Ҫ���û��������Ƴ������ȡ PSR{5:0}�������������չ��Ȼ���Ƶ� <span style="x-condition: eclipse;">GR</span><script 
+<p>要从用户掩码中移出，则读取 PSR{5:0}，对其进行零扩展，然后复制到 <span style="x-condition: eclipse;">GR</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A1');
-//--></script> <span style="font-style: italic;"><I>r1</I></span>��</p>
+//--></script> <span style="font-style: italic;"><I>r1</I></span>。</p>
 
-<p>Ҫ�Ƶ��û����룬�� PSR{5:0} д�� GR <span   style="font-style: italic;"><I>r2</I></span> ��λ {5:0}��ֻ���ڰ�ȫ���ܼ�����λ (PSR.sp) Ϊ��ʱ�������޸� PSR.up�������޸� PSR.up��</p>
+<p>要移到用户掩码，则将 PSR{5:0} 写入 GR <span   style="font-style: italic;"><I>r2</I></span> 的位 {5:0}。只有在安全性能监视器位 (PSR.sp) 为零时，才能修改 PSR.up。否则不修改 PSR.up。</p>
 
-<p>��һ������ֵд�� PSR ���κ��������־��ᵼ��&ldquo;�����ļĴ���/�ֶ�&rdquo;����</p>
+<p>将一个非零值写入 PSR 的任何其它部分均会导致&ldquo;保留的寄存器/字段&rdquo;错误。</p>
 
-<p><span style="font-weight: bold;"><B>���л�</B></span></p>
+<p><span style="font-weight: bold;"><B>序列化</B></span></p>
 
-<p>���е��û������޸ľ��ᱻ��һ��ָ����۲쵽��</p>
+<p>所有的用户掩码修改均会被下一个指令组观察到。</p>
 
 
 <!--(HR)============================================================-->

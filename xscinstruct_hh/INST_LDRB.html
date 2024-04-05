@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_LDRB.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:31 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>LDRB - ���ؼĴ����ֽ�</title>
+<title>LDRB - 加载寄存器字节</title>
 
 <!--(Meta)==========================================================-->
 
@@ -93,7 +93,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nL - ָ��\nLDRB");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nL - 指令\nLDRB");
 
 	}
 	if (window.writeBtnStyle)
@@ -118,17 +118,17 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特尔 XScale(R) 技术主题' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'></noscript>LDRB - ���ؼĴ����ֽ�</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特尔 XScale(R) 技术主题' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特尔 XScale(R) 技术主题' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'></noscript>LDRB - 加载寄存器字节</h1>
 
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p class=Preformatted><span class=Code>LDR[condition]B dest, addr_mode</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -141,7 +141,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="notational_conventions.html#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 个条件之一。请参阅<a HREF="notational_conventions.html#Condition Code Status">条件代码状态</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -151,7 +151,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>目标寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -161,25 +161,25 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ѱַģʽ 2��<a HREF="Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.html">������洢�ֻ��޷����ֽ�</a></td></tr>
+<p CLASS=CellBodyLeft>寻址模式 2：<a HREF="Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.html">加载与存储字或无符号字节</a></td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-LDRB ָ��ֽڴ� <em CLASS=Source>addr_mode</em> ���ص� <em CLASS=SourceItalic>dest</em>�����ֽڰ�������չ��ʽ��չ�� 32 λ�֣��Եõ�Ҫ������ 8 λ�ڴ����ݡ����������ַ�Ĵ������������� PC ���Ѱַ��condition ��������Чֵ������ָ��� NOP�� 
+LDRB 指令将字节从 <em CLASS=Source>addr_mode</em> 加载到 <em CLASS=SourceItalic>dest</em>。此字节按照零扩展方式扩展成 32 位字，以得到要处理的 8 位内存数据。如果用作基址寄存器，它还启用 PC 相对寻址。condition 必须是有效值；否则将指令当作 NOP。 
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="Note.gif" border="0"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif" border="0"> 备注</h3>
 
-<p>�����ͼ������Ч�ļ��ػ�洢���ݷ��ʣ�������������ֹ�쳣��</p>
+<p>如果试图进行无效的加载或存储数据访问，则生成数据终止异常。</p>
 
-<h2>Ѱַģʽ</h2>
+<h2>寻址模式</h2>
 
-�����&ldquo;Ѱַģʽ 2��������洢�ֻ��޷����ֽ�&rdquo;
+请参阅&ldquo;寻址模式 2：加载与存储字或无符号字节&rdquo;
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -246,7 +246,7 @@ LDRB ָ��ֽڴ� <em CLASS=Source>addr_mode</em> ���ص� <em CLASS=SourceItalic>
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
 
-<h2>���� </h2>
+<h2>编码 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -370,13 +370,13 @@ LDRB ָ��ֽڴ� <em CLASS=Source>addr_mode</em> ���ص� <em CLASS=SourceItalic>
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.globl funcldrb<br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.align 0<br> 4 <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@ * * * LDRB (Addressing Mode 2) * * * <br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA load_store, CODE, READONLY<br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1<br> 8 &#xA0;&#xA0;&#xA0;00000000 &#xA0;&#xA0;E3A0B001 &#xA0;&#xA0;MOV &#xA0;&#xA0;R11, #1<br> 9 &#xA0;&#xA0;&#xA0;00000004 &#xA0;&#xA0;E2AB0001 &#xA0;&#xA0;ADC &#xA0;&#xA0;R0, R11, #1<br> 00000008 &#xA0;&#xA0;E4507000 &#xA0;&#xA0;LDRB &#xA0;R7, label2<br> 11 <br> 12 &#xA0;&#xA0;00000012 &#xA0;&#xA0;E12FFF17 &#xA0;&#xA0;BXR7<br> 13 <br> 14 &#xA0;&#xA0;00000016 &#xA0;&#xA0;E3A0B001 &#xA0;&#xA0;MOV &#xA0;&#xA0;R11, #1<br> 15 &#xA0;&#xA0;00000020 &#xA0;&#xA0;E21B0001 &#xA0;&#xA0;ANDS &#xA0;R0, R11, #1<br> 16 <br> 17 &#xA0;&#xA0;00000024 &#xA0;&#xA0;E3A0000A &#xA0;&#xA0;MOV &#xA0;&#xA0;R0, #10<br> 18 &#xA0;&#xA0;00000028 &#xA0;&#xA0;E3A01001 &#xA0;&#xA0;MOV &#xA0;&#xA0;R1, #1<br> 19 &#xA0;&#xA0;00000032 &#xA0;&#xA0;E5801000 &#xA0;&#xA0;STR &#xA0;&#xA0;R1, [R0]<br> 20 &#xA0;&#xA0;00000036 &#xA0;&#xA0;E5D02000 &#xA0;&#xA0;LDRB &#xA0;R2, [R0]<br> 21 <br> 22 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END<br> 23 <br> 24 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label2<br> 25 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;DCD &#xA0;&#xA0;0xdeadbeef<br> 26 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;DCB &#xA0;&#xA0;&quot;string&quot; <br> 27 <br> 28 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END</span> </p>
 
-<h2>������Ϣ</h2>
+<h2>更多信息</h2>
 
-<a href="Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.html">�����Ѱַģʽ 2��<a HREF="Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.html#Load and Store Word or Unsigned Byte">������洢�ֻ��޷����ֽ�</a></a>
+<a href="Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.html">请参阅寻址模式 2：<a HREF="Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.html#Load and Store Word or Unsigned Byte">加载与存储字或无符号字节</a></a>
 </div>
 
 <script type="text/javascript" language="javascript1.2">

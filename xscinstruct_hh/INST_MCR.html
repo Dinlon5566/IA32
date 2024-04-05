@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_MCR.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:43 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>MCR/MCR2 - �� ARM* ���ļĴ����ƶ���Э������</title>
+<title>MCR/MCR2 - 从 ARM* 核心寄存器移动到协处理器</title>
 
 <!--(Meta)==========================================================-->
 
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nM - ָ��\nMCR/MCR2");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nM - 指令\nMCR/MCR2");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,16 +105,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">MCR/MCR2 - �� ARM* ���ļĴ����ƶ���Э������</h1>
+<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">MCR/MCR2 - 从 ARM* 核心寄存器移动到协处理器</h1>
 
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <div>
 <p class=Preformatted><span class=Code>MCR[condition] cpname, cpopcode1, source, cpdest, cpreg[, cpopcode2]</span><span class=Code><br> MCR2 cpname, cpopcode1, source, cpdest, cpreg[, cpopcode2]</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -127,7 +127,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 个条件之一。请参阅<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">条件代码状态</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -137,7 +137,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Э������������ (p0..p15)</td></tr>
+<p CLASS=CellBodyLeft>协处理器的名称 (p0..p15)</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -147,7 +147,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Э������ <em CLASS=SourceItalic>cpname</em> �Ĳ���</td></tr>
+<p CLASS=CellBodyLeft>协处理器 <em CLASS=SourceItalic>cpname</em> 的操作</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -157,7 +157,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Դ ARM* ���ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>源 ARM* 核心寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -167,7 +167,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Э������Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>协处理器目标寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -177,7 +177,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>����Э�������Ĵ��� </td></tr>
+<p CLASS=CellBodyLeft>其它协处理器寄存器 </td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -187,26 +187,26 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Э������ <em CLASS=SourceItalic>cpname</em> �Ĳ���</td></tr>
+<p CLASS=CellBodyLeft>协处理器 <em CLASS=SourceItalic>cpname</em> 的操作</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-MCR ָ� <em CLASS=SourceItalic>source</em> �а�����ֵ�ƶ���Э������ <em CLASS=SourceItalic>cpname</em>��MCR2 ָ� <em CLASS=SourceItalic>source</em> �а�����ֵ�ƶ���Э������ <em CLASS=SourceItalic>cpname</em>����������Щָ�����������ִ�С�MCR2 ָ�����ڿ��ṩ����Ĳ�����ռ䣬��˶���Э����������߶����ر����á�condition ��������Чֵ������ָ��� NOP�� 
+MCR 指令将 <em CLASS=SourceItalic>source</em> 中包含的值移动到协处理器 <em CLASS=SourceItalic>cpname</em>。MCR2 指令将 <em CLASS=SourceItalic>source</em> 中包含的值移动到协处理器 <em CLASS=SourceItalic>cpname</em>。不过，这些指令仅可无条件执行。MCR2 指令由于可提供额外的操作码空间，因此对于协处理器设计者而言特别有用。condition 必须是有效值；否则将指令当作 NOP。 
 </div>
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif" width="20px" height="20px" border="0" class="img_whs2"> ��ע</h3>
+<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif" width="20px" height="20px" border="0" class="img_whs2"> 备注</h3>
 
-<p>���û��Э����������ִ�д�ָ�������δ�����ָ���쳣��</p>
+<p>如果没有协处理器可以执行此指令，则生成未定义的指令异常。</p>
 
-<h2>Ѱַģʽ</h2>
+<h2>寻址模式</h2>
 
-<p>�޲�����</p>
+<p>无操作数</p>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -273,7 +273,7 @@ MCR ָ� <em CLASS=SourceItalic>source</em> �а�����ֵ�ƶ���Э������ <em CLASS
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>����</h2>
+<h2>编码</h2>
 
 <tr>
 <td ROWSPAN=1
@@ -404,7 +404,7 @@ MCR ָ� <em CLASS=SourceItalic>source</em> �а�����ֵ�ƶ���Э������ <em CLASS
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funcmcr<br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0<br> 4 <br> 5 <br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@ * * * MCR * * *<br> 7 <br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA cp_move, CODE, READONLY<br> 9 <br> 10 &#xA0;&#xA0;00000000 &#xA0;&#xA0;EEA8E073 &#xA0;&#xA0;MCR &#xA0;&#xA0;p0, 5, R14, c8, c3, 3<br> 11 &#xA0;&#xA0;00000004 &#xA0;&#xA0;EEC9D194 &#xA0;&#xA0;MCR &#xA0;&#xA0;p1, 6, R13, c9, c4, 4<br> 12 &#xA0;&#xA0;00000008 &#xA0;&#xA0;EEEAC2D5 &#xA0;&#xA0;MCR &#xA0;&#xA0;p2, 7, R12, c10, c5, 6<br> 13 &#xA0;&#xA0;00000012 &#xA0;&#xA0;EE0BB333 &#xA0;&#xA0;MCR &#xA0;&#xA0;p3, 0, R11, c11, c3, 1<br> 14 <br> 15 &#xA0;&#xA0;00000016 &#xA0;&#xA0;FE647418 &#xA0;&#xA0;MCR2 &#xA0;p4, 3, R7, c4, c8, 0<br> 16 &#xA0;&#xA0;00000020 &#xA0;&#xA0;FE858539 &#xA0;&#xA0;MCR2 &#xA0;p5, 4, R8, c5, c9, 1<br> 17 &#xA0;&#xA0;00000024 &#xA0;&#xA0;FEA69650 &#xA0;&#xA0;MCR2 &#xA0;p6, 5, R9, c6, c0, 2<br> 18 &#xA0;&#xA0;00000028 &#xA0;&#xA0;FEC7A771 &#xA0;&#xA0;MCR2 &#xA0;p7, 6, R10, c7, c1, 3<br> 19</span> </p>
 </div>

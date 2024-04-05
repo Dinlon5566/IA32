@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400364.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
 
-<title>stf - ����洢ָ��</title>
+<title>stf - 浮点存储指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:57:04 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nS - ָ��\nstf - ����洢ָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nS - 指令\nstf - 浮点存储指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,16 +116,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">����洢ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">浮点存储指令</h1>
 
 <p><span style="font-weight: bold;"><B>stf</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400365.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400365.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a>
  </p>
 
-<p>ָ������ M</p>
+<p>指令类型 M</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) stf<span style="x-condition: eclipse;">fsz</span><script type="text/javascript"
 	language=JavaScript1.2><!--
@@ -150,9 +150,9 @@ kadovFilePopupInit('A2');
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>说明</B></span></p>
 
-<p><span style="x-condition: eclipse;">fsz</span> �ֽ���ɵ�ֵ���� <span style="x-condition: eclipse;">FR</span><span style="font-style: italic;"><I>f2</I></span> �е�ֵ���ɣ����� <span style="x-condition: eclipse;">GR</span><span style="font-style: italic;"><I>r3</I></span> ֵָ���ĵ�ַ��ʼд���ڴ档<script type="text/javascript"
+<p><span style="x-condition: eclipse;">fsz</span> 字节组成的值根据 <span style="x-condition: eclipse;">FR</span><span style="font-style: italic;"><I>f2</I></span> 中的值生成，并从 <span style="x-condition: eclipse;">GR</span><span style="font-style: italic;"><I>r3</I></span> 值指定的地址开始写入内存。<script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A3');
 //--></script><script type="text/javascript"
@@ -161,15 +161,15 @@ kadovFilePopupInit('A4');
 //--></script><script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A5');
-//--></script>�� normal_form �У�FR <span style="font-style: italic;"><I>f2</I></span> �е�ֵת�����ڴ��ʽ��Ȼ����д洢���� normal_form �� integer_form �У���� GR r3 ��Ӧ�� NaT λΪ 1������� FR f2 ���� NaTVal����ִ��&ldquo;�Ĵ��� NaT ʹ��&rdquo;����Ĵ�����</p>
+//--></script>在 normal_form 中，FR <span style="font-style: italic;"><I>f2</I></span> 中的值转换成内存格式，然后进行存储。在 normal_form 或 integer_form 中，如果 GR r3 对应的 NaT 位为 1；或如果 FR f2 包含 NaTVal，则执行&ldquo;寄存器 NaT 使用&rdquo;错误的处理。</p>
 
-<p>�� spill_form �У�FR <span style="font-style: italic;"><I>f2</I></span> �е� 16 �ֽ�ֱֵ�Ӵ洢����ִ���κ�ת������ָ������ת��Ĵ�����</p>
+<p>在 spill_form 中，FR <span style="font-style: italic;"><I>f2</I></span> 中的 16 字节值直接存储，不执行任何转换。此指令用于转存寄存器。</p>
 
-<p>�� imm_base_update ��ʽ�У�GR <span style="font-style: italic;"><I>r3</I></span> �е�ֵ�ӵ��з��������� (<span style="font-style: italic;"><I>imm9</I></span>) �ϣ�����Ż� GR <span style="font-style: italic;"><I>r3</I></span>���洢֮��˻�ַ�Ĵ������и��£��Ҳ�Ӱ��洢��ַ��</p>
+<p>在 imm_base_update 形式中，GR <span style="font-style: italic;"><I>r3</I></span> 中的值加到有符号立即数 (<span style="font-style: italic;"><I>imm9</I></span>) 上，结果放回 GR <span style="font-style: italic;"><I>r3</I></span>。存储之后此基址寄存器进行更新，且不影响存储地址。</p>
 
-<p>��ָ��ʹ�������ڴ��ַ����ʴ�С��ѯ ALAT������ʹ����ƥ�����ĿʧЧ��</p>
+<p>此指令使用物理内存地址与访问大小查询 ALAT，并且使所有匹配的项目失效。</p>
 
-<p>sthint ��ɷ���ֵָ���ڴ���ʵ������ԡ��ڻ�ַ������ʽ�У��ᰵʾԤȡ��ʾ����ַ����֮�� GR r3 �е�ֵָ���ĵ�ַ�䵱ָ���Ļ����ߵ�Ԥȡ��ʾ����Ԥȡʹ�� sthint ָ������������ʾ�����ڼȷǲ���д�ز��ԵĿɻ���ҳ��Ҳ�� NaTPage ��ҳ���������� stfe��10 �ֽڣ�ָ���Ӳ��֧���ǿ�ѡ�ġ��ڲ�֧�� stfe ���ʵĴ������ͺ��ϣ���ͼִ�в�֧�ֵ�����ʱ���ᴥ��&ldquo;��֧�ֵ���������&rdquo;����</p>
+<p>sthint 完成符的值指定内存访问的区域性。在基址更新形式中，会暗示预取提示。基址更新之后 GR r3 中的值指定的地址充当指定的缓存线的预取提示。此预取使用 sthint 指定的区域性提示。对于既非采用写回策略的可缓存页，也非 NaTPage 的页，引用它的 stfe（10 字节）指令的硬件支持是可选的。在不支持 stfe 访问的处理器型号上，试图执行不支持的引用时，会触发&ldquo;不支持的数据引用&rdquo;错误。</p>
 
 
 <!--(HR)============================================================-->

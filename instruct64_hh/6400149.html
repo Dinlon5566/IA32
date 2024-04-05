@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400149.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:49 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>return ��֧����</title>
+<title>return 分支类型</title>
 
 <!--(Meta)==========================================================-->
 
@@ -98,18 +98,18 @@ else
 		document.location.reload();
 //-->
 </script>
-<h2>return ��֧����</h2>
+<h2>return 分支类型</h2>
 
-<p>����޶���֧ν��Ϊ 1����ִ�з�֧���������²�����</p>
+<p>如果限定分支谓词为 1，则执行分支并发生以下操作：</p>
 
 <ul>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>CFM��EC �Լ���ǰ��Ȩ����� PFS ��ԭ����ֻ�в�����Ȩ��ʱ���Żỹԭ��Ȩ���𣩡�</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>CFM、EC 以及当前特权级别从 PFS 还原。（只有不增加权限时，才会还原特权级别）。</p></li>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>��ԭ�����ߵĶ�ջ֡��</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>还原调用者的堆栈帧。</p></li>
 	
 	<li class=kadov-p-CBulletPara><p CLASS=BulletPara
-									style="margin-bottom: 0;">������ظ��͵�Ȩ���� PSR.lp Ϊ 1����ִ��&ldquo;���͵���Ȩ����&rdquo;���塣 </p></li>
+									style="margin-bottom: 0;">如果返回更低的权限且 PSR.lp 为 1，则执行&ldquo;更低的特权传输&rdquo;陷阱。 </p></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

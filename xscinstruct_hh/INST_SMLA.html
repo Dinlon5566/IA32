@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_SMLA.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:31 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>SMLAxy - DSP ָ��</title>
+<title>SMLAxy - DSP 指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nS - ָ��\nSMLAxy");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nS - 指令\nSMLAxy");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,16 +104,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">SMLAxy - DSP ָ��</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">SMLAxy - DSP 指令</h1>
 
 <div>
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p class=Preformatted><span CLASS=Code>SMLA<em CLASS=SourceItalic>xy</em> [condition] dest, op1, op2, op3</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,8 +126,8 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>B��<br> x==0<br> ʹ�� <em CLASS=SourceItalic>op1</em> ��λ [15:0]</p>
-<p CLASS=CellBodyLeft>T��<br> x==0<br> ʹ�� <em CLASS=SourceItalic>op1</em> ��λ [31:16]</td></tr>
+<p CLASS=CellBodyLeft>B：<br> x==0<br> 使用 <em CLASS=SourceItalic>op1</em> 的位 [15:0]</p>
+<p CLASS=CellBodyLeft>T：<br> x==0<br> 使用 <em CLASS=SourceItalic>op1</em> 的位 [31:16]</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -136,8 +136,8 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>B��<br> x==0<br> ʹ�� <em CLASS=SourceItalic>op2</em> ��λ [15:0]</p>
-<p CLASS=CellBodyLeft>T��<br> x==0<br> ʹ�� <em CLASS=SourceItalic>op2</em> ��λ [31:16]</td></tr>
+<p CLASS=CellBodyLeft>B：<br> x==0<br> 使用 <em CLASS=SourceItalic>op2</em> 的位 [15:0]</p>
+<p CLASS=CellBodyLeft>T：<br> x==0<br> 使用 <em CLASS=SourceItalic>op2</em> 的位 [31:16]</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -146,7 +146,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="notational_conventions.html#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 个条件之一。请参阅<a HREF="notational_conventions.html#Condition Code Status">条件代码状态</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -155,7 +155,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ŀ��Ĵ��� </td></tr>
+<p CLASS=CellBodyLeft>目标寄存器 </td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -164,7 +164,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>������һ���������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含第一个操作数的寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -174,7 +174,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�����ڶ����������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含第二个操作数的寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -184,20 +184,20 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�����ۼӲ������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含累加操作数的寄存器</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-<p CLASS=Body>SMLA<em CLASS=Italic>xy</em> ָ��ʹ���з��� 16 λ������ <em CLASS=SourceItalic>op1</em> �� <em CLASS=SourceItalic>op2</em> ִ�г˷����˷��� 32 λ����ӵ� <em CLASS=SourceItalic>op3</em> �а����� 32 λֵ����д�� <em CLASS=Source>dest</em>��������ʱ�������磬�� Q ��־��λ��condition ��������Чֵ������ָ��� NOP��</p>
+<p CLASS=Body>SMLA<em CLASS=Italic>xy</em> 指令使用有符号 16 位操作数 <em CLASS=SourceItalic>op1</em> 与 <em CLASS=SourceItalic>op2</em> 执行乘法。乘法的 32 位结果加到 <em CLASS=SourceItalic>op3</em> 中包含的 32 位值。和写入 <em CLASS=Source>dest</em>。如果相加时发生上溢，则 Q 标志置位。condition 必须是有效值；否则将指令当作 NOP。</p>
 
-<h2>Ѱַģʽ</h2>
+<h2>寻址模式</h2>
 
-�޲�����
+无操作数
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -264,7 +264,7 @@ else
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� </h2>
+<h2>编码 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -407,7 +407,7 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.globl funcsmlaxy<br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.align 0<br> 4 <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@ * * * SMLAxy * * * <br> 6 <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example, CODE, READONLY<br> 8 <br> 9 &#xA0;&#xA0;&#xA0;00000000 &#xA0;&#xA0;E3A00000 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;&#xA0;R0, #0xF00D<br> 10 &#xA0;&#xA0;00000004 &#xA0;&#xA0;E3A01000 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;&#xA0;R1, #0xBEEF<br> 11 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E3A02000 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;&#xA0;R2, #0xE667A579<br> 12 <br> 13 &#xA0;&#xA0;00000012 &#xA0;&#xA0;E1050281 &#xA0;&#xA0;SMLABB &#xA0;R5, R1, R2<br> 14 &#xA0;&#xA0;00000016 &#xA0;&#xA0;E10602A1 &#xA0;&#xA0;SMLABT &#xA0;R6, R1, R2<br> 15 &#xA0;&#xA0;00000020 &#xA0;&#xA0;E10702E1 &#xA0;&#xA0;SMLATT &#xA0;R7, R1, R2<br> 16 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END</span> </p>
 </div>

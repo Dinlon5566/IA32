@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400374.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:47 GMT -->
 <head>
 
-<title>tbit - ����λָ��</title>
+<title>tbit - 测试位指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:57:26 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nT - ָ��\ntbit - ����λָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nT - 指令\ntbit - 测试位指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,16 +116,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">����λָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">测试位指令</h1>
 
 <p><span style="font-weight: bold;"><B>tbit</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400375.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400375.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a>
  </p>
 
-<p>ָ������ I</p>
+<p>指令类型 I</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) tbit.<span style="x-condition: eclipse;">trel</span><script type="text/javascript"
 	language=JavaScript1.2><!--
@@ -140,26 +140,26 @@ kadovFilePopupInit('A2');
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>说明</B></span></p>
 
-<p><span style="font-style: italic;"><I>pos6</I></span> ������ָ����λѡ�� <span style="x-condition: eclipse;">GR</span><span style="font-style: italic;"><I>r3</I></span>��<script type="text/javascript"
+<p><span style="font-style: italic;"><I>pos6</I></span> 立即数指定的位选自 <span style="x-condition: eclipse;">GR</span><span style="font-style: italic;"><I>r3</I></span>。<script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A3');
-//--></script>��ѡ��λ��ɵĵ���λ������ܻ��󲹣�Ҳ���ܲ��󲹣�����ȡ���� <span style="x-condition: eclipse;">trel</span><script type="text/javascript"
+//--></script>所选的位组成的单个位结果可能会求补，也可能不求补，具体取决于 <span style="x-condition: eclipse;">trel</span><script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A4');
-//--></script> ��ɷ����˽��д������ν�ʼĴ���Ŀ�� <span style="font-style: italic;"><I>p1</I></span> �� <span style="font-style: italic;"><I>p2</I></span>�����д��Ŀ�ĵصķ�ʽ�� <span style="x-condition: eclipse;">ctype</span>ָ���ıȽ�����ȷ����<script type="text/javascript"
+//--></script> 完成符。此结果写入两个谓词寄存器目标 <span style="font-style: italic;"><I>p1</I></span> 与 <span style="font-style: italic;"><I>p2</I></span>。结果写入目的地的方式由 <span style="x-condition: eclipse;">ctype</span>指定的比较类型确定。<script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A5');
-//--></script>�������<a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400161.htm">�Ƚ� (cmp)</a> ָ�</p>
+//--></script>另请参阅<a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400161.htm">比较 (cmp)</a> 指令。</p>
 
 <p><span style="x-condition: eclipse;">trel</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A6');
-//--></script> ��ɷ�ֵ .nz �� .z ��ʾ����������ԡ����ڱ�׼�� unc ���ͣ�ֻ�� .z ֱֵ����Ӳ����ʵ�֣�.nz ֵʵ������α�������������������ֻ���л�һ��ν��Ŀ��ָʾ����Ȼ��ʹ��ʵ�ֵĹ�ϵ�����ڲ������ͣ������ֹ�ϵ����Ӳ����ʵ�֡�</p>
+//--></script> 完成符值 .nz 与 .z 表示非零与零测试。对于标准与 unc 类型，只有 .z 值直接在硬件中实现；.nz 值实际上是伪操作。对于它，汇编器只是切换一下谓词目标指示符，然后使用实现的关系。对于并行类型，这两种关系都在硬件中实现。</p>
 
-<p>�������ν�ʼĴ���Ŀ�ĵ���ͬ��<span style="font-style: italic;"><I>p1</I></span> �� <span style="font-style: italic;"><I>p2</I></span> ָ����ͬ��ν�ʼĴ��������޶�ν�������û�Ƚ�����Ϊ unc����ָ���ִ��&ldquo;�Ƿ�����&rdquo;����Ĵ�����</p>
+<p>如果两个谓词寄存器目的地相同（<span style="font-style: italic;"><I>p1</I></span> 与 <span style="font-style: italic;"><I>p2</I></span> 指定相同的谓词寄存器）、限定谓词已设置或比较类型为 unc，则指令都将执行&ldquo;非法操作&rdquo;错误的处理。</p>
 
 
 <!--(HR)============================================================-->

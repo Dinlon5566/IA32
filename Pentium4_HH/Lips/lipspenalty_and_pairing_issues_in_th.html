@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/lipspenalty_and_pairing_issues_in_th.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:47 GMT -->
 <head>
 
-<title>���ھ�̬���ͷ�</title>
+<title>关于静态汇编惩罚</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=MS-HAID content=Overview>
 <meta name=MS-HAID content="Static Assembly Analysis">
 <meta name=MS-HAID content="About Static Analysis">
@@ -104,7 +104,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������ĳͷ�\n���ھ�̬������ͷ�");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) 4 处理器\n英特尔(R) 奔腾(R) 4 处理器的惩罚\n关于静态汇编器惩罚");
 
 	}
 	if (window.writeBtnStyle)
@@ -137,31 +137,31 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4))
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='TA_logo.gif' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
 else
 {   document.write("<img src='TA_logo.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/TA_logo.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>���ھ�̬���ͷ�</h1>
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/TA_logo.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>关于静态汇编惩罚</h1>
 
-<p>&ldquo;VTune(TM) ���ܷ�����&rdquo;����ִ��<a HREF="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/Static_Assembly_Analysis.htm">��̬����</a>������֮��VTune ��������ʾ���ڴ������ܵ���Ϣ��</p>
+<p>&ldquo;VTune(TM) 性能分析器&rdquo;可以执行<a HREF="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/Static_Assembly_Analysis.htm">静态分析</a>。分析之后，VTune 分析器显示关于代码性能的信息：</p>
 
 <ul type="disc" class="whs2">
 	
-	<li class=kadov-p><p>&ldquo;�ͷ�&rdquo;<img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/penalty.gif" x-maintain-ratio="TRUE" width="8px" height="16px" border="0" class="img_whs3"> ָ�ض��������Լ��������Ӱ�����ܣ�����Ӱ�����������</p></li>
+	<li class=kadov-p><p>&ldquo;惩罚&rdquo;<img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/penalty.gif" x-maintain-ratio="TRUE" width="8px" height="16px" border="0" class="img_whs3"> 指特定的问题以及它们如何影响性能，例如影响的周期数。</p></li>
 	
-	<li class=kadov-p><p>&ldquo;����&rdquo;<img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/warning.gif" x-maintain-ratio="TRUE" width="8px" height="16px" border="0" class="img_whs3"> ָ���ض�������£����ܻᵼ�����ܽ��͵�Ǳ�����⡣ </p></li>
+	<li class=kadov-p><p>&ldquo;警告&rdquo;<img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/warning.gif" x-maintain-ratio="TRUE" width="8px" height="16px" border="0" class="img_whs3"> 指在特定的情况下，可能会导致性能降低的潜在问题。 </p></li>
 </ul>
 
-<p>��������Ϊ�����Ǿ�̬�ģ����Զ�����ʱ��ʵ��Ӱ����δ֪�ġ�</p>
+<p>不过，因为分析是静态的，所以对运行时的实际影响是未知的。</p>
 
-<p>Ҫ�鿴��̬���ͷ��뾯�棬����&ldquo;���&rdquo;��&ldquo;����������&rdquo;ģʽ�д�Դ������ͼ��ÿ�д���ĳͷ��뾯������ <span   style="font-weight: bold;"><B>Penalties and Warnings</B></span>���ͷ��뾯�棩���С�</p>
+<p>要查看静态汇编惩罚与警告，请在&ldquo;混合&rdquo;或&ldquo;仅反汇编代码&rdquo;模式中打开源代码视图。每行代码的惩罚与警告列在 <span   style="font-weight: bold;"><B>Penalties and Warnings</B></span>（惩罚与警告）列中。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs4"> ��ʾ</h3>
+	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs4"> 提示</h3>
 
-<p class="whs5">Ҫ��֤�ͷ��뾯���ʵ��Ӱ�죬��ʹ����ص��¼����л����¼��Ĳ�����</p>
-
-<p class="whs6">&nbsp;</p>
+<p class="whs5">要验证惩罚与警告的实际影响，请使用相关的事件运行基于事件的采样。</p>
 
 <p class="whs6">&nbsp;</p>
 
-<p class="whs7">�������� January 25, 2006 A</p>
+<p class="whs6">&nbsp;</p>
+
+<p class="whs7">更新日期 January 25, 2006 A</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

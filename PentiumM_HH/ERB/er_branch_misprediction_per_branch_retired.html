@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/ERB/er_branch_misprediction_per_branch_retired.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:38:29 GMT -->
 <head>
 
-<title>��֧Ԥ��ʧ��/ʧЧ�ķ�֧</title>
+<title>分支预测失误/失效的分支</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=MS-HAID content="Event Ratio">
 <meta name=MS-HAID content="Branch Mispredictions Retired">
 <meta name=MS-HAID content="Branch Instructions Retired">
@@ -98,7 +98,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M ���������¼�����\n��֧ͳ�Ʊ���\n��֧Ԥ��ʧ��/ʧЧ�ķ�ָ֧��");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) M 处理器\n英特尔(R) 奔腾(R) M 处理器的事件比率\n分支统计比率\n分支预测失误/失效的分支指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -121,11 +121,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="er_logo.gif" alt="�¼���������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">��֧Ԥ��ʧ��/ʧЧ�ķ�ָ֧�� </h1>
+<h1><img src="er_logo.gif" alt="事件比率主题" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">分支预测失误/失效的分支指令 </h1>
 
-<p><a href="../EventsB/branch_mispredictions_retired.html">ʧЧ�ķ�֧Ԥ��ʧ��</a> / <a href="../EventsB/branch_instructions_retired.html">ʧЧ�ķ�ָ֧��</a></p>
+<p><a href="../EventsB/branch_mispredictions_retired.html">失效的分支预测失误</a> / <a href="../EventsB/branch_instructions_retired.html">失效的分支指令</a></p>
 
-<p>һ����˵����Щ����Դ�Ծ���ḻ�����ܹ���ʦ�ľ��飺</p>
+<p>一般来说，这些数字源自经验丰富的性能工程师的经验：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="60%" class="whs2">
@@ -133,13 +133,13 @@ else
 <tr>
 <td valign="top" width="50%" class="whs3">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td>
+	style="margin-bottom: 0;">良好</td>
 <td valign="top" width="50%" class="whs3">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ƽ��</td>
+	style="margin-bottom: 0;">平均</td>
 <td valign="top" width="50%" class="whs3">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td></tr>
+	style="margin-bottom: 0;">不佳</td></tr>
 
 <tr>
 <td valign="top" width="50%" class="whs3">
@@ -150,7 +150,7 @@ else
 <p class="whs4">0.23</td></tr>
 </table>
 
-<p class="whs4">�����������У�ǡ����Ԥ������Ǵ�Լ 95%���������������������ط�֧����Ԥ����ʽϵ͡� </p>
+<p class="whs4">在正常代码中，恰当的预测比率是大约 95%。不过，如果存在数据相关分支，则预测比率较低。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\n�ڴ��¼�\nһ��ָ�����Ԥȡ�¼�\nISB_BUNPAIRS_IN");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 安腾(R) 2 处理器\n英特尔(R) 安腾(R) 2 处理器事件\n内存事件\n一级指令缓存与预取事件\nISB_BUNPAIRS_IN");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,14 +108,14 @@ else
 
 &nbsp; 
 
-<br><b   style="font-weight: bold;">���⣺</b>�Ӷ�������д�� FE �ĳɶ�ָ����<b style="font-weight: bold;"><br> ���</b>һ��ָ�����Ԥȡ�¼�<b style="font-weight: bold;"><br> IAR/DAR/OPC��</b>Y/N/N<b style="font-weight: bold;"><br> �¼����룺</b>0x46<b style="font-weight: bold;"><br> ���ÿ����������</b>1 
+<br><b   style="font-weight: bold;">标题：</b>从二级缓存写入 FE 的成对指令束<b style="font-weight: bold;"><br> 类别：</b>一级指令缓存与预取事件<b style="font-weight: bold;"><br> IAR/DAR/OPC：</b>Y/N/N<b style="font-weight: bold;"><br> 事件代码：</b>0x46<b style="font-weight: bold;"><br> 最大每周期增量：</b>1 
 
-<p><b style="font-weight: bold;">���壺</b>�ṩ�Ӷ������棨�����ϣ�д��ǰ�˵ĳɶ�ָ������32 �ֽڣ����������й���Ϣ��</p>
+<p><b style="font-weight: bold;">定义：</b>提供从二级缓存（及以上）写入前端的成对指令束（32 字节）的数量的有关信息。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> 备注</h3>
 
-<p class="whs2">��������߱�ǳ������ȡ������¼�ʹ�� IBRP0 �޶�����������߱�ǳ�Ԥȡƥ�䣬����¼�ʹ�� IBRP1 �޶��� </p>
+<p class="whs2">如果缓存线标记成随需获取，则此事件使用 IBRP0 限定；如果缓存线标记成预取匹配，则此事件使用 IBRP1 限定。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

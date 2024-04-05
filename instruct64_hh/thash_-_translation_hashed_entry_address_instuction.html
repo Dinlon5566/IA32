@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/thash_-_translation_hashed_entry_address_instuction.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:47 GMT -->
 <head>
 
-<title>thash - ת��ɢ�����ַָ��</title>
+<title>thash - 转译散列项地址指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="01 16, 2003 10:57:10 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -84,7 +84,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nT - ָ��\nthash - ת��ɢ�����ַָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nT - 指令\nthash - 转译散列项地址指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -107,13 +107,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">ת��ɢ�����ַָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">转译散列项地址指令</h1>
 
 <p class="whs2">thash</p>
 
-<p class="whs3"><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a></p>
+<p class="whs3"><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a></p>
 
-<p class="whs2">��ʽ</p>
+<p class="whs2">格式</p>
 
 <p class=Preformatted>(qp)thashr 1 = r3 &#xA0;&#xA0;&#xA0;&#xA0;M46</p>
 
@@ -122,24 +122,24 @@ else
 <hr class="whs4">
 
 
-<p class="whs2"><b><span style="font-weight: bold;"><B>˵��</B></span></b></p>
+<p class="whs2"><b><span style="font-weight: bold;"><B>说明</B></span></b></p>
 
-<p class="whs3"><b><span style="font-weight: normal;">&ldquo;����ɢ��ҳ��&rdquo;(VHPT) ���ַ����ָ��������</span></b><b style="font-weight: normal;"><span   style="font-weight: normal;">��ַ���ɣ�������� GR </span><span   style="font-weight: normal; font-style: italic;"><I>r1</I></span><span style="font-weight: normal;">�������ַ�� GR </span><span style="font-style: italic; font-weight: normal;"><I>r3</I></span><span 
- style="font-weight: normal;"> ָ��������</span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;">�Ĵ����� GR </span><span style="font-style: italic; font-weight: normal;"><I>r3</I></span><span 
- style="font-weight: normal;"> λ {63:61} ָ����</span></b></p>
+<p class="whs3"><b><span style="font-weight: normal;">&ldquo;虚拟散列页表&rdquo;(VHPT) 项地址基于指定的虚拟</span></b><b style="font-weight: normal;"><span   style="font-weight: normal;">地址生成，结果放入 GR </span><span   style="font-weight: normal; font-style: italic;"><I>r1</I></span><span style="font-weight: normal;">。虚拟地址由 GR </span><span style="font-style: italic; font-weight: normal;"><I>r3</I></span><span 
+ style="font-weight: normal;"> 指定；区域</span></b><b style="font-weight: normal;"><span 
+ style="font-weight: normal;">寄存器由 GR </span><span style="font-style: italic; font-weight: normal;"><I>r3</I></span><span 
+ style="font-weight: normal;"> 位 {63:61} 指定。</span></b></p>
 
-<p class="whs3"><b style="font-weight: bold;"><span style="font-weight: normal;">������� thash ʱ�� NaT ���������δʵ�ֵ������ַ�������룬�������Ŀ��Ĵ���ֵδ���壬�� NaT λ��Ϊһ�����ô�����ʹ�û�������Ķ̸�ʽ VHPT (PTA.vf=0) ʱ��thash ���ص�ֵ�ɼܹ��Ķ̸�ʽɢ�к������塣����� </span></b><span style="font-style: italic;"><I>Intel(R) Itanium(R) Architecture</I></span><b><span style="font-weight: normal; font-style: italic;"><I>Software Developer's Manual</I></span><span style="font-weight: normal; font-style: italic;"><I>��Ӣ�ض�(R) ����(R) ��ϵ�ṹ����������Ա�ֲᣩ</I></span><b></span><span style="font-weight: normal;">�� 2 ���е�&ldquo;��������� VHPT �̸�ʽ&rdquo;��</span></b></p>
+<p class="whs3"><b style="font-weight: bold;"><span style="font-weight: normal;">如果给出 thash 时将 NaT 输入参数或未实现的虚拟地址用作输入，则产生的目标寄存器值未定义，其 NaT 位设为一。配置处理器使用基于区域的短格式 VHPT (PTA.vf=0) 时，thash 返回的值由架构的短格式散列函数定义。请参阅 </span></b><span style="font-style: italic;"><I>Intel(R) Itanium(R) Architecture</I></span><b><span style="font-weight: normal; font-style: italic;"><I>Software Developer's Manual</I></span><span style="font-weight: normal; font-style: italic;"><I>（英特尔(R) 安腾(R) 体系结构软件开发人员手册）</I></span><b></span><span style="font-weight: normal;">第 2 卷中的&ldquo;基于区域的 VHPT 短格式&rdquo;。</span></b></p>
 
-<p class="whs3"><b><span style="font-weight: normal;">����������Ϊʹ�ó���ʽ VHPT (PTA.vf=1) ʱ��thash �������ַ��ִ��</span></b><b><span style="font-weight: normal;">�ض��ھ���ʵ�ְ汾�ĳ���ʽɢ�к�����������</span></b><b><span style="font-weight: normal;">����ʽ VHPT �е�ɢ��������</span></b></p>
+<p class="whs3"><b><span style="font-weight: normal;">处理器配置为使用长格式 VHPT (PTA.vf=1) 时，thash 在虚拟地址上执行</span></b><b><span style="font-weight: normal;">特定于具体实现版本的长格式散列函数，以生成</span></b><b><span style="font-weight: normal;">长格式 VHPT 中的散列索引。</span></b></p>
 
-<p class="whs3"><b><span style="font-weight: normal;">�ڳ���ʽ�У�VHPT �е�ת����������ʹ�ô�ָ�����ɵ�ɢ��������</span></b><b style="font-weight: normal;"><span style="font-weight: normal;"> </span><span class=Code>ttag</span><span   style="font-weight: normal;"> ָ�������ɢ�б��Ψһ��ʶ��</span></b></p>
+<p class="whs3"><b><span style="font-weight: normal;">在长格式中，VHPT 中的转译项必须可以使用此指令生成的散列索引及</span></b><b style="font-weight: normal;"><span style="font-weight: normal;"> </span><span class=Code>ttag</span><span   style="font-weight: normal;"> 指令产生的散列标记唯一标识。</span></b></p>
 
-<p class="whs3"><b><span style="font-weight: normal;">ɢ�к�������ʹ������ʵʩ������λ����ֻʹ�������ַλ {60:0} </span></b><b><span style="font-weight: normal;">ȥȷ�� VHPT ��ƫ�����������ַλ {63:61} ���ɶ̸�ʽɢ������</span></b><b><span style="font-weight: normal;">ȷ�� VHPT ������</span></b></p>
+<p class="whs3"><b><span style="font-weight: normal;">散列函数必须使用所有实施的区域位，并只使用虚拟地址位 {60:0} </span></b><b><span style="font-weight: normal;">去确定 VHPT 的偏移量。虚拟地址位 {63:61} 仅由短格式散列用于</span></b><b><span style="font-weight: normal;">确定 VHPT 的区域。</span></b></p>
 
-<p class="whs3"><b><span style="font-weight: normal;">��ָ������������ͺŵĴ�������ʵʩ����ʹ��δ</span></b><b><span style="font-weight: normal;">ʵʩ VHPT ��ѯ���Ĵ������ͺš�</span></b></p>
+<p class="whs3"><b><span style="font-weight: normal;">此指令必须在所有型号的处理器上实施，即使是未</span></b><b><span style="font-weight: normal;">实施 VHPT 查询器的处理器型号。</span></b></p>
 
-<p class="whs2"><b><span style="font-weight: bold;"><B>����</B></span></b></p>
+<p class="whs2"><b><span style="font-weight: bold;"><B>操作</B></span></b></p>
 
 <p class="whs3"><b style="font-weight: normal;"><span class=Code>if (PR[qp]) {</span></b></p>
 
@@ -167,9 +167,9 @@ else
 
 <p class="whs3"><b style="font-weight: normal;"><span class=Code>}</span></b></p>
 
-<p class="whs2"><b><span style="font-weight: bold;"><B>�ж�</B></span></b></p>
+<p class="whs2"><b><span style="font-weight: bold;"><B>中断</B></span></b></p>
 
-<p class="whs3"><b style="font-weight: normal;">&ldquo;�Ƿ�����&rdquo;����</b></p>
+<p class="whs3"><b style="font-weight: normal;">&ldquo;非法操作&rdquo;错误</b></p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

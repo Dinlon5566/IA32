@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/LDR(3)_(Thumb).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:32:04 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>LDR(3) (Thumb) - ���ؼĴ���</title>
+<title>LDR(3) (Thumb) - 加载寄存器</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n16 λָ��\nL - ָ��\nLDR(3) (Thumb)");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n16 位指令\nL - 指令\nLDR(3) (Thumb)");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,17 +106,17 @@ else
 </script>
 <div>
 <div>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">LDR(3) (Thumb*) - ���ؼĴ���</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">LDR(3) (Thumb*) - 加载寄存器</h1>
 
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p CLASS=Preformatted>LDR dest, [PC, (#value * 4)]</p>
 </div>
 
 <div>
-<p>���У�</p>
+<p>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -128,7 +128,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>目标寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -138,7 +138,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>���ڼ����ڴ��ַ�ĳ��������</td></tr>
+<p CLASS=CellBodyLeft>用于计算内存地址的程序计数器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -147,28 +147,28 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>8 λֵ���� 4��Ȼ��ӵ� PC �� </td></tr>
+<p CLASS=CellBodyLeft>8 位值乘以 4，然后加到 PC 上 </td></tr>
 </table>
 </div>
 
 <div>
-<h2>˵�� </h2>
+<h2>说明 </h2>
 
-�˸�ʽ�� LDR ָ����Խ� 32 λ�ڴ����ݼ��ص� <em CLASS=SourceItalic>dest</em>�����������ڷ��� PC ������ݡ� 
+此格式的 LDR 指令可以将 32 位内存数据加载到 <em CLASS=SourceItalic>dest</em>。它还有助于访问 PC 相关数据。 
 </div>
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="Note.gif"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif"> 备注</h3>
 
-�����ͼ������Ч�ļ��ػ�洢���ݷ��ʣ�������������ֹ�쳣�� 
+如果试图进行无效的加载或存储数据访问，则生成数据终止异常。 
 
-<h2>Ѱַģʽ </h2>
+<h2>寻址模式 </h2>
 
-�޲������� 
+无操作数。 
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -237,7 +237,7 @@ else
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� </h2>
+<h2>编码 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -301,13 +301,13 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funldr <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0 <br> 4 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example,CODE,READONLY <br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;CODE16 <br> 7<br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1 <br> 9 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Load register R2 from address in <br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; memory 168 bytes from current PC <br> 11 &#xA0;&#xA0;&#xA0;00000000 &#xA0;&#xA0;&#xA0;4A00 &#xA0;&#xA0;&#xA0;LDR &#xA0;&#xA0;&#xA0;R2, [PC, #OxA8]  </p>
 
-<h2>������Ϣ </h2>
+<h2>更多信息 </h2>
 
-<a href="LDR(1)_(Thumb).html" CLASS="XRef">����� LDR(1) ָ��</a><a href="LDR(2)_(Thumb).html"><br> ����� LDR(2) ָ��</a><a href="LDR(4)_(Thumb).html" CLASS="XRef"><br> ����� LDR(4) ָ��</a><a href="STR(1)_(Thumb).html"><br> ����� STR(1) ָ��</a><a href="STR(2)_(Thumb).html" CLASS="XRef"><br> ����� STR(2) ָ��</a><a href="STR(3)_(Thumb).html"><br> ����� STR(3) ָ��</a>
+<a href="LDR(1)_(Thumb).html" CLASS="XRef">请参阅 LDR(1) 指令</a><a href="LDR(2)_(Thumb).html"><br> 请参阅 LDR(2) 指令</a><a href="LDR(4)_(Thumb).html" CLASS="XRef"><br> 请参阅 LDR(4) 指令</a><a href="STR(1)_(Thumb).html"><br> 请参阅 STR(1) 指令</a><a href="STR(2)_(Thumb).html" CLASS="XRef"><br> 请参阅 STR(2) 指令</a><a href="STR(3)_(Thumb).html"><br> 请参阅 STR(3) 指令</a>
 </div>
 </div>
 

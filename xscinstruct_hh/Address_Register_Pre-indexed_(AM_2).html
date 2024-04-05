@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Register_Pre-indexed_(AM_2).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:48 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>�Ĵ������ȱ�ַ (AM 2)</title>
+<title>寄存器事先变址 (AM 2)</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nѰַģʽ\n������洢�ֻ��޷����ֽ�\n�Ĵ������ȱ�ַ (AM 2)");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n寻址模式\n加载与存储字或无符号字节\n寄存器事先变址 (AM 2)");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,14 +104,14 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������"><a NAME=44973></a>�Ĵ������ȱ�ַ (AM 2)</h1>
+<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题"><a NAME=44973></a>寄存器事先变址 (AM 2)</h1>
 
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p class=Preformatted><span class=Code>[basereg, +/-indexreg]!</span> </p>
 
-<p CLASS=Body>���У� </p>
+<p CLASS=Body>其中： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -123,7 +123,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ��������ַ�ļĴ�����</td></tr>
+<p CLASS=CellBodyLeft>指定包含基址的寄存器。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -132,7 +132,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ������Ҫ�ӵ� <em CLASS=SourceItalic>basereg</em> ����м�ȥ��ƫ�����ļĴ�����</td></tr>
+<p CLASS=CellBodyLeft>指定包含要加到 <em CLASS=SourceItalic>basereg</em> 或从中减去的偏移量的寄存器。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -142,16 +142,16 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>���� W λ���Ը��»�ַ�Ĵ�����</td></tr>
+<p CLASS=CellBodyLeft>设置 W 位，以更新基址寄存器。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-Ѱַģʽ&ldquo;�Ĵ������ȱ�ַ&rdquo;ִ�����²�����α����˵������
+寻址模式&ldquo;寄存器事先变址&rdquo;执行以下操作（伪代码说明）：
 
 <p CLASS=Preformatted-Code>if U == 1 then<br> &#xA0;addr = basereg + indexreg<br> else/* if U == 0 */<br> &#xA0;addr = basereg - indexreg<br> If ConditionPassed (condition) then<br> &#xA0;basereg = addr</p>
 
-<p CLASS=Body>��ַ�Ĵ��� <em CLASS=SourceItalic>indexreg</em> ��ֵ�ӵ���ַ�Ĵ��� <em CLASS=SourceItalic>basereg</em> ��ֵ�����Ǵ��м�ȥ�����ָ����ָ������������������״̬ƥ�䣬����д�ػ�ַ�Ĵ��� <em CLASS=SourceItalic>basereg</em>��</p>
+<p CLASS=Body>变址寄存器 <em CLASS=SourceItalic>indexreg</em> 的值加到基址寄存器 <em CLASS=SourceItalic>basereg</em> 的值，或是从中减去。如果指令中指定的条件与条件代码状态匹配，则它写回基址寄存器 <em CLASS=SourceItalic>basereg</em>。</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -172,7 +172,7 @@ else
 <col class="whs2">
 <col class="whs2">
 
-<h2>����</h2>
+<h2>编码</h2>
 
 <tr>
 <td ROWSPAN=1
@@ -445,33 +445,33 @@ else
 </tr>
 </table>
 
-<p CLASS=Body>B λ��ʾ�޷����ֽ� (<em CLASS=Source> B == 1</em> ) ���ַ��� (<em CLASS=Source> B == 0</em> )��</p>
+<p CLASS=Body>B 位表示无符号字节 (<em CLASS=Source> B == 1</em> ) 或字访问 (<em CLASS=Source> B == 0</em> )。</p>
 
-<p CLASS=Body>L λ��ʾ&ldquo;����&rdquo;(<em CLASS=Source> L == 1</em> ) ��&ldquo;�洢&rdquo;(<em CLASS=Source> L == 0</em> ) ָ�</p>
+<p CLASS=Body>L 位表示&ldquo;加载&rdquo;(<em CLASS=Source> L == 1</em> ) 或&ldquo;存储&rdquo;(<em CLASS=Source> L == 0</em> ) 指令。</p>
 
-<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif">&nbsp;��ע</h3>
+<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif">&nbsp;备注</h3>
 
-��Ѱַģʽ����ɰ� <em CLASS=Source>LSL</em> �����ļĴ���ƫ������������Ϊ�㡣 
+此寻址模式编码成按 <em CLASS=Source>LSL</em> 调整的寄存器偏移量，调整量为零。 
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Caution.gif">&nbsp;ע��</h3>
+<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Caution.gif">&nbsp;注意</h3>
 
-��� <em CLASS=Source>R15</em> ָ��Ϊ�Ĵ��� <em CLASS=SourceItalic>basereg</em>�����������޷�Ԥ֪�� 
+如果 <em CLASS=Source>R15</em> 指定为寄存器 <em CLASS=SourceItalic>basereg</em>，则结果将会无法预知。 
 </div>
 
 <div>
-Ϊ <em CLASS=Source>basereg</em> �� <em   CLASS=Source>indexreg</em> ָ����ͬ�ļĴ���ʱ����������޷�Ԥ֪�� 
+为 <em CLASS=Source>basereg</em> 与 <em   CLASS=Source>indexreg</em> 指定相同的寄存器时，结果将会无法预知。 
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p CLASS=Preformatted><span class=Code>LDR &#xA0;&#xA0;&#xA0;R7, [R5, R8]!</span></p>
 
-<h2>������Ϣ</h2>
+<h2>更多信息</h2>
 
-<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.htm">�����Ѱַģʽ 2��������洢�ֻ��޷����ֽ�</a><a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Inst_Overview_of_Instructions.htm" CLASS="XRef" style="font-weight: normal;"><br> ����Ļ����ָ��</a> 
+<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.htm">请参阅寻址模式 2：加载与存储字或无符号字节</a><a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Inst_Overview_of_Instructions.htm" CLASS="XRef" style="font-weight: normal;"><br> 请参阅汇编器指令</a> 
 </div>
 
 <script type="text/javascript" language="javascript1.2">

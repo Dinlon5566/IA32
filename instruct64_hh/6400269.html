@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400269.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:34:42 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>ָ��˵������</title>
+<title>指令说明惯例</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nָ��˵������");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\n指令说明惯例");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,50 +104,50 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">ָ��˵������</h1>
+<h1><img src="itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">指令说明惯例</h1>
 
-<p>����ָ��˵�����������¸������֣�</p>
+<p>所有指令说明均包含以下各个部分：</p>
 
 <ul>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara><a HREF="6400270.html">��ʽ</a> - ��������﷨��ָ�����ͼ������ʽ��</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara><a HREF="6400270.html">格式</a> - 汇编语言语法、指令类型及编码格式。</p></li>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara><a HREF="6400271.html">˵��</a> - �����ı�����ָ��ܡ�</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara><a HREF="6400271.html">说明</a> - 用中文表述的指令功能。</p></li>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara><a HREF="6400272.html">�ж�</a> - ָ����ܵ��µ��ж��б��������ȼ��г�����</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara><a HREF="6400272.html">中断</a> - 指令可能导致的中断列表（按优先级列出）。</p></li>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara><a HREF="6400273.html">����</a> - �� C ���������ָ��ܣ����κ�ָ��ı����е���&ldquo;����&rdquo;�������в鿴����</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara><a HREF="6400273.html">操作</a> - 用 C 代码表述的指令功能（在任何指令的标题中单击&ldquo;操作&rdquo;字样进行查看）。</p></li>
 </ul>
 
-<p>���⻹���ݾ�������������²��֣�</p>
+<p>此外还根据具体情况包含以下部分：</p>
 
 <ul>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara><span style="font-weight: bold;"><B>���л�</B></span> - ���л���Ϊ�����л�Ҫ��</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara><span style="font-weight: bold;"><B>序列化</B></span> - 序列化行为或序列化要求。</p></li>
 	
 	<li class=kadov-p-CBulletPara><p CLASS=BulletPara
-									style="margin-bottom: 0;"><span style="font-weight: bold;"><B>FP �쳣</B></span> - IEEE �������塣 </p></li>
+									style="margin-bottom: 0;"><span style="font-weight: bold;"><B>FP 异常</B></span> - IEEE 浮点陷阱。 </p></li>
 </ul>
 
 <p CLASS=BulletPara
-	style="margin-bottom: 0;">������д���ڴ����Ĵ������ͣ�</p>
+	style="margin-bottom: 0;">以下缩写用于代表寄存器类型：</p>
 
 <ul type="disc" class="whs2">
 	
 	<li class=kadov-p-CBulletPara><p CLASS=BulletPara
-									style="margin-bottom: 0;">AR - Ӧ�üĴ���</p></li>
+									style="margin-bottom: 0;">AR - 应用寄存器</p></li>
 	
 	<li class=kadov-p-CBulletPara><p CLASS=BulletPara
-									style="margin-bottom: 0;">BR - ��֧�Ĵ���</p></li>
+									style="margin-bottom: 0;">BR - 分支寄存器</p></li>
 	
 	<li class=kadov-p-CBulletPara><p CLASS=BulletPara
-									style="margin-bottom: 0;">FR - ����Ĵ���</p></li>
+									style="margin-bottom: 0;">FR - 浮点寄存器</p></li>
 	
 	<li class=kadov-p-CBulletPara><p CLASS=BulletPara
-									style="margin-bottom: 0;">GR - ͨ�üĴ���</p></li>
+									style="margin-bottom: 0;">GR - 通用寄存器</p></li>
 	
 	<li class=kadov-p-CBulletPara><p CLASS=BulletPara
-									style="margin-bottom: 0;">PR - ν�ʼĴ���</p></li>
+									style="margin-bottom: 0;">PR - 谓词寄存器</p></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

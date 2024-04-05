@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/epc_-_enter_privileged_code_instruction.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:45 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>epc - ������Ȩ����ָ��</title>
+<title>epc - 输入特权代码指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -85,7 +85,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nE - ָ��\nepc - ������Ȩ����ָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nE - 指令\nepc - 输入特权代码指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,13 +108,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">������Ȩ����ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">输入特权代码指令</h1>
 
 <p class="whs2">epc</p>
 
-<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/epc-operation.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a></p>
+<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/epc-operation.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a></p>
 
-<p class="whs2">��ʽ</p>
+<p class="whs2">格式</p>
 
 <p class=Preformatted>epc B8</p>
 
@@ -123,44 +123,44 @@ else
 <hr class="whs3">
 
 
-<p><b style="font-weight: bold;">˵��</b></p>
+<p><b style="font-weight: bold;">说明</b></p>
 
-<p class="whs4">��ָ��������Ȩ����TLB ��ĿΪ������ָ���ҳ�ṩһ���µ���Ȩ���𡣴�ָ�������ʵ�ֶԸ�Ȩ�����̵ĵ��ã������ᵼ���жϿ�����</p>
+<p class="whs4">此指令增加特权级别。TLB 项目为包含此指令的页提供一个新的特权级别。此指令可用于实现对高权限例程的调用，而不会导致中断开销。</p>
 
-<p class="whs4"><b style="font-weight: normal;">��������Ȩ����֮ǰ����ִ�м�顣��� PFS.ppl��ǰһ����Ȩ���𣩣���ȷ����������ǰ����Ȩ�������������ʧ�ܣ���ָ�����&ldquo;�Ƿ�����&rdquo;����</b></p>
+<p class="whs4"><b style="font-weight: normal;">在增加特权级别之前，会执行检查。检查 PFS.ppl（前一个特权级别），以确保不超过当前的特权级别。如果此项检查失败，则指令产生&ldquo;非法操作&rdquo;错误。</b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">������ɹ��������·�ʽ����Ȩ�ޣ�</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">如果检查成功，则按以下方式增加权限：</span></b></p>
 
 <ul type="disc" class="whs5">
 	
 	<li class=kadov-p><p class="whs4"><span style="font-weight: normal;"><b 
- style="font-weight: normal;">�������ָ���ַת�룬���� epc ָ���ҳӵ�н�ִ��ҳ����Ȩ�ޣ�����ָ����ҳ����Ȩ����ȵ�ǰ��Ȩ����ߣ���ֵС�ڣ����򽫵�ǰ��Ȩ�������ø����� epc ָ���ҳ��ת�����Ȩ�����ֶΡ���ָ��������������ý������µ�Ȩ������ TLB ��Ŀ��<br> �������ָ���ַת�룬��ǰ��Ȩ��������Ϊ 0��</span><span style="font-weight: normal;">Ȩ����ߣ�</span></b><b style="font-weight: normal;"><span style="font-weight: normal;"><br>����ͬ��ָ�����У�</span><span class=Code
+ style="font-weight: normal;">如果启用指令地址转译，包含 epc 指令的页拥有仅执行页访问权限，并且指定给页的特权级别比当前特权级别高（数值小于），则将当前特权级别设置给包含 epc 指令的页的转译的特权级别字段。此指令可以升级但不得降级，新的权限来自 TLB 项目。<br> 如果禁用指令地址转译，则当前特权级别设置为 0（</span><span style="font-weight: normal;">权限最高）</span></b><b style="font-weight: normal;"><span style="font-weight: normal;"><br>在相同的指令组中，</span><span class=Code
 										style="font-weight: normal;">epc</span><span 
- style="font-weight: normal;"> �����ָ����ܻ��ھɵ���Ȩ����</span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;">����ߵ�����Ȩ������ִ�С�����ָ�����е�ָ���</span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;">���ߵ�����Ȩ������ִ�С�</span></b></p></li>
+ style="font-weight: normal;"> 后面的指令可能会在旧的特权级别</span></b><b style="font-weight: normal;"><span 
+ style="font-weight: normal;">或更高的新特权级别下执行。后续指令组中的指令将在</span></b><b style="font-weight: normal;"><span 
+ style="font-weight: normal;">更高的新特权级别下执行。</span></b></p></li>
 </ul>
 
 <ul type="disc" class="whs5">
 	
 	<li class=kadov-p><p class="whs4"><b style="font-weight: bold;"><span 
- style="font-weight: normal;">�������</span> <span class=Code
+ style="font-weight: normal;">如果包含</span> <span class=Code
 	style="font-weight: normal;">epc</span><span 
  style="font-weight: normal;"> </span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;">ָ���ҳ����ִ��֮�⻹����������Ȩ�ޣ������</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">ָ����ҳ����Ȩ����С�ڻ���ڣ���ֵ���ڻ����</span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;">����ǰ��Ȩ�����򲻲�ȡ�κβ�������ǰ��Ȩ���𱣳ֲ��䣩��</span></b></p></li>
+ style="font-weight: normal;">指令的页除仅执行之外还有其它访问权限，或如果</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">指定给页的特权级别小于或等于（数值大于或等于</span></b><b style="font-weight: normal;"><span 
+ style="font-weight: normal;">）当前特权级别，则不采取任何操作（当前特权级别保持不变）。</span></b></p></li>
 </ul>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">��ע�⣬ITLB ��ָ���ȡʱʵ�ʽ���ȡһ�Ρ�����Ȩ����ת�����Ȩ�����ֶ�</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">����Ϣ��������ִ�д�ָ�</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">请注意，ITLB 在指令获取时实际仅读取一次。访问权限与转译的特权级别字段</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">等信息随后会用于执行此指令。</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;">��ָ���޷��϶���</b></p>
+<p class="whs4"><b style="font-weight: normal;">此指令无法断定。</b></p>
 
-<p><b style="font-weight: bold;">�ж�</b></p>
+<p><b style="font-weight: bold;">中断</b></p>
 
 <ul type="disc" class="whs5">
 	
 	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;"><span 
- style="font-weight: normal;">&ldquo;�Ƿ�����&rdquo;����</span></b></p></li>
+ style="font-weight: normal;">&ldquo;非法操作&rdquo;错误</span></b></p></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

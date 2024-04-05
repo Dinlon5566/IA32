@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/characterizing_the_trace_cache_delivery_performance.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:43 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>ȷ�����ٻ��洫����������</title>
+<title>确定跟踪缓存传递性能特征</title>
 
 <!--(Meta)==========================================================-->
 
@@ -103,15 +103,15 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>ȷ�����ٻ��洫����������</h1>
+<h1>确定跟踪缓存传递性能特征</h1>
 
-<p>�����Ҫ������Ϣ��ȷ�����ٻ��洫�������������Դ����ִ�����²��裺 </p>
+<p>如果需要附加信息来确定跟踪缓存传递性能问题的来源，请执行以下步骤： </p>
 
 <ul type="disc" class="whs1">
 	
-	<li class=kadov-p><p>���ȣ�ȷ��û�����ߴ������⡣�����δ�о�&ldquo;<span>��</span>��������&rdquo;��ͬʱҲδ�о�&ldquo;���ٻ��洫�ݰٷֱ�&rdquo;����ɼ������¼������ݣ��������ݾ������˴���������ʱ���źš����ٻ��洫��ģʽ��</p></li>
+	<li class=kadov-p><p>首先，确保没有总线带宽问题。如果尚未研究&ldquo;<span>总</span>线利用率&rdquo;，同时也未研究&ldquo;跟踪缓存传递百分比&rdquo;，请采集以下事件的数据：总线数据就绪（此处理器）、时钟信号、跟踪缓存传递模式。</p></li>
 	
-	<li class=kadov-p><p>������������ʲ��ǵ��´�&ldquo;���ٻ���&rdquo;�����ԭ����ͨ���ɼ������¼����о����ٻ���δ���������֧Ԥ����ʣ�ͬʱ�о�&ldquo;���ٻ��洫�ݰٷֱ�&rdquo;��ʱ���źš����ٻ��洫��ģʽ��ʧЧ�ķ�֧��ʧЧ��Ԥ��ʧ���֧�����ٻ���δ���С�</p></li>
+	<li class=kadov-p><p>如果总线利用率不是导致此&ldquo;跟踪缓存&rdquo;问题的原因，请通过采集以下事件，研究跟踪缓存未命中数与分支预测比率，同时研究&ldquo;跟踪缓存传递百分比&rdquo;：时钟信号、跟踪缓存传递模式、失效的分支、失效的预测失误分支、跟踪缓存未命中。</p></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

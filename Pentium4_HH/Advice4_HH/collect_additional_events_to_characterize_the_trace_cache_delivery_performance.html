@@ -4,9 +4,9 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/collect_additional_events_to_characterize_the_trace_cache_delivery_performance.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:12 GMT -->
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=GB2312">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-<title>�ɼ������¼���ȷ�����ٻ��洫����������</title>
+<title>采集附加事件以确定跟踪缓存传递性能特征</title>
   <link rel='stylesheet' href='MSL_styl_ns.css'>
 <script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
 <!--
@@ -52,7 +52,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n�ɼ������¼���ȷ�����ٻ��洫����������");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) 4 处理器\n关于英特尔(R) 奔腾(R) 4 处理器的建议\n关于英特尔(R) 奔腾(R) 4 处理器的建议\n采集附加事件以确定跟踪缓存传递性能特征");
 
 	}
 	if (window.writeBtnStyle)
@@ -75,16 +75,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" alt="Ӣ�ض�&#xAE; ������������" x-maintain-ratio="TRUE" style="border: none; width: 36px; height: 36px; float: right;" width="36" height="36" align="right" border="0">�ɼ������¼���ȷ�����ٻ��洫����������</h1><br>
+<h1><img src="TA_logo.gif" alt="英特尔&#xAE; 调优助手主题" x-maintain-ratio="TRUE" style="border: none; width: 36px; height: 36px; float: right;" width="36" height="36" align="right" border="0">采集附加事件以确定跟踪缓存传递性能特征</h1><br>
 
-<p>Ҫȷ�����ٻ��洫�������������Դ�������ȡһЩ���ӵ���Ϣ�����ٻ��洫�����������������ʹ�����·���ȷ����</p>
+<p>要确定跟踪缓存传递性能问题的来源，必须获取一些附加的信息。跟踪缓存传递性能问题的特征可使用以下方法确定：</p>
 
   <ul class="noindent">
-<li>���ȣ�ȷ��û�����ߴ������⡣Ҫ������������ʣ�ͬʱ�о�һ��&ldquo;���ٻ��洫�ݰٷֱ�&rdquo;����ɼ������¼������д��������������ʡ�ʱ���źš����ٻ��洫��ģʽ��</li>
+<li>首先，确保没有总线带宽问题。要检查总线利用率，同时研究一下&ldquo;跟踪缓存传递百分比&rdquo;，请采集以下事件：所有代理的总线利用率、时钟信号、跟踪缓存传递模式。</li>
 
-<li>������������ʲ��ǵ��´�&ldquo;���ٻ���&rdquo;�����ԭ����ͨ���ɼ������¼����о����ٻ���δ���������֧Ԥ����ʣ�ͬʱҲ��һ��&ldquo;���ٻ��洫�ݰٷֱ�&rdquo;��ʱ���źš����ٻ��洫��ģʽ��ʧЧ�ķ�֧��ʧЧ��Ԥ��ʧ���֧�����ٻ���δ���С�</li>
+<li>如果总线利用率不是导致此&ldquo;跟踪缓存&rdquo;问题的原因，请通过采集以下事件，研究跟踪缓存未命中数与分支预测比率，同时也看一下&ldquo;跟踪缓存传递百分比&rdquo;：时钟信号、跟踪缓存传递模式、失效的分支、失效的预测失误分支、跟踪缓存未命中。</li>
 
-<li>Ҫȷ���˴��������в���΢������λ�õ�������ͬʱҲ��һ��&ldquo;���ٻ���δ����&rdquo;������Բɼ������¼����Ʋ��� TC ����΢�������Ʋ��� TC ����΢�������Ʋ���΢����΢���������ٻ��洫��ģʽ��ʱ���źš�<br> <br></li>
+<li>要确定此代码区域中产生微操作的位置的特征，同时也看一下&ldquo;跟踪缓存未命中&rdquo;，则可以采集以下事件：推测性 TC 传递微操作、推测性 TC 构建微操作、推测性微代码微操作、跟踪缓存传递模式、时钟信号。<br> <br></li>
   </ul>
 <script type="text/javascript" language="javascript1.2">
 <!--

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/cover_-_cover_stack_frame_instruction.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:45 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>cover - ���Ƕ�ջָ֡��</title>
+<title>cover - 覆盖堆栈帧指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -85,7 +85,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nC - ָ��\ncover - ���Ƕ�ջָ֡��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nC - 指令\ncover - 覆盖堆栈帧指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,13 +108,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">���Ƕ�ջָ֡��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">覆盖堆栈帧指令</h1>
 
 <p class="whs2">cover</p>
 
-<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/cover-operation.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a></p>
+<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/cover-operation.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a></p>
 
-<p class="whs2">��ʽ</p>
+<p class="whs2">格式</p>
 
 <p class=Preformatted>cover B8</p>
 
@@ -123,19 +123,19 @@ else
 <hr class="whs3">
 
 
-<p class="whs2">˵��</p>
+<p class="whs2">说明</p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">�����СΪ����¶�ջ֡����������ǰһ��֡�е��κμĴ���</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">���·�ǰһ��֡�е���������Ĵ������Ǿֲ��Ĵ��������Ĵ���������</span></b><b style="font-weight: normal;"><span style=">base: registers are reset. If interruption collection is disabled then the old value 'of\003c/p\003e' '\003cp' style=; font-weight: normal;">���Ƶ�&ldquo;�жϺ���״̬&rdquo;�Ĵ��� (IFS) ��&ldquo;��ǰ֡���&rdquo;(CFM)��</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">IFS.v ����Ϊһ��</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">分配大小为零的新堆栈帧，它不包含前一个帧中的任何寄存器</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">（仿佛前一个帧中的所有输出寄存器都是局部寄存器）。寄存器重命名</span></b><b style="font-weight: normal;"><span style=">base: registers are reset. If interruption collection is disabled then the old value 'of\003c/p\003e' '\003cp' style=; font-weight: normal;">复制到&ldquo;中断函数状态&rdquo;寄存器 (IFS) 的&ldquo;当前帧标记&rdquo;(CFM)，</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">IFS.v 设置为一。</span></b></p>
 
-<p class="whs4"><span style="font-weight: normal;"><b style="font-weight: normal;"><span class=Code>cover</span> ָ�������ָ�����е����һ��ָ������ִ��&ldquo;�Ƿ�����&rdquo;</span><span   style="font-weight: normal;">����Ĵ�����</span></b></p>
+<p class="whs4"><span style="font-weight: normal;"><b style="font-weight: normal;"><span class=Code>cover</span> 指令必须是指令组中的最后一个指令。否则会执行&ldquo;非法操作&rdquo;</span><span   style="font-weight: normal;">错误的处理。</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">��ָ���޷��϶���</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">此指令无法断定。</span></b></p>
 
-<p class="whs2"><b style="font-weight: normal;"><span style="font-weight: bold;"><B>�ж�</B></span></b></p>
+<p class="whs2"><b style="font-weight: normal;"><span style="font-weight: bold;"><B>中断</B></span></b></p>
 
 <ul type="disc" class="whs5">
 	
-	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;">&ldquo;�Ƿ�����&rdquo;����</b></p></li>
+	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;">&ldquo;非法操作&rdquo;错误</b></p></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

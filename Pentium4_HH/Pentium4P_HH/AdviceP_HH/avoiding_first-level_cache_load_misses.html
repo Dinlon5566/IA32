@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/avoiding_first-level_cache_load_misses.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:50 GMT -->
 <head>
 
-<title>����һ���������δ����</title>
+<title>避免一级缓存加载未命中</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -79,7 +79,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\n����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 ������\n����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 �������Ľ���\n����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 �������Ľ���\n����һ���������δ����");
+	addTocInfo("参考\n处理器事件与建议\n含第三代数据流单指令多数据扩展指令集 (SSE3) 的英特尔(R) 奔腾(R) 4 处理器\n含第三代数据流单指令多数据扩展指令集 (SSE3) 的英特尔(R) 奔腾(R) 4 处理器的建议\n含第三代数据流单指令多数据扩展指令集 (SSE3) 的英特尔(R) 奔腾(R) 4 处理器的建议\n避免一级缓存加载未命中");
 
 	}
 	if (window.writeBtnStyle)
@@ -102,23 +102,23 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="Ӣ�ض�(R) ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">����һ���������δ����</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="英特尔(R) 调优助手主题" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">避免一级缓存加载未命中</h1>
 
 &nbsp; 
 
-<p>���ǹ�����С�����ݵ��ڴ�ռ�����ļ��ֵ������⡣��Ҫ���˽�һ������Ĳ�������ϵ�ṹ�����������Ա�������ݽṹ��������̵ķ�ʽ���Լ������ڱ���Ĵ����еİ��������������һЩ��������������ʣ��Ӷ�������ܣ��İ취������ʵ���Ѷȵĵ���˳������� </p>
+<p>这是关于最小化数据的内存占用量的棘手的老问题。它要求了解一级缓存的布局与体系结构、软件设计人员安排数据结构与访问例程的方式，以及它们在编译的代码中的安排情况。这里是一些有助于提高命中率（从而提高性能）的办法，按照实现难度的递增顺序给出： </p>
 
 <li class=kadov-p
-	class=kadov-p>���ȣ��ҳ�ϵͳ�ϻ���Ĵ�С������ķ�����ʹ�� support.intel.com ���ṩ��&ldquo;Ӣ�ض�(R) ������Ƶ�ʱ�ʶʵ�ó���&rdquo;������ &quot;processor frequency id&quot;�������δ�ṩ�ʺ���ϵͳ�����ʵ�ó�������ĳ���Ա�ο��ֲᣬ�Ի�ȡ CPUID ָ����й���Ϣ�������ҳ�����Ĵ�С�� </li>
+	class=kadov-p>首先，找出系统上缓存的大小。最简便的方法是使用 support.intel.com 上提供的&ldquo;英特尔(R) 处理器频率标识实用程序&rdquo;（搜索 &quot;processor frequency id&quot;）。如果未提供适合您系统的这个实用程序，请参阅程序员参考手册，以获取 CPUID 指令的有关信息，帮助找出缓存的大小。 </li>
 
 <li class=kadov-p
-	class=kadov-p>����ģ�黯��ѭ��������ѭ��ʱ����ϲ����Ż���������ע����Щ��������ɱ�����ʵ�֡�</li>
+	class=kadov-p>尝试模块化、循环互换、循环时滞与合并等优化技术。备注：这些方法最好由编译器实现。</li>
 
 <li class=kadov-p
 	class=kadov-p>
-�Ż����ݽṹ�����ڲ���&ldquo;���̼߳���&rdquo;�Ĵ�������ʹ֮�ɷ��� 1/4 �� 1/2 ��һ�����棻���ڲ�����&ldquo;���̼߳���&rdquo;�Ĵ�������ʹ֮�ɷ��� 1/2 �Ļ��档 
+优化数据结构，对于采用&ldquo;超线程技术&rdquo;的处理器，使之可放入 1/4 到 1/2 的一级缓存；对于不采用&ldquo;超线程技术&rdquo;的处理器，使之可放入 1/2 的缓存。 
 
-<p>�����й��Ż���������ϸ��Ϣ������� <i>Intel(R) Pentium(R) 4 and Intel(R) Xeon(TM) Processor Optimization Manual</i>��Ӣ�ض�(R) ����(R) 4 ��Ӣ�ض�(R) ��ǿ(TM) �������Ż��ֲᣩ�ĵ� 7 �¡�</p>
+<p>如需有关优化技术的详细信息，请参阅 <i>Intel(R) Pentium(R) 4 and Intel(R) Xeon(TM) Processor Optimization Manual</i>（英特尔(R) 奔腾(R) 4 与英特尔(R) 至强(TM) 处理器优化手册）的第 7 章。</p>
 </li>
 
 <script type="text/javascript" language="javascript1.2">

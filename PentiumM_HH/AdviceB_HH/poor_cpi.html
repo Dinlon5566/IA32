@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/AdviceB_HH/poor_cpi.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:18 GMT -->
 <head>
 
-<title>CPI ����</title>
+<title>CPI 不佳</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="02 12, 2003 11:42:01 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -96,7 +96,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\n����Ӣ�ض�(R) ����(R) M �������Ľ���\nCPI ����");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) M 处理器\n关于英特尔(R) 奔腾(R) M 处理器的建议\nCPI 不佳");
 
 	}
 	if (window.writeBtnStyle)
@@ -119,13 +119,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" alt="Ӣ�ض�(R) ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">CPI ���ѣ�ÿʧЧָ��ʱ����������</h1>
+<h1><img src="TA_logo.gif" alt="英特尔(R) 调优助手主题" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">CPI 不佳（每失效指令时钟周期数）</h1>
 
-<p>CPI ���ѱ�ʾָ����Ҫ��Ԥ�ڸ����������ִ�С���ʱ�����л����޸Ĵ��������ָ���ڴ������е�ִ��Ч�ʡ�</p>
+<p>CPI 不佳表示指令需要比预期更多的周期来执行。此时可能有机会修改代码以提高指令在处理器中的执行效率。</p>
 
-<p>CPI �ϸߵ�һ��ԭ�������ʹ���� STRING ָ��ڴ�������£����&ldquo;΢����/ʧЧ��ָ��&rdquo;���ʽϸߣ������ܲ���������֮�е��£���Ӧ��Ϊ���⡣ </p>
+<p>CPI 较高的一个原因可能是使用了 STRING 指令。在此种情况下，如果&ldquo;微操作/失效的指令&rdquo;比率较高，则性能不佳是意料之中的事，不应视为问题。 </p>
 
-<p class="whs2"><span style="font-weight: bold;"><B>����������У���ϸ�ھ���ʵ�������壺</B></span><br>���������̣�<a href="../ERB/er_cycles_per_retired_instruction.html" style="x-condition: eclipse;">ʱ���ź�/ʧЧ��ָ��</a>�����ѡ�ֵ 0.75 Ӧ��Ϊ���ã�ֵ 4 Ӧ��Ϊ���ѡ� </p>
+<p class="whs2"><span style="font-weight: bold;"><B>在以下情况中，此细节具有实质性意义：</B></span><br>计数器的商（<a href="../ERB/er_cycles_per_retired_instruction.html" style="x-condition: eclipse;">时钟信号/失效的指令</a>）不佳。值 0.75 应视为良好，值 4 应视为不佳。 </p>
 
 <h3 class=NoteTipHead
 	style="margin-left: 40px;"><span style="font-weight: bold;"><B><script type="text/javascript" language="JavaScript"><!--
@@ -133,9 +133,9 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4))
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='tip.gif' width='17px' height='18px' border='0' class='img_whs3'>");}
 else
 {   document.write("<img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs3'>");}
-//--></script><noscript><img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs3'></noscript> ����</B></span></h3>
+//--></script><noscript><img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs3'></noscript> 建议</B></span></h3>
 
-<p class="whs4">ʹ���㷨���Ľ����Ż�֮�������΢��ϵ�ṹ�����Ż�ʱ����һ��Ӧ�����о� CPI������ CPI ���ѵ�ÿ�����򣬼���ڴ�����¼����֧����¼������˽�Ϊʲô CPI �᲻�ѡ� </p>
+<p class="whs4">使用算法更改进行优化之后，在针对微体系结构进行优化时，第一步应该是研究 CPI。对于 CPI 不佳的每个区域，检查内存相关事件与分支相关事件，以了解为什么 CPI 会不佳。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

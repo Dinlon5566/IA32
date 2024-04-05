@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400185.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:45 GMT -->
 <head>
 
-<title>fchkf - �������־ָ��</title>
+<title>fchkf - 浮点检查标志指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="11 12, 2001 11:19:22 AM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nF - ָ��\nfchkf - �������־ָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nF - 指令\nfchkf - 浮点检查标志指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,16 +116,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">�������־ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">浮点检查标志指令</h1>
 
 <p><span style="font-weight: bold;"><B>fchkf</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400186.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400186.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a>
  </p>
 
-<p>ָ������ F</p>
+<p>指令类型 F</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) fchkf.<span style="x-condition: eclipse;">sf</span><script type="text/javascript"
 	language=JavaScript1.2><!--
@@ -137,13 +137,13 @@ kadovFilePopupInit('A1');
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>说明</B></span></p>
 
-<p>FPSR.<span style="font-style: italic;"><I>sf</I></span>.flags �еı���� FPSR.s0.flags��FPSR.traps ���бȽϡ���� FPSR.<span   style="font-style: italic;"><I>sf</I></span>.flags �����õ��κα�־�����õ� FPSR.traps ��Ӧ���� FPSR.<span style="font-style: italic;"><I>sf</I></span>.flags �е��κα�־δ�� FPSR.s0.flags �����ã���ִ��ָ�� <span style="font-style: italic;"><I>target25</I></span> �ķ�֧��</p>
+<p>FPSR.<span style="font-style: italic;"><I>sf</I></span>.flags 中的标记与 FPSR.s0.flags、FPSR.traps 进行比较。如果 FPSR.<span   style="font-style: italic;"><I>sf</I></span>.flags 中设置的任何标志与启用的 FPSR.traps 对应，或 FPSR.<span style="font-style: italic;"><I>sf</I></span>.flags 中的任何标志未在 FPSR.s0.flags 中设置，则执行指向 <span style="font-style: italic;"><I>target25</I></span> 的分支。</p>
 
-<p><span style="font-style: italic;"><I>target25</I></span> ������ָ��Ҫִ�еķ�֧�ı�ǩ���ڷ�ָ֧���У�����Ϊ�з���������λ���� (<span style="font-style: italic;"><I>imm21</I></span>) ���б��룬����Ŀ���֧���������ָ��ķ�֧��֮�� (<span style="font-style: italic;"><I>imm21</I></span> = <span style="font-style: italic;"><I>target25</I></span> - IP &gt;&gt; 4)��</p>
+<p><span style="font-style: italic;"><I>target25</I></span> 操作数指定要执行的分支的标签。在分支指令中，它作为有符号立即数位移量 (<span style="font-style: italic;"><I>imm21</I></span>) 进行编码，放在目标分支束与包含此指令的分支束之间 (<span style="font-style: italic;"><I>imm21</I></span> = <span style="font-style: italic;"><I>target25</I></span> - IP &gt;&gt; 4)。</p>
 
-<p>��ָ��ķ�֧��Ϊ����ѡ��ʵʩ�����ָ��Ӧ�÷�����֧������֧��Ϊȴδʵʩ����ִ��&ldquo;�Ʋ��Բ���&rdquo;����Ĵ�����<span style="font-style: italic;"><I>imm21</I></span> ָ����ִֵ������չ��������&ldquo;�ж����������ƼĴ���&rdquo;(IIM)������������� IIM ִֵ�з�����չ�����������ӵ� IIP Ȼ���ٷ��أ��Դ���ģ���֧��</p>
+<p>此指令的分支行为可以选择不实施。如果指令应该发生分支，但分支行为却未实施，则执行&ldquo;推测性操作&rdquo;错误的处理，<span style="font-style: italic;"><I>imm21</I></span> 指定的值执行零扩展，并放入&ldquo;中断立即数控制寄存器&rdquo;(IIM)。错误处理程序给 IIM 值执行符号扩展，并将它添加到 IIP 然后再返回，以此来模拟分支。</p>
 
 
 <!--(HR)============================================================-->

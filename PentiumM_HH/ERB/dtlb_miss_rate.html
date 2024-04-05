@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/ERB/dtlb_miss_rate.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:22 GMT -->
 <head>
 
-<title>DTLB δ���б���</title>
+<title>DTLB 未命中比率</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -91,7 +91,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M ���������¼�����\n�ڴ�ͳ�Ʊ���\nDTLB δ���б���");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) M 处理器\n英特尔(R) 奔腾(R) M 处理器的事件比率\n内存统计比率\nDTLB 未命中比率");
 
 	}
 	if (window.writeBtnStyle)
@@ -114,11 +114,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="er_logo.gif" alt="�¼���������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">DTLB δ���б���</h1>
+<h1><img src="er_logo.gif" alt="事件比率主题" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">DTLB 未命中比率</h1>
 
-<p><a href="../EventsB/dtlb_misses.html">DTLB δ����</a> / <a href="../EventsB/instructions_retired.html">ʧЧ��ָ��</a></p>
+<p><a href="../EventsB/dtlb_misses.html">DTLB 未命中</a> / <a href="../EventsB/instructions_retired.html">失效的指令</a></p>
 
-<p>һ����˵����Щ����Դ�Ծ���ḻ�����ܹ���ʦ�ľ��飺</p>
+<p>一般来说，这些数字源自经验丰富的性能工程师的经验：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="57.349%" class="whs2">
@@ -130,9 +130,9 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) 
 
 <tr valign="top" class="whs5">
 <td width="49.497%" class="whs6">
-<h3 class=TableHead>����</td>
+<h3 class=TableHead>下限</td>
 <td width="50.503%" class="whs7">
-<h3 class=TableHead>����</td></tr>
+<h3 class=TableHead>上限</td></tr>
 
 <tr valign="top" class="whs5">
 <td width="49.497%" class="whs8">
@@ -146,16 +146,16 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) 
 
 <p>&nbsp;</p>
 
-<p>�˱��ʵ�ֵ�ϸ�ʱ����ʾ������ʵ����ݷֲ���̫���ҳ�ϣ���˵��´��������� TLB δ���С�</p>
+<p>此比率的值较高时，表示代码访问的数据分布在太多的页上，因此导致大量的数据 TLB 未命中。</p>
 
-<h3 class="whs10"><img src="../LipsB/tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs11"> ����</h3>
+<h3 class="whs10"><img src="../LipsB/tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs11"> 建议</h3>
 
-<p class="whs12">�����ܸ������������ԡ�</p>
+<p class="whs12">尽可能改善数据区域性。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs13"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs13"> 备注</h3>
 
-<p class="whs12">���¼����ʽ���ĳЩӢ�ض�(R) ����(R) M ������(R) M ������֧�֡�</p>
+<p class="whs12">此事件比率仅有某些英特尔(R) 奔腾(R) M 与赛扬(R) M 处理器支持。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

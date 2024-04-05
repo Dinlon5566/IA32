@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/ER4/store_forward_performance_impact.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:36 GMT -->
 <head>
 
-<title>�洢ת������Ӱ��</title>
+<title>存储转发性能影响</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="06 30, 2002 10:30:06 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -86,7 +86,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 ���������¼�����\n�������ܵ�������\nָʾ����ȱ�ݵ��¼�����\n�洢ת������Ӱ��");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) 4 处理器\n英特尔(R) 奔腾(R) 4 处理器的事件比率\n基本性能调整比率\n指示编码缺陷的事件比率\n存储转发性能影响");
 
 	}
 	if (window.writeBtnStyle)
@@ -109,11 +109,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="er_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs2">�洢ת������Ӱ��</h1>
+<h1><img src="er_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"><img src="p4p60hw.gif" alt="奔腾(R) 4 处理器主题" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs2">存储转发性能影响</h1>
 
-<p>((<a href="../Events4/mob_load_replays.html">ʧЧ�� MOB �����ط�</a>*50) / <a HREF="../Events4/Clockticks.html">ʱ���ź�</a>)*100</p>
+<p>((<a href="../Events4/mob_load_replays.html">失效的 MOB 加载重发</a>*50) / <a HREF="../Events4/Clockticks.html">时钟信号</a>)*100</p>
 
-<p>һ����˵����Щ����Դ�Ծ���ḻ�����ܹ���ʦ�ľ��飺</p>
+<p>一般来说，这些数字源自经验丰富的性能工程师的经验：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="60%" class="whs3">
@@ -121,10 +121,10 @@ else
 <tr>
 <td valign="top" width="50%" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td>
+	style="margin-bottom: 0;">下限</td>
 <td valign="top" width="50%" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td></tr>
+	style="margin-bottom: 0;">上限</td></tr>
 
 <tr>
 <td valign="top" width="50%" class="whs4">
@@ -133,14 +133,14 @@ else
 <p>2</td></tr>
 </table>
 
-<p>�˱��ʵ�ֵ�ϸ�ʱ����ʾ���ڶ������⣬�洢�޷�ת�������أ���ᵼ�µ��ڹܵ����ȵ���ͣ�� </p>
+<p>此比率的值较高时，表示由于对齐问题，存储无法转发到加载，这会导致等于管道长度的暂停。 </p>
 
-<p><span style="font-weight: bold;"><B>����</B></span>�������<a href="../Advice4_HH/avoiding_blocked_store_forwards.html" style="x-condition: eclipse;">���������Ĵ洢ת��</a></p>
+<p><span style="font-weight: bold;"><B>建议</B></span>：请参阅<a href="../Advice4_HH/avoiding_blocked_store_forwards.html" style="x-condition: eclipse;">避免阻塞的存储转发</a></p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="tip.gif" alt="��ʾ" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs5"> ��ʾ</h3>
+	style="margin-left: 40px;"><img src="tip.gif" alt="提示" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs5"> 提示</h3>
 
-<p class="whs6">ʹ�����µı��������Խ��ͻ�������Щ���͵��¼���</p>
+<p class="whs6">使用最新的编译器可以降低或消除这些类型的事件。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

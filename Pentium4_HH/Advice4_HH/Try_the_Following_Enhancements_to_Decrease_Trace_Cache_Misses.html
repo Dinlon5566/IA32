@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/Try_the_Following_Enhancements_to_Decrease_Trace_Cache_Misses.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:32:03 GMT -->
 <head>
 
-<title>����������ǿ�ֶ��Խ��͸��ٻ���δ����</title>
+<title>尝试以下增强手段以降低跟踪缓存未命中</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
 <meta name=generator-major-version content=0.1>
 <meta name=generator-minor-version content=1>
@@ -74,7 +74,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n����������ǿ�ֶ��Խ��͸��ٻ���δ����");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) 4 处理器\n关于英特尔(R) 奔腾(R) 4 处理器的建议\n关于英特尔(R) 奔腾(R) 4 处理器的建议\n尝试以下增强手段以降低跟踪缓存未命中");
 
 	}
 	if (window.writeBtnStyle)
@@ -97,24 +97,24 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>���ͻ���δ����</h1>
+<h1>降低缓存未命中</h1>
 
 &nbsp;<br>
 
 <li class=kadov-p
-	class=kadov-p>��ϸ��������ṹ������ǿ�������ڴ�������ԡ����ƵĻ���ָ�������Ӧ�ò��õ��ڴ���������λ�á�������漰�������ƵĴ��루�紦����������Ĵ��룩�ŵ�������֮�⡣�����й���ϸ��Ϣ�������&ldquo;Ӣ�ض�(R) ����(R) 4 �������Ż��ο��ֲ�&rdquo;�ĵ� 2 �¡�</li>
+	class=kadov-p>仔细调整代码结构可以增强缓存与内存的区域性。相似的基本指令块序列应该布置到内存中连续的位置。这可能涉及将不相似的代码（如处理错误情况的代码）放到该序列之外。如需有关详细信息，请参阅&ldquo;英特尔(R) 奔腾(R) 4 处理器优化参考手册&rdquo;的第 2 章。</li>
 
 <li class=kadov-p
-	class=kadov-p>ͨ���ɼ������¼��������ͬ��������ķ�֧Ԥ�����ܣ�ʱ���źš����ٻ���δ���С�ʧЧ�ķ�֧��ʧЧ��Ԥ��ʧ���֧��</li>
+	class=kadov-p>通过采集以下事件，检查相同代码区域的分支预测性能：时钟信号、跟踪缓存未命中、失效的分支、失效的预测失误分支。</li>
 
 <li class=kadov-p
-	class=kadov-p>�����ܱ��������޸Ĵ��롣���ǽ����������ݷ��ڲ�ͬ��ҳ�ϡ����Ҫ�޸Ĵ��룬�뾡��һ������ɣ���ȷ��ִ���޸ĵĴ�����Ҫ�޸ĵĴ��봦�ڲ�ͬ��ҳ�ϣ������������ 1K �������С������й���ϸ��Ϣ�������&ldquo;Ӣ�ض�(R) ����(R) 4 �������Ż��ο��ֲ�&rdquo;�ĵ� 2 �¡�</li>
+	class=kadov-p>尽可能避免自我修改代码。总是将代码与数据放在不同的页上。如果要修改代码，请尽量一次性完成，并确保执行修改的代码与要修改的代码处在不同的页上，或至少在相隔 1K 的区域中。如需有关详细信息，请参阅&ldquo;英特尔(R) 奔腾(R) 4 处理器优化参考手册&rdquo;的第 2 章。</li>
 
 <li class=kadov-p
 	class=kadov-p>
-ʹ�õ��������Ż� (PGO) �����ô���·��һֱ�����ڻ����У��Լ���ָ���ȡ�������������Ը��ƴ��������ԡ������й���ϸ��Ϣ������ı������ĵ��� 
+使用档案导引优化 (PGO) 将常用代码路径一直保留在缓存中，以减少指令获取次数，这样可以改善代码区域性。如需有关详细信息，请参阅编译器文档。 
 
-<p>�����йس����Ż���������ϸ��Ϣ������� <i>Intel(R) Pentium(R) 4 and Intel(R) Xeon(TM) Processor Optimization Manual</i>��Ӣ�ض�(R) ����(R) 4 ��Ӣ�ض�(R) ��ǿ(TM) �������Ż��ֲᣩ�ĵ� 7 �¡�</p>
+<p>如需有关常规优化技术的详细信息，请参阅 <i>Intel(R) Pentium(R) 4 and Intel(R) Xeon(TM) Processor Optimization Manual</i>（英特尔(R) 奔腾(R) 4 与英特尔(R) 至强(TM) 处理器优化手册）的第 7 章。</p>
 </li>
 
 <script type="text/javascript" language="javascript1.2">

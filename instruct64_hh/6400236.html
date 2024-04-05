@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400236.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:30:56 GMT -->
 <head>
 
-<title>fpmax - ���㲢�����ֵָ��</title>
+<title>fpmax - 浮点并行最大值指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:51:10 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nF - ָ��\nfpmax - ���㲢�����ֵָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nF - 指令\nfpmax - 浮点并行最大值指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,16 +116,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">���㲢�����ֵָ��</h1>
+<h1><img src="itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">浮点并行最大值指令</h1>
 
 <p><span style="font-weight: bold;"><B>fpmax</B></span></p>
 
-<p><a HREF="6400237.html">����</a> <a HREF="6400126.html">�������</a>
+<p><a HREF="6400237.html">操作</a> <a HREF="6400126.html">字体惯例</a>
  </p>
 
-<p>ָ������ F</p>
+<p>指令类型 F</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) fpmax.<span style="x-condition: eclipse;">sf</span><script type="text/javascript"
 	language=JavaScript1.2><!--
@@ -137,19 +137,19 @@ kadovFilePopupInit('A1');
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>说明</B></span></p>
 
-<p>�Ƚ� <span style="font-style: italic;"><I>f2</I></span> �� FR <span style="font-style: italic;"><I>f3</I></span> ����Чλ�е�һ�Ե�����ֵ��ֵ�ϴ�Ĳ��������ظ� FR <span style="font-style: italic;"><I>f1</I></span> ����Чλ��</p>
+<p>比较 <span style="font-style: italic;"><I>f2</I></span> 与 FR <span style="font-style: italic;"><I>f3</I></span> 的有效位中的一对单精度值。值较大的操作数返回给 FR <span style="font-style: italic;"><I>f1</I></span> 的有效位。</p>
 
-<p>��� FR <span style="font-style: italic;"><I>f3</I></span> �ĸ�λ����λ��ֵ�� FR <span style="font-style: italic;"><I>f2</I></span> �ĸ�λ����λ��ֵС���� FR <span style="font-style: italic;"><I>f1</I></span> �ĸ�λ����λ��ֵȡ FR <span style="font-style: italic;"><I>f2</I></span> �ĸ�λ����λ��ֵ������FR <span style="font-style: italic;"><I>f1</I></span> �ĸ�λ����λ��ֵȡ FR <span style="font-style: italic;"><I>f3</I></span> �ĸ�λ����λ��ֵ��</p>
+<p>如果 FR <span style="font-style: italic;"><I>f3</I></span> 的高位（低位）值比 FR <span style="font-style: italic;"><I>f2</I></span> 的高位（低位）值小，则 FR <span style="font-style: italic;"><I>f1</I></span> 的高位（低位）值取 FR <span style="font-style: italic;"><I>f2</I></span> 的高位（低位）值。否则，FR <span style="font-style: italic;"><I>f1</I></span> 的高位（低位）值取 FR <span style="font-style: italic;"><I>f3</I></span> 的高位（低位）值。</p>
 
-<p>��� FR <span style="font-style: italic;"><I>f2</I></span> �� FR <span style="font-style: italic;"><I>f3</I></span> �ĸ�λ����λ��ֵ�� NaN���� FR <span style="font-style: italic;"><I>f1</I></span> �ĸ�λ����λ��ֵȡ FR <span   style="font-style: italic;"><I>f3</I></span> �ĸ�λ����λ��ֵ��</p>
+<p>如果 FR <span style="font-style: italic;"><I>f2</I></span> 或 FR <span style="font-style: italic;"><I>f3</I></span> 的高位（低位）值是 NaN，则 FR <span style="font-style: italic;"><I>f1</I></span> 的高位（低位）值取 FR <span   style="font-style: italic;"><I>f3</I></span> 的高位（低位）值。</p>
 
-<p>FR <span style="font-style: italic;"><I>f1</I></span> ��ָ���ֶ�����Ϊ 2.063 (0x1003E) ��ƫ��ָ����FR <span style="font-style: italic;"><I>f1</I></span> �ķ����ֶ�����Ϊ�� (0)��</p>
+<p>FR <span style="font-style: italic;"><I>f1</I></span> 的指数字段设置为 2.063 (0x1003E) 的偏置指数，FR <span style="font-style: italic;"><I>f1</I></span> 的符号字段设置为正 (0)。</p>
 
-<p>��� FR <span style="font-style: italic;"><I>f2</I></span> �� FR <span   style="font-style: italic;"><I>f3</I></span> �� NaTVal���� FR <span style="font-style: italic;"><I>f1</I></span> ����Ϊ NaTVal�������Ǽ���Ľ����</p>
+<p>如果 FR <span style="font-style: italic;"><I>f2</I></span> 或 FR <span   style="font-style: italic;"><I>f3</I></span> 是 NaTVal，则 FR <span style="font-style: italic;"><I>f1</I></span> 设置为 NaTVal，而不是计算的结果。</p>
 
-<p>�˲������������������������������� NaN��&ldquo;��Ч����&rdquo;���� <a HREF="6400230.html">fpcmp</a>.lt �����ķ�ʽ�����źš�</p>
+<p>此操作不像其它浮点算术运算那样传播 NaN。&ldquo;无效操作&rdquo;按照 <a HREF="6400230.html">fpcmp</a>.lt 操作的方式发出信号。</p>
 
 
 <!--(HR)============================================================-->

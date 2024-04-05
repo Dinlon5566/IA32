@@ -12,13 +12,13 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
 <meta name=topic-comment content>
 <meta name=topic-id content=L2_FORCE_RECIRC>
-<meta name=MS-HAID content="һ�廯���������¼�">
+<meta name=MS-HAID content="一体化二级缓存事件">
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
 <meta name=generator-major-version content=0.1>
 <meta name=generator-minor-version content=1>
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\n�ڴ��¼�\nһ�廯���������¼�\nL2_FORCE_RECIRC");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 安腾(R) 2 处理器\n英特尔(R) 安腾(R) 2 处理器事件\n内存事件\n一体化二级缓存事件\nL2_FORCE_RECIRC");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,24 +106,24 @@ else
 </script>
 <h1>L2_FORCE_RECIRC</h1>
 
-<b style="font-weight: bold;">���⣺</b>ǿ����ѭ��<b style="font-weight: bold;"><br> ���</b>һ�廯���������¼�<b style="font-weight: bold;"><br> IAR/DAR/OPC��</b>Y/Y/Y<b style="font-weight: bold;"><br> �¼����룺</b>0xB4<b style="font-weight: bold;"><br> ���ÿ����������</b>4 
+<b style="font-weight: bold;">标题：</b>强制再循环<b style="font-weight: bold;"><br> 类别：</b>一体化二级缓存事件<b style="font-weight: bold;"><br> IAR/DAR/OPC：</b>Y/Y/Y<b style="font-weight: bold;"><br> 事件代码：</b>0xB4<b style="font-weight: bold;"><br> 最大每周期增量：</b>4 
 
-<p><b style="font-weight: bold;">���壺</b>ͳ��ǿ����ѭ���Ķ���΢�������������� SNP_OR_L3��SNP_OR_L3 ����������΢����ǿ����ѭ���Ĵ�����0-32 ��΢�������κ�λ�ö����ܴ˼���Ӱ�졣�� SMC_HIT��TRAN_PERF �Լ� SNP_OR_L3 ֮�����������ڲ��� OZQ ��������SMC_HIT �� ifetch ��Ҫд�� IPFQ ��ǿ����ѭ����ʱ��ԭ�����ڣ��������һ������ͬ��ַ��δ���洢��SNP_OR_L3 ��ǿ����ѭ�����е� OZQ ���ʱ��ԭ�����ڣ��������������ĵ�ַƥ�䣬���Ƿ��� L3/BC �ķ��ʽ�����ͬ��·��/�������� OZQ_ENTRY ��&ldquo;����&rdquo;�Ķ���TRAN_PREF �����е� OZQ ����ת��ΪԤȡ��ʱ��</p>
+<p><b style="font-weight: bold;">定义：</b>统计强制再循环的二级微操作数，不包括 SNP_OR_L3。SNP_OR_L3 将测量二级微操作强制再循环的次数。0-32 个微操作的任何位置都会受此计数影响。除 SMC_HIT、TRAN_PERF 以及 SNP_OR_L3 之外的所有类别都在插入 OZQ 处发生。SMC_HIT 是 ifetch 将要写入 IPFQ 并强制再循环的时候，原因在于，这里存在一个对相同地址的未决存储。SNP_OR_L3 是强制再循环现有的 OZQ 项的时候，原因在于，进入请求与它的地址匹配，或是发到 L3/BC 的访问将以相同的路径/索引填充此 OZQ_ENTRY 所&ldquo;命中&rdquo;的对象。TRAN_PREF 是现有的 OZQ 访问转换为预取的时候。</p>
 
-<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> ��ע</h3>
+<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> 备注</h3>
 
-���������� 2 ��&ldquo;��������&rdquo;�¼������¼�����ʹ�� PMD4 ������ 
+这是有限组 2 的&ldquo;二级缓存&rdquo;事件。此事件必须使用 PMD4 测量。 
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells width="100%" class="whs2">
 
 <tr>
 <td>
-<h3 CLASS=TableHead>��չ</td>
+<h3 CLASS=TableHead>扩展</td>
 <td>
 <h3 CLASS=TableHead>PMC.umask</td>
 <td>
-<h3 CLASS=TableHead>˵��</td></tr>
+<h3 CLASS=TableHead>说明</td></tr>
 
 <tr>
 <td>
@@ -131,7 +131,7 @@ else
 <td>
 <p>b0000</td>
 <td>
-<p>ͳ���κ�ԭ�������ǿ����ѭ�������ｫ������ SMC_HIT��TRAN_PREF �Լ� SNP_OR_L3��</td></tr>
+<p>统计任何原因引起的强制再循环。这里将不包括 SMC_HIT、TRAN_PREF 以及 SNP_OR_L3。</td></tr>
 
 <tr>
 <td>
@@ -139,7 +139,7 @@ else
 <td>
 <p>b0001</td>
 <td>
-<p>��ͳ�����ڶ���ͬ�����ߵ� ifetch ����ػ���δ���� WT �洢����� SMC ���������µ���Щ</td></tr>
+<p>仅统计由于对相同缓存线的 ifetch 与加载或是未决的 WT 存储引起的 SMC 命中所导致的那些</td></tr>
 
 <tr>
 <td>
@@ -147,7 +147,7 @@ else
 <td>
 <p>b0010</td>
 <td>
-<p>��ͳ��ǿ�ƹ���״̬���µ���Щ</td></tr>
+<p>仅统计强制过渡状态导致的那些</td></tr>
 
 <tr>
 <td>
@@ -155,7 +155,7 @@ else
 <td>
 <p>b0011</td>
 <td>
-<p>��*��ͳ��*��</td></tr>
+<p>（*不统计*）</td></tr>
 
 <tr>
 <td>
@@ -163,7 +163,7 @@ else
 <td>
 <p>b0100</td>
 <td>
-<p>��ͳ�ƶ������е��µģ���Щ�������������ڽ��е���̽����ͬ�����Ϸ���ͬ��δ���еĴ洢������ͬ�����ߵ�ͬ��̽������δ���� sync.ia ָ������</td></tr>
+<p>仅统计二级命中导致的，这些二级命中由正在进行的嗅探、相同索引上发生同属未命中的存储、对相同缓存线的同属探测或存在未决的 sync.ia 指令引起。</td></tr>
 
 <tr>
 <td>
@@ -171,7 +171,7 @@ else
 <td>
 <p>b0101</td>
 <td>
-<p>��ͳ��ת����Ԥȡ�����µ���Щ</td></tr>
+<p>仅统计转换成预取所导致的那些</td></tr>
 
 <tr>
 <td>
@@ -179,7 +179,7 @@ else
 <td>
 <p>b0110</td>
 <td>
-<p>��ͳ����̽�������������µ���Щ</td></tr>
+<p>仅统计嗅探或三级发出导致的那些</td></tr>
 
 <tr>
 <td>
@@ -187,7 +187,7 @@ else
 <td>
 <p>b0111</td>
 <td>
-<p>��*��ͳ��*��</td></tr>
+<p>（*不统计*）</td></tr>
 
 <tr>
 <td>
@@ -195,7 +195,7 @@ else
 <td>
 <p>b1000</td>
 <td>
-<p>��ͳ�ƴ���δ������Ʒ�Ķ���δ���е��µ���Щ</td></tr>
+<p>仅统计存在未决牺牲品的二级未命中导致的那些</td></tr>
 
 <tr>
 <td>
@@ -203,7 +203,7 @@ else
 <td>
 <p>b1001</td>
 <td>
-<p>��ͳ��������仺�����Ķ���δ���е��µ���Щ</td></tr>
+<p>仅统计命中填充缓冲区的二级未命中导致的那些</td></tr>
 
 <tr>
 <td>
@@ -211,7 +211,7 @@ else
 <td>
 <p>b1010</td>
 <td>
-<p>�Ѵ���δ����ָ��Ԥȡ������������ʱ����δ���е��µ���Щ</td></tr>
+<p>已存在未命中指令预取缓冲区的情形时二级未命中导致的那些</td></tr>
 
 <tr>
 <td>
@@ -219,7 +219,7 @@ else
 <td>
 <p>b1011</td>
 <td>
-<p>��ͳ�����������������Ķ���δ���е��µ���Щ</td></tr>
+<p>仅统计牺牲缓冲区已满的二级未命中导致的那些</td></tr>
 
 <tr>
 <td>
@@ -227,7 +227,7 @@ else
 <td>
 <p>b1100</td>
 <td>
-<p>�Ѵ���δ���� OZQ ������ʱ L2 δ���е��µ���Щ</td></tr>
+<p>已存在未命中 OZQ 的情形时 L2 未命中导致的那些</td></tr>
 
 <tr>
 <td>
@@ -235,7 +235,7 @@ else
 <td>
 <p>b1101</td>
 <td>
-<p>�Ѵ���δ������ͬ����������ʱ����δ���е��µ���Щ</td></tr>
+<p>已存在未命中相同索引的情形时二级未命中导致的那些</td></tr>
 
 <tr>
 <td>
@@ -243,7 +243,7 @@ else
 <td>
 <p>b1110</td>
 <td>
-<p>�Ѵ���ǿ����ѭ��ʱ����δ���е��µ���Щ</td></tr>
+<p>已存在强制再循环时二级未命中导致的那些</td></tr>
 
 <tr>
 <td>
@@ -251,7 +251,7 @@ else
 <td>
 <p>b1111</td>
 <td>
-<p>��*��ͳ��*��</td></tr>
+<p>（*不统计*）</td></tr>
 </table>
 
 <script type="text/javascript" language="javascript1.2">

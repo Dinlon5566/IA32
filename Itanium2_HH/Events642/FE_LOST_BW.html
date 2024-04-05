@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -80,7 +80,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\n��ͣ�¼�\nFE_LOST_BW");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 安腾(R) 2 处理器\n英特尔(R) 安腾(R) 2 处理器事件\n暂停事件\nFE_LOST_BW");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,13 +105,13 @@ else
 </script>
 <h1>FE_LOST_BW</h1>
 
-<b style="font-weight: bold;">���⣺</b>IB ��ڴ�����Чָ����<b style="font-weight: bold;"><br> ���</b>��ͣ�¼�<b style="font-weight: bold;"><br> IAR/DAR/OPC��</b>N/N/N<b style="font-weight: bold;"><br>�¼����룺</b>0x70<b style="font-weight: bold;"><br> ���ÿ����������</b>2 
+<b style="font-weight: bold;">标题：</b>IB 入口处的无效指令束<b style="font-weight: bold;"><br> 类别：</b>暂停事件<b style="font-weight: bold;"><br> IAR/DAR/OPC：</b>N/N/N<b style="font-weight: bold;"><br>事件代码：</b>0x70<b style="font-weight: bold;"><br> 最大每周期增量：</b>2 
 
-<p><b style="font-weight: bold;">���壺</b>ͳ��&ldquo;ָ�����&rdquo;��ڴ�����Чָ����������</p>
+<p><b style="font-weight: bold;">定义：</b>统计&ldquo;指令缓冲区&rdquo;入口处的无效指令束数量。</p>
 
-<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> ��ע</h3>
+<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> 备注</h3>
 
-���ڴ��¼������´�����ʧ��ԭ�����ȼ��Ӹߵ��͵�˳���������£�FEFLUSH��TLBMISS��IMISS��PLP��BR_ILOCK��BRQ��BI��FILL_RECIRC��BUBBLE IBFULL��UNREACHED�����ȼ���ʾͬʱ���ڶ����ͣ���ʱ��ֻͳ�����ȼ���ߵ��Ǹ�������������£�����Ϊ��ָ����&ldquo;�޷�����&rdquo;��ָ���� 0 ����ִ�еķ�֧������ָ���� 0 ��Ч���ǽ� IP[4] ����Ϊ 1 ʱ��ָ���� 1 ���޷����ʡ� <br>
+对于此事件，导致带宽损失的原因按优先级从高到低的顺序排列如下：FEFLUSH、TLBMISS、IMISS、PLP、BR_ILOCK、BRQ、BI、FILL_RECIRC、BUBBLE IBFULL、UNREACHED。优先级暗示同时存在多个暂停情况时，只统计优先级最高的那个。在两种情况下，会认为是指令束&ldquo;无法访问&rdquo;。指令束 0 包含执行的分支，或是指令束 0 无效但是将 IP[4] 设置为 1 时，指令束 1 将无法访问。 <br>
 
 
 <!--(Table)=========================================================-->
@@ -119,11 +119,11 @@ else
 
 <tr>
 <td>
-<h3 CLASS=TableHead>��չ</td>
+<h3 CLASS=TableHead>扩展</td>
 <td>
 <h3 CLASS=TableHead>PMC.umask</td>
 <td>
-<h3 CLASS=TableHead>˵��</td></tr>
+<h3 CLASS=TableHead>说明</td></tr>
 
 <tr>
 <td>
@@ -131,7 +131,7 @@ else
 <td>
 <p>b0000</td>
 <td>
-<p>ͳ��������ԭ���µ�</td></tr>
+<p>统计由所有原因导致的</td></tr>
 
 <tr>
 <td>
@@ -139,7 +139,7 @@ else
 <td>
 <p>b0001</td>
 <td>
-<p>��ͳ����ǰ��������µ�</td></tr>
+<p>仅统计由前端清除导致的</td></tr>
 
 <tr>
 <td>
@@ -147,7 +147,7 @@ else
 <td>
 <p>b0010</td>
 <td>
-<p>��*����δ����*��</td></tr>
+<p>（*计数未定义*）</td></tr>
 
 <tr>
 <td>
@@ -155,7 +155,7 @@ else
 <td>
 <p>b0011</td>
 <td>
-<p>��*�Ƿ�ѡ��*��</td></tr>
+<p>（*非法选择*）</td></tr>
 
 <tr>
 <td>
@@ -163,7 +163,7 @@ else
 <td>
 <p>b0100</td>
 <td>
-<p>�����޷�����ָ�������µ�</td></tr>
+<p>仅限无法访问指令束导致的</td></tr>
 
 <tr>
 <td>
@@ -171,7 +171,7 @@ else
 <td>
 <p>b0101</td>
 <td>
-<p>����ָ�����������ͣ���µ�</td></tr>
+<p>仅限指令缓冲区已满暂停导致的</td></tr>
 
 <tr>
 <td>
@@ -179,7 +179,7 @@ else
 <td>
 <p>b0110</td>
 <td>
-<p>����ָ���δ������ͣ���µ�</td></tr>
+<p>仅限指令缓存未命中暂停导致的</td></tr>
 
 <tr>
 <td>
@@ -187,7 +187,7 @@ else
 <td>
 <p>b0111</td>
 <td>
-<p>���� TLB ��ͣ���µ�</td></tr>
+<p>仅限 TLB 暂停导致的</td></tr>
 
 <tr>
 <td>
@@ -195,7 +195,7 @@ else
 <td>
 <p>b1000</td>
 <td>
-<p>���޻���������������ѭ�����µ�</td></tr>
+<p>仅限缓存线填充操作的再循环导致的</td></tr>
 
 <tr>
 <td>
@@ -203,7 +203,7 @@ else
 <td>
 <p>b1001</td>
 <td>
-<p>���޷�֧��ʼ����ͣ���µ�</td></tr>
+<p>仅限分支初始化暂停导致的</td></tr>
 
 <tr>
 <td>
@@ -211,7 +211,7 @@ else
 <td>
 <p>b1010</td>
 <td>
-<p>���޷�֧ʧЧ������ͣ���µ�</td></tr>
+<p>仅限分支失效队列暂停导致的</td></tr>
 
 <tr>
 <td>
@@ -219,7 +219,7 @@ else
 <td>
 <p>b1011</td>
 <td>
-<p>����ѭ����ȷԤ����ͣ���µ�</td></tr>
+<p>仅限循环正确预测暂停导致的</td></tr>
 
 <tr>
 <td>
@@ -227,7 +227,7 @@ else
 <td>
 <p>b1100</td>
 <td>
-<p>���޷�֧������ͣ���µ�</td></tr>
+<p>仅限分支互锁暂停导致的</td></tr>
 
 <tr>
 <td>
@@ -235,7 +235,7 @@ else
 <td>
 <p>b1101</td>
 <td>
-<p>���޷�֧���¶�ַ������ͣ���µ�</td></tr>
+<p>仅限分支重新定址气泡暂停导致的</td></tr>
 
 <tr>
 <td>
@@ -243,7 +243,7 @@ else
 <td>
 <p>b1110-b1111</td>
 <td>
-<p>��*�Ƿ�ѡ��*��</td></tr>
+<p>（*非法选择*）</td></tr>
 </table>
 
 <script type="text/javascript" language="javascript1.2">

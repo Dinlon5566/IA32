@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -125,7 +125,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nT - ָ��\nTMIA");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nT - 指令\nTMIA");
 
 	}
 	if (window.writeBtnStyle)
@@ -150,20 +150,20 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特尔 XScale(R) 技术主题' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>TMIA - MIA �� TMIAxy �ϵĴ���ָ��ӳ��</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特尔 XScale(R) 技术主题' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特尔 XScale(R) 技术主题' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>TMIA - MIA 与 TMIAxy 上的传输指令映射</h1>
 
-<p>��������� <a href="#TMIA">TMIA</a> �� <a href="#TMIAxy">TMIAxy</a> �Ľ��ܡ�</p>
+<p>此主题包括 <a href="#TMIA">TMIA</a> 与 <a href="#TMIAxy">TMIAxy</a> 的介绍。</p>
 
 <h1><a name=TMIA></a>TMIA</h1>
 
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p class=Preformatted>TMIA[Condition] dest, op1, op2</p>
 
-���У�
+其中：
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -184,7 +184,7 @@ else
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-��ѡ��16 ������֮һ������ģ�<a HREF="Conditional_Execution.html">����ִ��</a>�� 
+可选。16 个条件之一。请参阅：<a HREF="Conditional_Execution.html">条件执行</a>。 
 </div></td></tr>
 
 <tr>
@@ -194,7 +194,7 @@ dest
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-64 λ&ldquo;Ӣ�ض�(R)<span style="vertical-align: super;"> </span>���� MMX&#x2122;&rdquo;����Ŀ�����ݼĴ���
+64 位&ldquo;英特尔(R)<span style="vertical-align: super;"> </span>无线 MMX&#x2122;&rdquo;技术目标数据寄存器
 </div></td></tr>
 
 <tr>
@@ -204,7 +204,7 @@ op1
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-&ldquo;Ӣ�ض� XScale(R)&rdquo;�������ݼĴ������ṩ 32 λԴ������֮һ
+&ldquo;英特尔 XScale(R)&rdquo;核心数据寄存器，提供 32 位源操作数之一
  
 </div></td></tr>
 
@@ -215,22 +215,22 @@ op2
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-&ldquo;Ӣ�ض� XScale(R)&rdquo;�������ݼĴ������ṩ�ڶ��� 32 λԴ������
+&ldquo;英特尔 XScale(R)&rdquo;核心数据寄存器，提供第二个 32 位源操作数
  
 </div></td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-�ṩ��&ldquo;Ӣ�ض� XScale(R)&rdquo;���� MIA ָ����ͬ�Ĺ��ܣ�ʹ������&ldquo;Ӣ�ض� XScale(R)&rdquo;����Դ�Ĵ�����op1 �� op2�����з��� 32 λ������ִ�г˷��ۼӣ���ʹ��&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;����Ŀ��Ĵ��� dest �ۼӽ����<br><br> ָ����ָ�����κ�������������������״̬��ƥ�䣬����ִ�и�ָ� 
+提供与&ldquo;英特尔 XScale(R)&rdquo;核心 MIA 指令相同的功能；使用两个&ldquo;英特尔 XScale(R)&rdquo;核心源寄存器（op1 与 op2）的有符号 32 位操作数执行乘法累加，并使用&ldquo;英特尔(R) 无线 MMX&#x2122;&rdquo;技术目标寄存器 dest 累加结果。<br><br> 指令中指定的任何条件必须与条件代码状态相匹配，否则不执行该指令。 
 
-<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs6"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs6"> 备注</h3>
 
-<p>Ҳ����ʹ�ò���ǰ�� T �����Ƿ����� MIA��������&ldquo;Ӣ�ض� XScale(R)&rdquo;���� MIA ָ���ṩ��ͬ�Ĺ��ܣ���ע�⣬���� MIA ���� 40 λ�Ľ������&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�������ṩ������ 64 λ�Ĵ������������������ 40 λ���磬����� MIA ���磬��&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;���� TMIA Ҫ�ȵ����� 64 λ����ʱ���Ż������ȷ�Ľ������˺�����&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�����������ͬ�Ľ������</p>
+<p>也可以使用不带前导 T 的助记符（即 MIA）；它与&ldquo;英特尔 XScale(R)&rdquo;核心 MIA 指令提供相同的功能（请注意，核心 MIA 计算 40 位的结果，而&ldquo;英特尔(R) 无线 MMX&#x2122;&rdquo;技术则提供完整的 64 位寄存器结果；如果结果发生 40 位上溢，则核心 MIA 上溢，而&ldquo;英特尔(R) 无线 MMX&#x2122;&rdquo;技术 TMIA 要等到发生 64 位上溢时，才会产生正确的结果，因此核心与&ldquo;英特尔(R) 无线 MMX&#x2122;&rdquo;技术会产生不同的结果）。</p>
 
-<p>�� R15 ָ��Ϊ op1 �� op2 ʱ����������޷�Ԥ֪�Ľ����</p>
+<p>将 R15 指定为 op1 或 op2 时，将会产生无法预知的结果。</p>
 
-<h2>����</h2>
+<h2>编码</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -439,25 +439,25 @@ Cond
 </tr>
 </table>
 
-<h2>Ӱ��� SIMD ��־</h2>
+<h2>影响的 SIMD 标志</h2>
 
-<p>��Ӱ�� SIMD PSR ��־ (wCASF) ��&ldquo;����&rdquo;��־ (wCSSF)��</p>
+<p>不影响 SIMD PSR 标志 (wCASF) 或&ldquo;饱和&rdquo;标志 (wCSSF)。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted><span style="font-style: italic;"><I>dest</I></span>[63:0] = (<span style="font-style: italic;"><I>op1</I></span>[31:0] * <span style="font-style: italic;"><I>op2</I></span>[31:0]) + <span style="font-style: italic;"><I>dest</I></span>[63:0] </p>
 
-<h2>������Ϣ</h2>
+<h2>更多信息</h2>
 
 <p><a HREF="TMIAPH.html">TMIAPH</a></p>
 
 <h1><a name=TMIAxy></a>TMIAxy</h1>
 
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p class=Preformatted>TMIAxy[Condition] dest, op1, op2</p>
 
-���У�
+其中：
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -469,13 +469,13 @@ Cond
 </div></td>
 <td class="whs3">
 <div align="left" class="whs12">
-<span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">ѡ������� <span style="font-style: italic; font-size: 10pt;"><font size=2 style="font-size:10pt;"><I>op1</I></font></span> ���ĸ����֣�16 λ��</font></span>
+<span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">选择操作数 <span style="font-style: italic; font-size: 10pt;"><font size=2 style="font-size:10pt;"><I>op1</I></font></span> 的哪个半字（16 位）</font></span>
 </div>
 <div align="left" class="whs12">
-<span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">B -- ʹ�õ� 16 λ</font></span> 
+<span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">B -- 使用低 16 位</font></span> 
 </div>
 <div align="left" class="whs12">
-<span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">T -- ʹ�ø� 16 λ </font></span>
+<span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">T -- 使用高 16 位 </font></span>
 </div></td></tr>
 
 <tr>
@@ -485,13 +485,13 @@ Cond
 </div></td>
 <td class="whs3">
 <div align="left" class="whs12">
-<span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">ѡ������� <span style="font-style: italic; font-size: 10pt;"><font size=2 style="font-size:10pt;"><I>op1</I></font></span> ���ĸ����֣�16 λ��</font></span>
+<span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">选择操作数 <span style="font-style: italic; font-size: 10pt;"><font size=2 style="font-size:10pt;"><I>op1</I></font></span> 的哪个半字（16 位）</font></span>
 </div>
 <div align="left" class="whs12">
-<span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">B -- ʹ�õ� 16 λ</font></span> 
+<span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">B -- 使用低 16 位</font></span> 
 </div>
 <div align="left" class="whs12">
-<span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">T -- ʹ�ø� 16 λ </font></span>
+<span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">T -- 使用高 16 位 </font></span>
 </div></td></tr>
 
 <tr>
@@ -501,7 +501,7 @@ Cond
 </div></td>
 <td class="whs3">
 <div align="left" class="whs12">
-<span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">��ѡ��16 ������֮һ������ģ�<a HREF="Conditional_Execution.html" style="font-size: 10pt;">����ִ��</a>�� </font></span>
+<span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">可选。16 个条件之一。请参阅：<a HREF="Conditional_Execution.html" style="font-size: 10pt;">条件执行</a>。 </font></span>
 </div></td></tr>
 
 <tr>
@@ -511,7 +511,7 @@ Cond
 </div></td>
 <td class="whs3">
 <div align="left" class="whs12">
-<span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">64 λ&ldquo;Ӣ�ض�</font></span>(R) <span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">���� MMX(TM)&rdquo;����Ŀ�����ݼĴ���</font></span>
+<span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">64 位&ldquo;英特尔</font></span>(R) <span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">无线 MMX(TM)&rdquo;技术目标数据寄存器</font></span>
 </div></td></tr>
 
 <tr>
@@ -521,7 +521,7 @@ Cond
 </div></td>
 <td class="whs3">
 <div align="left" class="whs12">
-<span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">&ldquo;Ӣ�ض�(R) XScale&rdquo;�������ݼĴ������ṩ��һ��������</font></span> 
+<span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">&ldquo;英特尔(R) XScale&rdquo;核心数据寄存器，提供第一个操作数</font></span> 
 </div></td></tr>
 
 <tr>
@@ -531,23 +531,23 @@ Cond
 </div></td>
 <td class="whs3">
 <div align="left" class="whs12">
-<span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">&ldquo;Ӣ�ض�(R) XScale&rdquo;�������ݼĴ������ṩ�ڶ���������</font></span> 
+<span style="font-size: 10pt;"><font size=2 style="font-size:10pt;">&ldquo;英特尔(R) XScale&rdquo;核心数据寄存器，提供第二个操作数</font></span> 
 </div></td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-�ṩ��&ldquo;Ӣ�ض� XScale(R)&rdquo;���� MIAxy ָ����ͬ�Ĺ��ܣ�ʹ������&ldquo;Ӣ�ض� XScale(R)&rdquo;���ļĴ�����op1 �� op2�����з��Ų�����ִ�� 16 λ�˷��ۼӣ���ʹ��&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;����Ŀ��Ĵ��� dest �ۼӽ����ͨ����ָ�����Ƿ���ÿ�� x �� y λ����ָ�� B���ײ����� T���޶�����������ѡ��ÿ��Դ�Ĵ����ĸ� 16 λ��� 16 λ�� 
+提供与&ldquo;英特尔 XScale(R)&rdquo;核心 MIAxy 指令相同的功能；使用两个&ldquo;英特尔 XScale(R)&rdquo;核心寄存器（op1 与 op2）的有符号操作数执行 16 位乘法累加，并使用&ldquo;英特尔(R) 无线 MMX&#x2122;&rdquo;技术目标寄存器 dest 累加结果。通过在指令助记符的每个 x 与 y 位置中指定 B（底部）或 T（限定符），可以选择每个源寄存器的高 16 位或低 16 位。 
 
-<p>ָ����ָ�����κ�������������������״̬ƥ�䣬����ִ��ָ�</p>
+<p>指令中指定的任何条件必须与条件代码状态匹配，否则不执行指令。</p>
 
-<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs6"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs6"> 备注</h3>
 
-<p>Ҳ���Բ���ǰ�� T �����Ƿ����� MIAxy��������&ldquo;Ӣ�ض� XScale(R)&rdquo;���� MIAxy ָ���ṩ��ͬ�Ĺ��ܣ���ע�⣬���� MIAxy ���� 40 λ�Ľ������&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�������ṩ������ 64 λ�Ĵ������������������ 40 λ���磬����� MIAxy ���磬��&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;���� TMIAxy Ҫ�ȵ����� 64 λ����ʱ���Ż������ȷ�Ľ������˺�����&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�����������ͬ�Ľ������</p>
+<p>也可以不带前导 T 的助记符（即 MIAxy）；它与&ldquo;英特尔 XScale(R)&rdquo;核心 MIAxy 指令提供相同的功能（请注意，核心 MIAxy 计算 40 位的结果，而&ldquo;英特尔(R) 无线 MMX&#x2122;&rdquo;技术则提供完整的 64 位寄存器结果；如果结果发生 40 位上溢，则核心 MIAxy 上溢，而&ldquo;英特尔(R) 无线 MMX&#x2122;&rdquo;技术 TMIAxy 要等到发生 64 位上溢时，才会产生正确的结果，因此核心与&ldquo;英特尔(R) 无线 MMX&#x2122;&rdquo;技术会产生不同的结果）。</p>
 
-<p>�� R15 ָ��Ϊ op1 �� op2 ʱ����������޷�Ԥ֪�Ľ����</p>
+<p>将 R15 指定为 op1 或 op2 时，将会产生无法预知的结果。</p>
 
-<h2>����</h2>
+<h2>编码</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" border="1" class="whs2">
@@ -756,7 +756,7 @@ Cond
 </tr>
 </table>
 
-<h2>���ֶα���</h2>
+<h2>子字段编码</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="66.084%" class="whs13">
@@ -771,15 +771,15 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) 
 <td width="35.096%" class="whs18">
 <h3 class=TableHead
 	style="text-align: center;"
-	align=center>�޶���</td>
+	align=center>限定符</td>
 <td width="29.012%" class="whs19">
 <h3 class=TableHead
 	style="text-align: center;"
-	align=center>�ֶ�</td>
+	align=center>字段</td>
 <td width="35.892%" class="whs20">
 <h3 class=TableHead
 	style="text-align: center;"
-	align=center>ֵ</td></tr>
+	align=center>值</td></tr>
 
 <tr valign="top" class="whs17">
 <td width="35.096%" class="whs21">
@@ -845,11 +845,11 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) 
 
 <p>&nbsp;</p>
 
-<h2>Ӱ��� SIMD ��־</h2>
+<h2>影响的 SIMD 标志</h2>
 
-<p>��Ӱ�� SIMD PSR ��־ (wCASF) ��&ldquo;����&rdquo;��־ (wCSSF)��</p>
+<p>不影响 SIMD PSR 标志 (wCASF) 或&ldquo;饱和&rdquo;标志 (wCSSF)。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted>&lt;operand1&gt; = (T Specified in x position)&gt;? op1[31:16] : op1[15:0]</p>
 
@@ -859,7 +859,7 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) 
 
 <h2><img src="TMIAxy.gif" x-maintain-ratio="TRUE" width="524px" height="274px" border="0" class="img_whs30"></h2>
 
-<h2>������Ϣ</h2>
+<h2>更多信息</h2>
 
 <p><a href="TMIAPH.html">TMIAPH</a></p>
 

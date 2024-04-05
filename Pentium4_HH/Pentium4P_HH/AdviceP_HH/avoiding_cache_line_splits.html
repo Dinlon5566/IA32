@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/avoiding_cache_line_splits.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:51 GMT -->
 <head>
 
-<title>���⻺���߲��</title>
+<title>避免缓存线拆分</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
 <meta name=generator-major-version content=0.1>
 <meta name=generator-minor-version content=1>
@@ -78,7 +78,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\n����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 ������\n����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 �������Ľ���\n����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 �������Ľ���\n���⻺���߲��");
+	addTocInfo("参考\n处理器事件与建议\n含第三代数据流单指令多数据扩展指令集 (SSE3) 的英特尔(R) 奔腾(R) 4 处理器\n含第三代数据流单指令多数据扩展指令集 (SSE3) 的英特尔(R) 奔腾(R) 4 处理器的建议\n含第三代数据流单指令多数据扩展指令集 (SSE3) 的英特尔(R) 奔腾(R) 4 处理器的建议\n避免缓存线拆分");
 
 	}
 	if (window.writeBtnStyle)
@@ -101,26 +101,26 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="Ӣ�ض�(R) ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">���⻺���߲��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="英特尔(R) 调优助手主题" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">避免缓存线拆分</h1>
 
 &nbsp;
 
-<p>Ϊȡ��������ܣ��밴���·����������ݣ�</p>
+<p>为取得最佳性能，请按以下方法对齐数据：</p>
 
-<li class=kadov-p>���κε�ַ������ 8 λ����</li>
+<li class=kadov-p>在任何地址处对齐 8 位数据</li>
 
-<li class=kadov-p>���� 16 λ���ݣ�ʹ֮�����ڶ�������ֽ�����</li>
+<li class=kadov-p>对齐 16 位数据，使之包含在对齐的四字节字内</li>
 
-<li class=kadov-p>���� 32 λ���ݣ�ʹ���ַ��Ϊ�ĵı���</li>
+<li class=kadov-p>对齐 32 位数据，使其基址成为四的倍数</li>
 
-<li class=kadov-p>���� 64 λ���ݣ�ʹ���ַ��Ϊ�˵ı���</li>
+<li class=kadov-p>对齐 64 位数据，使其基址成为八的倍数</li>
 
-<li class=kadov-p>���� 80 λ���ݣ�ʹ���ַ��Ϊʮ���ı���</li>
+<li class=kadov-p>对齐 80 位数据，使其基址成为十六的倍数</li>
 
 <li class=kadov-p>
-���� 128 λ���ݣ�ʹ���ַ��Ϊʮ���ı���
+对齐 128 位数据，使其基址成为十六的倍数
 
-<p>�����й���ϸ��Ϣ������� <i>Intel(R) Pentium(R) 4 and Intel(R) Xeon(TM) Processor Optimization Manual</i>��Ӣ�ض�(R) ����(R) 4 ��Ӣ�ض�(R) ��ǿ(TM) �������Ż��ֲᣩ�ĵ� 2 �¡�</p>
+<p>如需有关详细信息，请参阅 <i>Intel(R) Pentium(R) 4 and Intel(R) Xeon(TM) Processor Optimization Manual</i>（英特尔(R) 奔腾(R) 4 与英特尔(R) 至强(TM) 处理器优化手册）的第 2 章。</p>
 </li>
 
 <script type="text/javascript" language="javascript1.2">

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/ttag_-_translation_hashed_entry_tag_instruction.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:47 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>ttag - ת��ɢ������ָ��</title>
+<title>ttag - 转译散列项标记指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -84,7 +84,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nT - ָ��\nttag - ת��ɢ������ָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nT - 指令\nttag - 转译散列项标记指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -107,13 +107,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">ttag - ת��ɢ������ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">ttag - 转译散列项标记指令</h1>
 
 <p class="whs2">ttag</p>
 
-<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a></p>
+<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a></p>
 
-<p class="whs2">��ʽ</p>
+<p class="whs2">格式</p>
 
 <p class=Preformatted>(qp)ttagr 1 = r3 M46</p>
 
@@ -122,27 +122,27 @@ else
 <hr class="whs3">
 
 
-<p><b style="font-weight: bold;">˵��</b></p>
+<p><b style="font-weight: bold;">说明</b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">��������ʽ&ldquo;����ɢ��ҳ��&rdquo;(VHPT) �ڼ����������ƥ��ı�ǣ������� </span></b><b style="font-weight: normal;"><span 
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">搜索长格式&ldquo;虚拟散列页表&rdquo;(VHPT) 期间会生成用于匹配的标记，并放入 </span></b><b style="font-weight: normal;"><span 
  style="font-weight: normal;">GR </span><span style="font-weight: normal; font-style: italic;"><I>r1</I></span><span 
- style="font-weight: normal;">�������ַ�� GR</span><span style="font-style: italic; font-weight: normal;"><I>r3</I></span><span   style="font-weight: normal;"> ָ��������Ĵ���</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">�� GR </span><span style="font-style: italic; font-weight: normal;"><I>r3</I></span><span   style="font-weight: normal;"> ��λ {63:61} ѡ��</span></b></p>
+ style="font-weight: normal;">。虚拟地址由 GR</span><span style="font-style: italic; font-weight: normal;"><I>r3</I></span><span   style="font-weight: normal;"> 指定，区域寄存器</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">由 GR </span><span style="font-style: italic; font-weight: normal;"><I>r3</I></span><span   style="font-weight: normal;"> 的位 {63:61} 选择。</span></b></p>
 
 <p class="whs4"></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">������� </span><span class=Code>ttag </span><span   style="font-weight: normal;">ʱ�� NaT ���������δʹ�õ������ַ�������룬</span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;">�������Ŀ��Ĵ���ֵδ���壬�� NaT λ��Ϊһ��</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">如果给出 </span><span class=Code>ttag </span><span   style="font-weight: normal;">时将 NaT 输入参数或未使用的虚拟地址用作输入，</span></b><b style="font-weight: normal;"><span 
+ style="font-weight: normal;">则产生的目标寄存器值未定义，其 NaT 位设为一。</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">������ɺ�������һ���ض��ھ���ʵʩ�ĳ���ʽ VHPT ��ǡ����</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">���ɺ�������ʹ������ʵ�ֵ�����λ������ʹ�������ַλ {60:0}��</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">标记生成函数生成一个特定于具体实施的长格式 VHPT 标记。标记</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">生成函数必须使用所有实现的区域位，并仅使用虚拟地址位 {60:0}。</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">��ָ����� PTA.vf��</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">此指令忽略 PTA.vf。</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">�ڳ���ʽ�У�VHPT �е�ת�������� thash ָ�����ɵ�ɢ������</span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;">����ָ������ı��Ψһ��ʶ��</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">在长格式中，VHPT 中的转译必须可由 thash 指令生成的散列索引</span></b><b style="font-weight: normal;"><span 
+ style="font-weight: normal;">及此指令产生的标记唯一标识。</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">��ָ������������ͺŵĴ�������ʵʩ����ʹ��δ</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">ʵʩ VHPT ��ѯ���Ĵ������ͺš�</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">此指令必须在所有型号的处理器上实施，即使是未</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">实施 VHPT 查询器的处理器型号。</span></b></p>
 
-<p class="whs2"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>����</B></span></b></p>
+<p class="whs2"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>操作</B></span></b></p>
 
 <p class="whs4"><b style="font-weight: normal;"><span class=Code>if (PR[qp]) {</span></b></p>
 
@@ -168,9 +168,9 @@ else
 
 <p class="whs4"><b style="font-weight: normal;"><span class=Code>}</span></b></p>
 
-<p class="whs2">�ж�</p>
+<p class="whs2">中断</p>
 
-<p class="whs4"><b style="font-weight: normal;">&ldquo;�Ƿ�����&rdquo;����</b></p>
+<p class="whs4"><b style="font-weight: normal;">&ldquo;非法操作&rdquo;错误</b></p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

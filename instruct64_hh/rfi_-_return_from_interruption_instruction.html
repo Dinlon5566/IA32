@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/rfi_-_return_from_interruption_instruction.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:32:04 GMT -->
 <head>
 
-<title>rfi - �жϷ���ָ��</title>
+<title>rfi - 中断返回指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="03 16, 2003 12:26:08 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -85,7 +85,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nR - ָ��\nrfi - �жϷ���ָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nR - 指令\nrfi - 中断返回指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,13 +108,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">�жϷ���ָ��</h1>
+<h1><img src="itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">中断返回指令</h1>
 
 <p class="whs2">rfi</p>
 
-<p><a href="rfi-operation.html">����</a> <a HREF="6400126.html">�������</a></p>
+<p><a href="rfi-operation.html">操作</a> <a HREF="6400126.html">字体惯例</a></p>
 
-<p class="whs2">��ʽ</p>
+<p class="whs2">格式</p>
 
 <p class=Preformatted>rfi &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;B8</p>
 
@@ -123,78 +123,78 @@ else
 <hr class="whs3">
 
 
-<p><b style="font-weight: bold;">˵��</b></p>
+<p><b style="font-weight: bold;">说明</b></p>
 
-<p class="whs4"><span><b style="font-weight: normal;">��ԭ�ж�ǰ�Ļ��������ġ�PSR �� IPSR ��ԭ��IPSR ���ֲ��䣬IP �� IIP ��ԭ��ִ�дӼ��ص� IP ��ָ������ַ�� PSR.ri</b> �м��ص�ָ��۴�������</span></p>
+<p class="whs4"><span><b style="font-weight: normal;">还原中断前的机器上下文。PSR 从 IPSR 还原，IPSR 保持不变，IP 从 IIP 还原。执行从加载到 IP 的指令束地址与 PSR.ri</b> 中加载的指令槽处继续。</span></p>
 
-<p class="whs4"><b><span style="font-weight: normal;">��ָ����������ֹͣ���档����ᷢ��&ldquo;�Ƿ�����&rdquo;����</b><b style="font-weight: normal;">����ָ���л��� IPSR.bn ָ���ļĴ����⡣��ָͬ�����з��� GR16 �� GR31 ��ָ������ǰһ���Ĵ����⡣����ָ���������µļĴ����⡣</b></span></p>
+<p class="whs4"><b><span style="font-weight: normal;">此指令必须紧跟在停止后面。否则会发生&ldquo;非法操作&rdquo;错误</b><b style="font-weight: normal;">。此指令切换到 IPSR.bn 指定的寄存器库。相同指令组中访问 GR16 到 GR31 的指令引用前一个寄存器库。后续指令组引用新的寄存器库。</b></span></p>
 
-<p class="whs4"><b><span style="font-weight: normal;">��ָ��ִ��ָ�����л���ȷ����</span></b></p>
+<p class="whs4"><b><span style="font-weight: normal;">此指令执行指令序列化以确保：</span></b></p>
 
 <ul type="disc" class="whs5">
 	
-	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;">�۲쵽��ǰ�Դ������Ĵ�����Դ���޸ģ���Щ��ԴӰ�����ָ����Ļ�ȡ��</b></p></li>
+	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;">观察到先前对处理器寄存器资源的修改，这些资源影响后续指令组的获取。</b></p></li>
 	
-	<li class=kadov-p><p class="whs4"><b><span style="font-weight: normal;">�۲쵽��ǰ�Դ������Ĵ�����Դ���޸ģ�</span></b><b><span style="font-weight: normal;">��Щ��ԴӰ�������ִ�л������ڴ���ʡ�</span></b></p></li>
+	<li class=kadov-p><p class="whs4"><b><span style="font-weight: normal;">观察到先前对处理器寄存器资源的修改，</span></b><b><span style="font-weight: normal;">这些资源影响后续的执行或数据内存访问。</span></b></p></li>
 	
-	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;"><span   style="font-weight: normal;">��ǰ���ڴ�ͬ�� (</span><span 
- class=Code>sync.i</span><span style="font-weight: normal;">) ����</b><b style="font-weight: normal;">��ʼ�ڱ��ش�����ָ����������á�</b></span></p></li>
+	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;"><span   style="font-weight: normal;">先前的内存同步 (</span><span 
+ class=Code>sync.i</span><span style="font-weight: normal;">) 操作</b><b style="font-weight: normal;">开始在本地处理器指令缓存上起作用。</b></span></p></li>
 	
-	<li class=kadov-p><p class="whs4"><b><b style="font-weight: normal;">�� </span><span class=Code>rfi</span><span   style="font-weight: normal;"> ���֮��</span><span style="font-weight: normal;">�����³�ʼ��������ָ�����ȡ������Ŀ��ָ���飩</b>��</b></p></li>
+	<li class=kadov-p><p class="whs4"><b><b style="font-weight: normal;">在 </span><span class=Code>rfi</span><span   style="font-weight: normal;"> 完成之后，</span><span style="font-weight: normal;">已重新初始化后续的指令组获取（包括目标指令组）</b>。</b></p></li>
 </ul>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;"></span><span class=Code 				style="font-weight: normal;">rfi</span><span style="font-weight: normal;"></span></b><b><span style="font-weight: normal;">&#xA0;<span style="font-weight: normal;">ָ������ڰ���Ҫ���л���</span>������ָ��������ָ�����С�</span></b><b></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;"></span><span class=Code 				style="font-weight: normal;">rfi</span><span style="font-weight: normal;"></span></b><b><span style="font-weight: normal;">&#xA0;<span style="font-weight: normal;">指令必须在包含要序列化的</span>操作的指令组后面的指令组中。</span></b><b></b></p>
 
-<p class="whs4"><b><span style="font-weight: normal;">��ָ��ֻ���������Ȩ����ִ�С���ָ���޷�</b><b style="font-weight: normal;">�϶���</b></span></p>
+<p class="whs4"><b><span style="font-weight: normal;">此指令只能在最高特权级别执行。此指令无法</b><b style="font-weight: normal;">断定。</b></span></p>
 
-<p class="whs4"><span><b style="font-weight: normal;">��� PSR.ic �� PSR.i Ϊ 1�����ָ���ִ��δ���塣��������ȷ������д�� IIP��IPSR �� IFS ������� </span><span style="font-weight: normal;">rfi</span> ֮�䣬���ܷ������ܻ��޸���Щ�Ĵ������жϡ�</b></p>
+<p class="whs4"><span><b style="font-weight: normal;">如果 PSR.ic 或 PSR.i 为 1，则此指令的执行未定义。软件必须确保，在写入 IIP、IPSR 或 IFS 与后续的 </span><span style="font-weight: normal;">rfi</span> 之间，不能发生可能会修改这些寄存器的中断。</b></p>
 
-<p class="whs4"><b><span style="font-weight: normal;">��ָ�ִ��&ldquo;����Ȩ����&rdquo;��&ldquo;ִ�з�֧&rdquo;��&ldquo;����&rdquo;���塣</span></b></p>
+<p class="whs4"><b><span style="font-weight: normal;">此指令不执行&ldquo;低特权传输&rdquo;、&ldquo;执行分支&rdquo;或&ldquo;单步&rdquo;陷阱。</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">���Ŀ���ǰ��� </span><span class=Code 													style="font-weight: normal;">movl</span></b><b><span   style="font-weight: normal;"> </span></b><b><span style="font-weight: normal;">ָ���ָ���������Ҵ�ָ� PSR.ri ��Ϊ 2����Ŀ��ָ�����ϲ���</span><span style="font-weight: bold;"><B></b><b style="font-weight: normal;">&ldquo;�Ƿ�����&rdquo;</B></span>����</b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">如果目标是包含 </span><span class=Code 													style="font-weight: normal;">movl</span></b><b><span   style="font-weight: normal;"> </span></b><b><span style="font-weight: normal;">指令的指令束，并且此指令将 PSR.ri 设为 2，则目标指令束上产生</span><span style="font-weight: bold;"><B></b><b style="font-weight: normal;">&ldquo;非法操作&rdquo;</B></span>错误。</b></p>
 
-<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;">��� IPSR.is Ϊ 1������ IIP{31:0} ָ�����������Ե�ַ�ϻָ� IA-32 ָ��Ŀ��ơ�PSR.di ������ֹ��ָ���ָ�ת����</span><span style="font-weight: normal;">��</span></b><b style="font-weight: normal;"><span class=Code> rfi</span><span 
- style="font-weight: normal;"> </span></b><b><span style="font-weight: normal;">���ִ��֮����� PSR.dfh Ϊ 1������Ŀ�� IA-32</span></b><b><span style="font-weight: normal;">ָ���ϲ���&ldquo;���õ� FP �Ĵ���&rdquo;����</span></b></p>
+<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;">如果 IPSR.is 为 1，则在 IIP{31:0} 指定的虚拟线性地址上恢复 IA-32 指令集的控制。PSR.di 不会阻止此指令的指令集转换。</span><span style="font-weight: normal;">在</span></b><b style="font-weight: normal;"><span class=Code> rfi</span><span 
+ style="font-weight: normal;"> </span></b><b><span style="font-weight: normal;">完成执行之后，如果 PSR.dfh 为 1，则在目标 IA-32</span></b><b><span style="font-weight: normal;">指令上产生&ldquo;禁用的 FP 寄存器&rdquo;错误。</span></b></p>
 
-<p class="whs4"><b><span style="font-weight: normal;">��� IPSR.is Ϊ 1��������&ldquo;δʹ�õ�ָ���ַ&rdquo;���壬�� IIP ������ԭʼ�� </b><b style="font-weight: normal;">64 λĿ�� IP������ֵ���Ǵ� 32 λͨ������չ��ʽ�õ��ģ���</b></span></p>
+<p class="whs4"><b><span style="font-weight: normal;">如果 IPSR.is 为 1，并发生&ldquo;未使用的指令地址&rdquo;陷阱，则 IIP 将包含原始的 </b><b style="font-weight: normal;">64 位目标 IP。（此值不是从 32 位通过零扩展方式得到的）。</b></span></p>
 
-<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;">���� IA-32 ָ�ʱ����ǰ��ջ֡�Ĵ�С������Ϊ�㣬�Ҷ�ջ�е�����ͨ�üĴ���������δ����״̬����ָ�ת�������У���������������Щ</span><span style="font-weight: bold;"><B></B></span><span style="font-weight: normal;">�Ĵ�����ֵ����������ȷ���ڽ��� IA-32 ָ�ʱ </span></b><b><span style="font-weight: normal;">AR[BSPSTORE]==AR[BSP]��������ܻᵼ��δ�����</span></b><b><span   style="font-weight: normal;">��Ϊ��</span></b></p>
+<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;">进入 IA-32 指令集时，当前堆栈帧的大小会设置为零，且堆栈中的所有通用寄存器都处于未定义状态。在指令集转换过程中，软件不能依赖这些</span><span style="font-weight: bold;"><B></B></span><span style="font-weight: normal;">寄存器的值。软件必须确保在进入 IA-32 指令集时 </span></b><b><span style="font-weight: normal;">AR[BSPSTORE]==AR[BSP]，否则可能会导致未定义的</span></b><b><span   style="font-weight: normal;">行为。</span></b></p>
 
-<p class="whs4"><span style="font-weight: normal;"><b><span   style="font-weight: normal;">���</span></b> IPSR.is �� 1������������Ϊִ�� IA-32 ָ���ȷ���������� IPSR �ֶΣ�������������δ���塣</span></p>
+<p class="whs4"><span style="font-weight: normal;"><b><span   style="font-weight: normal;">如果</span></b> IPSR.is 是 1，则软件必须为执行 IA-32 指令集正确设置其它的 IPSR 字段；否则处理器操作未定义。</span></p>
 
-<p class="whs4">�����й���ϸ��Ϣ������� <span style="font-style: italic;"><I>Intel(R) Itanium(R) Architecture Software Developer&rsquo;s Manual</I></span>��Ӣ�ض�(R) ����(R) ��ϵ�ṹ����������Ա�ֲᣩ�� 2 ���� 2:19 ҳ�ϵı� 3-2&ldquo;������״̬�Ĵ����ֶ�&rdquo;��</p>
+<p class="whs4">如需有关详细信息，请参阅 <span style="font-style: italic;"><I>Intel(R) Itanium(R) Architecture Software Developer&rsquo;s Manual</I></span>（英特尔(R) 安腾(R) 体系结构软件开发人员手册）第 2 卷第 2:19 页上的表 3-2&ldquo;处理器状态寄存器字段&rdquo;。</p>
 
-<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;">�� IA-32 ��������һ���ڴ������밲��(R) ��ϵ�ṹ�������ڴ�����֮�䣬�����Ҫȷ���ڴ�˳�������������ڴ���ָ��֮ǰ���� mf ָ���������</span><span style="font-weight: normal;">ȷ��������</span></b><b><span 
- style="font-weight: normal;"> IA-32 ָ���ܿ���</span></b><b><span style="font-weight: normal;">����</span></b><b><span 
- style="font-weight: normal;">ָ����ɵ�ָ����д�롣</span></b></p>
+<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;">在 IA-32 处理器的一致内存引用与安腾(R) 体系结构的无序内存引用之间，如果需要确定内存顺序，则软件必须在此条指令之前发出 mf 指令。处理器不</span><span style="font-weight: normal;">确保后续的</span></b><b><span 
+ style="font-weight: normal;"> IA-32 指令能看见</span></b><b><span style="font-weight: normal;">安腾</span></b><b><span 
+ style="font-weight: normal;">指令集生成的指令流写入。</span></b></p>
 
-<p class="whs4"><span><b style="font-weight: normal;">��������ȷ���ڷ�����ָ��֮ǰ���������������ѡ�����Ѿ����ء����Ŀ�� EIP ֵ��������ε����ƣ����Ǵ��ڴ������Ȩ��ͻ������ IA-32 ָ�������� IA-32_Exception(GPFault) �쳣������ 16 λ IA-32 ����ʱ����� IIP ���� CSD.base �� 64K �ֽڷ�Χ�ڣ�����Ŀ��ָ�������� GPFault��</b></span></p>
+<p class="whs4"><span><b style="font-weight: normal;">软件必须确保在发出此指令之前，代码段描述符与选择器已经加载。如果目标 EIP 值超出代码段的限制，或是存在代码段特权冲突，则在 IA-32 指令上生成 IA-32_Exception(GPFault) 异常。进入 16 位 IA-32 代码时，如果 IIP 不在 CSD.base 的 64K 字节范围内，则在目标指令上生成 GPFault。</b></span></p>
 
-<p class="whs4"><span><b style="font-weight: normal;">ֱ��Ŀ�� IA-32 ָ��ɹ����֮�󣬲Ż��޸� EFLAG.rf �� PSR.id����Ŀ�� IA-32 ָ�ʼִ��֮ǰ��PSR.da��PSR.dd��PSR.ia �� PSR.ed �����Ϊ�㡣</b></span></p>
+<p class="whs4"><span><b style="font-weight: normal;">直到目标 IA-32 指令成功完成之后，才会修改 EFLAG.rf 与 PSR.id。在目标 IA-32 指令开始执行之前，PSR.da、PSR.dd、PSR.ia 及 PSR.ed 都清除为零。</b></span></p>
 
-<p class="whs4"><span><b style="font-weight: normal;">ִ�� IA-32 ָ�ʱ��ALAT �����ݱ���δ���塣��ָ�ת�������У������������� ALAT ״̬������ IA-32 ����ʱ�������� ALAT �����е���Ŀ��</b></span></p>
+<p class="whs4"><span><b style="font-weight: normal;">执行 IA-32 指令集时，ALAT 的内容保持未定义。在指令集转换过程中，软件不能依赖 ALAT 状态。进入 IA-32 代码时，将忽略 ALAT 中现有的项目。</b></span></p>
 
-<p class="whs2"><b><span style="font-weight: bold;"><B>�ж�</B></span></b></p>
+<p class="whs2"><b><span style="font-weight: bold;"><B>中断</B></span></b></p>
 
 <ul type="disc" class="whs5">
 	
-	<li class=kadov-p><p class="whs4"><span><b style="font-weight: normal;">&ldquo;�Ƿ�����&rdquo;����&ldquo;��Ȩ����&rdquo;����</b></span></p></li>
+	<li class=kadov-p><p class="whs4"><span><b style="font-weight: normal;">&ldquo;非法操作&rdquo;错误；&ldquo;特权操作&rdquo;错误</b></span></p></li>
 	
-	<li class=kadov-p><p class="whs4"><b><span style="font-weight: normal;">&ldquo;δʹ�õ�ָ���ַ&rdquo;����</span></b></p></li>
+	<li class=kadov-p><p class="whs4"><b><span style="font-weight: normal;">&ldquo;未使用的指令地址&rdquo;陷阱</span></b></p></li>
 	
-	<li class=kadov-p><p class="whs4"><b><span style="font-weight: normal;">IA-32 Ŀ��ָ���ϵ���������</span></b></p></li>
+	<li class=kadov-p><p class="whs4"><b><span style="font-weight: normal;">IA-32 目标指令上的其它错误</span></b></p></li>
 	
 	<ul>
 		
 		<li class=kadov-p-CSubBullet><p class=SubBullet><b><span style="font-weight: normal;">IA-32_Exception(GPFault)</span></b></p></li>
 		
-		<li class=kadov-p-CSubBullet><p class=SubBullet><b><span style="font-weight: normal;">���õ� FP Reg ���� - ��� PSR.dfh �� 1</span></b></p></li>
+		<li class=kadov-p-CSubBullet><p class=SubBullet><b><span style="font-weight: normal;">禁用的 FP Reg 错误 - 如果 PSR.dfh 是 1</span></b></p></li>
 	</ul>
 </ul>
 
-<p class="whs2"><b><span style="font-weight: bold;"><B>���л�</B></span></b></p>
+<p class="whs2"><b><span style="font-weight: bold;"><B>序列化</B></span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;">ִ����ʽָ�����������л�������</b></p>
+<p class="whs4"><b style="font-weight: normal;">执行隐式指令与数据序列化操作。</b></p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

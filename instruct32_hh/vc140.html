@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc140.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:09 GMT -->
 <head>
 
-<title>INT n/INTO/INT 3 - �����жϹ���</title>
+<title>INT n/INTO/INT 3 - 调用中断过程</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:13:23 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -27,7 +27,7 @@
 <meta name=page-count content=1>
 <meta name=layout-height content=7856>
 <meta name=layout-width content=930>
-<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;EFLAGS;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;��F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;��;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FSUB;FSUBP;FISUB;Dest;FSUBR;FSUBRP;FISUBR;FLDZ--Load;EB;EC;EE;FLDZ;FLDPI;FCLEX;FNCLEX--Clear;FNCLEX*;PE;UE;OE;ZE;IE;FNCLEX;MS-DOS*;MXCRS;FNINIT*;coprocessor;FPUControlWord;FPUStatusWord;FPUTagWord;FPUDataPointer;FPUInstructionPointer;FPULastInstructionOpcode;FINIT;FNINIT;MXCSR;FSAVE;FNSAVE--Store;FNSAVE*;FNSAVE;FNINIT--Initialize;coprocessors;FPUs;FWAIT;DEST[FPUControlWord;DEST[FPUStatusWord;DEST[FPUTagWord;DEST[FPUDataPointer;DEST[FPUInstructionPointer;DEST[FPULastInstructionOpcode;nonwritable;FSTCW;FNSTCW--Store;FNSTCW*;FNSTCW;FNSTENV--Store;FSTENV;FNSTENV*;FNSTENV;FNSTSW--Store;FNSTSW*;FNSTSW;FPREM;FXAM;FSTSW;denormalized;MOV--Move;ModR;M;m;PG;PGE;PSE;PAE;PDPTRs;MOV;reg;TLB;Lookaside;TLBs;GD;FSTP--Store;FST;FSTP;significand;FUCOMIP--Compare;FUCOMIP;FCOMI;FCOMIP;FUCOMI;FUCOMPP--Unordered;FUCOMP;FUCOMPP;FWAIT--Wait;MP;INSB;INSW;INSD--Input;INSD;CPL;IOPL;VM;TSS;CL;BL;CH;DH;BH;CX;BX;SP;EBX;EBP;mm--An;XLAT;LIDT;LGDT;GDTR;IDTR;ith;DPL=;C;W;Y;INTRA-PRIVILEGE-LEVEL-INTERRUPT;flag*;Push(CS;Push(IP;IDT(Descriptor;vector_number;GP((DEST;EXT;GP((vector_number;NP((vector_number;GDT;GP(TSS;NP(TSS;Push(error;GP(selector;NP(selector;GP(new;GP(CodeSegmentSelector;INTER-PREVILEGE-LEVEL-INTERRUPT;TSSstackAddress;TS(current;NewSS;NewESP;TS(EXT;RPL;TS(SS;LDT;SS(SS;selector+EXT;SS(segment;TSS(NewSS;Gate(CS;IP;Push(far;Push(EFLAGS;Push(ErrorCode;ELSE(*;CodeSegmentDescriptor(DPL;CS(RPL;RF;tempEFLAGS;TempSS;TempESP;Push(GS;Push(FS;Push(DS;Push(ES;Push(TempSS;Push(TempESP;Push(TempEFlags;Push(EIP;Gate(instruction;ErrorCode;SS(selector;TS(selector;TSS's;INT;n;CE;IDT;VME;Microsoft*;EIP;IRET;DPL;GOTO;TF">
+<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;EFLAGS;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;±F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;±;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FSUB;FSUBP;FISUB;Dest;FSUBR;FSUBRP;FISUBR;FLDZ--Load;EB;EC;EE;FLDZ;FLDPI;FCLEX;FNCLEX--Clear;FNCLEX*;PE;UE;OE;ZE;IE;FNCLEX;MS-DOS*;MXCRS;FNINIT*;coprocessor;FPUControlWord;FPUStatusWord;FPUTagWord;FPUDataPointer;FPUInstructionPointer;FPULastInstructionOpcode;FINIT;FNINIT;MXCSR;FSAVE;FNSAVE--Store;FNSAVE*;FNSAVE;FNINIT--Initialize;coprocessors;FPUs;FWAIT;DEST[FPUControlWord;DEST[FPUStatusWord;DEST[FPUTagWord;DEST[FPUDataPointer;DEST[FPUInstructionPointer;DEST[FPULastInstructionOpcode;nonwritable;FSTCW;FNSTCW--Store;FNSTCW*;FNSTCW;FNSTENV--Store;FSTENV;FNSTENV*;FNSTENV;FNSTSW--Store;FNSTSW*;FNSTSW;FPREM;FXAM;FSTSW;denormalized;MOV--Move;ModR;M;m;PG;PGE;PSE;PAE;PDPTRs;MOV;reg;TLB;Lookaside;TLBs;GD;FSTP--Store;FST;FSTP;significand;FUCOMIP--Compare;FUCOMIP;FCOMI;FCOMIP;FUCOMI;FUCOMPP--Unordered;FUCOMP;FUCOMPP;FWAIT--Wait;MP;INSB;INSW;INSD--Input;INSD;CPL;IOPL;VM;TSS;CL;BL;CH;DH;BH;CX;BX;SP;EBX;EBP;mm--An;XLAT;LIDT;LGDT;GDTR;IDTR;ith;DPL=;C;W;Y;INTRA-PRIVILEGE-LEVEL-INTERRUPT;flag*;Push(CS;Push(IP;IDT(Descriptor;vector_number;GP((DEST;EXT;GP((vector_number;NP((vector_number;GDT;GP(TSS;NP(TSS;Push(error;GP(selector;NP(selector;GP(new;GP(CodeSegmentSelector;INTER-PREVILEGE-LEVEL-INTERRUPT;TSSstackAddress;TS(current;NewSS;NewESP;TS(EXT;RPL;TS(SS;LDT;SS(SS;selector+EXT;SS(segment;TSS(NewSS;Gate(CS;IP;Push(far;Push(EFLAGS;Push(ErrorCode;ELSE(*;CodeSegmentDescriptor(DPL;CS(RPL;RF;tempEFLAGS;TempSS;TempESP;Push(GS;Push(FS;Push(DS;Push(ES;Push(TempSS;Push(TempESP;Push(TempEFlags;Push(EIP;Gate(instruction;ErrorCode;SS(selector;TS(selector;TSS's;INT;n;CE;IDT;VME;Microsoft*;EIP;IRET;DPL;GOTO;TF">
 
 
 <!--(Links)=========================================================-->
@@ -98,7 +98,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nI - ָ��\nINT n/INTO/INT 3 - �����жϹ���");
+	addTocInfo("参考\n指令集\nIA-32 指令\nI - 指令\nINT n/INTO/INT 3 - 调用中断过程");
 
 	}
 	if (window.writeBtnStyle)
@@ -121,7 +121,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>INT n/INTO/INT 3 - �����жϹ���</h1>
+<h1>INT n/INTO/INT 3 - 调用中断过程</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -129,13 +129,13 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">������</td>
+	style="margin-bottom: 0;">操作码</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">说明</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -146,7 +146,7 @@ else
 	style="margin-bottom: 0;">INT 3</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�ж� 3 - ����������</td></tr>
+	style="margin-bottom: 0;">中断 3 - 调试器陷阱</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -157,7 +157,7 @@ else
 	style="margin-bottom: 0;">INT <span style="font-style: italic;"><I>imm8</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�������ֽ�ָ�����ж�ʸ�����</td></tr>
+	style="margin-bottom: 0;">立即数字节指定的中断矢量编号</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -168,29 +168,29 @@ else
 	style="margin-bottom: 0;">INTO</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�ж� 4 - ��������־�� 1</td></tr>
+	style="margin-bottom: 0;">中断 4 - 如果上溢标志是 1</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-<p>INT <span style="font-style: italic;"><I>n</I></span> ָ�����ɶ�Ŀ�������ָ�����жϻ��쳣��������ĵ��ã������&ldquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 							face=Verdana>IA-32 Ӣ�ض�(R) ��ϵ�ṹ����������Ա�ֲ�</font>&rdquo;�� 1 ���� 6 ���б���Ϊ&ldquo;�ж����쳣&rdquo;�Ĳ��֣���Ŀ�������ָ���� 0 �� 255 ���ж�ʸ����ţ�������ʽ�� 8 λ�޷�����������ÿ���ж�ʸ������ṩһ��ָ�� IDT �е�����������������ͷ 32 ���ж�ʸ�������Ӣ�ض�<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 						face=Verdana>(R)</font> ������ϵͳʹ�á�����һЩ�ж������ڲ����ɵ��쳣��</p>
+<p>INT <span style="font-style: italic;"><I>n</I></span> 指令生成对目标操作数指定的中断或异常处理程序的调用（请参阅&ldquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 							face=Verdana>IA-32 英特尔(R) 体系结构软件开发人员手册</font>&rdquo;第 1 卷第 6 章中标题为&ldquo;中断与异常&rdquo;的部分）。目标操作数指定从 0 到 255 的中断矢量编号，编码形式是 8 位无符号立即数。每个中断矢量编号提供一个指向 IDT 中的门描述符的索引。头 32 个中断矢量编号由英特尔<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 						face=Verdana>(R)</font> 保留供系统使用。其中一些中断用于内部生成的异常。</p>
 
-<p>INT <span style="font-style: italic;"><I>n</I></span> ָ����ͨ�����Ƿ�������ִ���������ɵ��жϴ���������á�INTO ָ����ר�����Ƿ������ڵ��������쳣 (#OF)�����ж�ʸ����� 4�������жϼ�� EFLAGS �Ĵ����е� OF ��־����� OF ��־����Ϊ 1������������жϴ�������</p>
+<p>INT <span style="font-style: italic;"><I>n</I></span> 指令是通用助记符，用于执行软件生成的中断处理程序调用。INTO 指令是专用助记符，用于调用上溢异常 (#OF)，即中断矢量编号 4。上溢中断检查 EFLAGS 寄存器中的 OF 标志，如果 OF 标志设置为 1，则调用上溢中断处理程序。</p>
 
-<p>INT 3 ָ����������ĵ��ֽڲ����� (CC)�����ڵ��õ����쳣�������򡣣�������ֽ���ʽ�����ڽ��κ�ָ��ĵ�һ���ֽ��滻�ɶϵ���������ֽ�ָ������Ḳ���������룬��˷ǳ����ã���Ϊ��һ��֧������Ϊ���Զϵ�Ĺ��ܣ�CC ���������ɵ��ж�ͬ����������жϻ��������²�ͬ��</p>
+<p>INT 3 指令生成特殊的单字节操作码 (CC)，用于调用调试异常处理程序。（这个单字节形式可用于将任何指令的第一个字节替换成断点或其它单字节指令，而不会覆盖其它代码，因此非常有用）。为进一步支持它作为调试断点的功能，CC 操作码生成的中断同常规的软件中断还存在以下不同：</p>
 
 <ol>
 	
-	<p>�� VME ģʽ�У����ᷢ���ж��ض����ж��ɱ���ģʽ�������������������� 8086 ģʽ IOPL ��顣�жϿ������κ� IOPL ����ִ�У�������������</p>
+	<p>在 VME 模式中，不会发生中断重定向；中断由保护模式处理程序处理。不发生虚 8086 模式 IOPL 检查。中断可以在任何 IOPL 级别执行，而不触发错误。</p>
 </ol>
 
-<p>��ע�⣬INT 3 ��&ldquo;��ͨ&rdquo;˫�ֽڲ����� (CD03) û����Щ���⹦�ܡ�Ӣ�ض�<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 											face=Verdana>(R)</font> �� Microsoft* �����������κ����Ƿ����� CD03 �����룬���Ǵ˲��������ʹ��ֱ�ӵ���ֵ���붨��������޸Ĵ��봴����</p>
+<p>请注意，INT 3 的&ldquo;普通&rdquo;双字节操作码 (CD03) 没有这些特殊功能。英特尔<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 											face=Verdana>(R)</font> 与 Microsoft* 汇编器不会从任何助记符生成 CD03 操作码，但是此操作码可以使用直接的数值代码定义或自我修改代码创建。</p>
 
-<p>INT <span style="font-style: italic;"><I>n</I></span> ָ����� INTO �� INT 3 ָ��Ĳ�����ʹ�� CALL ָ����е�Զ�������ơ���Ҫ�������ڣ�ʹ�� INT <span style="font-style: italic;"><I>n</I></span> ָ��ʱ���Ὣ EFLAGS �Ĵ���ѹ���ջ�����ڷ��ص�ַ��ǰ�档�����ص�ַ�� CS �� EIP �Ĵ����ĵ�ǰֵ��ɵ�Զ��ַ�������жϹ��̵ķ���ʹ�� IRET ָ��������Ӷ�ջ���� EFLAGS ��Ϣ�뷵�ص�ַ��</p>
+<p>INT <span style="font-style: italic;"><I>n</I></span> 指令（包括 INTO 与 INT 3 指令）的操作与使用 CALL 指令进行的远调用类似。主要差异在于，使用 INT <span style="font-style: italic;"><I>n</I></span> 指令时，会将 EFLAGS 寄存器压入堆栈，放在返回地址的前面。（返回地址是 CS 与 EIP 寄存器的当前值组成的远地址）。从中断过程的返回使用 IRET 指令处理，它从堆栈弹出 EFLAGS 信息与返回地址。</p>
 
-<p>�ж�ʸ�����ָ���ж�����������IDT���е��ж���������Ҳ����˵�����ṩ�� IDT ����������ѡ���ж��������ְ���ָ���жϻ��쳣�������̵�ָ�롣�ڱ���ģʽ�У�IDT ����һ�����е� 8 �ֽ���������ÿ������һ���ж��š������Ż������š���ʵ��ַģʽ�У�IDT ��һ�����е� 4 �ֽ�Զָ�루2 �ֽڴ����ѡ������ 2 �ֽ�ָ��ָ�룩��ÿ����ֱ��ָ����ѡ���еĹ��̡�����ע�⣬��ʵ��ַģʽ�У�IDT ��Ϊ<span style="font-weight: bold;"><B>�ж�ʸ������</B></span>������ָ���Ϊ�ж�ʸ������</p>
+<p>中断矢量编号指定中断描述符表格（IDT）中的中断描述符；也就是说，它提供对 IDT 的索引。所选的中断描述符又包含指向中断或异常处理过程的指针。在保护模式中，IDT 包含一个阵列的 8 字节描述符，每个都是一个中断门、陷阱门或任务门。在实地址模式中，IDT 是一个阵列的 4 字节远指针（2 字节代码段选择器与 2 字节指令指针），每个都直接指向所选段中的过程。（请注意，在实地址模式中，IDT 称为<span style="font-weight: bold;"><B>中断矢量表格</B></span>，它的指针称为中断矢量）。</p>
 
-<p>���¾��߱�ָʾ�ڱ�����ϰ벿�ָ����������£�ִ�б����°벿���е�������������߱��°벿���е�ÿ�� Y ������ָ�#GP ���⣩��&ldquo;����&rdquo;���ֶ���Ĺ��̡�</p>
+<p>以下决策表指示在表格的上半部分给定的条件下，执行表格下半部分中的哪项操作。决策表下半部分中的每个 Y 代表此指令（#GP 除外）的&ldquo;操作&rdquo;部分定义的过程。</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -286,7 +286,7 @@ else
 <td valign="middle" class="whs2">
 <p CLASS=TableCell>DPL/CPL</p>
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��ϵ</td>
+	style="margin-bottom: 0;">关系</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">-</td>
@@ -304,11 +304,11 @@ else
 <td valign="middle" class="whs2">
 <p CLASS=TableCell>DPL=</p>
 <p CLASS=TableCell
-	style="margin-bottom: 0;">CPL �� C</td>
+	style="margin-bottom: 0;">CPL 或 C</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell>DPL&lt;</p>
 <p CLASS=TableCell
-	style="margin-bottom: 0;">CPL �� NC</td>
+	style="margin-bottom: 0;">CPL 与 NC</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">-</td>
@@ -319,7 +319,7 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�ж�����</td>
+	style="margin-bottom: 0;">中断类型</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">-</td>
@@ -348,7 +348,7 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">������</td>
+	style="margin-bottom: 0;">门类型</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">-</td>
@@ -357,27 +357,27 @@ else
 	style="margin-bottom: 0;">-</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">����</td>
+	style="margin-bottom: 0;">任务</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">������ж�</td>
+	style="margin-bottom: 0;">陷阱或中断</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">������ж�</td>
+	style="margin-bottom: 0;">陷阱或中断</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">������ж�</td>
+	style="margin-bottom: 0;">陷阱或中断</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">������ж�</td>
+	style="margin-bottom: 0;">陷阱或中断</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">������ж�</td></tr>
+	style="margin-bottom: 0;">陷阱或中断</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">ʵ��ַģʽ</td>
+	style="margin-bottom: 0;">实地址模式</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">Y</td>
@@ -406,7 +406,7 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">����ģʽ</td>
+	style="margin-bottom: 0;">保护模式</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">&nbsp;</td>
@@ -435,7 +435,7 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">������ж���</td>
+	style="margin-bottom: 0;">陷阱或中断门</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">&nbsp;</td>
@@ -464,7 +464,7 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��Ȩ������ж�</td>
+	style="margin-bottom: 0;">特权级别间中断</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">&nbsp;</td>
@@ -493,7 +493,7 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">��Ȩ�������ж�</td>
+	style="margin-bottom: 0;">特权级别内中断</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">&nbsp;</td>
@@ -522,7 +522,7 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� 8086 ģʽ�ж�</td>
+	style="margin-bottom: 0;">虚 8086 模式中断</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">&nbsp;</td>
@@ -551,7 +551,7 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">������</td>
+	style="margin-bottom: 0;">任务门</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="margin-bottom: 0;">&nbsp;</td>
@@ -607,16 +607,16 @@ else
 	style="margin-bottom: 0;">&nbsp;</td></tr>
 </table>
 
-<p>��ע��- ��ʾ�����壻Y ��ʾִ�в������հױ�ʾ��ִ�в�����</p>
+<p>备注：- 表示无意义；Y 表示执行操作；空白表示不执行操作。</p>
 
-<p>���������� 8086 ģʽ��ִ��ʱ��IOPL ȷ�� INT <span style="font-style: italic;"><I>n</I></span> ָ��Ĳ�������� IOPL С�� 3��������������һ�㱣�����쳣 (#GP)����� IOPL �� 3��������ִ����Ȩ���� 0 �ı���ģʽ�жϡ�Ҫִ����Ȩ���� 0 �ı���ģʽ�жϣ��ж��ŵ� DPL ��������Ϊ�������жϴ������̵�Ŀ�� CPL ������ 0��</p>
+<p>处理器在虚 8086 模式中执行时，IOPL 确定 INT <span style="font-style: italic;"><I>n</I></span> 指令的操作。如果 IOPL 小于 3，则处理器会生成一般保护性异常 (#GP)；如果 IOPL 是 3，则处理器执行特权级别 0 的保护模式中断。要执行特权级别 0 的保护模式中断，中断门的 DPL 必须设置为三，且中断处理过程的目标 CPL 必须是 0。</p>
 
-<p>�ж�����������Ĵ��� (IDTR) ָ�� IDT �����Ի�ַ�����ơ��������ӵ��λ֮��IDTR �ĳ�ʼ��ֵַ�� 0��</p>
+<p>中断描述符表格寄存器 (IDTR) 指定 IDT 的线性基址与限制。处理器加电或复位之后，IDTR 的初始基址值是 0。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
-<p>���²���˵������������ INT <span 
- style="font-style: italic;"><I>n</I></span> �� INTO ָ�Ҳ�������ⲿ�ж����쳣��</p>
+<p>以下操作说明不仅适用于 INT <span 
+ style="font-style: italic;"><I>n</I></span> 与 INTO 指令，也适用于外部中断与异常。</p>
 
 <p class=Preformatted>IF PE=0<br> THEN <br> GOTO REAL-ADDRESS-MODE;<br> ELSE (* PE=1 *)<br> IF (VM=1 AND IOPL &lt; 3 AND INT <span style="font-style: italic;"><I>n</I></span>) <br> THEN <br> #GP(0);<br> ELSE (* protected mode or virtual-8086 mode interrupt *)<br> GOTO PROTECTED-MODE;<br> FI;<br> FI;<br> <br> REAL-ADDRESS-MODE:<br> IF ((DEST * 4) + 3) is not within IDT limit THEN #GP; FI;<br> IF stack not large enough for a 6-byte return information THEN #SS; FI;<br> Push (EFLAGS[15:0]);<br> IF <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -912,49 +912,49 @@ else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'>");}
 //--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> 0;<br> FI;<br> END;</p>
 
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
-<p>EFLAGS �Ĵ���ѹ���ջ������ִ�� INT ָ��ʱ�������Ĳ���ģʽ�����ܻ���� IF��TF��NT��AC��RF �� VM ��־�������&ldquo;����&rdquo;���֣�������ж�ʹ�������ţ�����ܻ����û�����κα�־��������������� TSS �е� EFLAGS ӳ����ơ�</p>
+<p>EFLAGS 寄存器压入堆栈。根据执行 INT 指令时处理器的操作模式，可能会清除 IF、TF、NT、AC、RF 及 VM 标志（请参阅&ldquo;操作&rdquo;部分）。如果中断使用任务门，则可能会设置或清除任何标志，具体由新任务的 TSS 中的 EFLAGS 映像控制。</p>
 
-<h2>����ģʽ�쳣</h2>
+<h2>保护模式异常</h2>
 
-<p>#GP(0) - ��� IDT���ж��š������Ż��������е��ж�ָ�볬����������ơ�</p>
+<p>#GP(0) - 如果 IDT、中断门、陷阱门或任务门中的中断指针超出代码段限制。</p>
 
-<p>#GP(ѡ����) - ����ж��š������Ż��������еĶ�ѡ����Ϊ�ա�����ж��š������š������š�����λ� TSS ��ѡ�������������������������ơ�����ж�ʸ����ų��� IDT ���ơ���� IDT �����������ж�������������������������������������ж��� INT <span style="font-style: italic;"><I>n</I></span>��INT 3 �� INTO ָ�����ɣ����ж��������������������������������� DPL С�� CPL������ж��Ż��������еĶ�ѡ������ָ�����εĶ������������ TSS �Ķ�ѡ�������Լ��ľֲ�/ȫ��λ����Ϊ�ֲ������ TSS ��������ָ�� TSS æ�򲻿��á�</p>
+<p>#GP(选择器) - 如果中断门、陷阱门或任务门中的段选择器为空。如果中断门、陷阱门、任务门、代码段或 TSS 段选择器索引超出描述符表格限制。如果中断矢量编号超出 IDT 限制。如果 IDT 描述符不是中断描述符、陷阱描述符或任务描述符。如果中断由 INT <span style="font-style: italic;"><I>n</I></span>、INT 3 或 INTO 指令生成，且中断描述符、陷阱描述符或任务描述符的 DPL 小于 CPL。如果中断门或陷阱门中的段选择器不指向代码段的段描述符。如果 TSS 的段选择器将自己的局部/全局位设置为局部。如果 TSS 段描述符指出 TSS 忙或不可用。</p>
 
-<p>#SS(0) - ��������ص�ַ����־��������ѹ���ջʱ������ջ�α߽磬����δ������ջ�л���</p>
+<p>#SS(0) - 如果将返回地址、标志或错误代码压入堆栈时超出堆栈段边界，并且未发生堆栈切换。</p>
 
-<p>#SS(ѡ����) - ������� SS �Ĵ�����ָ��Ķα��Ϊ�����ڡ����������ջ�л�ʱ��ѹ��ķ��ص�ַ����־�����������ջ��ָ�볬���¶�ջ�εı߽硣</p>
+<p>#SS(选择器) - 如果加载 SS 寄存器且指向的段标记为不存在。如果发生堆栈切换时，压入的返回地址、标志、错误代码或堆栈段指针超出新堆栈段的边界。</p>
 
-<p>#NP(ѡ����) - �������Ρ��ж��š������š������Ż� TSS �����ڡ�</p>
+<p>#NP(选择器) - 如果代码段、中断门、陷阱门、任务门或 TSS 不存在。</p>
 
-<p>#TS(ѡ����) - ��� TSS �ж�ջ��ѡ������ RPL �������ж��Ż������ŷ��ʵĴ���ε� DPL����� TSS �ж�ջ��ѡ����ָ��Ķ�ջ���������� DPL �������ж��Ż������ŵĴ������������ DPL����� TSS �еĶ�ջ��ѡ����Ϊ�ա���� TSS �Ķ�ջ�β��ǿ�д�����ݶΡ������ջ�εĶ�ѡ�������������������������ơ�</p>
+<p>#TS(选择器) - 如果 TSS 中堆栈段选择器的 RPL 不等于中断门或陷阱门访问的代码段的 DPL。如果 TSS 中堆栈段选择器指向的堆栈段描述符的 DPL 不等于中断门或陷阱门的代码段描述符的 DPL。如果 TSS 中的堆栈段选择器为空。如果 TSS 的堆栈段不是可写的数据段。如果堆栈段的段选择器索引超出描述符表格限制。</p>
 
-<p>#PF(�������) - �������ҳ����</p>
+<p>#PF(错误代码) - 如果发生页错误。</p>
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>实地址模式异常</h2>
 
-<p>#GP - ����ڴ��������Ч��ַ���� CS��DS��ES��FS �� GS �����ơ�����ж�ʸ����ų��� IDT ���ơ�</p>
+<p>#GP - 如果内存操作数有效地址超出 CS、DS、ES、FS 或 GS 段限制。如果中断矢量编号超出 IDT 限制。</p>
 
-<p>#SS - ���ѹ��ʱ������ջ���Ƴ�ͻ�����ѹ��ķ��ص�ַ����־�������볬����ջ�εı߽硣</p>
+<p>#SS - 如果压入时发生堆栈限制冲突。如果压入的返回地址、标志或错误代码超出堆栈段的边界。</p>
 
-<h2>�� 8086 ģʽ�쳣</h2>
+<h2>虚 8086 模式异常</h2>
 
-<p>#GP(0)������ INT <span style="font-style: italic;"><I>n��</I></span>INTO �� BOUND ָ�- ��� IOPL С�� 3 ���жϡ����塢�������������� DPL ������ 3����� IDT ���жϡ����塢�������е�ָ��ָ�볬������ν��ޡ�</p>
+<p>#GP(0)（用于 INT <span style="font-style: italic;"><I>n、</I></span>INTO 或 BOUND 指令）- 如果 IOPL 小于 3 或中断、陷阱、任务门描述符的 DPL 不等于 3。如果 IDT 或中断、陷阱、任务门中的指令指针超出代码段界限。</p>
 
-<p>#GP(ѡ����) - ����ж��š������Ż��������еĶ�ѡ����Ϊ�ա�����ж��š������š������š�����λ� TSS ��ѡ�������������������������ơ�����ж�ʸ����ų��� IDT ���ơ���� IDT �����������ж�������������������������������������ж��� INT <span style="font-style: italic;"><I>n</I></span> ָ�����ɣ����ж��������������������������������� DPL С�� CPL������ж��Ż��������еĶ�ѡ������ָ�����εĶ������������ TSS �Ķ�ѡ�������Լ��ľֲ�/ȫ��λ����Ϊ�ֲ���</p>
+<p>#GP(选择器) - 如果中断门、陷阱门或任务门中的段选择器为空。如果中断门、陷阱门、任务门、代码段或 TSS 段选择器索引超出描述符表格限制。如果中断矢量编号超出 IDT 限制。如果 IDT 描述符不是中断描述符、陷阱描述符或任务描述符。如果中断由 INT <span style="font-style: italic;"><I>n</I></span> 指令生成，且中断描述符、陷阱描述符或任务描述符的 DPL 小于 CPL。如果中断门或陷阱门中的段选择器不指向代码段的段描述符。如果 TSS 的段选择器将自己的局部/全局位设置为局部。</p>
 
-<p>#SS(ѡ����) - ������� SS �Ĵ�����ָ��Ķα��Ϊ�����ڡ����ѹ��ķ��ص�ַ����־��������롢��ջ��ָ������ݶγ�����ջ�εı߽硣</p>
+<p>#SS(选择器) - 如果加载 SS 寄存器且指向的段标记为不存在。如果压入的返回地址、标志、错误代码、堆栈段指针或数据段超出堆栈段的边界。</p>
 
-<p>#NP(ѡ����) - �������Ρ��ж��š������š������Ż� TSS �����ڡ�</p>
+<p>#NP(选择器) - 如果代码段、中断门、陷阱门、任务门或 TSS 不存在。</p>
 
-<p>#TS(ѡ����) - ��� TSS �ж�ջ��ѡ������ RPL �������ж��Ż������ŷ��ʵĴ���ε� DPL����� TSS �Ķ�ջ�εĶ�ջ���������� DPL �������ж��Ż������ŵĴ������������ DPL����� TSS �еĶ�ջ��ѡ����Ϊ�ա���� TSS �Ķ�ջ�β��ǿ�д�����ݶΡ������ջ�εĶ�ѡ�������������������������ơ�</p>
+<p>#TS(选择器) - 如果 TSS 中堆栈段选择器的 RPL 不等于中断门或陷阱门访问的代码段的 DPL。如果 TSS 的堆栈段的堆栈段描述符的 DPL 不等于中断门或陷阱门的代码段描述符的 DPL。如果 TSS 中的堆栈段选择器为空。如果 TSS 的堆栈段不是可写的数据段。如果堆栈段的段选择器索引超出描述符表格限制。</p>
 
-<p>#PF(�������) - �������ҳ����</p>
+<p>#PF(错误代码) - 如果发生页错误。</p>
 
-<p>#BP - ���ִ�� INT 3 ָ�</p>
+<p>#BP - 如果执行 INT 3 指令。</p>
 
-<p class="whs5">#OF - ���ִ�� INTO ָ��� OF ��־����Ϊ 1�� </p>
+<p class="whs5">#OF - 如果执行 INTO 指令，且 OF 标志设置为 1。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

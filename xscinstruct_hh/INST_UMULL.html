@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_UMULL.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:43 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>UMULL - �޷��ų��˷�</title>
+<title>UMULL - 无符号长乘法</title>
 
 <!--(Meta)==========================================================-->
 
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nU - ָ��\nUMULL");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nU - 指令\nUMULL");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,16 +105,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">UMULL - �޷��ų��˷�	</h1>
+<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">UMULL - 无符号长乘法	</h1>
 
 <div>
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p class=Preformatted><span class=Code>UMULL[condition][S] dest_lo, dest_hi, op1, op2</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -127,7 +127,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 个条件之一。请参阅<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">条件代码状态</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -136,7 +136,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�������������־��λ [20]��</td></tr>
+<p CLASS=CellBodyLeft>更新条件代码标志（位 [20]）</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -146,7 +146,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�� 32 λ��Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>低 32 位的目标寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -156,7 +156,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�� 32 λ��Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>高 32 位的目标寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -166,7 +166,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>������һ���������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含第一个操作数的寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -175,20 +175,20 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�����ڶ����������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含第二个操作数的寄存器</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-UMULL ָ�����޷��Ų����� <em   CLASS=SourceItalic>op1</em> �� <em CLASS=SourceItalic>op2</em> ��ִ�г˷����˷��� 64 λ���д�� <em CLASS=SourceItalic>dest_lo</em> �� <em CLASS=SourceItalic>dest_hi</em>��condition ��������Чֵ������ָ��� NOP�� 
+UMULL 指令在无符号操作数 <em   CLASS=SourceItalic>op1</em> 与 <em CLASS=SourceItalic>op2</em> 上执行乘法。乘法的 64 位结果写入 <em CLASS=SourceItalic>dest_lo</em> 与 <em CLASS=SourceItalic>dest_hi</em>。condition 必须是有效值；否则将指令当作 NOP。 
 
-<h2>Ѱַģʽ</h2>
+<h2>寻址模式</h2>
 
-�޲�����
+无操作数
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -256,7 +256,7 @@ UMULL ָ�����޷��Ų����� <em   CLASS=SourceItalic>op1</em> �� <em CLASS=SourceIt
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� </h2>
+<h2>编码 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -399,7 +399,7 @@ UMULL ָ�����޷��Ų����� <em   CLASS=SourceItalic>op1</em> �� <em CLASS=SourceIt
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funumull<br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0 <br> 4 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example,CODE,READONLY <br> 6 <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1 <br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; The 32-bit unsigned integers held in R2 &amp; R3<br> 9 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; are multiplied to give a 64-bit result<br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; stored into R1 (high part) &amp; R0 (low part)<br> 11 &#xA0;&#xA0;00000000 &#xA0;&#xA0;&#xA0;F3B45678 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;&#xA0;R0, #Ox0<br> 12 &#xA0;&#xA0;00000004 &#xA0;&#xA0;&#xA0;E1A01000 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;&#xA0;R1, R0 <br> 13 &#xA0;&#xA0;00000008 &#xA0;&#xA0;&#xA0;F3B47678 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;&#xA0;R2, #OxA<br> 14 &#xA0;&#xA0;00000012 &#xA0;&#xA0;&#xA0;F2767678 &#xA0;&#xA0;SUB &#xA0;&#xA0;&#xA0;&#xA0;R3, R2, #OxE<br> 15 &#xA0;&#xA0;00000016 &#xA0;&#xA0;&#xA0;E0810392 &#xA0;&#xA0;UMULL &#xA0;&#xA0;R0, R1, R2, R3</span> </p>
 </div>

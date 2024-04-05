@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400166.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:48 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>cmpxchg 操作</title>
+<title>cmpxchg 鎿嶄綔</title>
 
 <!--(Meta)==========================================================-->
 
@@ -101,7 +101,7 @@ else
 		document.location.reload();
 //-->
 </script>
-cmpxchg 操作 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a> 
+cmpxchg 鎿嶄綔 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">瀛椾綋鎯緥</a> 
 
 <br>if (PR[<i>qp</i>]) { <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400444.htm" onMouseOver="if (parseInt(navigator.appVersion) >= 4) BSPSPopupOnMouseOver(event)" class="BSSCPopup" id="A2"><br> check_target_register</a>; <br> <br> if (GR[<i>r3</i>].nat || GR[<i>r2</i>].nat) <br> register_nat_consumption_fault(SEMAPHORE); <br> <br> paddr = <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400547.htm" onMouseOver="if (parseInt(navigator.appVersion) >= 4) BSPSPopupOnMouseOver(event)" class="BSSCPopup" id="A4">tlb_translate</a>(GR[<i>r3</i>], <i>sz</i>, SEMAPHORE, PSR.cpl, &amp;mattr, &amp;tmp_unused); <br> <br> if (!ma_supports_semaphores(mattr)) <br> unsupported_data_reference_fault(GR[<i>r3</i>]); <br> <br> if (<i>sem</i> == &lsquo;acq') { <br> val = <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400513.htm" onMouseOver="if (parseInt(navigator.appVersion) >= 4) BSPSPopupOnMouseOver(event)" class="BSSCPopup" id="A5">mem_xchg_cond</a>(AR[CCV], GR[<i>r2</i>], paddr, <i>sz</i>, UM.be, mattr, ACQUIRE, <i><br> ldhint</i>); <br> } else { // &lsquo;rel' <br> val = mem_xchg_cond(AR[CCV], GR[<i>r2</i>], paddr, <i>sz</i>, UM.be, mattr, RELEASE, <i><br> ldhint</i>); <br> } <br> val = zero_ext(val, <i>sz</i> * 8); <br> <br> if (AR[CCV] == val) <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400439.htm" onMouseOver="if (parseInt(navigator.appVersion) >= 4) BSPSPopupOnMouseOver(event)" class="BSSCPopup" id="A8"><br> alat_inval_multiple_entries</a>(paddr, <i>sz</i>); <br> <br> GR[<i>r</i>1] = val; <br> GR[<i>r</i>1].nat = 0; <br> } <script><!--
 BSSCCreatePopupDiv();

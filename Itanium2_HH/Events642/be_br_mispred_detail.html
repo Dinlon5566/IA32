@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\n��֧�¼�\nBE_BR_MISPRED_DETAIL");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 安腾(R) 2 处理器\n英特尔(R) 安腾(R) 2 处理器事件\n分支事件\nBE_BR_MISPRED_DETAIL");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,13 +106,13 @@ else
 </script>
 <h1>BE_BR_MISPRED_DETAIL</h1>
 
-<b style="font-weight: bold;">���⣺</b>BE ��֧Ԥ��ʧ��ϸ��<b style="font-weight: bold;"><br> ���</b>��֧�¼�<b style="font-weight: bold;"><br> IAR/DAR/OPC��</b>Y/N/Y<b style="font-weight: bold;"><br> �¼����룺</b>0x61<b style="font-weight: bold;"><br> ���ÿ����������</b>1 
+<b style="font-weight: bold;">标题：</b>BE 分支预测失误细节<b style="font-weight: bold;"><br> 类别：</b>分支事件<b style="font-weight: bold;"><br> IAR/DAR/OPC：</b>Y/N/Y<b style="font-weight: bold;"><br> 事件代码：</b>0x61<b style="font-weight: bold;"><br> 最大每周期增量：</b>1 
 
-<p><b style="font-weight: bold;">���壺</b>����Ԥ�������� stg��rot �� pfs �ĺ��Ԥ��ʧ��ͳ��ʧЧ�ķ�֧������ЩԤ����ݷ�֧�������Ƿ�֧��</p>
+<p><b style="font-weight: bold;">定义：</b>基于预测结果或是 stg、rot 或 pfs 的后端预测失误，统计失效的分支数。这些预测根据分支束而不是分支。</p>
 
-<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> ��ע</h3>
+<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> 备注</h3>
 
-����·��Ԥ��ʧ��һ���ᵼ�� stg/rot/pfs Ԥ��ʧ����˽���û��·��Ԥ��ʧ��ͬ��֧����ʱ���Ż�ͳ����Щ�¼��� 
+由于路径预测失误一定会导致 stg/rot/pfs 预测失误，因此仅当没有路径预测失误同分支关联时，才会统计这些事件。 
  
 
 <!--(Table)=========================================================-->
@@ -120,11 +120,11 @@ else
 
 <tr>
 <td>
-<h3 CLASS=TableHead>��չ</td>
+<h3 CLASS=TableHead>扩展</td>
 <td>
 <h3 CLASS=TableHead>PMC.umask</td>
 <td>
-<h3 CLASS=TableHead>˵��</td></tr>
+<h3 CLASS=TableHead>说明</td></tr>
 
 <tr>
 <td>
@@ -132,7 +132,7 @@ else
 <td>
 <p>bxx00</td>
 <td>
-<p>�κκ�� (be) Ԥ��ʧ��</td></tr>
+<p>任何后端 (be) 预测失误</td></tr>
 
 <tr>
 <td>
@@ -140,7 +140,7 @@ else
 <td>
 <p>bxx01</td>
 <td>
-<p>���޺�˽׶�Ԥ��ʧ��</td></tr>
+<p>仅限后端阶段预测失误</td></tr>
 
 <tr>
 <td>
@@ -148,7 +148,7 @@ else
 <td>
 <p>bxx10</td>
 <td>
-<p>���޺��ѭ��Ԥ��ʧ��</td></tr>
+<p>仅限后端循环预测失误</td></tr>
 
 <tr>
 <td>
@@ -156,7 +156,7 @@ else
 <td>
 <p>bxx11</td>
 <td>
-<p>����ִ�з�֧�ĺ�� pfs Ԥ��ʧ��</td></tr>
+<p>仅限执行分支的后端 pfs 预测失误</td></tr>
 </table>
 
 <script type="text/javascript" language="javascript1.2">

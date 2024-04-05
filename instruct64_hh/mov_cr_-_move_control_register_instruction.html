@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/mov_cr_-_move_control_register_instruction.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>mov cr - �ƶ����ƼĴ���ָ��</title>
+<title>mov cr - 移动控制寄存器指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -85,7 +85,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nM - ָ��\nmov cr - �ƶ����ƼĴ���ָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nM - 指令\nmov cr - 移动控制寄存器指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,13 +108,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">�ƶ����ƼĴ���ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">移动控制寄存器指令</h1>
 
 <p class="whs2">mov cr</p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a> </p>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a> </p>
 
-<p class="whs2">��ʽ</p>
+<p class="whs2">格式</p>
 
 <p class=Preformatted>(qp)movr 1 = cr 3 from_form M33</p>
 
@@ -125,22 +125,22 @@ else
 <hr class="whs3">
 
 
-<p><b style="font-weight: bold;">˵��</b></p>
+<p><b style="font-weight: bold;">说明</b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">Դ���������Ƶ�Ŀ��Ĵ�����</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">源操作数复制到目标寄存器。</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">���� from_form������ȡ </span><span style="font-weight: normal; font-style: italic;"><I>cr3</I></span> ָ���Ŀ��ƼĴ�����<span 
- style="font-weight: normal;">����ֵ���Ƶ� </span><span 
- style="font-weight: normal; font-style: italic;"><I>r1</I></span><span style="font-weight: normal;">��</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">对于 from_form，将读取 </span><span style="font-weight: normal; font-style: italic;"><I>cr3</I></span> 指定的控制寄存器，<span 
+ style="font-weight: normal;">并将值复制到 </span><span 
+ style="font-weight: normal; font-style: italic;"><I>r1</I></span><span style="font-weight: normal;">。</span></b></p>
 
-<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;">���� to_form������ȡ GR </span><span style="font-weight: normal; font-style: italic;"><I>r2</I></span><span 
- style="font-weight: normal;">������ֵ���Ƶ� CR</span></b><b><span style="font-weight: normal; font-style: italic;"><I>cr3</I></span></b><b 
- style="font-weight: normal;"><span style="font-weight: normal;">��</span></b></p>
+<p class="whs4"><b style="font-weight: bold;"><span style="font-weight: normal;">对于 to_form，将读取 GR </span><span style="font-weight: normal; font-style: italic;"><I>r2</I></span><span 
+ style="font-weight: normal;">，并将值复制到 CR</span></b><b><span style="font-weight: normal; font-style: italic;"><I>cr3</I></span></b><b 
+ style="font-weight: normal;"><span style="font-weight: normal;">。</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">���ƼĴ���ֻ���������Ȩ������ʡ�PSR.ic λ����һʱ����ȡ��д��</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">�жϿ��ƼĴ��� (CR16-CR25) ������&ldquo;�Ƿ�</span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;">����&rdquo;����</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">控制寄存器只能在最高特权级别访问。PSR.ic 位等于一时，读取或写入</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">中断控制寄存器 (CR16-CR25) 将导致&ldquo;非法</span></b><b style="font-weight: normal;"><span 
+ style="font-weight: normal;">操作&rdquo;错误。</span></b></p>
 
-<p class="whs2"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>����</B></span></b></p>
+<p class="whs2"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>操作</B></span></b></p>
 
 <p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">if (PR[qp]) {</span></b></p>
 
@@ -206,28 +206,28 @@ else
 
 <p class="whs4"><b style="font-weight: normal;">}</b></p>
 
-<p><b style="font-weight: bold;">�ж�</b></p>
+<p><b style="font-weight: bold;">中断</b></p>
 
 <ul type="disc" class="whs5">
 	
-	<li class=kadov-p><p><b style="font-weight: bold;"><span style="font-weight: normal;">&ldquo;�Ƿ�����&rdquo;���� </span></b></p></li>
+	<li class=kadov-p><p><b style="font-weight: bold;"><span style="font-weight: normal;">&ldquo;非法操作&rdquo;错误 </span></b></p></li>
 	
-	<li class=kadov-p><p><b style="font-weight: bold;"><span style="font-weight: normal;">&ldquo;�Ĵ��� NaT ʹ��&rdquo;����</span></b></p></li>
-	
-	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;"><span 
- style="font-weight: normal;">&ldquo;��Ȩ����&rdquo;���� </span></b></p></li>
+	<li class=kadov-p><p><b style="font-weight: bold;"><span style="font-weight: normal;">&ldquo;寄存器 NaT 使用&rdquo;错误</span></b></p></li>
 	
 	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;"><span 
- style="font-weight: normal;">&ldquo;�����ļĴ���/�ֶ�&rdquo;����</span></b></p></li>
+ style="font-weight: normal;">&ldquo;特权操作&rdquo;错误 </span></b></p></li>
+	
+	<li class=kadov-p><p class="whs4"><b style="font-weight: normal;"><span 
+ style="font-weight: normal;">&ldquo;保留的寄存器/字段&rdquo;错误</span></b></p></li>
 </ul>
 
 <p class="whs4">&nbsp;</p>
 
-<p><b style="font-weight: bold;"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>���л�</B></span></b></b></p>
+<p><b style="font-weight: bold;"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>序列化</B></span></b></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">���ƼĴ����Ķ�����ӳ��ǰ������ָ�������жϵĽ����</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">控制寄存器的读数反映以前的所有指令组与中断的结果。</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">һ������£��Կ��ƼĴ�����д�벻����Ӱ������ָ������ָ��ʹ���޸Ĺ�����Դ֮ǰ���������뷢�����л����������ƼĴ���д�벻��ʽ������Ӧ�Ŀ��ƼĴ�����ȡͬ����</b><b   style="font-weight: normal;">�����Ҫ�����������л���</b></span></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">一般情况下，对控制寄存器的写入不立即影响随后的指令。在相关指令使用修改过的资源之前，软件必须发出序列化操作。控制寄存器写入不隐式地与相应的控制寄存器读取同步，</b><b   style="font-weight: normal;">因此需要进行数据序列化。</b></span></p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

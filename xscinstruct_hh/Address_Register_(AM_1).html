@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Register_(AM_1).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:47:08 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>�Ĵ��� (AM 1)</title>
+<title>寄存器 (AM 1)</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nѰַģʽ\n���ݴ���������\n�Ĵ��� (AM 1)");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n寻址模式\n数据处理操作数\n寄存器 (AM 1)");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,14 +104,14 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������"><a NAME=80793></a>�Ĵ��� (AM 1)</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题"><a NAME=80793></a>寄存器 (AM 1)</h1>
 
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p class=Preformatted><span class=Code>op2</span> </p>
 
-<p CLASS=Body>���У� </p>
+<p CLASS=Body>其中： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -123,16 +123,16 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ������ָ�������ֵ�ļĴ�����</td></tr>
+<p CLASS=CellBodyLeft>指定包含指令操作数值的寄存器。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-���ݴ���������&ldquo;�Ĵ���&rdquo;ִ�����²�����α����˵������
+数据处理操作数&ldquo;寄存器&rdquo;执行以下操作（伪代码说明）：
 
 <p CLASS=Preformatted-Code>addr_mode = op2<br> shifter_carry_out = C flag</p>
 
-<p CLASS=Body>���ݴ��������� <em CLASS=SourceItalic>op2</em> ֱ���ṩ�Ĵ�����ֵ����λ���Ľ�λ�� C ��־��</p>
+<p CLASS=Body>数据处理操作数 <em CLASS=SourceItalic>op2</em> 直接提供寄存器的值。移位器的进位是 C 标志。</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -153,7 +153,7 @@ else
 <col class="whs2">
 <col class="whs2">
 
-<h2>���� </h2>
+<h2>编码 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -410,21 +410,21 @@ else
 </tr>
 </table>
 
-<h3 class=NoteTipHead><img src="Note.gif">&nbsp;��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif">&nbsp;备注</h3>
 
-��ָ�����ɰ��������߼����ƣ���λ��Ϊ�� (<em CLASS=Source> sh_imm == 0</em> )�� 
+此指令编码成按立即数逻辑左移，移位量为零 (<em CLASS=Source> sh_imm == 0</em> )。 
 
-<br>��� <em CLASS=Source>R15</em> ָ��Ϊ�Ĵ��� <em CLASS=SourceItalic>op2</em> �� <em CLASS=SourceItalic>op1</em>����ʹ�õ�ֵ�ǵ�ǰָ��ĵ�ַ�� 8��
+<br>如果 <em CLASS=Source>R15</em> 指定为寄存器 <em CLASS=SourceItalic>op2</em> 或 <em CLASS=SourceItalic>op1</em>，则使用的值是当前指令的地址加 8。
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p CLASS=Preformatted><span class=Code>ADC &#xA0;&#xA0;&#xA0;R1, R12, R7</span></p>
 
-<h2>������Ϣ</h2>
+<h2>更多信息</h2>
 
-<a href="Address_Data_Processing_Operands_Overview_1.html">�����Ѱַģʽ 1�����ݴ���������</a><a href="Inst_Overview_of_Instructions.html" CLASS="XRef" style="font-weight: normal;"><br> ����Ļ����ָ��</a> 
+<a href="Address_Data_Processing_Operands_Overview_1.html">请参阅寻址模式 1：数据处理操作数</a><a href="Inst_Overview_of_Instructions.html" CLASS="XRef" style="font-weight: normal;"><br> 请参阅汇编器指令</a> 
 </div>
 
 <script type="text/javascript" language="javascript1.2">

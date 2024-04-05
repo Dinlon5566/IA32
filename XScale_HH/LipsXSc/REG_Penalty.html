@@ -9,11 +9,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/XScale_HH/LipsXSc/REG_Penalty.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:33 GMT -->
 <head>
 
-<title>�Ĵ�����سͷ�</title>
+<title>寄存器相关惩罚</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="04 16, 2003 6:44:33 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -110,7 +110,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض� XScale(R) ΢��ϵ�ṹ \nӢ�ض� XScale(R) ΢��ϵ�ṹ�ͷ�\n�Ĵ�����سͷ�");
+	addTocInfo("参考\n处理器事件与建议\n英特尔 XScale(R) 微体系结构 \n英特尔 XScale(R) 微体系结构惩罚\n寄存器相关惩罚");
 
 	}
 	if (window.writeBtnStyle)
@@ -133,27 +133,27 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="XS_logo.gif" alt="Ӣ�ض� XScale(R) ��������" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">�Ĵ�����سͷ�/����</h1>
+<h1><img src="XS_logo.gif" alt="英特尔 XScale(R) 技术主题" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">寄存器相关惩罚/警告</h1>
 
 <h2>XSC_REG_DEP</h2>
 
-<h3>����</h3>
+<h3>解释</h3>
 
-<p>ָ��Ĵ��� <span class=Code>REG</span> ����������֮һ��������ǰһ��ָ����δ���ֵ�Ĵ洢����˼Ĵ���ֵ�����á���ᵼ�¹ܵ���ͣ�Եȴ�������Ӷ�����ָ��Ѷ����һЩ����ȥִ�С�</p>
+<p>指令将寄存器 <span class=Code>REG</span> 用作操作数之一，但由于前一条指令尚未完成值的存储，因此寄存器值不可用。这会导致管道暂停以等待结果，从而导致指令花费额外的一些周期去执行。</p>
 
-<h3 class="whs2"><img id="_x0000_i1025" src="tip.gif" width="17px" height="18px" border="0" class="img_whs3"> ����</h3>
+<h3 class="whs2"><img id="_x0000_i1025" src="tip.gif" width="17px" height="18px" border="0" class="img_whs3"> 建议</h3>
 
-<p class="whs4">������ܣ������ǰ��ָ���˳�����ʹ�üĴ��� <b><i>REG</i></b> ��ָ��ִ��֮ǰ������ӳ����ڡ� </p>
+<p class="whs4">如果可能，请调整前面指令的顺序，以填补使用寄存器 <b><i>REG</i></b> 的指令执行之前额外的延迟周期。 </p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><b style="font-weight: bold;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs5"> ��ע</b></h3>
+	style="margin-left: 40px;"><b style="font-weight: bold;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs5"> 备注</b></h3>
 
-<p class="whs4"><span class=Code>XSC_REG_<b><i style="font-style: italic; font-weight: normal;">REG</i></b></span> �е� <span class=Code
-									style="font-style: italic;"><I>REG</I></span> ������ <span class=Code>R0, R1, ..., R15</span>��</p>
+<p class="whs4"><span class=Code>XSC_REG_<b><i style="font-style: italic; font-weight: normal;">REG</i></b></span> 中的 <span class=Code
+									style="font-style: italic;"><I>REG</I></span> 可以是 <span class=Code>R0, R1, ..., R15</span>。</p>
 
-<h3>ʾ��</h3>
+<h3>示例</h3>
 
-<p class="whs6">��������ʾ�����룬���� <b><span style="font-weight: normal;">XSC_REG_R8 </b> �� <b style="font-weight: normal;">XSC_MULTIPLY_RES</b> <b style="font-weight: normal;">��� SUB</b> ָ�</span></p>
+<p class="whs6">对于以下示例代码，给出 <b><span style="font-weight: normal;">XSC_REG_R8 </b> 与 <b style="font-weight: normal;">XSC_MULTIPLY_RES</b> <b style="font-weight: normal;">替代 SUB</b> 指令。</span></p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" bgcolor="#FFFFFF" width="100%" class="whs7">
@@ -162,9 +162,9 @@ else
 
 <tr valign="top" class="whs10">
 <td bgcolor="#FFFFFF" width="38.873%" class="whs11">
-<h3 class=TableHead><b style="font-weight: bold;">������</b></td>
+<h3 class=TableHead><b style="font-weight: bold;">汇编代码</b></td>
 <td bgcolor="#FFFFFF" width="61.127%" class="whs12">
-<h3 class=TableHead><b style="font-weight: bold;">�ͷ��뾯��</b></td></tr>
+<h3 class=TableHead><b style="font-weight: bold;">惩罚与警告</b></td></tr>
 
 <tr valign="top" class="whs10">
 <td bgcolor="#FFFFFF" width="38.873%" class="whs13">
@@ -188,7 +188,7 @@ else
 
 <h3>&nbsp;</h3>
 
-<h3><b style="font-weight: bold;">����ʾ��</b></h3>
+<h3><b style="font-weight: bold;">情形示例</b></h3>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="100%" class="whs19">
@@ -200,9 +200,9 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) 
 
 <tr valign="top" class="whs10">
 <td width="43.769%" class="whs22">
-<h3 class=TableHead><b style="font-weight: bold;">������</b></td>
+<h3 class=TableHead><b style="font-weight: bold;">汇编代码</b></td>
 <td width="56.231%" class="whs23">
-<h3 class=TableHead><b style="font-weight: bold;">�ͷ��뾯��</b></td></tr>
+<h3 class=TableHead><b style="font-weight: bold;">惩罚与警告</b></td></tr>
 
 <tr valign="top" class="whs10">
 <td width="43.769%" class="whs24">

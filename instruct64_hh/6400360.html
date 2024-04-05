@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400360.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
 
-<title>srlz - ���л�ָ��</title>
+<title>srlz - 序列化指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:56:39 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -94,7 +94,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nS - ָ��\nsrlz - ���л�ָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nS - 指令\nsrlz - 序列化指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -128,16 +128,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">���л�ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">序列化指令</h1>
 
 <p><span style="font-weight: bold;"><B>srlz</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400361.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400361.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a>
  </p>
 
-<p>ָ������ M</p>
+<p>指令类型 M</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) srlz.i instruction_form</p>
 
@@ -148,66 +148,66 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>说明</B></span></p>
 
-<p>ָ�����л� (srlz.i) ȷ����</p>
-
-<ul>
-	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>��ǰ�Դ������Ĵ�����Դ���޸����Ӱ�����ָ����Ļ�ȡ����ᱻ�۲쵽��</p></li>
-	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>��ǰ�Դ������Ĵ�����Դ���޸����Ӱ�������ִ�л������ڴ���ʣ���ᱻ�۲쵽��</p></li>
-	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>��ǰ���ڴ�ͬ�� (sync.i) ������ʼ�ڱ��ش�����ָ����������ã�</p></li>
-	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>srlz.i ���֮�󣬺�����ָ�����ȡ�����³�ʼ����</p></li>
-</ul>
-
-<p>srlz.i ָ������ڰ���Ҫ���л��Ĳ�����ָ��������ָ�����С��������л��Ĳ��������ڰ��� srlz.i ��ָ��������ָ�����С�</p>
-
-<p>�������л� (srlz.i) ȷ����</p>
+<p>指令序列化 (srlz.i) 确保：</p>
 
 <ul>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>��ǰ�Դ������Ĵ�����Դ���޸����Ӱ�������ִ�л������ڴ���ʣ���ᱻ�۲쵽��</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>先前对处理器寄存器资源的修改如果影响后续指令组的获取，则会被观察到，</p></li>
+	
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>先前对处理器寄存器资源的修改如果影响后续的执行或数据内存访问，则会被观察到，</p></li>
+	
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>先前的内存同步 (sync.i) 操作开始在本地处理器指令缓存上起作用，</p></li>
+	
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>srlz.i 完成之后，后续的指令组获取会重新初始化。</p></li>
 </ul>
 
-<p>srlz.d ָ������ڰ���Ҫ���л��Ĳ�����ָ��������ָ�����С��������л��Ĳ���������� srlz.d ���棬�����ǿ����� srlz.d ����ͬ��ָ�����С�</p>
+<p>srlz.i 指令必须在包含要序列化的操作的指令组后面的指令组中。依赖序列化的操作必须在包含 srlz.i 的指令组后面的指令组中。</p>
 
-<p>ֻ�����ⲿƽ̨���Կ�����&ldquo;�ѽ���&rdquo;��ǰ�������ڴ����û��ڴ�߽�ʱ������ʹ�� srlz ��ͣ�����������ڴ����á�</p>
+<p>数据序列化 (srlz.i) 确保：</p>
 
-<p class="whs3">���´�������ԴҪ��������л����Ա�ȷ�����Թ۲쵽�����ã�<span style="x-condition: eclipse;">CR</span><script type="text/javascript"
+<ul>
+	
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>先前对处理器寄存器资源的修改如果影响后续的执行或数据内存访问，则会被观察到。</p></li>
+</ul>
+
+<p>srlz.d 指令必须在包含要序列化的操作的指令组后面的指令组中。依赖序列化的操作必须跟在 srlz.d 后面，但它们可以与 srlz.d 在相同的指令组中。</p>
+
+<p>只有在外部平台可以看见或&ldquo;已接受&rdquo;先前的数据内存引用或内存边界时，才能使用 srlz 暂停处理器数据内存引用。</p>
+
+<p class="whs3">以下处理器资源要求进行序列化，以便确保可以观察到副作用：<span style="x-condition: eclipse;">CR</span><script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A1');
-//--></script>��<span style="x-condition: eclipse;">PSR</span><script 
+//--></script>、<span style="x-condition: eclipse;">PSR</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A2');
-//--></script>��<span style="x-condition: eclipse;">DBR</span><script 
+//--></script>、<span style="x-condition: eclipse;">DBR</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A3');
-//--></script>��<span style="x-condition: eclipse;">IBR</span><script 
+//--></script>、<span style="x-condition: eclipse;">IBR</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A4');
-//--></script>��<span style="x-condition: eclipse;">PMD</span><script 
+//--></script>、<span style="x-condition: eclipse;">PMD</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A5');
-//--></script>��<span style="x-condition: eclipse;">PMC</span><script 
+//--></script>、<span style="x-condition: eclipse;">PMC</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A6');
-//--></script>��<span style="x-condition: eclipse;">PR</span><script 
+//--></script>、<span style="x-condition: eclipse;">PR</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A7');
-//--></script>��<span style="x-condition: eclipse;">PKR</span><script 
+//--></script>、<span style="x-condition: eclipse;">PKR</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A8');
-//--></script>��TR �� TC�� </p>
+//--></script>、TR 及 TC。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

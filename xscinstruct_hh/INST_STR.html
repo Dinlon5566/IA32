@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_STR.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:22 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>STR - �洢�Ĵ���</title>
+<title>STR - 存储寄存器</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nS - ָ��\nSTR");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nS - 指令\nSTR");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,16 +104,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">STR - �洢�Ĵ���</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">STR - 存储寄存器</h1>
 
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <div>
 <p class=Preformatted><span CLASS=Code>STR[condition] op1, addr_mode</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,7 +126,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="notational_conventions.html#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 个条件之一。请参阅<a HREF="notational_conventions.html#Condition Code Status">条件代码状态</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -135,7 +135,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>����Դ�������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含源操作数的寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -145,26 +145,26 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ѱַģʽ 2��<a href="Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.html">������洢�ֻ��޷����ֽ�</a></td></tr>
+<p CLASS=CellBodyLeft>寻址模式 2：<a href="Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.html">加载与存储字或无符号字节</a></td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-<p CLASS=Body>STR ָ��� <em CLASS=SourceItalic>op1</em> ��ȡ 32 λ���ݣ��������洢�� <em CLASS=SourceItalic>addr_mode</em> ָ���ĵ�ַ�����������ַ�Ĵ������������� PC ���Ѱַ��condition ��������Чֵ������ָ��� NOP��</p>
+<p CLASS=Body>STR 指令从 <em CLASS=SourceItalic>op1</em> 读取 32 位数据，并将它存储到 <em CLASS=SourceItalic>addr_mode</em> 指定的地址。如果用作基址寄存器，它还启用 PC 相对寻址。condition 必须是有效值；否则将指令当作 NOP。</p>
 </div>
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="Note.gif"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif"> 备注</h3>
 
-�����ͼ������Ч�ļ��ػ�洢���ݷ��ʣ�������������ֹ�쳣�����ʵ��ϵͳ����Э������ʱ���ö����飬���Ҵ���λ [01:0] != 0b00 �ĵ�ַ�������ɶ����쳣�� 
+如果试图进行无效的加载或存储数据访问，则生成数据终止异常。如果实现系统控制协处理器时启用对齐检查，并且存在位 [01:0] != 0b00 的地址，则生成对齐异常。 
 
-<h2>Ѱַģʽ</h2>
+<h2>寻址模式</h2>
 
-�����&ldquo;Ѱַģʽ 2 - ������洢�ֻ��޷����ֽ�&rdquo;�� 
+请参阅&ldquo;寻址模式 2 - 加载与存储字或无符号字节&rdquo;。 
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -231,7 +231,7 @@ else
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� </h2>
+<h2>编码 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -338,13 +338,13 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funstr <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0 <br> 4 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@ **** STR (Addressing Mode 2) **** <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; <br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example,CODE,READONLY <br> 7 <br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1 <br> 9 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Store 32-bit word from R8 to address held in R10 <br> 10 &#xA0;&#xA0;00000000 &#xA0;&#xA0;E58A8000 &#xA0;&#xA0;STR &#xA0;&#xA0;R8, [R10] <br> 11 <br> 12 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Store 32-bit word from R5 to address held in R4 <br> 13 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; then increment R4 by 28 bytes <br> 14 &#xA0;&#xA0;00000004 &#xA0;&#xA0;E484501C &#xA0;&#xA0;STR &#xA0;&#xA0;R5, [R4], #28 <br> 15 <br> 16 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Store 32-bit word from R0.The value in R4 is<br> 17 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; logically shifted left 15 times and subtracted<br> 18 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; from the address held in R5 to give the <br> 19 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; destination address.The destination address <br> 20 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; is then written back into R4 <br> 21 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E7250004 &#xA0;&#xA0;STR &#xA0;&#xA0;R0, [R5,-R4,LSL #OxF]!</span> </p>
 
-<h2>������Ϣ</h2>
+<h2>更多信息</h2>
 
-<a href="Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.html">�����Ѱַģʽ 2��������洢�ֻ��޷����ֽ� </a>
+<a href="Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.html">请参阅寻址模式 2：加载与存储字或无符号字节 </a>
 </div>
 </div>
 

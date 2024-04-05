@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400322.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
 
-<title>pcmp - ���бȽ�ָ��</title>
+<title>pcmp - 并行比较指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="06 6, 2001 3:59:34 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nP - ָ��\npcmp - ���бȽ�ָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nP - 指令\npcmp - 并行比较指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -115,16 +115,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">���бȽ�ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">并行比较指令</h1>
 
 <p><span style="font-weight: bold;"><B>pcmp</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400323.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400323.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a>
  </p>
 
-<p>ָ������ A</p>
+<p>指令类型 A</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) pcmp1.<span style="x-condition: eclipse;">prel</span><script type="text/javascript"
 	language=JavaScript1.2><!--
@@ -149,14 +149,14 @@ kadovFilePopupInit('A4');
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>说明</B></span></p>
 
-<p>�����±���ʾ��������ϵ֮һ�Ƚ�����Դ����������� <span style="x-condition: eclipse;">GR</span><span style="font-style: italic;"><I>r2</I></span> �� GR <span style="font-style: italic;"><I>r3</I></span> ����Ӧ����Ԫ��֮��ıȽ�����Ϊ�棬<script type="text/javascript"
+<p>按照下表所示的两个关系之一比较两个源操作数。如果 <span style="x-condition: eclipse;">GR</span><span style="font-style: italic;"><I>r2</I></span> 与 GR <span style="font-style: italic;"><I>r3</I></span> 的相应数据元素之间的比较条件为真，<script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A5');
-//--></script>�� GR <span style="font-style: italic;"><I>r1</I></span> ����Ӧ����Ԫ������Ϊȫһ������Ƚ�����Ϊ�٣��� GR <span style="font-style: italic;"><I>r1</I></span> ����Ӧ����Ԫ������Ϊȫ�㡣���� &lsquo;&gt;' ��ϵ������������������Ϊ�з��Ų�������</p>
+//--></script>则 GR <span style="font-style: italic;"><I>r1</I></span> 的相应数据元素设置为全一。如果比较条件为假，则 GR <span style="font-style: italic;"><I>r1</I></span> 的相应数据元素设置为全零。对于 &lsquo;&gt;' 关系，两个操作数均解释为有符号操作数。</p>
 
-<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400083.htm" style="x-condition: eclipse;">�����˴���һ����ͼ��ͬʱ�鿴���ֽڡ�˫�ֽڼ����ֽ���ʽ�Ĳ��бȽ�ָ���ʾ����</a><script 
+<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400083.htm" style="x-condition: eclipse;">单击此处在一幅插图中同时查看单字节、双字节及四字节形式的并行比较指令的示例。</a><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A6');

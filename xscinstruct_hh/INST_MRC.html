@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_MRC.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:43 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>MRC - ��Э�������ƶ��� ARM* ���ļĴ���</title>
+<title>MRC - 从协处理器移动到 ARM* 核心寄存器</title>
 
 <!--(Meta)==========================================================-->
 
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nM - ָ��\nMRC/MRC2");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nM - 指令\nMRC/MRC2");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,16 +105,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">MCR/MCR2 - ��Э�������ƶ��� ARM* ���ļĴ���</h1>
+<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">MCR/MCR2 - 从协处理器移动到 ARM* 核心寄存器</h1>
 
 <div>
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p CLASS=Preformatted><span class=Code>MRC[condition] cpname, cpopcode1, dest, cpsource, cpreg[, cpopcode2]<br> MRC2 cpname, cpopcode1, dest, cpsource, cpreg[, cpopcode2]</span></p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -127,7 +127,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 个条件之一。请参阅<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">条件代码状态</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -137,7 +137,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Э������������ (p0..p15)</td></tr>
+<p CLASS=CellBodyLeft>协处理器的名称 (p0..p15)</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -147,7 +147,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Э������ <em CLASS=SourceItalic>cpname</em> �Ĳ���</td></tr>
+<p CLASS=CellBodyLeft>协处理器 <em CLASS=SourceItalic>cpname</em> 的操作</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -156,7 +156,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>目标寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -166,7 +166,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ԴЭ�������Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>源协处理器寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -176,7 +176,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>����Э�������Ĵ��� </td></tr>
+<p CLASS=CellBodyLeft>其它协处理器寄存器 </td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -186,26 +186,26 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Э������ <em CLASS=SourceItalic>cpname</em> �Ĳ���</td></tr>
+<p CLASS=CellBodyLeft>协处理器 <em CLASS=SourceItalic>cpname</em> 的操作</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-<p CLASS=Body>MRC ָ� <em CLASS=SourceItalic>cpsource</em> �а�����ֵ�ƶ��� <em CLASS=SourceItalic>dest</em> �����������־��MRC2 ָ� <em CLASS=SourceItalic>cpsource</em> �е�ֵ�ƶ��� <em CLASS=SourceItalic>dest</em>����������Щָ�����������ִ�С�MRC2 ָ�����ڿ��ṩ����Ĳ�����ռ䣬��˶���Э����������߶����ر����á�condition ��������Чֵ������ָ��� NOP��</p>
+<p CLASS=Body>MRC 指令将 <em CLASS=SourceItalic>cpsource</em> 中包含的值移动到 <em CLASS=SourceItalic>dest</em> 或条件代码标志。MRC2 指令将 <em CLASS=SourceItalic>cpsource</em> 中的值移动到 <em CLASS=SourceItalic>dest</em>。不过，这些指令仅可无条件执行。MRC2 指令由于可提供额外的操作码空间，因此对于协处理器设计者而言特别有用。condition 必须是有效值；否则将指令当作 NOP。</p>
 </div>
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif" width="20px" height="20px" border="0" class="img_whs2"> ��ע</h3>
+<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif" width="20px" height="20px" border="0" class="img_whs2"> 备注</h3>
 
-���û��Э����������ִ�д�ָ�������δ�����ָ���쳣�� 
+如果没有协处理器可以执行此指令，则生成未定义的指令异常。 
 
-<h2>Ѱַģʽ</h2>
+<h2>寻址模式</h2>
 
-�޲�����
+无操作数
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -272,7 +272,7 @@ else
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>����</h2>
+<h2>编码</h2>
 
 <tr>
 <td ROWSPAN=1
@@ -403,7 +403,7 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funcmrc<br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0<br> 4 <br> 5 <br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@ * * * MRC * * *<br> 7 <br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA cp_move, CODE, READONLY<br> 9 <br> 10 &#xA0;&#xA0;00000000 &#xA0;&#xA0;EEB8E073 &#xA0;&#xA0;MRC &#xA0;&#xA0;&#xA0;p0, 5, R14, c8, c3, 3<br> 11 &#xA0;&#xA0;00000004 &#xA0;&#xA0;EED9D194 &#xA0;&#xA0;MRC &#xA0;&#xA0;&#xA0;p1, 6, R13, c9, c4, 4<br> 12 &#xA0;&#xA0;00000008 &#xA0;&#xA0;EEFAC2D5 &#xA0;&#xA0;MRC &#xA0;&#xA0;&#xA0;p2, 7, R12, c10, c5, 6<br> 13 &#xA0;&#xA0;00000012 &#xA0;&#xA0;EE1BB333 &#xA0;&#xA0;MRC &#xA0;&#xA0;&#xA0;p3, 0, R11, c11, c3, 1<br> 14 <br> 15 &#xA0;&#xA0;00000016 &#xA0;&#xA0;FE747418 &#xA0;&#xA0;MRC2 &#xA0;&#xA0;p4, 3, R7, c4, c8, 0<br> 16 &#xA0;&#xA0;00000020 &#xA0;&#xA0;FE958539 &#xA0;&#xA0;MRC2 &#xA0;&#xA0;p5, 4, R8, c5, c9, 1<br> 17 &#xA0;&#xA0;00000024 &#xA0;&#xA0;FEB69650 &#xA0;&#xA0;MRC2 &#xA0;&#xA0;p6, 5, R9, c6, c0, 2<br> 18 &#xA0;&#xA0;00000028 &#xA0;&#xA0;FED7A771 &#xA0;&#xA0;MRC2 &#xA0;&#xA0;p7, 6, R10, c7, c1, 3<br> 19 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END</span> 
 T

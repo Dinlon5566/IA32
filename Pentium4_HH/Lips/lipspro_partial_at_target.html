@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/lipspro_partial_at_target.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:36 GMT -->
 <head>
 
-<title>Ŀ�괦�Ĳ��ּĴ�����ͣ</title>
+<title>目标处的部分寄存器暂停</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta NAME=MS-HAID CONTENT="Pentium(R) II and Pentium Pro Processor Penalties">
 <meta name=date content="04 8, 2003 2:36:00 PM">
 <meta name=topic-status content="In Progress">
@@ -94,7 +94,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������ĳͷ�\nĿ�괦�Ĳ��ּĴ�����ͣ");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) 4 处理器\n英特尔(R) 奔腾(R) 4 处理器的惩罚\n目标处的部分寄存器暂停");
 
 	}
 	if (window.writeBtnStyle)
@@ -117,26 +117,26 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" align="right" width="36px" height="36px" border="0" class="img_whs1"> Ŀ�괦�Ĳ��ּĴ�����ͣ</h1>
+<h1><img src="TA_logo.gif" align="right" width="36px" height="36px" border="0" class="img_whs1"> 目标处的部分寄存器暂停</h1>
 
-<p><span style="font-weight: bold;"><B>Partial_Reg_at_Target</B></span> ��һ�����档</p>
+<p><span style="font-weight: bold;"><B>Partial_Reg_at_Target</B></span> 是一个警告。</p>
 
-<p>�����������ʱ��������ͣ��</p>
+<p>出现以下情况时将发生暂停：</p>
 
 <ul>
 	
-	<li class=kadov-p><p>ָ��д��<a href="lipspro_partial_stall.html">���ּĴ���</a>������ <span class=Code>AL</span>��<span class=Code>AH</span> �� <span class=Code>AX</span>����</p></li>
+	<li class=kadov-p><p>指令写入<a href="lipspro_partial_stall.html">部分寄存器</a>（例如 <span class=Code>AL</span>、<span class=Code>AH</span> 及 <span class=Code>AX</span>）。</p></li>
 	
-	<li class=kadov-p><p>�����ķ�ָ֧��ִ�е�Ŀ�����ָ��顣����<a HREF="Static_Assembly_Analysis.html">��̬����</a>����ִ�з�֧����˳ͷ�״̬�ڸ�ָ�ָʾ��</p></li>
+	<li class=kadov-p><p>后续的分支指令执行到目标基本指令块。由于<a HREF="Static_Assembly_Analysis.html">静态分析</a>假设执行分支，因此惩罚状态在该指令处指示。</p></li>
 	
-	<li class=kadov-p><p>Ŀ��<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#basic_block" style="x-condition: WebHelp;">����ָ���</a>������ȡ������ 32 λ�Ĵ��������� <span class=Code>EAX</span>����ָ���ᵼ�²��ּĴ�����ͣ��</p></li>
+	<li class=kadov-p><p>目标<a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#basic_block" style="x-condition: WebHelp;">基本指令块</a>包含读取完整的 32 位寄存器（例如 <span class=Code>EAX</span>）的指令。这会导致部分寄存器暂停。</p></li>
 </ul>
 
-<p>�����������·�ʽ��ɵļĴ����ԣ�һ���ϴ�ļĴ��������κβ��ּĴ�������ͬһ���е��������ּĴ������ϴ�ļĴ������䲿�ּĴ���֮һ��ʾ���У�<span class=Code>AX</span> �� <span class=Code>EAX</span>��<span class=Code>BL</span> �� <span class=Code>BX</span> �Լ� <span class=Code>SI</span> �� <span   class=Code>ESI</span>��ͬһ���е��������ּĴ�����ʾ���У�<span class=Code>AL</span> �� <span class=Code>AH</span> �Լ� <span   class=Code>CL</span> �� <span class=Code>CH</span>��</p>
+<p>这适用于以下方式组成的寄存器对：一个较大的寄存器及其任何部分寄存器，或同一组中的两个部分寄存器。较大的寄存器及其部分寄存器之一的示例有：<span class=Code>AX</span> 与 <span class=Code>EAX</span>、<span class=Code>BL</span> 与 <span class=Code>BX</span> 以及 <span class=Code>SI</span> 与 <span   class=Code>ESI</span>。同一组中的两个部分寄存器的示例有：<span class=Code>AL</span> 与 <span class=Code>AH</span> 以及 <span   class=Code>CL</span> 与 <span class=Code>CH</span>。</p>
 
-<p>ʾ����</p>
+<p>示例：</p>
 
-<p>�������е� JNE ָ��� <span style="font-weight: bold;"><B>Partial_Reg_at_Target</B></span> ���棺</p>
+<p>此序列中的 JNE 指令触发 <span style="font-weight: bold;"><B>Partial_Reg_at_Target</B></span> 警告：</p>
 
 <pre CLASS=Code>
 <p class=Preformatted>
@@ -153,7 +153,7 @@ jne L1 / triggers Partial_Reg_at_Target warning</p>
 
 <p class="whs2">
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','����(R) II ������','pentium(r)_ii_processor.htm','����(R) III ������','pentium(r)_iii_processor.htm','����(R) M ������','pentium(r)_m_processor.htm','����(R) Pro ������','pentium(r)_pro_processor.htm');return false;" title="Ӱ��Ĵ�����"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%bd%b1%e5%93%8d%e7%9a%84%e5%a4%84%e7%90%86%e5%99%a8.gif" border=0 height=20 width=82 alt="Ӱ��Ĵ�����"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','奔腾(R) II 处理器','pentium(r)_ii_processor.htm','奔腾(R) III 处理器','pentium(r)_iii_processor.htm','奔腾(R) M 处理器','pentium(r)_m_processor.htm','奔腾(R) Pro 处理器','pentium(r)_pro_processor.htm');return false;" title="影响的处理器"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e5%bd%b1%e5%93%8d%e7%9a%84%e5%a4%84%e7%90%86%e5%99%a8.gif" border=0 height=20 width=82 alt="影响的处理器"></a>
 
 
  </p>

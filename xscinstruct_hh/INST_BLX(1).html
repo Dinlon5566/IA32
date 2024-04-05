@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_BLX(1).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:31 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>BLX(1) - �������뽻���ķ�֧</title>
+<title>BLX(1) - 带链接与交换的分支</title>
 
 <!--(Meta)==========================================================-->
 
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nB - ָ��\nBLX(1)");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nB - 指令\nBLX(1)");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,16 +105,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">BLX(1) - �������뽻���ķ�֧</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">BLX(1) - 带链接与交换的分支</h1>
 
 <div>
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p class=Preformatted><span class=Code>BLX target </span></p>
 
-<p>���У�</p>
+<p>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -125,20 +125,20 @@ else
 							style="font-style: italic;">&#xA0;value</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>16 λ������</td></tr>
+<p CLASS=CellBodyLeft>16 位立即数</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-<p>�˸�ʽ�� BLX ָ����ص�ַ���浽 R14������֧��ָ���� <em CLASS=SourceItalic>target</em>������ Thumb* �����̣��� </p>
+<p>此格式的 BLX 指令将返回地址保存到 R14，并分支到指定的 <em CLASS=SourceItalic>target</em>（包含 Thumb* 子例程）。 </p>
 
-<h2>Ѱַģʽ</h2>
+<h2>寻址模式</h2>
 
-<p>�޲�������</p>
+<p>无操作数。</p>
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -187,7 +187,7 @@ else
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>����</h2>
+<h2>编码</h2>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
@@ -256,7 +256,7 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p CLASS=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globlfuncblx1<br> 4 <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0<br> 6 <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@ * * * BLX(1) * * *<br> 8 <br> 9 <br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example, CODE, READONLY<br> 11 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1<br> 12 &#xA0;&#xA0;00000000 &#xA0;&#xA0;E3A0B001 &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;R11, #1<br> 13 &#xA0;&#xA0;00000004 &#xA0;&#xA0;E2AB0001 &#xA0;&#xA0;&#xA0;ADC &#xA0;&#xA0;R0, R11, #1<br> 14 <br> 15 &#xA0;&#xA0;00000008 &#xA0;&#xA0;FAFFFFFE &#xA0;&#xA0;&#xA0;BLX &#xA0;&#xA0;label2<br> 16 <br> 17 &#xA0;&#xA0;00000012 &#xA0;&#xA0;E3A0B001 &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;R11, #1<br> 18 &#xA0;&#xA0;00000016 &#xA0;&#xA0;E21B0001 &#xA0;&#xA0;&#xA0;AND &#xA0;&#xA0;SR0, R11, #1<br> 19 <br> 20 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label2<br> 21 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;DCD &#xA0;&#xA0;0xdeadbeef<br> 22 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;DCB &#xA0;&#xA0;&quot;string&quot;<br> 23 &#xA0;&#xA0;00000033 &#xA0;&#xA0;E12FFF1E &#xA0;&#xA0;&#xA0;BX &#xA0;&#xA0;&#xA0;R14<br> 24 <br> 25 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END &#xA0;&#xA0;26</span> </p>
 </div>

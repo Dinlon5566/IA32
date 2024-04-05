@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -80,7 +80,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\n��֧�¼�\nBR_MISPRED_DETAIL");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 安腾(R) 2 处理器\n英特尔(R) 安腾(R) 2 处理器事件\n分支事件\nBR_MISPRED_DETAIL");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,9 +105,9 @@ else
 </script>
 <h1>BR_MISPRED_DETAIL</h1>
 
-<b style="font-weight: bold;">���⣺</b>FE ��֧Ԥ��ʧ��ϸ��<b   style="font-weight: bold;"><br> ���</b>��֧�¼�<b style="font-weight: bold;"><br> IAR/DAR/OPC��</b>Y/N/Y<b style="font-weight: bold;"><br> �¼����룺</b>0x5B<b style="font-weight: bold;"><br> ���ÿ����������</b>3 
+<b style="font-weight: bold;">标题：</b>FE 分支预测失误细节<b   style="font-weight: bold;"><br> 类别：</b>分支事件<b style="font-weight: bold;"><br> IAR/DAR/OPC：</b>Y/N/Y<b style="font-weight: bold;"><br> 事件代码：</b>0x5B<b style="font-weight: bold;"><br> 最大每周期增量：</b>3 
 
-<p><b style="font-weight: bold;">���壺</b>ͳ��ʧЧ�ķ�֧����PMC.umask ������ 16 ��ֵ����Ч������Ϊ���ܹ�����Ԥ������ǰ��Ԥ��ʧ���·����Ŀ���ַ�����֧�����ṩ��Ϣ</p>
+<p><b style="font-weight: bold;">定义：</b>统计失效的分支数。PMC.umask 的所有 16 种值都有效，这是为了能够根据预测结果（前端预测失误的路径或目标地址）与分支类型提供信息</p>
 
 &nbsp;<br>
 
@@ -116,11 +116,11 @@ else
 
 <tr>
 <td>
-<h3 CLASS=TableHead>��չ</td>
+<h3 CLASS=TableHead>扩展</td>
 <td>
 <h3 CLASS=TableHead>PMC.umask</td>
 <td>
-<h3 CLASS=TableHead>˵��</td></tr>
+<h3 CLASS=TableHead>说明</td></tr>
 
 <tr>
 <td>
@@ -128,7 +128,7 @@ else
 <td>
 <p>b0000</td>
 <td>
-<p>���з�֧���ͣ�����Ԥ�������</td></tr>
+<p>所有分支类型，不论预测结果如何</td></tr>
 
 <tr>
 <td>
@@ -136,7 +136,7 @@ else
 <td>
 <p>b0001</td>
 <td>
-<p>���з�֧���ͣ���ȷԤ��ķ�֧�������Ŀ�꣩</td></tr>
+<p>所有分支类型，正确预测的分支（结果与目标）</td></tr>
 
 <tr>
 <td>
@@ -144,7 +144,7 @@ else
 <td>
 <p>b0010</td>
 <td>
-<p>���з�֧���ͣ���֧���������Ԥ��ʧ��ķ�֧</td></tr>
+<p>所有分支类型，分支方向错误导致预测失误的分支</td></tr>
 
 <tr>
 <td>
@@ -152,7 +152,7 @@ else
 <td>
 <p>b0011</td>
 <td>
-<p>���з�֧���ͣ�ִ�з�֧��Ŀ�������Ԥ��ʧ��ķ�֧</td></tr>
+<p>所有分支类型，执行分支的目标错误导致预测失误的分支</td></tr>
 
 <tr>
 <td>
@@ -160,7 +160,7 @@ else
 <td>
 <p>b0100</td>
 <td>
-<p>���� IP ��Է�֧������Ԥ�������</td></tr>
+<p>仅限 IP 相对分支，不论预测结果如何</td></tr>
 
 <tr>
 <td>
@@ -168,7 +168,7 @@ else
 <td>
 <p>b0101</td>
 <td>
-<p>���� IP ��Է�֧����ȷԤ��ķ�֧�������Ŀ�꣩</td></tr>
+<p>仅限 IP 相对分支，正确预测的分支（结果与目标）</td></tr>
 
 <tr>
 <td>
@@ -176,7 +176,7 @@ else
 <td>
 <p>b0110</td>
 <td>
-<p>���� IP ��Է�֧����֧���������Ԥ��ʧ��ķ�֧</td></tr>
+<p>仅限 IP 相对分支，分支方向错误导致预测失误的分支</td></tr>
 
 <tr>
 <td>
@@ -184,7 +184,7 @@ else
 <td>
 <p>b0111</td>
 <td>
-<p>���� IP ��Է�֧��ִ�з�֧��Ŀ�������Ԥ��ʧ��ķ�֧</td></tr>
+<p>仅限 IP 相对分支，执行分支的目标错误导致预测失误的分支</td></tr>
 
 <tr>
 <td>
@@ -192,7 +192,7 @@ else
 <td>
 <p>b1000</td>
 <td>
-<p>���޷����ͷ�֧������Ԥ�������</td></tr>
+<p>仅限返回型分支，不论预测结果如何</td></tr>
 
 <tr>
 <td>
@@ -200,7 +200,7 @@ else
 <td>
 <p>b1001</td>
 <td>
-<p>���޷����ͷ�֧����ȷԤ��ķ�֧�������Ŀ�꣩</td></tr>
+<p>仅限返回型分支，正确预测的分支（结果与目标）</td></tr>
 
 <tr>
 <td>
@@ -208,7 +208,7 @@ else
 <td>
 <p>b1010</td>
 <td>
-<p>���޷����ͷ�֧����֧���������Ԥ��ʧ��ķ�֧</td></tr>
+<p>仅限返回型分支，分支方向错误导致预测失误的分支</td></tr>
 
 <tr>
 <td>
@@ -216,7 +216,7 @@ else
 <td>
 <p>b1011</td>
 <td>
-<p>���޷����ͷ�֧��ִ�з�֧Ŀ�������Ԥ��ʧ��ķ�֧</td></tr>
+<p>仅限返回型分支，执行分支目标错误导致预测失误的分支</td></tr>
 
 <tr>
 <td>
@@ -224,7 +224,7 @@ else
 <td>
 <p>b1100</td>
 <td>
-<p>���޷Ƿ����ͼ�ӷ�֧������Ԥ�������</td></tr>
+<p>仅限非返回型间接分支，不论预测结果如何</td></tr>
 
 <tr>
 <td>
@@ -232,7 +232,7 @@ else
 <td>
 <p>b1101</td>
 <td>
-<p>���޷Ƿ����ͼ�ӷ�֧����ȷԤ��ķ�֧�������Ŀ�꣩</td></tr>
+<p>仅限非返回型间接分支，正确预测的分支（结果与目标）</td></tr>
 
 <tr>
 <td>
@@ -240,7 +240,7 @@ else
 <td>
 <p>b1110</td>
 <td>
-<p>���޷Ƿ����ͼ�ӷ�֧����֧���������Ԥ��ʧ��ķ�֧</td></tr>
+<p>仅限非返回型间接分支，分支方向错误导致预测失误的分支</td></tr>
 
 <tr>
 <td>
@@ -248,7 +248,7 @@ else
 <td>
 <p>b1111</td>
 <td>
-<p>���޷Ƿ����ͼ�ӷ�֧��ִ�з�֧Ŀ�������Ԥ��ʧ��ķ�֧</td></tr>
+<p>仅限非返回型间接分支，执行分支目标错误导致预测失误的分支</td></tr>
 </table>
 
 <script type="text/javascript" language="javascript1.2">

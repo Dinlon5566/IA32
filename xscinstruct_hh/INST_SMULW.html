@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_SMULW.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:31 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>SMULWy - DSP ָ��</title>
+<title>SMULWy - DSP 指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nS - ָ��\nSMULWy");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nS - 指令\nSMULWy");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,16 +104,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">SMULWy - DSP ָ��</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">SMULWy - DSP 指令</h1>
 
 <div>
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p class=Preformatted><span CLASS=Code>SMULW y [condition] dest, op1, op2</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,8 +126,8 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>B��<br> x==0<br> ʹ�� op2 ��λ [15:0]</p>
-<p CLASS=CellBodyLeft>T��<br> x==0<br> ʹ�� op2 ��λ [31:16]</td></tr>
+<p CLASS=CellBodyLeft>B：<br> x==0<br> 使用 op2 的位 [15:0]</p>
+<p CLASS=CellBodyLeft>T：<br> x==0<br> 使用 op2 的位 [31:16]</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -137,7 +137,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="notational_conventions.html#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 个条件之一。请参阅<a HREF="notational_conventions.html#Condition Code Status">条件代码状态</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -147,7 +147,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ŀ��Ĵ��� </td></tr>
+<p CLASS=CellBodyLeft>目标寄存器 </td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -157,7 +157,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>������һ���������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含第一个操作数的寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -167,20 +167,20 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�����ڶ����������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含第二个操作数的寄存器</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-<p CLASS=Body>SMULWy ָ��ִ���з��� 32 λ������ op1 ���з��� 16 λ������ op2 �ĳ˷���64 λ����ĸ� 32 λд�� dest��condition ��������Чֵ������ָ��� NOP��</p>
+<p CLASS=Body>SMULWy 指令执行有符号 32 位操作数 op1 与有符号 16 位操作数 op2 的乘法。64 位结果的高 32 位写入 dest。condition 必须是有效值；否则将指令当作 NOP。</p>
 
-<h2>Ѱַģʽ</h2>
+<h2>寻址模式</h2>
 
-�޲�����
+无操作数
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -247,7 +247,7 @@ else
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� </h2>
+<h2>编码 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -390,7 +390,7 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.globl funcsmulwy<br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.align 0<br> 4 <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@ * * * SMULWy * * * <br> 6 <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example, CODE, READONLY<br> 8 <br> 9 &#xA0;&#xA0;&#xA0;00000000 &#xA0;&#xA0;E3A00000 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R0, #0xF00D<br> 10 &#xA0;&#xA0;00000004 &#xA0;&#xA0;E3A01000 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R1, #-0xBEEF<br> 11 <br> 12 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E56780A4 &#xA0;&#xA0;SMULWB &#xA0;&#xA0;R3, R4, R0, R1<br> 13 &#xA0;&#xA0;00000012 &#xA0;&#xA0;E12510E6 &#xA0;&#xA0;SMULWT &#xA0;&#xA0;R5, R6, R0, R1<br> 14 <br> 15 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END</span> </p>
 </div>

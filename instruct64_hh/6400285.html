@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400285.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:48 GMT -->
 <head>
 
-<title>lfetch 操作</title>
+<title>lfetch 鎿嶄綔</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:54:01 PM">
 <meta name=topic-status content=Complete>
 <meta name=topic-priority content=2>
@@ -97,7 +97,7 @@ else
 		document.location.reload();
 //-->
 </script>
-lfetch 操作 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a> 
+lfetch 鎿嶄綔 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">瀛椾綋鎯緥</a> 
 
 <br>if (PR[<i>qp</i>]) { <br> itype = READ|NON_ACCESS; <br> itype |= (<i>lftype</i> == &lsquo;fault') ?LFETCH_FAULT : LFETCH; <br> <br> if (reg_base_update_form || imm_base_update_form) <br> <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400444.htm">check_target_register</a>(<i>r3</i>); <br> <br> if (<i>lftype</i> == &lsquo;fault') { // faulting form <br> if (<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400568.htm">GR</a>[<i>r3</i>].nat &amp;&amp; !PSR.ed) // fault on NaT address <br> register_nat_consumption_fault(itype); <br> } <br> <br> excl_hint = (exclusive_form) ?EXCLUSIVE : 0; 
 

@@ -7,7 +7,7 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400510.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:49 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
 <title>mem_write</title>
@@ -116,7 +116,7 @@ else
 </script>
 <h2>mem_write(value,paddr,size,byte_order,mattr,otype,hint)</h2>
 
-<p class="whs1">�� value �� size ��С�������Ч�ֽ�д���ڴ棺�� paddr ָ���������ڴ�λ�ÿ�ʼ������ border ָ�����ֽ�˳�򣬷��� mattr ָ�����ڴ����ԣ���� hint ָ���ķ�����ʾ��otype ָ���˷��ʵ��ڴ�˳�����ԣ����ұ����� UNORDERED �� RELEASE���޷���ֵ�� </p>
+<p class="whs1">将 value 的 size 大小的最低有效字节写入内存：从 paddr 指定的物理内存位置开始，按照 border 指定的字节顺序，符合 mattr 指定的内存属性，遵从 hint 指定的访问提示。otype 指定此访问的内存顺序属性，并且必须是 UNORDERED 或 RELEASE。无返回值。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

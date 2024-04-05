@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400305.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:49 GMT -->
 <head>
 
-<title>mov psr.um 操作</title>
+<title>mov psr.um 鎿嶄綔</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:55:11 PM">
 <meta name=topic-status content=Complete>
 <meta name=topic-priority content=2>
@@ -97,7 +97,7 @@ else
 		document.location.reload();
 //-->
 </script>
-mov psr.um 操作 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a> 
+mov psr.um 鎿嶄綔 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">瀛椾綋鎯緥</a> 
 
 <br>if (PR[<i>qp</i>]) { <br> if (from_form) { <br> <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400444.htm">check_target_register</a>; <br> <br> <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400568.htm">GR</a>[<i>r1</i>] = <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400558.htm" onMouseOver="if (parseInt(navigator.appVersion) >= 4) BSPSPopupOnMouseOver(event)" class="BSSCPopup" id="A4">zero_ext</a>(PSR{5:0}, 6); <br> GR[<i>r1</i>].nat = 0; <br> } else { // to_form <br> if (GR[<i>r2</i>].nat) <br> register_nat_consumption_fault(0); <br> <br> if (<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400501.htm">is_reserved_field</a>(PSR_TYPE, PSR_UM, GR[<i>r2</i>])) <br> reserved_register_field_fault(); <br> <br> PSR{1:0} = GR[<i>r2</i>]{1:0}; <br> <br> if (PSR.sp == 0) // unsecured perf monitor <br> PSR{2} = GR[<i>r2</i>]{2}; <br> <br> PSR{5:3} = GR[<i>r2</i>]{5:3}; <br> } <br> } 
 

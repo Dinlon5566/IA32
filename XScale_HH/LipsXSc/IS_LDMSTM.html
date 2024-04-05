@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/XScale_HH/LipsXSc/IS_LDMSTM.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:53 GMT -->
 <head>
 
-<title>LDM/STM ��ָ��ѡ��</title>
+<title>LDM/STM 的指令选择</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="04 14, 2003 11:57:13 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -90,7 +90,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض� XScale(R) ΢��ϵ�ṹ \nָ��ѡ��\nLDM/STM");
+	addTocInfo("参考\n处理器事件与建议\n英特尔 XScale(R) 微体系结构 \n指令选择\nLDM/STM");
 
 	}
 	if (window.writeBtnStyle)
@@ -113,21 +113,21 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="XS_logo.gif" alt="Ӣ�ض� XScale(R) ��������" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">LDM/STM ��ָ��ѡ��</h1>
+<h1><img src="XS_logo.gif" alt="英特尔 XScale(R) 技术主题" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">LDM/STM 的指令选择</h1>
 
 <h2>XSC_IS_LDMSTM</h2>
 
-<h3>����</h3>
+<h3>解释</h3>
 
-<p>LDM/STM ָ�����Ǳ� LDR/STR �� LDRD/STRD ָ��Ҫ�໨����ʱ�����ڡ���������Ǵ���ռ䣬����ʹ�� LDR/STR �� LDRD/STRD �滻 LDM/STM�����ݲ�ͬ����������б��еļĴ�������Ѱַģʽ���Ƿ���»�ַ�Ĵ����ȵȣ���&ldquo;ָ��ѡ��&rdquo;����ѡ��ͬ���滻ָ� </p>
+<p>LDM/STM 指令总是比 LDR/STR 或 LDRD/STRD 指令要多花几个时钟周期。如果不考虑代码空间，可以使用 LDR/STR 或 LDRD/STRD 替换 LDM/STM。根据不同的情况，如列表中的寄存器数、寻址模式及是否更新基址寄存器等等，此&ldquo;指令选择&rdquo;可以选择不同的替换指令。 </p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs2"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs2"> 备注</h3>
 
-<p class="whs3">��&ldquo;ָ��ѡ��&rdquo;�� <a HREF="Load_Store_Multiple_of_n_Register.html">XSC_LDMSTM</a> �ͷ�/�������ʹ�á� 
+<p class="whs3">此&ldquo;指令选择&rdquo;与 <a HREF="Load_Store_Multiple_of_n_Register.html">XSC_LDMSTM</a> 惩罚/警告配合使用。 
  </p>
 
-<h3>ʾ��</h3>
+<h3>示例</h3>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="100%" class="whs4">
@@ -139,9 +139,9 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) 
 
 <tr valign="top" class="whs7">
 <td width="39.169%" class="whs8">
-<h3 class=TableHead>ԭʼ����</td>
+<h3 class=TableHead>原始代码</td>
 <td width="60.831%" class="whs9">
-<h3 class=TableHead>ָ��ѡ��</td></tr>
+<h3 class=TableHead>指令选择</td></tr>
 
 <tr valign="top" class="whs7">
 <td width="39.169%" class="whs10">

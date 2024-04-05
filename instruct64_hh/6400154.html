@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400154.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:31 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>br 操作</title>
+<title>br 鎿嶄綔</title>
 
 <!--(Meta)==========================================================-->
 
@@ -114,7 +114,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<p>br  操作 <a HREF="6400126.html">字体惯例</a></p>
+<p>br  鎿嶄綔 <a HREF="6400126.html">瀛椾綋鎯緥</a></p>
 
 <p class="whs1">if (ip_relative_form) // determine branch target<br> tmp_IP = IP + <a HREF="6400526.html" ONMOUSEOVER="if (parseInt(navigator.appVersion) >= 4) BSPSPopupOnMouseOver(event)" CLASS="BSSCPopup" id="A1">sign_ext</a>((<span style="font-style: italic;"><I>imm21</I></span> &lt;&lt; 4), 25);<br> else // indirect_form<br> tmp_IP = BR[<span style="font-style: italic;"><I>b2</I></span>];<br> <br> if (<span style="font-style: italic;"><I>btype</I></span> != &lsquo;ia') // for Itanium&#xAE;-based system branches,<br> tmp_IP = tmp_IP &amp; ~0xf; // &#xA0;ignore bottom 4 bits of target<br> <br> lower_priv_transition = 0;<br> <br> switch (<span style="font-style: italic;"><I>btype</I></span>) {<br> case &lsquo;cond': // simple conditional branch<br> tmp_taken = PR[<span style="font-style: italic;"><I>qp</I></span>];<br> break;<br> <br> case &lsquo;call': // call saves a return link<br> tmp_taken = PR[<span style="font-style: italic;"><I>qp</I></span>];<br> if (tmp_taken) {<br> BR[<span style="font-style: italic;"><I>b1</I></span>] = IP + 16;<br> <br> AR[PFS].pfm = CFM; // ... and saves the stack frame<br> AR[PFS].pec = AR[EC];<br> AR[PFS].ppl = PSR.cpl;<a HREF="6400437.html" ONMOUSEOVER="if (parseInt(navigator.appVersion) >= 4) BSPSPopupOnMouseOver(event)" CLASS="BSSCPopup" id="A5"><br> <br> alat_frame_update</a>(CFM.sol, 0);<a HREF="6400521.html" ONMOUSEOVER="if (parseInt(navigator.appVersion) >= 4) BSPSPopupOnMouseOver(event)" CLASS="BSSCPopup" id="A6"><br> rse_preserve_frame</a>(CFM.sol);<br> CFM.sof -= CFM.sol; // new frame size is size of outs<br> CFM.sol = 0;<br> CFM.sor = 0;<br> CFM.rrb.gr = 0;<br> CFM.rrb.<a HREF="6400127.html" ONMOUSEOVER="if (parseInt(navigator.appVersion) >= 4) BSPSPopupOnMouseOver(event)" CLASS="BSSCPopup" id="A7">fr</a> = 0;<br> CFM.rrb.pr = 0;<br> }<br> break;<br> <br> case &lsquo;ret': // return restores stack frame<br> tmp_taken = PR[<span style="font-style: italic;"><I>qp</I></span>];<br> if (tmp_taken) {<br> // tmp_growth indicates the amount to move logical TOP *up*:<br> // tmp_growth = sizeof(previous out) - sizeof(current frame)<br> // a negative amount indicates a shrinking stack<br> tmp_growth = (AR[PFS].pfm.sof - AR[PFS].pfm.sol) - CFM.sof;<br> alat_frame_update(-AR[PFS].pfm.sol, 0);<br> rse_fatal = <a HREF="6400522.html" ONMOUSEOVER="if (parseInt(navigator.appVersion) >= 4) BSPSPopupOnMouseOver(event)" CLASS="BSSCPopup" id="A8">rse_restore_frame</a>(AR[PFS].pfm.sol, tmp_growth, CFM.sof);<br> if (rse_fatal) { CFM.sof = 0;<br> CFM.sol = 0;<br> CFM.sor = 0;<br> CFM.rrb.gr = 0;<br> CFM.rrb.fr = 0;<br> CFM.rrb.pr = 0;<br> } else // normal branch return<br> CFM = AR[PFS].pfm;<a HREF="6400517.html" ONMOUSEOVER="if (parseInt(navigator.appVersion) >= 4) BSPSPopupOnMouseOver(event)" CLASS="BSSCPopup" id="A9"><br> <br> rse_enable_current_frame_load</a>();<br> AR[EC] = AR[PFS].pec;<br> if (PSR.cpl u&lt; AR[PFS].ppl) {// ... and restores privilege<br> PSR.cpl = AR[PFS].ppl;<br> lower_priv_transition = 1;<br> }<br> }<br> break;<br> <br> case &lsquo;ia': // switch to IA mode<br> tmp_taken = 1;</p>
 

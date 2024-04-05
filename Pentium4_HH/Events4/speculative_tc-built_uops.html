@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/speculative_tc-built_uops.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:38:26 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>ÍÆ²âÐÔ TC ¹¹½¨Î¢²Ù×÷</title>
+<title>æŽ¨æµ‹æ€§ TC æž„å»ºå¾®æ“ä½œ</title>
 
 <!--(Meta)==========================================================-->
 
@@ -23,7 +23,7 @@
 <meta name=layout-height content=360>
 <meta name=layout-width content=613>
 <meta name=date content="06 24, 2002 9:42:41 AM">
-<meta name=x-ignored-words content="MMX;SIMD;Aliasing;modulo;aliasing;Pentium;pipelined;mispredicted;NetBurst;irets;BTB;DTLB;micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;UC;uncacheable;WC;MMNP;MMNM;Mispredicted;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;Clockticks;clocktick;VTune;clockticks;MOCLEAR;prefetching;misprediction;PGO;pseudo-LRU;developer.intel.com;index.htm;Vol;RFO;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;prefetch;Micro-ops;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;LSC;SSC;USC;ULC;SSE;denormal;denormaled;DELIVERBit;;BSQ;writeback;Uncacheable;encodings;ITLB;PGO's;RGBA;C++*;?;a(i;y;enddo;cacheability;index.htm.;¦Ìops;¦Ìop;prefetched;CPUID;resynchronize;Memory_Flag;ELIHW;TC-built">
+<meta name=x-ignored-words content="MMX;SIMD;Aliasing;modulo;aliasing;Pentium;pipelined;mispredicted;NetBurst;irets;BTB;DTLB;micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;UC;uncacheable;WC;MMNP;MMNM;Mispredicted;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;Clockticks;clocktick;VTune;clockticks;MOCLEAR;prefetching;misprediction;PGO;pseudo-LRU;developer.intel.com;index.htm;Vol;RFO;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;prefetch;Micro-ops;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;LSC;SSC;USC;ULC;SSE;denormal;denormaled;DELIVERBit;;BSQ;writeback;Uncacheable;encodings;ITLB;PGO's;RGBA;C++*;?;a(i;y;enddo;cacheability;index.htm.;Î¼ops;Î¼op;prefetched;CPUID;resynchronize;Memory_Flag;ELIHW;TC-built">
 
 
 <!--(Links)=========================================================-->
@@ -83,7 +83,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("²Î¿¼\n´¦ÀíÆ÷ÊÂ¼þÓë½¨Òé\nÓ¢ÌØ¶û(R) ±¼ÌÚ(R) 4 ´¦ÀíÆ÷\nÓ¢ÌØ¶û(R) ±¼ÌÚ(R) 4 ´¦ÀíÆ÷ÊÂ¼þ\nÐÔÄÜµ÷ÕûÊÂ¼þ - ¸ß¼¶ÊÂ¼þ\nÇ°¶ËÊÂ¼þ\nÍÆ²âÐÔ TC ¹¹½¨Î¢²Ù×÷");
+	addTocInfo("å‚è€ƒ\nå¤„ç†å™¨äº‹ä»¶ä¸Žå»ºè®®\nè‹±ç‰¹å°”(R) å¥”è…¾(R) 4 å¤„ç†å™¨\nè‹±ç‰¹å°”(R) å¥”è…¾(R) 4 å¤„ç†å™¨äº‹ä»¶\næ€§èƒ½è°ƒæ•´äº‹ä»¶ - é«˜çº§äº‹ä»¶\nå‰ç«¯äº‹ä»¶\næŽ¨æµ‹æ€§ TC æž„å»ºå¾®æ“ä½œ");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,13 +106,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="±¼ÌÚ(R) 4 ´¦ÀíÆ÷Ö÷Ìâ" x-maintain-ratio="TRUE" align="right" width="48px" height="60px" align="right" border="0" class="img_whs1">ÍÆ²âÐÔ TC ¹¹½¨Î¢²Ù×÷</h1>
+<h1><img src="p4p60hw.gif" alt="å¥”è…¾(R) 4 å¤„ç†å™¨ä¸»é¢˜" x-maintain-ratio="TRUE" align="right" width="48px" height="60px" align="right" border="0" class="img_whs1">æŽ¨æµ‹æ€§ TC æž„å»ºå¾®æ“ä½œ</h1>
 
-<p><span style="font-weight: bold;"><B>Ïß³ÌÌØ¶¨ÐÔ</B></span>£º<a href="Thread_Specific.html">TS</a></p>
+<p><span style="font-weight: bold;"><B>çº¿ç¨‹ç‰¹å®šæ€§</B></span>ï¼š<a href="Thread_Specific.html">TS</a></p>
 
-<p>´ËÖ¸±ê±íÊ¾&ldquo;¸ú×Ù»º´æ&rdquo;´¦ÓÚ¹¹½¨Ä£Ê½ÆÚ¼ä£¬·ÅÈëÎ¢²Ù×÷¶ÓÁÐ£¨Ö´ÐÐµ¥Ôª´ÓÕâÀï»ñµÃÈÎÎñ£©µÄÍÆ²âÐÔÎ¢²Ù×÷°Ù·Ö±È¡£ÍÆ²âÐÔÎ¢²Ù×÷ÊÇ¿ÉÄÜÖ´ÐÐµÄÎ¢²Ù×÷¡£ÀýÈç£¬¶ÓÁÐÖÐ¿ÉÄÜ»á¼ÓÔØËùÓÐÖ´ÐÐÂ·¾¶µÄÎ¢²Ù×÷£¬µ«Ö»»áÖ´ÐÐÒ»ÌõÂ·¾¶¡£</p>
+<p>æ­¤æŒ‡æ ‡è¡¨ç¤º&ldquo;è·Ÿè¸ªç¼“å­˜&rdquo;å¤„äºŽæž„å»ºæ¨¡å¼æœŸé—´ï¼Œæ”¾å…¥å¾®æ“ä½œé˜Ÿåˆ—ï¼ˆæ‰§è¡Œå•å…ƒä»Žè¿™é‡ŒèŽ·å¾—ä»»åŠ¡ï¼‰çš„æŽ¨æµ‹æ€§å¾®æ“ä½œç™¾åˆ†æ¯”ã€‚æŽ¨æµ‹æ€§å¾®æ“ä½œæ˜¯å¯èƒ½æ‰§è¡Œçš„å¾®æ“ä½œã€‚ä¾‹å¦‚ï¼Œé˜Ÿåˆ—ä¸­å¯èƒ½ä¼šåŠ è½½æ‰€æœ‰æ‰§è¡Œè·¯å¾„çš„å¾®æ“ä½œï¼Œä½†åªä¼šæ‰§è¡Œä¸€æ¡è·¯å¾„ã€‚</p>
 
-<p>´ËÊÂ¼þ±»ÊÓ×÷Ò»¸öÌØÕ÷ÊÂ¼þ¡£</p>
+<p>æ­¤äº‹ä»¶è¢«è§†ä½œä¸€ä¸ªç‰¹å¾äº‹ä»¶ã€‚</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_CDP.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:43 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>CDP/CDP2 - Э���������ݴ���</title>
+<title>CDP/CDP2 - 协处理器数据处理</title>
 
 <!--(Meta)==========================================================-->
 
@@ -83,7 +83,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nC - ָ��\nCDP/CDP2");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nC - 指令\nCDP/CDP2");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,18 +106,18 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">CDP/CDP2 - Э���������ݴ���</h1>
+<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">CDP/CDP2 - 协处理器数据处理</h1>
 
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <div>
 <p class=Preformatted><span class=Code>CDP[condition] cpname, cpopcode1, cpdest, cpop1, cpop2, cpopcode2</span></p>
 
 <p class=Preformatted><span class=Code>CDP2 cpname, cpopcode1, cpdest, cpop1, cpop2, cpopcode2 </span></p>
 
-<p>���У�</p>
+<p>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -128,7 +128,7 @@ else
 							style="font-style: italic;">&#xA0;condition</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 个条件之一。请参阅<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">条件代码状态</a>。</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
@@ -136,7 +136,7 @@ else
 							style="font-style: italic;">&#xA0;cpname</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>Э������������ (p0..p15)</td></tr>
+<p CLASS=CellBodyLeft>协处理器的名称 (p0..p15)</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
@@ -144,7 +144,7 @@ else
 							style="font-style: italic;">&#xA0;cpopcode1</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>Э������ <em CLASS=SourceItalic>cpname</em> �Ĳ���</td></tr>
+<p CLASS=CellBodyLeft>协处理器 <em CLASS=SourceItalic>cpname</em> 的操作</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
@@ -152,7 +152,7 @@ else
 							style="font-style: italic;">&#xA0;cpdest</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>Э������Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>协处理器目标寄存器</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
@@ -160,7 +160,7 @@ else
 							style="font-style: italic;">&#xA0;cpop1</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>������һ����������Э�������Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>包含第一个操作数的协处理器寄存器</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
@@ -168,7 +168,7 @@ else
 							style="font-style: italic;">&#xA0;cpop2</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>�����ڶ�����������Э�������Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>包含第二个操作数的协处理器寄存器</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
@@ -176,26 +176,26 @@ else
 							style="font-style: italic;">&#xA0;cpopcode2</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>Э������ <em CLASS=SourceItalic>cpname</em> �Ĳ���</td></tr>
+<p CLASS=CellBodyLeft>协处理器 <em CLASS=SourceItalic>cpname</em> 的操作</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-<p>CDP ָ��ָʾЭ������ <em CLASS=SourceItalic>cpname</em> ��δ�������ڴ�� ARM* ���ļĴ����е�ִֵ�в�����CDP2 ָ��ָʾЭ������ <em CLASS=SourceItalic>cpname</em> ��δ�������ڴ�� ARM* ���ļĴ����е�ִֵ�в�������������Щָ�����������ִ�С�CDP2 ָ�����ڿ��ṩ����Ĳ�����ռ䣬��˶�Э����������߶����ر����á�condition ��������Чֵ������ָ��� NOP��</p>
+<p>CDP 指令指示协处理器 <em CLASS=SourceItalic>cpname</em> 对未包含在内存或 ARM* 核心寄存器中的值执行操作。CDP2 指令指示协处理器 <em CLASS=SourceItalic>cpname</em> 对未包含在内存或 ARM* 核心寄存器中的值执行操作。不过，这些指令仅可无条件执行。CDP2 指令由于可提供额外的操作码空间，因此对协处理器设计者而言特别有用。condition 必须是有效值；否则将指令当作 NOP。</p>
 
-<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs3"> ��ע </h3>
+<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs3"> 备注 </h3>
 </div>
 </div>
 
 <div>
-<p>���û��Э����������ִ�д�ָ�������δ�����ָ���쳣��</p>
+<p>如果没有协处理器可以执行此指令，则生成未定义的指令异常。</p>
 
-<h2>Ѱַģʽ</h2>
+<h2>寻址模式</h2>
 
-<p>�޲�������</p>
+<p>无操作数。</p>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -244,7 +244,7 @@ else
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>����</h2>
+<h2>编码</h2>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
@@ -333,7 +333,7 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funccdp<br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0<br> 4 <br> 5 <br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@ * * * CDP * * *<br> 7 <br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA cp_dp, CODE, READONLY<br> 9 <br> 10 &#xA0;&#xA0;00000000 &#xA0;&#xA0;EEA8E063 &#xA0;&#xA0;CDP &#xA0;&#xA0;&#xA0;p0, 5, c14, c8, &#xA0;c3, 3<br> 11 &#xA0;&#xA0;00000004 &#xA0;&#xA0;EEC9D184 &#xA0;&#xA0;CDP &#xA0;&#xA0;&#xA0;p1, 6, c13, c9, &#xA0;c4, 4<br> 12 &#xA0;&#xA0;00000008 &#xA0;&#xA0;EEEAC2C5 &#xA0;&#xA0;CDP &#xA0;&#xA0;&#xA0;p2, 7, c12, c10, c5, 6<br> 13 &#xA0;&#xA0;00000012 &#xA0;&#xA0;EE0BB323 &#xA0;&#xA0;CDP &#xA0;&#xA0;&#xA0;p3, 0, c11, c11, c3, 1<br> 14 <br> 15 &#xA0;&#xA0;00000016 &#xA0;&#xA0;FE647408 &#xA0;&#xA0;CDP2 &#xA0;&#xA0;p4, 3, c7, &#xA0;c4, &#xA0;c8, 0<br> 16 &#xA0;&#xA0;00000020 &#xA0;&#xA0;FE858529 &#xA0;&#xA0;CDP2 &#xA0;&#xA0;p5, 4, c8, &#xA0;c5, &#xA0;c9, 1<br> 17 &#xA0;&#xA0;00000024 &#xA0;&#xA0;FEA69640 &#xA0;&#xA0;CDP2 &#xA0;&#xA0;p6, 5, c9, &#xA0;c6, &#xA0;c0, 2<br> 18 &#xA0;&#xA0;00000028 &#xA0;&#xA0;FEC7A761 &#xA0;&#xA0;CDP2 &#xA0;&#xA0;p7, 6, c10, c7, &#xA0;c1, 3<br> 19 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END</span> </p>
 </div>

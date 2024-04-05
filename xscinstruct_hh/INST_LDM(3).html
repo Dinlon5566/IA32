@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_LDM(3).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:21 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>LDM(3) - ���ؼ���</title>
+<title>LDM(3) - 多重加载</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nL - ָ��\nLDM(3)");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nL - 指令\nLDM(3)");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,16 +104,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">LDM(3) - ���ؼ���</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">LDM(3) - 多重加载</h1>
 
 <div>
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p class=Preformatted><span class=Code>LDM[condition] addr_mode basereg[!], reg [,{<em CLASS=SourceItalic> reg</em> }]^,...</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,7 +126,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="notational_conventions.html#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 个条件之一。请参阅<a HREF="notational_conventions.html#Condition Code Status">条件代码状态</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -136,7 +136,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ѱַģʽ 4��<a href="Address_Load_and_Store_Multiple_Overview.html">���ؼ�����洢</a></td></tr>
+<p CLASS=CellBodyLeft>寻址模式 4：<a href="Address_Load_and_Store_Multiple_Overview.html">多重加载与存储</a></td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -146,7 +146,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft><em CLASS=SourceItalic>addr_mode</em> ʹ�õĻ�ַ�Ĵ��� 
+<p CLASS=CellBodyLeft><em CLASS=SourceItalic>addr_mode</em> 使用的基址寄存器 
  </td></tr>
 
 <tr>
@@ -157,7 +157,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>���� W λ [21]</td></tr>
+<p CLASS=CellBodyLeft>设置 W 位 [21]</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -167,26 +167,26 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ҫ���ص���Ч�Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>要加载的有效寄存器</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-�˸�ʽ�� LDM ָ����� <em CLASS=SourceItalic>reg</em> ָ���Ĳ��ֻ�����ȫ��ͨ�üĴ������ڴ˸�ʽ�У�PC ��������ַ����������ء���ǰ SPSR �����Ƶ� CPSR�������е� T λȷ��ִ������ ARM* ������ Thumb* ״̬������<em   CLASS=SourceItalic>reg</em> ָ���ļĴ�������������Ե͵��ߵ��ڴ��ַ���м��ء��ڴ˸�ʽ�£�LDM ָ��������ڴ��쳣���ء�<em CLASS=SourceItalic><br>condition</em> ��������Чֵ������ָ��� NOP�� 
+此格式的 LDM 指令加载 <em CLASS=SourceItalic>reg</em> 指定的部分或甚至全部通用寄存器。在此格式中，PC 被当作地址，它必须加载。当前 SPSR 将复制到 CPSR，后者中的 T 位确定执行是在 ARM* 还是在 Thumb* 状态继续。<em   CLASS=SourceItalic>reg</em> 指定的寄存器按照升序从自低到高的内存地址进行加载。在此格式下，LDM 指令可能用于从异常返回。<em CLASS=SourceItalic><br>condition</em> 必须是有效值；否则将指令当作 NOP。 
 </div>
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="Note.gif"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif"> 备注</h3>
 
-<p>�����ͼ������Ч�ļ��ػ�洢���ݷ��ʣ�������������ֹ�쳣�����ʵ��ϵͳ����Э������ʱ���ö����飬���Ҵ���λ [01:0] != 0b00 �ĵ�ַ�������ɶ����쳣���ڴ˸�ʽ�У�ָ��������û���ϵͳģʽ��</p>
+<p>如果试图进行无效的加载或存储数据访问，则生成数据终止异常。如果实现系统控制协处理器时启用对齐检查，并且存在位 [01:0] != 0b00 的地址，则生成对齐异常。在此格式中，指令不得用于用户或系统模式。</p>
 
-<h2>Ѱַģʽ</h2>
+<h2>寻址模式</h2>
 
-�����&ldquo;Ѱַģʽ 4 - ���ؼ�����洢&rdquo;�� 
+请参阅&ldquo;寻址模式 4 - 多重加载与存储&rdquo;。 
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -253,7 +253,7 @@ else
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� </h2>
+<h2>编码 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -354,13 +354,13 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.text <br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.globl funldm <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.align 0 <br> 4 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@ **** LDM (Addressing Mode 4) ****<br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; <br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Load multiple registers from base <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; address held in R13, which is the <br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; stack pointer,using a Full Descending <br> 9 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Stack arrangement <br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Also loads SPSR into CPSR<br> 11 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Note!PC must be in reg list <br> 12 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; <br> 13 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example,CODE,READONLY <br> 14 <br> 15 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label3 <br> 16 <br> 17 &#xA0;&#xA0;0000000 &#xA0;&#xA0;E8FD80E0 &#xA0;&#xA0;LDMFD &#xA0;&#xA0;R13!, {R5-R7,PC}^</span> </p>
 
-<h2>������Ϣ</h2>
+<h2>更多信息</h2>
 
-<a href="Address_Load_and_Store_Multiple_Overview.html">�����Ѱַģʽ 4�����ؼ�����洢 </a>
+<a href="Address_Load_and_Store_Multiple_Overview.html">请参阅寻址模式 4：多重加载与存储 </a>
 </div>
 </div>
 

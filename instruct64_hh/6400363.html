@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400363.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:48 GMT -->
 <head>
 
-<title>st 操作</title>
+<title>st 鎿嶄綔</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:56:59 PM">
 <meta name=topic-status content=Complete>
 <meta name=topic-priority content=2>
@@ -97,7 +97,7 @@ else
 		document.location.reload();
 //-->
 </script>
-st 操作 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a> 
+st 鎿嶄綔 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">瀛椾綋鎯緥</a> 
 
 <br>if (PR[<i>qp</i>]) { <br> size = spill_form ?8 : <i>sz</i>; <br> otype = (<i>sttype</i> == &lsquo;rel') ?RELEASE : UNORDERED; <br> <br> if (imm_base_update_form) <br> <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400444.htm">check_target_register</a>(<i>r3</i>); <br> if (<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400568.htm">GR</a>[<i>r3</i>].nat || (normal_form &amp;&amp; GR[<i>r2</i>].nat)) <br> register_nat_consumption_fault(WRITE); <br> <br> paddr = <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400547.htm">tlb_translate</a>(GR[<i>r3</i>], size, WRITE, PSR.cpl, &amp;mattr, <br> &amp;tmp_unused); <br> if (spill_form &amp;&amp; GR[<i>r2</i>].nat) <br> natd_gr_write(GR[<i>r2</i>], paddr, size, UM.be, mattr, otype, <i>sthint</i>); <br> else <br> <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400510.htm">mem_write</a>(GR[<i>r2</i>], paddr, size, UM.be, mattr, otype, <i>sthint</i>); <br> <br> if (spill_form) { <br> bit_pos = GR[<i>r</i>3]{8:3}; <br> <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400559.htm">AR</a>[UNAT]{bit_pos} = GR[<i>r2</i>].nat; <br> } <br> <br> <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400439.htm">alat_inval_multiple_entries</a>(paddr, size); <br> <br> if (imm_base_update_form) { <br> GR[<i>r3</i>] = GR[<i>r3</i>] + sign_ext(<i>imm9</i>, 9); <br> GR[<i>r3</i>].nat = 0; 
 

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc322.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:32:13 GMT -->
 <head>
 
-<title>WAIT/FWAIT - �ȴ�</title>
+<title>WAIT/FWAIT - 等待</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="03 6, 2002 11:43:54 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -27,7 +27,7 @@
 <meta name=page-count content=1>
 <meta name=layout-height content=708>
 <meta name=layout-width content=792>
-<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;��F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;��;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FLDZ--Load;EB;EC;EE;FLDZ;FCLEX;FNCLEX--Clear;FNCLEX*;PE;UE;OE;ZE;IE;FNCLEX;FNINIT*;coprocessor;FPUControlWord;FPUStatusWord;FPUTagWord;FPUDataPointer;FPUInstructionPointer;FPULastInstructionOpcode;FSAVE;FNSAVE--Store;FNSAVE*;FNSAVE;FNINIT--Initialize;coprocessors;FPUs;FWAIT;DEST[FPUControlWord;DEST[FPUStatusWord;DEST[FPUTagWord;DEST[FPUDataPointer;DEST[FPUInstructionPointer;DEST[FPULastInstructionOpcode;nonwritable;FSTCW;FNSTCW--Store;FNSTCW*;FNSTCW;FNSTENV--Store;FSTENV;FNSTENV*;FNSTENV;FNSTSW--Store;FNSTSW*;FNSTSW;FPREM;FXAM;denormalized;MOV--Move;ModR;M;m;PG;PGE;PSE;PAE;PDPTRs;FSTP--Store;FUCOMIP--Compare;FUCOMIP;FUCOMPP--Unordered;FWAIT--Wait;MP">
+<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;±F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;±;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FLDZ--Load;EB;EC;EE;FLDZ;FCLEX;FNCLEX--Clear;FNCLEX*;PE;UE;OE;ZE;IE;FNCLEX;FNINIT*;coprocessor;FPUControlWord;FPUStatusWord;FPUTagWord;FPUDataPointer;FPUInstructionPointer;FPULastInstructionOpcode;FSAVE;FNSAVE--Store;FNSAVE*;FNSAVE;FNINIT--Initialize;coprocessors;FPUs;FWAIT;DEST[FPUControlWord;DEST[FPUStatusWord;DEST[FPUTagWord;DEST[FPUDataPointer;DEST[FPUInstructionPointer;DEST[FPULastInstructionOpcode;nonwritable;FSTCW;FNSTCW--Store;FNSTCW*;FNSTCW;FNSTENV--Store;FSTENV;FNSTENV*;FNSTENV;FNSTSW--Store;FNSTSW*;FNSTSW;FPREM;FXAM;denormalized;MOV--Move;ModR;M;m;PG;PGE;PSE;PAE;PDPTRs;FSTP--Store;FUCOMIP--Compare;FUCOMIP;FUCOMPP--Unordered;FWAIT--Wait;MP">
 
 
 <!--(Links)=========================================================-->
@@ -94,7 +94,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nW - ָ��\nWAIT/FWAIT - �ȴ�");
+	addTocInfo("参考\n指令集\nIA-32 指令\nW - 指令\nWAIT/FWAIT - 等待");
 
 	}
 	if (window.writeBtnStyle)
@@ -117,7 +117,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>WAIT/FWAIT - �ȴ�</h1>
+<h1>WAIT/FWAIT - 等待</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -125,13 +125,13 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">������</td>
+	style="margin-bottom: 0;">操作码</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">说明</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -142,7 +142,7 @@ else
 	style="margin-bottom: 0;">WAIT</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">���δ���������븡���쳣��</td></tr>
+	style="margin-bottom: 0;">检查未决的无掩码浮点异常。</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -153,38 +153,38 @@ else
 	style="margin-bottom: 0;">FWAIT</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">���δ���������븡���쳣��</td></tr>
+	style="margin-bottom: 0;">检查未决的无掩码浮点异常。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-<p>ʹ�������ڼ���֮ǰ��鲢����δ���������븡���쳣����FWAIT �� WAIT ��������Ƿ�����</p>
+<p>使处理器在继续之前检查并处理未决的无掩码浮点异常。（FWAIT 是 WAIT 的替代助记符）。</p>
 
-<p>��ָ����ڴ����ٽ������е��쳣ͬ���ǳ����á��ڸ���ָ��֮���д WAIT ָ��ʱ������ȷ���ڴ������ܹ��޸�ָ��Ľ��֮ǰ��ָ����ܴ������κ������븡���쳣���Ѿ��õ������������й�ʹ�� WAIT/FWAIT ָ�����ϸ��Ϣ�������&ldquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 							face=Verdana>IA-32 Ӣ�ض�(R) ��ϵ�ṹ����������Ա�ֲ�</font>&rdquo;�� 1 ���� 7 ���б���Ϊ&ldquo;�����쳣ͬ��&rdquo;�Ĳ��֡�</p>
+<p>此指令对于代码临界区域中的异常同步非常有用。在浮点指令之后编写 WAIT 指令时，可以确保在处理器能够修改指令的结果之前，指令可能触发的任何无掩码浮点异常都已经得到处理。如需有关使用 WAIT/FWAIT 指令的详细信息，请参阅&ldquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 							face=Verdana>IA-32 英特尔(R) 体系结构软件开发人员手册</font>&rdquo;第 1 卷第 7 章中标题为&ldquo;浮点异常同步&rdquo;的部分。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted>CheckForPendingUnmaskedFloatingPointExceptions;</p>
 
-<h2>Ӱ��� FPU ��־</h2>
+<h2>影响的 FPU 标志</h2>
 
-<p>C0��C1��C2 �� C3 ��־δ���塣</p>
+<p>C0、C1、C2 及 C3 标志未定义。</p>
 
-<h2>�����쳣</h2>
+<h2>浮点异常</h2>
 
-<p>�ޡ�</p>
+<p>无。</p>
 
-<h2>����ģʽ�쳣</h2>
+<h2>保护模式异常</h2>
 
-<p>#NM - CR0 �е� MP �� TS ����Ϊ 1��</p>
+<p>#NM - CR0 中的 MP 与 TS 设置为 1。</p>
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>实地址模式异常</h2>
 
-<p>#NM - CR0 �е� MP �� TS ����Ϊ 1��</p>
+<p>#NM - CR0 中的 MP 与 TS 设置为 1。</p>
 
-<h2>�� 8086 ģʽ�쳣</h2>
+<h2>虚 8086 模式异常</h2>
 
-<p class="whs3">#NM - CR0 �е� MP �� TS ����Ϊ 1�� </p>
+<p class="whs3">#NM - CR0 中的 MP 与 TS 设置为 1。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

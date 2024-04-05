@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400318.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
 
-<title>pavg - ����ƽ��ָ��</title>
+<title>pavg - 并行平均指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:55:36 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nP - ָ��\npavg - ����ƽ��ָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nP - 指令\npavg - 并行平均指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,16 +116,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">����ƽ��ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">并行平均指令</h1>
 
 <p><span style="font-weight: bold;"><B>pavg</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400319.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400319.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a>
  </p>
 
-<p>ָ������ A</p>
+<p>指令类型 A</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) pavg1 <span style="font-style: italic;"><I>r1</I></span> = <span style="font-style: italic;"><I>r2</I></span>, <span style="font-style: italic;"><I>r3</I></span> normal form, one_byte_form</p>
 
@@ -146,22 +146,22 @@ kadovFilePopupInit('A2');
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>说明</B></span></p>
 
-<p><span style="x-condition: eclipse;">GR</span><span style="font-style: italic;"><I>r2</I></span> ���޷�������Ԫ���� GR <span style="font-style: italic;"><I>r3</I></span> ���޷�������Ԫ����ӡ�<script type="text/javascript"
+<p><span style="x-condition: eclipse;">GR</span><span style="font-style: italic;"><I>r2</I></span> 的无符号数据元素与 GR <span style="font-style: italic;"><I>r3</I></span> 的无符号数据元素相加。<script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A3');
-//--></script>Ȼ�󽫼ӷ��Ľ�������໥����������һλ��ÿ��Ԫ�صĸ�λ�����ܺ͵Ľ�λ��Ϊ��ֹ�����ۼ�ȡ������ִ��ƽ���㷨���޷��Ž������ GR <span style="font-style: italic;"><I>r1</I></span> �С�</p>
+//--></script>然后将加法的结果各自相互独立地右移一位。每个元素的高位填入总和的进位。为防止出现累计取整误差，会执行平均算法。无符号结果放入 GR <span style="font-style: italic;"><I>r1</I></span> 中。</p>
 
-<p>ƽ������Ĺ�����ʽ���¡��� normal_form �У������Ӧ�ܺ͵��������λ��������һλ�� 1����ÿ������ĵ�λ����Ϊ 1���� raz_form �У�ͨ����ÿ���ܺͼ� 1����ƽ��ֵ���б���ȡ����</p>
+<p>平均运算的工作方式如下。在 normal_form 中，如果相应总和的两个最低位中至少有一位是 1，则每个结果的低位设置为 1。在 raz_form 中，通过向每个总和加 1，对平均值进行背零取整。</p>
 
-<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400079.htm" style="x-condition: eclipse;">�����˴��鿴˫�ֽ���ʽ�Ĳ���ƽ��ָ���ʾ����</a><script 
+<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400079.htm" style="x-condition: eclipse;">单击此处查看双字节形式的并行平均指令的示例。</a><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A4');
 //--></script></p>
 
-<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400080.htm" style="x-condition: eclipse;">�����˴��鿴˫�ֽ���ʽ�ı���ȡ���Ĳ���ƽ��ָ���ʾ����</a><script 
+<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400080.htm" style="x-condition: eclipse;">单击此处查看双字节形式的背零取整的并行平均指令的示例。</a><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A5');

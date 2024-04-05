@@ -3,7 +3,7 @@ var gaHSLoad=new Array();
 var gnMinIdx=0;
 var gnInsIdx=-1;
 var gsLoadingDivID="LoadingDiv";
-var gsLoadingMsg="正在加载，单击此处可取消...";
+var gsLoadingMsg="姝ｅ湪鍔犺浇锛屽崟鍑绘澶勫彲鍙栨秷...";
 var gaProj=null;
 var gaTocs=new Array();
 var goChunk=null;
@@ -270,7 +270,7 @@ function writeBook(nIdx)
 		{
 			sHTML+="parent><p><nobr><a id=\""+getBookId(nIdx)+"\" href=\"javascript:void(0);\" onfocus=\"markBook("+nIdx+");\" onclick=\"";
 			sHTML+="insertBookItems("+nIdx+", "+getItemContentsNum(nIdx);
-			sHTML+=");return false;\" title=\""+sName+"\"><img alt=\"书本\" name=\""+getBId(nIdx)+"\" src=\""+sIcon+"\" border=0 align=\"absmiddle\">";
+			sHTML+=");return false;\" title=\""+sName+"\"><img alt=\"涔︽湰\" name=\""+getBId(nIdx)+"\" src=\""+sIcon+"\" border=0 align=\"absmiddle\">";
 			sHTML+="&nbsp;"+sName+"</a></nobr></p></div>";
 			var sURL=_textToHtml_nonbsp(getItemURL(nIdx));
 			if(sURL!="")
@@ -427,9 +427,9 @@ function writeAnItem(nIdx)
 	var sHTML="<p><nobr><a id=\""+getItemId(nIdx)+"\" onfocus=\"markItem("+nIdx+");\""
 	var sAltString="";
 	if(nItemType&2)
-		sAltString="页面";
+		sAltString="椤甸潰";
 	else
-		sAltString="远程页面";
+		sAltString="杩滅▼椤甸潰";
 	if(sTarget!="")
 		sHTML+="target=\""+sTarget+"\" ";
 	sHTML+="href=\""+_textToHtml_nonbsp(getItemURL(nIdx))+"\" title=\""+sName+"\"><img alt=\""+sAltString+"\" src=\""+sIcon+"\" border=0 align=\"absmiddle\">&nbsp;"+sName+"</a></nobr></p>";
@@ -1478,8 +1478,8 @@ if(window.gbWhUtil&&window.gbWhVer&&window.gbWhMsg&&window.gbWhProxy)
 	RegisterListener2(this,WH_MSG_PROJECTREADY);
 	RegisterListener2(this,WH_MSG_SYNCTOC);
 	RegisterListener2(this,WH_MSG_SHOWTOC);
-	goFont=new whFont("宋体","9pt","#000000","normal","normal","none");
-	goHFont=new whFont("宋体","9pt","#007f00","normal","normal","underline");
+	goFont=new whFont("瀹嬩綋","9pt","#000000","normal","normal","none");
+	goHFont=new whFont("瀹嬩綋","9pt","#007f00","normal","normal","underline");
 
 	window.onload=window_OnLoad;
 	window.onbeforeunload=window_BUnload;

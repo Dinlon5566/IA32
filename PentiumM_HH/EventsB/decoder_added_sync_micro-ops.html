@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/decoder_added_sync_micro-ops.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:04 GMT -->
 <head>
 
-<title>���������ӵ�ͬ��΢����</title>
+<title>解码器添加的同步微操作</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="09 25, 2002 3:16:58 PM">
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
 <meta name=generator-major-version content=0.1>
@@ -76,7 +76,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M �������¼�\n�������¼�\n���������ӵ�ͬ��΢����");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) M 处理器\n英特尔(R) 奔腾(R) M 处理器事件\n解码器事件\n解码器添加的同步微操作");
 
 	}
 	if (window.writeBtnStyle)
@@ -99,15 +99,15 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>���������ӵ�ͬ��΢����</h1>
+<h1>解码器添加的同步微操作</h1>
 
 <p class="whs1">EMON_SYNCH_UOPS</p>
 
-<p>���¼�ͳ�ƽ��������ӵ�ͬ��΢������������ʽʹ�� ESP���� <span class=Code>PUSH��POP��CALL</span> �� <span class=Code>RET</span> ָ�����ʽʹ�� ESP�����磺<span class=Code>mov ebp, esp</span>��֮�䷢��ת��ʱ������������һ��ͬ��΢������</p>
+<p>此事件统计解码器添加的同步微操作数。在隐式使用 ESP（如 <span class=Code>PUSH、POP、CALL</span> 及 <span class=Code>RET</span> 指令）与显式使用 ESP（例如：<span class=Code>mov ebp, esp</span>）之间发生转换时，解码器添加一个同步微操作。</p>
 
-<p>������ٽ��������ӵ�ͬ��΢��������Ҫ������㣬���Խ���ʽʹ�� ESP ��ָ����ϵ�һ�𣬽���ʽʹ�� ESP ��ָ����ϵ�һ���Ա��������ʽ����ʽʹ�� ESP ֮�䷢����ת���� </p>
+<p>建议减少解码器添加的同步微操作数。要做到这点，尝试将隐式使用 ESP 的指令组合到一起，将显式使用 ESP 的指令组合到一起，以便减少在隐式与显式使用 ESP 之间发生的转换。 </p>
 
-<p>�����й���ϸ��Ϣ������� <span style="font-style: italic;"><I>Optimization Guide</I></span>���Ż�ָ�ϣ���</p>
+<p>如需有关详细信息，请参阅 <span style="font-style: italic;"><I>Optimization Guide</I></span>（优化指南）。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc39.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:44 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>CMPS/CMPSB/CMPSW/CMPSD - �Ƚ��ַ���������</title>
+<title>CMPS/CMPSB/CMPSW/CMPSD - 比较字符串操作数</title>
 
 <!--(Meta)==========================================================-->
 
@@ -96,7 +96,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nC - ָ��\nCMPS/CMPSB/CMPSW/CMPSD - �Ƚ��ַ���������");
+	addTocInfo("参考\n指令集\nIA-32 指令\nC - 指令\nCMPS/CMPSB/CMPSW/CMPSD - 比较字符串操作数");
 
 	}
 	if (window.writeBtnStyle)
@@ -119,7 +119,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>CMPS/CMPSB/CMPSW/CMPSD - �Ƚ��ַ���������</h1>
+<h1>CMPS/CMPSB/CMPSW/CMPSD - 比较字符串操作数</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -127,13 +127,13 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">������</td>
+	style="margin-bottom: 0;">操作码</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">说明</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -144,7 +144,7 @@ else
 	style="margin-bottom: 0;">CMPS m8, m8</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�Ƚ�λ�ڵ�ַ DS:(E)SI ���ֽ���λ�ڵ�ַ ES:(E)DI ���ֽڣ�����Ӧ����״̬��־</td></tr>
+	style="margin-bottom: 0;">比较位于地址 DS:(E)SI 的字节与位于地址 ES:(E)DI 的字节，并相应设置状态标志</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -155,7 +155,7 @@ else
 	style="margin-bottom: 0;">CMPS m16, m16</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�Ƚ�λ�ڵ�ַ DS:(E)SI ������λ�ڵ�ַ ES:(E)DI ���֣�����Ӧ����״̬��־</td></tr>
+	style="margin-bottom: 0;">比较位于地址 DS:(E)SI 的字与位于地址 ES:(E)DI 的字，并相应设置状态标志</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -166,7 +166,7 @@ else
 	style="margin-bottom: 0;">CMPS m32, m32</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�Ƚ�λ�ڵ�ַ DS:(E)SI ��˫����λ�ڵ�ַ ES:(E)DI ��˫�֣�����Ӧ����״̬��־</td></tr>
+	style="margin-bottom: 0;">比较位于地址 DS:(E)SI 的双字与位于地址 ES:(E)DI 的双字，并相应设置状态标志</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -177,7 +177,7 @@ else
 	style="margin-bottom: 0;">CMPSB</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�Ƚ�λ�ڵ�ַ DS:(E)SI ���ֽ���λ�ڵ�ַ ES:(E)DI ���ֽڣ�����Ӧ����״̬��־</td></tr>
+	style="margin-bottom: 0;">比较位于地址 DS:(E)SI 的字节与位于地址 ES:(E)DI 的字节，并相应设置状态标志</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -188,7 +188,7 @@ else
 	style="margin-bottom: 0;">CMPSW</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�Ƚ�λ�ڵ�ַ DS:(E)SI ������λ�ڵ�ַ ES:(E)DI ���֣�����Ӧ����״̬��־</td></tr>
+	style="margin-bottom: 0;">比较位于地址 DS:(E)SI 的字与位于地址 ES:(E)DI 的字，并相应设置状态标志</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -199,22 +199,22 @@ else
 	style="margin-bottom: 0;">CMPSD</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�Ƚ�λ�ڵ�ַ DS:(E)SI ��˫����λ�ڵ�ַ ES:(E)DI ��˫�֣�����Ӧ����״̬��־</td></tr>
+	style="margin-bottom: 0;">比较位于地址 DS:(E)SI 的双字与位于地址 ES:(E)DI 的双字，并相应设置状态标志</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-<p>�Ƚϵ�һ��Դ������ָ�����ֽڡ��ֻ�˫����ڶ���Դ������ָ�����ֽڡ��ֻ�˫�֣������ݽ������ EFLAGS �Ĵ����е�״̬��־������Դ��������λ���ڴ档��һ��Դ�������ĵ�ַ�� DS:ESI �� DS:SI �Ĵ����ж�ȡ������ȡ����ָ��ĵ�ַ��С���ԣ��ֱ�Ϊ 32 �� 16�����ڶ���Դ�������ĵ�ַ�� ES:EDI �� ES:DI �Ĵ����ж�ȡ������Ҳȡ����ָ��ĵ�ַ��С���ԣ���DS �ο����ÿ��ǰ׺���ǣ��� ES �β��ܸ��ǡ�</p>
+<p>比较第一个源操作数指定的字节、字或双字与第二个源操作数指定的字节、字或双字，并根据结果设置 EFLAGS 寄存器中的状态标志。两个源操作数都位于内存。第一个源操作数的地址从 DS:ESI 或 DS:SI 寄存器中读取（具体取决于指令的地址大小属性，分别为 32 或 16）。第二个源操作数的地址从 ES:EDI 或 ES:DI 寄存器中读取（具体也取决于指令的地址大小属性）。DS 段可以用跨段前缀覆盖，但 ES 段不能覆盖。</p>
 
-<p>�ڻ����뼶�𣬴�ָ����������������ʽ��&ldquo;��ʽ������&rdquo;��ʽ��&ldquo;�޲�����&rdquo;��ʽ����ʽ��������ʽ���� CMPS ���Ƿ�ָ����������ȷָ������Դ�����������Դ������Ӧ���Ǳ�ʾԴ������ֵ��С��λ�õķ��š��ṩ����ʽ��������ʽ��Ϊ�˱��ڼ�¼��������ע�⣬����ʽ�ṩ�ļ�¼���ܻ�������⡣Ҳ����˵��Դ���������ű���ָ�����������ֽڡ��ֻ�˫�֣�����ȷ<span style="font-weight: bold;"><B>����</B></span>����С����������ָ����ȷ��<span style="font-weight: bold;"><B>λ��</B></span>��Դ��������λ�������� DS:(E)SI �� ES:(E)DI �Ĵ���ָ�������ұ�����ִ���ַ����Ƚ�ָ��֮ǰ��ȷ������Щ�Ĵ�����</p>
+<p>在汇编代码级别，此指令允许采用两种形式：&ldquo;显式操作数&rdquo;形式与&ldquo;无操作数&rdquo;形式。显式操作数形式（由 CMPS 助记符指定）可以明确指定两个源操作数。这里，源操作数应该是表示源操作数值大小与位置的符号。提供此显式操作数形式是为了便于记录；不过请注意，此形式提供的记录可能会令人误解。也就是说，源操作数符号必须指定操作数（字节、字或双字）的正确<span style="font-weight: bold;"><B>类型</B></span>（大小），但不必指定正确的<span style="font-weight: bold;"><B>位置</B></span>。源操作数的位置总是由 DS:(E)SI 与 ES:(E)DI 寄存器指定，而且必须在执行字符串比较指令之前正确加载这些寄存器。</p>
 
-<p>�޲�������ʽ�ṩ&ldquo;�����ʽ&rdquo;���ֽڡ��ּ�˫�ְ� CMPS ָ�������������ٶ� DS:(E)SI �� ES:(E)DI �Ĵ���ָ��Դ��������λ�á�Դ�������Ĵ�Сʹ�����Ƿ���ѡ��CMPSB���ֽڱȽϣ���CMPSW���ֱȽϣ��� CMPSD��˫�ֱȽϣ���</p>
+<p>无操作数形式提供&ldquo;简短形式&rdquo;的字节、字及双字版 CMPS 指令。这里，处理器还假定 DS:(E)SI 与 ES:(E)DI 寄存器指定源操作数的位置。源操作数的大小使用助记符来选择：CMPSB（字节比较）、CMPSW（字比较）或 CMPSD（双字比较）。</p>
 
-<p>�Ƚ�֮�󣬸��� EFLAGS �Ĵ����� DF ��־�����ã�(E)SI �� (E)DI �Ĵ������Զ�������ݼ�������� DF ��־Ϊ 0���� (E)SI �� (E)DI �Ĵ������������ DF ��־Ϊ 1���� (E)SI �� (E)DI �Ĵ����ݼ����������ֽڲ������Ĵ���������ݼ� 1�������ֲ�����������ݼ� 2������˫�ֲ������������ݼ� 4��</p>
+<p>比较之后，根据 EFLAGS 寄存器中 DF 标志的设置，(E)SI 与 (E)DI 寄存器会自动递增或递减。（如果 DF 标志为 0，则 (E)SI 与 (E)DI 寄存器递增；如果 DF 标志为 1，则 (E)SI 与 (E)DI 寄存器递减）。对于字节操作，寄存器递增或递减 1；对于字操作，递增或递减 2；对于双字操作，则递增或递减 4。</p>
 
-<p>ͨ���� REP ǰ׺��ͷ��CMPS��CMPSB��CMPSW �� CMPSD ָ������ڳɿ�Ƚ� ECX �ֽڡ��ֻ�˫�֡���������������������� LOOP �ṹ��ʹ����Щָ��˽ṹ���ڽ�����һ���Ƚ�֮ǰ������״̬��־������ִ��һЩ�����������й� REP ǰ׺��˵��������ı��µ� <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct32_hh/vc276.htm">REP/REPE/REPZ/REPNE/REPNZ - �ظ��ַ�������ǰ׺</a>��</p>
+<p>通过以 REP 前缀打头，CMPS、CMPSB、CMPSW 及 CMPSD 指令可用于成块比较 ECX 字节、字或双字。不过，更常见的情况是在 LOOP 结构中使用这些指令，此结构会在进行下一个比较之前，根据状态标志的设置执行一些操作。如需有关 REP 前缀的说明，请参阅本章的 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct32_hh/vc276.htm">REP/REPE/REPZ/REPNE/REPNZ - 重复字符串操作前缀</a>。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted>temp <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -298,35 +298,35 @@ else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'>");}
 //--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript> (E)DI - 4; <br> FI;<br> FI;</p>
 
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
-<p>CF��OF��SF��ZF��AF �� PF ��־���ݱȽϵ���ʱ������á�</p>
+<p>CF、OF、SF、ZF、AF 及 PF 标志根据比较的临时结果设置。</p>
 
-<h2>����ģʽ�쳣</h2>
+<h2>保护模式异常</h2>
 
-<p>#GP(0) - ����ڴ��������Ч��ַ���� CS��DS��ES��FS �� GS �����ơ���� DS��ES��FS �� GS �Ĵ��������յĶ�ѡ������</p>
+<p>#GP(0) - 如果内存操作数有效地址超出 CS、DS、ES、FS 或 GS 段限制。如果 DS、ES、FS 或 GS 寄存器包含空的段选择器。</p>
 
-<p>#SS(0) - ����ڴ��������Ч��ַ���� SS �����ơ�</p>
+<p>#SS(0) - 如果内存操作数有效地址超出 SS 段限制。</p>
 
-<p>#PF(�������) - �������ҳ����</p>
+<p>#PF(错误代码) - 如果发生页错误。</p>
 
-<p>#AC(0) - ������ö����鲢�ڵ�ǰ��Ȩ����Ϊ 3 ʱ����δ������ڴ����á�</p>
+<p>#AC(0) - 如果启用对齐检查并在当前特权级别为 3 时进行未对齐的内存引用。</p>
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>实地址模式异常</h2>
 
-<p>#GP - ����ڴ��������Ч��ַ���� CS��DS��ES��FS �� GS �����ơ�</p>
+<p>#GP - 如果内存操作数有效地址超出 CS、DS、ES、FS 或 GS 段限制。</p>
 
-<p>#SS - ����ڴ��������Ч��ַ���� SS �����ơ�</p>
+<p>#SS - 如果内存操作数有效地址超出 SS 段限制。</p>
 
-<h2>�� 8086 ģʽ�쳣</h2>
+<h2>虚 8086 模式异常</h2>
 
-<p>#GP(0) - ����ڴ��������Ч��ַ���� CS��DS��ES��FS �� GS �����ơ�</p>
+<p>#GP(0) - 如果内存操作数有效地址超出 CS、DS、ES、FS 或 GS 段限制。</p>
 
-<p>#SS(0) - ����ڴ��������Ч��ַ���� SS �����ơ�</p>
+<p>#SS(0) - 如果内存操作数有效地址超出 SS 段限制。</p>
 
-<p>#PF(�������) - �������ҳ����</p>
+<p>#PF(错误代码) - 如果发生页错误。</p>
 
-<p class="whs4">#AC(0) - ��������ö����������½���δ������ڴ����á� </p>
+<p class="whs4">#AC(0) - 如果在启用对齐检查的情况下进行未对齐的内存引用。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/XScale_HH/LipsXSc/CDT_RES.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:45 GMT -->
 <head>
 
-<title>WMMX ���ݴ������ͷ�/����</title>
+<title>WMMX 数据传输结果惩罚/警告</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="04 14, 2003 11:31:06 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -83,7 +83,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض� XScale(R) ΢��ϵ�ṹ \nӢ�ض�(R) ���� MMX(TM) ָ��ͷ�\nWMMX ���ݴ������ͷ�/����");
+	addTocInfo("参考\n处理器事件与建议\n英特尔 XScale(R) 微体系结构 \n英特尔(R) 无线 MMX(TM) 指令集惩罚\nWMMX 数据传输结果惩罚/警告");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,25 +106,25 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="XS_logo.gif" alt="Ӣ�ض� XScale(R) ��������" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">WMMX ���ݴ������ͷ�/����</h1>
+<h1><img src="XS_logo.gif" alt="英特尔 XScale(R) 技术主题" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">WMMX 数据传输结果惩罚/警告</h1>
 
 <h2>XSCW_CDT_RES</h2>
 
-<h3>����</h3>
+<h3>解释</h3>
 
-<p>ָ� WMMX ���ݴ���ָ��Ľ������Դ���������ڽ������֮ǰ���ܵ���ͣ��ָ��ִ��Ҫ���⻨�Ѽ������ڡ�</p>
-
-<h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs2"> ����</h3>
-
-<p class="whs3">������ܣ������¸�ָ���������ʹ�üĴ�����ָ��ִ��֮ǰ�Ķ����ӳ����ڡ�</p>
+<p>指令将 WMMX 数据传输指令的结果用作源操作数。在结果出来之前，管道暂停，指令执行要额外花费几个周期。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> ��ע</h3>
+	style="margin-left: 40px;"><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs2"> 建议</h3>
 
-<p class="whs3">��&ldquo;�ͷ�/����&rdquo;��������&ldquo;Ӣ�ض�(R) ���� MMX&#x2122; ָ�&rdquo;��</p>
+<p class="whs3">如果可能，请重新给指令排序，以填补使用寄存器的指令执行之前的额外延迟周期。</p>
 
-<h3>ʾ�� 1 </h3>
+<h3 class=NoteTipHead
+	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> 备注</h3>
+
+<p class="whs3">此&ldquo;惩罚/警告&rdquo;仅适用于&ldquo;英特尔(R) 无线 MMX&#x2122; 指令集&rdquo;。</p>
+
+<h3>示例 1 </h3>
 
 <p class=Preformatted><span class=Code>TMRRC &#xA0;&#xA0;&#xA0;R4, R5, wR10</span></p>
 
@@ -132,7 +132,7 @@ else
 
 <p class=Preformatted><span class=Code>ADD &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;R6, R5, R3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;; XSC_REG_R5, XSCW_CDT_RES</span></p>
 
-<h3>ʾ�� 2</h3>
+<h3>示例 2</h3>
 
 <p class=Preformatted><span class=Code>TMIA &#xA0;&#xA0;&#xA0;&#xA0;wR0, R4, R5</span></p>
 

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/about_instruction_dispersal_events.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:50 GMT -->
 <head>
 
-<title>����ָ������¼�</title>
+<title>关于指令分派事件</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta NAME=MS-HAID CONTENT="instruction dispersal events 642">
 <meta name=date content="06 17, 2002 10:59:30 AM">
 <meta name=topic-status content="In Progress">
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\nָ������¼�\n����ָ������¼�");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 安腾(R) 2 处理器\n英特尔(R) 安腾(R) 2 处理器事件\n指令分派事件\n关于指令分派事件");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,11 +105,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1 class=Overview><img src="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/itanium2_60b.gif" alt="����(R) 2 ����������" x-maintain-ratio="TRUE" width="48px" height="60px" align="right" border="0" class="img_whs1">����ָ������¼�</h1>
+<h1 class=Overview><img src="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/itanium2_60b.gif" alt="安腾(R) 2 处理器主题" x-maintain-ratio="TRUE" width="48px" height="60px" align="right" border="0" class="img_whs1">关于指令分派事件</h1>
 
-<p>ָ����ߴ��ݵ�ִ�к��ģ������ɵ�����(R) 2 �������ĸ������ܵ�Ԫ������(R) 2 ������ÿ��ʱ�����ڿɷ�������� 0-6 ��ָ������¼�ּ�����û��˽�ָ�������Ч�ط��ɣ��Լ�Ϊ�η���ʱû�з���ȫ��Ч�ܡ�����ʱδ�ܷ���ȫ��Ч�ܵ�ԭ�����������һ�� <a HREF="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/disp_stalled.html">DISP_STALLED</a> ���������ڷ�����ͣ��ÿ��ʱ�����ڣ�����ռ 6 ��ָ��ڡ������ĸ�ԭ���� <a HREF="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/syll_not_dispersed.html">SYLL_NOT_DISPERSED</a> ����������Ӳ����Ƶķ�ʽ��<a HREF="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/syll_not_dispersed.html">SYLL_NOT_DISPERSED</a> ���ܰ�����ʽ����ʽλ���µ�ͳ�ƹ��������ܴ�����Ӧ�ú�С���� <a HREF="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/syll_overcount.html">SYLL_OVERCOUNT</a> ��Ϊ���ṩһ��׼ȷ�ļ�����</p>
+<p>指令缓存线传递到执行核心，并分派到安腾(R) 2 处理器的各个功能单元。安腾(R) 2 处理器每个时钟周期可发出或分派 0-6 个指令。以下事件旨在让用户了解指令如何有效地分派，以及为何分派时没有发挥全部效能。分派时未能发挥全部效能的原因有五个。其一由 <a HREF="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/disp_stalled.html">DISP_STALLED</a> 衡量。对于分派暂停的每个时钟周期，分派占 6 个指令节。另外四个原因由 <a HREF="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/syll_not_dispersed.html">SYLL_NOT_DISPERSED</a> 衡量。由于硬件设计的方式，<a HREF="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/syll_not_dispersed.html">SYLL_NOT_DISPERSED</a> 可能包含隐式与显式位导致的统计过量；尽管此数字应该很小，但 <a HREF="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/syll_overcount.html">SYLL_OVERCOUNT</a> 将为它提供一个准确的计数。</p>
 
-<p>��Щ�¼�֮��Ĺ�ϵ���£�6*(<a HREF="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/CPU_CYCLES.html">CPU_CYCLES</a>-<a HREF="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/disp_stalled.html">DISP_STALLED</a>) = <a HREF="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/inst_dispersed.html">INST_DISPERSED</a> + <a HREF="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/syll_not_dispersed.html">SYLL_NOT_DISPERSED</a>.ALL -<a HREF="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/syll_overcount.html">SYLL_OVERCOUNT</a>.ALL</p>
+<p>这些事件之间的关系如下：6*(<a HREF="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/CPU_CYCLES.html">CPU_CYCLES</a>-<a HREF="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/disp_stalled.html">DISP_STALLED</a>) = <a HREF="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/inst_dispersed.html">INST_DISPERSED</a> + <a HREF="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/syll_not_dispersed.html">SYLL_NOT_DISPERSED</a>.ALL -<a HREF="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/syll_overcount.html">SYLL_OVERCOUNT</a>.ALL</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

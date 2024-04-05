@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_TEQ.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:43 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>TEQ - �������</title>
+<title>TEQ - 测试相等</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nS - ָ��\nTEQ");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nS - 指令\nTEQ");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,16 +104,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">TEQ - �������</h1>
+<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">TEQ - 测试相等</h1>
 
 <div>
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p class=Preformatted><span CLASS=Code>TEQ[condition] op1, addr_mode</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,7 +126,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 个条件之一。请参阅<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">条件代码状态</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -136,7 +136,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>����Դ�������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含源操作数的寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -146,20 +146,20 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ѱַģʽ 1��<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">���ݴ���������</a></td></tr>
+<p CLASS=CellBodyLeft>寻址模式 1：<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">数据处理操作数</a></td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-TEQ ָ��� <em   CLASS=SourceItalic>op1</em> ͬ <em CLASS=SourceItalic>addr_mode</em> ��ִֵ����λ&ldquo;���&rdquo;��������־����и��£�����洢�� dest�������ʹ�ú�����ָ�����ȥִ�С�condition ��������Чֵ������ָ��� NOP�� 
+TEQ 指令对 <em   CLASS=SourceItalic>op1</em> 同 <em CLASS=SourceItalic>addr_mode</em> 的值执行逐位&ldquo;异或&rdquo;。条件标志会进行更新，结果存储到 dest。这可以使得后续的指令按条件去执行。condition 必须是有效值；否则将指令当作 NOP。 
 
-<h2>Ѱַģʽ</h2>
+<h2>寻址模式</h2>
 
-<p CLASS=Body>�����&ldquo;Ѱַģʽ 1 - ���ݴ���������&rdquo;��</p>
+<p CLASS=Body>请参阅&ldquo;寻址模式 1 - 数据处理操作数&rdquo;。</p>
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -226,7 +226,7 @@ TEQ ָ��� <em   CLASS=SourceItalic>op1</em> ͬ <em CLASS=SourceItalic>addr_mode
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� </h2>
+<h2>编码 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -333,13 +333,13 @@ TEQ ָ��� <em   CLASS=SourceItalic>op1</em> ͬ <em CLASS=SourceItalic>addr_mode
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funteq <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0 <br> 4 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@ **** TEQ (Addressing Mode 1) ****<br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; <br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example,CODE,READONLY <br> 7 <br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1 <br> 9 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Do a bitwise exclusive OR between R0 &amp; R1<br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; setting condition flags only<br> 11 &#xA0;&#xA0;00000000 &#xA0;&#xA0;F3B45678 &#xA0;&#xA0;MOV &#xA0;&#xA0;R0, #Ox3<br> 12 &#xA0;&#xA0;00000004 &#xA0;&#xA0;F3B45678 &#xA0;&#xA0;MOV &#xA0;&#xA0;R1, #OxA<br> 13 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E1300001 &#xA0;&#xA0;TEQ &#xA0;&#xA0;R0, R1 <br> 14 <br> 15 <br> 16 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Do similar bitwise exclusive OR <br> 17 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; but now use R1 with its bits logically <br> 18 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; shifted right by 2 bits first<br> 19 &#xA0;&#xA0;00000012 &#xA0;&#xA0;E3A0A004 &#xA0;&#xA0;MOV &#xA0;&#xA0;R10, #4 <br> 20 &#xA0;&#xA0;00000016 &#xA0;&#xA0;F3B47678 &#xA0;&#xA0;MOV &#xA0;&#xA0;R3, #OxA<br> 21 &#xA0;&#xA0;00000020 &#xA0;&#xA0;E1370123 &#xA0;&#xA0;TEQ &#xA0;&#xA0;R7, R3,LSR #2</span> </p>
 
-<h2>������Ϣ</h2>
+<h2>更多信息</h2>
 
-<span style="font-weight: normal;"><a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">�����Ѱַģʽ 1�����ݴ���������</span></a>
+<span style="font-weight: normal;"><a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">请参阅寻址模式 1：数据处理操作数</span></a>
 </div>
 </div>
 

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/avoiding_sse_denormals.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:24:42 GMT -->
 <head>
 
-<title>���� SSE �ǹ��</title>
+<title>避免 SSE 非规格化</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -80,7 +80,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n���� SSE �ǹ��");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) 4 处理器\n关于英特尔(R) 奔腾(R) 4 处理器的建议\n关于英特尔(R) 奔腾(R) 4 处理器的建议\n避免 SSE 非规格化");
 
 	}
 	if (window.writeBtnStyle)
@@ -103,23 +103,23 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" alt="Ӣ�ض�&#xAE; ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">���� SSE �ǹ��</h1>
+<h1><img src="TA_logo.gif" alt="英特尔&#xAE; 调优助手主题" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">避免 SSE 非规格化</h1>
 
 &nbsp; 
 
-<p>SSE �ǹ�񻯿���ͨ�����·������⣺</p>
+<p>SSE 非规格化可以通过以下方法避免：</p>
 
 <li class=kadov-p
-	class=kadov-p>ʹ�� SIMD �Ĵ��������е�ָ��ۡ�Ҫ������һ�㣬��ȷ����ָ��۳�ʼ���ɲ�ʹ�� 0�� </li>
+	class=kadov-p>使用 SIMD 寄存器中所有的指令槽。要做到这一点，请确保将指令槽初始化成不使用 0。 </li>
 
 <li class=kadov-p
-	class=kadov-p>ʹ�� FTZ ģʽ�������Զ����ǹ����ת�����㣨�������� IEEE 754����</li>
+	class=kadov-p>使用 FTZ 模式，它会自动将非规格化数转换成零（但不符合 IEEE 754）。</li>
 
 <li class=kadov-p
 	class=kadov-p>
-ʹ�� DAZ ģʽ�����Ὣ�ǹ�����뵱��ͬ���ŵ��㴦������������ IEEE 754���� 
+使用 DAZ 模式，它会将非规格化输入当作同符号的零处理（但不符合 IEEE 754）。 
 
-<p>�����й���ϸ��Ϣ������� <span style="font-style: italic;"><I>Intel(R) Pentium(R) 4 Processor Optimization Reference Manual</I></span>��Ӣ�ض�(R) ����(R) 4 �������Ż��ο��ֲᣩ�ĵ� 2 �¡�</p>
+<p>如需有关详细信息，请参阅 <span style="font-style: italic;"><I>Intel(R) Pentium(R) 4 Processor Optimization Reference Manual</I></span>（英特尔(R) 奔腾(R) 4 处理器优化参考手册）的第 2 章。</p>
 </li>
 
 <script type="text/javascript" language="javascript1.2">

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc114.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:32:03 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>FSCALE - ����</title>
+<title>FSCALE - 缩放</title>
 
 <!--(Meta)==========================================================-->
 
@@ -96,7 +96,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nF - ָ��\nFSCALE - ����");
+	addTocInfo("参考\n指令集\nIA-32 指令\nF - 指令\nFSCALE - 缩放");
 
 	}
 	if (window.writeBtnStyle)
@@ -119,7 +119,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>FSCALE - ����</h1>
+<h1>FSCALE - 缩放</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -127,13 +127,13 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">������</td>
+	style="margin-bottom: 0;">操作码</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">说明</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -144,74 +144,74 @@ else
 	style="margin-bottom: 0;">FSCALE</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� ST(1) ���� ST(0)��</td></tr>
+	style="margin-bottom: 0;">按 ST(1) 缩放 ST(0)。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-<p>��Դ�������е�ֵ�ضϣ��� 0��Ϊ����ֵ��Ȼ�󽫸�ֵ�ӵ�Ŀ���������ָ���ϡ�Ŀ���������Դ�������Ƿֱ�λ�ڼĴ��� ST(0) �� ST(1) �ĸ���ֵ����ָ���ṩ���ٳ��Ի���� 2 ���������ݵķ������±���ʾ���Ÿ�����ֵʱ�õ��Ľ��������δ������������磩��</p>
+<p>将源操作数中的值截断（向 0）为整数值，然后将该值加到目标操作数的指数上。目标操作数与源操作数是分别位于寄存器 ST(0) 与 ST(1) 的浮点值。此指令提供快速乘以或除以 2 的整数次幂的方法。下表显示缩放各类数值时得到的结果（假设未发生上溢或下溢）。</p>
 
 <h3 class=NoteTipHead><img src="fscale.gif" x-maintain-ratio="TRUE" width="547px" height="206px" border="0" class="img_whs3"></h3>
 
-<h3 class=NoteTipHead>��ע</h3>
+<h3 class=NoteTipHead>备注</h3>
 
-<p>F ��ʾ����ʵ����N ��ʾ������</p>
+<p>F 表示有限实数。N 表示整数。</p>
 
-<p>���������£�ֻ����ָ������������Чλ�����ֲ��䡣������ST(0) �����ŵ�ֵ�Ƿǹ��ֵʱ������Ҳ�ᷢ���ı䣬������ܻ��ǹ���������Ƶأ�������Ų���������������磬�����ĵ�������Դ�������ĵ�����ͬ��</p>
+<p>大多数情况下，只更改指数，底数（有效位）保持不变。不过，ST(0) 中缩放的值是非规格化值时，底数也会发生改变，结果可能会是规格化数。类似地，如果缩放操作发生上溢或下溢，产生的底数将与源操作数的底数不同。</p>
 
-<p>FSCALE ָ��Ҳ��������ִ�� FXTRACT ָ������������������ʾ��</p>
+<p>FSCALE 指令也可以用于执行 FXTRACT 指令的逆操作，如下例所示：</p>
 
 <p class=Preformatted>FXTRACT;<br> FSCALE;<br> FSTP ST(1);</p>
 
-<p>�ڱ����У�FXTRACT ָ��� ST(0) ��ֵ����ȡ��Чλ��ָ���������Ƿֱ�洢�� ST(0) �� ST(1)�����ţ�FSCALE ָ� ST(1) �е�ָ������ ST(0) �е���Чλ�����²���ִ�� FXTRACT ����֮ǰ��ԭʼֵ��FSTP ST(1) ָ��ʹ�����²�����ֵ����ָ������ FXTRACT ָ����ȡ����ֻռ��һ���Ĵ��� [ST(0)] �ͽ���ջ�ָ���ԭʼ״̬��</p>
+<p>在本例中，FXTRACT 指令从 ST(0) 的值中提取有效位与指数，将它们分别存储到 ST(0) 与 ST(1)。接着，FSCALE 指令按 ST(1) 中的指数缩放 ST(0) 中的有效位，重新产生执行 FXTRACT 操作之前的原始值。FSTP ST(1) 指令使用重新产生的值覆盖指数（由 FXTRACT 指令提取），只占用一个寄存器 [ST(0)] 就将堆栈恢复到原始状态。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted><span style="font-size: 10.0pt;"><font size=2 style="font-size:10pt;">S</font></span>T(0)&lt;-- ST(0) * 2<span style="vertical-align: Super;">RoundTowardZero(ST(1))</span>;</p>
 
-<h2>Ӱ��� FPU ��־</h2>
+<h2>影响的 FPU 标志</h2>
 
-<p>C1 - ���������ջ���磬������Ϊ 0��������ɲ���ȷ�Ľ���쳣 (#P)�����ʾȡ������</p>
+<p>C1 - 如果发生堆栈下溢，则设置为 0。如果生成不精确的结果异常 (#P)，则表示取整方向：</p>
 
 <p>0 <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='arrwleft.gif' width='13px' height='16px' border='0' class='img_whs4'>");}
 else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs4'>");}
-//--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs4'></noscript> ������ȡ����1 <script type="text/javascript" language="JavaScript"><!--
+//--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs4'></noscript> 非向上取整；1 <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='arrwleft.gif' width='13px' height='16px' border='0' class='img_whs4'>");}
 else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs4'>");}
-//--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs4'></noscript> ����ȡ����</p>
+//--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs4'></noscript> 向上取整。</p>
 
-<p>C0��C2��C3 - δ���塣</p>
+<p>C0、C2、C3 - 未定义。</p>
 
-<h2>�����쳣</h2>
+<h2>浮点异常</h2>
 
-<p>#IS - ������ջ���硣</p>
+<p>#IS - 发生堆栈下溢。</p>
 
-<p>#IA - Դ�������� SNaN ֵ��֧�ֵĸ�ʽ��</p>
+<p>#IA - 源操作数是 SNaN 值或不支持的格式。</p>
 
-<p>#D - Դ�������Ƿǹ��ֵ��</p>
+<p>#D - 源操作数是非规格化值。</p>
 
-<p>#U - �������Ŀ���ʽ����̫С��</p>
+<p>#U - 结果对于目标格式而言太小。</p>
 
-<p>#O - �������Ŀ���ʽ����̫��</p>
+<p>#O - 结果对于目标格式而言太大。</p>
 
-<p>#P - ֵ�޷���Ŀ���ʽ��ȷ��ʾ��</p>
+<p>#P - 值无法按目标格式精确表示。</p>
 
-<h2>����ģʽ�쳣</h2>
+<h2>保护模式异常</h2>
 
-<p>#NM - ��� CR0 �е� EM �� TS ����Ϊ 1��</p>
+<p>#NM - 如果 CR0 中的 EM 或 TS 设置为 1。</p>
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>实地址模式异常</h2>
 
-<p>#NM - ��� CR0 �е� EM �� TS ����Ϊ 1��</p>
+<p>#NM - 如果 CR0 中的 EM 或 TS 设置为 1。</p>
 
-<h2>�� 8086 ģʽ�쳣</h2>
+<h2>虚 8086 模式异常</h2>
 
-<p class="whs5">#NM - ��� CR0 �е� EM �� TS ����Ϊ 1�� </p>
+<p class="whs5">#NM - 如果 CR0 中的 EM 或 TS 设置为 1。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

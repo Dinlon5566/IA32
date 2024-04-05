@@ -7,7 +7,7 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400523.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:31:30 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
 <title>rse_store</title>
@@ -116,31 +116,31 @@ else
 </script>
 <h2>rse_store(type)</h2>
 
-<p>½«¼Ä´æÆ÷»ò NaT ¼¯ºÏ±£´æµ½±¸·Ý´æ´¢µ¥Ôª (store_address = AR[BSP STORE])¡£Èç¹û store_address{8:3} µÈÓÚ 0x3f£¬Ôò´æ´¢ NaT ¼¯ºÏ AR[RNAT]¡£Èç¹û store_address{8:3} ²»µÈÓÚ 0x3f£¬Ôò´æ´¢¼Ä´æÆ÷ RSE.StoreReg£¬ÇÒ¸Ã¼Ä´æÆ÷µÄ NaT Î»´æ·Åµ½ AR[RNAT]{store_address{8:3}}¡£Èç¹û´æ´¢³É¹¦£¬Ôò AR[BSPSTORE] µÝÔö 8¡£Èç¹û´æ´¢³É¹¦ÇÒ¼Ä´æÆ÷ÒÑ´æ´¢£¬Ôò RSE.StoreReg µÝÔö 1£¨¿ÉÄÜ»áÔÚ¶ÑÕ»¼Ä´æÆ÷ÖÐÑ­»·£©¡£´Ë´æ´¢½«¼Ä´æÆ÷´ÓÎÛËðµÄ·ÖÇøÒÆµ½¸É¾»µÄ·ÖÇø¡£Èç¹û PSR.rt £½ 1£¬Ôò±¸·Ý´æ´¢µ¥ÔªµØÖ·ÎªÐéÄâµØÖ·£¬·ñÔòÎªÎïÀíµØÖ·¡£´æ´¢µÄÌØÈ¨¼¶±ð´Ó AR[RSC].pl ÖÐ»ñµÃ¡£´æ´¢µÄ×Ö½ÚË³Ðò´Ó AR[RSC].be ÖÐ»ñµÃ¡£¶ÔÓÚÇ¿ÖÆÐÔ RSE ´æ´¢£¬ÀàÐÍÎª MANDATORY¡£ÔÚ·ÇÖÂ´íÇ¿ÖÆÐÔ RSE ´æ´¢Ö®ºó£¬PSR.da Óë PSR.dd ÉèÖÃÎª 0¡£RSE ´æ´¢²»Ê¹ ALAT ÏîÊ§Ð§¡£Ç¿ÖÆÐÔ RSE ´æ´¢¿ÉÄÜ»áµ¼ÖÂÒÔÏÂÖÐ¶Ï£º</p>
+<p>å°†å¯„å­˜å™¨æˆ– NaT é›†åˆä¿å­˜åˆ°å¤‡ä»½å­˜å‚¨å•å…ƒ (store_address = AR[BSP STORE])ã€‚å¦‚æžœ store_address{8:3} ç­‰äºŽ 0x3fï¼Œåˆ™å­˜å‚¨ NaT é›†åˆ AR[RNAT]ã€‚å¦‚æžœ store_address{8:3} ä¸ç­‰äºŽ 0x3fï¼Œåˆ™å­˜å‚¨å¯„å­˜å™¨ RSE.StoreRegï¼Œä¸”è¯¥å¯„å­˜å™¨çš„ NaT ä½å­˜æ”¾åˆ° AR[RNAT]{store_address{8:3}}ã€‚å¦‚æžœå­˜å‚¨æˆåŠŸï¼Œåˆ™ AR[BSPSTORE] é€’å¢ž 8ã€‚å¦‚æžœå­˜å‚¨æˆåŠŸä¸”å¯„å­˜å™¨å·²å­˜å‚¨ï¼Œåˆ™ RSE.StoreReg é€’å¢ž 1ï¼ˆå¯èƒ½ä¼šåœ¨å †æ ˆå¯„å­˜å™¨ä¸­å¾ªçŽ¯ï¼‰ã€‚æ­¤å­˜å‚¨å°†å¯„å­˜å™¨ä»Žæ±¡æŸçš„åˆ†åŒºç§»åˆ°å¹²å‡€çš„åˆ†åŒºã€‚å¦‚æžœ PSR.rt ï¼ 1ï¼Œåˆ™å¤‡ä»½å­˜å‚¨å•å…ƒåœ°å€ä¸ºè™šæ‹Ÿåœ°å€ï¼Œå¦åˆ™ä¸ºç‰©ç†åœ°å€ã€‚å­˜å‚¨çš„ç‰¹æƒçº§åˆ«ä»Ž AR[RSC].pl ä¸­èŽ·å¾—ã€‚å­˜å‚¨çš„å­—èŠ‚é¡ºåºä»Ž AR[RSC].be ä¸­èŽ·å¾—ã€‚å¯¹äºŽå¼ºåˆ¶æ€§ RSE å­˜å‚¨ï¼Œç±»åž‹ä¸º MANDATORYã€‚åœ¨éžè‡´é”™å¼ºåˆ¶æ€§ RSE å­˜å‚¨ä¹‹åŽï¼ŒPSR.da ä¸Ž PSR.dd è®¾ç½®ä¸º 0ã€‚RSE å­˜å‚¨ä¸ä½¿ ALAT é¡¹å¤±æ•ˆã€‚å¼ºåˆ¶æ€§ RSE å­˜å‚¨å¯èƒ½ä¼šå¯¼è‡´ä»¥ä¸‹ä¸­æ–­ï¼š</p>
 
-<p>&ldquo;VHPT Êý¾Ý&rdquo;´íÎó</p>
+<p>&ldquo;VHPT æ•°æ®&rdquo;é”™è¯¯</p>
 
-<p>&ldquo;Êý¾ÝÇ¶Ì× TLB&rdquo;´íÎó</p>
+<p>&ldquo;æ•°æ®åµŒå¥— TLB&rdquo;é”™è¯¯</p>
 
-<p>&ldquo;Êý¾Ý TLB&rdquo;´íÎó</p>
+<p>&ldquo;æ•°æ® TLB&rdquo;é”™è¯¯</p>
 
-<p>&ldquo;±¸ÓÃÊý¾Ý TLB&rdquo;´íÎó</p>
+<p>&ldquo;å¤‡ç”¨æ•°æ® TLB&rdquo;é”™è¯¯</p>
 
-<p>&ldquo;Êý¾ÝÒ³²»´æÔÚ&rdquo;´íÎó</p>
+<p>&ldquo;æ•°æ®é¡µä¸å­˜åœ¨&rdquo;é”™è¯¯</p>
 
-<p>&ldquo;Êý¾Ý NaT Ò³Ê¹ÓÃ&rdquo;´íÎó</p>
+<p>&ldquo;æ•°æ® NaT é¡µä½¿ç”¨&rdquo;é”™è¯¯</p>
 
-<p>&ldquo;Êý¾Ý¼üÎ´ÃüÖÐ&rdquo;´íÎó</p>
+<p>&ldquo;æ•°æ®é”®æœªå‘½ä¸­&rdquo;é”™è¯¯</p>
 
-<p>&ldquo;Êý¾Ý¼üÈ¨ÏÞ&rdquo;´íÎó</p>
+<p>&ldquo;æ•°æ®é”®æƒé™&rdquo;é”™è¯¯</p>
 
-<p>&ldquo;Êý¾Ý·ÃÎÊÈ¨ÏÞ&rdquo;´íÎó</p>
+<p>&ldquo;æ•°æ®è®¿é—®æƒé™&rdquo;é”™è¯¯</p>
 
-<p>&ldquo;Êý¾ÝÎÛËðÎ»&rdquo;´íÎó</p>
+<p>&ldquo;æ•°æ®æ±¡æŸä½&rdquo;é”™è¯¯</p>
 
-<p>&ldquo;Êý¾Ý·ÃÎÊÎ»&rdquo;´íÎó</p>
+<p>&ldquo;æ•°æ®è®¿é—®ä½&rdquo;é”™è¯¯</p>
 
-<p class="whs1">&ldquo;±£ÁôµÄ¼Ä´æÆ÷/×Ö¶Î&rdquo;´íÎó¡£ </p>
+<p class="whs1">&ldquo;ä¿ç•™çš„å¯„å­˜å™¨/å­—æ®µ&rdquo;é”™è¯¯ã€‚ </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

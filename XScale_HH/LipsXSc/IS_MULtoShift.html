@@ -9,11 +9,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/XScale_HH/LipsXSc/IS_MULtoShift.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:54 GMT -->
 <head>
 
-<title>�� MUL �滻Ϊ��λ������ָ��ѡ��</title>
+<title>将 MUL 替换为移位操作的指令选择</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="04 16, 2003 6:46:55 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -102,7 +102,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض� XScale(R) ΢��ϵ�ṹ \nָ��ѡ��\n�� MUL �滻Ϊ��λ����");
+	addTocInfo("参考\n处理器事件与建议\n英特尔 XScale(R) 微体系结构 \n指令选择\n将 MUL 替换为移位操作");
 
 	}
 	if (window.writeBtnStyle)
@@ -125,17 +125,17 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="XS_logo.gif" alt="Ӣ�ض� XScale(R) ��������" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">�� MUL �滻Ϊ��λ������ָ��ѡ��</h1>
+<h1><img src="XS_logo.gif" alt="英特尔 XScale(R) 技术主题" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">将 MUL 替换为移位操作的指令选择</h1>
 
 <h2>XSC_IS_MULtoShift</h2>
 
-<h3>����</h3>
+<h3>解释</h3>
 
-<p>��λ�����ȳ˷��ٶȿ졣ֻҪ������ <span class=code>2<sup>n</sup></span>��<span class=code>(2<sup>n</sup>+1)</span> �� <span class=code>(2<sup>n</sup>*(2<sup>m</sup> +1))</span>��������ʹ����λ�����Ż������������ĳ˷����㡣</p>
+<p>移位操作比乘法速度快。只要整数是 <span class=code>2<sup>n</sup></span>、<span class=code>(2<sup>n</sup>+1)</span> 或 <span class=code>(2<sup>n</sup>*(2<sup>m</sup> +1))</span>，都可以使用移位操作优化此整数常数的乘法运算。</p>
 
-<h3>ʾ�� 1</h3>
+<h3>示例 1</h3>
 
-<p>������ 2<sup>n</sup>��</p>
+<p>整数是 2<sup>n</sup>。</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="100%" class="whs2">
@@ -144,9 +144,9 @@ else
 
 <tr valign="top" class="whs5">
 <td valign="top" width="39.169%" class="whs6">
-<h3 class=TableHead>ԭʼ����</td>
+<h3 class=TableHead>原始代码</td>
 <td valign="top" width="60.831%" class="whs7">
-<h3 class=TableHead>ָ��ѡ��</td></tr>
+<h3 class=TableHead>指令选择</td></tr>
 
 <tr valign="top" class="whs5">
 <td valign="top" width="39.169%" class="whs8">
@@ -161,9 +161,9 @@ else
 <p><span class=code>MOV R0, R4, LSL #2</span></td></tr>
 </table>
 
-<h3>ʾ�� 2</h3>
+<h3>示例 2</h3>
 
-<p>������ <span class=code>(2<sup>n </sup>+1)</span>��</p>
+<p>整数是 <span class=code>(2<sup>n </sup>+1)</span>。</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="97.234%" class="whs10">
@@ -172,9 +172,9 @@ else
 
 <tr valign="top" class="whs5">
 <td valign="top" width="40.276%" class="whs13">
-<h3 class=TableHead>ԭʼ����</td>
+<h3 class=TableHead>原始代码</td>
 <td valign="top" width="59.724%" class="whs14">
-<h3 class=TableHead>ָ��ѡ��</td></tr>
+<h3 class=TableHead>指令选择</td></tr>
 
 <tr valign="top" class="whs5">
 <td valign="top" width="40.276%" class="whs15">
@@ -189,9 +189,9 @@ else
 <p><span class=code>ADD R0, R4, R4, LSL #2 </span></td></tr>
 </table>
 
-<h3>ʾ�� 3</h3>
+<h3>示例 3</h3>
 
-<p>������ <span class=code>(2<sup>n</sup>*(2<sup>m</sup> +1))</span>��</p>
+<p>整数是 <span class=code>(2<sup>n</sup>*(2<sup>m</sup> +1))</span>。</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="100%" class="whs2">
@@ -200,9 +200,9 @@ else
 
 <tr valign="top" class="whs5">
 <td valign="top" width="33.383%" class="whs19">
-<h3 class=TableHead>ԭʼ����</td>
+<h3 class=TableHead>原始代码</td>
 <td valign="top" width="66.617%" class="whs20">
-<h3 class=TableHead>ָ��ѡ��</td></tr>
+<h3 class=TableHead>指令选择</td></tr>
 
 <tr valign="top" class="whs5">
 <td valign="top" width="33.383%" class="whs21">

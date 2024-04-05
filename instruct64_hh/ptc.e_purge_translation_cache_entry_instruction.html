@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/ptc.e_purge_translation_cache_entry_instruction.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>ptc.e - ���ת�뻺����ָ��</title>
+<title>ptc.e - 清除转译缓存项指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -85,7 +85,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nP - ָ��\nptc.e - ���ת�뻺����ָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nP - 指令\nptc.e - 清除转译缓存项指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,13 +108,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">���ת�뻺����ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">清除转译缓存项指令</h1>
 
 <p class="whs2">ptc.e</p>
 
-<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a></p>
+<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a></p>
 
-<p class="whs2">��ʽ</p>
+<p class="whs2">格式</p>
 
 <p class=Preformatted>(qp)ptc.er 3 M28</p>
 
@@ -123,14 +123,14 @@ else
 <hr class="whs3">
 
 
-<p><b style="font-weight: bold;">˵��</b></p>
+<p><b style="font-weight: bold;">说明</b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">�ӱ��ش�������ָ��������</b><b style="font-weight: normal;">ת�뻺�����һ������ת���&ldquo;ת��Ĵ���&rdquo;�� VHPT �����޸ġ�</b></span></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">从本地处理器的指令与数据</b><b style="font-weight: normal;">转译缓存清除一个或多个转译项。&ldquo;转译寄存器&rdquo;与 VHPT 不会修改。</b></span></p>
 
-<p class="whs4"><span style="font-weight: normal;"><b style="font-weight: normal;">�����ת�뻺������ȡ���ھ���ʵʩ�汾����Щ�汾ֻҪִ�� ptc.e һ�α�����ת�뻺���νṹ�����м������Ŀ��������һЩ</span><span style="font-weight: normal;">�汾����Ҫ�ظ���β������ָ��������ת�뻺�������</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">���𡢻������鼰���ϡ�GR<span style="font-style: italic;"><I>r3</I></span> ָ����</span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;">ÿ��ִ�й�����ȡ���ھ���汾�Ĳ�����</span></b></p>
+<p class="whs4"><span style="font-weight: normal;"><b style="font-weight: normal;">清除的转译缓存项数取决于具体实施版本。有些版本只要执行 ptc.e 一次便可清除转译缓存层次结构中所有级别的项目，而其它一些</span><span style="font-weight: normal;">版本则需要重复多次才能清除指令与数据转译缓存的所有</span></b><b style="font-weight: normal;"><span style="font-weight: normal;">级别、缓存线组及联合。GR<span style="font-style: italic;"><I>r3</I></span> 指定与</span></b><b style="font-weight: normal;"><span 
+ style="font-weight: normal;">每次执行关联的取决于具体版本的参数。</span></b></p>
 
-<p class="whs4"><span style="font-weight: normal;"><b style="font-weight: normal;">���涨���ѭ������������ͺŵĴ�����������ת�뻺�档��������ͨ���봦�����йصĲ㣨ͨ�����̽ӿڷ��ʣ�</span><span style="font-weight: normal;">��ȡ��������ѭ���ڼ䣬ѡ�������Ĵ������뱣�ֲ��䡣</span></b></p>
+<p class="whs4"><span style="font-weight: normal;"><b style="font-weight: normal;">下面定义的循环可清除所有型号的处理器的整个转译缓存。软件可以通过与处理器有关的层（通过过程接口访问）</span><span style="font-weight: normal;">获取参数。在循环期间，选择的区域寄存器必须保持不变。</span></b></p>
 
 <p class="whs4"><b style="font-weight: normal;"><span class=Code>disable_interrupts();</span></b></p>
 
@@ -152,7 +152,7 @@ else
 
 <p class="whs4"><b style="font-weight: normal;"><span class=Code>enable_interrupts();</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span class=Code>����</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span class=Code>操作</span></b></p>
 
 <p class="whs4"><b style="font-weight: normal;"><span class=Code>if (PR[qp]) {</span></b></p>
 
@@ -166,17 +166,17 @@ else
 
 <p class="whs4"><b style="font-weight: normal;"><span class=Code>tlb_purge_translation_cache(GR[r 3 ]);</span></b></p>
 
-<span style="font-weight: bold;"><B>�ж�</B></span> 
+<span style="font-weight: bold;"><B>中断</B></span> 
 
 <ul type="disc" class="whs5">
 	
 	<li class=kadov-p
 		style="margin-left: -20px;"
-		class=kadov-p><span>&ldquo;��Ȩ����&rdquo;����</span></li>
+		class=kadov-p><span>&ldquo;特权操作&rdquo;错误</span></li>
 	
 	<li class=kadov-p
 		style="margin-left: -20px;"
-		class=kadov-p><span>&ldquo;�Ĵ��� NaT ʹ��&rdquo;����</span></li>
+		class=kadov-p><span>&ldquo;寄存器 NaT 使用&rdquo;错误</span></li>
 </ul>
 
 <p class="whs2"><b Privileged
@@ -186,9 +186,9 @@ else
 								NaT
 								Consumption
 								fault&lt;/b
-								style="font-weight: bold;"><span style="font-weight: bold;"><B>���л�</B></span></b></p>
+								style="font-weight: bold;"><span style="font-weight: bold;"><B>序列化</B></span></b></p>
 
-<p class="whs4"><b Privileged 									Operation 									fault 									Register 									NaT 									Consumption 									fault&lt;/b 									style="font-weight: normal;">�ڷ���ͬ����йص����ݷ�����Ƿ�������֮ǰ�����������ȷ����������л���������ȷ�����������ɡ��ڻ�ȡͬ�����ص�ָ��֮ǰ���������뷢��ָ�����л�������</b></p>
+<p class="whs4"><b Privileged 									Operation 									fault 									Register 									NaT 									Consumption 									fault&lt;/b 									style="font-weight: normal;">在发出同清除有关的数据访问与非访问引用之前，软件必须先发出数据序列化操作，以确保清除操作完成。在获取同清除相关的指令之前，软件必须发出指令序列化操作。</b></p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

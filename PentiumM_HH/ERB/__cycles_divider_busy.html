@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/ERB/__cycles_divider_busy.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:24:01 GMT -->
 <head>
 
-<title>������æ���ڰٷֱ�</title>
+<title>除法器忙周期百分比</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -92,7 +92,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M ���������¼�����\n�������\n������æ���ڰٷֱ�");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) M 处理器\n英特尔(R) 奔腾(R) M 处理器的事件比率\n计算比率\n除法器忙周期百分比");
 
 	}
 	if (window.writeBtnStyle)
@@ -115,11 +115,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="er_logo.gif" alt="�¼���������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">������æ���ڰٷֱ�</h1>
+<h1><img src="er_logo.gif" alt="事件比率主题" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">除法器忙周期百分比</h1>
 
-<p><a href="../EventsB/cycles_divider_busy.html">������æ</a> / <a href="../EventsB/clockticks.html">ʱ���ź�</a></p>
+<p><a href="../EventsB/cycles_divider_busy.html">除法器忙</a> / <a href="../EventsB/clockticks.html">时钟信号</a></p>
 
-<p>һ����˵����Щ����Դ�Ծ���ḻ�����ܹ���ʦ�ľ��飺</p>
+<p>一般来说，这些数字源自经验丰富的性能工程师的经验：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="61.96%" class="whs2">
@@ -131,9 +131,9 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) 
 
 <tr valign="top" class="whs5">
 <td width="49.069%" class="whs6">
-<h3 class=TableHead>����</td>
+<h3 class=TableHead>下限</td>
 <td width="50.931%" class="whs7">
-<h3 class=TableHead>����</td></tr>
+<h3 class=TableHead>上限</td></tr>
 
 <tr valign="top" class="whs5">
 <td width="49.069%" class="whs8">
@@ -147,30 +147,30 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) 
 
 <p>&nbsp;</p>
 
-<p>�˱��ʵ�ֵ�ϸ�ʱ����ʾ�������ڴ��������ڶ�����æ״̬��������ͨ���нϳ����ӳ١�����������������صļ���ʱ���˲������������еļ����ز���������ͣ���ڳ������ӳٳ��ȵ�ʱ�䡣�������ڲ�����ʹ�ó��������ʱ���������ӳٿ��ܻᱻ����ִ�е�����ָ�����ڸǡ� </p>
+<p>此比率的值较高时，表示除法器在大量的周期都处于忙状态。除法器通常有较长的延迟。存在与除法器结果相关的计算时，此操作（包括所有的间接相关操作）将暂停等于除法器延迟长度的时间。不过，在不立即使用除法器结果时，除法器延迟可能会被并行执行的其它指令所掩盖。 </p>
 
-<h3 class="whs10"><img src="../LipsB/tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs11"> ����</h3>
+<h3 class="whs10"><img src="../LipsB/tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs11"> 建议</h3>
 
 <ul type="disc" class="whs12">
 	
 	<ul type="disc" class="whs12">
 		
-		<li class=kadov-p><p>�������ڲ�ѭ��������ִ�г���ָ�����Ҫ��ѭ���ڲ�ִ�С�</p></li>
+		<li class=kadov-p><p>尽量在内部循环的外面执行除法指令，而不要在循环内部执行。</p></li>
 		
-		<li class=kadov-p><p>ʹ�ó��������Ǳ��������</p></li>
+		<li class=kadov-p><p>使用常数而不是变量或参数</p></li>
 		
-		<li class=kadov-p><p>���Ǳ�����������ʸ������</p></li>
+		<li class=kadov-p><p>考虑编译器驱动的矢量化。</p></li>
 		
-		<li class=kadov-p><p>����ʹ����͵ľ��ȡ�</p></li>
+		<li class=kadov-p><p>尽量使用最低的精度。</p></li>
 		
-		<li class=kadov-p><p>������ʹ��&ldquo;Ӣ�ض�(R) ��ѧ�ں˿�&rdquo;��</p></li>
+		<li class=kadov-p><p>尽可能使用&ldquo;英特尔(R) 数学内核库&rdquo;。</p></li>
 	</ul>
 </ul>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs13"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs13"> 备注</h3>
 
-<p class="whs14">���¼����ʽ���ĳЩӢ�ض�(R) ����(R) M ������(R) M ������֧�֡�</p>
+<p class="whs14">此事件比率仅有某些英特尔(R) 奔腾(R) M 与赛扬(R) M 处理器支持。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

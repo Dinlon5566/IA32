@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/streaming_simd_extensions_and_streaming_simd_extensions_2_computational_instructions.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:38 GMT -->
 <head>
 
-<title>��������ָ���������չָ���ڶ�����������ָ���������չָ�������ָ��</title>
+<title>数据流单指令多数据扩展指令集与第二代数据流单指令多数据扩展指令集计算型指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -79,7 +79,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n����Ӣ�ض�(R) ����(R) 4 ��������ϸ��\n��������ָ���������չָ���ڶ�����������ָ���������չָ�������ָ��");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) 4 处理器\n关于英特尔(R) 奔腾(R) 4 处理器的建议\n关于英特尔(R) 奔腾(R) 4 处理器的细节\n数据流单指令多数据扩展指令集与第二代数据流单指令多数据扩展指令集计算型指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -102,9 +102,9 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" alt="Ӣ�ض�&#xAE; ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">��������ָ���������չָ���ڶ�����������ָ���������չָ�������ָ��</h1>
+<h1><img src="TA_logo.gif" alt="英特尔&#xAE; 调优助手主题" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">数据流单指令多数据扩展指令集与第二代数据流单指令多数据扩展指令集计算型指令</h1>
 
-��Щָ���ʾ&ldquo;��������ָ���������չָ�&rdquo;(SSE) ��&ldquo;�ڶ�����������ָ���������չָ�&rdquo;(SSE2) ���͵ļ�����ָ����ռ�İٷֱȡ�����ָ��ٷֱȺܼ򵥣����� 100 ��ȥ��������ָ�����͵İٷֱȡ�<br><b><br>����������ԣ�</b><br><br>��ϸ�����������ܼ�����������أ�<br> <br> PackedSPFPStreamingSIMDExt ָ�� = (<a href="../Events4/packed_single-precision_floating-point_streaming_simd_extension_instructions_retired.html" style="x-condition: eclipse;">ʧЧ��ѹ�������ȸ�����������ָ���������չָ�ָ��</a>/<a href="../Events4/Instructions_retired.html" style="x-condition: eclipse;">ʧЧ��ָ��</a>)*100<b><br> �ϵ�ֵ��</b>0<b><br> �ϸ�ֵ��</b>0.01<br><br> PackedDPFPStreamingSIMDExt ָ�� = (<a href="../Events4/packed_double-precision_floating-point_streaming_simd_extension_instructions_retired.html" style="x-condition: eclipse;">ʧЧ��ѹ��˫���ȸ�����������ָ���������չָ�ָ��</a>/<a href="../Events4/Instructions_retired.html" style="x-condition: eclipse;">ʧЧ��ָ��</a>)*100<b><br> �ϵ�ֵ��</b>0<b><br> �ϸ�ֵ��</b>0.01<br><br> ScalarSPFPStreamingSIMDExt ָ�� = (<a href="../Events4/scalar_single-precision_floating-point_streaming_simd_extension_instructions_retired.html" style="x-condition: eclipse;">ʧЧ�ı��������ȸ�����������ָ���������չָ�ָ��</a>/<a href="../Events4/Instructions_retired.html" style="x-condition: eclipse;">ʧЧ��ָ��</a>)*100<b><br> �ϵ�ֵ��</b>0<b><br> �ϸ�ֵ��</b>0.01<br><br> ScalarDPFPStreamingSIMDExt ָ�� = (<a href="../Events4/scalar_double-precision_floating-point_streaming_simd_extension_instructions_retired.html" style="x-condition: eclipse;">ʧЧ�ı���˫���ȸ�����������ָ���������չָ�ָ��</a>/<a href="../Events4/Instructions_retired.html" style="x-condition: eclipse;">ʧЧ��ָ��</a>)*100<b><br> �ϵ�ֵ��</b>0<b><br> �ϸ�ֵ��</b>0.01<br><br>��&ldquo;PackedSPFPStreamingSIMDExt ָ��&rdquo;<b>�ϸ�</b><i>��</i>&ldquo;PackedDPFPStreamingSIMDExt ָ��&rdquo;<b>�ϸ�</b><i>��</i>&ldquo;ScalarSPFPStreamingSIMDExt ָ��&rdquo;<b>�ϸ�</b><i>��</i>&ldquo;ScalarDPFPStreamingSIMDExt ָ��&rdquo;<b>�ϸ�</b>ʱ����ϸ�ھ���ʵ�������塣 
+这些指标表示&ldquo;数据流单指令多数据扩展指令集&rdquo;(SSE) 与&ldquo;第二代数据流单指令多数据扩展指令集&rdquo;(SSE2) 类型的计算型指令所占的百分比。整数指令百分比很简单，等于 100 减去其它所有指令类型的百分比。<br><b><br>计数器相关性：</b><br><br>此细节与以下性能计数器函数相关：<br> <br> PackedSPFPStreamingSIMDExt 指令 = (<a href="../Events4/packed_single-precision_floating-point_streaming_simd_extension_instructions_retired.html" style="x-condition: eclipse;">失效的压缩单精度浮点数据流单指令多数据扩展指令集指令</a>/<a href="../Events4/Instructions_retired.html" style="x-condition: eclipse;">失效的指令</a>)*100<b><br> 较低值：</b>0<b><br> 较高值：</b>0.01<br><br> PackedDPFPStreamingSIMDExt 指令 = (<a href="../Events4/packed_double-precision_floating-point_streaming_simd_extension_instructions_retired.html" style="x-condition: eclipse;">失效的压缩双精度浮点数据流单指令多数据扩展指令集指令</a>/<a href="../Events4/Instructions_retired.html" style="x-condition: eclipse;">失效的指令</a>)*100<b><br> 较低值：</b>0<b><br> 较高值：</b>0.01<br><br> ScalarSPFPStreamingSIMDExt 指令 = (<a href="../Events4/scalar_single-precision_floating-point_streaming_simd_extension_instructions_retired.html" style="x-condition: eclipse;">失效的标量单精度浮点数据流单指令多数据扩展指令集指令</a>/<a href="../Events4/Instructions_retired.html" style="x-condition: eclipse;">失效的指令</a>)*100<b><br> 较低值：</b>0<b><br> 较高值：</b>0.01<br><br> ScalarDPFPStreamingSIMDExt 指令 = (<a href="../Events4/scalar_double-precision_floating-point_streaming_simd_extension_instructions_retired.html" style="x-condition: eclipse;">失效的标量双精度浮点数据流单指令多数据扩展指令集指令</a>/<a href="../Events4/Instructions_retired.html" style="x-condition: eclipse;">失效的指令</a>)*100<b><br> 较低值：</b>0<b><br> 较高值：</b>0.01<br><br>在&ldquo;PackedSPFPStreamingSIMDExt 指令&rdquo;<b>较高</b><i>、</i>&ldquo;PackedDPFPStreamingSIMDExt 指令&rdquo;<b>较高</b><i>、</i>&ldquo;ScalarSPFPStreamingSIMDExt 指令&rdquo;<b>较高</b><i>或</i>&ldquo;ScalarDPFPStreamingSIMDExt 指令&rdquo;<b>较高</b>时，此细节具有实质性意义。 
 
 <script type="text/javascript" language="javascript1.2">
 <!--

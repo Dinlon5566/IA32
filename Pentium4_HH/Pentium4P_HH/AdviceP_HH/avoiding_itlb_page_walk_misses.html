@@ -4,9 +4,9 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/avoiding_itlb_page_walk_misses.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:52 GMT -->
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=GB2312">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-<title>±ÜÃâ ITLB Ò³²éÑ¯Î´ÃüÖÐ</title>
+<title>é¿å… ITLB é¡µæŸ¥è¯¢æœªå‘½ä¸­</title>
   <link rel='stylesheet' href='https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/MSL_styl_ns.css'>
 <script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
 <!--
@@ -52,7 +52,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("²Î¿¼\n´¦ÀíÆ÷ÊÂ¼þÓë½¨Òé\nº¬µÚÈý´úÊý¾ÝÁ÷µ¥Ö¸Áî¶àÊý¾ÝÀ©Õ¹Ö¸Áî¼¯ (SSE3) µÄÓ¢ÌØ¶û(R) ±¼ÌÚ(R) 4 ´¦ÀíÆ÷\nº¬µÚÈý´úÊý¾ÝÁ÷µ¥Ö¸Áî¶àÊý¾ÝÀ©Õ¹Ö¸Áî¼¯ (SSE3) µÄÓ¢ÌØ¶û(R) ±¼ÌÚ(R) 4 ´¦ÀíÆ÷µÄ½¨Òé\nº¬µÚÈý´úÊý¾ÝÁ÷µ¥Ö¸Áî¶àÊý¾ÝÀ©Õ¹Ö¸Áî¼¯ (SSE3) µÄÓ¢ÌØ¶û(R) ±¼ÌÚ(R) 4 ´¦ÀíÆ÷µÄ½¨Òé\n±ÜÃâ ITLB Ò³²éÑ¯Î´ÃüÖÐ");
+	addTocInfo("å‚è€ƒ\nå¤„ç†å™¨äº‹ä»¶ä¸Žå»ºè®®\nå«ç¬¬ä¸‰ä»£æ•°æ®æµå•æŒ‡ä»¤å¤šæ•°æ®æ‰©å±•æŒ‡ä»¤é›† (SSE3) çš„è‹±ç‰¹å°”(R) å¥”è…¾(R) 4 å¤„ç†å™¨\nå«ç¬¬ä¸‰ä»£æ•°æ®æµå•æŒ‡ä»¤å¤šæ•°æ®æ‰©å±•æŒ‡ä»¤é›† (SSE3) çš„è‹±ç‰¹å°”(R) å¥”è…¾(R) 4 å¤„ç†å™¨çš„å»ºè®®\nå«ç¬¬ä¸‰ä»£æ•°æ®æµå•æŒ‡ä»¤å¤šæ•°æ®æ‰©å±•æŒ‡ä»¤é›† (SSE3) çš„è‹±ç‰¹å°”(R) å¥”è…¾(R) 4 å¤„ç†å™¨çš„å»ºè®®\né¿å… ITLB é¡µæŸ¥è¯¢æœªå‘½ä¸­");
 
 	}
 	if (window.writeBtnStyle)
@@ -75,9 +75,9 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="Ó¢ÌØ¶û&#xAE; µ÷ÓÅÖúÊÖÖ÷Ìâ" x-maintain-ratio="TRUE" style="border: none; width: 36px; height: 36px; float: right;" width="36" height="36" align="right" border="0">±ÜÃâ ITLB Ò³²éÑ¯Î´ÃüÖÐ</h1><br>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="è‹±ç‰¹å°”&#xAE; è°ƒä¼˜åŠ©æ‰‹ä¸»é¢˜" x-maintain-ratio="TRUE" style="border: none; width: 36px; height: 36px; float: right;" width="36" height="36" align="right" border="0">é¿å… ITLB é¡µæŸ¥è¯¢æœªå‘½ä¸­</h1><br>
 
-<p>Òª×îÐ¡»¯ ITLB Î´ÃüÖÐ£¬Çë×îÐ¡»¯´úÂëµÄ´óÐ¡ºÍÇøÓòÐÔ£¬Ê¹´úÂë·Ö²¼ÔÚ×îÉÙµÄÒ³ÉÏ£¬²¢ÇÒ´úÂë·Ö²¼µÄÒ³ÊýÐ¡ÓÚ ITLB ÏîÄ¿Êý¡£</p>
+<p>è¦æœ€å°åŒ– ITLB æœªå‘½ä¸­ï¼Œè¯·æœ€å°åŒ–ä»£ç çš„å¤§å°å’ŒåŒºåŸŸæ€§ï¼Œä½¿ä»£ç åˆ†å¸ƒåœ¨æœ€å°‘çš„é¡µä¸Šï¼Œå¹¶ä¸”ä»£ç åˆ†å¸ƒçš„é¡µæ•°å°äºŽ ITLB é¡¹ç›®æ•°ã€‚</p>
 <script type="text/javascript" language="javascript1.2">
 <!--
 if (window.writeIntopicBar)

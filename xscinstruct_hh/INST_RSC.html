@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_RSC.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:43 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>RSC - ����λ����</title>
+<title>RSC - 带进位被减</title>
 
 <!--(Meta)==========================================================-->
 
@@ -85,7 +85,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nR - ָ��\nRSC");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nR - 指令\nRSC");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,16 +108,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">RSC - ����λ����</h1>
+<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">RSC - 带进位被减</h1>
 
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <div>
 <p class=Preformatted><span class=Code>RSC[condition][S] dest, op2, addr_mode</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -130,7 +130,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 个条件之一。请参阅<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">条件代码状态</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -140,7 +140,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�������������־��λ [20]��</td></tr>
+<p CLASS=CellBodyLeft>更新条件代码标志（位 [20]）</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -150,7 +150,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>目标寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -160,7 +160,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�����ڶ����������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含第二个操作数的寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -170,12 +170,12 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ѱַģʽ 1��<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">���ݴ���������</a></td></tr>
+<p CLASS=CellBodyLeft>寻址模式 1：<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">数据处理操作数</a></td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-<p CLASS=Body>RSC ָ��� <em CLASS=SourceItalic>addr_mode</em> �м�ȥ <em CLASS=SourceItalic>op2</em> �� !C ��ֵ������洢�� <em CLASS=SourceItalic>dest</em>��condition ��������Чֵ������ָ��� NOP��S ����Ϊ 1 ʱ��</p>
+<p CLASS=Body>RSC 指令从 <em CLASS=SourceItalic>addr_mode</em> 中减去 <em CLASS=SourceItalic>op2</em> 与 !C 的值。结果存储到 <em CLASS=SourceItalic>dest</em>。condition 必须是有效值；否则将指令当作 NOP。S 设置为 1 时：</p>
 
 <ol>
 	
@@ -186,9 +186,9 @@ else
 	
 	<tr>
 	<th ROWSPAN="1" COLSPAN="1" class="whs4">
-	<p CLASS=CellHeadingCenter>C ��־</th>
+	<p CLASS=CellHeadingCenter>C 标志</th>
 	<th ROWSPAN="1" COLSPAN="1" class="whs5">
-	<p CLASS=CellHeadingCenter>˵�� </th></tr>
+	<p CLASS=CellHeadingCenter>说明 </th></tr>
 	
 	<tr>
 	<td ROWSPAN=1
@@ -198,7 +198,7 @@ else
 	<td ROWSPAN=1
 		COLSPAN=1
 		width=119>
-	<p CLASS=CellBodyCenter>�޽�λ����</td></tr>
+	<p CLASS=CellBodyCenter>无借位发生</td></tr>
 	
 	<tr>
 	<td ROWSPAN=1
@@ -208,23 +208,23 @@ else
 	<td ROWSPAN=1
 		COLSPAN=1
 		width=119>
-	<p CLASS=CellBodyCenter>������λ</td></tr>
+	<p CLASS=CellBodyCenter>发生借位</td></tr>
 	</table>
 </ol>
 </div>
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif"> ��ע</h3>
+<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif"> 备注</h3>
 
-C ��־�ڴ�ָ���������޽�λ��־�� 
+C 标志在此指令中用作无借位标志。 
 
-<h2>Ѱַģʽ</h2>
+<h2>寻址模式</h2>
 
-�����&ldquo;Ѱַģʽ 1 - ���ݴ���������&rdquo;�� 
+请参阅&ldquo;寻址模式 1 - 数据处理操作数&rdquo;。 
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -291,7 +291,7 @@ C ��־�ڴ�ָ���������޽�λ��־��
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� </h2>
+<h2>编码 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -398,13 +398,13 @@ C ��־�ڴ�ָ���������޽�λ��־��
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funcrsc<br> 4 <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0<br> 6 <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@ * * * RSC (Adressing Mode 1) * * *<br> 8 <br> 9 <br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example, CODE, READONLY<br> 11 <br> 12 &#xA0;&#xA0;00000000 &#xA0;&#xA0;E3A0104D &#xA0;&#xA0;MOV &#xA0;&#xA0;R1, #77<br> 13 &#xA0;&#xA0;00000004 &#xA0;&#xA0;E241001D &#xA0;&#xA0;SUB &#xA0;&#xA0;R0, R1, #29<br> 14 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E0E13000 &#xA0;&#xA0;RSC &#xA0;&#xA0;R3, R1, R0<br> 15 <br> 16 &#xA0;&#xA0;00000012 &#xA0;&#xA0;E3A0101D &#xA0;&#xA0;MOV &#xA0;&#xA0;R1, #29<br> 17 &#xA0;&#xA0;00000016 &#xA0;&#xA0;E3A02039 &#xA0;&#xA0;MOV &#xA0;&#xA0;R2, #57<br> 18 &#xA0;&#xA0;00000020 &#xA0;&#xA0;E0814002 &#xA0;&#xA0;ADD &#xA0;&#xA0;R4, R1, R2<br> 19 &#xA0;&#xA0;00000024 &#xA0;&#xA0;E2F4501B &#xA0;&#xA0;RSCS &#xA0;R5, R4, #27<br> 20 <br> 21 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END</span> </p>
 
-<h2>������Ϣ</h2>
+<h2>更多信息</h2>
 
-<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">�����Ѱַģʽ 1�����ݴ���������</a> 
+<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">请参阅寻址模式 1：数据处理操作数</a> 
 </div>
 </div>
 

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400321.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:46:54 GMT -->
 <head>
 
-<title>pavgsub 操作</title>
+<title>pavgsub 鎿嶄綔</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="06 23, 2002 9:58:19 AM">
 <meta name=topic-status content=Complete>
 <meta name=topic-priority content=2>
@@ -96,7 +96,7 @@ else
 		document.location.reload();
 //-->
 </script>
-pavgsub 操作 <a HREF="6400126.html">字体惯例</a> 
+pavgsub 鎿嶄綔 <a HREF="6400126.html">瀛椾綋鎯緥</a> 
 
 <br>if (PR[<i>qp</i>]) { <br> <a href="6400444.html">check_target_register</a>; <br> <br> if (one_byte_form) { <br> x[0] = <a href="6400568.html">GR</a>[<i>r2</i>]{7:0}; y[0] = GR[<i>r3</i>]{7:0}; <br> x[1] = GR[<i>r2</i>]{15:8}; y[1] = GR[<i>r3</i>]{15:8}; <br> x[2] = GR[<i>r2</i>]{23:16}; y[2] = GR[<i>r3</i>]{23:16}; <br> x[3] = GR[<i>r2</i>]{31:24}; y[3] = GR[<i>r3</i>]{31:24}; <br> x[4] = GR[<i>r2</i>]{39:32}; y[4] = GR[<i>r3</i>]{39:32}; <br> x[5] = GR[<i>r2</i>]{47:40}; y[5] = GR[<i>r3</i>]{47:40}; <br> x[6] = GR[<i>r2</i>]{55:48}; y[6] = GR[<i>r3</i>]{55:48}; <br> x[7] = GR[<i>r2</i>]{63:56}; y[7] = GR[<i>r3</i>]{63:56}; <br> <br> for (i = 0; i &lt; 8; i++) { <br> temp[i] = <a HREF="6400558.html" onMouseOver="if (parseInt(navigator.appVersion) >= 4) BSPSPopupOnMouseOver(event)" class="BSSCPopup" id="A4">zero_ext</a>(x[i], 8) - zero_ext(y[i], 8); <br> res[i] = (temp[i]{8:0} u&gt;&gt; 1) | (temp[i]{0}); <br> } <br> GR[<i>r1</i>] = <a href="6400448.html">concatenate8</a>(res[7], res[6], res[5], res[4], <br> &#xA0;&#xA0;res[3], res[2], res[1], res[0]); <br> <br> } else { // two_byte_form <br> x[0] = GR[<i>r2</i>]{15:0}; y[0] = GR[<i>r3</i>]{15:0}; <br> x[1] = GR[<i>r2</i>]{31:16}; y[1] = GR[<i>r3</i>]{31:16}; <br> x[2] = GR[<i>r2</i>]{47:32}; y[2] = GR[<i>r3</i>]{47:32}; <br> x[3] = GR[<i>r2</i>]{63:48}; y[3] = GR[<i>r3</i>]{63:48}; <br> <br> for (i = 0; i &lt; 4; i++) { <br> temp[i] = <a href="6400558.html" onMouseOver="if (parseInt(navigator.appVersion) >= 4) BSPSPopupOnMouseOver(event)" class="BSSCPopup" id="a1">zero_ext</a>(x[i], 16) - zero_ext(y[i], 16); <br> res[i] = (temp[i]{16:0} u&gt;&gt; 1) | (temp[i]{0}); <br> } <br> GR[<i>r1</i>] = <a href="6400447.html">concatenate4</a>(res[3], res[2], res[1], res[0]); <br> } <br> GR[<i>r1</i>].nat = GR[<i>r2</i>].nat || GR[<i>r3</i>].nat; <br> } 
 

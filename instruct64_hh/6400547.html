@@ -7,7 +7,7 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400547.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:49 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
 <title>tlb_translate</title>
@@ -117,41 +117,41 @@ else
 </script>
 <h2>tlb_translate(vaddr,size,type,cpl,*attr,*defer)</h2>
 
-<p>·µ»ØÆôÓÃ×ªÒëÊ±Ö¸¶¨µÄÐéÄâÄÚ´æµØÖ· (vaddr) µÄ×ªÒëµÄÊý¾ÝÎïÀíµØÖ·£»·ñÔò·µ»Ø vaddr¡£size Ö¸¶¨·ÃÎÊµÄ´óÐ¡£¬type Ö¸¶¨·ÃÎÊµÄÀàÐÍ£¨Èç£¬¶ÁÈ¡¡¢Ð´Èë¡¢¸ß¼¶¡¢ÍÆ²â£©¡£cpl Ö¸¶¨³öÓÚ·ÃÎÊ¼ì²éÄ¿µÄµÄÌØÈ¨¼¶±ð¡£*attr ·µ»ØÓ³ÉäµÄÎïÀíÄÚ´æÊôÐÔ¡£Èç¹û¼ì²âµ½ÈÎºÎ´íÎóÌõ¼þ²¢»º·¢£¬Ôò tlb_translate ·µ»Ø *defer ¼¯ºÏ¡£Èç¹ûÉú³É´íÎóµ«ÊÇÎ´»º·¢¸Ã´íÎó£¬Ôò tlb_translate ²»·µ»ØÈÎºÎÖµ¡£tlb_translate ¼ì²éÒÔÏÂ´íÎó£º</p>
+<p>è¿”å›žå¯ç”¨è½¬è¯‘æ—¶æŒ‡å®šçš„è™šæ‹Ÿå†…å­˜åœ°å€ (vaddr) çš„è½¬è¯‘çš„æ•°æ®ç‰©ç†åœ°å€ï¼›å¦åˆ™è¿”å›ž vaddrã€‚size æŒ‡å®šè®¿é—®çš„å¤§å°ï¼Œtype æŒ‡å®šè®¿é—®çš„ç±»åž‹ï¼ˆå¦‚ï¼Œè¯»å–ã€å†™å…¥ã€é«˜çº§ã€æŽ¨æµ‹ï¼‰ã€‚cpl æŒ‡å®šå‡ºäºŽè®¿é—®æ£€æŸ¥ç›®çš„çš„ç‰¹æƒçº§åˆ«ã€‚*attr è¿”å›žæ˜ å°„çš„ç‰©ç†å†…å­˜å±žæ€§ã€‚å¦‚æžœæ£€æµ‹åˆ°ä»»ä½•é”™è¯¯æ¡ä»¶å¹¶ç¼“å‘ï¼Œåˆ™ tlb_translate è¿”å›ž *defer é›†åˆã€‚å¦‚æžœç”Ÿæˆé”™è¯¯ä½†æ˜¯æœªç¼“å‘è¯¥é”™è¯¯ï¼Œåˆ™ tlb_translate ä¸è¿”å›žä»»ä½•å€¼ã€‚tlb_translate æ£€æŸ¥ä»¥ä¸‹é”™è¯¯ï¼š</p>
 
-<p class="whs1">Ó¢ÌØ¶û&#xAE; °²ÌÚ&#xAE; ÌåÏµ½á¹¹Èí¼þ¿ª·¢ÈËÔ±ÊÖ²á¹æ¸ñ¸üÐÂ 9</p>
+<p class="whs1">è‹±ç‰¹å°”&#xAE; å®‰è…¾&#xAE; ä½“ç³»ç»“æž„è½¯ä»¶å¼€å‘äººå‘˜æ‰‹å†Œè§„æ ¼æ›´æ–° 9</p>
 
-<p class="whs1">&ldquo;Î´Ê¹ÓÃµÄÊý¾ÝµØÖ·&rdquo;´íÎó</p>
+<p class="whs1">&ldquo;æœªä½¿ç”¨çš„æ•°æ®åœ°å€&rdquo;é”™è¯¯</p>
 
 <ul type="disc" class="whs2">
 	
-	<li class=kadov-p><p class="whs1">&ldquo;Êý¾ÝÇ¶Ì× TLB&rdquo;´íÎó</p></li>
+	<li class=kadov-p><p class="whs1">&ldquo;æ•°æ®åµŒå¥— TLB&rdquo;é”™è¯¯</p></li>
 	
-	<li class=kadov-p><p class="whs1">&ldquo;±¸ÓÃÊý¾Ý TLB&rdquo;´íÎó</p></li>
+	<li class=kadov-p><p class="whs1">&ldquo;å¤‡ç”¨æ•°æ® TLB&rdquo;é”™è¯¯</p></li>
 	
-	<li class=kadov-p><p class="whs1">&ldquo;VHPT Êý¾Ý&rdquo;´íÎó</p></li>
+	<li class=kadov-p><p class="whs1">&ldquo;VHPT æ•°æ®&rdquo;é”™è¯¯</p></li>
 	
-	<li class=kadov-p><p class="whs1">&ldquo;Êý¾Ý TLB&rdquo;´íÎó</p></li>
+	<li class=kadov-p><p class="whs1">&ldquo;æ•°æ® TLB&rdquo;é”™è¯¯</p></li>
 	
-	<li class=kadov-p><p class="whs1">&ldquo;Êý¾ÝÒ³²»´æÔÚ&rdquo;´íÎó</p></li>
+	<li class=kadov-p><p class="whs1">&ldquo;æ•°æ®é¡µä¸å­˜åœ¨&rdquo;é”™è¯¯</p></li>
 	
-	<li class=kadov-p><p class="whs1">&ldquo;Êý¾Ý NaT Ò³Ê¹ÓÃ&rdquo;´íÎó</p></li>
+	<li class=kadov-p><p class="whs1">&ldquo;æ•°æ® NaT é¡µä½¿ç”¨&rdquo;é”™è¯¯</p></li>
 	
-	<li class=kadov-p><p class="whs1">&ldquo;Êý¾Ý¼üÎ´ÃüÖÐ&rdquo;´íÎó</p></li>
+	<li class=kadov-p><p class="whs1">&ldquo;æ•°æ®é”®æœªå‘½ä¸­&rdquo;é”™è¯¯</p></li>
 	
-	<li class=kadov-p><p class="whs1">&ldquo;Êý¾Ý¼üÈ¨ÏÞ&rdquo;´íÎó</p></li>
+	<li class=kadov-p><p class="whs1">&ldquo;æ•°æ®é”®æƒé™&rdquo;é”™è¯¯</p></li>
 	
-	<li class=kadov-p><p class="whs1">&ldquo;Êý¾Ý·ÃÎÊÈ¨ÏÞ&rdquo;´íÎó</p></li>
+	<li class=kadov-p><p class="whs1">&ldquo;æ•°æ®è®¿é—®æƒé™&rdquo;é”™è¯¯</p></li>
 	
-	<li class=kadov-p><p class="whs1">&ldquo;Êý¾ÝÎÛËðÎ»&rdquo;´íÎó</p></li>
+	<li class=kadov-p><p class="whs1">&ldquo;æ•°æ®æ±¡æŸä½&rdquo;é”™è¯¯</p></li>
 	
-	<li class=kadov-p><p class="whs1">&ldquo;Êý¾Ý·ÃÎÊÎ»&rdquo;´íÎó</p></li>
+	<li class=kadov-p><p class="whs1">&ldquo;æ•°æ®è®¿é—®ä½&rdquo;é”™è¯¯</p></li>
 	
-	<li class=kadov-p><p class="whs1">&ldquo;Êý¾Ýµ÷ÊÔ&rdquo;´íÎó</p></li>
+	<li class=kadov-p><p class="whs1">&ldquo;æ•°æ®è°ƒè¯•&rdquo;é”™è¯¯</p></li>
 	
-	<li class=kadov-p><p class="whs1">&ldquo;Î´¶ÔÆëµÄÊý¾ÝÒýÓÃ&rdquo;´íÎó</p></li>
+	<li class=kadov-p><p class="whs1">&ldquo;æœªå¯¹é½çš„æ•°æ®å¼•ç”¨&rdquo;é”™è¯¯</p></li>
 	
-	<li class=kadov-p><p class="whs1">&ldquo;²»Ö§³ÖµÄÊý¾ÝÒýÓÃ&rdquo;´íÎó</p></li>
+	<li class=kadov-p><p class="whs1">&ldquo;ä¸æ”¯æŒçš„æ•°æ®å¼•ç”¨&rdquo;é”™è¯¯</p></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

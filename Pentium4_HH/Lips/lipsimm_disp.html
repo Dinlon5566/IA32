@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/lipsimm_disp.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:18 GMT -->
 <head>
 
-<title>���������������ַλ����</title>
+<title>立即数操作数与地址位移量</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="04 8, 2003 2:34:55 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -118,20 +118,20 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> ���������������ַλ����</h1>
+<h1><img src="TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> 立即数操作数与地址位移量</h1>
 
-<p><span style="font-weight: bold;"><B>Imm_Disp</B></span> ��ʾһ��������Ƴ�ͻ��</p>
+<p><span style="font-weight: bold;"><B>Imm_Disp</B></span> 表示一种配对限制冲突。</p>
 
-<p>Ϊ�䷢�� <span style="font-weight: bold;"><B>Imm_Disp</B></span> ��ָ��ͬʱ��һ����������������һ������ַλ�����Ĳ���������<a HREF="Address_Calculation.html">��ַ����</a>�У�����ˣ����޷��뱼��(R) �������ϵ��κ�����ָ����ԡ�</p>
+<p>为其发出 <span style="font-weight: bold;"><B>Imm_Disp</B></span> 的指令同时有一个立即数操作数和一个带地址位移量的操作数（在<a HREF="Address_Calculation.html">地址计算</a>中）。因此，它无法与奔腾(R) 处理器上的任何其它指令配对。</p>
 
-<p>�ں� MMX(TM) �����ı��ڴ������ϣ������ָ��� <a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#U_pipe" style="x-condition: WebHelp;">U �ܵ�</a>������Խ�����ԡ�</p>
+<p>在含 MMX(TM) 技术的奔腾处理器上，如果此指令发到 <a href="https://www.hgy413.com/vtglossary_hh/vtglossary.htm#U_pipe" style="x-condition: WebHelp;">U 管道</a>，则可以进行配对。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>����</B></span></h3>
+	style="margin-left: 40px;"><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs2"> <span style="font-weight: bold;"><B>建议</B></span></h3>
 
-<p class="whs3">��ʹ���ڴ��������ָ���滻��ʹ�üĴ����������ĵ�Чָ�����С�ͨ��ʹ�ô��Ĵ�����������ָ�������ߴ����е��������</p>
+<p class="whs3">将使用内存操作数的指令替换成使用寄存器操作数的等效指令序列。通过使用带寄存器操作数的指令，可以提高代码中的配对数。</p>
 
-<p>ʾ����</p>
+<p>示例：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells>
@@ -139,16 +139,16 @@ else
 <tr>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;"><b style="font-weight: bold;">ԭʼ����</b></td>
+	style="margin-bottom: 0;"><b style="font-weight: bold;">原始代码</b></td>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;"><b style="font-weight: bold;">����</b></td>
+	style="margin-bottom: 0;"><b style="font-weight: bold;">周期</b></td>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;"><b style="font-weight: bold;">�Ż�����</b></td>
+	style="margin-bottom: 0;"><b style="font-weight: bold;">优化代码</b></td>
 <td valign="top" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;"><b style="font-weight: bold;">����</b></td></tr>
+	style="margin-bottom: 0;"><b style="font-weight: bold;">周期</b></td></tr>
 
 <tr>
 <td valign="top" class="whs4">
@@ -184,9 +184,9 @@ mov ecx, dword ptr [0180000h]</b>
 
 <tr>
 <td COLSPAN="2" valign="top" class="whs4">
-<p class="whs5">&ldquo;ָ�� 2&rdquo;ͬʱ��һ�������������� (1) ��һ����ַλ���� (0180000h)����ˣ����޷�ͬ&ldquo;ָ�� 3&rdquo;��ԡ�<b><br>ִ��ʱ���ܼƣ�4 �����ڣ�����(R) ��������</b></td>
+<p class="whs5">&ldquo;指令 2&rdquo;同时有一个立即数操作数 (1) 与一个地址位移量 (0180000h)。因此，它无法同&ldquo;指令 3&rdquo;配对。<b><br>执行时间总计：4 个周期（奔腾(R) 处理器）</b></td>
 <td COLSPAN="2" valign="top" class="whs4">
-<p class="whs5">MOV ָ���ַλ�������Ƶ��Ĵ�����CMP ָ��ٰ�����ַλ���������������ͬ JNZ ָ����ԡ�<b><br>ִ��ʱ���ܼƣ�2 �����ڣ����ڴ�������</b></td>
+<p class="whs5">MOV 指令将地址位移量复制到寄存器。CMP 指令不再包含地址位移量。因此它可以同 JNZ 指令配对。<b><br>执行时间总计：2 个周期（奔腾处理器）</b></td>
 </tr>
 </table>
 

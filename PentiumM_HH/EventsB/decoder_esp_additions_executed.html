@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/decoder_esp_additions_executed.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:19 GMT -->
 <head>
 
-<title>ִ�еĽ����� ESP �ӷ�</title>
+<title>执行的解码器 ESP 加法</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="02 24, 2003 11:28:03 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M �������¼�\n�������¼�\nִ�еĽ����� ESP �ӷ�");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) M 处理器\n英特尔(R) 奔腾(R) M 处理器事件\n解码器事件\n执行的解码器 ESP 加法");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,15 +105,15 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>ִ�еĽ����� ESP �ӷ�</h1>
+<h1>执行的解码器 ESP 加法</h1>
 
 <p class="whs1">EMON_ESP_UOPS</p>
 
-<p class="whs2">���¼�ͳ�ƽ������Զ�ִ�е�&#xA0;ESP �ӷ����������Ʋ��Ե�ʣ����ڻ�����ִ�е���һ����ʧЧ�� ESP �ӷ�ָ����������Ǵ���ʧЧ�� ESP �ӷ�ָ������</p>
+<p class="whs2">此事件统计解码器自动执行的&#xA0;ESP 加法数。由于推测的缘故，存在机器已执行但不一定已失效的 ESP 加法指令。此数字总是大于失效的 ESP 加法指令数。</p>
 
-<p class="whs1"><span style="font-weight: normal;">������ÿ���Զ�ִ�мӷ�����ʹִ�е�Ԫʡȴһ��΢���������Դ��¼�������Խ��Խ�á�</span> </p>
+<p class="whs1"><span style="font-weight: normal;">解码器每次自动执行加法都会使执行单元省却一个微操作，所以此事件的数量越高越好。</span> </p>
 
-<p>Ҫ��󻯽������Զ�ִ�� ESP �ӷ����������뾡��ѡ����ʽʹ�� ESP ��ָ��� <span class=Code>PUSH��POP��CALL</span> �� <span class=Code>RET</span> ָ� </p>
+<p>要最大化解码器自动执行 ESP 加法的数量，请尽量选择隐式使用 ESP 的指令，如 <span class=Code>PUSH、POP、CALL</span> 及 <span class=Code>RET</span> 指令。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

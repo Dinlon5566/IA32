@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_ADD.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:43 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>ADD - �ӷ�</title>
+<title>ADD - 加法</title>
 
 <!--(Meta)==========================================================-->
 
@@ -83,7 +83,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nA - ָ��\nADD");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nA - 指令\nADD");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,15 +106,15 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">ADD - �ӷ�</h1>
+<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">ADD - 加法</h1>
 
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p class=Preformatted>ADD[condition][S] dest, op1, addr_mode<span class=Code> </span></p>
 
-<p>���У�</p>
+<p>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -125,7 +125,7 @@ else
 							style="font-style: italic;">&#xA0;condition</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 个条件之一。请参阅<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">条件代码状态</a>。</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
@@ -133,7 +133,7 @@ else
 							style="font-style: italic;">&#xA0;S</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>�������������־��λ [20]��</td></tr>
+<p CLASS=CellBodyLeft>更新条件代码标志（位 [20]）</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
@@ -141,7 +141,7 @@ else
 							style="font-style: italic;">&#xA0;dest</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>目标寄存器</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
@@ -149,7 +149,7 @@ else
 							style="font-style: italic;">&#xA0;op1</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>������һ���������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含第一个操作数的寄存器</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
@@ -157,20 +157,20 @@ else
 							style="font-style: italic;">addr_mode</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>Ѱַģʽ 1��<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">���ݴ���������</a>��</td></tr>
+<p CLASS=CellBodyLeft>寻址模式 1：<a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Data_Processing_Operands_Overview_1.htm">数据处理操作数</a>。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-ADD ָ� <em CLASS=SourceItalic>op1</em> �ӵ� <em CLASS=SourceItalic>addr_mode</em>����������洢�� <em CLASS=SourceItalic>dest</em>��condition ��������Чֵ������ָ��� NOP�� 
+ADD 指令将 <em CLASS=SourceItalic>op1</em> 加到 <em CLASS=SourceItalic>addr_mode</em>，并将结果存储到 <em CLASS=SourceItalic>dest</em>。condition 必须是有效值；否则将指令当作 NOP。 
 
-<h2>Ѱַģʽ</h2>
+<h2>寻址模式</h2>
 
-�����&ldquo;Ѱַģʽ 1 - ���ݴ���������&rdquo;�� 
+请参阅&ldquo;寻址模式 1 - 数据处理操作数&rdquo;。 
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -219,7 +219,7 @@ ADD ָ� <em CLASS=SourceItalic>op1</em> �ӵ� <em CLASS=SourceItalic>addr_mode
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs3">
 
-<h2>����</h2>
+<h2>编码</h2>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
@@ -318,7 +318,7 @@ ADD ָ� <em CLASS=SourceItalic>op1</em> �ӵ� <em CLASS=SourceItalic>addr_mode
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funcadd<br> 4 <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0<br> 6 <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@ * * * ADD (Addressing Mode 1) * * *<br> 8 <br> 9 <br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example, CODE, READONLY<br> 11 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1<br> 12 &#xA0;&#xA0;00000000 &#xA0;E3A0B001 MOV &#xA0;&#xA0;&#xA0;R11, #1<br> 13 &#xA0;&#xA0;00000004 &#xA0;E28B0001 ADD &#xA0;&#xA0;&#xA0;R0, R11, #1<br> 14 <br> 15 &#xA0;&#xA0;00000008 &#xA0;E3A0B001 MOV &#xA0;&#xA0;&#xA0;R11, #1<br> 16 &#xA0;&#xA0;00000012 &#xA0;E29B0001 ADDS &#xA0;&#xA0;R0, R11, #1<br> 17<br> 18 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END</span> </p>
 </div>

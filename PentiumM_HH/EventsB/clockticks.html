@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/clockticks.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:09 GMT -->
 <head>
 
-<title>ʱ���ź�</title>
+<title>时钟信号</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="02 24, 2003 11:26:53 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M �������¼�\nʱ���¼�\nʱ���ź�");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) M 处理器\n英特尔(R) 奔腾(R) M 处理器事件\n时钟事件\n时钟信号");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,17 +105,17 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>ʱ���ź�</h1>
+<h1>时钟信号</h1>
 
 <p class="whs1">CPU_CLK_UNHALTED</p>
 
-<p class="whs2">���¼������������ó�ͳ�ƴ�������ʱ���źţ�����������ʱ��Ĳ�����</p>
+<p class="whs2">此事件将计数器设置成统计处理器的时钟信号，以启动基于时间的采样。</p>
 
-<p>ʱ���ź�Ҳ��Ϊʱ�����ڻ� CPU ���ڣ��Ǵ�������ʶ�����Сʱ�䵥λ��������Ҳ���ڱ�ʾ������ִ��һ��ָ�������ʱ�䡣 </p>
+<p>时钟信号也称为时钟周期或 CPU 周期，是处理器能识别的最小时间单位。此术语也用于表示处理器执行一条指令所需的时间。 </p>
 
-<p>ʱ���ź�������ؼ��¼����ʵ���ɲ��֡�</p>
+<p>时钟信号是许多关键事件比率的组成部分。</p>
 
-<p>��Ӣ�ض�(R) ����(R) M �������У�ʱ���ź�ͳ�ƴ�����������ͣ״̬��ʱ���ź��������������ϵͳ (OS) �У���������ʹ�� <span class=Code>HLT</span> ָ����ʵ�֡�����Щ����ϵͳ�У����������ʱ���źŲ������ڡ���Ϊ��һ�㣬�����ܻᷢ��ʱ���źż����������ϵĵͣ�ͬ���ڲ���ʱ���봦����Ƶ�ʵó�������ֵ��ȥ��Զ�� </p>
+<p>在英特尔(R) 奔腾(R) M 处理器中，时钟信号统计处理器不在暂停状态的时钟信号数。在许多操作系统 (OS) 中，空闲任务都使用 <span class=Code>HLT</span> 指令来实现。在这些操作系统中，空闲任务的时钟信号不计在内。因为这一点，您可能会发现时钟信号计数出乎意料的低，同基于采样时间与处理器频率得出的期望值相去甚远。 </p>
 
 <p>&nbsp;</p>
 

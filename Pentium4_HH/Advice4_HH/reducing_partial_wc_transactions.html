@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/reducing_partial_wc_transactions.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:47 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>¼õÉÙ²¿·Ö WC ÊÂÎñ</title>
+<title>å‡å°‘éƒ¨åˆ† WC äº‹åŠ¡</title>
 
 <!--(Meta)==========================================================-->
 
@@ -23,7 +23,7 @@
 <meta name=layout-height content=300>
 <meta name=layout-width content=398>
 <meta name=date content="01 23, 2002 3:36:37 PM">
-<meta name=x-ignored-words content="TC;Pentium;developer.intel.com;index.htm.;Aliasing;aliasing;Mispredictions;micro-ops;SIMD;Clockticks;prefetcher;prefetching;prefetch;intrinsics;MMX;modulo;pipelined;mispredicted;NetBurst;irets;BTB;Mispredicted;DTLB;Micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;Denormal;denormals;SSE;Denormalized;index.htm;a(i;y;enddo;UC;uncacheable;WC;MMNP;MMNM;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;clocktick;VTune;clockticks;MOCLEAR;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;LSC;SSC;USC;ULC;denormal;denormaled;DELIVERBit;BSQ;writeback;Uncacheable;encodings;misprediction;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;ITLB;?;cacheability;¦Ìop;¦Ìops;uncached">
+<meta name=x-ignored-words content="TC;Pentium;developer.intel.com;index.htm.;Aliasing;aliasing;Mispredictions;micro-ops;SIMD;Clockticks;prefetcher;prefetching;prefetch;intrinsics;MMX;modulo;pipelined;mispredicted;NetBurst;irets;BTB;Mispredicted;DTLB;Micro-ops;lookaside;TLB;Lookaside;mispredictions;cmov;setcc;MH;M;C;ebx;and-ed;fcmov;CMOV;eax;cpuid;Denormal;denormals;SSE;Denormalized;index.htm;a(i;y;enddo;UC;uncacheable;WC;MMNP;MMNM;MMTP;MMTM;IO;reads|writes;writebacks;HARD_FAIL;NO_DATA;clocktick;VTune;clockticks;MOCLEAR;NO_STA;NO_STD;PARTIAL_DATA;UNALGN_ADDR;Non-prefetch;LSC;SSC;USC;ULC;denormal;denormaled;DELIVERBit;BSQ;writeback;Uncacheable;encodings;misprediction;NBOGUSNTAG;NBOGUSTAG;BOGUSNTAG;BOGUSTAG;ITLB;?;cacheability;Î¼op;Î¼ops;uncached">
 
 
  <meta name="topic-status" content="In Progress">
@@ -103,11 +103,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="±¼ÌÚ(R) 4 ´¦ÀíÆ÷Ö÷Ìâ" x-maintain-ratio="TRUE" align="right" height="60px" align="right" border="0" class="img_whs1">¼õÉÙ²¿·Ö WC ÊÂÎñ</h1>
+<h1><img src="p4p60hw.gif" alt="å¥”è…¾(R) 4 å¤„ç†å™¨ä¸»é¢˜" x-maintain-ratio="TRUE" align="right" height="60px" align="right" border="0" class="img_whs1">å‡å°‘éƒ¨åˆ† WC äº‹åŠ¡</h1>
 
-<p>WC ÊÂÎñËÆºõ»áÓ°ÏìÐÔÄÜÊ±£¬¿ÉÒÔ²ÉÈ¡ÒÔÏÂ´ëÊ©¼õÉÙËüÃÇ£º</p>
+<p>WC äº‹åŠ¡ä¼¼ä¹Žä¼šå½±å“æ€§èƒ½æ—¶ï¼Œå¯ä»¥é‡‡å–ä»¥ä¸‹æŽªæ–½å‡å°‘å®ƒä»¬ï¼š</p>
 
-<p>½«¶ÔÎ´»º´æÄÚ´æµÄÐ´ÈëÓë¶ÔÐ´»ØÐÍÄÚ´æµÄÐ´Èë·Ö¸ôµ½²»Í¬µÄ½×¶ÎÖÐ£¬ÒÔÈ·±£ÔÚÆäËüÐ´ÈëÍ¨ÐÅÁ¿µ¼ÖÂÐ´Èë×éºÏ»º³åÇø±»ÊÕ»ØÖ®Ç°£¬¿ÉÒÔÌî³äËü¡£</p>
+<p>å°†å¯¹æœªç¼“å­˜å†…å­˜çš„å†™å…¥ä¸Žå¯¹å†™å›žåž‹å†…å­˜çš„å†™å…¥åˆ†éš”åˆ°ä¸åŒçš„é˜¶æ®µä¸­ï¼Œä»¥ç¡®ä¿åœ¨å…¶å®ƒå†™å…¥é€šä¿¡é‡å¯¼è‡´å†™å…¥ç»„åˆç¼“å†²åŒºè¢«æ”¶å›žä¹‹å‰ï¼Œå¯ä»¥å¡«å……å®ƒã€‚</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -80,7 +80,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\n��ͣ�¼�\nBE_EXE_BUBBLE");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 安腾(R) 2 处理器\n英特尔(R) 安腾(R) 2 处理器事件\n暂停事件\nBE_EXE_BUBBLE");
 
 	}
 	if (window.writeBtnStyle)
@@ -107,13 +107,13 @@ else
 
 &nbsp;
 
-<br><b   style="font-weight: bold;">���⣺</b>���ܵ���ִ�е�Ԫ��ͣ���µ�ȫ�ܵ�����<b style="font-weight: bold;"><br> ���</b>��ͣ�¼�<b style="font-weight: bold;"><br> IAR/DAR/OPC��</b>N/N/N<b style="font-weight: bold;"><br> �¼����룺</b>0x02<b style="font-weight: bold;"><br> ���ÿ����������</b>1 
+<br><b   style="font-weight: bold;">标题：</b>主管道中执行单元暂停导致的全管道气泡<b style="font-weight: bold;"><br> 类别：</b>暂停事件<b style="font-weight: bold;"><br> IAR/DAR/OPC：</b>N/N/N<b style="font-weight: bold;"><br> 事件代码：</b>0x02<b style="font-weight: bold;"><br> 最大每周期增量：</b>1 
 
-<p><b style="font-weight: bold;">���壺</b>ͳ�����ܵ���&ldquo;ִ�е�Ԫ&rdquo;�������ͣ���µ�ȫ�ܵ���������</p>
+<p><b style="font-weight: bold;">定义：</b>统计主管道中&ldquo;执行单元&rdquo;引起的暂停导致的全管道气泡数。</p>
 
-<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> ��ע</h3>
+<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> 备注</h3>
 
-���¼��ĸ�������ԭ��֮�䲻�����ȼ�����Ϊ����Ҫ��ô������������ԭ��֮��˴˶�����������һЩ��ͬʱ�����ģ���˶�Ӧ�ü���ͳ�ƣ��� <br>
+此事件的各个产生原因之间不排优先级，因为不需要这么做（各个产生原因之间彼此独立，其中有一些是同时触发的，因此都应该加以统计）。 <br>
 
 
 <!--(Table)=========================================================-->
@@ -121,11 +121,11 @@ else
 
 <tr>
 <td>
-<h3 CLASS=TableHead>��չ</td>
+<h3 CLASS=TableHead>扩展</td>
 <td>
 <h3 CLASS=TableHead>PMC.umask</td>
 <td>
-<h3 CLASS=TableHead>˵��</td></tr>
+<h3 CLASS=TableHead>说明</td></tr>
 
 <tr>
 <td>
@@ -133,7 +133,7 @@ else
 <td>
 <p>b0000</td>
 <td>
-<p>��˱� exe ��ͣ</td></tr>
+<p>后端被 exe 暂停</td></tr>
 
 <tr>
 <td>
@@ -141,7 +141,7 @@ else
 <td>
 <p>b0001</td>
 <td>
-<p>���� GR/GR �� GR/������أ���˱� exe ��ͣ</td></tr>
+<p>由于 GR/GR 或 GR/加载相关，后端被 exe 暂停</td></tr>
 
 <tr>
 <td>
@@ -149,7 +149,7 @@ else
 <td>
 <p>b0010</td>
 <td>
-<p>���� FR/FR �� FR/������أ���˱� exe ��ͣ</td></tr>
+<p>由于 FR/FR 或 FR/加载相关，后端被 exe 暂停</td></tr>
 
 <tr>
 <td>
@@ -157,7 +157,7 @@ else
 <td>
 <p>b0011</td>
 <td>
-<p>���� PR ��أ���˱� exe ��ͣ</td></tr>
+<p>由于 PR 相关，后端被 exe 暂停</td></tr>
 
 <tr>
 <td>
@@ -165,7 +165,7 @@ else
 <td>
 <p>b0100</td>
 <td>
-<p>���� AR �� CR ��أ���˱� exe ��ͣ</td></tr>
+<p>由于 AR 或 CR 相关，后端被 exe 暂停</td></tr>
 
 <tr>
 <td>
@@ -173,7 +173,7 @@ else
 <td>
 <p>b0101</td>
 <td>
-<p>���� GR/GR ��أ���˱� exe ��ͣ</td></tr>
+<p>由于 GR/GR 相关，后端被 exe 暂停</td></tr>
 
 <tr>
 <td>
@@ -181,7 +181,7 @@ else
 <td>
 <p>b0110</td>
 <td>
-<p>����ȡ�����أ���˱� exe ��ͣ</td></tr>
+<p>由于取消加载，后端被 exe 暂停</td></tr>
 
 <tr>
 <td>
@@ -189,7 +189,7 @@ else
 <td>
 <p>b0111</td>
 <td>
-<p>���ڼĴ������л�����˱� exe ��ͣ</td></tr>
+<p>由于寄存器库切换，后端被 exe 暂停</td></tr>
 
 <tr>
 <td>
@@ -197,7 +197,7 @@ else
 <td>
 <p>b1000</td>
 <td>
-<p>ARCR��PR��CANCEL �� BANK_SWITCH</td></tr>
+<p>ARCR、PR、CANCEL 或 BANK_SWITCH</td></tr>
 
 <tr>
 <td>
@@ -205,7 +205,7 @@ else
 <td>
 <p>b1001-b1111</td>
 <td>
-<p>��*��ͳ��*��</td></tr>
+<p>（*不统计*）</td></tr>
 </table>
 
 <script type="text/javascript" language="javascript1.2">

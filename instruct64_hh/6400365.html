@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400365.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:48 GMT -->
 <head>
 
-<title>stf 操作</title>
+<title>stf 鎿嶄綔</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:57:06 PM">
 <meta name=topic-status content=Complete>
 <meta name=topic-priority content=2>
@@ -97,7 +97,7 @@ else
 		document.location.reload();
 //-->
 </script>
-stf 操作：
+stf 鎿嶄綔锛�
 
 <br>if (PR[<i>qp</i>]) { <br> if (imm_base_update_form) <br> <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400444.htm">check_target_register</a>(<i>r3</i>); <br> if (tmp_isrcode = <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400483.htm">fp_reg_disabled</a>(<i>f2</i>, 0, 0, 0)) <br> disabled_fp_register_fault(tmp_isrcode, WRITE); <br> <br> if (<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400568.htm">GR</a>[<i>r3</i>].nat || (!spill_form &amp;&amp; (<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400567.htm">FR</a>[<i>f2</i>] == NATVAL))) <br> register_nat_consumption_fault(WRITE); <br> <br> size = spill_form ?16 : (integer_form ?8 : <i>fsz)</i>; <br> <br> paddr = <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400547.htm">tlb_translate</a>(GR[<i>r3</i>], size, WRITE, PSR.cpl, &amp;mattr, &amp;tmp_unused); <br> val = <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400486.htm">fp_fr_to_mem_format</a>(FR[<i>f2</i>], size, integer_form); <br> <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400510.htm">mem_write</a>(val, paddr, size, UM.be, mattr<i>,</i> UNORDERED, <i>sthint</i>); <br> <br> <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400439.htm">alat_inval_multiple_entries</a>(paddr, size); <br> <br> if (imm_base_update_form) { <br> GR[<i>r3</i>] = GR[<i>r3</i>] + <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400526.htm">sign_ext</a>(<i>imm9</i>, 9); <br> GR[<i>r</i>3].nat = 0; 
 

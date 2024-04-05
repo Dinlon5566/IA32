@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc314.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:45 GMT -->
 <head>
 
-<title>UCOMISD - ÎÞÐò±È½Ï±êÁ¿Ë«¾«¶È¸¡µãÖµ²¢ÉèÖÃ EFLAGS</title>
+<title>UCOMISD - æ— åºæ¯”è¾ƒæ ‡é‡åŒç²¾åº¦æµ®ç‚¹å€¼å¹¶è®¾ç½® EFLAGS</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:22:39 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -27,7 +27,7 @@
 <meta name=page-count content=1>
 <meta name=layout-height content=1142>
 <meta name=layout-width content=2420>
-<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;EFLAGS;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;¡ÀF;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;¡À;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FSUB;FSUBP;FISUB;Dest;FSUBR;FSUBRP;FISUBR;FLDZ--Load;EB;EC;EE;FLDZ;FLDPI;FCLEX;FNCLEX--Clear;FNCLEX*;PE;UE;OE;ZE;IE;FNCLEX;MS-DOS*;MXCRS;FNINIT*;coprocessor;FPUControlWord;FPUStatusWord;FPUTagWord;FPUDataPointer;FPUInstructionPointer;FPULastInstructionOpcode;FINIT;FNINIT;MXCSR;FSAVE;FNSAVE--Store;FNSAVE*;FNSAVE;FNINIT--Initialize;coprocessors;FPUs;FWAIT;DEST[FPUControlWord;DEST[FPUStatusWord;DEST[FPUTagWord;DEST[FPUDataPointer;DEST[FPUInstructionPointer;DEST[FPULastInstructionOpcode;nonwritable;FSTCW;FNSTCW--Store;FNSTCW*;FNSTCW;FNSTENV--Store;FSTENV;FNSTENV*;FNSTENV;FNSTSW--Store;FNSTSW*;FNSTSW;FPREM;FXAM;FSTSW;denormalized;MOV--Move;ModR;M;m;PG;PGE;PSE;PAE;PDPTRs;MOV;reg;TLB;Lookaside;TLBs;GD;FSTP--Store;FST;FSTP;significand;FUCOMIP--Compare;FUCOMIP;FCOMI;FCOMIP;FUCOMI;FUCOMPP--Unordered;FUCOMP;FUCOMPP;FWAIT--Wait;MP;INSB;INSW;INSD--Input;INSD;CPL;IOPL;VM;TSS;CL;BL;CH;DH;BH;CX;BX;SP;EBX;EBP;mm--An;XLAT;LIDT;LGDT;GDTR;IDTR;ith;DPL=;C;W;Y;INTRA-PRIVILEGE-LEVEL-INTERRUPT;flag*;Push(CS;Push(IP;IDT(Descriptor;vector_number;GP((DEST;EXT;GP((vector_number;NP((vector_number;GDT;GP(TSS;NP(TSS;Push(error;GP(selector;NP(selector;GP(new;GP(CodeSegmentSelector;INTER-PREVILEGE-LEVEL-INTERRUPT;TSSstackAddress;TS(current;NewSS;NewESP;TS(EXT;RPL;TS(SS;LDT;SS(SS;selector+EXT;SS(segment;TSS(NewSS;Gate(CS;IP;Push(far;Push(EFLAGS;Push(ErrorCode;ELSE(*;CodeSegmentDescriptor(DPL;CS(RPL;RF;tempEFLAGS;TempSS;TempESP;Push(GS;Push(FS;Push(DS;Push(ES;Push(TempSS;Push(TempESP;Push(TempEFlags;Push(EIP;Gate(instruction;ErrorCode;SS(selector;TS(selector;TSS's;INT;n;CE;IDT;VME;Microsoft*;EIP;IRET;DPL;GOTO;TF;CMC;LIDT--Load;SFENCE--Store;IDTR(Limit;IDTR(Base;GDTR(Limit;GDTR(Base;SIDT--Store;SGDT;SIDT;mm_loadr_ps;mm_cmpgt_ss;Intrinsics;intrinsics;xmm;declspec;ps;ss;z;y;w;t;mm_load_ps(a;immediates;Intra-privilege;Pop(;tempEIP;tempCS;tempEFLAGS(VM;VIF;EFLAGS(IF;EFLAGS(IOPL;EFLAGS(VM;RETURN-TO-OUTER-PRIVILGE-LEVEL;GP(SSselector;LODSD--Load;LODSD;LOOPcc--Loop;LOOPE;LOOPZ;LOOPNE;LOOPNZ;AddressSize;BranchCond;SignExtend(DEST;LSS--Load;SegmentRegister(DescriptorValidBit;Offset(SRC;XCHG--Exchange;MOVSD--Move;rw;rb;SI's;AddressSize--The;StackAddrSize--Represents;SRC--Represents;DEST--Represents;ZeroExtend(value;ZeroExtend;SignExtend(value;SignExtend;SaturateSignedWordToSignedByte--Converts;SaturateSignedDwordToSignedWord--Converts;SaturateSignedWordToUnsignedByte--Converts;FFH;SaturateToSignedByte--Represents;SaturateToSignedWord--Represents;SaturateToUnsignedByte--Represents;SaturateToUnsignedWord--Represents;LowOrderWord(DEST;HighOrderWord(DEST;Push(value;PUSH--Push;POP--Pop;PopRegisterStack--Marks;Switch-Tasks--Performs;Bit(BitBase;BitOffset;Bit[EAX;BIT[EAX;BitBase;GBits;DIV;EWBE#;EFLAGS(RF;SegmentSelector;IRETD;LODS;LODSB;LODSW;cb;LOOPcc;LDS;LES;LFS;LGS;LSS;ProtectedMode;SegementSelector;SegmentSelector(SRC;SegmentDescriptor([SRC;SegmentRegister;NullSelector;software*;XCHG;BSWAP;MOVSB;MOVSW;MOVS;MOVSD;Encodings;OUTSB;OUTSW;OUTSD;prefetched;PADDB;PADDW;FC;FD;FE;PADDD;PADDSW--Packed;SaturateToSignedByte;SaturateToSignedWord;PADDSB;PADDSW;PADDUSW--Packed;SaturateToUnsignedByte;SaturateToUnSignedByte;SaturateToUnsignedWord;SaturateToUnSignedWord;PADDUSB;PADDUSW;PAVGW--Packed;PAVGB;PAVGW;PCMPEQB;PCMPEQW;PCMPEQD;PCMPGTD--Packed;FFFFFFFFH;DCMPGTD;PCMPGTB;PCMPGTW;PCMPGTD;POPA;POPAD;PUSHA;PUSHAD;POPFD--Pop;POPF;POPFD;PUSHF;PUSHFD;unaffected*;PSLLQ--Packed;ZeroExtend(DEST;PSLLW;PSLLD;PSLLQ;quadwords;int;PSRAD--Packed;PSRAW;PSRAD;PSRLQ--Packed;PSRLW;PSRLD;PSRLQ;PSUBD--Packed;PSUBB;PSUBW;PSUBD;PSUBSW--Packed;PSUBSB;PSUBSW;PSUBUSW--Packed;MMX;PSUBUSB;PSUBUSW;PUNPCKHQDQ--;PUNPCKHW;PUNPCKHBW;PUNPCKHWD;PUNPCKHDQ;PUNPCKHQDQ;PUNPCKLQDQ--;PUNPCKLBW;PUNPCKLWD;PUNPCKLDQ;PUNPCKLQDQ;Push(ECX;Push(EDX;Push(EBX;Push(Temp;Push(EBP;Push(ESI;Push(EDI;Push(AX;Push(CX;Push(DX;Push(BX;Push(BP;Push(SI;Push(DI;Push(EAX;PUSHFD--Push;push(EFLAGS;stack*;EFLAG;IDIV;Coprocessor;NMI;INTR;NP;MC;XF;STOS;nonmatching;AE;SCAS;non-EAX;REPNZ;JECXZ;JZ;JNZ;JNE;CountReg;LSB(DEST;LSB(SRC;MSB;RCL;RCR;ROL;ROR;tempCOUNT;tempCF;MSB(DEST;ELIHW;XOR;ROR--Rotate;SCASB;SCASD--Scan;ES(E;SCASW;SCASD;SAL;SAR;divide*;SHL;SHR;tempDEST;infinity*;Denormalized;misaligned;MOVUPS;Denormal;CPUID.XMM;mm_setcsr(unsigned;EFLAGS.AC;CPUID.XMM(EDX;LDMXCSR;FZ;underflows;FXRSTOR;STOSD--Store;STOSB;STOSW;STOSD;FLD--Load;ExtendedReal(SRC;FLD;FLDCW--Load;FLDCW;FPU's;FLDENV--Load;SRC[FPUControlWord;SRC[FPUStatusWord;SRC[FPUTagWord;SRC[FPUDataPointer;SRC[FPUInstructionPointer;SRC[FPULastInstructionOpcode;FLDENV;FNOP--No;FNOP;FPATAN--Partial;Arctangent;arctangent;FPATAN;FPREM--Partial;LeastSignificantBits(Q;modulus;Q;Std;N;QQ;ADDSD--Scalar;mm_add_sd;ADDSD;FPTAN--Partial;FPTAN;FRNDINT--Round;FRNDINT;FRSTOR--Restore;FRSTOR;FSCALE--Scale;FSCALE;FXTRACT;FSIN;FB;FSINCOS;FCOS;FSQRT;ADDSS;SSE;FTST--TEST;FTST;FXCH--Exchange;FXCH;IP-offset;FXSAVE;DP;FTW;FSW;FCW;AND--Logical;iw;bitwise;little-endian;FP;non-TOS;xx;FXTRACT--Extract;superset;logb(x;Significand;logbx;HLT--Halt;HLT;IDIV--Signed;EAX=Quotient;EDX=Remainder;OpernadSize;SignedModulus;EDXE;IMUL--Signed;IMUL;MUL;NumberOfOperands;size*;IN--Input;INC--Increment;INC;FF;ANDPD--Bitwise;ANDPD;BitwiseAND;Bitwise;INVD--Invalidate;INVD;WBINVD;Flush(InternalCaches;SignalFlush(ExternalCaches;INVLPG--Invalidate;INVLPG;lookaside;Flush(RelevantTLBEntries;Jcc--Jump;JA;JAE;JB;JBE;JC;JCXZ;JE;JG;SF=OF;JGE;JL;JLE;JNA;JNAE;JNB;JNBE;JNC;JNG;JNGE;JNL;JNLE;JNO;JNP;JNS;JP;JPE;JPO;JS;cw;Jcc;opcodes;JMP;FARLABEL;cacheability;EA;cp;jump--A;LFENCE;MFENCE;SFENCE;WB;WC;PREFETCHh;specualtive;LLDT;LDTR;LAR;VERR;VERW;LSL;LDTR(SegmentSelector;LDTR(SegmentDescriptor;ADDPD;ANDNPD;prepended;ADC;BTC;BTR;BTS;CMPXCHG;NEG;SBB;XADD;LOCK#;AssertLOCK#(DurationOfAccompaningInstruction;LSL--Load;LTR;TSSsegmentDescriptor(busy;TaskRegister(SegmentSelector;TaskRegister(SegmentDescriptor;MASKMOVDQU;UC;WP;MASKMOVQ;MAXPD--Maximum;MAXPD;MAXPS;ANDN;Single-FP;ANDNPS;MAXSD;MAXSS;Wait_On_Following_Loads_And_Stores_Until(preceding_loads_and_stores_globally_visible;MINPD;MINPS;MINSD;MINSS;Sreg;seg;ARPL;DEST[RPL;SRC[RPL;MOVAPD--Move;MOVAPD;MOVUPD;void_mm_store_pd(double;MOVAPS;void_mm_store_ps;MOVD;XXM;MOVDQA;MOVDQU;mmx;MOVHLPS--;MOVHLPS;MOVHPD;MOVHPS;MOVLHPS;doubleword-integers;ArrayIndex;LowerBound;UppderBound;MOVLPD;nvalue;mm_loadl_pd;mm_storel_pd;MOVLPS;mm_loadl_pi;mm_storel_pi;MOVMSKPD;mm_movemask_pd;MOVMSKPS;MOVNTDQ;uncacheable;MOVNTI;MOVNTPD;MOVNTPS;MOVNTQ--Move;MOVNTQ;MOVQ;BC;BSF;mm_load_sd;mm_store_sd;MOVSS;MOVSX;BF;MOVZX;MULPD;BD;BSR;MULPS;mem;MULSD;MULSS;NOP;ORPD;ORPS;EF;big-endian;SaturateSignedWordToUnsignedByte;PACKUSWB;¡§;PADDQ;PAND;PANDN;BT;modulo;PEXTRW;SEL;imm;d;PINSRW;PMADDWD;PMADD;PMAXSW;PMAXUB;PMINSW;MINSW;PMINUB;PMOVMSKB;PMULHUW;PMULHW;PMULLW;PMULLU;PMULUDQ;POR;PREFETCHNTA;NTA;prefetch;Prefetches;CLFLUSH;WRMSR;CR;PSADBW;Doublewords;PSHUFD;PSHUFHW;encodings;PSHUFLW;PSHUFW;PSLLDQ;PSRLDQ;intrasegment;call--A;intersegment;switch--A;KBytes;GP(segment;newESP;CallGate(CS;newSS;Push(oldSS;Push(parameters;Push(oldCS;InstructionPointer;oldESP;oldEIP;CodeSegment(DPL;CallGateSize;oldIP;GP(task;NP(task;PSUBQ;PXOR;RCPPS;RCPSS;RCCPS;RDMSR;MSR;unimplemented;MSRs;PMC[ECX;RDPMC;PCE;RDPCM;RDTSC;TSD;SS(StackSegmentSelector;ReturnCodeSegmentSelector(RPL;tempESP;tempSS;RSM;SMM;SSM;ProcessorState;RSQRTPS;RSQRTSS;SAHF;SETL;SETLE;SETNA;SETNAE;SETNB;SETNBE;SETNC;SETNE;SETNG;SETNGE;SETNL;SETNLE;SETNO;SETNP;SETNS;SETNZ;SETO;SETP;SETPE;SETPO;SETZ;SETcc;decrementing;SETB;SETBE;SETC;SETE;SETG;multiprecision;BIT[DEST;DOWNTO;Bit(DEST;BIT[SRC;SHLD;BIT[inBits;SHRD;SHUFPD;SHUFPS;SLDT;SMSW;SQRTPD;SQRTPS;SQRTSD;CLD;SQRTSS;SQRT;STC;STD;STI;maskable;CLI;mode*;STR;SUBPD;SUBPS;SUBSD;SUBSS;SYSENTER;SYSEXIT;DLLs;GB;SEP;EFLAGS.VM;EFLAGS.IF;CS.SEL;CS.SEL.CPL;CS.SEL.BASE;CS.SEL.LIMIT;CS.SEL.G;KB;CS.SEL.S;CS.SEL.TYPE_xCRA;CS.SEL.D;CS.SEL.DPL;CS.SEL.RPL;CS.SEL.P;SS.SEL;SS.SEL.BASE;SS.SEL.LIMIT;SS.SEL.G;SS.SEL.S;SS.SEL.TYPE_xCRA;SS.SEL.D;SS.SEL.DPL;SS.SEL.RPL;SS.SEL.P;SYSENTER_ESP_MSR;SYSENTER_EIP_MSR;SYSENTER_CS_MSR;SS.SEL.CPL;UCOMISD;COMISD;GREATER_THAN;LESS_THAN">
+<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;EFLAGS;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;Â±F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;Â±;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FSUB;FSUBP;FISUB;Dest;FSUBR;FSUBRP;FISUBR;FLDZ--Load;EB;EC;EE;FLDZ;FLDPI;FCLEX;FNCLEX--Clear;FNCLEX*;PE;UE;OE;ZE;IE;FNCLEX;MS-DOS*;MXCRS;FNINIT*;coprocessor;FPUControlWord;FPUStatusWord;FPUTagWord;FPUDataPointer;FPUInstructionPointer;FPULastInstructionOpcode;FINIT;FNINIT;MXCSR;FSAVE;FNSAVE--Store;FNSAVE*;FNSAVE;FNINIT--Initialize;coprocessors;FPUs;FWAIT;DEST[FPUControlWord;DEST[FPUStatusWord;DEST[FPUTagWord;DEST[FPUDataPointer;DEST[FPUInstructionPointer;DEST[FPULastInstructionOpcode;nonwritable;FSTCW;FNSTCW--Store;FNSTCW*;FNSTCW;FNSTENV--Store;FSTENV;FNSTENV*;FNSTENV;FNSTSW--Store;FNSTSW*;FNSTSW;FPREM;FXAM;FSTSW;denormalized;MOV--Move;ModR;M;m;PG;PGE;PSE;PAE;PDPTRs;MOV;reg;TLB;Lookaside;TLBs;GD;FSTP--Store;FST;FSTP;significand;FUCOMIP--Compare;FUCOMIP;FCOMI;FCOMIP;FUCOMI;FUCOMPP--Unordered;FUCOMP;FUCOMPP;FWAIT--Wait;MP;INSB;INSW;INSD--Input;INSD;CPL;IOPL;VM;TSS;CL;BL;CH;DH;BH;CX;BX;SP;EBX;EBP;mm--An;XLAT;LIDT;LGDT;GDTR;IDTR;ith;DPL=;C;W;Y;INTRA-PRIVILEGE-LEVEL-INTERRUPT;flag*;Push(CS;Push(IP;IDT(Descriptor;vector_number;GP((DEST;EXT;GP((vector_number;NP((vector_number;GDT;GP(TSS;NP(TSS;Push(error;GP(selector;NP(selector;GP(new;GP(CodeSegmentSelector;INTER-PREVILEGE-LEVEL-INTERRUPT;TSSstackAddress;TS(current;NewSS;NewESP;TS(EXT;RPL;TS(SS;LDT;SS(SS;selector+EXT;SS(segment;TSS(NewSS;Gate(CS;IP;Push(far;Push(EFLAGS;Push(ErrorCode;ELSE(*;CodeSegmentDescriptor(DPL;CS(RPL;RF;tempEFLAGS;TempSS;TempESP;Push(GS;Push(FS;Push(DS;Push(ES;Push(TempSS;Push(TempESP;Push(TempEFlags;Push(EIP;Gate(instruction;ErrorCode;SS(selector;TS(selector;TSS's;INT;n;CE;IDT;VME;Microsoft*;EIP;IRET;DPL;GOTO;TF;CMC;LIDT--Load;SFENCE--Store;IDTR(Limit;IDTR(Base;GDTR(Limit;GDTR(Base;SIDT--Store;SGDT;SIDT;mm_loadr_ps;mm_cmpgt_ss;Intrinsics;intrinsics;xmm;declspec;ps;ss;z;y;w;t;mm_load_ps(a;immediates;Intra-privilege;Pop(;tempEIP;tempCS;tempEFLAGS(VM;VIF;EFLAGS(IF;EFLAGS(IOPL;EFLAGS(VM;RETURN-TO-OUTER-PRIVILGE-LEVEL;GP(SSselector;LODSD--Load;LODSD;LOOPcc--Loop;LOOPE;LOOPZ;LOOPNE;LOOPNZ;AddressSize;BranchCond;SignExtend(DEST;LSS--Load;SegmentRegister(DescriptorValidBit;Offset(SRC;XCHG--Exchange;MOVSD--Move;rw;rb;SI's;AddressSize--The;StackAddrSize--Represents;SRC--Represents;DEST--Represents;ZeroExtend(value;ZeroExtend;SignExtend(value;SignExtend;SaturateSignedWordToSignedByte--Converts;SaturateSignedDwordToSignedWord--Converts;SaturateSignedWordToUnsignedByte--Converts;FFH;SaturateToSignedByte--Represents;SaturateToSignedWord--Represents;SaturateToUnsignedByte--Represents;SaturateToUnsignedWord--Represents;LowOrderWord(DEST;HighOrderWord(DEST;Push(value;PUSH--Push;POP--Pop;PopRegisterStack--Marks;Switch-Tasks--Performs;Bit(BitBase;BitOffset;Bit[EAX;BIT[EAX;BitBase;GBits;DIV;EWBE#;EFLAGS(RF;SegmentSelector;IRETD;LODS;LODSB;LODSW;cb;LOOPcc;LDS;LES;LFS;LGS;LSS;ProtectedMode;SegementSelector;SegmentSelector(SRC;SegmentDescriptor([SRC;SegmentRegister;NullSelector;software*;XCHG;BSWAP;MOVSB;MOVSW;MOVS;MOVSD;Encodings;OUTSB;OUTSW;OUTSD;prefetched;PADDB;PADDW;FC;FD;FE;PADDD;PADDSW--Packed;SaturateToSignedByte;SaturateToSignedWord;PADDSB;PADDSW;PADDUSW--Packed;SaturateToUnsignedByte;SaturateToUnSignedByte;SaturateToUnsignedWord;SaturateToUnSignedWord;PADDUSB;PADDUSW;PAVGW--Packed;PAVGB;PAVGW;PCMPEQB;PCMPEQW;PCMPEQD;PCMPGTD--Packed;FFFFFFFFH;DCMPGTD;PCMPGTB;PCMPGTW;PCMPGTD;POPA;POPAD;PUSHA;PUSHAD;POPFD--Pop;POPF;POPFD;PUSHF;PUSHFD;unaffected*;PSLLQ--Packed;ZeroExtend(DEST;PSLLW;PSLLD;PSLLQ;quadwords;int;PSRAD--Packed;PSRAW;PSRAD;PSRLQ--Packed;PSRLW;PSRLD;PSRLQ;PSUBD--Packed;PSUBB;PSUBW;PSUBD;PSUBSW--Packed;PSUBSB;PSUBSW;PSUBUSW--Packed;MMX;PSUBUSB;PSUBUSW;PUNPCKHQDQ--;PUNPCKHW;PUNPCKHBW;PUNPCKHWD;PUNPCKHDQ;PUNPCKHQDQ;PUNPCKLQDQ--;PUNPCKLBW;PUNPCKLWD;PUNPCKLDQ;PUNPCKLQDQ;Push(ECX;Push(EDX;Push(EBX;Push(Temp;Push(EBP;Push(ESI;Push(EDI;Push(AX;Push(CX;Push(DX;Push(BX;Push(BP;Push(SI;Push(DI;Push(EAX;PUSHFD--Push;push(EFLAGS;stack*;EFLAG;IDIV;Coprocessor;NMI;INTR;NP;MC;XF;STOS;nonmatching;AE;SCAS;non-EAX;REPNZ;JECXZ;JZ;JNZ;JNE;CountReg;LSB(DEST;LSB(SRC;MSB;RCL;RCR;ROL;ROR;tempCOUNT;tempCF;MSB(DEST;ELIHW;XOR;ROR--Rotate;SCASB;SCASD--Scan;ES(E;SCASW;SCASD;SAL;SAR;divide*;SHL;SHR;tempDEST;infinity*;Denormalized;misaligned;MOVUPS;Denormal;CPUID.XMM;mm_setcsr(unsigned;EFLAGS.AC;CPUID.XMM(EDX;LDMXCSR;FZ;underflows;FXRSTOR;STOSD--Store;STOSB;STOSW;STOSD;FLD--Load;ExtendedReal(SRC;FLD;FLDCW--Load;FLDCW;FPU's;FLDENV--Load;SRC[FPUControlWord;SRC[FPUStatusWord;SRC[FPUTagWord;SRC[FPUDataPointer;SRC[FPUInstructionPointer;SRC[FPULastInstructionOpcode;FLDENV;FNOP--No;FNOP;FPATAN--Partial;Arctangent;arctangent;FPATAN;FPREM--Partial;LeastSignificantBits(Q;modulus;Q;Std;N;QQ;ADDSD--Scalar;mm_add_sd;ADDSD;FPTAN--Partial;FPTAN;FRNDINT--Round;FRNDINT;FRSTOR--Restore;FRSTOR;FSCALE--Scale;FSCALE;FXTRACT;FSIN;FB;FSINCOS;FCOS;FSQRT;ADDSS;SSE;FTST--TEST;FTST;FXCH--Exchange;FXCH;IP-offset;FXSAVE;DP;FTW;FSW;FCW;AND--Logical;iw;bitwise;little-endian;FP;non-TOS;xx;FXTRACT--Extract;superset;logb(x;Significand;logbx;HLT--Halt;HLT;IDIV--Signed;EAX=Quotient;EDX=Remainder;OpernadSize;SignedModulus;EDXE;IMUL--Signed;IMUL;MUL;NumberOfOperands;size*;IN--Input;INC--Increment;INC;FF;ANDPD--Bitwise;ANDPD;BitwiseAND;Bitwise;INVD--Invalidate;INVD;WBINVD;Flush(InternalCaches;SignalFlush(ExternalCaches;INVLPG--Invalidate;INVLPG;lookaside;Flush(RelevantTLBEntries;Jcc--Jump;JA;JAE;JB;JBE;JC;JCXZ;JE;JG;SF=OF;JGE;JL;JLE;JNA;JNAE;JNB;JNBE;JNC;JNG;JNGE;JNL;JNLE;JNO;JNP;JNS;JP;JPE;JPO;JS;cw;Jcc;opcodes;JMP;FARLABEL;cacheability;EA;cp;jump--A;LFENCE;MFENCE;SFENCE;WB;WC;PREFETCHh;specualtive;LLDT;LDTR;LAR;VERR;VERW;LSL;LDTR(SegmentSelector;LDTR(SegmentDescriptor;ADDPD;ANDNPD;prepended;ADC;BTC;BTR;BTS;CMPXCHG;NEG;SBB;XADD;LOCK#;AssertLOCK#(DurationOfAccompaningInstruction;LSL--Load;LTR;TSSsegmentDescriptor(busy;TaskRegister(SegmentSelector;TaskRegister(SegmentDescriptor;MASKMOVDQU;UC;WP;MASKMOVQ;MAXPD--Maximum;MAXPD;MAXPS;ANDN;Single-FP;ANDNPS;MAXSD;MAXSS;Wait_On_Following_Loads_And_Stores_Until(preceding_loads_and_stores_globally_visible;MINPD;MINPS;MINSD;MINSS;Sreg;seg;ARPL;DEST[RPL;SRC[RPL;MOVAPD--Move;MOVAPD;MOVUPD;void_mm_store_pd(double;MOVAPS;void_mm_store_ps;MOVD;XXM;MOVDQA;MOVDQU;mmx;MOVHLPS--;MOVHLPS;MOVHPD;MOVHPS;MOVLHPS;doubleword-integers;ArrayIndex;LowerBound;UppderBound;MOVLPD;nvalue;mm_loadl_pd;mm_storel_pd;MOVLPS;mm_loadl_pi;mm_storel_pi;MOVMSKPD;mm_movemask_pd;MOVMSKPS;MOVNTDQ;uncacheable;MOVNTI;MOVNTPD;MOVNTPS;MOVNTQ--Move;MOVNTQ;MOVQ;BC;BSF;mm_load_sd;mm_store_sd;MOVSS;MOVSX;BF;MOVZX;MULPD;BD;BSR;MULPS;mem;MULSD;MULSS;NOP;ORPD;ORPS;EF;big-endian;SaturateSignedWordToUnsignedByte;PACKUSWB;Â¨;PADDQ;PAND;PANDN;BT;modulo;PEXTRW;SEL;imm;d;PINSRW;PMADDWD;PMADD;PMAXSW;PMAXUB;PMINSW;MINSW;PMINUB;PMOVMSKB;PMULHUW;PMULHW;PMULLW;PMULLU;PMULUDQ;POR;PREFETCHNTA;NTA;prefetch;Prefetches;CLFLUSH;WRMSR;CR;PSADBW;Doublewords;PSHUFD;PSHUFHW;encodings;PSHUFLW;PSHUFW;PSLLDQ;PSRLDQ;intrasegment;call--A;intersegment;switch--A;KBytes;GP(segment;newESP;CallGate(CS;newSS;Push(oldSS;Push(parameters;Push(oldCS;InstructionPointer;oldESP;oldEIP;CodeSegment(DPL;CallGateSize;oldIP;GP(task;NP(task;PSUBQ;PXOR;RCPPS;RCPSS;RCCPS;RDMSR;MSR;unimplemented;MSRs;PMC[ECX;RDPMC;PCE;RDPCM;RDTSC;TSD;SS(StackSegmentSelector;ReturnCodeSegmentSelector(RPL;tempESP;tempSS;RSM;SMM;SSM;ProcessorState;RSQRTPS;RSQRTSS;SAHF;SETL;SETLE;SETNA;SETNAE;SETNB;SETNBE;SETNC;SETNE;SETNG;SETNGE;SETNL;SETNLE;SETNO;SETNP;SETNS;SETNZ;SETO;SETP;SETPE;SETPO;SETZ;SETcc;decrementing;SETB;SETBE;SETC;SETE;SETG;multiprecision;BIT[DEST;DOWNTO;Bit(DEST;BIT[SRC;SHLD;BIT[inBits;SHRD;SHUFPD;SHUFPS;SLDT;SMSW;SQRTPD;SQRTPS;SQRTSD;CLD;SQRTSS;SQRT;STC;STD;STI;maskable;CLI;mode*;STR;SUBPD;SUBPS;SUBSD;SUBSS;SYSENTER;SYSEXIT;DLLs;GB;SEP;EFLAGS.VM;EFLAGS.IF;CS.SEL;CS.SEL.CPL;CS.SEL.BASE;CS.SEL.LIMIT;CS.SEL.G;KB;CS.SEL.S;CS.SEL.TYPE_xCRA;CS.SEL.D;CS.SEL.DPL;CS.SEL.RPL;CS.SEL.P;SS.SEL;SS.SEL.BASE;SS.SEL.LIMIT;SS.SEL.G;SS.SEL.S;SS.SEL.TYPE_xCRA;SS.SEL.D;SS.SEL.DPL;SS.SEL.RPL;SS.SEL.P;SYSENTER_ESP_MSR;SYSENTER_EIP_MSR;SYSENTER_CS_MSR;SS.SEL.CPL;UCOMISD;COMISD;GREATER_THAN;LESS_THAN">
 
 
 <!--(Links)=========================================================-->
@@ -96,7 +96,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("²Î¿¼\nÖ¸Áî¼¯\nIA-32 Ö¸Áî\nU - Ö¸Áî\nUCOMISD - ÎÞÐò±È½Ï±êÁ¿Ë«¾«¶È¸¡µãÖµ²¢ÉèÖÃ EFLAGS");
+	addTocInfo("å‚è€ƒ\næŒ‡ä»¤é›†\nIA-32 æŒ‡ä»¤\nU - æŒ‡ä»¤\nUCOMISD - æ— åºæ¯”è¾ƒæ ‡é‡åŒç²¾åº¦æµ®ç‚¹å€¼å¹¶è®¾ç½® EFLAGS");
 
 	}
 	if (window.writeBtnStyle)
@@ -119,7 +119,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>UCOMISD - ÎÞÐò±È½Ï±êÁ¿Ë«¾«¶È¸¡µãÖµ²¢ÉèÖÃ EFLAGS</h1>
+<h1>UCOMISD - æ— åºæ¯”è¾ƒæ ‡é‡åŒç²¾åº¦æµ®ç‚¹å€¼å¹¶è®¾ç½® EFLAGS</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -128,15 +128,15 @@ else
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>²Ù×÷Âë</td>
+	align=center>æ“ä½œç </td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>Ö¸Áî</td>
+	align=center>æŒ‡ä»¤</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
 	style="text-align: center; margin-bottom: 0;"
-	align=center>ËµÃ÷</td></tr>
+	align=center>è¯´æ˜Ž</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -147,20 +147,20 @@ else
 	style="margin-bottom: 0;">UCOMISD <span style="font-style: italic;"><I>xmm1</I></span>, <span style="font-style: italic;"><I>xmm2/m64</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">£¨ÎÞÐò£©±È½Ï <span style="font-style: italic;"><I>xmm1</I></span> Óë <span style="font-style: italic;"><I>xmm2/m64</I></span> ÖÐµÄµÍÎ»Ë«¾«¶È¸¡µãÖµ£¬²¢ÏàÓ¦ÉèÖÃ EFLAGS¡£</td></tr>
+	style="margin-bottom: 0;">ï¼ˆæ— åºï¼‰æ¯”è¾ƒ <span style="font-style: italic;"><I>xmm1</I></span> ä¸Ž <span style="font-style: italic;"><I>xmm2/m64</I></span> ä¸­çš„ä½Žä½åŒç²¾åº¦æµ®ç‚¹å€¼ï¼Œå¹¶ç›¸åº”è®¾ç½® EFLAGSã€‚</td></tr>
 </table>
 
-<h2>ËµÃ÷</h2>
+<h2>è¯´æ˜Ž</h2>
 
-<p>¶ÔÔ´²Ù×÷Êý 1£¨µÚÒ»¸ö²Ù×÷Êý£©ÓëÔ´²Ù×÷Êý 2£¨µÚ¶þ¸ö²Ù×÷Êý£©µÍÎ»ËÄ×ÖÖÐµÄË«¾«¶È¸¡µãÖµÖ´ÐÐÎÞÐò±È½Ï£¬²¢¸ù¾Ý½á¹û£¨ÎÞÐò¡¢´óÓÚ¡¢Ð¡ÓÚ»òµÈÓÚ£©ÉèÖÃ EFLAGS ¼Ä´æÆ÷ÖÐµÄ ZF¡¢PF ¼° CF ±êÖ¾¡£EFLAGS ¼Ä´æÆ÷ÖÐµÄ OF¡¢SF ¼° AF ±êÖ¾ÉèÖÃÎª 0¡£Èç¹ûÈÎºÎÒ»¸öË«¾«¶È¸¡µãÖµÊÇ NaN£¨QNaN »ò SNaN£©£¬Ôò·µ»ØÎÞÐòÎ½´Ê¡£</p>
+<p>å¯¹æºæ“ä½œæ•° 1ï¼ˆç¬¬ä¸€ä¸ªæ“ä½œæ•°ï¼‰ä¸Žæºæ“ä½œæ•° 2ï¼ˆç¬¬äºŒä¸ªæ“ä½œæ•°ï¼‰ä½Žä½å››å­—ä¸­çš„åŒç²¾åº¦æµ®ç‚¹å€¼æ‰§è¡Œæ— åºæ¯”è¾ƒï¼Œå¹¶æ ¹æ®ç»“æžœï¼ˆæ— åºã€å¤§äºŽã€å°äºŽæˆ–ç­‰äºŽï¼‰è®¾ç½® EFLAGS å¯„å­˜å™¨ä¸­çš„ ZFã€PF åŠ CF æ ‡å¿—ã€‚EFLAGS å¯„å­˜å™¨ä¸­çš„ OFã€SF åŠ AF æ ‡å¿—è®¾ç½®ä¸º 0ã€‚å¦‚æžœä»»ä½•ä¸€ä¸ªåŒç²¾åº¦æµ®ç‚¹å€¼æ˜¯ NaNï¼ˆQNaN æˆ– SNaNï¼‰ï¼Œåˆ™è¿”å›žæ— åºè°“è¯ã€‚</p>
 
-<p>Ô´²Ù×÷Êý 1 ÊÇ XMM ¼Ä´æÆ÷£»Ô´²Ù×÷Êý 2 ¿ÉÒÔÊÇ XMM ¼Ä´æÆ÷»ò 64 Î»ÄÚ´æÎ»ÖÃ¡£</p>
+<p>æºæ“ä½œæ•° 1 æ˜¯ XMM å¯„å­˜å™¨ï¼›æºæ“ä½œæ•° 2 å¯ä»¥æ˜¯ XMM å¯„å­˜å™¨æˆ– 64 ä½å†…å­˜ä½ç½®ã€‚</p>
 
-<p>UCOMISD Ö¸ÁîÓë COMISD Ö¸ÁîµÄ²»Í¬Ö®´¦ÔÚÓÚ£¬Ö»ÓÐµ±Ô´²Ù×÷ÊýÊÇ SNaN Ê±£¬UCOMISD Ö¸Áî²Å·¢³ö SIMD ¸¡µãÎÞÐ§Òì³£ÐÅºÅ¡£Èç¹ûÔ´²Ù×÷ÊýÊÇ QNaN »ò SNaN£¬Ôò COMISD Ö¸Áî·¢³öÎÞÐ§ÐÅºÅ¡£</p>
+<p>UCOMISD æŒ‡ä»¤ä¸Ž COMISD æŒ‡ä»¤çš„ä¸åŒä¹‹å¤„åœ¨äºŽï¼Œåªæœ‰å½“æºæ“ä½œæ•°æ˜¯ SNaN æ—¶ï¼ŒUCOMISD æŒ‡ä»¤æ‰å‘å‡º SIMD æµ®ç‚¹æ— æ•ˆå¼‚å¸¸ä¿¡å·ã€‚å¦‚æžœæºæ“ä½œæ•°æ˜¯ QNaN æˆ– SNaNï¼Œåˆ™ COMISD æŒ‡ä»¤å‘å‡ºæ— æ•ˆä¿¡å·ã€‚</p>
 
-<p>·¢ÉúÎÞÑÚÂë SIMD ¸¡µãÒì³£Ê±£¬EFLAGS ¼Ä´æÆ÷²»¸üÐÂ¡£</p>
+<p>å‘ç”Ÿæ— æŽ©ç  SIMD æµ®ç‚¹å¼‚å¸¸æ—¶ï¼ŒEFLAGS å¯„å­˜å™¨ä¸æ›´æ–°ã€‚</p>
 
-<h2>²Ù×÷</h2>
+<h2>æ“ä½œ</h2>
 
 <p class=Preformatted>RESULT <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -196,47 +196,47 @@ else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'>");}
 //--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> 0;</p>
 
-<h2>Ó¢ÌØ¶û<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>(R)</font> C++ ±àÒëÆ÷µÈ¼ÛÄÚ²¿º¯Êý</h2>
+<h2>è‹±ç‰¹å°”<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>(R)</font> C++ ç¼–è¯‘å™¨ç­‰ä»·å†…éƒ¨å‡½æ•°</h2>
 
 <p class=Preformatted>int_mm_ucomieq_sd(__m128d a, __m128d b) int_mm_ucomilt_sd(__m128d a, __m128d b) int_mm_ucomile_sd(__m128d a, __m128d b) int_mm_ucomigt_sd(__m128d a, __m128d b) int_mm_ucomige_sd(__m128d a, __m128d b) int_mm_ucomineq_sd(__m128d a, __m128d b)</p>
 
-<h2>SIMD ¸¡µãÒì³£</h2>
+<h2>SIMD æµ®ç‚¹å¼‚å¸¸</h2>
 
-<p>ÎÞÐ§£¨Èç¹ûÊÇ SNaN ²Ù×÷Êý£©¡¢·Ç¹æ¸ñ»¯¡£</p>
+<p>æ— æ•ˆï¼ˆå¦‚æžœæ˜¯ SNaN æ“ä½œæ•°ï¼‰ã€éžè§„æ ¼åŒ–ã€‚</p>
 
-<h2>±£»¤Ä£Ê½Òì³£</h2>
+<h2>ä¿æŠ¤æ¨¡å¼å¼‚å¸¸</h2>
 
-<p>#GP(0) - CS¡¢DS¡¢ES¡¢FS »ò GS ¶ÎÖÐµÄÄÚ´æ²Ù×÷ÊýÓÐÐ§µØÖ··Ç·¨¡£</p>
+<p>#GP(0) - CSã€DSã€ESã€FS æˆ– GS æ®µä¸­çš„å†…å­˜æ“ä½œæ•°æœ‰æ•ˆåœ°å€éžæ³•ã€‚</p>
 
-<p>#SS(0) - SS ¶ÎÖÐµÄµØÖ··Ç·¨¡£</p>
+<p>#SS(0) - SS æ®µä¸­çš„åœ°å€éžæ³•ã€‚</p>
 
-<p>#PF(´íÎó´úÂë) - Ò³´íÎó¡£</p>
+<p>#PF(é”™è¯¯ä»£ç ) - é¡µé”™è¯¯ã€‚</p>
 
-<p>#NM - Èç¹û CR0 ÖÐµÄ TS ÉèÖÃÎª 1¡£</p>
+<p>#NM - å¦‚æžœ CR0 ä¸­çš„ TS è®¾ç½®ä¸º 1ã€‚</p>
 
-<p>#XM - Èç¹û·¢ÉúÎÞÑÚÂë SIMD ¸¡µãÒì³££¬ÇÒ CR4 ÖÐµÄ OSXMMEXCPT ÊÇ 1¡£</p>
+<p>#XM - å¦‚æžœå‘ç”Ÿæ— æŽ©ç  SIMD æµ®ç‚¹å¼‚å¸¸ï¼Œä¸” CR4 ä¸­çš„ OSXMMEXCPT æ˜¯ 1ã€‚</p>
 
-<p>#UD - Èç¹û·¢ÉúÎÞÑÚÂë SIMD ¸¡µãÒì³££¬ÇÒ CR4 ÖÐµÄ OSXMMEXCPT ÊÇ 0¡£<span style="font-weight: bold;"><B></B></span>Èç¹û CR0 ÖÐµÄ EM ÉèÖÃÎª 1¡£Èç¹û CR4 ÖÐµÄ OSFXSR ÊÇ 0¡£Èç¹û CPUID ¹¦ÄÜ±êÖ¾ SSE2 ÊÇ 0¡£</p>
+<p>#UD - å¦‚æžœå‘ç”Ÿæ— æŽ©ç  SIMD æµ®ç‚¹å¼‚å¸¸ï¼Œä¸” CR4 ä¸­çš„ OSXMMEXCPT æ˜¯ 0ã€‚<span style="font-weight: bold;"><B></B></span>å¦‚æžœ CR0 ä¸­çš„ EM è®¾ç½®ä¸º 1ã€‚å¦‚æžœ CR4 ä¸­çš„ OSFXSR æ˜¯ 0ã€‚å¦‚æžœ CPUID åŠŸèƒ½æ ‡å¿— SSE2 æ˜¯ 0ã€‚</p>
 
-<p>#AC - Èç¹ûÔÚµ±Ç°ÌØÈ¨¼¶±ðÎª 3 Ê±½øÐÐÎ´¶ÔÆëµÄÄÚ´æÒýÓÃ¡£</p>
+<p>#AC - å¦‚æžœåœ¨å½“å‰ç‰¹æƒçº§åˆ«ä¸º 3 æ—¶è¿›è¡Œæœªå¯¹é½çš„å†…å­˜å¼•ç”¨ã€‚</p>
 
-<h2>ÊµµØÖ·Ä£Ê½Òì³£</h2>
+<h2>å®žåœ°å€æ¨¡å¼å¼‚å¸¸</h2>
 
-<p>ÖÐ¶Ï 13 - Èç¹û²Ù×÷ÊýµÄÈÎºÎ²¿·Ö³öÏÖÔÚ´Ó 0 µ½ 0FFFFH µÄÓÐÐ§µØÖ·¿Õ¼äÖ®Íâ¡£</p>
+<p>ä¸­æ–­ 13 - å¦‚æžœæ“ä½œæ•°çš„ä»»ä½•éƒ¨åˆ†å‡ºçŽ°åœ¨ä»Ž 0 åˆ° 0FFFFH çš„æœ‰æ•ˆåœ°å€ç©ºé—´ä¹‹å¤–ã€‚</p>
 
-<p>#NM - Èç¹û CR0 ÖÐµÄ TS ÉèÖÃÎª 1¡£</p>
+<p>#NM - å¦‚æžœ CR0 ä¸­çš„ TS è®¾ç½®ä¸º 1ã€‚</p>
 
-<p>#XM - Èç¹û·¢ÉúÎÞÑÚÂë SIMD ¸¡µãÒì³££¬ÇÒ CR4 ÖÐµÄ OSXMMEXCPT ÊÇ 1¡£</p>
+<p>#XM - å¦‚æžœå‘ç”Ÿæ— æŽ©ç  SIMD æµ®ç‚¹å¼‚å¸¸ï¼Œä¸” CR4 ä¸­çš„ OSXMMEXCPT æ˜¯ 1ã€‚</p>
 
-<p>#UD - Èç¹û·¢ÉúÎÞÑÚÂë SIMD ¸¡µãÒì³££¬ÇÒ CR4 ÖÐµÄ OSXMMEXCPT ÊÇ 0¡£<span style="font-weight: bold;"><B></B></span>Èç¹û CR0 ÖÐµÄ EM ÉèÖÃÎª 1¡£Èç¹û CR4 ÖÐµÄ OSFXSR ÊÇ 0¡£Èç¹û CPUID ¹¦ÄÜ±êÖ¾ SSE2 ÊÇ 0¡£</p>
+<p>#UD - å¦‚æžœå‘ç”Ÿæ— æŽ©ç  SIMD æµ®ç‚¹å¼‚å¸¸ï¼Œä¸” CR4 ä¸­çš„ OSXMMEXCPT æ˜¯ 0ã€‚<span style="font-weight: bold;"><B></B></span>å¦‚æžœ CR0 ä¸­çš„ EM è®¾ç½®ä¸º 1ã€‚å¦‚æžœ CR4 ä¸­çš„ OSFXSR æ˜¯ 0ã€‚å¦‚æžœ CPUID åŠŸèƒ½æ ‡å¿— SSE2 æ˜¯ 0ã€‚</p>
 
-<h2>Ðé 8086 Ä£Ê½Òì³£</h2>
+<h2>è™š 8086 æ¨¡å¼å¼‚å¸¸</h2>
 
-<p>Óë&ldquo;ÊµµØÖ·Ä£Ê½&rdquo;ÖÐµÄÒì³£ÏàÍ¬¡£</p>
+<p>ä¸Ž&ldquo;å®žåœ°å€æ¨¡å¼&rdquo;ä¸­çš„å¼‚å¸¸ç›¸åŒã€‚</p>
 
-<p>#PF(´íÎó´úÂë) - Ò³´íÎó¡£</p>
+<p>#PF(é”™è¯¯ä»£ç ) - é¡µé”™è¯¯ã€‚</p>
 
-<p class="whs4">#AC - Èç¹ûÔÚµ±Ç°ÌØÈ¨¼¶±ðÎª 3 Ê±½øÐÐÎ´¶ÔÆëµÄÄÚ´æÒýÓÃ¡£ </p>
+<p class="whs4">#AC - å¦‚æžœåœ¨å½“å‰ç‰¹æƒçº§åˆ«ä¸º 3 æ—¶è¿›è¡Œæœªå¯¹é½çš„å†…å­˜å¼•ç”¨ã€‚ </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400337.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:49 GMT -->
 <head>
 
-<title>pshl 操作</title>
+<title>pshl 鎿嶄綔</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:55:49 PM">
 <meta name=topic-status content=Complete>
 <meta name=topic-priority content=2>
@@ -97,7 +97,7 @@ else
 		document.location.reload();
 //-->
 </script>
-pshl 操作 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a> 
+pshl 鎿嶄綔 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">瀛椾綋鎯緥</a> 
 
 <br>if (PR[<i>qp</i>]) { <br> <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400444.htm">check_target_register</a>; <br> <br> shift_count = (variable_form ?<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400568.htm">GR</a>[<i>r3</i>] : <i>count5</i>); <br> tmp_nat = (variable_form ?GR[<i>r3</i>].nat : 0); <br> <br> if (two_byte_form) { // two_byte_form <br> if (shift_count u&gt; 16) <br> shift_count = 16; <br> GR[<i>r1</i>]{15:0} &#xA0;= GR[<i>r2</i>]{15:0} &#xA0;&lt;&lt; shift_count; <br> GR[<i>r1</i>]{31:16} = GR[<i>r2</i>]{31:16} &lt;&lt; shift_count; <br> GR[<i>r1</i>]{47:32} = GR[<i>r2</i>]{47:32} &lt;&lt; shift_count; <br> GR[<i>r1</i>]{63:48} = GR[<i>r2</i>]{63:48} &lt;&lt; shift_count; <br> } else { // four_byte_form <br> if (shift_count u&gt; 32) <br> shift_count = 32; <br> GR[<i>r1</i>]{31:0} &#xA0;= GR[<i>r2</i>]{31:0} &#xA0;&lt;&lt; shift_count; <br> GR[<i>r1</i>]{63:32} = GR[<i>r2</i>]{63:32} &lt;&lt; shift_count; <br> } <br> <br> GR[<i>r1</i>].nat = GR[<i>r2</i>].nat || tmp_nat; <br> } 
 

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/ev3_080.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:35 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>�μĴ�������</title>
+<title>段寄存器加载</title>
 
 <!--(Meta)==========================================================-->
 
@@ -91,7 +91,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M �������¼�\n���������¼�\n�μĴ�������");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) M 处理器\n英特尔(R) 奔腾(R) M 处理器事件\n段重命名事件\n段寄存器加载");
 
 	}
 	if (window.writeBtnStyle)
@@ -114,11 +114,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>�μĴ�������</h1>
+<h1>段寄存器加载</h1>
 
-<p>���¼���ʾ�μĴ������ز���������ֵ���ص��μĴ�����ָ��ᵼ��һ���ͷ������¼���ʾ 16 λ�����е��������⡣������¼�Ƶ�����������ڼ���ÿ���μĴ������ص�ʧЧָ��������ȷ��������Ƿ�͵�ֵ���о������¼����ܻ�ǳ����á�</p>
+<p>此事件表示段寄存器加载操作。将新值加载到段寄存器的指令会导致一个惩罚。此事件表示 16 位代码中的性能问题。如果此事件频繁发生，对于计算每个段寄存器加载的失效指令数，并确定结果数是否低到值得研究，此事件可能会非常有用。</p>
 
-<p class="whs1">��Ϊ��֧Ԥ��ʧ��Ľ�������¼����������Ʋ��Եģ������ܰ���δʵ�ʷ����ĶμĴ������ء�������������μĴ������ض����ڲ����л��ģ��������Խ������Ʋ����ص㽵����͡� </p>
+<p class="whs1">作为分支预测失误的结果，此事件本质上是推测性的，它可能包含未实际发生的段寄存器加载。不过，大多数段寄存器加载都是内部序列化的，这样可以将这种推测性特点降到最低。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

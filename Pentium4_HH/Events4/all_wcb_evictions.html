@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/all_wcb_evictions.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:24:39 GMT -->
 <head>
 
-<title>���� WCB �ջ�</title>
+<title>所有 WCB 收回</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="12 11, 2002 4:04:50 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -80,7 +80,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 �������¼�\n�����¼�\n���� WCB �ջ�");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) 4 处理器\n英特尔(R) 奔腾(R) 4 处理器事件\n附加事件\n所有 WCB 收回");
 
 	}
 	if (window.writeBtnStyle)
@@ -103,15 +103,15 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>���� WCB �ջ�</h1>
+<h1>所有 WCB 收回</h1>
 
-<p class="whs1">�߳��ض��ԣ�<span style="font-weight: normal;"><a href="Thread_Independent.html">TI</a></span></p>
+<p class="whs1">线程特定性：<span style="font-weight: normal;"><a href="Thread_Independent.html">TI</a></span></p>
 
-<p>���¼�ͳ���ջأ�����д���ڴ��νṹ���κ�д����ϻ��������ݵ�ÿ��ʵ�����������ȫ�������ջأ�Ҳ���������߲���д���ڴ��ʵ�������磬д��Ϊд������ڴ����õĵ�ַ��Χ�� </p>
+<p>此事件统计收回（即，写入内存层次结构）任何写入组合缓冲区内容的每个实例。这包括完全缓存线收回，也包括缓存线部分写入内存的实例，例如，写入为写入组合内存配置的地址范围。 </p>
 
-<p>һ������£���Ϊ���ֻ������ջ�Ч�ʽϵͣ�����ʹ����ȫ�������ջء� &nbsp;</p>
+<p>一般情况下，因为部分缓存线收回效率较低，建议使用完全缓存线收回。 &nbsp;</p>
 
-<p>ͨ���Ƚϴ��¼������� <a href="WCB_Full_Evictions.html">WCB �����ջ�</a>�ļ���������ȷ���������Ƿ�ִ���˴����Ĳ��� WCB �ջء�</p>
+<p>通过比较此事件计数与 <a href="WCB_Full_Evictions.html">WCB 已满收回</a>的计数，可以确定处理器是否执行了大量的部分 WCB 收回。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

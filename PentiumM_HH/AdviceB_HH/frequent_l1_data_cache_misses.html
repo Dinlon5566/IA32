@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/AdviceB_HH/frequent_l1_data_cache_misses.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:47 GMT -->
 <head>
 
-<title>Ƶ������һ�����ݻ���δ����</title>
+<title>频繁发生一级数据缓存未命中</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="02 12, 2003 3:47:59 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -96,7 +96,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\n����Ӣ�ض�(R) ����(R) M �������Ľ���\nƵ������һ�����ݻ���δ����");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) M 处理器\n关于英特尔(R) 奔腾(R) M 处理器的建议\n频繁发生一级数据缓存未命中");
 
 	}
 	if (window.writeBtnStyle)
@@ -119,18 +119,18 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/AdviceB_HH/TA_logo.gif" alt="Ӣ�ض�(R) ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">Ƶ������һ�����ݻ���δ����</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/AdviceB_HH/TA_logo.gif" alt="英特尔(R) 调优助手主题" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">频繁发生一级数据缓存未命中</h1>
 
-<p>�������ݼ��ƺ��ʺ϶��������С�������ʺ�һ�������С�� </p>
+<p>工作数据集似乎适合二级缓存大小，而不适合一级缓存大小。 </p>
 
-<p class="whs2">����������У���ϸ�ھ���ʵ�������壺</p>
+<p class="whs2">在以下情况中，此细节具有实质性意义：</p>
 
-<p>���������̡���</a><a href="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/l2_cache_requests.htm" style="x-condition: eclipse;">������������ - <a href="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/l2_cache_instruction_fetches.htm" style="x-condition: eclipse;">��������ָ���ȡ</a>��/<a href="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/instructions_retired.htm" style="x-condition: eclipse;">ʧЧ��ָ��</a>�����ѡ�ֵ 0.005 Ӧ��Ϊ���ã�ֵ 0.05 Ӧ��Ϊ���ѡ�</p>
+<p>计数器的商【（</a><a href="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/l2_cache_requests.htm" style="x-condition: eclipse;">二级缓存请求 - <a href="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/l2_cache_instruction_fetches.htm" style="x-condition: eclipse;">二级缓存指令获取</a>）/<a href="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/instructions_retired.htm" style="x-condition: eclipse;">失效的指令</a>】不佳。值 0.005 应视为良好，值 0.05 应视为不佳。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/AdviceB_HH/note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs3"> ��ע</h3>
+	style="margin-left: 40px;"><img src="https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/AdviceB_HH/note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs3"> 备注</h3>
 
-<p class="whs4">��������δ���б�һ������δ���ж����ܵ�Ӱ����󣬶��Ҷ�����������ͨ����һ��������������׽����</p>
+<p class="whs4">二级缓存未命中比一级缓存未命中对性能的影响更大，而且二级缓存问题通常比一级缓存问题更容易解决。</p>
 
 <h3 class=NoteTipHead
 	style="margin-left: 40px;"><span style="font-weight: bold;"><B><script type="text/javascript" language="JavaScript"><!--
@@ -138,15 +138,15 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4))
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='tip.gif' width='17px' height='18px' border='0' class='img_whs5'>");}
 else
 {   document.write("<img src='tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs5'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/AdviceB_HH/tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs5'></noscript> ����</B></span></h3>
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/PentiumM_HH/AdviceB_HH/tip.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='17px' height='18px' border='0' class='img_whs5'></noscript> 建议</B></span></h3>
 
 <ol>
 	
 	<ul type="disc" class="whs6">
 		
-		<li class=kadov-p><p><span style="font-weight: bold;"><B>��������С�������ݼ��Ա��ܷ���һ��������</B></span><br>������ܣ����޸��㷨�Լ�С�������ݼ���ʹ֮�ʺ�һ������Ĵ�С�������&ldquo;Ӣ�ض�(R) ��ϵ�ṹ�Ż��ο��ֲ�&rdquo;��&ldquo;ѭ��ģ�黯&rdquo;��˵����&ldquo;ѭ��ģ�黯&rdquo;������������ڴ�����ת���ɸ�С���ڴ�飬�����ǰ�˳����������ڴ�����ÿ���ڴ�鶼С������ʹ����������������ݾ����ʺϻ����С���Ӷ�����޶�������ݸ��á�</p></li>
+		<li class=kadov-p><p><span style="font-weight: bold;"><B>尽可能缩小工作数据集以便能放入一级缓存内</B></span><br>如果可能，请修改算法以减小工作数据集，使之适合一级缓存的大小。请参阅&ldquo;英特尔(R) 体系结构优化参考手册&rdquo;中&ldquo;循环模块化&rdquo;的说明。&ldquo;循环模块化&rdquo;将给定问题的内存区域转化成更小的内存块，而不是按顺序遍历整个内存区域。每个内存块都小到足以使给定计算的所有数据均能适合缓存大小，从而最大限度提高数据复用。</p></li>
 		
-		<li class=kadov-p><p><span style="font-weight: bold;"><B>����ʹ��Ԥȡָ��</B></span><br>����޷���С�������ݼ����뿼��ʹ��Ԥȡָ�����Ҫ����֮ǰ����Ԥȡ�����档�����&ldquo;�Ż��ֲ�&rdquo;�й���Ԥȡָ���˵����</p></li>
+		<li class=kadov-p><p><span style="font-weight: bold;"><B>考虑使用预取指令</B></span><br>如果无法减小工作数据集，请考虑使用预取指令，在需要数据之前将它预取到缓存。请参阅&ldquo;优化手册&rdquo;中关于预取指令的说明。</p></li>
 	</ul>
 </ol>
 

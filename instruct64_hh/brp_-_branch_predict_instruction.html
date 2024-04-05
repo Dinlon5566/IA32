@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/brp_-_branch_predict_instruction.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:45 GMT -->
 <head>
 
-<title>brp - ��֧Ԥ��ָ��</title>
+<title>brp - 分支预测指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="01 16, 2003 10:43:49 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -87,7 +87,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nB - ָ��\nbrp - ��֧Ԥ��ָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nB - 指令\nbrp - 分支预测指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -110,13 +110,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">��֧Ԥ��ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">分支预测指令</h1>
 
 <p class="whs2">brp</p>
 
-<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/brp-operation.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a></p>
+<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/brp-operation.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a></p>
 
-<p class="whs2">��ʽ</p>
+<p class="whs2">格式</p>
 
 <p class=Preformatted><span class=Code>brp.</span><span class=Code
 	style="font-style: italic;"><I>ipwh.ih target25 , tag13</I></span><span class=Code> &#xA0;&#xA0;&#xA0;&#xA0;ip_relative_form B6</span></p>
@@ -132,56 +132,40 @@ else
 <hr class="whs3">
 
 
-<p><b style="font-weight: bold;">˵��</b></p>
+<p><b style="font-weight: bold;">说明</b></p>
 
-��ָ���������Ӳ���ṩ���ڽ�����֧��Ԥ����Ϣ��������ϵ�ṹ����Ļ���״̬û��Ӱ�죬����������Ӱ��֮�⣬��ִ�еĲ����� nop ָ��һ���� 
+此指令可用于向硬件提供关于将来分支的预测信息。它对体系结构层面的机器状态没有影响，除对性能有影响之外，它执行的操作与 nop 指令一样。 
 
-<p>�ڻ������У�<span style="font-style: italic;"><I>tag13</I></span> ������ָ����Ԥ����Ϣ�ķ�ָ֧��ĵ�ַ���ڷ�֧Ԥ��ָ���У�����Ϊ�з���������λ���� (<span style="font-style: italic;"><I>timm9</I></span>) ���룬���ڰ���Ԥ���֧�ķ�֧���������ָ��ķ�֧��֮�� (<span style="font-style: italic;"><I>timm9</I></span> = <span style="font-style: italic;"><I>tag13</I></span> &ndash; IP &gt;&gt; 4)��</p>
+<p>在汇编代码中，<span style="font-style: italic;"><I>tag13</I></span> 操作数指定此预测信息的分支指令的地址。在分支预测指令中，它作为有符号立即数位移量 (<span style="font-style: italic;"><I>timm9</I></span>) 编码，放在包含预测分支的分支束与包含此指令的分支束之间 (<span style="font-style: italic;"><I>timm9</I></span> = <span style="font-style: italic;"><I>tag13</I></span> &ndash; IP &gt;&gt; 4)。</p>
 
 
 
-<p>�ڻ������У�<span style="font-style: italic;"><I>target25</I></span> ������ָ��Ԥ��ķ�֧������Ŀ��ı�ǩ�����ڷ�֧Ԥ��ָ���еı���ͬ�ڷ�ָ֧������ȫһ������Ϊһ���з���������λ���� (<span style="font-style: italic;"><I>imm21</I></span>)������Ŀ���֧�������<b style="font-weight: normal;">��ָ��ķ�֧��֮�� (<span style="font-style: italic;"><I>imm21</I></span> = <span style="font-style: italic;"><I>target25</I></span> - IP &gt;&gt; 4)��indirect_form ������Ԥ���ӷ�֧���� indirect_form �У�Ԥ���֧��Ŀ���� BR <span style="font-style: italic;"><I>b2</I></span> ������</b></p>
+<p>在汇编代码中，<span style="font-style: italic;"><I>target25</I></span> 操作数指定预测的分支将用作目标的标签。它在分支预测指令中的编码同在分支指令中完全一样，作为一个有符号立即数位移量 (<span style="font-style: italic;"><I>imm21</I></span>)，放在目标分支束与包含<b style="font-weight: normal;">此指令的分支束之间 (<span style="font-style: italic;"><I>imm21</I></span> = <span style="font-style: italic;"><I>target25</I></span> - IP &gt;&gt; 4)。indirect_form 可用于预测间接分支。在 indirect_form 中，预测分支的目标由 BR <span style="font-style: italic;"><I>b2</I></span> 给出。</b></p>
 
-<p class="whs4"><b style="font-weight: normal;">return_form ���ڱ�ʾԤ��ķ�֧����һ�����ط�֧��</b></p>
+<p class="whs4"><b style="font-weight: normal;">return_form 用于表示预测的分支将是一个返回分支。</b></p>
 
-<p><b style="font-weight: normal;">����Ԥ��ķ�֧�������Ը�����������ʾ���±��г�������ʾ��ɷ���ֵ�� </b></p>
+<p><b style="font-weight: normal;">关于预测的分支，还可以给出其它的提示。下表列出各种提示完成符的值。 </b></p>
 
 <p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;"></span><span style="font-weight: normal; font-style: italic;"><I>ipwh</I></span><span 
- style="font-weight: normal;"> �� </span><span style="font-weight: normal; font-style: italic;"><I>indwh</I></span><span 
- style="font-weight: normal;"> ��ɷ��ṩ������Ϣ��Ӧ��������Ԥ���֧��������ʱ�����֧��</span></b></p>
+ style="font-weight: normal;"> 与 </span><span style="font-weight: normal; font-style: italic;"><I>indwh</I></span><span 
+ style="font-weight: normal;"> 完成符提供以下信息：应该如何最佳预测分支条件，何时到达分支。</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;"></span><span style="font-weight: normal; font-style: italic;"><I>ih</I></span><span   style="font-weight: normal;"> ��ɷ������ڱ�������ķǳ���Ҫ�ķ�֧�����磬�ڲ�</span></b><b><span style="font-weight: normal;">ѭ����֧���������֪ͨӲ��ʹ�ø����С��Ԥ��ṹ������</span></b><b><span style="font-weight: normal;">��Ϣ��</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;"></span><span style="font-weight: normal; font-style: italic;"><I>ih</I></span><span   style="font-weight: normal;"> 完成符可用于标记少量的非常重要的分支（例如，内部</span></b><b><span style="font-weight: normal;">循环分支）。这可以通知硬件使用更快更小的预测结构处理此</span></b><b><span style="font-weight: normal;">信息。</span></b></p>
 
-<p class="whs2"><b><span style="font-weight: bold;"><B>����</B></span></b></p>
+<p class="whs2"><b><span style="font-weight: bold;"><B>表格</B></span></b></p>
 
 <ul>
 	
 	<li class=kadov-p-CLinkBul><p class=LinkBul
 									style="font-weight: normal;"><b><span 
- style="font-weight: normal;">IP ��Է�֧Ԥ���Ƿ���ʾ</span></b></p></li>
+ style="font-weight: normal;">IP 相对分支预测是否提示</span></b></p></li>
 </ul>
 
 <p class=LinkBul
 	style="font-weight: normal;">&nbsp;</p>
 
 <p class=LinkBul
-	style="font-weight: normal;"><b><span style="font-weight: normal;"><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/brpT2_10.gif" alt="IP ��Է�֧Ԥ���Ƿ���ʾ" x-maintain-ratio="TRUE" width="502px" height="86px" border="0" class="img_whs5"></span></b></p>
-
-<p class=LinkBul
-	style="font-weight: normal;">&nbsp;</p>
-
-<ul>
-	
-	<li class=kadov-p-CLinkBul><p class=LinkBul
-									style="font-weight: normal;"><b><span 
- style="font-weight: normal;">��ӷ�֧Ԥ���Ƿ���ʾ</span></b></p></li>
-</ul>
-
-<p class=LinkBul
-	style="font-weight: normal;">&nbsp;</p>
-
-<p class=LinkBul
-	style="font-weight: normal;"><b><span style="font-weight: normal;"><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/brpT2_11.gif" alt="��ӷ�֧Ԥ���Ƿ���ʾ" x-maintain-ratio="TRUE" width="500px" height="54px" border="0" class="img_whs6"></span></b></p>
+	style="font-weight: normal;"><b><span style="font-weight: normal;"><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/brpT2_10.gif" alt="IP 相对分支预测是否提示" x-maintain-ratio="TRUE" width="502px" height="86px" border="0" class="img_whs5"></span></b></p>
 
 <p class=LinkBul
 	style="font-weight: normal;">&nbsp;</p>
@@ -190,14 +174,30 @@ else
 	
 	<li class=kadov-p-CLinkBul><p class=LinkBul
 									style="font-weight: normal;"><b><span 
- style="font-weight: normal;">��Ҫ����ʾ</span></b></p></li>
+ style="font-weight: normal;">间接分支预测是否提示</span></b></p></li>
 </ul>
 
 <p class=LinkBul
 	style="font-weight: normal;">&nbsp;</p>
 
 <p class=LinkBul
-	style="font-weight: normal;"><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/brpT2_12.gif" alt="��Ҫ����ʾ" x-maintain-ratio="TRUE" width="499px" height="53px" border="0" class="img_whs7"></p>
+	style="font-weight: normal;"><b><span style="font-weight: normal;"><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/brpT2_11.gif" alt="间接分支预测是否提示" x-maintain-ratio="TRUE" width="500px" height="54px" border="0" class="img_whs6"></span></b></p>
+
+<p class=LinkBul
+	style="font-weight: normal;">&nbsp;</p>
+
+<ul>
+	
+	<li class=kadov-p-CLinkBul><p class=LinkBul
+									style="font-weight: normal;"><b><span 
+ style="font-weight: normal;">重要性提示</span></b></p></li>
+</ul>
+
+<p class=LinkBul
+	style="font-weight: normal;">&nbsp;</p>
+
+<p class=LinkBul
+	style="font-weight: normal;"><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/brpT2_12.gif" alt="重要性提示" x-maintain-ratio="TRUE" width="499px" height="53px" border="0" class="img_whs7"></p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/avoiding_branch_mispredictions.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:24:40 GMT -->
 <head>
 
-<title>�����֧Ԥ��ʧ��</title>
+<title>避免分支预测失误</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
 <meta name=generator-major-version content=0.1>
 <meta name=generator-minor-version content=1>
@@ -79,7 +79,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n����Ӣ�ض�(R) ����(R) 4 �������Ľ���\n�����֧Ԥ��ʧ��");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) 4 处理器\n关于英特尔(R) 奔腾(R) 4 处理器的建议\n关于英特尔(R) 奔腾(R) 4 处理器的建议\n避免分支预测失误");
 
 	}
 	if (window.writeBtnStyle)
@@ -102,30 +102,30 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" alt="Ӣ�ض�(R) ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">�����֧Ԥ��ʧ��</h1>
+<h1><img src="TA_logo.gif" alt="英特尔(R) 调优助手主题" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">避免分支预测失误</h1>
 
 &nbsp;
 
-<p>���֧Ԥ����ص����ܿ�ͨ��ִ�����´�������ߣ�</p>
+<p>与分支预测相关的性能可通过执行以下处理来提高：</p>
 
-<li class=kadov-p>�ô��������ݴ��ڲ�ͬ��ҳ��</li>
+<li class=kadov-p>让代码与数据处在不同的页上</li>
 
-<li class=kadov-p>������������֧</li>
+<li class=kadov-p>尽可能消除分支</li>
 
-<li class=kadov-p>�������Ŵ��벼�֣�ʹ֮���Ͼ�̬��֧Ԥ���㷨��Ҫ��</li>
+<li class=kadov-p>合理安排代码布局，使之符合静态分支预测算法的要求</li>
 
-<li class=kadov-p>����޷����Ŵ��벼�֣������ʵ��ĵط�ʹ�÷�֧������ʾ</li>
+<li class=kadov-p>如果无法安排代码布局，请在适当的地方使用分支方向提示</li>
 
-<li class=kadov-p>�������ȴ�ѭ����ʹ�� pause ָ��</li>
+<li class=kadov-p>在自旋等待循环中使用 pause 指令</li>
 
-<li class=kadov-p>��Ƕ���������������뷵�����</li>
+<li class=kadov-p>内嵌函数，并将调用与返回配对</li>
 
-<li class=kadov-p>������Ҫչ��ѭ����ʹ�ظ�ִ�е�ѭ���ĵ�������С�ڻ����ʮ������������������Ӵ���ƪ��</li>
+<li class=kadov-p>根据需要展开循环，使重复执行的循环的迭代次数小于或等于十六，除非这会显著增加代码篇幅</li>
 
 <li class=kadov-p>
-�����ܸ�����֧��ʹ���ǵķ���Ƶ�ʲ�����ÿ 3 ��΢����һ��
+尽可能隔开分支，使它们的发生频率不超过每 3 个微操作一次
 
-<p>�����й���ϸ��Ϣ������� <i>Intel(R) Pentium(R) 4 and Intel(R) Xeon(TM) Processor Optimization Manual</i>��Ӣ�ض�(R) ����(R) 4 ��Ӣ�ض�(R) ��ǿ(TM) �������Ż��ֲᣩ�ĵ� 2 �¡�</p>
+<p>如需有关详细信息，请参阅 <i>Intel(R) Pentium(R) 4 and Intel(R) Xeon(TM) Processor Optimization Manual</i>（英特尔(R) 奔腾(R) 4 与英特尔(R) 至强(TM) 处理器优化手册）的第 2 章。</p>
 </li>
 
 <script type="text/javascript" language="javascript1.2">

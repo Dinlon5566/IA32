@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -105,7 +105,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nT - ָ��\nTMRRC");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nT - 指令\nTMRRC");
 
 	}
 	if (window.writeBtnStyle)
@@ -130,16 +130,16 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特尔 XScale(R) 技术主题' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>TMRRC - MRRC �ϵĴ���ָ��ӳ��</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特尔 XScale(R) 技术主题' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特尔 XScale(R) 技术主题' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript>TMRRC - MRRC 上的传输指令映射</h1>
 
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p class=Preformatted>TMRRC[condition] destLo, destHi, op1</p>
 
-���У�
+其中：
 
 <br>&nbsp;<br>
 
@@ -162,7 +162,7 @@ else
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-��ѡ��16 ������֮һ������ģ�<a href="Conditional_Execution.html">����ִ��</a>�� 
+可选。16 个条件之一。请参阅：<a href="Conditional_Execution.html">条件执行</a>。 
 </div></td></tr>
 
 <tr>
@@ -172,7 +172,7 @@ destLo
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-Ŀ�꣬&ldquo;Ӣ�ض� XScale(R)&rdquo;�������ݼĴ���������Դ�������ĵ� 32 λ
+目标，&ldquo;英特尔 XScale(R)&rdquo;核心数据寄存器，接受源操作数的低 32 位
 </div></td></tr>
 
 <tr>
@@ -182,7 +182,7 @@ destHi
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-Ŀ�꣬&ldquo;Ӣ�ض� XScale(R)&rdquo;�������ݼĴ���������Դ�������ĸ� 32 λ
+目标，&ldquo;英特尔 XScale(R)&rdquo;核心数据寄存器，接受源操作数的高 32 位
 </div></td></tr>
 
 <tr>
@@ -192,23 +192,23 @@ op1
 </div></td>
 <td class="whs3">
 <div align="left" class="whs5">
-Դ��������64 λ&ldquo;Ӣ�ض�<span>(R)</span> <span style="vertical-align: super;"></span>���� MMX&#x2122;&rdquo;�������ݼĴ���
+源操作数，64 位&ldquo;英特尔<span>(R)</span> <span style="vertical-align: super;"></span>无线 MMX&#x2122;&rdquo;技术数据寄存器
 </div></td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-TMRRC ��ӳ�䵽&ldquo;Ӣ�ض� XScale(R)&rdquo;���� MRRC ָ���һ��αָ�����Ϊ����������ṩ�ģ�TMRRC �� 64 λ&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�������ݼĴ��� op1 �����ݴ��䵽����&ldquo;Ӣ�ض� XScale(R)&rdquo;����Ŀ��Ĵ�����destHi��destLo����<br><br> ָ����ָ�����κ�������������������״̬��ƥ�䣬����ִ�и�ָ� 
+TMRRC 是映射到&ldquo;英特尔 XScale(R)&rdquo;核心 MRRC 指令的一个伪指令，它是为方便起见而提供的；TMRRC 将 64 位&ldquo;英特尔(R) 无线 MMX&#x2122;&rdquo;技术数据寄存器 op1 的内容传输到两个&ldquo;英特尔 XScale(R)&rdquo;核心目标寄存器（destHi、destLo）。<br><br> 指令中指定的任何条件必须与条件代码状态相匹配，否则不执行该指令。 
 
-<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs6"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs6"> 备注</h3>
 
-<p>ֻ����&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�������ݼĴ�������� destHi=destLo�����ָ��Ľ�����޷�Ԥ֪���� R15 ָ��ΪĿ��Ĵ���֮һ��destHi �� destLo��ʱ��Ҳ������޷�Ԥ֪�Ľ����</p>
+<p>只用于&ldquo;英特尔(R) 无线 MMX&#x2122;&rdquo;技术数据寄存器；如果 destHi=destLo，则此指令的结果将无法预知。将 R15 指定为目标寄存器之一（destHi 或 destLo）时，也会产生无法预知的结果。</p>
 
-<p>�ṩ������&ldquo;Ӣ�ض� XScale(R)&rdquo;���� MRA ָ��Ĺ��ܣ���ע�⣬���� MRA ���� 40 λ�ۼ�������&ldquo;Ӣ�ض�(R) ���� MMX&#x2122;&rdquo;�������ṩ������ 64 λ�Ĵ������䣩��</p>
+<p>提供类似于&ldquo;英特尔 XScale(R)&rdquo;核心 MRA 指令的功能（请注意，核心 MRA 传输 40 位累加器，而&ldquo;英特尔(R) 无线 MMX&#x2122;&rdquo;技术则提供完整的 64 位寄存器传输）。</p>
 
 &nbsp; 
 
-<h2>����</h2>
+<h2>编码</h2>
 
 <div class="whs7">
 <h2>&nbsp;</h2>
@@ -431,15 +431,15 @@ Cond
 &nbsp; 
 </div>
 
-<h2>Ӱ��� SIMD ��־</h2>
+<h2>影响的 SIMD 标志</h2>
 
-<p>��Ӱ�� SIMD PSR ��־ (wCASF) �򱥺ͱ�־ (wCSSF)��</p>
+<p>不影响 SIMD PSR 标志 (wCASF) 或饱和标志 (wCSSF)。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted><span style="font-style: italic;"><I>dest</I></span>Hi=o<span style="font-style: italic;"><I>p1</I></span>[63:32]<span style="font-style: italic;"><I><br> dest</I></span>Lo=o<span style="font-style: italic;"><I>p1</I></span>[31:0] </p>
 
-<h2>������Ϣ</h2>
+<h2>更多信息</h2>
 
 <p><a HREF="TMCR.html">TMCR</a></p>
 

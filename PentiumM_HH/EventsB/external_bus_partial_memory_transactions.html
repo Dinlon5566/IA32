@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/EventsB/external_bus_partial_memory_transactions.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:42 GMT -->
 <head>
 
-<title>�ⲿ���߲����ڴ�����</title>
+<title>外部总线部分内存事务</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="06 7, 2001 1:53:05 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -91,7 +91,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M �������¼�\n�ⲿ�����¼�\n�ⲿ���߲����ڴ�����");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) M 处理器\n英特尔(R) 奔腾(R) M 处理器事件\n外部总线事件\n外部总线部分内存事务");
 
 	}
 	if (window.writeBtnStyle)
@@ -114,9 +114,9 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>�ⲿ���߲����ڴ�����</h1>
+<h1>外部总线部分内存事务</h1>
 
-<p class="whs1">���¼�ͳ�Ʋ����ڴ������������ͨ�����ڴ�ӳ��� I/O�����ʹ�÷���ʱ��������ָ���������չָ� (SSE) ָ����磬<span class=Code>movntps</span>����д�벢�ǰ��մ���˳����У���ÿ��д�붼�ᵼ�²����ڴ����񣬴Ӷ��������ܳͷ���</p>
+<p class="whs1">此事件统计部分内存操作的数量，通常是内存映射的 I/O。如果使用非临时数据流单指令多数据扩展指令集 (SSE) 指令，例如，<span class=Code>movntps</span>，且写入并非按照串行顺序进行，则每个写入都会导致部分内存事务，从而招致性能惩罚。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

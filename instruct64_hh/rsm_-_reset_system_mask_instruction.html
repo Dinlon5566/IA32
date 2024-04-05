@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/rsm_-_reset_system_mask_instruction.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>rsm - ��λϵͳ����ָ��</title>
+<title>rsm - 复位系统掩码指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -85,7 +85,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nR - ָ��\nrsm - ��λϵͳ����ָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nR - 指令\nrsm - 复位系统掩码指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,13 +108,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">��λϵͳ����ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">复位系统掩码指令</h1>
 
 <p class="whs2">rsm</p>
 
-<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/rsm-operation.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a></p>
+<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/rsm-operation.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a></p>
 
-<p class="whs2">��ʽ</p>
+<p class="whs2">格式</p>
 
 <p class=Preformatted>(qp)rsm imm24 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;M44</p>
 
@@ -123,55 +123,55 @@ else
 <hr class="whs3">
 
 
-<p><b style="font-weight: bold;">˵��</b></p>
+<p><b style="font-weight: bold;">说明</b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">�� imm 24 �������Ĳ���ͬϵͳ���� (PSR{23:0}) ����&ldquo;��&rdquo;���㣬���</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">将 imm 24 操作数的补码同系统掩码 (PSR{23:0}) 进行&ldquo;与&rdquo;运算，结果</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">����ϵͳ���롣</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">放入系统掩码。</span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">PSR ϵͳ����ֻ���������Ȩ����д�롣</span></b></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">PSR 系统掩码只能在最高特权级别写入。</span></b></p>
 
-<p class="whs4"><span style="font-weight: normal;"><b style="font-weight: normal;">��ǰ��Ȩ����Ϊ�㣨PSR.cpl Ϊ 0��ʱ����ʹ rsm ָ������������ PSR.i�����޶�ν��Ϊ�٣�</span><span class=Code>rsm</span><span 
- style="font-weight: normal;"> ָ��Ҳ�ᵼ�½�һЩָ���������ȡ���ھ���汾�����ⲿ�жϽ��á�����ϵ�ṹ��˵������</span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;">�ⲿ�жϽ���&ldquo;����&rdquo;�����Ӷ������£�</span></b></p>
+<p class="whs4"><span style="font-weight: normal;"><b style="font-weight: normal;">当前特权级别为零（PSR.cpl 为 0）时，即使 rsm 指令（它的掩码包含 PSR.i）的限定谓词为假，</span><span class=Code>rsm</span><span 
+ style="font-weight: normal;"> 指令也会导致将一些指令（具体数量取决于具体版本）的外部中断禁用。从体系结构上说，此种</span></b><b style="font-weight: normal;"><span 
+ style="font-weight: normal;">外部中断禁用&ldquo;窗口&rdquo;的外延定义如下：</span></b></p>
 
 <ul type="disc" class="whs5">
 	
 	<li class=kadov-p><p class="whs4"><b style="font-weight: bold;"><span 
- style="font-weight: normal;">������ </span><span class=Code
+ style="font-weight: normal;">禁用与 </span><span class=Code
 	style="font-weight: normal;">rsm</span> <span 
- style="font-weight: bold;"><B></b><b style="font-weight: normal;">������ָͬ������κ�ָ����ⲿ�жϣ�����</B></span>�ڴ��г���˳���д��� rsm ǰ���ָ������� <span class=Code>rsm</span><span 
+ style="font-weight: bold;"><B></b><b style="font-weight: normal;">处在相同指令组的任何指令的外部中断，包括</B></span>在串行程序顺序中处于 rsm 前面的指令，而不论 <span class=Code>rsm</span><span 
  style="font-weight: normal;"></span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;"> ָ����޶�ν��Ϊ��ֵ��</span></b></p></li>
+ style="font-weight: normal;"> 指令的限定谓词为何值。</span></b></p></li>
 	
 	<li class=kadov-p><p class="whs4"><b style="font-weight: bold;"><span 
- style="font-weight: normal;">��� rsm ���޶�ν��Ϊ�棬���� </span><span class=Code
+ style="font-weight: normal;">如果 rsm 的限定谓词为真，则在 </span><span class=Code
 				style="font-weight: normal;">rsm</span><span 
  style="font-weight: normal;"></span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;"> ָ��֮�����������ⲿ�жϡ�</span></b></p></li>
+ style="font-weight: normal;"> 指令之后立即禁用外部中断。</span></b></p></li>
 	
 	<li class=kadov-p><p class="whs4"><b style="font-weight: bold;"><span 
- style="font-weight: normal;">��� rsm ���޶�ν��Ϊ�٣����ⲿ�жϽ�һֱ���õ� </span><span class=Code>rsm</span><span 
+ style="font-weight: normal;">如果 rsm 的限定谓词为假，则外部中断将一直禁用到 </span><span class=Code>rsm</span><span 
  style="font-weight: normal;"></span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;"> ָ��������һ���������л�����Ϊֹ��</span></b></p></li>
+ style="font-weight: normal;"> 指令后面的下一个数据序列化操作为止。</span></b></p></li>
 </ul>
 
-<p class="whs4"><span style="font-weight: normal;"><b style="font-weight: normal;">�ⲿ�жϽ��ô��ڿ϶����������׼����ĸ��󣬵����ܻ����С������ȡ���ڴ������汾��</span><span style="font-weight: normal;"> ��ǰ��Ȩ������㣨PSR.cpl �� 0��ʱ������ rsm ָ���������</span></b><b style="font-weight: normal;"><span   style="font-weight: normal;">���� PSR.i�����޶�ν��Ϊ��ֵ��<span class=Code 					style="font-weight: normal;">rsm</span> ָ�������</span></b><b><span style="font-weight: normal;">����</span><span   style="font-weight: bold;"><B></b><b style="font-weight: normal;">�ⲿ�жϡ��������������汾�ᱣ֤����Ȩ�����޷����������ⲿ</B></span><span style="font-weight: normal;">�жϣ����磬ͨ�����޶�ν��Ϊ��� </span><span class=Code
+<p class="whs4"><span style="font-weight: normal;"><b style="font-weight: normal;">外部中断禁用窗口肯定不会比上述准则定义的更大，但可能会比它小，具体取决于处理器版本。</span><span style="font-weight: normal;"> 当前特权级别非零（PSR.cpl 非 0）时，不管 rsm 指令（它的掩码</span></b><b style="font-weight: normal;"><span   style="font-weight: normal;">包含 PSR.i）的限定谓词为何值，<span class=Code 					style="font-weight: normal;">rsm</span> 指令都将短暂</span></b><b><span style="font-weight: normal;">禁用</span><span   style="font-weight: bold;"><B></b><b style="font-weight: normal;">外部中断。不过，处理器版本会保证非特权代码无法无限锁定外部</B></span><span style="font-weight: normal;">中断（例如，通过由限定谓词为零的 </span><span class=Code
 	style="font-weight: normal;">rsm</span><span 
  style="font-weight: normal;"> </span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;">ָ��������ⳤ�����У���</span></b></p>
+ style="font-weight: normal;">指令组成任意长的序列）。</span></b></p>
 
-<p class="whs2"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>�ж�</B></span></b></p>
+<p class="whs2"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>中断</B></span></b></p>
 
 <ul type="disc" class="whs5">
 	
 	<li class=kadov-p><p class="whs4"><span style="font-weight: normal;"><b 
- style="font-weight: normal;">&ldquo;��Ȩ����&rdquo;����&ldquo;�����ļĴ���/�ֶ�&rdquo;����</b></span></p></li>
+ style="font-weight: normal;">&ldquo;特权操作&rdquo;错误；&ldquo;保留的寄存器/字段&rdquo;错误</b></span></p></li>
 </ul>
 
-<p class="whs2"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>���л�</B></span></b></p>
+<p class="whs2"><b style="font-weight: bold;"><span style="font-weight: bold;"><B>序列化</B></span></b></p>
 
-<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">�ڷ����������޸ĵ�</b><b style="font-weight: normal;"> PSR λ��PSR.i λ���⣩��ָ��֮ǰ����������ʹ���������л���ָ�����л�������PSR.i λ��ʽ�����л�����������ȷ����ִ����һ��ָ��ʱ�����ⲿ�жϡ�</b></span></p>
+<p class="whs4"><b style="font-weight: normal;"><span style="font-weight: normal;">在发出依赖于修改的</b><b style="font-weight: normal;"> PSR 位（PSR.i 位除外）的指令之前，软件必须使用数据序列化或指令序列化操作。PSR.i 位隐式地序列化，处理器会确保在执行下一条指令时屏蔽外部中断。</b></span></p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

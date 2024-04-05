@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_SWP.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:23 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>SWP - ����</title>
+<title>SWP - 交换</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nS - ָ��\nSWP");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nS - 指令\nSWP");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,16 +104,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">SWP - ����</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">SWP - 交换</h1>
 
 <div>
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p class=Preformatted><span CLASS=Code>SWP[condition] dest op1, [source]</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,7 +126,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="notational_conventions.html#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 个条件之一。请参阅<a HREF="notational_conventions.html#Condition Code Status">条件代码状态</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -135,7 +135,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>目标寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -145,7 +145,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>����Դ�������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含源操作数的寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -155,28 +155,28 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Դ��������ַ</td></tr>
+<p CLASS=CellBodyLeft>源操作数地址</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-SWP ָ��� <em CLASS=SourceItalic
-													style="font-weight: normal;">source</em> ����һ���ֵ����ݣ��������洢�� <em CLASS=SourceItalic
-						style="font-weight: normal;">dest</em>�������� <em CLASS=SourceItalic 					style="font-weight: normal;">op1</em> ȡ�����ݲ��洢�� <em CLASS=SourceItalic 		style="font-weight: normal;">source</em>���Ӷ�ʵ���ڴ���Ĵ���֮��Ľ�������ָ�����ʵ���ź�����condition ��������Чֵ������ָ��� NOP�� 
+SWP 指令从 <em CLASS=SourceItalic
+													style="font-weight: normal;">source</em> 加载一个字的数据，并将它存储到 <em CLASS=SourceItalic
+						style="font-weight: normal;">dest</em>。它随后从 <em CLASS=SourceItalic 					style="font-weight: normal;">op1</em> 取出数据并存储到 <em CLASS=SourceItalic 		style="font-weight: normal;">source</em>；从而实现内存与寄存器之间的交换。此指令可以实现信号量。condition 必须是有效值；否则将指令当作 NOP。 
 </div>
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="Note.gif"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif"> 备注</h3>
 
-�����ͼ������Ч�ļ��ػ�洢���ݷ��ʣ�������������ֹ�쳣�����ʵ��ϵͳ����Э������ʱ���ö����飬���Ҵ���λ [01:0] != 0b00 �ĵ�ַ�������ɶ����쳣�� 
+如果试图进行无效的加载或存储数据访问，则生成数据终止异常。如果实现系统控制协处理器时启用对齐检查，并且存在位 [01:0] != 0b00 的地址，则生成对齐异常。 
 
-<h2>Ѱַģʽ</h2>
+<h2>寻址模式</h2>
 
-�޲�����
+无操作数
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -243,7 +243,7 @@ SWP ָ��� <em CLASS=SourceItalic
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� </h2>
+<h2>编码 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -386,13 +386,13 @@ SWP ָ��� <em CLASS=SourceItalic
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funswp <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0 <br> 4 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example,CODE,READONLY <br> 6 <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1 <br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Swap data from register R3 with data from<br> 9 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; memory using memory address held in R10<br> 10 &#xA0;&#xA0;00000000 &#xA0;&#xA0;E3A0A001 &#xA0;&#xA0;MOV &#xA0;&#xA0;R10, #1 <br> 11 &#xA0;&#xA0;00000004 &#xA0;&#xA0;F3B47678 &#xA0;&#xA0;MOV &#xA0;&#xA0;R3, #OxA<br> 12 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E10A3093 &#xA0;&#xA0;SWP &#xA0;&#xA0;R3, R3, [R10] <br> 13 <br> 14 <br> 15 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Store data in R3 to memory address held in R10<br> 16 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; and load data already at that address into R7<br> 17 &#xA0;&#xA0;00000012 &#xA0;&#xA0;E3A0A001 &#xA0;&#xA0;MOV &#xA0;&#xA0;R10, #1 <br> 18 &#xA0;&#xA0;00000016 &#xA0;&#xA0;F3B47678 &#xA0;&#xA0;MOV &#xA0;&#xA0;R3, #OxA<br> 19 &#xA0;&#xA0;00000020 &#xA0;&#xA0;E10A7093 &#xA0;&#xA0;SWP &#xA0;&#xA0;R7, R3, [R10]</span> </p>
 
-<h2>������Ϣ</h2>
+<h2>更多信息</h2>
 
-<span style="font-weight: normal;"><a href="INST_SWPB.html">����� SWPB ָ��</span></a>
+<span style="font-weight: normal;"><a href="INST_SWPB.html">请参阅 SWPB 指令</span></a>
 </div>
 </div>
 

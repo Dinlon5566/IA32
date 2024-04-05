@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400198.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
 
-<title>fetchadd - ��ȡ������������ָ��</title>
+<title>fetchadd - 获取并加上立即数指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:50:07 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nF - ָ��\nfetchadd - ��ȡ������������ָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nF - 指令\nfetchadd - 获取并加上立即数指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,16 +116,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">��ȡ������������ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">获取并加上立即数指令</h1>
 
 <p><span style="font-weight: bold;"><B>fetchadd</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400199.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400199.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a>
  </p>
 
-<p>ָ������ M</p>
+<p>指令类型 M</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) fetchadd4.<span style="x-condition: eclipse;">sem</span><script type="text/javascript"
 	language=JavaScript1.2><!--
@@ -142,33 +142,33 @@ kadovFilePopupInit('A2');
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>说明</B></span></p>
 
-<p>�� <span style="x-condition: eclipse;">GR</span><script type="text/javascript"
+<p>从 <span style="x-condition: eclipse;">GR</span><script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A3');
-//--></script> <span style="font-style: italic;"><I>r3</I></span> �е�ֵָ���ĵ�ַ��ʼ�����ڴ��ȡ�Ļ�˸��ֽ���ɵ�ֵ���ڸ�ֵ��ִ������չ���������ӵ� <span style="font-style: italic;"><I>inc3</I></span> ָ���ķ�����չ������������ <span style="font-style: italic;"><I>inc3</I></span> ָ����ֵ������-16��-8��-4��-1��1��4��8��16��Ȼ�󣬴� GR <span style="font-style: italic;"><I>r3</I></span> �е�ֵָ���ĵ�ַ��ʼ���������Ч�����ֽڻ���ֽ�֮��д���ڴ档���ڴ��ȡ�ľ�������չ��ֵ���� GR <span style="font-style: italic;"><I>r1</I></span>������� GR <span style="font-style: italic;"><I>r1</I></span> ��Ӧ�� NaT λ��</p>
+//--></script> <span style="font-style: italic;"><I>r3</I></span> 中的值指定的地址开始，从内存读取四或八个字节组成的值。在该值上执行零扩展，并将它加到 <span style="font-style: italic;"><I>inc3</I></span> 指定的符号扩展立即数。可由 <span style="font-style: italic;"><I>inc3</I></span> 指定的值包括：-16、-8、-4、-1、1、4、8、16。然后，从 GR <span style="font-style: italic;"><I>r3</I></span> 中的值指定的地址开始，将最低有效的四字节或八字节之和写入内存。从内存读取的经过零扩展的值放入 GR <span style="font-style: italic;"><I>r1</I></span>，并清除 GR <span style="font-style: italic;"><I>r1</I></span> 对应的 NaT 位。</p>
 
 <p><span style="x-condition: eclipse;">sem</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A4');
-//--></script> ��ɷ�ָ���ź������������͡�</p>
+//--></script> 完成符指定信号量操作的类型。</p>
 
-<p>���ڷ��ʿɻ����д���ڴ����ͣ��ڴ��ȡ��д��ȷ����ԭ����ָ����ڷ��������ڴ����ͣ�����ԭ����ָ�����ȡ���ھ����ƽ̨��</p>
+<p>对于访问可缓存的写回内存类型，内存读取与写入确保是原子型指令。对于访问其它内存类型，采用原子型指令与否取决于具体的平台。</p>
 
-<p>��� GR <span style="font-style: italic;"><I>r3</I></span> �е�ֵָ���ĵ�ַδ��Ȼ�����ڴ��з��ʵ�ֵ�Ĵ�С���򲻹�&ldquo;�û�����&rdquo;������λ UM.ac����&ldquo;������״̬�Ĵ���&rdquo;�У��� PSR.ac����״̬��Σ�����ִ��&ldquo;δ�������������&rdquo;����Ĵ�����</p>
+<p>如果 GR <span style="font-style: italic;"><I>r3</I></span> 中的值指定的地址未自然对齐内存中访问的值的大小，则不管&ldquo;用户掩码&rdquo;对齐检查位 UM.ac（在&ldquo;处理器状态寄存器&rdquo;中，是 PSR.ac）的状态如何，都将执行&ldquo;未对齐的数据引用&rdquo;错误的处理。</p>
 
-<p>�������õ�ҳ��ͬʱ��Ҫ��ȡ��д�����Ȩ�ޡ������Ƿ�ִ���ڴ�д�룬����ִ��д�����Ȩ�޼�顣</p>
+<p>对于引用的页，同时需要读取与写入访问权限。无论是否执行内存写入，都将执行写入访问权限检查。</p>
 
-<p>���������ʲ���д����д����Ե� UCE ҳ��ɻ���ҳ������ NaTPage �ᵼ��&ldquo;���� NaT ҳʹ��&rdquo;���󡣷���ʹ�������ڴ����Ե�ҳ�ᵼ��&ldquo;��֧�ֵ���������&rdquo;����</p>
+<p>仅允许访问采用写回型写入策略的 UCE 页或可缓存页。访问 NaTPage 会导致&ldquo;数据 NaT 页使用&rdquo;错误。访问使用其它内存属性的页会导致&ldquo;不支持的数据引用&rdquo;错误。</p>
 
-<p>��֧�ֵ����� fetchadd �Ĵ������ͺ��ϣ��� UCE ҳ���� fetchadd �ᵼ��&ldquo;��ȡ������&rdquo;����������������֮�⣻���ƽ̨��֧�ֵ����� fetchadd����ò���δ���塣�ڲ�֧�ֵ����� fetchadd �Ĵ������ͺ��ϣ��� UCE ҳ����� fetchadd �ᵼ��&ldquo;��֧�ֵ���������&rdquo;����</p>
+<p>在支持导出的 fetchadd 的处理器型号上，对 UCE 页进行 fetchadd 会导致&ldquo;获取并加上&rdquo;操作导出到处理器之外；如果平台不支持导出的 fetchadd，则该操作未定义。在不支持导出的 fetchadd 的处理器型号上，对 UCE 页面进行 fetchadd 会导致&ldquo;不支持的数据引用&rdquo;错误。</p>
 
 <p><span style="x-condition: eclipse;">ldhint</span><script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A5');
-//--></script> ��ɷ���ֵָ���ڴ���ʵ������ԡ���������ʾ��Ӱ������ܣ���ʵ�ֵİ汾�п��ܻᱻ���ԡ�</p>
+//--></script> 完成符的值指定内存访问的区域性。区域性提示不影响程序功能，在实现的版本中可能会被忽略。</p>
 
 
 <!--(HR)============================================================-->

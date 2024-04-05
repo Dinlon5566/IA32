@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/ER4/tc_miss_performance_impact.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:43 GMT -->
 <head>
 
-<title>TC δ��������Ӱ��</title>
+<title>TC 未命中性能影响</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="05 9, 2002 4:33:26 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -85,7 +85,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 4 ������\nӢ�ض�(R) ����(R) 4 ���������¼�����\n�������ܵ�������\nǰ���¼�����\nTC δ��������Ӱ��");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) 4 处理器\n英特尔(R) 奔腾(R) 4 处理器的事件比率\n辅助性能调整比率\n前端事件比率\nTC 未命中性能影响");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,11 +108,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="����(R) 4 ����������" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1"><img src="er_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs2">���ٻ��� (TC) δ��������Ӱ��</h1>
+<h1><img src="p4p60hw.gif" alt="奔腾(R) 4 处理器主题" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1"><img src="er_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs2">跟踪缓存 (TC) 未命中性能影响</h1>
 
-<p>((<a href="../Events4/trace_cache_misses.html">���ٻ���δ����</a>*20) / <a href="../Events4/Clockticks.html">ʱ���ź�</a>)*100</p>
+<p>((<a href="../Events4/trace_cache_misses.html">跟踪缓存未命中</a>*20) / <a href="../Events4/Clockticks.html">时钟信号</a>)*100</p>
 
-<p>һ����˵����Щ����Դ�Ծ���ḻ�����ܹ���ʦ�ľ��飺</p>
+<p>一般来说，这些数字源自经验丰富的性能工程师的经验：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="60%" class="whs3">
@@ -120,10 +120,10 @@ else
 <tr>
 <td valign="top" width="50%" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td>
+	style="margin-bottom: 0;">下限</td>
 <td valign="top" width="50%" class="whs4">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">����</td></tr>
+	style="margin-bottom: 0;">上限</td></tr>
 
 <tr>
 <td valign="top" width="50%" class="whs4">
@@ -132,20 +132,20 @@ else
 <p>2</td></tr>
 </table>
 
-<p>�˱��ʵ�ֵ�ϸ�ʱ����ʾ�ڴ���ģʽ�з����˸��ٻ��� (TC) δ���У�����ܻ����������������ĸ���Ӱ�죬ͬʱҲ��ʾ����ָ�̫�󣬶��޷�������ٻ����ڡ� </p>
+<p>此比率的值较高时，表示在传递模式中发生了跟踪缓存 (TC) 未命中，这可能会对性能造成了显著的负面影响，同时也表示工作指令集太大，而无法放入跟踪缓存内。 </p>
 
-<p>����δ����&ldquo;���̼߳���&rdquo;��ϵͳ������ָ�Ӧ�ÿ���Ϊ�ɷ��� 1/2 �ĸ��ٻ����ڡ� 
+<p>对于未启用&ldquo;超线程技术&rdquo;的系统，工作指令集应该控制为可放入 1/2 的跟踪缓存内。 
  </p>
 
-<p>��&ldquo;���̼߳���&rdquo;ʱ���������ݼ��������߳�֮�乲������ˣ���Ӧ�ÿ���Ϊ�ɷ��� 1/4 �� 1/2 �ĸ��ٻ����ڡ� </p>
+<p>打开&ldquo;超线程技术&rdquo;时，工作数据集在两个线程之间共享，因此，它应该控制为可放入 1/4 到 1/2 的跟踪缓存内。 </p>
 
-<p><span style="font-weight: bold;"><B>����</B></span>�������<a href="../Advice4_HH/decreasing_trace_cache_misses.html" style="x-condition: eclipse;">���͸��ٻ���δ����</a>
+<p><span style="font-weight: bold;"><B>建议</B></span>：请参阅<a href="../Advice4_HH/decreasing_trace_cache_misses.html" style="x-condition: eclipse;">降低跟踪缓存未命中</a>
  </p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" alt="��ע" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs5"> ��ע </h3>
+	style="margin-left: 40px;"><img src="note.gif" alt="备注" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs5"> 备注 </h3>
 
-<p class="whs6">��������δ���бȸ��ٻ���δ���еĳͷ���ܶࡣ</p>
+<p class="whs6">二级缓存未命中比跟踪缓存未命中的惩罚大很多。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/movshdup--move_packed_single-fp_high_and_duplicate.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:52 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>MOVSHDUP - �ƶ�ѹ�������ȸ���ֵ��λ������</title>
+<title>MOVSHDUP - 移动压缩单精度浮点值高位并复制</title>
 
 <!--(Meta)==========================================================-->
 
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nM - ָ��\nMOVSHDUP - �ƶ�ѹ�������ȸ���ֵ��λ������");
+	addTocInfo("参考\n指令集\nIA-32 指令\nM - 指令\nMOVSHDUP - 移动压缩单精度浮点值高位并复制");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,7 +105,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>MOVSHDUP - �ƶ�ѹ�������ȸ���ֵ��λ������</h1>
+<h1>MOVSHDUP - 移动压缩单精度浮点值高位并复制</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -116,10 +116,10 @@ else
 	style="margin-bottom: 0;">&nbsp;</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">说明</td></tr>
 
 <tr>
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
@@ -127,21 +127,21 @@ else
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
 <p CLASS=TableCell>MOVSHDUP xmm1, xmm2/m128</td>
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
-<p CLASS=TableCell>�� XMM2/Mem �д���ѹ�� SP ����Ԫ�ص� 128 λ�Ƶ� XMM1 �Ĵ����������Ƹ�λ���֡�</td></tr>
+<p CLASS=TableCell>将 XMM2/Mem 中代表压缩 SP 数据元素的 128 位移到 XMM1 寄存器，并复制高位部分。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-<p>���Ե�ַ��Ӧ�����õ��ڴ����ݵ������Ч�ֽڡ�ָ���ڴ��ַʱ���������ڴ�λ�� m128 �� 16 ���ֽڵ����ݣ�������λ�� 1 �� 3 ���ĵ�����Ԫ�ء�ʹ�üĴ���-�Ĵ�����ʽ�Ĵ˲���ʱ����ִ����ͬ�Ĳ��������������� 128 λԴ�Ĵ�����</p>
+<p>线性地址对应于引用的内存数据的最低有效字节。指出内存地址时，将加载内存位置 m128 处 16 个字节的数据，并复制位置 1 与 3 处的单精度元素。使用寄存器-寄存器形式的此操作时，将执行相同的操作，但数据来自 128 位源寄存器。</p>
 
 <p><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='movshdup.gif' x-maintain-ratio='TRUE' alt='MOVSHDUP���ƶ�ѹ�������ȸ���ֵ��λ������' width='469px' height='174px' border='1' class='img_whs3'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='movshdup.gif' x-maintain-ratio='TRUE' alt='MOVSHDUP：移动压缩单精度浮点值高位并复制' width='469px' height='174px' border='1' class='img_whs3'>");}
 else
-{   document.write("<img src='movshdup.gif' x-maintain-ratio='TRUE' alt='MOVSHDUP���ƶ�ѹ�������ȸ���ֵ��λ������' style='border-left-style:Solid;border-left-width:1px;border-right-style:Solid;border-right-width:1px;border-top-style:Solid;border-top-width:1px;border-bottom-style:Solid;border-bottom-width:1px;' width='469px' height='174px' border='1' class='img_whs3'>");}
-//--></script><noscript><img src='movshdup.gif' x-maintain-ratio='TRUE' alt='MOVSHDUP���ƶ�ѹ�������ȸ���ֵ��λ������' style='border-left-style:Solid;border-left-width:1px;border-right-style:Solid;border-right-width:1px;border-top-style:Solid;border-top-width:1px;border-bottom-style:Solid;border-bottom-width:1px;' width='469px' height='174px' border='1' class='img_whs3'></noscript></p>
+{   document.write("<img src='movshdup.gif' x-maintain-ratio='TRUE' alt='MOVSHDUP：移动压缩单精度浮点值高位并复制' style='border-left-style:Solid;border-left-width:1px;border-right-style:Solid;border-right-width:1px;border-top-style:Solid;border-top-width:1px;border-bottom-style:Solid;border-bottom-width:1px;' width='469px' height='174px' border='1' class='img_whs3'>");}
+//--></script><noscript><img src='movshdup.gif' x-maintain-ratio='TRUE' alt='MOVSHDUP：移动压缩单精度浮点值高位并复制' style='border-left-style:Solid;border-left-width:1px;border-right-style:Solid;border-right-width:1px;border-top-style:Solid;border-top-width:1px;border-bottom-style:Solid;border-bottom-width:1px;' width='469px' height='174px' border='1' class='img_whs3'></noscript></p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted>&#xA0;if (source == m128) { </p>
 
@@ -181,42 +181,42 @@ else
 <p class=Preformatted
 	style="margin-left: 40px;">} </p>
 
-<h2>�쳣</h2>
+<h2>异常</h2>
 
-<p>���δ���� 16 �ֽڱ߽磬�����һ�㱣�����쳣�����۶���Ρ� </p>
+<p>如果未对齐 16 字节边界，则产生一般保护性异常，无论段如何。 </p>
 
-<h2>��ֵ�쳣</h2>
+<h2>数值异常</h2>
 
-<p>�� </p>
+<p>无 </p>
 
-<h2>����ģʽ�쳣</h2>
+<h2>保护模式异常</h2>
 
-<p>#GP(0) - CS��DS��ES��FS �� GS ���е��ڴ��������Ч��ַ�Ƿ��� </p>
+<p>#GP(0) - CS、DS、ES、FS 或 GS 段中的内存操作数有效地址非法。 </p>
 
-<p>#SS(0) - SS ���еĵ�ַ�Ƿ��� </p>
+<p>#SS(0) - SS 段中的地址非法。 </p>
 
-<p>#PF(�������) - ҳ���� </p>
+<p>#PF(错误代码) - 页错误。 </p>
 
-<p>#NM - ��� CR0 �е� TS ����Ϊ 1�� </p>
+<p>#NM - 如果 CR0 中的 TS 设置为 1。 </p>
 
-<p>#UD - ��� CR0.EM = 1����� CR4.OSFXSR(bit 9) = 0����� CPUID.PNI(ECX bit 0) = 0��MOVSHDUP���ƶ�ѹ�������ȸ���ֵ��λ�����ƣ�����</p>
+<p>#UD - 如果 CR0.EM = 1。如果 CR4.OSFXSR(bit 9) = 0。如果 CPUID.PNI(ECX bit 0) = 0。MOVSHDUP：移动压缩单精度浮点值高位并复制（续）</p>
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>实地址模式异常</h2>
 
-�ж� 13 - ������������κβ��ֳ����ڴ� 0 �� 0FFFFH ����Ч��ַ�ռ�֮�⡣ 
+中断 13 - 如果操作数的任何部分出现在从 0 到 0FFFFH 的有效地址空间之外。 
 
-<br>#NM - ��� CR0 �е� TS ����Ϊ 1�� 
+<br>#NM - 如果 CR0 中的 TS 设置为 1。 
 
-<br>#UD - ��� CR0.EM = 1��
-��� CR4.OSFXSR(bit 9) = 0��
-��� CPUID.PNI(ECX bit 0) = 0��
-<h2>�� 8086 ģʽ�쳣</h2>
+<br>#UD - 如果 CR0.EM = 1。
+如果 CR4.OSFXSR(bit 9) = 0。
+如果 CPUID.PNI(ECX bit 0) = 0。
+<h2>虚 8086 模式异常</h2>
 
-�ж� 13 - ������������κβ��ֳ����ڴ� 0 �� 0FFFFH ����Ч��ַ�ռ�֮�⡣ 
+中断 13 - 如果操作数的任何部分出现在从 0 到 0FFFFH 的有效地址空间之外。 
 
-<br>#NM - ��� CR0 �е� TS ����Ϊ 1�� 
+<br>#NM - 如果 CR0 中的 TS 设置为 1。 
 
-<br>#UD - ��� CR0.EM = 1����� CR4.OSFXSR(bit 9) = 0����� CPUID.PNI(ECX bit 0) = 0��#PF(�������) - ҳ���� 
+<br>#UD - 如果 CR0.EM = 1。如果 CR4.OSFXSR(bit 9) = 0。如果 CPUID.PNI(ECX bit 0) = 0。#PF(错误代码) - 页错误。 
 
 <script type="text/javascript" language="javascript1.2">
 <!--

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/BX_(Thumb).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:47:09 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>BX (Thumb) - ��֧�뽻��</title>
+<title>BX (Thumb) - 分支与交换</title>
 
 <!--(Meta)==========================================================-->
 
@@ -83,7 +83,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n16 λָ��\nB - ָ��\nBX (Thumb)");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n16 位指令\nB - 指令\nBX (Thumb)");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,9 +106,9 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">BX (Thumb*) - ��֧�뽻��</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">BX (Thumb*) - 分支与交换</h1>
 
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <div>
 <div>
@@ -116,7 +116,7 @@ else
 </div>
 
 <div>
-<p>���У�</p>
+<p>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,22 +126,22 @@ else
 <p CLASS=CellBodyLeft><em CLASS=SourceItalic
 							style="font-style: italic;">dest</em> </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>����Ŀ���ַ�ļĴ��� (R0..R15)</td></tr>
+<p CLASS=CellBodyLeft>包含目标地址的寄存器 (R0..R15)</td></tr>
 </table>
 </div>
 
 <div>
-<h2>˵��</h2>
+<h2>说明</h2>
 
-<p>BX ָ���֧��ָ���� <em CLASS=SourceItalic>dest</em>������ ARM* �� Thumb* ָ�������ѡ��ִ������Ҫѡ�� ARM ָ�BX ָ����Ҫλ���ֶ���ĵ�ַ��Ҫѡ�� Thumb ָ��뽫�Ĵ��� R15 ָ��Ϊ <em CLASS=SourceItalic>dest</em>�� </p>
+<p>BX 指令分支到指定的 <em CLASS=SourceItalic>dest</em>（包含 ARM* 或 Thumb* 指令），并可选择执行它。要选择 ARM 指令，BX 指令需要位于字对齐的地址。要选择 Thumb 指令，请将寄存器 R15 指定为 <em CLASS=SourceItalic>dest</em>。 </p>
 
-<h2>Ѱַģʽ </h2>
+<h2>寻址模式 </h2>
 
-<p>�޲�������</p>
+<p>无操作数。</p>
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -189,7 +189,7 @@ else
 </div>
 
 <div>
-<h2>����</h2>
+<h2>编码</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs3">
@@ -260,14 +260,14 @@ else
 
 <div>
 <div>
-<h2>ʾ�� </h2>
+<h2>示例 </h2>
 </div>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funblx <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0 <br> 4 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example,CODE,READONLY <br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;CODE16 <br> 7<br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1 <br> 9 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Unconditional branch to another <br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Thumb subroutine, whose address <br> 11 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; is in R5.Do not save return address <br> 12 &#xA0;&#xA0;&#xA0;00000000 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;4728 &#xA0;&#xA0;&#xA0;BX &#xA0;&#xA0;R5<br> 13<br> 14<br> 15<br> 16<br> 17 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Unconditional call to an ARM<br> 18 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; (32-bit) subroutine, whose address <br> 19 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; is at word boundary A0 and loaded <br> 20 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; into R7.Do not save return address <br> 21 &#xA0;&#xA0;&#xA0;00000002 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;F7C7 &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;R7, OxA0 <br> 22 &#xA0;&#xA0;&#xA0;00000004 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;4738 &#xA0;&#xA0;&#xA0;BX &#xA0;&#xA0;&#xA0;R7 </span></p>
 
-<h2>������Ϣ </h2>
+<h2>更多信息 </h2>
 
-<a href="B(1)_(Thumb).html" CLASS="XRef">����� B(1) ָ��</a><a href="B(2)_(Thumb).html" CLASS="XRef"><br> ����� B(2) ָ��</a><a href="BLX(1)_(Thumb).html" CLASS="XRef"><br> ����� BL/BLX(1) ָ��</a><a href="BLX(2)_(Thumb).html" CLASS="XRef"><br> ����� BLX(2) ָ��</a><a href="TST_(Thumb).html"><br> ����� TST ָ��</a> 
+<a href="B(1)_(Thumb).html" CLASS="XRef">请参阅 B(1) 指令</a><a href="B(2)_(Thumb).html" CLASS="XRef"><br> 请参阅 B(2) 指令</a><a href="BLX(1)_(Thumb).html" CLASS="XRef"><br> 请参阅 BL/BLX(1) 指令</a><a href="BLX(2)_(Thumb).html" CLASS="XRef"><br> 请参阅 BLX(2) 指令</a><a href="TST_(Thumb).html"><br> 请参阅 TST 指令</a> 
 </div>
 
 <script type="text/javascript" language="javascript1.2">

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_MAR.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:43 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>MAR - �ڲ��ۼ�������</title>
+<title>MAR - 内部累加器访问</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nM - ָ��\nMAR");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nM - 指令\nMAR");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,16 +104,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">MAR - �ڲ��ۼ�������</h1>
+<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">MAR - 内部累加器访问</h1>
 
 <div>
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p class=Preformatted><span class=Code>MAR [<em CLASS=Source-italic> condition</em> ] acc0, <em CLASS=Source-italic>op1</em> , <em CLASS=Source-italic>op2</em></span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,7 +126,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 个条件之一。请参阅<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">条件代码状态</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -136,7 +136,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�ڲ� 40 λ�ۼ���</td></tr>
+<p CLASS=CellBodyLeft>内部 40 位累加器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -146,7 +146,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ���ڲ��ۼ����ĵ� 32 λ�ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>指定内部累加器的低 32 位的寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -156,12 +156,12 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ���ڲ��ۼ����ĸ߰�λ�ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>指定内部累加器的高八位的寄存器</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-<p>ָ�� MAR ִ�����²����� </p>
+<p>指令 MAR 执行以下操作： </p>
 
 <p CLASS=Code><em CLASS=Source
 					style="font-style: italic;">&#xA0;<span 
@@ -170,18 +170,18 @@ else
 
 <p>&nbsp;</p>
 
-<p>ʹ�� MAR ָ��ʱ���Ĵ��� <em CLASS=SourceItalic>op1</em> �е�ֵ�Ƶ� 40 λ�ۼ�����λ [31:0]���Ĵ���<em CLASS=SourceItalic>op2</em> �е�ֵ��λ [7:0] �Ƶ� 40 λ�ۼ�����λ [39:32]��ָ����ָ����������������������״̬ƥ�䣬����ִ��ָ���ָ��������κδ�����ģʽ��ִ�С�</p>
+<p>使用 MAR 指令时，寄存器 <em CLASS=SourceItalic>op1</em> 中的值移到 40 位累加器的位 [31:0]，寄存器<em CLASS=SourceItalic>op2</em> 中的值的位 [7:0] 移到 40 位累加器的位 [39:32]。指令中指定的条件必须与条件代码状态匹配，否则不执行指令。此指令可以在任何处理器模式中执行。</p>
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
-<p>��Ӱ���κα�־��</p>
+<p>不影响任何标志。</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� </h2>
+<h2>编码 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -312,13 +312,13 @@ else
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funcmar<br> 4 <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0<br> 6 <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@ * * * MAR * * *<br> 8 <br> 9 <br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example, CODE, READONLY<br> 11 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1<br> 12 <br> 13 &#xA0;&#xA0;00000000 &#xA0;&#xA0;E3A0000A MOV &#xA0;&#xA0;R0, #10<br> 14 &#xA0;&#xA0;00000004 &#xA0;&#xA0;E3A01001 MOV &#xA0;&#xA0;R1, #1<br> 15 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E3A02001 MOV &#xA0;&#xA0;R2, #1<br> 16 <br> 17 &#xA0;&#xA0;00000012 &#xA0;&#xA0;E2A20001 ADC &#xA0;&#xA0;R0, R2, #1<br> 18 <br> 19 &#xA0;&#xA0;00000016 &#xA0;&#xA0;EC400001 MAR &#xA0;&#xA0;acc0, R0, R1<br> 20 <br> 21 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END</span> </p>
 
-<h2>������Ϣ</h2>
+<h2>更多信息</h2>
 
-<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_MRA.htm">����� MRA ָ�� </a>
+<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_MRA.htm">请参阅 MRA 指令 </a>
 </div>
 </div>
 

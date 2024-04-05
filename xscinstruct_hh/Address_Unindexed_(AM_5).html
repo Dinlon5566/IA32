@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Unindexed_(AM_5).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:46:46 GMT -->
 <head>
 
-<title>�Ǳ�ַ (AM 5)</title>
+<title>非变址 (AM 5)</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="02 16, 2003 12:32:31 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -99,7 +99,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nѰַģʽ\n������洢Э������\n�Ǳ�ַ (AM 5)");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n寻址模式\n加载与存储协处理器\n非变址 (AM 5)");
 
 	}
 	if (window.writeBtnStyle)
@@ -125,17 +125,17 @@ else
 <div>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特尔 XScale(R) 技术主题' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript><a NAME=60412></a>�Ǳ�ַ (AM 5)</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特尔 XScale(R) 技术主题' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特尔 XScale(R) 技术主题' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='36px' height='36px' align='right' border='0' class='img_whs1'></noscript><a NAME=60412></a>非变址 (AM 5)</h1>
 
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p class=Preformatted><span class=Code>[basereg], option</span> </p>
 
-<p CLASS=Body>���У� </p>
+<p CLASS=Body>其中： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -147,7 +147,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ��������ַ�ļĴ�����</td></tr>
+<p CLASS=CellBodyLeft>指定包含基址的寄存器。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -157,20 +157,20 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ��������Э������ѡ���ѡ����Ϊ 0-255 ��Χ�ڵ�������ָ���﷨��ָ��������ʹ�� { �� } ��������</td></tr>
+<p CLASS=CellBodyLeft>指定其它的协处理器选项。此选项作为 0-255 范围内的整数在指令语法中指定，并且使用 { 与 } 括起来。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-Ѱַģʽ&ldquo;δ��ַ&rdquo;ִ�����²�����α����˵������
+寻址模式&ldquo;未变址&rdquo;执行以下操作（伪代码说明）：
 
 <p CLASS=Preformatted-Code>if ConditionPassed (condition) then<br> start_addr = basereg<br> addr = start_addr<br> while (NotFinished (coprocessor[cpnum]))<br> addr = addr + 4<br> end_addr = addr</p>
 
-<p CLASS=Body>��Ѱַģʽ����������ַ���С���һ����ַ�ǻ�ַ�Ĵ��� <em CLASS=SourceItalic>basereg</em> ��ֵ��������ַ��ǰһ����ַ�����ĵõ���������ִ�е�Э����������ָ������źš�������Э����������Է���Э��������������ݡ�</p>
+<p CLASS=Body>此寻址模式创建连续地址序列。第一个地址是基址寄存器 <em CLASS=SourceItalic>basereg</em> 的值。后续地址由前一个地址递增四得到。这会持续执行到协处理器发出指令结束信号。这样，协处理器便可以访问协处理器定义的数据。</p>
 
-<p CLASS=Body>��ַ�Ĵ��� <em CLASS=SourceItalic>basereg</em> �����¡���ˣ�����&ldquo;Ӣ�ض� XScale(R)&rdquo;΢��ϵ�ṹ�Ĵ�������ʹ��λ [7:0]����Щλ�����ڸ�Э������ָ��������ָ��ѡ�</p>
+<p CLASS=Body>基址寄存器 <em CLASS=SourceItalic>basereg</em> 不更新。因此，基于&ldquo;英特尔 XScale(R)&rdquo;微体系结构的处理器不使用位 [7:0]。这些位可用于给协处理器指定其它的指令选项。</p>
 
-<p CLASS=Body>Э����������Ҫ����г��� 16 ���ֵĴ��䡣</p>
+<p CLASS=Body>协处理器不得要求进行超过 16 个字的传输。</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs2">
@@ -191,7 +191,7 @@ else
 <col class="whs3">
 <col class="whs3">
 
-<h2>���� </h2>
+<h2>编码 </h2>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" width="19px" class="whs4">
@@ -335,34 +335,34 @@ else
 </tr>
 </table>
 
-<h3 class=NoteTipHead><img src="Note.gif" width="20px" height="20px" border="0" class="img_whs7"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif" width="20px" height="20px" border="0" class="img_whs7"> 备注</h3>
 
-<p>N λ������Э��������</p>
+<p>N 位依赖于协处理器。</p>
 
-L λ��ʾ&ldquo;����&rdquo;(<em CLASS=Source> L == 1</em> ) ��&ldquo;�洢&rdquo;(<em CLASS=Source> L == 0</em> ) ָ� 
+L 位表示&ldquo;加载&rdquo;(<em CLASS=Source> L == 1</em> ) 或&ldquo;存储&rdquo;(<em CLASS=Source> L == 0</em> ) 指令。 
 
-<br>��� <em CLASS=Source>R15</em> ָ��Ϊ�Ĵ��� <em CLASS=SourceItalic>basereg</em>����ʹ�õ�ֵ�ǵ�ǰָ��ĵ�ַ�� 8��
+<br>如果 <em CLASS=Source>R15</em> 指定为寄存器 <em CLASS=SourceItalic>basereg</em>，则使用的值是当前指令的地址加 8。
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="Caution.gif" width="24px" height="23px" border="0" class="img_whs8"> ע��</h3>
+<h3 class=NoteTipHead><img src="Caution.gif" width="24px" height="23px" border="0" class="img_whs8"> 注意</h3>
 
-��� U λ��λ [23]��δ��λ������δ����򽫻��޷�Ԥ֪�� 
+如果 U 位（位 [23]）未置位，则结果未定义或将会无法预知。 
  
 
-<h3 class=NoteTipHead><img src="Note.gif" width="20px" height="20px" border="0" class="img_whs7"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif" width="20px" height="20px" border="0" class="img_whs7"> 备注</h3>
 
-<p>������Ѱַģʽ�У�����&ldquo;Ӣ�ض� XScale(R)&rdquo;΢��ϵ�ṹ�Ĵ�������ʹ��ѡ��λ��λ [7:0]������Щλ�����ڸ�Э������ָ��������ָ��ѡ�</p>
+<p>在这种寻址模式中，基于&ldquo;英特尔 XScale(R)&rdquo;微体系结构的处理器不使用选项位（位 [7:0]）。这些位可用于给协处理器指定其它的指令选项。</p>
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p CLASS=Preformatted><span class=Code>LDC2 &#xA0;&#xA0;&#xA0;P0, CR15, [R3]</span></p>
 
-<h2>������Ϣ</h2>
+<h2>更多信息</h2>
 
-<a href="Address_Load_and_Store_Coprocessor_Overview.html">�����Ѱַģʽ 5��������洢Э������</a><a href="Inst_Overview_of_Instructions.html" CLASS="XRef" style="font-weight: normal;"><br>����Ļ����ָ��</a>
+<a href="Address_Load_and_Store_Coprocessor_Overview.html">请参阅寻址模式 5：加载与存储协处理器</a><a href="Inst_Overview_of_Instructions.html" CLASS="XRef" style="font-weight: normal;"><br>请参阅汇编器指令</a>
 </div>
 </div>
 

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_LDRD.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:21 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>LDRD - DSP ָ��</title>
+<title>LDRD - DSP 指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nL - ָ��\nLDRD");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nL - 指令\nLDRD");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,16 +105,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">LDRD - DSP ָ��</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">LDRD - DSP 指令</h1>
 
 <div>
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p class=Preformatted><span class=Code>LDR[condition]D dest, addr_mode</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -127,7 +127,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="notational_conventions.html#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 个条件之一。请参阅<a HREF="notational_conventions.html#Condition Code Status">条件代码状态</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -137,7 +137,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ŀ��Ĵ���������������ŵļĴ��������ż����ŵļĴ���</td></tr>
+<p CLASS=CellBodyLeft>目标寄存器；跟在奇数编号的寄存器后面的偶数编号的寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -147,7 +147,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ѱַģʽ 3��<a HREF="Address_Miscellaneous_Loads_and_Stores_Overview.html">����������洢</a></td></tr>
+<p CLASS=CellBodyLeft>寻址模式 3：<a HREF="Address_Miscellaneous_Loads_and_Stores_Overview.html">其它加载与存储</a></td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -157,27 +157,27 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft><em CLASS=SourceItalic>addr_mode</em> ʹ�õĻ�ַ�Ĵ��� 
+<p CLASS=CellBodyLeft><em CLASS=SourceItalic>addr_mode</em> 使用的基址寄存器 
  </td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-LDRD ָ� ARM* ���ļĴ����� <em CLASS=SourceItalic>addr_mode</em> ���ص� <em CLASS=SourceItalic>dest</em>���� <em CLASS=SourceItalic>addr_mode</em> ��ָ���������Ĵ����У���һ���ı�ű�����ż�����ڶ����ı����������������б� 2 �Ĵ��� LDM �����Ѱַģʽ����ʹ�ã�����һ���ֵĵ�ַ����˫�ֶ��룻�����Ա� 8 ������condition ��������Чֵ������ָ��� NOP�� 
+LDRD 指令将 ARM* 核心寄存器从 <em CLASS=SourceItalic>addr_mode</em> 加载到 <em CLASS=SourceItalic>dest</em>。在 <em CLASS=SourceItalic>addr_mode</em> 内指定的两个寄存器中，第一个的编号必须是偶数，第二个的必须是奇数。尽管有比 2 寄存器 LDM 更多的寻址模式可以使用，但第一个字的地址必须双字对齐；即可以被 8 整除。condition 必须是有效值；否则将指令当作 NOP。 
 </div>
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="Note.gif" width="20px" height="20px" border="0" class="img_whs2"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif" width="20px" height="20px" border="0" class="img_whs2"> 备注</h3>
 
-<p>�����ͼ������Ч�ļ��ػ�洢���ݷ��ʣ�������������ֹ�쳣�����ʵ��ϵͳ����Э������ʱ���ö����飬���Ҵ���λ [01:0] != 0b00 �ĵ�ַ�������ɶ����쳣�����ʵ��ϵͳ����Э������ʱ���ö����飬���Ҵ���λ [02:0] != 0b100 �ĵ�ַ������ܻ����ɶ����쳣�����ص�ַ����˫�ֶ��롣</p>
+<p>如果试图进行无效的加载或存储数据访问，则生成数据终止异常。如果实现系统控制协处理器时启用对齐检查，并且存在位 [01:0] != 0b00 的地址，则生成对齐异常。如果实现系统控制协处理器时启用对齐检查，并且存在位 [02:0] != 0b100 的地址，则可能会生成对齐异常。加载地址必须双字对齐。</p>
 
-<h2>Ѱַģʽ</h2>
+<h2>寻址模式</h2>
 
-�����&ldquo;Ѱַģʽ 3������������洢&rdquo;
+请参阅&ldquo;寻址模式 3：其它加载与存储&rdquo;
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -244,7 +244,7 @@ LDRD ָ� ARM* ���ļĴ����� <em CLASS=SourceItalic>addr_mode</em> ���ص� <em C
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� </h2>
+<h2>编码 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -387,13 +387,13 @@ LDRD ָ� ARM* ���ļĴ����� <em CLASS=SourceItalic>addr_mode</em> ���ص� <em C
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.globl funcldrd<br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.align 0<br> 4 <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@ * * * LDRD (Addressing Mode 3) * * * <br> 6 <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA load_store, CODE, READONLY<br> 8 <br> 9 &#xA0;&#xA0;&#xA0;00000000 &#xA0;&#xA0;E3A02014 &#xA0;&#xA0;MOV &#xA0;&#xA0;R2, #20<br> 10 &#xA0;&#xA0;00000004 &#xA0;&#xA0;E3A03003 &#xA0;&#xA0;MOV &#xA0;&#xA0;R3, #3<br> 11 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E5823000 &#xA0;&#xA0;STR &#xA0;&#xA0;R3, [R2]<br> 12 &#xA0;&#xA0;00000012 &#xA0;&#xA0;E3A05032 &#xA0;&#xA0;MOV &#xA0;&#xA0;R5, #50<br> 13 &#xA0;&#xA0;00000016 &#xA0;&#xA0;E3A06006 &#xA0;&#xA0;MOV &#xA0;&#xA0;R6, #6<br> 14 &#xA0;&#xA0;00000020 &#xA0;&#xA0;E5856000 &#xA0;&#xA0;STR &#xA0;&#xA0;R6, [R5]<br> 15 &#xA0;&#xA0;00000024 &#xA0;&#xA0;E18240D5 &#xA0;&#xA0;LDRD &#xA0;R4, [R2, R5]<br> 16 <br> 17 &#xA0;&#xA0;00000028 &#xA0;&#xA0;E3A0603C &#xA0;&#xA0;MOV &#xA0;&#xA0;R6, #60<br> 18 &#xA0;&#xA0;00000032 &#xA0;&#xA0;E3A07007 &#xA0;&#xA0;MOV &#xA0;&#xA0;R7, #7<br> 19 &#xA0;&#xA0;00000036 &#xA0;&#xA0;E5867000 &#xA0;&#xA0;STR &#xA0;&#xA0;R7, [R6]<br> 20 &#xA0;&#xA0;00000040 &#xA0;&#xA0;E3A09009 &#xA0;&#xA0;MOV &#xA0;&#xA0;R9, #9<br> 21 &#xA0;&#xA0;00000044 &#xA0;&#xA0;E0C680D9 &#xA0;&#xA0;LDRD &#xA0;R8, [R6], R9<br> 22 <br> 23 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END</span> </p>
 
-<h2>������Ϣ</h2>
+<h2>更多信息</h2>
 
-<a href="Address_Miscellaneous_Loads_and_Stores_Overview.html">�����Ѱַģʽ 3��<a HREF="Address_Miscellaneous_Loads_and_Stores_Overview.html#Miscellaneous Loads and Stores">����������洢</a></a>
+<a href="Address_Miscellaneous_Loads_and_Stores_Overview.html">请参阅寻址模式 3：<a HREF="Address_Miscellaneous_Loads_and_Stores_Overview.html#Miscellaneous Loads and Stores">其它加载与存储</a></a>
 </div>
 </div>
 

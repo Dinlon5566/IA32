@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/about_instruction_execution_events.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:48 GMT -->
 <head>
 
-<title>����ָ��ִ���¼�</title>
+<title>关于指令执行事件</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta NAME=MS-HAID CONTENT="instruction execution events 642">
 <meta name=date content="05 23, 2002 4:33:53 PM">
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\nָ��ִ���¼�\n����ָ��ִ���¼�");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 安腾(R) 2 处理器\n英特尔(R) 安腾(R) 2 处理器事件\n指令执行事件\n关于指令执行事件");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,13 +104,13 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1 class=Overview><img src="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/itanium2_60b.gif" alt="����(R) 2 ����������" x-maintain-ratio="TRUE" width="48px" height="60px" align="right" border="0" class="img_whs1">����ָ��ִ���¼�</h1>
+<h1 class=Overview><img src="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/itanium2_60b.gif" alt="安腾(R) 2 处理器主题" x-maintain-ratio="TRUE" width="48px" height="60px" align="right" border="0" class="img_whs1">关于指令执行事件</h1>
 
-<p>ʧЧ��ָ�������<a href="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/IA64_TAGGED_INST_RETIRED.html">ʧЧ�ı��ָ��</a>�� NOPS_RETIRED �����ڵ�ַ��Χ����������ƥ�书��ָ���ı����Ϣ����ǵ�ʧЧָ���������ν��Ϊ�ٵ�ָ������ṩһ���������¼� PREDICATE_SQUASHED_RETIRED ��ͳ��ν��Ϊ�ٵ�ָ�</p>
+<p>失效的指令计数、<a href="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/IA64_TAGGED_INST_RETIRED.html">失效的标记指令</a>及 NOPS_RETIRED 均基于地址范围检查与操作码匹配功能指定的标记信息。标记的失效指令计数包括谓词为假的指令。这里提供一个单独的事件 PREDICATE_SQUASHED_RETIRED 来统计谓词为假的指令。</p>
 
-<p>�����г��� FP ���������񸡵�������¹ܵ���������Ϊ�㷢�������Ķ�̬��Ϣ��FP_OPS_RETIRED �¼�ͳ��ʧЧ�� FP ������������</p>
+<p>表中列出的 FP 监视器捕获浮点操作导致管道清除与清除为零发生次数的动态信息。FP_OPS_RETIRED 事件统计失效的 FP 操作的数量。</p>
 
-<p>���ڿ����������Ʋ�ļ���������̬����ʱ��Ϣ��ʧ�ܵ� chk.s ָ�� (INST_FAILED_CHKS_RETIRED.ALL) �������߼����ؼ��������� (INST_CHKA_LDC_ALAT.ALL) �������Լ�ʧ�ܵĸ߼����ؼ��������� (INST_FAILED_CHKA_LDC_ALAT.ALL) �������� ALAT ��ʾ����ʧЧ�� chk.s ָ��������<a HREF="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/IA64_TAGGED_INST_RETIRED.html">ʧЧ�ı��ָ��</a>�¼��ڸ����ʵ����������������¼��ӡ�����&#xAE; 2 ������ ALAT ��Ԥ��ʧ��ķ�֧·���ϵĲ������£���˸߼����ؼ��������ص�������Ҫһ����ʽ�¼� (INST_CHKA_LDC_ALAT.ALL)��</p>
+<p>用于控制与数据推测的监视器捕获动态运行时信息：失败的 chk.s 指令 (INST_FAILED_CHKS_RETIRED.ALL) 数量、高级加载检查与检查加载 (INST_CHKA_LDC_ALAT.ALL) 数量，以及失败的高级加载检查与检查加载 (INST_FAILED_CHKA_LDC_ALAT.ALL) 数量（如 ALAT 所示）。失效的 chk.s 指令数量由<a HREF="https://www.hgy413.com/hgydocs/IA32/Itanium2_HH/Events642/IA64_TAGGED_INST_RETIRED.html">失效的标记指令</a>事件在给定适当操作码掩码的情况下监视。安腾&#xAE; 2 处理器 ALAT 由预测失误的分支路径上的操作更新，因此高级加载检查与检查加载的数量需要一个显式事件 (INST_CHKA_LDC_ALAT.ALL)。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

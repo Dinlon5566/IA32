@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400171.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:45 GMT -->
 <head>
 
-<title>extr &mdash; ��ȡָ��</title>
+<title>extr &mdash; 提取指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="11 12, 2001 11:19:00 AM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -94,7 +94,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nE - ָ��\nextr - ��ȡָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nE - 指令\nextr - 提取指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -128,16 +128,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">��ȡָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">提取指令</h1>
 
 <p><span style="font-weight: bold;"><B>extr</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400172.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400172.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a>
  </p>
 
-<p>ָ������ I</p>
+<p>指令类型 I</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) extr <span style="font-style: italic;"><I>r1</I></span> = <span style="font-style: italic;"><I>r3</I></span>, <span style="font-style: italic;"><I>pos6</I></span>, <span style="font-style: italic;"><I>len6</I></span> signed_form</p>
 
@@ -148,14 +148,14 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>说明</B></span></p>
 
-<p>�� <span style="x-condition: eclipse;">GR</span><span style="font-style: italic;"><I>r3</I></span> ��ȡһ���ֶΣ�ִ������չ�������չ���������Ҷ������ GR <span style="font-style: italic;"><I>r1</I></span>��<script type="text/javascript"
+<p>从 <span style="x-condition: eclipse;">GR</span><span style="font-style: italic;"><I>r3</I></span> 提取一个字段，执行零扩展或符号扩展，并按照右对齐放入 GR <span style="font-style: italic;"><I>r1</I></span>。<script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A1');
-//--></script> �ֶδӵڶ���������������λ���ڵ�λ�ÿ�ʼ����������չ <span style="font-style: italic;"><I>len6</I></span> λ���ֶο�ʼλ��λ���� <span style="font-style: italic;"><I>pos6</I></span> ������ָ������ signed_form �У���ȡ���ֶ�ִ�з�����չ���� unsigned_form �У���ִ������չ������ȡ����ȡ���ֶε������Чλ�����ָ�����ֶ���չ�� GR <span style="font-style: italic;"><I>r3</I></span> �������Чλ֮�⣬�����ȡ�� GR <span style="font-style: italic;"><I>r3</I></span> �������Чλ�������� <span style="font-style: italic;"><I>len6</I></span> ������ 1 �� 64 ��Χ�ڵ��κ����֣���ָ����ʹ�� <span style="font-style: italic;"><I>len6</I></span>-1 �����ʾ�������� <span style="font-style: italic;"><I>pos6</I></span> ������ 0 �� 63 ��Χ�ڵ��κ�ֵ��</p>
+//--></script> 字段从第二个操作数给出的位所在的位置开始，并向左扩展 <span style="font-style: italic;"><I>len6</I></span> 位。字段开始位的位置由 <span style="font-style: italic;"><I>pos6</I></span> 立即数指定。在 signed_form 中，提取的字段执行符号扩展；在 unsigned_form 中，则执行零扩展。符号取自提取的字段的最高有效位。如果指定的字段扩展到 GR <span style="font-style: italic;"><I>r3</I></span> 的最高有效位之外，则符号取自 GR <span style="font-style: italic;"><I>r3</I></span> 的最高有效位。立即数 <span style="font-style: italic;"><I>len6</I></span> 可以是 1 到 64 范围内的任何数字，在指令中使用 <span style="font-style: italic;"><I>len6</I></span>-1 编码表示。立即数 <span style="font-style: italic;"><I>pos6</I></span> 可以是 0 到 63 范围内的任何值。</p>
 
-<p class="whs3"><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400019.htm" style="x-condition: eclipse;">�����˴��鿴 extr t = r, 7, 50 �Ĳ���ʾ��</a><span style="x-condition: eclipse;"></span>��<script type="text/javascript"
+<p class="whs3"><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400019.htm" style="x-condition: eclipse;">单击此处查看 extr t = r, 7, 50 的操作示例</a><span style="x-condition: eclipse;"></span>。<script type="text/javascript"
 									language=JavaScript1.2><!--
 kadovFilePopupInit('A2');
 //--></script></p>

@@ -12,7 +12,7 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -80,7 +80,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\nָ��ִ���¼�\nIA64_TAGGED_INST_RETIRED");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 安腾(R) 2 处理器\n英特尔(R) 安腾(R) 2 处理器事件\n指令执行事件\nIA64_TAGGED_INST_RETIRED");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,24 +108,24 @@ else
 &nbsp; 
 
 <br><b 
- style="font-weight: bold;">���⣺</b>ʧЧ�ı��ָ��<b style="font-weight: bold;"><br> ���</b>ָ��ִ���¼�<b style="font-weight: bold;"><br> IAR/DAR/OPC��</b>Y/N/Y<b style="font-weight: bold;"><br> �¼����룺</b>0x08<b style="font-weight: bold;"><br> ���ÿ����������</b>6 
+ style="font-weight: bold;">标题：</b>失效的标记指令<b style="font-weight: bold;"><br> 类别：</b>指令执行事件<b style="font-weight: bold;"><br> IAR/DAR/OPC：</b>Y/N/Y<b style="font-weight: bold;"><br> 事件代码：</b>0x08<b style="font-weight: bold;"><br> 最大每周期增量：</b>6 
 
-<p><b style="font-weight: bold;">���壺</b>ͳ��ʧЧ��ָ��������Щָ����&ldquo;ָ���ַ�ϵ�&rdquo;(IBR) ��&ldquo;������ƥ��&rdquo;�Ĵ������� (PMC8,9) ƥ�䣬������Ӳ�����ɵ� RSE �����Լ�ν��Ϊ�ٵ�ָ����¼���������ν��Ϊ��ʱ����ʧЧ״̬�ķǷ�ָ֧��Լ����еķ�֧������ν�������񣩡�</p>
+<p><b style="font-weight: bold;">定义：</b>统计失效的指令数，这些指令与&ldquo;指令地址断点&rdquo;(IBR) 及&ldquo;操作码匹配&rdquo;寄存器设置 (PMC8,9) 匹配，不包括硬件生成的 RSE 操作以及谓词为假的指令。此事件包括所有谓词为真时进入失效状态的非分支指令，以及所有的分支（不论谓词真假与否）。</p>
 
-<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> ��ע</h3>
+<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> 备注</h3>
 
-MLX ָ��������������ָ� 
+MLX 指令束最多计作两条指令。 
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells width="100%" class="whs2">
 
 <tr>
 <td>
-<h3 CLASS=TableHead>��չ</td>
+<h3 CLASS=TableHead>扩展</td>
 <td>
 <h3 CLASS=TableHead>PMC.umask</td>
 <td>
-<h3 CLASS=TableHead>˵��</td></tr>
+<h3 CLASS=TableHead>说明</td></tr>
 
 <tr>
 <td>
@@ -133,7 +133,7 @@ MLX ָ��������������ָ�
 <td>
 <p>bxx00</td>
 <td>
-<p>&ldquo;ָ��ϵ�� 0&rdquo;�������ƥ���� PMC8 ��ǵ�ָ������� PSR.is=1 ִ�еĴ��롣</td></tr>
+<p>&ldquo;指令断点对 0&rdquo;与操作码匹配器 PMC8 标记的指令。包含以 PSR.is=1 执行的代码。</td></tr>
 
 <tr>
 <td>
@@ -141,7 +141,7 @@ MLX ָ��������������ָ�
 <td>
 <p>bxx01</td>
 <td>
-<p>&ldquo;ָ��ϵ�� 1&rdquo;�������ƥ���� PMC9 ��ǵ�ָ������� PSR.is=1 ִ�еĴ��롣</td></tr>
+<p>&ldquo;指令断点对 1&rdquo;与操作码匹配器 PMC9 标记的指令。包含以 PSR.is=1 执行的代码。</td></tr>
 
 <tr>
 <td>
@@ -149,7 +149,7 @@ MLX ָ��������������ָ�
 <td>
 <p>bxx10</td>
 <td>
-<p>&ldquo;ָ��ϵ�� 2&rdquo;�������ƥ���� PMC8 ��ǵ�ָ������� PSR.is=1 ִ�еĴ��롣</td></tr>
+<p>&ldquo;指令断点对 2&rdquo;与操作码匹配器 PMC8 标记的指令。包含以 PSR.is=1 执行的代码。</td></tr>
 
 <tr>
 <td>
@@ -157,7 +157,7 @@ MLX ָ��������������ָ�
 <td>
 <p>bxx11</td>
 <td>
-<p>&ldquo;ָ��ϵ�� 3&rdquo;�������ƥ���� PMC9 ��ǵ�ָ������� PSR.is=1 ִ�еĴ��롣</td></tr>
+<p>&ldquo;指令断点对 3&rdquo;与操作码匹配器 PMC9 标记的指令。包含以 PSR.is=1 执行的代码。</td></tr>
 </table>
 
 <script type="text/javascript" language="javascript1.2">

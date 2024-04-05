@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/LipsB/about_pentium(r)_m_penalties.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:30 GMT -->
 <head>
 
-<title>���ڱ���(R) M �������ĳͷ�</title>
+<title>关于奔腾(R) M 处理器的惩罚</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=MS-HAID content="IA32 proc ref info">
 <meta name=MS-HAID content=penalties>
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
@@ -77,7 +77,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M �������ĳͷ�\n����Ӣ�ض�(R) ����(R) M �������ĳͷ�");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) M 处理器\n英特尔(R) 奔腾(R) M 处理器的惩罚\n关于英特尔(R) 奔腾(R) M 处理器的惩罚");
 
 	}
 	if (window.writeBtnStyle)
@@ -100,46 +100,46 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>����Ӣ�ض�(R) ����(R) M �������ĳͷ�</h1>
+<h1>关于英特尔(R) 奔腾(R) M 处理器的惩罚</h1>
 
-<p>��Щ����������Ӣ�ض�(R) ����(R) M ��������&ldquo;��̬����&rdquo;(SA) �ṩ��&ldquo;��������&rdquo;���������³ͷ�/������ɣ�</p>
-
-<ul type="disc" class="whs1">
-	
-	<li class=kadov-p><p><a href="esp_folding.html">ESP ����</a></p></li>
-	
-	<li class=kadov-p><p><a href="leave_instruction.html">����ʹ�� Leave ָ��</a></p></li>
-	
-	<li class=kadov-p><p><a href="long_latency.html">���ӳ�</a></p></li>
-	
-	<li class=kadov-p><p><a href="streaming_simd_extension_(sse)_scalar_instructions.html">��������ָ���������չָ� (SSE) ����ָ��</a></p></li>
-</ul>
-
-<h3>������������� IA-32 ��ϵ�ṹ��صĳͷ�/���棺</h3>
+<p>这些主题介绍针对英特尔(R) 奔腾(R) M 处理器的&ldquo;静态分析&rdquo;(SA) 提供的&ldquo;调整建议&rdquo;，这由以下惩罚/警告组成：</p>
 
 <ul type="disc" class="whs1">
 	
-	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/lipspro_partial_stall.html" style="x-condition: eclipse;">���ּĴ�����ͣ</a></p></li>
+	<li class=kadov-p><p><a href="esp_folding.html">ESP 交迭</a></p></li>
 	
-	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/lipspro_partial_at_target.html" style="x-condition: eclipse;">Ŀ�괦�Ĳ��ּĴ�����ͣ</a></p></li>
+	<li class=kadov-p><p><a href="leave_instruction.html">建议使用 Leave 指令</a></p></li>
 	
-	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/lipspro_serialized.html" style="x-condition: eclipse;">���л�ָ��</a></p></li>
+	<li class=kadov-p><p><a href="long_latency.html">长延迟</a></p></li>
 	
-	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/lipspro_mem_stall.html" style="x-condition: eclipse;">�ڴ���ͣ</a></p></li>
+	<li class=kadov-p><p><a href="streaming_simd_extension_(sse)_scalar_instructions.html">数据流单指令多数据扩展指令集 (SSE) 标量指令</a></p></li>
+</ul>
+
+<h3>另请参阅其它与 IA-32 体系结构相关的惩罚/警告：</h3>
+
+<ul type="disc" class="whs1">
 	
-	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/lipspro_mmx_trans.html" style="x-condition: eclipse;">�� MMX(TM) ���������ת����ͣ</a></p></li>
+	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/lipspro_partial_stall.html" style="x-condition: eclipse;">部分寄存器暂停</a></p></li>
 	
-	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/lipspro_eflags_stall.html" style="x-condition: eclipse;">EFLAGS �Ĵ�����ͣ����</a>&#xA0;</p></li>
+	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/lipspro_partial_at_target.html" style="x-condition: eclipse;">目标处的部分寄存器暂停</a></p></li>
 	
-	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/LipsUnreachable_Code.html" style="x-condition: eclipse;">δִ�е�ָ��</a></p></li>
+	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/lipspro_serialized.html" style="x-condition: eclipse;">序列化指令</a></p></li>
 	
-	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/lipslatency.html" style="x-condition: eclipse;">�ӳ�</a></p></li>
+	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/lipspro_mem_stall.html" style="x-condition: eclipse;">内存暂停</a></p></li>
 	
-	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/inefficient_unaligned_load.html" style="x-condition: eclipse;">��Чδ�������</a></p></li>
+	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/lipspro_mmx_trans.html" style="x-condition: eclipse;">到 MMX(TM) 技术代码的转换暂停</a></p></li>
 	
-	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/possible_spin_loop.html" style="x-condition: eclipse;">���ܵ�����ѭ��</a></p></li>
+	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/lipspro_eflags_stall.html" style="x-condition: eclipse;">EFLAGS 寄存器暂停警告</a>&#xA0;</p></li>
 	
-	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/possible_inefficient_conversion.html" style="x-condition: eclipse;">ת��Ч�ʿ��ܲ���</a></p></li>
+	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/LipsUnreachable_Code.html" style="x-condition: eclipse;">未执行的指令</a></p></li>
+	
+	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/lipslatency.html" style="x-condition: eclipse;">延迟</a></p></li>
+	
+	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/inefficient_unaligned_load.html" style="x-condition: eclipse;">低效未对齐加载</a></p></li>
+	
+	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/possible_spin_loop.html" style="x-condition: eclipse;">可能的自旋循环</a></p></li>
+	
+	<li class=kadov-p><p><a href="../../Pentium4_HH/Lips/possible_inefficient_conversion.html" style="x-condition: eclipse;">转换效率可能不高</a></p></li>
 </ul>
 
 <p>&nbsp;</p>
@@ -152,7 +152,7 @@ else
 
 <p>&nbsp;</p>
 
-<p class="whs2">�ϴθ������ڣ�January 25, 2006</p>
+<p class="whs2">上次更新日期：January 25, 2006</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

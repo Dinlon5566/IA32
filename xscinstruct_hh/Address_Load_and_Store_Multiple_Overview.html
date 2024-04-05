@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Load_and_Store_Multiple_Overview.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:46:54 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>���� - ���ؼ�����洢</title>
+<title>概述 - 多重加载与存储</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nѰַģʽ\n���ؼ�����洢\n���ؼ�����洢����");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n寻址模式\n多重加载与存储\n多重加载与存储概述");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,17 +104,17 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������"><a name="Load and Store Multiple"></a>���ؼ�����洢����</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题"><a name="Load and Store Multiple"></a>多重加载与存储概述</h1>
 
-<p CLASS=Body>&ldquo;���ؼ�����洢&rdquo;Ѱַģʽ�ֳ� 4 ����ģʽ������ָ����ڴ���� <em CLASS=SourceItalic>reg</em> ָ���Ĳ��֡�������ȫ��ͨ�üĴ������洢ָ� <em CLASS=SourceItalic>reg</em> ָ���Ĳ��֡�������ȫ��ͨ�üĴ����洢���ڴ档��Ѱַģʽ������ַ����˳��ģ���ˣ�<em CLASS=SourceItalic>reg</em> ָ���ļĴ�������������Ե͵�����ڴ��ַ���м��ء���Ѱַģʽ��һ���﷨�ں��������ṩ��</p>
+<p CLASS=Body>&ldquo;多重加载与存储&rdquo;寻址模式分成 4 个子模式。加载指令从内存加载 <em CLASS=SourceItalic>reg</em> 指定的部分、甚至是全部通用寄存器。存储指令将 <em CLASS=SourceItalic>reg</em> 指定的部分、甚至是全部通用寄存器存储到内存。此寻址模式产生地址是有顺序的；因此，<em CLASS=SourceItalic>reg</em> 指定的寄存器按照升序从自低到最的内存地址进行加载。此寻址模式的一般语法在后续部分提供。</p>
 
 <div>
-<h2>һ���﷨</h2>
+<h2>一般语法</h2>
 
 <div>
 <p class=Preformatted><span class=Code>LDM|STM [condition] addr_mode basereg[!], reg {,reg} </span></p>
 
-<p CLASS=Body>���У� </p>
+<p CLASS=Body>其中： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,7 +126,7 @@ else
   </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="notational_conventions.html#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 个条件之一。请参阅<a HREF="notational_conventions.html#Condition Code Status">条件代码状态</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -136,7 +136,7 @@ else
   </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft><em CLASS=SourceItalic>addr_mode</em> ʹ�õĻ�ַ�Ĵ�����</td></tr>
+<p CLASS=CellBodyLeft><em CLASS=SourceItalic>addr_mode</em> 使用的基址寄存器。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -146,7 +146,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>���� <em CLASS=Source>W</em> λ (21)��</td></tr>
+<p CLASS=CellBodyLeft>设置 <em CLASS=Source>W</em> 位 (21)。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -156,10 +156,10 @@ else
   </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ҫ���ص���Ч�Ĵ�����</td></tr>
+<p CLASS=CellBodyLeft>要加载的有效寄存器。</td></tr>
 </table>
 
-<p CLASS=Body>addr_mode ������ 4 ����ģʽ֮һ�� </p>
+<p CLASS=Body>addr_mode 是以下 4 种子模式之一： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -167,10 +167,10 @@ else
 <tr>
 <th ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellHeadingCenter>��ģʽ</th>
+<p CLASS=CellHeadingCenter>子模式</th>
 <th ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellHeadingCenter>˵��</th></tr>
+<p CLASS=CellHeadingCenter>说明</th></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -180,7 +180,7 @@ else
   </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>֮�������<br>���γ�&ldquo;���ؼ�����洢&rdquo;ָ��ĵ�ַ��Χ��<a href="address_increment_after_(am_4).html">����Ķ��ؼ���/�洢��֮����� (AM 4)��</a> </td></tr>
+<p CLASS=CellBodyLeft>之后递增。<br>它形成&ldquo;多重加载与存储&rdquo;指令的地址范围。<a href="address_increment_after_(am_4).html">请参阅多重加载/存储：之后递增 (AM 4)。</a> </td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -190,7 +190,7 @@ else
   </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>֮ǰ������<br>���γ�&ldquo;���ؼ�����洢&rdquo;ָ��ĵ�ַ��Χ��<a href="address_increment_before_(am_4).html">�����<span class=XRef></span>���ؼ���/�洢��֮ǰ���� (AM 4)</a>��</td></tr>
+<p CLASS=CellBodyLeft>之前递增。<br>它形成&ldquo;多重加载与存储&rdquo;指令的地址范围。<a href="address_increment_before_(am_4).html">请参阅<span class=XRef></span>多重加载/存储：之前递增 (AM 4)</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -200,7 +200,7 @@ else
   </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>֮��ݼ���<br>���γ�&ldquo;���ؼ�����洢&rdquo;ָ��ĵ�ַ��Χ��<a href="address_decrement_after_(am_4).html">�����<span class=XRef></span>���ؼ���/�洢��֮��ݼ� (AM 4)</a>��</td></tr>
+<p CLASS=CellBodyLeft>之后递减。<br>它形成&ldquo;多重加载与存储&rdquo;指令的地址范围。<a href="address_decrement_after_(am_4).html">请参阅<span class=XRef></span>多重加载/存储：之后递减 (AM 4)</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -210,20 +210,20 @@ else
   </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>֮ǰ�ݼ���<br>���γ�&ldquo;���ؼ�����洢&rdquo;ָ��ĵ�ַ��Χ��<a href="address_decrement_before_(am_4).html">�����<span class=XRef></span>���ؼ���/�洢��֮ǰ�ݼ� (AM 4)</a>��</td></tr>
+<p CLASS=CellBodyLeft>之前递减。<br>它形成&ldquo;多重加载与存储&rdquo;指令的地址范围。<a href="address_decrement_before_(am_4).html">请参阅<span class=XRef></span>多重加载/存储：之前递减 (AM 4)</a>。</td></tr>
 </table>
 </div>
 </div>
 
 <div>
-<h2>һ�����</h2>
+<h2>一般编码</h2>
 
-<p CLASS=Body>�±���ʾ��Ѱַģʽ�ı��룺 </p>
+<p CLASS=Body>下表显示此寻址模式的编码： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h3 class=NoteTipHead>���� - Ѱַģʽ 4 </h3>
+<h3 class=NoteTipHead>编码 - 寻址模式 4 </h3>
 
 <tr>
 <td ROWSPAN=1
@@ -337,7 +337,7 @@ else
 
 <p CLASS=Body>&nbsp;</p>
 
-<p CLASS=Body>���У� </p>
+<p CLASS=Body>其中： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -345,56 +345,56 @@ else
 <tr>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>λ [24]</td>
+<p CLASS=CellBodyLeft>位 [24]</td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�� P λ����������ġ� </td></tr>
+<p CLASS=CellBodyLeft>是 P 位。请参阅下文。 </td></tr>
 
 <tr>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>λ [23]</td>
+<p CLASS=CellBodyLeft>位 [23]</td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�� U λ��<em CLASS=Source><br>U == 1</em> ��ʾ�� <em CLASS=SourceItalic>basereg</em> ���ϴ��䡣<em CLASS=Source><br> U == 0</em> ��ʾ�� <em CLASS=SourceItalic>basereg</em> ���´��䡣</td></tr>
+<p CLASS=CellBodyLeft>是 U 位。<em CLASS=Source><br>U == 1</em> 表示从 <em CLASS=SourceItalic>basereg</em> 向上传输。<em CLASS=Source><br> U == 0</em> 表示从 <em CLASS=SourceItalic>basereg</em> 向下传输。</td></tr>
 
 <tr>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>λ [22]</td>
+<p CLASS=CellBodyLeft>位 [22]</td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�� S λ��<br>S λ��ʾ�����ڼ��� PC ��&ldquo;����&rdquo;ָ�<em CLASS=Source>CPSR</em> �Ǵ� <em CLASS=Source>SPSR</em> ���صġ�����Ȩģʽ�У�����ʾ�����ڲ����� <em CLASS=Source>PC</em> ��&ldquo;����&rdquo;ָ���Լ����е�&ldquo;�洢&rdquo;ָ�����&ldquo;�û�&rdquo;ģʽ��Ĵ�����</td></tr>
+<p CLASS=CellBodyLeft>是 S 位。<br>S 位表示，对于加载 PC 的&ldquo;加载&rdquo;指令，<em CLASS=Source>CPSR</em> 是从 <em CLASS=Source>SPSR</em> 加载的。在特权模式中，它表示，对于不加载 <em CLASS=Source>PC</em> 的&ldquo;加载&rdquo;指令以及所有的&ldquo;存储&rdquo;指令，传输&ldquo;用户&rdquo;模式库寄存器。</td></tr>
 
 <tr>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>λ [21]</td>
+<p CLASS=CellBodyLeft>位 [21]</td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�� W λ��<br>W λ��ʾ <em CLASS=SourceItalic>basereg</em> ���и��¡�<em 
- CLASS=Source><br>U == 1</em> ��ʾ <em CLASS=SourceItalic>basereg</em> �� <em CLASS=SourceItalic>reglist</em> �мĴ����������ı�������<em CLASS=Source><br>U == 0</em> ��ʾ <em CLASS=SourceItalic>basereg</em> �� <em CLASS=SourceItalic>reglist</em> �мĴ����������ı��ݼ���</td></tr>
+<p CLASS=CellBodyLeft>是 W 位。<br>W 位表示 <em CLASS=SourceItalic>basereg</em> 进行更新。<em 
+ CLASS=Source><br>U == 1</em> 表示 <em CLASS=SourceItalic>basereg</em> 按 <em CLASS=SourceItalic>reglist</em> 中寄存器数量的四倍递增。<em CLASS=Source><br>U == 0</em> 表示 <em CLASS=SourceItalic>basereg</em> 按 <em CLASS=SourceItalic>reglist</em> 中寄存器数量的四倍递减。</td></tr>
 
 <tr>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>λ [20]</td>
+<p CLASS=CellBodyLeft>位 [20]</td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�� L λ��<em CLASS=Source><br>L == 1</em> ��ʾ&ldquo;����&rdquo;ָ�<em CLASS=Source><br>L == 0</em> ��ʾ&ldquo;�洢&rdquo;ָ�</td></tr>
+<p CLASS=CellBodyLeft>是 L 位。<em CLASS=Source><br>L == 1</em> 表示&ldquo;加载&rdquo;指令。<em CLASS=Source><br>L == 0</em> 表示&ldquo;存储&rdquo;指令。</td></tr>
 
 <tr>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>λ [15:0]</td>
+<p CLASS=CellBodyLeft>位 [15:0]</td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft><em CLASS=SourceItalic 							style="font-style: italic;">&#xA0;reglist</em> ����һ��λר����ÿ���Ĵ�����λ[0] ��ʾ <em CLASS=Source>R0</em>��λ[15] ��ʾ <em CLASS=Source>R15</em> (<em CLASS=Source> PC</em> )������Ӧ����һ��λ��</td></tr>
+<p CLASS=CellBodyLeft><em CLASS=SourceItalic 							style="font-style: italic;">&#xA0;reglist</em> 存在一个位专用于每个寄存器：位[0] 表示 <em CLASS=Source>R0</em>，位[15] 表示 <em CLASS=Source>R15</em> (<em CLASS=Source> PC</em> )。至少应设置一个位。</td></tr>
 </table>
 
 <p CLASS=Body>&nbsp;</p>
 
-<p CLASS=Body>P λ��λ [24]���ĺ���ȡ���� U λ�����ã� </p>
+<p CLASS=Body>P 位（位 [24]）的含义取决于 U 位的设置： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -421,10 +421,10 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>basereg �а����ĵ�ַ������Χ����һ���֡�</td>
+<p CLASS=CellBodyLeft>basereg 中包含的地址超出范围顶部一个字。</td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>basereg �а����ĵ�ַ���ڷ�Χ�ײ�һ���֡�</td></tr>
+<p CLASS=CellBodyLeft>basereg 中包含的地址低于范围底部一个字。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -433,17 +433,17 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>basereg �а����ĵ�ַ�ڷ�Χ�ײ����ʡ�</td>
+<p CLASS=CellBodyLeft>basereg 中包含的地址在范围底部访问。</td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>basereg �а����ĵ�ַ�ڷ�Χ���� (U == 1) ���ʡ�</td></tr>
+<p CLASS=CellBodyLeft>basereg 中包含的地址在范围顶部 (U == 1) 访问。</td></tr>
 </table>
 </div>
 
 <div>
-<h2><a name=Alternative></a>���������</h2>
+<h2><a name=Alternative></a>替代性名称</h2>
 
-<p CLASS=Body>����ָ��鴫�䣬IA��IB��DA �� DB Ѱַģʽ��Ϊ���ã��ر���&ldquo;���ؼ�����洢&rdquo;ָ��ʹ��Ѱַģʽʱ�����ݼ�����洢ʹ��ͬ���ķ�ʽ��<br>&ldquo;���ؼ�����洢&rdquo;ָ�����ڷ��ʶ�ջʱ��������ѹ����������෴�ķ��������ջ����ʱ����Ҫ��Щ��ͬ��Ѱַģʽ��<br>�������ṩ�Ķ�ջ����������﷨�� </p>
+<p CLASS=Body>对于指令块传输，IA、IB、DA 及 DB 寻址模式最为有用，特别是&ldquo;多重加载与存储&rdquo;指令使用寻址模式时，数据加载与存储使用同样的方式。<br>&ldquo;多重加载与存储&rdquo;指令用于访问堆栈时，弹出与压入操作按照相反的方向调整堆栈，此时便需要这些不同的寻址模式。<br>以下是提供的堆栈操作替代性语法： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -451,64 +451,64 @@ else
 <tr>
 <th ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellHeadingCenter>��ջ</th>
+<p CLASS=CellHeadingCenter>堆栈</th>
 <th ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellHeadingCenter>�﷨</th>
+<p CLASS=CellHeadingCenter>语法</th>
 <th ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellHeadingCenter>˵��</th></tr>
+<p CLASS=CellHeadingCenter>说明</th></tr>
 
 <tr>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�հ�����</td>
+<p CLASS=CellBodyLeft>空白升序</td>
 <td ROWSPAN=1
 	COLSPAN=1>
 <p CLASS=CellBodyCenter>EA</td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ջָ��ָ���һ��δʹ�õ�λ�ã������ڴ�λ�����ӵķ����ƶ���</td></tr>
+<p CLASS=CellBodyLeft>堆栈指针指向第一个未使用的位置，并向内存位置增加的方向移动。</td></tr>
 
 <tr>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ȫ����</td>
+<p CLASS=CellBodyLeft>完全升序</td>
 <td ROWSPAN=1
 	COLSPAN=1>
 <p CLASS=CellBodyCenter>FA</td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ջָ��ָ��ʹ�õ���һ��λ�ã������ڴ�λ�����ӵķ����ƶ���</td></tr>
+<p CLASS=CellBodyLeft>堆栈指针指向使用的上一个位置，并向内存位置增加的方向移动。</td></tr>
 
 <tr>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>�հ׽���</td>
+<p CLASS=CellBodyLeft>空白降序</td>
 <td ROWSPAN=1
 	COLSPAN=1>
 <p CLASS=CellBodyCenter>ED</td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ջָ��ָ��δʹ�õĵ�һ��λ�ã������ڴ�λ�ü�С�ķ����ƶ���</td></tr>
+<p CLASS=CellBodyLeft>堆栈指针指向未使用的第一个位置，并向内存位置减小的方向移动。</td></tr>
 
 <tr>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ȫ����</td>
+<p CLASS=CellBodyLeft>完全降序</td>
 <td ROWSPAN=1
 	COLSPAN=1>
 <p CLASS=CellBodyCenter>FD</td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ջָ��ָ��ʹ�õ���һ��λ�ã������ڴ�λ�ü�С�ķ����ƶ���</td></tr>
+<p CLASS=CellBodyLeft>堆栈指针指向使用的上一个位置，并向内存位置减小的方向移动。</td></tr>
 </table>
 
-����Э��������ջʱ������ʹ�� EA �� FD ��ջ���͡����ڴ����͵Ķ�ջ��Э���������ݿ��Էֱ�ʹ��һ�� <em CLASS=Source>STC</em> �� <em CLASS=Source>LDC</em> ָ��ѹ��򵯳���ED �� FA Э��������ջ������Ҫʹ�ö�ָ�����С� 
+定义协处理器堆栈时，建议使用 EA 或 FD 堆栈类型。对于此类型的堆栈，协处理器数据可以分别使用一条 <em CLASS=Source>STC</em> 或 <em CLASS=Source>LDC</em> 指令压入或弹出。ED 与 FA 协处理器堆栈访问需要使用多指令序列。 
 
-<h2>������Ϣ</h2>
+<h2>更多信息</h2>
 
-<a href="Inst_Overview_of_Instructions.html">����Ļ����ָ��</a>
+<a href="Inst_Overview_of_Instructions.html">请参阅汇编器指令</a>
 </div>
 
 <script type="text/javascript" language="javascript1.2">

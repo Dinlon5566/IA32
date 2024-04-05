@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Lips/V_pipe.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:45 GMT -->
 <head>
 
-<title>V �� U �ܵ�</title>
+<title>V 与 U 管道</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="06 10, 2002 3:52:39 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -114,19 +114,19 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> V �� U �ܵ�</h1>
+<h1><img src="TA_logo.gif" width="36px" height="36px" align="right" border="0" class="img_whs1"> V 与 U 管道</h1>
 
-<p>����(R) ������˫�ܵ���ִֻ�м�ָ��������ܵ���</p>
+<p>奔腾(R) 处理器双管道上只执行简单指令的整数管道。</p>
 
-<p>���ڴ�����������ִ�е�Ԫ��U �ܵ��� V �ܵ�������ָ���������ܵ��в���ִ��ʱ����Ϊ������ָ������ԡ�</p>
+<p>奔腾处理器有两个执行单元：U 管道与 V 管道。两条指令在两个管道中并行执行时，认为这两个指令已配对。</p>
 
-<p>U �ܵ�����ִ��Ӣ�ض�(R) ��ϵ�ṹ�е��κ�ָ��� V �ܵ���ֻ��ִ�м�ָ�</p>
+<p>U 管道可以执行英特尔(R) 体系结构中的任何指令，而 V 管道则只能执行简单指令。</p>
 
-<p>����ָ�����ʱ������ V �ܵ���ָ�����Ƿ��� U �ܵ���ָ��ĺ�һ��˳��ָ�</p>
+<p>两条指令配对时，发到 V 管道的指令总是发到 U 管道的指令的后一条顺序指令。</p>
 
-<p>��ָ����ȫ��ȡӲ���߷�ʽ������Ҫ�κ�΢������ƣ���������һ����һ��ʱ�����������ִ�С�ALU mem, reg �� ALU reg, mem ָ����������������Ƿֱ�������ʱ������������ʱ�����ڵĲ�����ͨ��ʹ������Ӳ������Щָ��������ָ��һ��������</p>
+<p>简单指令完全采取硬连线方式，不需要任何微代码控制，并且它们一般在一个时钟周期内完成执行。ALU mem, reg 与 ALU reg, mem 指令属例外情况，它们分别是三个时钟周期与两个时钟周期的操作。通过使用序列硬件，这些指令可以像简单指令一样工作。</p>
 
-<p>��������ָ��������ָ���������ԣ�</p>
+<p>以下整数指令视作简单指令，并可以配对：</p>
 
 <ul>
 	

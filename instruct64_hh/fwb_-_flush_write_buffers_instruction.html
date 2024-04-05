@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/fwb_-_flush_write_buffers_instruction.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>fwb - ���д�뻺����ָ��</title>
+<title>fwb - 清除写入缓冲区指令</title>
 
 <!--(Meta)==========================================================-->
 
@@ -84,7 +84,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nF - ָ��\nfwb - ���д�뻺����ָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nF - 指令\nfwb - 清除写入缓冲区指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -107,11 +107,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">���д�뻺����ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" align="right" width="52px" height="60px" align="right" border="0" class="img_whs1">清除写入缓冲区指令</h1>
 
 <p>fwb</p>
 
-<p class="whs2">��ʽ</p>
+<p class="whs2">格式</p>
 
 <p class="whs3"><span class=code>(<span style="font-style: italic;"><I>qp</I></span>)fwb M24</span></p>
 
@@ -120,24 +120,24 @@ else
 <hr class="whs4">
 
 
-<p><b style="font-weight: bold;">˵��</b></p>
+<p><b style="font-weight: bold;">说明</b></p>
 
-<p class="whs3"><b style="font-weight: normal;"><span style="font-weight: normal;">ָʾ������Ѹ�����д�����</span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;">�������д�ŵ��κ�δ���洢�����ڴ˲�����һ����ʾ�����������ܻᣬҲ���ܲ����ȡ�κ��ж���ʵ��</span></b><b 
- style="font-weight: normal;"><span style="font-weight: normal;">����κ�δ���洢��������</span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;">��ǰ���κδ洢ʱ���������������κ�ָʾ�����ڿ��ܻ���ǰ��Ĵ洢֮ǰ�������Ĵ洢����� </span><span class=code
+<p class="whs3"><b style="font-weight: normal;"><span style="font-weight: normal;">指示处理器迅速清除写入或结合</span></b><b style="font-weight: normal;"><span 
+ style="font-weight: normal;">缓冲区中存放的任何未决存储。由于此操作是一个提示，处理器可能会，也可能不会采取任何行动以实际</span></b><b 
+ style="font-weight: normal;"><span style="font-weight: normal;">清除任何未决存储。清除完毕</span></b><b style="font-weight: normal;"><span 
+ style="font-weight: normal;">先前的任何存储时，处理器不给出任何指示。由于可能会在前面的存储之前清除后面的存储，因此 </span><span class=code
 														style="font-weight: normal;">fwb</span><span 
- style="font-weight: normal;"> ָ���ȷ��</span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;">�洢��˳��</span></b></p>
+ style="font-weight: normal;"> 指令不能确保</span></b><b style="font-weight: normal;"><span 
+ style="font-weight: normal;">存储的顺序。</span></b></p>
 
-<p class="whs3"><b style="font-weight: normal;"><span style="font-weight: normal;">Ϊȷ���ں���Ĵ洢֮ǰ���Կ���ǰ��Ľ�ϴ洢�����������������洢֮�䷢���ͷ�</span></b><b style="font-weight: normal;"><span 
- style="font-weight: normal;">������</span></b></p>
+<p class="whs3"><b style="font-weight: normal;"><span style="font-weight: normal;">为确保在后面的存储之前可以看到前面的结合存储，软件必须在两个存储之间发出释放</span></b><b style="font-weight: normal;"><span 
+ style="font-weight: normal;">操作。</span></b></p>
 
-<p class="whs3"><b style="font-weight: normal;"><span style="font-weight: normal;">��ָ�������ȷ��λ��д�뻺�������ϻ������Ĵ洢�����ӳ�</span></b></p>
+<p class="whs3"><b style="font-weight: normal;"><span style="font-weight: normal;">此指令可用于确保位于写入缓冲区或结合缓冲区的存储不会延迟</span></b></p>
 
-<p class="whs3"><b style="font-weight: normal;">�ܳ�ʱ�䣬Ҳ�������ڴӴ��������������ȼ��Ĵ洢��</b></p>
+<p class="whs3"><b style="font-weight: normal;">很长时间，也可以用于从处理器发出高优先级的存储。</b></p>
 
-<p><b style="font-weight: bold;">����</b></p>
+<p><b style="font-weight: bold;">操作</b></p>
 
 <p class="whs3"><b style="font-weight: normal;"><span style="font-weight: normal;">if (PR[qp]) {</span></b></p>
 

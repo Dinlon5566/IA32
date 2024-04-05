@@ -12,13 +12,13 @@
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
 <meta name=topic-comment content>
 <meta name=topic-id content=L2_OZQ_CANCELS1>
-<meta name=MS-HAID content="һ�廯���������¼�">
+<meta name=MS-HAID content="一体化二级缓存事件">
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
 <meta name=generator-major-version content=0.1>
 <meta name=generator-minor-version content=1>
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) 2 ������\nӢ�ض�(R) ����(R) 2 �������¼�\n�ڴ��¼�\nһ�廯���������¼�\nL2_OZQ_CANCELS1");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 安腾(R) 2 处理器\n英特尔(R) 安腾(R) 2 处理器事件\n内存事件\n一体化二级缓存事件\nL2_OZQ_CANCELS1");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,24 +106,24 @@ else
 </script>
 <h1>L2_OZQ_CANCELS1</h1>
 
-<b style="font-weight: bold;">���⣺</b>L2 OZQ ȡ�����ض�ԭ�� 1��<b style="font-weight: bold;"><br> ���</b>һ�廯���������¼�<b style="font-weight: bold;"><br> IAR/DAR/OPC��</b>Y/Y/Y<b style="font-weight: bold;"><br> �¼����룺</b>0xAC<b style="font-weight: bold;"><br> ���ÿ����������</b>4 
+<b style="font-weight: bold;">标题：</b>L2 OZQ 取消（特定原因集 1）<b style="font-weight: bold;"><br> 类别：</b>一体化二级缓存事件<b style="font-weight: bold;"><br> IAR/DAR/OPC：</b>Y/Y/Y<b style="font-weight: bold;"><br> 事件代码：</b>0xAC<b style="font-weight: bold;"><br> 最大每周期增量：</b>4 
 
-<p><b style="font-weight: bold;">���壺</b>ͳ���ض�ԭ�򣨻��ڵ�Ԫ���룩���µ�&ldquo;L2 OZ ����ȡ��&rdquo;������</p>
+<p><b style="font-weight: bold;">定义：</b>统计特定原因（基于单元掩码）导致的&ldquo;L2 OZ 队列取消&rdquo;总数。</p>
 
-<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> ��ע</h3>
+<h3 class=NoteTipHead><img src="note.gif" width="20px" height="20px" border="0" class="img_whs1"> 备注</h3>
 
-���������� 0 ��&ldquo;��������&rdquo;�¼������κθ���ʱ�䣬3 �� L1_OZQ_CANCEL �¼��н����ܲ���һ����Ҫ�������¼���<a HREF="l2_ifet_cancels.html">L2_IFET_CANCELS</a> ����¼�����ʹ�� PMD4 ������ 
+这是有限组 0 的&ldquo;二级缓存&rdquo;事件。在任何给定时间，3 个 L1_OZQ_CANCEL 事件中仅可能测量一个。要测量此事件，<a HREF="l2_ifet_cancels.html">L2_IFET_CANCELS</a> 或此事件必须使用 PMD4 测量。 
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells width="100%" class="whs2">
 
 <tr>
 <td>
-<h3 CLASS=TableHead>��չ</td>
+<h3 CLASS=TableHead>扩展</td>
 <td>
 <h3 CLASS=TableHead>PMC.umask</td>
 <td>
-<h3 CLASS=TableHead>˵��</td></tr>
+<h3 CLASS=TableHead>说明</td></tr>
 
 <tr>
 <td>
@@ -131,7 +131,7 @@ else
 <td>
 <p>b0000</td>
 <td>
-<p>�ͷŵ��µ�</td></tr>
+<p>释放导致的</td></tr>
 
 <tr>
 <td>
@@ -139,7 +139,7 @@ else
 <td>
 <p>b0001</td>
 <td>
-<p>���ͻ</td></tr>
+<p>库冲突</td></tr>
 
 <tr>
 <td>
@@ -147,7 +147,7 @@ else
 <td>
 <p>b0010</td>
 <td>
-<p>�洢ƥ�� L2D</td></tr>
+<p>存储匹配 L2D</td></tr>
 
 <tr>
 <td>
@@ -155,7 +155,7 @@ else
 <td>
 <p>b0011</td>
 <td>
-<p>��*��ͳ��*��</td></tr>
+<p>（*不统计*）</td></tr>
 
 <tr>
 <td>
@@ -163,7 +163,7 @@ else
 <td>
 <p>b0100</td>
 <td>
-<p>sync.i ���µ�</td></tr>
+<p>sync.i 导致的</td></tr>
 
 <tr>
 <td>
@@ -171,7 +171,7 @@ else
 <td>
 <p>b0101</td>
 <td>
-<p>ifetch ��ͻ��ȡ�� HPW����</td></tr>
+<p>ifetch 冲突（取消 HPW？）</td></tr>
 
 <tr>
 <td>
@@ -179,7 +179,7 @@ else
 <td>
 <p>b0110</td>
 <td>
-<p>L2M �еĴ洢ȡ�����µ�</td></tr>
+<p>L2M 中的存储取消导致的</td></tr>
 
 <tr>
 <td>
@@ -187,7 +187,7 @@ else
 <td>
 <p>b0111</td>
 <td>
-<p>һ������ͻ</td></tr>
+<p>一级填充冲突</td></tr>
 
 <tr>
 <td>
@@ -195,7 +195,7 @@ else
 <td>
 <p>b1000</td>
 <td>
-<p>�洢����ͻ</td></tr>
+<p>存储填充冲突</td></tr>
 
 <tr>
 <td>
@@ -211,7 +211,7 @@ else
 <td>
 <p>b1010</td>
 <td>
-<p>�ź���</td></tr>
+<p>信号量</td></tr>
 
 <tr>
 <td>
@@ -219,7 +219,7 @@ else
 <td>
 <p>b1011</td>
 <td>
-<p>�洢ƥ�� L2M</td></tr>
+<p>存储匹配 L2M</td></tr>
 
 <tr>
 <td>
@@ -227,7 +227,7 @@ else
 <td>
 <p>b1100</td>
 <td>
-<p>�ڴ�߽�ָ��</td></tr>
+<p>内存边界指令</td></tr>
 
 <tr>
 <td>
@@ -235,7 +235,7 @@ else
 <td>
 <p>b1101</td>
 <td>
-<p>�洢ƥ�� L2A</td></tr>
+<p>存储匹配 L2A</td></tr>
 
 <tr>
 <td>
@@ -243,7 +243,7 @@ else
 <td>
 <p>b1110</td>
 <td>
-<p>L1D ��� L2M</td></tr>
+<p>L1D 填充 L2M</td></tr>
 
 <tr>
 <td>
@@ -251,7 +251,7 @@ else
 <td>
 <p>b1111</td>
 <td>
-<p>ECC Ӳ����⵽����</td></tr>
+<p>ECC 硬件检测到问题</td></tr>
 </table>
 
 <script type="text/javascript" language="javascript1.2">

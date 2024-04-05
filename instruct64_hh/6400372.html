@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400372.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:47 GMT -->
 <head>
 
-<title>sync - ÄÚ´æÍ¬²½Ö¸Áî</title>
+<title>sync - å†…å­˜åŒæ­¥æŒ‡ä»¤</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="03 6, 2002 2:21:06 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("²Î¿¼\nÖ¸Áî¼¯\nÓ¢ÌØ¶û(R) °²ÌÚ(R) Ö¸Áî\nS - Ö¸Áî\nsync - ÄÚ´æÍ¬²½Ö¸Áî");
+	addTocInfo("å‚è€ƒ\næŒ‡ä»¤é›†\nè‹±ç‰¹å°”(R) å®‰è…¾(R) æŒ‡ä»¤\nS - æŒ‡ä»¤\nsync - å†…å­˜åŒæ­¥æŒ‡ä»¤");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,16 +105,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="°²ÌÚ(R) ´¦ÀíÆ÷Ö÷Ìâ" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">ÄÚ´æÍ¬²½Ö¸Áî</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="å®‰è…¾(R) å¤„ç†å™¨ä¸»é¢˜" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">å†…å­˜åŒæ­¥æŒ‡ä»¤</h1>
 
 <p><span style="font-weight: bold;"><B>sync</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400373.htm">²Ù×÷</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">×ÖÌå¹ßÀý</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400373.htm">æ“ä½œ</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">å­—ä½“æƒ¯ä¾‹</a>
  </p>
 
-<p>Ö¸ÁîÀàÐÍ M</p>
+<p>æŒ‡ä»¤ç±»åž‹ M</p>
 
-<p><span style="font-weight: bold;"><B>¸ñÊ½</B></span></p>
+<p><span style="font-weight: bold;"><B>æ ¼å¼</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) sync.i</p>
 
@@ -123,13 +123,13 @@ else
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>ËµÃ÷</B></span></p>
+<p><span style="font-weight: bold;"><B>è¯´æ˜Ž</B></span></p>
 
-<p>sync.i ¿ÉÒÔÈ·±£ÏÈÇ°Æô¶¯µÄÓÉµ±µØ´¦ÀíÆ÷·¢³öµÄ&ldquo;Çå³ý»º´æ&rdquo; (fc) ²Ù×÷¿É±»µ±µØÊý¾ÝÄÚ´æÒýÓÃ¿´¼ûÊ±£¬ÏÈÇ°µÄ&ldquo;Çå³ý»º´æ&rdquo;²Ù×÷Ò²±»µ±µØ´¦ÀíÆ÷Ö¸ÁîÔ¤È¡Á÷¹Û²ìµ½¡£sync.i »¹È·±£ÏÈÇ°Æô¶¯µÄ&ldquo;Çå³ý»º´æ&rdquo; (fc) ÔÚÔ¶³Ì´¦ÀíÆ÷±»Êý¾ÝÄÚ´æÒýÓÃ¹Û²ìµ½Ê±£¬ËüÃÇÒ²±»Ô¶³Ì´¦ÀíÆ÷ÉÏµÄÖ¸ÁîÄÚ´æÒýÓÃ¹Û²ìµ½¡£sync.i ¸ù¾Ý±»ÁíÍâµÄ´¦ÀíÆ÷¹Û²ìµÄËùÓÐ»º´æÇå³ý²Ù×÷½øÐÐÅÅÐò¡£sync.i ÓëÏÈÇ°µÄ fc ±ØÐëÔÚµ¥¶ÀµÄÖ¸Áî×éÖÐ¡£Èç¹ûÓïÒåÐèÒª£¬³ÌÐòÔ±±ØÐëÏÔÊ½²åÈëÓÐÐòÊý¾ÝÒýÓÃ£¨»ñÈ¡¡¢ÊÍ·Å»ò±ß½çÀàÐÍ£©£¬ÊÊµ±µØÔ¼Êø sync.i£¨ÒÔ¼° fc£©¶ÔÓÚÆäËü´¦ÀíÆ÷ÉÏÊý¾ÝÁ÷µÄ¿É¼ûÐÔ¡£</p>
+<p>sync.i å¯ä»¥ç¡®ä¿å…ˆå‰å¯åŠ¨çš„ç”±å½“åœ°å¤„ç†å™¨å‘å‡ºçš„&ldquo;æ¸…é™¤ç¼“å­˜&rdquo; (fc) æ“ä½œå¯è¢«å½“åœ°æ•°æ®å†…å­˜å¼•ç”¨çœ‹è§æ—¶ï¼Œå…ˆå‰çš„&ldquo;æ¸…é™¤ç¼“å­˜&rdquo;æ“ä½œä¹Ÿè¢«å½“åœ°å¤„ç†å™¨æŒ‡ä»¤é¢„å–æµè§‚å¯Ÿåˆ°ã€‚sync.i è¿˜ç¡®ä¿å…ˆå‰å¯åŠ¨çš„&ldquo;æ¸…é™¤ç¼“å­˜&rdquo; (fc) åœ¨è¿œç¨‹å¤„ç†å™¨è¢«æ•°æ®å†…å­˜å¼•ç”¨è§‚å¯Ÿåˆ°æ—¶ï¼Œå®ƒä»¬ä¹Ÿè¢«è¿œç¨‹å¤„ç†å™¨ä¸Šçš„æŒ‡ä»¤å†…å­˜å¼•ç”¨è§‚å¯Ÿåˆ°ã€‚sync.i æ ¹æ®è¢«å¦å¤–çš„å¤„ç†å™¨è§‚å¯Ÿçš„æ‰€æœ‰ç¼“å­˜æ¸…é™¤æ“ä½œè¿›è¡ŒæŽ’åºã€‚sync.i ä¸Žå…ˆå‰çš„ fc å¿…é¡»åœ¨å•ç‹¬çš„æŒ‡ä»¤ç»„ä¸­ã€‚å¦‚æžœè¯­ä¹‰éœ€è¦ï¼Œç¨‹åºå‘˜å¿…é¡»æ˜¾å¼æ’å…¥æœ‰åºæ•°æ®å¼•ç”¨ï¼ˆèŽ·å–ã€é‡Šæ”¾æˆ–è¾¹ç•Œç±»åž‹ï¼‰ï¼Œé€‚å½“åœ°çº¦æŸ sync.iï¼ˆä»¥åŠ fcï¼‰å¯¹äºŽå…¶å®ƒå¤„ç†å™¨ä¸Šæ•°æ®æµçš„å¯è§æ€§ã€‚</p>
 
-<p>sync.i ÓÃÓÚÔÚµ±µØÓëÔ¶³Ì´¦ÀíÆ÷ÉÏµÄÖ¸ÁîÓëÊý¾Ý»º´æÖ®¼äÎ¬»¤Ò»ÖÖË³Ðò¹ØÏµ¡£Ö¸ÁîÐòÁÐ»¯²Ù×÷¿ÉÓÃÓÚÈ·±£³ÌÐòÖ´ÐÐÖÐµÄ¸ø¶¨µãÒÑ¾­¹Û²ìµ½±¾µØ´¦ÀíÆ÷ÉÏµÄ sync.i Æô¶¯µÄÍ¬²½²Ù×÷¡£</p>
+<p>sync.i ç”¨äºŽåœ¨å½“åœ°ä¸Žè¿œç¨‹å¤„ç†å™¨ä¸Šçš„æŒ‡ä»¤ä¸Žæ•°æ®ç¼“å­˜ä¹‹é—´ç»´æŠ¤ä¸€ç§é¡ºåºå…³ç³»ã€‚æŒ‡ä»¤åºåˆ—åŒ–æ“ä½œå¯ç”¨äºŽç¡®ä¿ç¨‹åºæ‰§è¡Œä¸­çš„ç»™å®šç‚¹å·²ç»è§‚å¯Ÿåˆ°æœ¬åœ°å¤„ç†å™¨ä¸Šçš„ sync.i å¯åŠ¨çš„åŒæ­¥æ“ä½œã€‚</p>
 
-<p>×ÔÎÒÐÞ¸Ä´úÂë£¨±¾µØ´¦ÀíÆ÷£©µÄÊ¾Àý£º</p>
+<p>è‡ªæˆ‘ä¿®æ”¹ä»£ç ï¼ˆæœ¬åœ°å¤„ç†å™¨ï¼‰çš„ç¤ºä¾‹ï¼š</p>
 
 <p CLASS=Preformatted>st [L1] = data //store into local instruction stream</p>
 

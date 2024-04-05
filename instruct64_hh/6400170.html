@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400170.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:50 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>dep 操作</title>
+<title>dep 鎿嶄綔</title>
 
 <!--(Meta)==========================================================-->
 
@@ -101,7 +101,7 @@ else
 		document.location.reload();
 //-->
 </script>
-dep 操作 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a> 
+dep 鎿嶄綔 <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">瀛椾綋鎯緥</a> 
 
 <br>if (PR[<i>qp</i>]) { <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400444.htm" onMouseOver="if (parseInt(navigator.appVersion) >= 4) BSPSPopupOnMouseOver(event)" class="BSSCPopup" id="A2"><br> check_target_register</a>; <br> <br> if (imm_form) { <br> tmp_src = (merge_form ? <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400526.htm" onMouseOver="if (parseInt(navigator.appVersion) >= 4) BSPSPopupOnMouseOver(event)" class="BSSCPopup" id="A3">sign_ext</a>(<i>imm</i>1,1) : sign_ext(<i>imm8</i>, 8)); <br> tmp_nat = merge_form ?GR[<i>r</i>3].nat : 0; <br> tmp_len = <i>len6</i> ; <br> } else { // register_form <br> tmp_src = GR[<i>r</i>2]; <br> tmp_nat = (merge_form ?GR[<i>r</i>3].nat : 0) || GR[<i>r</i>2].nat; <br> tmp_len = merge_form ? <i>len4</i> : <i>len6</i> ; <br> } <br> if (<i>pos6</i> + tmp_len u&gt; 64) <br> tmp_len = 64 - <i>pos6</i>; <br> <br> if (merge_form) <br> GR[<i>r1</i>] = GR[<i>r</i>3]; <br> else // zero_form <br> GR[<i>r1</i>] = 0; <br> <br> GR[<i>r1</i>]{(<i>pos6</i> + tmp_len - 1):<i>pos6</i>} = tmp_src{(tmp_len<i></i>- 1):0}; <br> GR[<i>r1</i>].nat = tmp_nat; <br> } <script><!--
 BSSCCreatePopupDiv();

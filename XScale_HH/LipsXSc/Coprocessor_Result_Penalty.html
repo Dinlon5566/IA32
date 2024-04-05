@@ -9,11 +9,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/XScale_HH/LipsXSc/Coprocessor_Result_Penalty.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:13 GMT -->
 <head>
 
-<title>Э����������ͷ�</title>
+<title>协处理器结果惩罚</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="04 14, 2003 11:09:52 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -85,7 +85,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض� XScale(R) ΢��ϵ�ṹ \nӢ�ض� XScale(R) ΢��ϵ�ṹ�ͷ�\nЭ����������ͷ�");
+	addTocInfo("参考\n处理器事件与建议\n英特尔 XScale(R) 微体系结构 \n英特尔 XScale(R) 微体系结构惩罚\n协处理器结果惩罚");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,25 +108,25 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="XS_logo.gif" alt="Ӣ�ض� XScale(R) ��������" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">Э����������ͷ�/����</h1>
+<h1><img src="XS_logo.gif" alt="英特尔 XScale(R) 技术主题" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">协处理器结果惩罚/警告</h1>
 
 <h2>XSC_COPROCESSOR_RES</h2>
 
-<h3>����</h3>
+<h3>解释</h3>
 
-<p>��ָ�Э������ָ��Ľ������Դ���������ڽ������֮ǰ���ܵ���ͣ��ָ��ִ��Ҫ���⻨�Ѽ������ڡ�</p>
+<p>此指令将协处理器指令的结果用作源操作数。在结果出来之前，管道暂停，指令执行要额外花费几个周期。</p>
 
-<h3 class="whs2"><img id="_x0000_i1025" src="tip.gif" width="17px" height="18px" border="0" class="img_whs3"> ����</h3>
+<h3 class="whs2"><img id="_x0000_i1025" src="tip.gif" width="17px" height="18px" border="0" class="img_whs3"> 建议</h3>
 
-<p class="whs4">������ܣ������¸�ָ���������ʹ�üĴ�����ָ��ִ��֮ǰ�Ķ����ӳ����ڡ�</p>
+<p class="whs4">如果可能，请重新给指令排序，以填补使用寄存器的指令执行之前的额外延迟周期。</p>
 
-<h3>ʾ�� 1</h3>
+<h3>示例 1</h3>
 
 <p class=preformatted><span class=code>MRRC p13, 0x4, R0, R1, c2</span></p>
 
 <p class=preformatted><span class=code>ADD &#xA0;R8, R9, R0 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;; XSC_REG_R0, &#xA0;XSC_COPROCESSOR_RES</span></p>
 
-<h3>ʾ�� 2</h3>
+<h3>示例 2</h3>
 
 <p class=preformatted><span class=code>STC <span style="mso-spacerun: yes;">&#xA0;</span>p13, c2, [R1, #0x4]!</span></p>
 

@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_MSR.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:30:46 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>MSR - �� ARM* ���ļĴ����ƶ���״̬�Ĵ���</title>
+<title>MSR - 从 ARM* 核心寄存器移动到状态寄存器</title>
 
 <!--(Meta)==========================================================-->
 
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nM - ָ��\nMSR");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nM - 指令\nMSR");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,16 +105,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">MSR - �� ARM* ���ļĴ����ƶ���״̬�Ĵ���</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">MSR - 从 ARM* 核心寄存器移动到状态寄存器</h1>
 
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <div>
 <p class=Preformatted><span CLASS=Code>MSR[condition] CPSR_bit, #value<br> MSR[condition] CPSR_bit, source<br> MSR[condition] SPSR_bit, #value<br> MSR[condition] SPSR_bit, source</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -127,7 +127,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="notational_conventions.html#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 个条件之一。请参阅<a HREF="notational_conventions.html#Condition Code Status">条件代码状态</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -137,7 +137,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��Ч������λ��<br> c - �����ֶ�����λ [16]<br> x - ��չ�ֶ�����λ [17]<br>s - ״̬�ֶ�����λ [18]<br> f - ��־�ֶ�����λ [19]</td></tr>
+<p CLASS=CellBodyLeft>有效的掩码位：<br> c - 控制字段掩码位 [16]<br> x - 扩展字段掩码位 [17]<br>s - 状态字段掩码位 [18]<br> f - 标志字段掩码位 [19]</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -147,7 +147,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>8 λ������<a href="Address_Data_Processing_Operands_Overview_1.html"><br> �����Ѱַģʽ 1�����ݴ���������</a></td></tr>
+<p CLASS=CellBodyLeft>8 位立即数<a href="Address_Data_Processing_Operands_Overview_1.html"><br> 请参阅寻址模式 1：数据处理操作数</a></td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -157,26 +157,26 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Դ�Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>源寄存器</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-<p CLASS=Body>MSR ָ� <em CLASS=SourceItalic>value</em> ���� <em CLASS=SourceItalic>source</em> �а�����ֵ�ƶ��� CPSR �� SPSR��<br> MSR ָ������ڸ��´�����ģʽ�����������־�������жϡ�Ҫѡ�� CPSR��λ [22] ��Ҫ����Ϊ 0��Ҫѡ�� SPSR��λ [22] ��Ҫ����Ϊ 1��<em CLASS=SourceItalic><br>condition</em> ��������Чֵ������ָ��� NOP��</p>
+<p CLASS=Body>MSR 指令将 <em CLASS=SourceItalic>value</em> 或是 <em CLASS=SourceItalic>source</em> 中包含的值移动到 CPSR 或 SPSR。<br> MSR 指令可用于更新处理器模式、条件代码标志或启用中断。要选择 CPSR，位 [22] 需要设置为 0。要选择 SPSR，位 [22] 需要设置为 1。<em CLASS=SourceItalic><br>condition</em> 必须是有效值；否则将指令当作 NOP。</p>
 </div>
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="Note.gif" width="20px" height="20px" border="0" class="img_whs2"> ��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif" width="20px" height="20px" border="0" class="img_whs2"> 备注</h3>
 
-SPSR ��Ӧ��&ldquo;ϵͳ&rdquo;��&ldquo;�û�&rdquo;ģʽ�з��ʡ�CSPR �� T λ���ø��ġ� 
+SPSR 不应在&ldquo;系统&rdquo;或&ldquo;用户&rdquo;模式中访问。CSPR 的 T 位不得更改。 
 
-<h2>Ѱַģʽ</h2>
+<h2>寻址模式</h2>
 
-�����&ldquo;Ѱַģʽ 1 - ���ݴ��������� - ������&rdquo;
+请参阅&ldquo;寻址模式 1 - 数据处理操作数 - 立即数&rdquo;
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -243,7 +243,7 @@ SPSR ��Ӧ��&ldquo;ϵͳ&rdquo;��&ldquo;�û�&rdquo;ģʽ�з��ʡ�CSPR �� T λ���ø��
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� - ������������ </h2>
+<h2>编码 - 立即数操作数 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -362,7 +362,7 @@ SPSR ��Ӧ��&ldquo;ϵͳ&rdquo;��&ldquo;�û�&rdquo;ģʽ�з��ʡ�CSPR �� T λ���ø��
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>���� - �Ĵ��������� </h2>
+<h2>编码 - 寄存器操作数 </h2>
 
 <tr>
 <td ROWSPAN=1
@@ -505,13 +505,13 @@ SPSR ��Ӧ��&ldquo;ϵͳ&rdquo;��&ldquo;�û�&rdquo;ģʽ�з��ʡ�CSPR �� T λ���ø��
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funcmsr<br> 4 <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0<br> 6 <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@ * * * MSR (Adressing Mode 1) * * *<br> 8 <br> 9 <br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example, CODE, READONLY<br> 11 <br> 12 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;CPSR<br> 13 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@ Select CPSR - set bit 22 to 0<br> 14 &#xA0;&#xA0;00000000 &#xA0;&#xA0;E10F1000 &#xA0;&#xA0;MRS &#xA0;&#xA0;R1, CPSR<br> 15 &#xA0;&#xA0;00000004 &#xA0;&#xA0;E2011000 &#xA0;&#xA0;AND &#xA0;&#xA0;R1, R1, #0xFFDFFFFF<br> 16 <br> 17 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@ Select flag field mask bit <br> 18 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E320F001 &#xA0;&#xA0;MSR &#xA0;&#xA0;CPSR_F, #1<br> 19 <br> 20 &#xA0;&#xA0;00000012 &#xA0;&#xA0;E3A02001 &#xA0;&#xA0;MOV &#xA0;&#xA0;R2, #1<br> 21 <br> 22 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@ Select extension field mask bit <br> 23 &#xA0;&#xA0;00000016 &#xA0;&#xA0;E3811B40 &#xA0;&#xA0;ORR &#xA0;&#xA0;R1, R1, #0x10000<br> 24 &#xA0;&#xA0;00000020 &#xA0;&#xA0;E120F000 &#xA0;&#xA0;MSR &#xA0;&#xA0;CPSR_X, R1<br> 25 <br> 26 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;SPSR<br> 27 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@ Select SPSR - set bit 22 to 1<br> 28 &#xA0;&#xA0;00000024 &#xA0;&#xA0;E14F1000 &#xA0;&#xA0;MRS &#xA0;&#xA0;R1, SPSR<br> 29 &#xA0;&#xA0;00000028 &#xA0;&#xA0;E3811980 &#xA0;&#xA0;ORR &#xA0;&#xA0;R1, R1, #0x200000<br> 30 <br> 31 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@ Select flag field mask bit <br> 32 &#xA0;&#xA0;00000032 &#xA0;&#xA0;E360F001 &#xA0;&#xA0;MSR &#xA0;&#xA0;SPSR_F, #1<br> 33 <br> 34 &#xA0;&#xA0;00000036 &#xA0;&#xA0;E3A02001 &#xA0;&#xA0;MOV &#xA0;&#xA0;R2, #1<br> 35 <br> 36 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@ Select extension field mask bit <br> 37 &#xA0;&#xA0;00000040 &#xA0;&#xA0;E3811B40 &#xA0;&#xA0;ORR &#xA0;&#xA0;R1, R1, #0x10000<br> 38 &#xA0;&#xA0;00000044 &#xA0;&#xA0;E160F000 &#xA0;&#xA0;MSR &#xA0;&#xA0;SPSR_X, R1<br> 39 <br> 40 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END</span> </p>
 
-<h2>������Ϣ</h2>
+<h2>更多信息</h2>
 
-<a href="Address_Data_Processing_Operands_Overview_1.html">�����Ѱַģʽ 1�����ݴ��������� </a>
+<a href="Address_Data_Processing_Operands_Overview_1.html">请参阅寻址模式 1：数据处理操作数 </a>
 </div>
 </div>
 

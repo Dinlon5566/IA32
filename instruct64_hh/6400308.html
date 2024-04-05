@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400308.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
 
-<title>mux - MUX ָ��</title>
+<title>mux - MUX 指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:55:14 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -94,7 +94,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nM - ָ��\nmux - MUX ָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nM - 指令\nmux - MUX 指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -128,16 +128,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">MUX ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">MUX 指令</h1>
 
 <p><span style="font-weight: bold;"><B>mux</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400309.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400309.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a>
  </p>
 
-<p>ָ������ M</p>
+<p>指令类型 M</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) mux1 <span style="font-style: italic;"><I>r1</I></span> = <span style="font-style: italic;"><I>r2</I></span>, <span style="font-style: italic;"><I>mbtype4</I></span> <span style="x-condition: eclipse;">one_byte_form</span><script type="text/javascript"
 	language=JavaScript1.2><!--
@@ -154,27 +154,27 @@ kadovFilePopupInit('A2');
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>说明</B></span></p>
 
-<p>�ڵ���Դ�Ĵ��� <span style="x-condition: eclipse;">GR</span><span style="font-style: italic;"><I>r2</I></span> �е�ѹ��Ԫ����ִ���û���Ȼ�󽫽������ GR <span style="font-style: italic;"><I>r1</I></span>��<script 
+<p>在单个源寄存器 <span style="x-condition: eclipse;">GR</span><span style="font-style: italic;"><I>r2</I></span> 中的压缩元素上执行置换，然后将结果放入 GR <span style="font-style: italic;"><I>r1</I></span>。<script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A3');
-//--></script>���� <span style="x-condition: eclipse;">8 λԪ��</span><script 
+//--></script>对于 <span style="x-condition: eclipse;">8 位元素</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A4');
-//--></script>��ֻ�� <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400067.htm" style="x-condition: eclipse;">���ֿ��ܵ��û���</a><script 
+//--></script>，只有 <a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400067.htm" style="x-condition: eclipse;">五种可能的置换。</a><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A5');
 //--></script></p>
 
-<p class="whs3">���� <span style="x-condition: eclipse;">16 λԪ��</span><script 
+<p class="whs3">对于 <span style="x-condition: eclipse;">16 位元素</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A6');
-//--></script>������ָ�����п��ܵ��û��������ظ���Ҳ���Բ��ظ�������ʹ�� 8 λ <span style="font-style: italic;"><I>mhtype8</I></span> �ֶα�ʾ�����ֶθ����ĸ� 16 λ����Ԫ�ص��������롣GR <span style="font-style: italic;"><I>r2</I></span> ������ 16 λԪ�ظ��Ƶ�Ŀ��Ĵ��� GR <span style="font-style: italic;"><I>r1</I></span> �ж�Ӧ�� 16 ��λ��λ�á���Щ�������õ�λ���ȡ���λ�ں��˳����б��롣��<span style="font-style: italic;"><I>mhtype8</I></span>[7:0] �� 8 λ��λ�ɶԷ��飬�ڲ�������ȡ��Ϊ <span style="font-style: italic;"><I>mhtype8</I></span>[3]��<span style="font-style: italic;"><I>mhtype8</I></span>[2]��<span style="font-style: italic;"><I>mhtype8</I></span>[1]��<span style="font-style: italic;"><I>mhtype8</I></span>[0]���� 
+//--></script>，可以指定所有可能的置换，可以重复，也可以不重复。它们使用 8 位 <span style="font-style: italic;"><I>mhtype8</I></span> 字段表示，该字段负责四个 16 位数据元素的索引编码。GR <span style="font-style: italic;"><I>r2</I></span> 索引的 16 位元素复制到目标寄存器 GR <span style="font-style: italic;"><I>r1</I></span> 中对应的 16 个位的位置。这些索引采用低位在先、高位在后的顺序进行编码。（<span style="font-style: italic;"><I>mhtype8</I></span>[7:0] 的 8 位按位成对分组，在操作部分取名为 <span style="font-style: italic;"><I>mhtype8</I></span>[3]、<span style="font-style: italic;"><I>mhtype8</I></span>[2]、<span style="font-style: italic;"><I>mhtype8</I></span>[1]、<span style="font-style: italic;"><I>mhtype8</I></span>[0]）。 
  </p>
 
 <script type="text/javascript" language="javascript1.2">

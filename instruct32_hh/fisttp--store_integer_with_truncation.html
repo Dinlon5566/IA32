@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/fisttp--store_integer_with_truncation.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:29:45 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>FISTTP - �洢���������ض�</title>
+<title>FISTTP - 存储整数，带截断</title>
 
 <!--(Meta)==========================================================-->
 
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nF - ָ��\nFISTTP - �洢���������ض�");
+	addTocInfo("参考\n指令集\nIA-32 指令\nF - 指令\nFISTTP - 存储整数，带截断");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,7 +105,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>FISTTP - �洢���������ض�</h1>
+<h1>FISTTP - 存储整数，带截断</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -116,10 +116,10 @@ else
 	style="margin-bottom: 0;">&nbsp;</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">说明</td></tr>
 
 <tr>
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
@@ -127,7 +127,7 @@ else
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
 <p CLASS=TableCell>FISTTP m16int</td>
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
-<p CLASS=TableCell>�� ST �����з����������ضϣ��洢�� m16int�������� ST��</td></tr>
+<p CLASS=TableCell>将 ST 当作有符号整数（截断）存储到 m16int，并弹出 ST。</td></tr>
 
 <tr>
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
@@ -135,7 +135,7 @@ else
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
 <p CLASS=TableCell>FISTTP m32int</td>
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
-<p CLASS=TableCell>�� ST �����з����������ضϣ��洢�� m32int�������� ST��</td></tr>
+<p CLASS=TableCell>将 ST 当作有符号整数（截断）存储到 m32int，并弹出 ST。</td></tr>
 
 <tr>
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
@@ -143,80 +143,80 @@ else
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
 <p CLASS=TableCell>FISTTP m64int</td>
 <td colspan="1" rowspan="1" valign="middle" class="whs2">
-<p CLASS=TableCell>�� ST �����з����������ضϣ��洢�� m64int�������� ST��</td></tr>
+<p CLASS=TableCell>将 ST 当作有符号整数（截断）存储到 m64int，并弹出 ST。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-<p>FISTTP �Խضϣ���β��Ϊȡ��ģʽ���� ST �е�ֵת�����з���������������䵽Ŀ�꣬������ ST��FISTTP �����֡���������������Ŀ���������</p>
+<p>FISTTP 以截断（截尾）为取整模式，将 ST 中的值转换成有符号整数，结果传输到目标，并弹出 ST。FISTTP 接受字、短整数及长整数目标操作数。</p>
 
-<p>�±���ʾ��������ʽ�洢������ֵʱ�õ��Ľ����</p>
+<p>下表显示按整数格式存储各类数值时得到的结果。</p>
 
 <p><img src="FISTTP.gif" x-maintain-ratio="TRUE" width="509px" height="151px" border="0" class="img_whs3"></p>
 
-<h3 class=NoteTipHead>����ע</h3>
+<h3 class=NoteTipHead>表格备注</h3>
 
-<p>F ��ʾ���޸���ֵ��</p>
+<p>F 表示有限浮点值。</p>
 
-<p>I ��ʾ������</p>
+<p>I 表示整数。</p>
 
-<p>* ��ʾ���������Ч (#IA) �쳣��</p>
+<p>* 表示浮点操作无效 (#IA) 异常。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted>DEST &uml; &#xA0;ST;</p>
 
 <p class=Preformatted>pop ST;</p>
 
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
-<p>C1 �����C0��C2 �� C3 δ���塣</p>
+<p>C1 清除；C0、C2 及 C3 未定义。</p>
 
-<h2>��ֵ�쳣</h2>
+<h2>数值异常</h2>
 
-<p>��Ч����ջ��Ч����ջ���磩�����ȡ�</p>
+<p>无效、堆栈无效（堆栈下溢）、精度。</p>
 
-<h2>����ģʽ�쳣</h2>
+<h2>保护模式异常</h2>
 
-<p>#GP(0) - ���Ŀ�������λ�ڲ���д�ĶΡ�</p>
+<p>#GP(0) - 如果目标操作数位于不可写的段。</p>
 
-<p>CS��DS��ES��FS �� GS ���е��ڴ��������Ч��ַ�Ƿ���</p>
+<p>CS、DS、ES、FS 或 GS 段中的内存操作数有效地址非法。</p>
 
-<p>#SS(0) - SS ���еĵ�ַ�Ƿ���</p>
+<p>#SS(0) - SS 段中的地址非法。</p>
 
-<p>#PF(�������) - ҳ����</p>
+<p>#PF(错误代码) - 页错误。</p>
 
-<p>#AC - ����ڵ�ǰ��Ȩ����Ϊ 3 ʱ����δ������ڴ����á�</p>
+<p>#AC - 如果在当前特权级别为 3 时进行未对齐的内存引用。</p>
 
-<p>#NM - ��� CR0.EM = 1��</p>
+<p>#NM - 如果 CR0.EM = 1。</p>
 
-<p>��� CR0 �е� TS ����Ϊ 1��</p>
+<p>如果 CR0 中的 TS 设置为 1。</p>
 
-<p>#UD - ��� CPUID.PNI(ECX bit 0) = 0��</p>
+<p>#UD - 如果 CPUID.PNI(ECX bit 0) = 0。</p>
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>实地址模式异常</h2>
 
-<p>�ж� 13 - ������������κβ��ֳ����ڴ� 0 �� 0FFFFH ����Ч��ַ�ռ�֮�⡣</p>
+<p>中断 13 - 如果操作数的任何部分出现在从 0 到 0FFFFH 的有效地址空间之外。</p>
 
-<p>#NM - ��� CR0.EM = 1��</p>
+<p>#NM - 如果 CR0.EM = 1。</p>
 
-<p>��� CR0 �е� TS ����Ϊ 1��</p>
+<p>如果 CR0 中的 TS 设置为 1。</p>
 
-<p>#UD - ��� CPUID.PNI(ECX bit 0) = 0��</p>
+<p>#UD - 如果 CPUID.PNI(ECX bit 0) = 0。</p>
 
-<h2>�� 8086 ģʽ�쳣</h2>
+<h2>虚 8086 模式异常</h2>
 
-<p>�ж� 13 - ������������κβ��ֳ����ڴ� 0 �� 0FFFFH ����Ч��ַ�ռ�֮�⡣</p>
+<p>中断 13 - 如果操作数的任何部分出现在从 0 到 0FFFFH 的有效地址空间之外。</p>
 
-<p>#NM - ��� CR0.EM = 1��</p>
+<p>#NM - 如果 CR0.EM = 1。</p>
 
-<p>��� CR0 �е� TS ����Ϊ 1��</p>
+<p>如果 CR0 中的 TS 设置为 1。</p>
 
-<p>#UD - ��� CPUID.PNI(ECX bit 0) = 0��</p>
+<p>#UD - 如果 CPUID.PNI(ECX bit 0) = 0。</p>
 
-<p>#PF(�������) - ҳ����</p>
+<p>#PF(错误代码) - 页错误。</p>
 
-<p>#AC - ��ǰ��Ȩ����Ϊ 3 ʱ��δ������ڴ����á�</p>
+<p>#AC - 当前特权级别为 3 时的未对齐的内存引用。</p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

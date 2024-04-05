@@ -7,7 +7,7 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/BIC_(Thumb).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:32:04 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
 <title>BIC (Thumb)</title>
@@ -83,7 +83,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n16 λָ��\nB - ָ��\nBIC (Thumb)");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n16 位指令\nB - 指令\nBIC (Thumb)");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,9 +106,9 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">BIC (Thumb*) - λ���</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">BIC (Thumb*) - 位清除</h1>
 
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <div>
 <div>
@@ -116,7 +116,7 @@ else
 </div>
 
 <div>
-<p>���У�</p>
+<p>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -126,29 +126,29 @@ else
 <p CLASS=CellBodyLeft><em CLASS=SourceItalic
 							style="font-style: italic;">dest</em> </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>������һ���������ļĴ�����Ҳ��Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>包含第一个操作数的寄存器，也是目标寄存器</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
 <p CLASS=CellBodyLeft><em CLASS=SourceItalic
 							style="font-style: italic;">op</em> </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>����Ҫ�����󲹺�&ldquo;��&rdquo;����Ĳ������ļĴ���</td></tr>
+<p CLASS=CellBodyLeft>包含要进行求补和&ldquo;与&rdquo;运算的操作数的寄存器</td></tr>
 </table>
 </div>
 
 <div>
-<h2>˵��</h2>
+<h2>说明</h2>
 
-<p>BIC ָ� <em CLASS=SourceItalic>dest</em> ͬ <em CLASS=SourceItalic>op</em> �Ĳ������λ&ldquo;��&rdquo;���㣬��������洢�� <em CLASS=SourceItalic>dest</em>��</p>
+<p>BIC 指令将 <em CLASS=SourceItalic>dest</em> 同 <em CLASS=SourceItalic>op</em> 的补码进行位&ldquo;与&rdquo;运算，并将结果存储到 <em CLASS=SourceItalic>dest</em>。</p>
 
-<h2>Ѱַģʽ </h2>
+<h2>寻址模式 </h2>
 
-<p>�޲������� </p>
+<p>无操作数。 </p>
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -196,7 +196,7 @@ else
 </div>
 
 <div>
-<h2>����</h2>
+<h2>编码</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs3">
@@ -267,7 +267,7 @@ else
 
 <div>
 <div>
-<h2>ʾ�� </h2>
+<h2>示例 </h2>
 </div>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funbic <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0 <br> 4 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example,CODE,READONLY <br> 6 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;CODE16 <br> 7<br> 8 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1 <br> 9 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Bitwise logical AND NOT.<br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; R6 = R4 AND (NOT R6) <br> 11 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;; Result hex 80 &#xA0;<br> 12 &#xA0;&#xA0;&#xA0;00000000 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;F7C4 &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;&#xA0;R4, #OxFE <br> 13 &#xA0;&#xA0;&#xA0;00000002 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;F7C6 &#xA0;&#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;&#xA0;R6, #Ox7F <br> 14 &#xA0;&#xA0;&#xA0;00000004 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;43A6 &#xA0;&#xA0;&#xA0;BIC &#xA0;&#xA0;&#xA0;&#xA0;R6, R4</span> </p>

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/flags_affected.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:46:54 GMT -->
 <head>
 
-<title>Ӱ��ı�־</title>
+<title>影响的标志</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="01 24, 2002 5:38:32 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -98,7 +98,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\n�ڲ�������־\nӰ��ı�־");
+	addTocInfo("参考\n指令集\nIA-32 指令\n内部函数标志\n影响的标志");
 
 	}
 	if (window.writeBtnStyle)
@@ -121,11 +121,11 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>Ӱ��ı�־</h1>
+<h1>影响的标志</h1>
 
-<p>&ldquo;Ӱ��ı�־&rdquo;�����г� EFLAGS �Ĵ�������ָ��Ӱ��ı�־�������־ʱ�������� 0��������ʱ�������� 1���������߼�ָ��ͨ��������ͬ�ķ�ʽ��ֵ����״̬��־�������&ldquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>IA-32 Ӣ�ض�(R) ��ϵ�ṹ����������Ա�ֲ�&rdquo;�� 1 ��</font>�еĸ�¼ A&ldquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 								face=Verdana>EFLAGS ��������</font>&rdquo;����&ldquo;����&rdquo;���ֶԷǳ��渳ֵ�����˽��ܡ���Ϊ<span   style="font-weight: bold;"><B>δ����</B></span>�ı�־ֵ�п��ܱ�ָ���Բ�ȷ���ķ�ʽ���ġ�δ�г��ı�־����ָ��Ӱ�졣</p>
+<p>&ldquo;影响的标志&rdquo;部分列出 EFLAGS 寄存器中受指令影响的标志。清除标志时，它等于 0；设置它时，它等于 1。算术与逻辑指令通常按照相同的方式将值赋给状态标志（请参阅&ldquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 				face=Verdana>IA-32 英特尔(R) 体系结构软件开发人员手册&rdquo;第 1 卷</font>中的附录 A&ldquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 								face=Verdana>EFLAGS 交叉引用</font>&rdquo;）。&ldquo;操作&rdquo;部分对非常规赋值进行了介绍。列为<span   style="font-weight: bold;"><B>未定义</B></span>的标志值有可能被指令以不确定的方式更改。未列出的标志不受指令影响。</p>
 
-<h4 align="left" class="whs1"><a name=Figure_3-2></a>�ڴ�λ����</h4>
+<h4 align="left" class="whs1"><a name=Figure_3-2></a>内存位索引</h4>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs2">
@@ -140,9 +140,9 @@ else
 //--></script><noscript><img src='vc3.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='277px' height='207px' border='0' class='img_whs5'></noscript></td></tr>
 </table>
 
-<h2>Ӱ��� FPU ��־</h2>
+<h2>影响的 FPU 标志</h2>
 
-<p class="whs6">����ָ����һ��&ldquo;Ӱ��� FPU ��־&rdquo;���֣�����ÿ��ָ�����Ӱ�� FPU ״̬�ֵ��ĸ����������־�� </p>
+<p class="whs6">浮点指令有一个&ldquo;影响的 FPU 标志&rdquo;部分，介绍每条指令如何影响 FPU 状态字的四个条件代码标志。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

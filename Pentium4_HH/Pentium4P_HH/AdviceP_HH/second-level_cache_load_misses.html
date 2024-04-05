@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/second-level_cache_load_misses.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:52 GMT -->
 <head>
 
-<title>�����������δ����</title>
+<title>二级缓存加载未命中</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -79,7 +79,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\n����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 ������\n����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 �������Ľ���\n���ں���������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 ��������ϸ��\n�����������δ����");
+	addTocInfo("参考\n处理器事件与建议\n含第三代数据流单指令多数据扩展指令集 (SSE3) 的英特尔(R) 奔腾(R) 4 处理器\n含第三代数据流单指令多数据扩展指令集 (SSE3) 的英特尔(R) 奔腾(R) 4 处理器的建议\n关于含第三代数据流单指令多数据扩展指令集 (SSE3) 的英特尔(R) 奔腾(R) 4 处理器的细节\n二级缓存加载未命中");
 
 	}
 	if (window.writeBtnStyle)
@@ -102,21 +102,21 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="Ӣ�ض�&#xAE; ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">�����������δ����</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="英特尔&#xAE; 调优助手主题" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">二级缓存加载未命中</h1>
 
-<p>&ldquo;��������&rdquo;����δ�����¼��м������������Ľ��ͣ�������ʹ������ض����¼�ʱ�����ѻ�ȡ�����������δ������ɵ�ʵ��Ӱ��ľ�ȷֵ��ʹ��&ldquo;���з�Ԥȡ��ȡ���˴�������&rdquo;�¼����һЩ�����¼��Ѿ���&ldquo;�������ܵ����¼�&rdquo;���һ���֡�&ldquo;Ӣ�ض�&#xAE; ��������&rdquo;�ڳ�Ϊ&ldquo;Ƭ�ڼ��ɻ������δ����&rdquo;��ϸ���б�����¼���Ӱ�졣����Ѿ�ʹ��&ldquo;�������ܵ����¼�&rdquo;��ִ�в�������&ldquo;Ƭ�ڼ��ɻ������δ����&rdquo;ϸ��û�г��֣����ǳ���&ldquo;�����������δ����&rdquo;����ܿ���������һ���������������Ĵ��󣬵��¼�ͳ�ƹ��������<br>�����������δ���п��ܻ������������Եĸ���Ӱ�졣�������ݼ�̫����޷�������������ڡ���&ldquo;���̼߳���&rdquo;ʱ���������ݼ��������߳�֮�乲���������Ӧ�ÿ���Ϊ�ɷ��� 1/4 �� 1/2 �Ķ��������ڡ�����&ldquo;δ&rdquo;����&ldquo;���߳�&rdquo;������ϵͳ���������ݼ�Ӧ����Ϊ�ɷ��� 1/2 �Ķ��������ڡ���������δ���еĳͷ���һ������δ���еĴ�ܶ࣬��ס���ǳ���Ҫ��<br>���ڲ���&ldquo;���̼߳���&rdquo;��ϵͳ��ദ����ϵͳ�����Ƶ�Ӱ������ܼƴ�����ʱ��Ӱ�죨ϵͳ�������߼�/����������֮�ͣ���������&ldquo;ʵ��ִ��&rdquo;ʱ��Ӱ�졣��ˣ��ڲ���&ldquo;���̼߳���&rdquo;��ϵͳ��ദ����ϵͳ�ϣ��ܿ��ܻῴ��ϸ�ڵ�ʱ��Ӱ����ڶԸ���ʵ��ִ��ʱ���Ӱ�졣��ע�⣬�ڵ�������ϵͳ�ϣ�������ʱ����ʵ��ִ��ʱ����ͬ��<br>��ע����ָ���ڼ���δ�䱸�������������¼��㡣������������������䱸���������Ӣ�ض�&#xAE; �������󻺴��Ʒ�ϲ���ģ���������Ƶ�Ӱ��ʵ���Ͽ��Ժ��ԡ�<br>Ӣ�ض�(R) ����(R) 4 �������ܹ�ȡ�ø����ܵķ���֮һ�ǣ��ֹ۵ؼ�����һ����ʵ�ָ������ܵ���������ʵ�����ķ���֮һ��Ԥ���֧�Ľ���������ڷ�֧�õ�����֮ǰ��ƾ�Ʋ���һ��·��ִ�С���һ�ַ���������ִ��ĳЩ�ڴ��������Щ�ڴ���ص����ܼ����¼�ͬʱͳ���Ʋ��Բ����Լ����Ʋ��Բ�������˲����ļ����Ȳ�ͳ���Ʋ��Բ���ʱ�ĸ�������ִ���ڴ�����ᵼ�¸�����Ʋ��Բ�������Ϊ�¼���������ܻᵼ�¼�����δ�������Ʋ�ʱ��õļ���ֵ�������磬���������᳢ܻ��ƾ�Ʋ�����ִ�м��ء�������ǰִ�У����򣩼��ؽ������л��棬���Ժ�ִ�У�����������л��档���磬��Ϊ�ڽ����ʱ�䣬���ȶ���ͬ�����ߵķ������ڽ��У��������Ժ��������뻺�棬��˿��ܷ�����������������Ʋ��Ե�ʣ�����ᷢ������δ���У������û���Ʋ⣬�򲻻ᷢ�����¼�������ϵ�ṹ�ĽǶȿ�������ͳ�ƹ������������ʹ��û���Ʋ�ʱָ�����������δ���У��������Ʋ���ָ��Ҳ�ᱨ��˵��������δ���С���ʵ�ϣ�����΢��ϵ�ṹ���������¼��ľ�ȷ��ʾ����ָ��ȷʵ�����˻���δ���С��ڼ�����������£�ͳ�ƹ������ܷǳ����ԡ���Щ���ͨ���漰ָ����ٴ��룬��������һ���ڴ�λ�õ��ڴ����õȡ�</p>
+<p>&ldquo;二级缓存&rdquo;加载未命中事件有几个错误（在下文解释），导致使用这个特定的事件时，很难获取二级缓存加载未命中造成的实际影响的精确值。使用&ldquo;现行非预取读取（此处理器）&rdquo;事件会好一些。此事件已经是&ldquo;基本性能调整事件&rdquo;组的一部分。&ldquo;英特尔&#xAE; 调优助手&rdquo;在称为&ldquo;片内集成缓存加载未命中&rdquo;的细节中报告此事件的影响。如果已经使用&ldquo;基本性能调整事件&rdquo;组执行采样，但&ldquo;片内集成缓存加载未命中&rdquo;细节没有出现，而是出现&ldquo;二级缓存加载未命中&rdquo;，则很可能是遇到一个或多个下文所述的错误，导致假统计过量情况。<br>二级缓存加载未命中可能会对性能造成明显的负面影响。工作数据集太大而无法放入二级缓存内。打开&ldquo;超线程技术&rdquo;时，工作数据集在两个线程之间共享，因此它应该控制为可放入 1/4 到 1/2 的二级缓存内。对于&ldquo;未&rdquo;启用&ldquo;超线程&rdquo;技术的系统，工作数据集应控制为可放入 1/2 的二级缓存内。二级缓存未命中的惩罚比一级缓存未命中的大很多，记住这点非常重要。<br>对于采用&ldquo;超线程技术&rdquo;的系统或多处理器系统，估计的影响代表总计处理器时间影响（系统上所有逻辑/物理处理器之和），而不是&ldquo;实际执行&rdquo;时间影响。因此，在采用&ldquo;超线程技术&rdquo;的系统或多处理器系统上，很可能会看到细节的时间影响大于对负载实际执行时间的影响。请注意，在单处理器系统上，处理器时间与实际执行时间相同。<br>备注：此指标在假设未配备三级缓存的情况下计算。如果分析的数据是在配备三级缓存的英特尔&#xAE; 处理器大缓存产品上捕获的，则这个估计的影响实际上可以忽略。<br>英特尔(R) 奔腾(R) 4 处理器能够取得高性能的方法之一是，乐观地假设有一种能实现更佳性能的条件。它实现这点的方法之一是预测分支的结果，并且在分支得到解析之前，凭推测沿一条路径执行。另一种方法是无序执行某些内存操作。有些内存相关的性能监视事件同时统计推测性操作以及非推测性操作，因此产生的计数比不统计推测性操作时的更大。无序执行内存操作会导致更多的推测性操作（计为事件），这可能会导致计数比未发生此推测时获得的计数值更大。例如，处理器可能会尝试凭推测无序执行加载。假设提前执行（无序）加载将不命中缓存，但稍后执行（有序）则会命中缓存。例如，因为在较早的时间，早先对相同缓存线的访问仍在进行，但会在稍后将数据填入缓存，因此可能发生这种情况。由于推测的缘故，这里会发生缓存未命中，而如果没有推测，则不会发生此事件。从体系结构的角度看，这是统计过量的情况：即使在没有推测时指令不会遇到缓存未命中，但由于推测活动，指令也会报告说遇到缓存未命中。事实上，它是微体系结构级发生的事件的精确表示：此指令确实导致了缓存未命中。在极少数的情况下，统计过量可能非常明显。这些情况通常涉及指针跟踪代码，如引用另一个内存位置的内存引用等。</p>
 
 &nbsp; 
 
 <br>&nbsp; 
  
 
-<br><b>����������ԣ�</b><br><br>��ϸ�����������ܼ�����������أ�<br> <br> Level2CacheLoadMiss ����Ӱ�� = ((<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/2nd-level_cache_load_misses_retired.htm" style="x-condition: eclipse;">ʧЧ�Ķ����������δ����</a>*(15*(�������ٶ�/�����ٶ�)))/<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Clockticks.htm" style="x-condition: eclipse;">ʱ���ź�</a>)*100<b><br> �ϵ�ֵ��</b>0.2<b><br> �ϸ�ֵ��</b>2<br><br> Level2CacheLoad ���б��� = (100-((<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/2nd-level_cache_load_misses_retired.htm" style="x-condition: eclipse;">ʧЧ�Ķ����������δ����</a>/<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/loads_retired.htm" style="x-condition: eclipse;">ʧЧ�ļ���</a>)*100))<b><br> �ϵ�ֵ��</b>89<b><br> �ϸ�ֵ��</b>99<br><br>��&ldquo;Level2CacheLoadMiss ����Ӱ��&rdquo;<b>�ϸ�</b><i>��</i>&ldquo;Level2CacheLoad ���б���&rdquo;<b>�ϵ�</b>ʱ����ϸ�ھ���ʵ�������塣<b><br><br> ���飺</b> 
+<br><b>计数器相关性：</b><br><br>此细节与以下性能计数器函数相关：<br> <br> Level2CacheLoadMiss 性能影响 = ((<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/2nd-level_cache_load_misses_retired.htm" style="x-condition: eclipse;">失效的二级缓存加载未命中</a>*(15*(处理器速度/总线速度)))/<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Clockticks.htm" style="x-condition: eclipse;">时钟信号</a>)*100<b><br> 较低值：</b>0.2<b><br> 较高值：</b>2<br><br> Level2CacheLoad 命中比率 = (100-((<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/2nd-level_cache_load_misses_retired.htm" style="x-condition: eclipse;">失效的二级缓存加载未命中</a>/<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/loads_retired.htm" style="x-condition: eclipse;">失效的加载</a>)*100))<b><br> 较低值：</b>89<b><br> 较高值：</b>99<br><br>在&ldquo;Level2CacheLoadMiss 性能影响&rdquo;<b>较高</b><i>或</i>&ldquo;Level2CacheLoad 命中比率&rdquo;<b>较低</b>时，此细节具有实质性意义。<b><br><br> 建议：</b> 
 
 <ul>
 	
 	<li class=kadov-p
-		class=kadov-p><a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/avoiding_second-level_cache_load_misses.htm" style="x-condition: eclipse;">��������������δ����</a></li>
+		class=kadov-p><a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/avoiding_second-level_cache_load_misses.htm" style="x-condition: eclipse;">避免二级缓存加载未命中</a></li>
 </ul>
 
 <script type="text/javascript" language="javascript1.2">

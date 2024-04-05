@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400202.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
 
-<title>fma - ¸¡µã³Ë·¨¼Ó·¨Ö¸Áî</title>
+<title>fma - æµ®ç‚¹ä¹˜æ³•åŠ æ³•æŒ‡ä»¤</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:50:14 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("²Î¿¼\nÖ¸Áî¼¯\nÓ¢ÌØ¶û(R) °²ÌÚ(R) Ö¸Áî\nF - Ö¸Áî\nfma - ¸¡µã³Ë·¨¼Ó·¨Ö¸Áî");
+	addTocInfo("å‚è€ƒ\næŒ‡ä»¤é›†\nè‹±ç‰¹å°”(R) å®‰è…¾(R) æŒ‡ä»¤\nF - æŒ‡ä»¤\nfma - æµ®ç‚¹ä¹˜æ³•åŠ æ³•æŒ‡ä»¤");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,16 +116,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="°²ÌÚ(R) ´¦ÀíÆ÷Ö÷Ìâ" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">¸¡µã³Ë·¨¼Ó·¨Ö¸Áî</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="å®‰è…¾(R) å¤„ç†å™¨ä¸»é¢˜" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">æµ®ç‚¹ä¹˜æ³•åŠ æ³•æŒ‡ä»¤</h1>
 
 <p><span style="font-weight: bold;"><B>fma</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400203.htm">²Ù×÷</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">×ÖÌå¹ßÀý</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400203.htm">æ“ä½œ</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">å­—ä½“æƒ¯ä¾‹</a>
  </p>
 
-<p>Ö¸ÁîÀàÐÍ F</p>
+<p>æŒ‡ä»¤ç±»åž‹ F</p>
 
-<p><span style="font-weight: bold;"><B>¸ñÊ½</B></span></p>
+<p><span style="font-weight: bold;"><B>æ ¼å¼</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) fma.<span style="x-condition: eclipse;">pc</span><script type="text/javascript"
 	language=JavaScript1.2><!--
@@ -140,13 +140,13 @@ kadovFilePopupInit('A2');
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>ËµÃ÷</B></span></p>
+<p><span style="font-weight: bold;"><B>è¯´æ˜Ž</B></span></p>
 
-<p><span style="font-style: italic;"><I>f3</I></span> Óë FR <span   style="font-style: italic;"><I>f4</I></span> µÄ³Ë»ý¼ÆËãµ½ÎÞÏÞ¾«¶È£¬È»ºó¼ÓÉÏ FR <span style="font-style: italic;"><I>f2</I></span>£¬Í¬Ñù¼ÆËãµ½ÎÞÏÞ¾«¶È¡£Ëæºó°´ÕÕ FPSR.<span style="font-style: italic;"><I>sf</I></span>.<span 
- style="font-style: italic;"><I>rc</I></span> Ö¸¶¨µÄÈ¡ÕûÄ£Ê½£¬½«½á¹ûÖµÈ¡Õûµ½ <span style="x-condition: eclipse;">pc</span><script type="text/javascript"
+<p><span style="font-style: italic;"><I>f3</I></span> ä¸Ž FR <span   style="font-style: italic;"><I>f4</I></span> çš„ä¹˜ç§¯è®¡ç®—åˆ°æ— é™ç²¾åº¦ï¼Œç„¶åŽåŠ ä¸Š FR <span style="font-style: italic;"><I>f2</I></span>ï¼ŒåŒæ ·è®¡ç®—åˆ°æ— é™ç²¾åº¦ã€‚éšåŽæŒ‰ç…§ FPSR.<span style="font-style: italic;"><I>sf</I></span>.<span 
+ style="font-style: italic;"><I>rc</I></span> æŒ‡å®šçš„å–æ•´æ¨¡å¼ï¼Œå°†ç»“æžœå€¼å–æ•´åˆ° <span style="x-condition: eclipse;">pc</span><script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A3');
-//--></script>£¨¼°¿ÉÄÜµÄ FPSR.<span style="x-condition: eclipse;">sf</span><script type="text/javascript"
+//--></script>ï¼ˆåŠå¯èƒ½çš„ FPSR.<span style="x-condition: eclipse;">sf</span><script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A4');
 //--></script>.<span 
@@ -154,7 +154,7 @@ kadovFilePopupInit('A4');
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A5');
-//--></script> Óë FPSR.<span style="x-condition: eclipse;">sf</span><script 
+//--></script> ä¸Ž FPSR.<span style="x-condition: eclipse;">sf</span><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A6');
@@ -163,16 +163,16 @@ kadovFilePopupInit('A6');
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A7');
-//--></script>£©Ö¸¶¨µÄ¾«¶È¡£È¡ÕûºóµÄ½á¹û·ÅÈë FR <span style="font-style: italic;"><I>f1</I></span>¡£</p>
+//--></script>ï¼‰æŒ‡å®šçš„ç²¾åº¦ã€‚å–æ•´åŽçš„ç»“æžœæ”¾å…¥ FR <span style="font-style: italic;"><I>f1</I></span>ã€‚</p>
 
-<p>Èç¹û FR <span style="font-style: italic;"><I>f2</I></span>¡¢FR <span style="font-style: italic;"><I>f3</I></span> »ò FR <span style="font-style: italic;"><I>f4</I></span> ÖÐµÄÈÎºÎÒ»¸öÊÇ NaTVal£¬Ôò½« NaTValFR ·ÅÈë FR <span style="font-style: italic;"><I>f1</I></span>£¬¶ø²»·ÅÈë¼ÆËãµÄ½á¹û¡£</p>
+<p>å¦‚æžœ FR <span style="font-style: italic;"><I>f2</I></span>ã€FR <span style="font-style: italic;"><I>f3</I></span> æˆ– FR <span style="font-style: italic;"><I>f4</I></span> ä¸­çš„ä»»ä½•ä¸€ä¸ªæ˜¯ NaTValï¼Œåˆ™å°† NaTValFR æ”¾å…¥ FR <span style="font-style: italic;"><I>f1</I></span>ï¼Œè€Œä¸æ”¾å…¥è®¡ç®—çš„ç»“æžœã€‚</p>
 
-<p>Èç¹û <span style="font-style: italic;"><I>f2</I></span> ÊÇ f0£¬ÔòÖ´ÐÐ IEEE ³Ë·¨ÔËËã£¬¶ø²»ÊÇ³Ë·¨Óë¼Ó·¨¡£</p>
+<p>å¦‚æžœ <span style="font-style: italic;"><I>f2</I></span> æ˜¯ f0ï¼Œåˆ™æ‰§è¡Œ IEEE ä¹˜æ³•è¿ç®—ï¼Œè€Œä¸æ˜¯ä¹˜æ³•ä¸ŽåŠ æ³•ã€‚</p>
 
-<p>ÈçÐèÁË½â×´Ì¬×Ö¶ÎµÄ <span style="font-style: italic;"><I>pc</I></span>¡¢<span style="font-style: italic;"><I>wre</I></span> ÒÔ¼° <span style="font-style: italic;"><I>rc</I></span> µÄ±àÂëÓë½âÊÍ£¬Çë²ÎÔÄ<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400131.htm" style="x-condition: eclipse;">¸¡µã¼ÆËã¿ØÖÆ¶¨Òå</a><script type="text/javascript"
+<p>å¦‚éœ€äº†è§£çŠ¶æ€å­—æ®µçš„ <span style="font-style: italic;"><I>pc</I></span>ã€<span style="font-style: italic;"><I>wre</I></span> ä»¥åŠ <span style="font-style: italic;"><I>rc</I></span> çš„ç¼–ç ä¸Žè§£é‡Šï¼Œè¯·å‚é˜…<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400131.htm" style="x-condition: eclipse;">æµ®ç‚¹è®¡ç®—æŽ§åˆ¶å®šä¹‰</a><script type="text/javascript"
 													language=JavaScript1.2><!--
 kadovFilePopupInit('A8');
-//--></script>Óë<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400132.htm" style="x-condition: eclipse;">¸¡µãÈ¡Õû¿ØÖÆ¶¨Òå</a>¡£<script 
+//--></script>ä¸Ž<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400132.htm" style="x-condition: eclipse;">æµ®ç‚¹å–æ•´æŽ§åˆ¶å®šä¹‰</a>ã€‚<script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A9');

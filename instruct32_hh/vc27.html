@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc27.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:44 GMT -->
 <head>
 
-<title>CBW/CWDE - �ֽ�ת������/��ת����˫��</title>
+<title>CBW/CWDE - 字节转换成字/字转换成双字</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="03 6, 2002 11:28:26 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -96,7 +96,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nC - ָ��\nCBW/CWDE - �ֽ�ת������/��ת����˫��");
+	addTocInfo("参考\n指令集\nIA-32 指令\nC - 指令\nCBW/CWDE - 字节转换成字/字转换成双字");
 
 	}
 	if (window.writeBtnStyle)
@@ -119,7 +119,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>CBW/CWDE - �ֽ�ת������/��ת����˫��</h1>
+<h1>CBW/CWDE - 字节转换成字/字转换成双字</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -127,13 +127,13 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">������</td>
+	style="margin-bottom: 0;">操作码</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">说明</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -149,7 +149,7 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4))
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='arrwleft.gif' width='13px' height='16px' border='0' class='img_whs3'>");}
 else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> AL �ķ�����չ</td></tr>
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> AL 的符号扩展</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -165,18 +165,18 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4))
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='arrwleft.gif' width='13px' height='16px' border='0' class='img_whs3'>");}
 else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> AX �ķ�����չ</td></tr>
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> AX 的符号扩展</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-<p>ͨ��������չ��Դ�������Ĵ�С�ӱ��������&ldquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 						face=Verdana>IA-32 Ӣ�ض�(R) ��ϵ�ṹ����������Ա�ֲ�</font>&rdquo;�� 1 ����&ldquo;ͼ 6-5&rdquo;����CBW���ֽ�ת�����֣�ָ�Դ�������еķ��ţ�λ 7�����Ƶ� AH �Ĵ����е�ÿ��λ��CWDE����ת����˫�֣�ָ� AX �Ĵ������ֵķ��ţ�λ 15�����Ƶ� EAX �Ĵ����ĸ� 16 λ��</p>
+<p>通过符号扩展将源操作数的大小加倍（请参阅&ldquo;<font style="font-family: Verdana, Arial, Helvetica, sans-serif;" 						face=Verdana>IA-32 英特尔(R) 体系结构软件开发人员手册</font>&rdquo;第 1 卷的&ldquo;图 6-5&rdquo;）。CBW（字节转换成字）指令将源操作数中的符号（位 7）复制到 AH 寄存器中的每个位。CWDE（字转换成双字）指令将 AX 寄存器中字的符号（位 15）复制到 EAX 寄存器的高 16 位。</p>
 
-<p>CBW �� CWDE ���Ƿ�������ͬ�Ĳ����롣CBW ָ��ּ�����ڲ�������С����Ϊ 16 ʱ��CWDE ָ��ּ�����ڲ�������С����Ϊ 32 ʱ��ĳЩ�������ʹ�� CBW ʱ����������Сǿ�Ʊ�� 16����ʹ�� CWDE ʱ����������Сǿ�Ʊ�� 32��������������ܻὫ��Щ���Ƿ�����ͬ��� (CBW/CWDE)����ʹ�ò�������С���Եĵ�ǰ����ȷ��Ҫת����ֵ�Ĵ�С��������ʹ����һ�����Ƿ���</p>
+<p>CBW 与 CWDE 助记符引用相同的操作码。CBW 指令旨在用于操作数大小属性为 16 时；CWDE 指令旨在用于操作数大小属性为 32 时。某些汇编器在使用 CBW 时将操作数大小强制变成 16，在使用 CWDE 时将操作数大小强制变成 32。其它汇编器可能会将这些助记符看作同义词 (CBW/CWDE)，并使用操作数大小属性的当前设置确定要转换的值的大小，而不管使用哪一个助记符。</p>
 
-<p>CWDE ָ���� CWD����ת����˫�֣�ָ��������ͬ��CWD ָ�һ�ԼĴ��� DX:AX ����Ŀ����������� CWDE ָ���� EAX �Ĵ�������Ŀ���������</p>
+<p>CWDE 指令与 CWD（字转换成双字）指令有所不同。CWD 指令将一对寄存器 DX:AX 用作目标操作数；而 CWDE 指令则将 EAX 寄存器用作目标操作数。</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted>IF OperandSize <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -210,13 +210,13 @@ else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'>");}
 //--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='13px' height='16px' border='0' class='img_whs3'></noscript> SignExtend(AX);<br> FI;</p>
 
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
-<p>�ޡ�</p>
+<p>无。</p>
 
-<h2>�쳣�����в���ģʽ��</h2>
+<h2>异常（所有操作模式）</h2>
 
-<p class="whs4">�ޡ� </p>
+<p class="whs4">无。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

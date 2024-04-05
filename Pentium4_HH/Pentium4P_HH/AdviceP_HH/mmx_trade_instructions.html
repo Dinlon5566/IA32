@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/mmx_trade_instructions.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:52 GMT -->
 <head>
 
-<title>MMX&#x2122; ָ��</title>
+<title>MMX&#x2122; 指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
 <meta name=topic-time-estimate content=0>
@@ -79,7 +79,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\n����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 ������\n����������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 �������Ľ���\n���ں���������������ָ���������չָ� (SSE3) ��Ӣ�ض�(R) ����(R) 4 ��������ϸ��\nMMX(TM) ָ��");
+	addTocInfo("参考\n处理器事件与建议\n含第三代数据流单指令多数据扩展指令集 (SSE3) 的英特尔(R) 奔腾(R) 4 处理器\n含第三代数据流单指令多数据扩展指令集 (SSE3) 的英特尔(R) 奔腾(R) 4 处理器的建议\n关于含第三代数据流单指令多数据扩展指令集 (SSE3) 的英特尔(R) 奔腾(R) 4 处理器的细节\nMMX(TM) 指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -102,9 +102,9 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="Ӣ�ض�&#xAE; ������������" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">MMX(TM) ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Pentium4P_HH/AdviceP_HH/TA_logo.gif" alt="英特尔&#xAE; 调优助手主题" x-maintain-ratio="TRUE" width="36px" height="36px" align="right" border="0" class="img_whs1">MMX(TM) 指令</h1>
 
-��Щָ�����&ldquo;128 λ&rdquo;��&ldquo;64 λ MMX&rdquo;ָ��İٷֱȡ�����ָ��ٷֱȺܼ򵥣��͵��� 100 ��ȥ��������ָ�����͵İٷֱȡ�<b><br><br>����������ԣ�</b><br><br>��ϸ�����������ܼ�����������أ�<br> <br> 128 λ MMX ָ�� = (<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/128-bit_mmx(tm)_instructions_retired.htm" style="x-condition: eclipse;">ʧЧ�� 128 λ MMX(TM) ָ��</a>/<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Instructions_retired.htm" style="x-condition: eclipse;">ʧЧ��ָ��</a>)*100<b><br> �ϵ�ֵ��</b>0<b><br> �ϸ�ֵ��</b>0.01<br><br> 64 λ MMX ָ�� = (<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/64-bit_mmx(tm)_instructions_retired.htm" style="x-condition: eclipse;">ʧЧ�� 64 λ MMX(TM) ָ��</a>/<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Instructions_retired.htm" style="x-condition: eclipse;">ʧЧ��ָ��</a>)*100<b><br> �ϵ�ֵ��</b>0<b><br> �ϸ�ֵ��</b>0.01<br><br> ��&ldquo;128 λ MMX&rdquo;ָ��<b>�ϸ�</b><b>��</b>&ldquo;64 λ MMX&rdquo;ָ��<b>�ϸ�</b>ʱ����ϸ�ھ���ʵ�������塣 
+这些指标代表&ldquo;128 位&rdquo;与&ldquo;64 位 MMX&rdquo;指令的百分比。整数指令百分比很简单，就等于 100 减去其它所有指令类型的百分比。<b><br><br>计数器相关性：</b><br><br>此细节与以下性能计数器函数相关：<br> <br> 128 位 MMX 指令 = (<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/128-bit_mmx(tm)_instructions_retired.htm" style="x-condition: eclipse;">失效的 128 位 MMX(TM) 指令</a>/<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Instructions_retired.htm" style="x-condition: eclipse;">失效的指令</a>)*100<b><br> 较低值：</b>0<b><br> 较高值：</b>0.01<br><br> 64 位 MMX 指令 = (<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/64-bit_mmx(tm)_instructions_retired.htm" style="x-condition: eclipse;">失效的 64 位 MMX(TM) 指令</a>/<a href="https://www.hgy413.com/hgydocs/IA32/Pentium4_HH/Events4/Instructions_retired.htm" style="x-condition: eclipse;">失效的指令</a>)*100<b><br> 较低值：</b>0<b><br> 较高值：</b>0.01<br><br> 在&ldquo;128 位 MMX&rdquo;指令<b>较高</b><b>或</b>&ldquo;64 位 MMX&rdquo;指令<b>较高</b>时，此细节具有实质性意义。 
 
 <script type="text/javascript" language="javascript1.2">
 <!--

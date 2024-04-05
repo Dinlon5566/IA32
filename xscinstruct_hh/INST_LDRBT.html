@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_LDRBT.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:43 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>LDRBT - ��ת����ؼĴ����ֽ�</title>
+<title>LDRBT - 带转译加载寄存器字节</title>
 
 <!--(Meta)==========================================================-->
 
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nL - ָ��\nLDRBT");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nL - 指令\nLDRBT");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,16 +105,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">LDRBT - ��ת����ؼĴ����ֽ�</h1>
+<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">LDRBT - 带转译加载寄存器字节</h1>
 
 <div>
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p class=Preformatted><span class=Code>LDR[condition]BT dest, addr_mode</span> </p>
 
-<p CLASS=Body>���У�</p>
+<p CLASS=Body>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -127,7 +127,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 个条件之一。请参阅<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">条件代码状态</a>。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -137,7 +137,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ŀ��Ĵ���</td></tr>
+<p CLASS=CellBodyLeft>目标寄存器</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -147,26 +147,26 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>Ѱַģʽ 2��<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.htm">������洢�ֻ��޷����ֽ�</a></td></tr>
+<p CLASS=CellBodyLeft>寻址模式 2：<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.htm">加载与存储字或无符号字节</a></td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-LDRBT ָ��ֽڴ� <em CLASS=SourceItalic>addr_mode</em> ���ص� <em CLASS=SourceItalic>dest</em>�����ֽڰ�������չ��ʽ��չ�� 32 λ�֡�����Ȩģʽ�У��ڴ�ϵͳ�����ʵ�������&ldquo;�û�&rdquo;ģʽ�£������������ִ����ͨ��&ldquo;�û�&rdquo;ģʽ���ʡ�condition ��������Чֵ������ָ��� NOP�� 
+LDRBT 指令将字节从 <em CLASS=SourceItalic>addr_mode</em> 加载到 <em CLASS=SourceItalic>dest</em>。此字节按照零扩展方式扩展成 32 位字。在特权模式中，内存系统将访问当作是在&ldquo;用户&rdquo;模式下；其它情况下则执行普通的&ldquo;用户&rdquo;模式访问。condition 必须是有效值；否则将指令当作 NOP。 
 </div>
 </div>
 
 <div>
-<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif" width="20px" height="20px" border="0" class="img_whs2"> ��ע</h3>
+<h3 class=NoteTipHead><img src="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Note.gif" width="20px" height="20px" border="0" class="img_whs2"> 备注</h3>
 
-<p>�����ͼ������Ч�ļ��ػ�洢���ݷ��ʣ�������������ֹ�쳣��</p>
+<p>如果试图进行无效的加载或存储数据访问，则生成数据终止异常。</p>
 
-<h2>Ѱַģʽ</h2>
+<h2>寻址模式</h2>
 
-�����º��ַ��ʽ��&ldquo;Ѱַģʽ 2��������洢�ֻ��޷����ֽ�&rdquo;�� 
+仅限事后变址形式的&ldquo;寻址模式 2：加载与存储字或无符号字节&rdquo;。 
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -233,7 +233,7 @@ LDRBT ָ��ֽڴ� <em CLASS=SourceItalic>addr_mode</em> ���ص� <em CLASS=Source
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>����</h2>
+<h2>编码</h2>
 
 <tr>
 <td ROWSPAN=1
@@ -362,13 +362,13 @@ LDRBT ָ��ֽڴ� <em CLASS=SourceItalic>addr_mode</em> ���ص� <em CLASS=Source
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p CLASS=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.text<br> 2 <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.globl funcldrbt<br> 4 <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@.align 0<br> 6 <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@ * * * LDRBT (Addressing Mode 2) * * * <br> 8 <br> 9 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA load_store, CODE, READONLY <br> 10 <br> 11 &#xA0;&#xA0;00000000 &#xA0;&#xA0;E3A01FAF &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R1, #700<br> 12 &#xA0;&#xA0;00000004 &#xA0;&#xA0;E3A02008 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R2, #8<br> 13 &#xA0;&#xA0;00000008 &#xA0;&#xA0;E5812000 &#xA0;&#xA0;STR &#xA0;&#xA0;&#xA0;R2, [R1]<br> 14 &#xA0;&#xA0;00000012 &#xA0;&#xA0;E5F13005 &#xA0;&#xA0;LDRBT &#xA0;R3, [R1, #5]!<br>15 <br> 16 &#xA0;&#xA0;00000016 &#xA0;&#xA0;E3A02050 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R2, #80<br> 17 &#xA0;&#xA0;00000020 &#xA0;&#xA0;E3A03009 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R3, #9<br> 18 &#xA0;&#xA0;00000024 &#xA0;&#xA0;E5823000 &#xA0;&#xA0;STR &#xA0;&#xA0;&#xA0;R3, [R2]<br> 19 &#xA0;&#xA0;00000028 &#xA0;&#xA0;E3A0400B &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R4, #11<br> 20 &#xA0;&#xA0;00000032 &#xA0;&#xA0;E7F25004 &#xA0;&#xA0;LDRBT &#xA0;R5, [R2, R4]<br> 21 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END</span> </p>
 
-<h2>������Ϣ</h2>
+<h2>更多信息</h2>
 
-<p><a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.htm">�����Ѱַģʽ 2��<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.htm#Load and Store Word or Unsigned Byte">������洢�ֻ��޷����ֽ�</a></a></p>
+<p><a href="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.htm">请参阅寻址模式 2：<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Load_and_Store_Word_or_Unsigned_Byte_Overview.htm#Load and Store Word or Unsigned Byte">加载与存储字或无符号字节</a></a></p>
 </div>
 </div>
 

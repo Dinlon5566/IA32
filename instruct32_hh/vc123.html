@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc123.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:45 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>FSUBR/FSUBRP/FISUBR - ±»¼õ</title>
+<title>FSUBR/FSUBRP/FISUBR - è¢«å‡</title>
 
 <!--(Meta)==========================================================-->
 
@@ -23,7 +23,7 @@
 <meta name=layout-height content=0>
 <meta name=layout-width content=0>
 <meta name=date content="07 1, 2002 2:12:28 PM">
-<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;EFLAGS;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;¡ÀF;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;¡À;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FSUB;FSUBP;FISUB;Dest;FSUBR;FSUBRP;FISUBR">
+<meta name=x-ignored-words content="PACKSSWB;PACKSSDW--Pack;Opcode;r;PACKSSDW;doubleword;doublewords;quadword;XMM;SaturateSignedWordToSignedByte;SaturateSignedDoublewordToSignedWord;SaturateSignedDwordToSignedWord;DS;ES;FS;GS;SS;UD;OSFXSR;CPUID;TS;MF;FPU;FFFFH;PF;Vol;microarchitecture;CMPPD--Compare;ib;CMPPD;SIMD;CMPPS;NaN;QNaN;eq;lt;le;unord;neq;nlt;nle;ord;pseudo-ops;CMPEQPD;CMPLTPD;CMPLEPD;CMPUNORDPD;CMPNEQPD;CMPNLTPD;CMPNLEPD;CMPORDPD;EQ;LT;LE;UNORD;NEQ;NLT;NLE;ORD;FFFFFFFFFFFFFFFFH;FI;SNaN;denormal;PF(fault-code;XM;OSXMMEXCPT;CMPS;CMPSB;CMPSW;CMPSD--Compare;E;SI;DI;CMPSD;ESI;EDI;decremented;DF;ECX;REPE;REPZ;REPNE;REPNZ--Repeat;SetStatusFlags(temp;comparison*;CF;SF;ZF;AF;GP;EFLAGS;CWD;CDQ--Convert;Doubleword;Quadword;DX;CDQ;EDX;EAX;opcode;OperandSize;SignExtend(AX;SignExtend(EAX;CBW;CWDE--Convert;CWDE;SignExtend(AL;FCOM;FCOMP;FCOMPP--Compare;ST(i;FCOMPP;Unordered*;FXAM--Examine;FUCOM;QNaNs;ESAC;FPUControlWord.IM;PopRegisterStack;FADD;FADDP;FIADD--Add;FIADD;DEST;F;Â±F;ConvertExtendedReal(SRC;FICOM;FICOMP--Compare;FICOMP;FDIV;FDIVP;FIDIV--Divide;FIDIV;Z;Â±;FDIVR;FDIVRP;FIDIVR--Reverse;FIDIVR;FMUL;FMULP;FIMUL--Multiply;FIMUL;FISTP--Store;FISTP;RC;FISUB--Subtract;FSUB;FSUBP;FISUB;Dest;FSUBR;FSUBRP;FISUBR">
 
 
  <meta name="topic-status" content="In Progress">
@@ -96,7 +96,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("²Î¿¼\nÖ¸Áî¼¯\nIA-32 Ö¸Áî\nF - Ö¸Áî\nFSUBR/FSUBRP/FISUBR - ±»¼õ");
+	addTocInfo("å‚è€ƒ\næŒ‡ä»¤é›†\nIA-32 æŒ‡ä»¤\nF - æŒ‡ä»¤\nFSUBR/FSUBRP/FISUBR - è¢«å‡");
 
 	}
 	if (window.writeBtnStyle)
@@ -119,7 +119,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>FSUBR/FSUBRP/FISUBR - ±»¼õ</h1>
+<h1>FSUBR/FSUBRP/FISUBR - è¢«å‡</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -127,13 +127,13 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">²Ù×÷Âë</td>
+	style="margin-bottom: 0;">æ“ä½œç </td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">Ö¸Áî</td>
+	style="margin-bottom: 0;">æŒ‡ä»¤</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ËµÃ÷</td></tr>
+	style="margin-bottom: 0;">è¯´æ˜Ž</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -144,7 +144,7 @@ else
 	style="margin-bottom: 0;">FSUBR <span style="font-style: italic;"><I>m32real</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">´Ó <span style="font-style: italic;"><I>m32real</I></span> ¼õÈ¥ ST(0)£¬½á¹û´æ´¢µ½ ST(0)</td></tr>
+	style="margin-bottom: 0;">ä»Ž <span style="font-style: italic;"><I>m32real</I></span> å‡åŽ» ST(0)ï¼Œç»“æžœå­˜å‚¨åˆ° ST(0)</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -155,7 +155,7 @@ else
 	style="margin-bottom: 0;">FSUBR <span style="font-style: italic;"><I>m64real</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">´Ó <span style="font-style: italic;"><I>m64real</I></span> ¼õÈ¥ ST(0)£¬½á¹û´æ´¢µ½ ST(0)</td></tr>
+	style="margin-bottom: 0;">ä»Ž <span style="font-style: italic;"><I>m64real</I></span> å‡åŽ» ST(0)ï¼Œç»“æžœå­˜å‚¨åˆ° ST(0)</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -166,7 +166,7 @@ else
 	style="margin-bottom: 0;">FSUBR ST(0), ST(i)</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">´Ó ST(i) ¼õÈ¥ ST(0)£¬½á¹û´æ´¢µ½ ST(0)</td></tr>
+	style="margin-bottom: 0;">ä»Ž ST(i) å‡åŽ» ST(0)ï¼Œç»“æžœå­˜å‚¨åˆ° ST(0)</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -177,7 +177,7 @@ else
 	style="margin-bottom: 0;">FSUBR ST(i), ST(0)</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">´Ó ST(0) ¼õÈ¥ ST(i)£¬½á¹û´æ´¢µ½ ST(i)</td></tr>
+	style="margin-bottom: 0;">ä»Ž ST(0) å‡åŽ» ST(i)ï¼Œç»“æžœå­˜å‚¨åˆ° ST(i)</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -188,7 +188,7 @@ else
 	style="margin-bottom: 0;">FSUBRP ST(i), ST(0)</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">´Ó ST(0) ¼õÈ¥ ST(i)£¬½á¹û´æ´¢µ½ ST(i)£¬²¢µ¯³ö¼Ä´æÆ÷¶ÑÕ»</td></tr>
+	style="margin-bottom: 0;">ä»Ž ST(0) å‡åŽ» ST(i)ï¼Œç»“æžœå­˜å‚¨åˆ° ST(i)ï¼Œå¹¶å¼¹å‡ºå¯„å­˜å™¨å †æ ˆ</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -199,7 +199,7 @@ else
 	style="margin-bottom: 0;">FSUBRP</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">´Ó ST(0) ¼õÈ¥ ST(1)£¬½á¹û´æ´¢µ½ ST(1)£¬²¢µ¯³ö¼Ä´æÆ÷¶ÑÕ»</td></tr>
+	style="margin-bottom: 0;">ä»Ž ST(0) å‡åŽ» ST(1)ï¼Œç»“æžœå­˜å‚¨åˆ° ST(1)ï¼Œå¹¶å¼¹å‡ºå¯„å­˜å™¨å †æ ˆ</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -210,7 +210,7 @@ else
 	style="margin-bottom: 0;">FISUBR <span style="font-style: italic;"><I>m32int</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">´Ó <span style="font-style: italic;"><I>m32int</I></span> ¼õÈ¥ ST(0)£¬½á¹û´æ´¢µ½ ST(0)</td></tr>
+	style="margin-bottom: 0;">ä»Ž <span style="font-style: italic;"><I>m32int</I></span> å‡åŽ» ST(0)ï¼Œç»“æžœå­˜å‚¨åˆ° ST(0)</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -221,61 +221,61 @@ else
 	style="margin-bottom: 0;">FISUBR <span style="font-style: italic;"><I>m16int</I></span></td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">´Ó <span style="font-style: italic;"><I>m16int</I></span> ¼õÈ¥ ST(0)£¬½á¹û´æ´¢µ½ ST(0)</td></tr>
+	style="margin-bottom: 0;">ä»Ž <span style="font-style: italic;"><I>m16int</I></span> å‡åŽ» ST(0)ï¼Œç»“æžœå­˜å‚¨åˆ° ST(0)</td></tr>
 </table>
 
-<h2>ËµÃ÷</h2>
+<h2>è¯´æ˜Ž</h2>
 
-<p>´ÓÔ´²Ù×÷Êý¼õÈ¥Ä¿±ê²Ù×÷Êý£¬²îÖµ´æ´¢µ½Ä¿±êÎ»ÖÃ¡£Ä¿±ê²Ù×÷Êý×ÜÊÇ FPU ¼Ä´æÆ÷£¬Ô´²Ù×÷Êý¿ÉÒÔÊÇ¼Ä´æÆ÷»òÄÚ´æÎ»ÖÃ¡£ÄÚ´æÖÐµÄÔ´²Ù×÷Êý¿ÉÒÔÊÇµ¥¾«¶ÈÊµÊý¡¢Ë«¾«¶ÈÊµÊý¡¢×ÖÕûÊý»ò¶ÌÕûÊý¸ñÊ½¡£</p>
+<p>ä»Žæºæ“ä½œæ•°å‡åŽ»ç›®æ ‡æ“ä½œæ•°ï¼Œå·®å€¼å­˜å‚¨åˆ°ç›®æ ‡ä½ç½®ã€‚ç›®æ ‡æ“ä½œæ•°æ€»æ˜¯ FPU å¯„å­˜å™¨ï¼Œæºæ“ä½œæ•°å¯ä»¥æ˜¯å¯„å­˜å™¨æˆ–å†…å­˜ä½ç½®ã€‚å†…å­˜ä¸­çš„æºæ“ä½œæ•°å¯ä»¥æ˜¯å•ç²¾åº¦å®žæ•°ã€åŒç²¾åº¦å®žæ•°ã€å­—æ•´æ•°æˆ–çŸ­æ•´æ•°æ ¼å¼ã€‚</p>
 
-<p>ÕâÐ©Ö¸ÁîÖ´ÐÐ FSUB¡¢FSUBP ¼° FISUB Ö¸ÁîµÄÄæ²Ù×÷¡£Ìá¹©ËüÃÇÊÇÎªÁËÖ§³Ö¸ü¸ßÐ§µØ±àÂë¡£</p>
+<p>è¿™äº›æŒ‡ä»¤æ‰§è¡Œ FSUBã€FSUBP åŠ FISUB æŒ‡ä»¤çš„é€†æ“ä½œã€‚æä¾›å®ƒä»¬æ˜¯ä¸ºäº†æ”¯æŒæ›´é«˜æ•ˆåœ°ç¼–ç ã€‚</p>
 
-<p>ÎÞ²Ù×÷Êý°æµÄÖ¸Áî´Ó ST(0) ¼Ä´æÆ÷µÄÄÚÈÝ¼õÈ¥ ST(1) ¼Ä´æÆ÷µÄÄÚÈÝ£¬½á¹û´æ´¢µ½ ST(1)¡£µ¥²Ù×÷Êý°æ´ÓÄÚ´æÎ»ÖÃµÄÄÚÈÝ£¨ÊµÊý»òÕûÊýÖµ£©¼õÈ¥ ST(0) ¼Ä´æÆ÷µÄÄÚÈÝ£¬½á¹û´æ´¢µ½ ST(0)¡£Ë«²Ù×÷Êý°æ´Ó ST(0) ¼Ä´æÆ÷µÄÄÚÈÝ¼õÈ¥ ST(i) ¼Ä´æÆ÷µÄÄÚÈÝ£¬·´Ö®ÒàÈ»¡£</p>
+<p>æ— æ“ä½œæ•°ç‰ˆçš„æŒ‡ä»¤ä»Ž ST(0) å¯„å­˜å™¨çš„å†…å®¹å‡åŽ» ST(1) å¯„å­˜å™¨çš„å†…å®¹ï¼Œç»“æžœå­˜å‚¨åˆ° ST(1)ã€‚å•æ“ä½œæ•°ç‰ˆä»Žå†…å­˜ä½ç½®çš„å†…å®¹ï¼ˆå®žæ•°æˆ–æ•´æ•°å€¼ï¼‰å‡åŽ» ST(0) å¯„å­˜å™¨çš„å†…å®¹ï¼Œç»“æžœå­˜å‚¨åˆ° ST(0)ã€‚åŒæ“ä½œæ•°ç‰ˆä»Ž ST(0) å¯„å­˜å™¨çš„å†…å®¹å‡åŽ» ST(i) å¯„å­˜å™¨çš„å†…å®¹ï¼Œåä¹‹äº¦ç„¶ã€‚</p>
 
-<p>Ö´ÐÐ¼õ·¨Ö®ºó£¬FSUBRP Ö¸ÁîÖ´ÐÐ¶îÍâµÄ²Ù×÷£¬¼´µ¯³ö FPU ¼Ä´æÆ÷¶ÑÕ»¡£ÎªÁËµ¯³ö¼Ä´æÆ÷¶ÑÕ»£¬´¦ÀíÆ÷½« ST(0) ¼Ä´æÆ÷±ê¼ÇÎª¿Õ£¬²¢Ê¹¶ÑÕ»Ö¸Õë (TOP) µÝÔö 1¡£ÎÞ²Ù×÷Êý°æµÄ¸¡µã±»¼õÖ¸Áî×ÜÊÇµ¯³ö¼Ä´æÆ÷¶ÑÕ»¡£ÔÚÄ³Ð©»ã±àÆ÷ÖÐ£¬´ËÖ¸ÁîµÄÖú¼Ç·ûÊÇ FSUBR ¶ø²»ÊÇ FSUBRP¡£</p>
+<p>æ‰§è¡Œå‡æ³•ä¹‹åŽï¼ŒFSUBRP æŒ‡ä»¤æ‰§è¡Œé¢å¤–çš„æ“ä½œï¼Œå³å¼¹å‡º FPU å¯„å­˜å™¨å †æ ˆã€‚ä¸ºäº†å¼¹å‡ºå¯„å­˜å™¨å †æ ˆï¼Œå¤„ç†å™¨å°† ST(0) å¯„å­˜å™¨æ ‡è®°ä¸ºç©ºï¼Œå¹¶ä½¿å †æ ˆæŒ‡é’ˆ (TOP) é€’å¢ž 1ã€‚æ— æ“ä½œæ•°ç‰ˆçš„æµ®ç‚¹è¢«å‡æŒ‡ä»¤æ€»æ˜¯å¼¹å‡ºå¯„å­˜å™¨å †æ ˆã€‚åœ¨æŸäº›æ±‡ç¼–å™¨ä¸­ï¼Œæ­¤æŒ‡ä»¤çš„åŠ©è®°ç¬¦æ˜¯ FSUBR è€Œä¸æ˜¯ FSUBRPã€‚</p>
 
-<p>Ö´ÐÐ¼õ·¨Ö®Ç°£¬FISUBR Ö¸Áî½«ÕûÐÍÔ´²Ù×÷Êý×ª»»³ÉÀ©Õ¹µÄÊµÊý¸ñÊ½¡£</p>
+<p>æ‰§è¡Œå‡æ³•ä¹‹å‰ï¼ŒFISUBR æŒ‡ä»¤å°†æ•´åž‹æºæ“ä½œæ•°è½¬æ¢æˆæ‰©å±•çš„å®žæ•°æ ¼å¼ã€‚</p>
 
-<p>ÏÂ±íÏÔÊ¾½«¸÷ÀàÊýÖµÏà¼õÊ±µÃµ½µÄ½á¹û£¨¼ÙÉèÎ´·¢ÉúÉÏÒç»òÏÂÒç£©¡£ÕâÀï£¬´Ó SRC Öµ¼õÈ¥ DEST Öµ£¨SRC - DEST <script type="text/javascript" language="JavaScript"><!--
+<p>ä¸‹è¡¨æ˜¾ç¤ºå°†å„ç±»æ•°å€¼ç›¸å‡æ—¶å¾—åˆ°çš„ç»“æžœï¼ˆå‡è®¾æœªå‘ç”Ÿä¸Šæº¢æˆ–ä¸‹æº¢ï¼‰ã€‚è¿™é‡Œï¼Œä»Ž SRC å€¼å‡åŽ» DEST å€¼ï¼ˆSRC - DEST <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='arrwleft.gif' border='0' class='img_whs3'>");}
 else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript> ½á¹û£©¡£</p>
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript> ç»“æžœï¼‰ã€‚</p>
 
-<p>Í¬·ûºÅ²Ù×÷ÊýÖ®¼äµÄ²îÎª 0 Ê±£¬½á¹ûÊÇ +0£¬µ«ÔÚÏò -<script type="text/javascript" language="JavaScript"><!--
+<p>åŒç¬¦å·æ“ä½œæ•°ä¹‹é—´çš„å·®ä¸º 0 æ—¶ï¼Œç»“æžœæ˜¯ +0ï¼Œä½†åœ¨å‘ -<script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='infinity.gif' border='0' class='img_whs3'>");}
 else
 {   document.write("<img src='infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript> È¡ÕûÄ£Ê½ÖÐ³ýÍâ£¬´ËÊ±½á¹ûÊÇ -0¡£´ËÖ¸Áî»¹±£Ö¤ +0 - (-0) <script type="text/javascript" language="JavaScript"><!--
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript> å–æ•´æ¨¡å¼ä¸­é™¤å¤–ï¼Œæ­¤æ—¶ç»“æžœæ˜¯ -0ã€‚æ­¤æŒ‡ä»¤è¿˜ä¿è¯ +0 - (-0) <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='arrwleft.gif' border='0' class='img_whs3'>");}
 else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript> +0 Óë -0 - (+0) <script type="text/javascript" language="JavaScript"><!--
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript> +0 ä¸Ž -0 - (+0) <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='arrwleft.gif' border='0' class='img_whs3'>");}
 else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript> -0¡£Ô´²Ù×÷ÊýÎªÕûÊý 0 Ê±£¬Ëü±»µ±×÷ +0¡£</p>
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript> -0ã€‚æºæ“ä½œæ•°ä¸ºæ•´æ•° 0 æ—¶ï¼Œå®ƒè¢«å½“ä½œ +0ã€‚</p>
 
-<p>Èç¹ûÓÐÒ»¸ö²Ù×÷ÊýÎª <script type="text/javascript" language="JavaScript"><!--
+<p>å¦‚æžœæœ‰ä¸€ä¸ªæ“ä½œæ•°ä¸º <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='infinity.gif' border='0' class='img_whs3'>");}
 else
 {   document.write("<img src='infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript>£¬Ôò½á¹ûÎª <script type="text/javascript" language="JavaScript"><!--
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript>ï¼Œåˆ™ç»“æžœä¸º <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='infinity.gif' border='0' class='img_whs3'>");}
 else
 {   document.write("<img src='infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript>£¬·ûºÅ²»±ä¡£Èç¹ûÁ½¸ö²Ù×÷ÊýÊÇÍ¬·ûºÅµÄ <script type="text/javascript" language="JavaScript"><!--
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript>ï¼Œç¬¦å·ä¸å˜ã€‚å¦‚æžœä¸¤ä¸ªæ“ä½œæ•°æ˜¯åŒç¬¦å·çš„ <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='infinity.gif' border='0' class='img_whs3'>");}
 else
 {   document.write("<img src='infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript>£¬ÔòÉú³É²Ù×÷ÎÞÐ§Òì³£¡£</p>
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript>ï¼Œåˆ™ç”Ÿæˆæ“ä½œæ— æ•ˆå¼‚å¸¸ã€‚</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -314,7 +314,7 @@ else
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
-	align=center>-F »ò -I</td>
+	align=center>-F æˆ– -I</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
@@ -326,7 +326,7 @@ else
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
-	align=center>+F »ò +I</td>
+	align=center>+F æˆ– +I</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
@@ -422,7 +422,7 @@ else
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
-	align=center>&plusmn;F »ò &plusmn;0</td>
+	align=center>&plusmn;F æˆ– &plusmn;0</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
@@ -566,7 +566,7 @@ else
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
-	align=center>&plusmn;F »ò &plusmn;0</td>
+	align=center>&plusmn;F æˆ– &plusmn;0</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
@@ -680,11 +680,11 @@ else
 	align=center>NaN</td></tr>
 </table>
 
-<p>±¸×¢£ºF ±íÊ¾ÓÐÏÞÊµÊý¡£I ±íÊ¾ÕûÊý¡£</p>
+<p>å¤‡æ³¨ï¼šF è¡¨ç¤ºæœ‰é™å®žæ•°ã€‚I è¡¨ç¤ºæ•´æ•°ã€‚</p>
 
-<p>* ±íÊ¾¸¡µãËãÊõ²Ù×÷ÊýÎÞÐ§ (#IA) Òì³£¡£</p>
+<p>* è¡¨ç¤ºæµ®ç‚¹ç®—æœ¯æ“ä½œæ•°æ— æ•ˆ (#IA) å¼‚å¸¸ã€‚</p>
 
-<h2>²Ù×÷</h2>
+<h2>æ“ä½œ</h2>
 
 <p class=Preformatted>IF instruction is FISUBR<br> THEN<br> DEST <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -703,69 +703,69 @@ else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'>");}
 //--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript> FSUBRP <br> THEN <br> PopRegisterStack<br> FI;</p>
 
-<h2>Ó°ÏìµÄ FPU ±êÖ¾</h2>
+<h2>å½±å“çš„ FPU æ ‡å¿—</h2>
 
-<p>C1 - Èç¹û·¢Éú¶ÑÕ»ÏÂÒç£¬ÔòÉèÖÃÎª 0¡£Èç¹ûÉú³É²»¾«È·µÄ½á¹ûÒì³£ (#P) ´íÎó£¬Ôò±íÊ¾È¡Õû·½Ïò£º</p>
+<p>C1 - å¦‚æžœå‘ç”Ÿå †æ ˆä¸‹æº¢ï¼Œåˆ™è®¾ç½®ä¸º 0ã€‚å¦‚æžœç”Ÿæˆä¸ç²¾ç¡®çš„ç»“æžœå¼‚å¸¸ (#P) é”™è¯¯ï¼Œåˆ™è¡¨ç¤ºå–æ•´æ–¹å‘ï¼š</p>
 
 <p>0 <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='arrwleft.gif' border='0' class='img_whs3'>");}
 else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript> ·ÇÏòÉÏÈ¡Õû£»1 <script type="text/javascript" language="JavaScript"><!--
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript> éžå‘ä¸Šå–æ•´ï¼›1 <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='arrwleft.gif' border='0' class='img_whs3'>");}
 else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'>");}
-//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript> ÏòÉÏÈ¡Õû¡£</p>
+//--></script><noscript><img src='https://www.hgy413.com/hgydocs/IA32/instruct32_hh/arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs3'></noscript> å‘ä¸Šå–æ•´ã€‚</p>
 
-<p>C0¡¢C2¡¢C3 - Î´¶¨Òå¡£</p>
+<p>C0ã€C2ã€C3 - æœªå®šä¹‰ã€‚</p>
 
-<h2>¸¡µãÒì³£</h2>
+<h2>æµ®ç‚¹å¼‚å¸¸</h2>
 
-<p>#IS - ·¢Éú¶ÑÕ»ÏÂÒç¡£</p>
+<p>#IS - å‘ç”Ÿå †æ ˆä¸‹æº¢ã€‚</p>
 
-<p>#IA - ²Ù×÷ÊýÊÇ SNaN Öµ»ò²»Ö§³ÖµÄ¸ñÊ½¡£²Ù×÷ÊýÊÇÍ¬·ûºÅµÄÎÞÇî´ó¡£</p>
+<p>#IA - æ“ä½œæ•°æ˜¯ SNaN å€¼æˆ–ä¸æ”¯æŒçš„æ ¼å¼ã€‚æ“ä½œæ•°æ˜¯åŒç¬¦å·çš„æ— ç©·å¤§ã€‚</p>
 
-<p>#D - Ô´²Ù×÷ÊýÊÇ·Ç¹æ¸ñ»¯Öµ¡£</p>
+<p>#D - æºæ“ä½œæ•°æ˜¯éžè§„æ ¼åŒ–å€¼ã€‚</p>
 
-<p>#U - ½á¹û¶ÔÓÚÄ¿±ê¸ñÊ½¶øÑÔÌ«Ð¡¡£</p>
+<p>#U - ç»“æžœå¯¹äºŽç›®æ ‡æ ¼å¼è€Œè¨€å¤ªå°ã€‚</p>
 
-<p>#O - ½á¹û¶ÔÓÚÄ¿±ê¸ñÊ½¶øÑÔÌ«´ó¡£</p>
+<p>#O - ç»“æžœå¯¹äºŽç›®æ ‡æ ¼å¼è€Œè¨€å¤ªå¤§ã€‚</p>
 
-<p>#P - ÖµÎÞ·¨°´Ä¿±ê¸ñÊ½¾«È·±íÊ¾¡£</p>
+<p>#P - å€¼æ— æ³•æŒ‰ç›®æ ‡æ ¼å¼ç²¾ç¡®è¡¨ç¤ºã€‚</p>
 
-<h2>±£»¤Ä£Ê½Òì³£</h2>
+<h2>ä¿æŠ¤æ¨¡å¼å¼‚å¸¸</h2>
 
-<p>#GP(0) - Èç¹ûÄÚ´æ²Ù×÷ÊýÓÐÐ§µØÖ·³¬³ö CS¡¢DS¡¢ES¡¢FS »ò GS ¶ÎÏÞÖÆ¡£Èç¹û DS¡¢ES¡¢FS¡¢»ò GS ¼Ä´æÆ÷ÓÃÓÚ·ÃÎÊÄÚ´æ£¬²¢ÇÒËü°üº¬¿ÕµÄ¶ÎÑ¡ÔñÆ÷¡£</p>
+<p>#GP(0) - å¦‚æžœå†…å­˜æ“ä½œæ•°æœ‰æ•ˆåœ°å€è¶…å‡º CSã€DSã€ESã€FS æˆ– GS æ®µé™åˆ¶ã€‚å¦‚æžœ DSã€ESã€FSã€æˆ– GS å¯„å­˜å™¨ç”¨äºŽè®¿é—®å†…å­˜ï¼Œå¹¶ä¸”å®ƒåŒ…å«ç©ºçš„æ®µé€‰æ‹©å™¨ã€‚</p>
 
-<p>#SS(0) - Èç¹ûÄÚ´æ²Ù×÷ÊýÓÐÐ§µØÖ·³¬³ö SS ¶ÎÏÞÖÆ¡£</p>
+<p>#SS(0) - å¦‚æžœå†…å­˜æ“ä½œæ•°æœ‰æ•ˆåœ°å€è¶…å‡º SS æ®µé™åˆ¶ã€‚</p>
 
-<p>#NM - Èç¹û CR0 ÖÐµÄ EM »ò TS ÉèÖÃÎª 1¡£</p>
+<p>#NM - å¦‚æžœ CR0 ä¸­çš„ EM æˆ– TS è®¾ç½®ä¸º 1ã€‚</p>
 
-<p>#PF(´íÎó´úÂë) - Èç¹û·¢ÉúÒ³´íÎó¡£</p>
+<p>#PF(é”™è¯¯ä»£ç ) - å¦‚æžœå‘ç”Ÿé¡µé”™è¯¯ã€‚</p>
 
-<p>#AC(0) - Èç¹ûÆôÓÃ¶ÔÆë¼ì²é²¢ÔÚµ±Ç°ÌØÈ¨¼¶±ðÎª 3 Ê±½øÐÐÎ´¶ÔÆëµÄÄÚ´æÒýÓÃ¡£</p>
+<p>#AC(0) - å¦‚æžœå¯ç”¨å¯¹é½æ£€æŸ¥å¹¶åœ¨å½“å‰ç‰¹æƒçº§åˆ«ä¸º 3 æ—¶è¿›è¡Œæœªå¯¹é½çš„å†…å­˜å¼•ç”¨ã€‚</p>
 
-<h2>ÊµµØÖ·Ä£Ê½Òì³£</h2>
+<h2>å®žåœ°å€æ¨¡å¼å¼‚å¸¸</h2>
 
-<p>#GP - Èç¹ûÄÚ´æ²Ù×÷ÊýÓÐÐ§µØÖ·³¬³ö CS¡¢DS¡¢ES¡¢FS »ò GS ¶ÎÏÞÖÆ¡£</p>
+<p>#GP - å¦‚æžœå†…å­˜æ“ä½œæ•°æœ‰æ•ˆåœ°å€è¶…å‡º CSã€DSã€ESã€FS æˆ– GS æ®µé™åˆ¶ã€‚</p>
 
-<p>#SS - Èç¹ûÄÚ´æ²Ù×÷ÊýÓÐÐ§µØÖ·³¬³ö SS ¶ÎÏÞÖÆ¡£</p>
+<p>#SS - å¦‚æžœå†…å­˜æ“ä½œæ•°æœ‰æ•ˆåœ°å€è¶…å‡º SS æ®µé™åˆ¶ã€‚</p>
 
-<p>#NM - Èç¹û CR0 ÖÐµÄ EM »ò TS ÉèÖÃÎª 1¡£</p>
+<p>#NM - å¦‚æžœ CR0 ä¸­çš„ EM æˆ– TS è®¾ç½®ä¸º 1ã€‚</p>
 
-<h2>Ðé 8086 Ä£Ê½Òì³£</h2>
+<h2>è™š 8086 æ¨¡å¼å¼‚å¸¸</h2>
 
-<p>#GP(0) - Èç¹ûÄÚ´æ²Ù×÷ÊýÓÐÐ§µØÖ·³¬³ö CS¡¢DS¡¢ES¡¢FS »ò GS ¶ÎÏÞÖÆ¡£</p>
+<p>#GP(0) - å¦‚æžœå†…å­˜æ“ä½œæ•°æœ‰æ•ˆåœ°å€è¶…å‡º CSã€DSã€ESã€FS æˆ– GS æ®µé™åˆ¶ã€‚</p>
 
-<p>#SS(0) - Èç¹ûÄÚ´æ²Ù×÷ÊýÓÐÐ§µØÖ·³¬³ö SS ¶ÎÏÞÖÆ¡£</p>
+<p>#SS(0) - å¦‚æžœå†…å­˜æ“ä½œæ•°æœ‰æ•ˆåœ°å€è¶…å‡º SS æ®µé™åˆ¶ã€‚</p>
 
-<p>#NM - Èç¹û CR0 ÖÐµÄ EM »ò TS ÉèÖÃÎª 1¡£</p>
+<p>#NM - å¦‚æžœ CR0 ä¸­çš„ EM æˆ– TS è®¾ç½®ä¸º 1ã€‚</p>
 
-<p>#PF(´íÎó´úÂë) - Èç¹û·¢ÉúÒ³´íÎó¡£</p>
+<p>#PF(é”™è¯¯ä»£ç ) - å¦‚æžœå‘ç”Ÿé¡µé”™è¯¯ã€‚</p>
 
-<p class="whs4">#AC(0) - Èç¹ûÔÚÆôÓÃ¶ÔÆë¼ì²éµÄÇé¿öÏÂ½øÐÐÎ´¶ÔÆëµÄÄÚ´æÒýÓÃ¡£ </p>
+<p class="whs4">#AC(0) - å¦‚æžœåœ¨å¯ç”¨å¯¹é½æ£€æŸ¥çš„æƒ…å†µä¸‹è¿›è¡Œæœªå¯¹é½çš„å†…å­˜å¼•ç”¨ã€‚ </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

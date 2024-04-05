@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/Pentium4_HH/Advice4_HH/eliminating_branches.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:23 GMT -->
 <head>
 
-<title>Ïû³ý·ÖÖ§</title>
+<title>æ¶ˆé™¤åˆ†æ”¯</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=MS-HAID content="branch prediction">
 <meta name=MS-HAID content="E4 branch prediction">
 <meta name=MS-HAID content="E4 Mispredicted Branches Retired">
@@ -85,7 +85,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("²Î¿¼\n´¦ÀíÆ÷ÊÂ¼þÓë½¨Òé\nÓ¢ÌØ¶û(R) ±¼ÌÚ(R) 4 ´¦ÀíÆ÷\n¹ØÓÚÓ¢ÌØ¶û(R) ±¼ÌÚ(R) 4 ´¦ÀíÆ÷µÄ½¨Òé\n¹ØÓÚÓ¢ÌØ¶û(R) ±¼ÌÚ(R) 4 ´¦ÀíÆ÷µÄ½¨Òé\nÏû³ý·ÖÖ§");
+	addTocInfo("å‚è€ƒ\nå¤„ç†å™¨äº‹ä»¶ä¸Žå»ºè®®\nè‹±ç‰¹å°”(R) å¥”è…¾(R) 4 å¤„ç†å™¨\nå…³äºŽè‹±ç‰¹å°”(R) å¥”è…¾(R) 4 å¤„ç†å™¨çš„å»ºè®®\nå…³äºŽè‹±ç‰¹å°”(R) å¥”è…¾(R) 4 å¤„ç†å™¨çš„å»ºè®®\næ¶ˆé™¤åˆ†æ”¯");
 
 	}
 	if (window.writeBtnStyle)
@@ -108,51 +108,51 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="p4p60hw.gif" alt="±¼ÌÚ(R) 4 ´¦ÀíÆ÷Ö÷Ìâ" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">Ïû³ý·ÖÖ§</h1>
+<h1><img src="p4p60hw.gif" alt="å¥”è…¾(R) 4 å¤„ç†å™¨ä¸»é¢˜" x-maintain-ratio="TRUE" height="60px" align="right" border="0" class="img_whs1">æ¶ˆé™¤åˆ†æ”¯</h1>
 
-<p>Ïû³ý·ÖÖ§ÄÜ¸ÄÉÆÐÔÄÜ£¬Ô­ÒòÈçÏÂ£º</p>
-
-<ul type="disc" class="whs2">
-	
-	<li class=kadov-p><p>½µµÍÔ¤²âÊ§ÎóµÄ¸ÅÂÊ</p></li>
-	
-	<li class=kadov-p><p>¼õÉÙ±ØÐèµÄ·ÖÖ§Ä¿±ê»º³åÇø (BTB) ÏîÄ¿Êý£»ÓÀÔ¶²»Ö´ÐÐµÄÌõ¼þ·ÖÖ§²»ÏûºÄ BTB ×ÊÔ´¡£</p></li>
-</ul>
-
-<p>ÒÔÏÂÊÇÏû³ý·ÖÖ§µÄËÄÖÖ»ù±¾·½·¨£º</p>
+<p>æ¶ˆé™¤åˆ†æ”¯èƒ½æ”¹å–„æ€§èƒ½ï¼ŒåŽŸå› å¦‚ä¸‹ï¼š</p>
 
 <ul type="disc" class="whs2">
 	
-	<li class=kadov-p><p>µ÷Õû´úÂë½á¹¹£¬Ê¹»ù±¾Ö¸Áî¿éÏàÁÚ¡£</p></li>
+	<li class=kadov-p><p>é™ä½Žé¢„æµ‹å¤±è¯¯çš„æ¦‚çŽ‡</p></li>
 	
-	<li class=kadov-p><p>Õ¹¿ªÑ­»·£¬Ïê¼û<a href="Loop_Unrolling.html">Ñ­»·Õ¹¿ª</a>Ö÷ÌâÖÐµÄÌÖÂÛ¡£</p></li>
-	
-	<li class=kadov-p><p>Ê¹ÓÃ <span class=Code>cmov</span> Ö¸Áî¡£</p></li>
-	
-	<li class=kadov-p><p>Ê¹ÓÃ <span class=Code>setcc</span> Ö¸Áî¡£</p></li>
+	<li class=kadov-p><p>å‡å°‘å¿…éœ€çš„åˆ†æ”¯ç›®æ ‡ç¼“å†²åŒº (BTB) é¡¹ç›®æ•°ï¼›æ°¸è¿œä¸æ‰§è¡Œçš„æ¡ä»¶åˆ†æ”¯ä¸æ¶ˆè€— BTB èµ„æºã€‚</p></li>
 </ul>
 
-<p><span style="font-weight: bold;"><B>»ã±à/±àÒëÆ÷±àÂë¹æÔò 1¡£</B></span>£¨Ó°Ïì¶È MH£¬Í¨ÓÃÐÔ H£©<span style="font-style: italic;"><I>µ÷Õû´úÂë½á¹¹£¬Ê¹»ù±¾Ö¸Áî¿éÏàÁÚ£¬ÒÔÏû³ý²»±ØÒªµÄ·ÖÖ§¡£</I></span></p>
+<p>ä»¥ä¸‹æ˜¯æ¶ˆé™¤åˆ†æ”¯çš„å››ç§åŸºæœ¬æ–¹æ³•ï¼š</p>
 
-<p><span style="font-weight: bold;"><B>»ã±à/±àÒëÆ÷±àÂë¹æÔò 2¡£</B></span>£¨Ó°Ïì¶È M£¬Í¨ÓÃÐÔ ML£©<span style="font-style: italic;"><I>¾¡¿ÉÄÜÊ¹ÓÃ </I></span><span 
+<ul type="disc" class="whs2">
+	
+	<li class=kadov-p><p>è°ƒæ•´ä»£ç ç»“æž„ï¼Œä½¿åŸºæœ¬æŒ‡ä»¤å—ç›¸é‚»ã€‚</p></li>
+	
+	<li class=kadov-p><p>å±•å¼€å¾ªçŽ¯ï¼Œè¯¦è§<a href="Loop_Unrolling.html">å¾ªçŽ¯å±•å¼€</a>ä¸»é¢˜ä¸­çš„è®¨è®ºã€‚</p></li>
+	
+	<li class=kadov-p><p>ä½¿ç”¨ <span class=Code>cmov</span> æŒ‡ä»¤ã€‚</p></li>
+	
+	<li class=kadov-p><p>ä½¿ç”¨ <span class=Code>setcc</span> æŒ‡ä»¤ã€‚</p></li>
+</ul>
+
+<p><span style="font-weight: bold;"><B>æ±‡ç¼–/ç¼–è¯‘å™¨ç¼–ç è§„åˆ™ 1ã€‚</B></span>ï¼ˆå½±å“åº¦ MHï¼Œé€šç”¨æ€§ Hï¼‰<span style="font-style: italic;"><I>è°ƒæ•´ä»£ç ç»“æž„ï¼Œä½¿åŸºæœ¬æŒ‡ä»¤å—ç›¸é‚»ï¼Œä»¥æ¶ˆé™¤ä¸å¿…è¦çš„åˆ†æ”¯ã€‚</I></span></p>
+
+<p><span style="font-weight: bold;"><B>æ±‡ç¼–/ç¼–è¯‘å™¨ç¼–ç è§„åˆ™ 2ã€‚</B></span>ï¼ˆå½±å“åº¦ Mï¼Œé€šç”¨æ€§ MLï¼‰<span style="font-style: italic;"><I>å°½å¯èƒ½ä½¿ç”¨ </I></span><span 
  class=Code
-	style="font-style: italic;"><I>setcc</I></span><span style="font-style: italic;"><I> Óë </I></span><span class=Code
-				style="font-style: italic;"><I>cmov</I></span><span style="font-style: italic;"><I> Ö¸ÁîÈ¥Ïû³ýÎÞ·¨Ô¤²âµÄÌõ¼þ·ÖÖ§¡£¶ÔÓÚ¿ÉÔ¤²âµÄ·ÖÖ§£¬ÇëÎðÕâÑù×ö¡£´ËÍâ£¬ÇëÎðÊ¹ÓÃÕâÐ©Ö¸ÁîÈ¥Ïû³ýËùÓÐÎÞ·¨Ô¤²âµÄÌõ¼þ·ÖÖ§¡£ÒòÎªÊ¹ÓÃÕâÐ©Ö¸Áî½«ÓÉÓÚ»áÖ´ÐÐÌõ¼þ·ÖÖ§µÄÁ½ÌõÂ·¾¶¶ø²úÉú¶îÍâµÄÖ´ÐÐ¿ªÏú£»ËùÒÔ½öµ±¼ÆËãÊÂ¼þµÄÔöÁ¿Ð¡ÓÚ·ÖÖ§Ô¤²âÊ§ÎóµÄÔ¤ÆÚ¿ªÏúÊ±£¬²ÅÓ¦Ê¹ÓÃÕâÐ©Ö¸Áî¡£</I></span></p>
+	style="font-style: italic;"><I>setcc</I></span><span style="font-style: italic;"><I> ä¸Ž </I></span><span class=Code
+				style="font-style: italic;"><I>cmov</I></span><span style="font-style: italic;"><I> æŒ‡ä»¤åŽ»æ¶ˆé™¤æ— æ³•é¢„æµ‹çš„æ¡ä»¶åˆ†æ”¯ã€‚å¯¹äºŽå¯é¢„æµ‹çš„åˆ†æ”¯ï¼Œè¯·å‹¿è¿™æ ·åšã€‚æ­¤å¤–ï¼Œè¯·å‹¿ä½¿ç”¨è¿™äº›æŒ‡ä»¤åŽ»æ¶ˆé™¤æ‰€æœ‰æ— æ³•é¢„æµ‹çš„æ¡ä»¶åˆ†æ”¯ã€‚å› ä¸ºä½¿ç”¨è¿™äº›æŒ‡ä»¤å°†ç”±äºŽä¼šæ‰§è¡Œæ¡ä»¶åˆ†æ”¯çš„ä¸¤æ¡è·¯å¾„è€Œäº§ç”Ÿé¢å¤–çš„æ‰§è¡Œå¼€é”€ï¼›æ‰€ä»¥ä»…å½“è®¡ç®—äº‹ä»¶çš„å¢žé‡å°äºŽåˆ†æ”¯é¢„æµ‹å¤±è¯¯çš„é¢„æœŸå¼€é”€æ—¶ï¼Œæ‰åº”ä½¿ç”¨è¿™äº›æŒ‡ä»¤ã€‚</I></span></p>
 
-<p>¿¼ÂÇÏÂÃæÕâÐÐ C ´úÂë£¬ÆäÖÐÓÐ¸öÌõ¼þÈ¡¾öÓÚÕâÐ©³£ÊýÖÐµÄÒ»¸ö£º</p>
+<p>è€ƒè™‘ä¸‹é¢è¿™è¡Œ C ä»£ç ï¼Œå…¶ä¸­æœ‰ä¸ªæ¡ä»¶å–å†³äºŽè¿™äº›å¸¸æ•°ä¸­çš„ä¸€ä¸ªï¼š</p>
 
 <p><span class=Code>X = (A &lt; B) ?CONST1 : CONST2;</span></p>
 
-<p>´Ë´úÂëÓÐÌõ¼þµØ±È½ÏÁ½¸öÖµ£º<span class=Code>A</span> Óë <span class=Code>B</span>¡£Èç¹ûÌõ¼þÎªÕæ£¬Ôò <span class=Code>X</span> ÉèÖÃÎª <span class=Code>CONST1</span>£»·ñÔòËüÉèÖÃÎª <span 
- class=Code>CONST2</span>¡£Èç¹ûÕâÁ½¸öÖµÖ®¼äÃ»ÓÐ¹ØÏµ£¬ÔòÓëÉÏÊö C ´úÂëµÈ¼ÛµÄ»ã±à´úÂëÐòÁÐ½«¿ÉÄÜ°üº¬ÎÞ·¨Ô¤²âµÄ·ÖÖ§¡£ </p>
+<p>æ­¤ä»£ç æœ‰æ¡ä»¶åœ°æ¯”è¾ƒä¸¤ä¸ªå€¼ï¼š<span class=Code>A</span> ä¸Ž <span class=Code>B</span>ã€‚å¦‚æžœæ¡ä»¶ä¸ºçœŸï¼Œåˆ™ <span class=Code>X</span> è®¾ç½®ä¸º <span class=Code>CONST1</span>ï¼›å¦åˆ™å®ƒè®¾ç½®ä¸º <span 
+ class=Code>CONST2</span>ã€‚å¦‚æžœè¿™ä¸¤ä¸ªå€¼ä¹‹é—´æ²¡æœ‰å…³ç³»ï¼Œåˆ™ä¸Žä¸Šè¿° C ä»£ç ç­‰ä»·çš„æ±‡ç¼–ä»£ç åºåˆ—å°†å¯èƒ½åŒ…å«æ— æ³•é¢„æµ‹çš„åˆ†æ”¯ã€‚ </p>
 
-<p>ÔÚ±¼ÌÚ(R) II ¼°ºóÐøµÄ´¦ÀíÆ÷ÉÏ£¬Ïû³ý·ÖÖ§µÄÁíÒ»ÖÖ·½·¨ÊÇÊ¹ÓÃ <span class=Code>cmov</span> Óë <span class=Code>fcmov</span> Ö¸Áî¡£ </p>
+<p>åœ¨å¥”è…¾(R) II åŠåŽç»­çš„å¤„ç†å™¨ä¸Šï¼Œæ¶ˆé™¤åˆ†æ”¯çš„å¦ä¸€ç§æ–¹æ³•æ˜¯ä½¿ç”¨ <span class=Code>cmov</span> ä¸Ž <span class=Code>fcmov</span> æŒ‡ä»¤ã€‚ </p>
 
-<p>cmov Óë fcmov Ö¸ÁîÔÚ±¼ÌÚ II ¼°ºóÐøµÄ´¦ÀíÆ÷ÉÏ¾ùÓÐÌá¹©£¬µ«ÔÚ±¼ÌÚ´¦ÀíÆ÷ÒÔ¼°ÔçÆÚµÄ 32 Î»Ó¢ÌØ¶û(R) ÌåÏµ½á¹¹µÄ´¦ÀíÆ÷ÉÏÔòÃ»ÓÐÌá¹©¡£Èç¹ûÓ¦ÓÃ³ÌÐò»¹ÐèÒªÔÚ½ÏÔçµÄ´¦ÀíÆ÷ÉÏÔËÐÐ£¬ÇëÎñ±ØÊ¹ÓÃ <span class=Code>cpuid</span> Ö¸Áî¼ì²é´¦ÀíÆ÷ÊÇ·ñÖ§³ÖÕâÐ©Ö¸Áî¡£´úÂë³£³£¿ÉÒÔÍ¨¹ýÊÊµ±Ìø×ª£¬Ê¹µÃ¿ØÖÆÈ¨¿ÉÒÔ´ÓÒ»¸ö»ù±¾Ö¸Áî¿é×ªµ½ÏÂÒ»¸ö£¬¶ø²»±ØÖ´ÐÐ·ÖÖ§¡£</p>
+<p>cmov ä¸Ž fcmov æŒ‡ä»¤åœ¨å¥”è…¾ II åŠåŽç»­çš„å¤„ç†å™¨ä¸Šå‡æœ‰æä¾›ï¼Œä½†åœ¨å¥”è…¾å¤„ç†å™¨ä»¥åŠæ—©æœŸçš„ 32 ä½è‹±ç‰¹å°”(R) ä½“ç³»ç»“æž„çš„å¤„ç†å™¨ä¸Šåˆ™æ²¡æœ‰æä¾›ã€‚å¦‚æžœåº”ç”¨ç¨‹åºè¿˜éœ€è¦åœ¨è¾ƒæ—©çš„å¤„ç†å™¨ä¸Šè¿è¡Œï¼Œè¯·åŠ¡å¿…ä½¿ç”¨ <span class=Code>cpuid</span> æŒ‡ä»¤æ£€æŸ¥å¤„ç†å™¨æ˜¯å¦æ”¯æŒè¿™äº›æŒ‡ä»¤ã€‚ä»£ç å¸¸å¸¸å¯ä»¥é€šè¿‡é€‚å½“è·³è½¬ï¼Œä½¿å¾—æŽ§åˆ¶æƒå¯ä»¥ä»Žä¸€ä¸ªåŸºæœ¬æŒ‡ä»¤å—è½¬åˆ°ä¸‹ä¸€ä¸ªï¼Œè€Œä¸å¿…æ‰§è¡Œåˆ†æ”¯ã€‚</p>
 
 <p>
 
-<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','¹ØÓÚ·ÖÖ§Ô¤²â','branch_prediction.htm','¹ØÓÚÖ¸Áî¼¯','../../Reference_HH/About_Instruction_Sets.htm');return false;" title="Ïà¹ØÖ÷Ìâ"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e7%9b%b8%e5%85%b3%e4%b8%bb%e9%a2%98.gif" border=0 height=20 width=58 alt="Ïà¹ØÖ÷Ìâ"></a>
+<a href="javascript:void(0);" onClick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) >=2 && typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','å…³äºŽåˆ†æ”¯é¢„æµ‹','branch_prediction.htm','å…³äºŽæŒ‡ä»¤é›†','../../Reference_HH/About_Instruction_Sets.htm');return false;" title="ç›¸å…³ä¸»é¢˜"><img src="https://hgy413.com/hgydocs/IA32/ss_btn_%e7%9b%b8%e5%85%b3%e4%b8%bb%e9%a2%98.gif" border=0 height=20 width=58 alt="ç›¸å…³ä¸»é¢˜"></a>
 
 
  </p>

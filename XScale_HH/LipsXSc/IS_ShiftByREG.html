@@ -9,11 +9,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/XScale_HH/LipsXSc/IS_ShiftByREG.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:54 GMT -->
 <head>
 
-<title>���Ĵ�����λ��ָ��ѡ��</title>
+<title>按寄存器移位的指令选择</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="05 28, 2003 11:13:09 AM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -89,7 +89,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض� XScale(R) ΢��ϵ�ṹ \nָ��ѡ��\n���Ĵ�����λ");
+	addTocInfo("参考\n处理器事件与建议\n英特尔 XScale(R) 微体系结构 \n指令选择\n按寄存器移位");
 
 	}
 	if (window.writeBtnStyle)
@@ -112,15 +112,15 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="XS_logo.gif" alt="Ӣ�ض� XScale(R) ��������" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">���Ĵ�����λ��ָ��ѡ��</h1>
+<h1><img src="XS_logo.gif" alt="英特尔 XScale(R) 技术主题" v:shapes="_x0000_s1026" width="32px" height="32px" align="right" border="0" class="img_whs1">按寄存器移位的指令选择</h1>
 
 <h2>XSC_IS_ShiftByREG</h2>
 
-<h3>����</h3>
+<h3>解释</h3>
 
-<p>����&ldquo;Ӣ�ض� XScale(R)&rdquo;����ָ������λ���������ǰ��Ĵ�����λ����ᷢ������ķ����ӳٶ�������ͣ��&ldquo;ָ��ѡ��&rdquo;ɨ��ȼ۳������滻���Ĵ�����λ��ͬʱȷ�����岻�䡣</p>
+<p>对于&ldquo;英特尔 XScale(R)&rdquo;技术指令，如果移位器操作数是按寄存器移位，则会发生额外的发出延迟而导致暂停。&ldquo;指令选择&rdquo;扫描等价常数以替换按寄存器移位，同时确保语义不变。</p>
 
-<h3>ʾ��</h3>
+<h3>示例</h3>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells cellspacing="0" width="100%" class="whs2">
@@ -129,9 +129,9 @@ else
 
 <tr valign="top" class="whs5">
 <td valign="top" width="46.439%" class="whs6">
-<h3 class=TableHead>ԭʼ����</td>
+<h3 class=TableHead>原始代码</td>
 <td valign="top" width="53.561%" class="whs7">
-<h3 class=TableHead>ָ��ѡ��</td></tr>
+<h3 class=TableHead>指令选择</td></tr>
 
 <tr valign="top" class="whs5">
 <td valign="top" width="46.439%" class="whs8">

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400315.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:30:24 GMT -->
 <head>
 
-<title>pack 操作</title>
+<title>pack 鎿嶄綔</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:55:26 PM">
 <meta name=topic-status content=Complete>
 <meta name=topic-priority content=2>
@@ -97,7 +97,7 @@ else
 		document.location.reload();
 //-->
 </script>
-pack 操作 <a HREF="6400126.html">字体惯例</a> 
+pack 鎿嶄綔 <a HREF="6400126.html">瀛椾綋鎯緥</a> 
 
 <br>if (PR[<i>qp</i>]) { <br> <a href="6400444.html">check_target_register</a>; <br> <br> if (two_byte_form) { <br> if (signed_saturation_form) { <br> max = <a HREF="6400526.html" onMouseOver="if (parseInt(navigator.appVersion) >= 4) BSPSPopupOnMouseOver(event)" class="BSSCPopup" id="A3">sign_ext</a>(0x7f, 8); <br> min = sign_ext(0x80, 8); <br> } else { // unsigned_saturation_form <br> max = 0xff; <br> min = 0x00; <br> } <br> temp[0] = sign_ext(<a href="6400568.html">GR</a>[<i>r2</i>]{15:0}, &#xA0;16); <br> temp[1] = sign_ext(GR[<i>r2</i>]{31:16}, 16); <br> temp[2] = sign_ext(GR[<i>r2</i>]{47:32}, 16); <br> temp[3] = sign_ext(GR[<i>r2</i>]{63:48}, 16); <br> temp[4] = sign_ext(GR[<i>r3</i>]{15:0}, &#xA0;16); <br> temp[5] = sign_ext(GR[<i>r3</i>]{31:16}, 16); <br> temp[6] = sign_ext(GR[<i>r3</i>]{47:32}, 16); <br> temp[7] = sign_ext(GR[<i>r3</i>]{63:48}, 16); <br> <br> for (i = 0; i &lt; 8; i++) { <br> if (temp[i] &gt; max) <br> temp[i] = max; <br> <br> if (temp[i] &lt; min) <br> temp[i] = min; <br> } <br> <br> GR[<i>r1</i>] = <a href="6400448.html">concatenate8</a>(temp[7], temp[6], temp[5], temp[4], <br> temp[3], temp[2], temp[1], temp[0]); <br> <br> } else { // four_byte_form <br> max = sign_ext(0x7fff, 16); // signed_saturation_form <br> min = sign_ext(0x8000, 16); <br> temp[0] = sign_ext(GR[<i>r2</i>]{31:0}, &#xA0;32); <br> temp[1] = sign_ext(GR[<i>r2</i>]{63:32}, 32); <br> temp[2] = sign_ext(GR[<i>r3</i>]{31:0}, &#xA0;32); <br> temp[3] = sign_ext(GR[<i>r3</i>]{63:32}, 32); <br> <br> for (i = 0; i &lt; 4; i++) { <br> if (temp[i] &gt; max) <br> temp[i] = max; <br> <br> if (temp[i] &lt; min) <br> temp[i] = min; <br> } <br> <br> GR[<i>r1</i>] = <a href="6400447.html">concatenate4</a>(temp[3], temp[2], temp[1], temp[0]); <br> } <br> GR[<i>r1</i>].nat = GR[<i>r2</i>].nat || GR[<i>r3</i>].nat; <br> } 
 

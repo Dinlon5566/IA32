@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400286.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
 
-<title>mf - �ڴ�߽�ָ��</title>
+<title>mf - 内存边界指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:54:03 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nM - ָ��\nmf - �ڴ�߽�ָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nM - 指令\nmf - 内存边界指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,16 +105,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1"><span style="font-weight: bold;"><B>�ڴ�߽�ָ��</B></span></h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1"><span style="font-weight: bold;"><B>内存边界指令</B></span></h1>
 
 <p><span style="font-weight: bold;"><B>mf</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400287.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400287.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a>
  </p>
 
-<p>ָ������ M</p>
+<p>指令类型 M</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) mf ordering_form</p>
 
@@ -125,20 +125,20 @@ else
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>说明</B></span></p>
 
-<p>��ָ��ǿ����֮ǰ��֮����ڴ����֮��ȷ��˳��ordering_form ȷ������֮ǰ�������ڴ�����������к����������ڴ���ʳ�Ϊ�ɼ��ġ�����ȷ���ⲿƽ̨�Ѿ�����֮ǰ�������ڴ����ã�Ҳ��ȷ��֮ǰ�������ڴ����ó�Ϊ�ɼ��ġ�</p>
+<p>此指令强制在之前与之后的内存访问之间确定顺序。ordering_form 确保所有之前的数据内存访问先于所有后续的数据内存访问成为可见的。它不确保外部平台已经接受之前的数据内存引用，也不确保之前的数据内存引用成为可见的。</p>
 
-<p>acceptance_form ��ֹ���������κκ��������ڴ�����������ⲿƽ̨������ֱ����</p>
+<p>acceptance_form 防止处理器的任何后续数据内存访问启动对外部平台的事务，直至：</p>
 
 <ul>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>֮ǰ�Ժ���ҳ�����м����ѷ������ݣ�����</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>之前对后续页的所有加载已返回数据，并且</p></li>
 	
-	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>�ⲿƽ̨�ѽ���֮ǰ�Ժ���ҳ�����д洢��</p></li>
+	<li class=kadov-p-CBulletPara><p CLASS=BulletPara>外部平台已接受之前对后续页的所有存储。</p></li>
 </ul>
 
-<p>&ldquo;����&rdquo;�Ķ�����ƽ̨������acceptance_form ͨ������ȷ�������������ⲿ����֮ǰ����������һֱ&ldquo;�ȴ�&rdquo;��ֱ���Ѿ�&ldquo;����&rdquo;�ڴ�ӳ��� IO ����acceptance_form ��ȷ������˳��ȷ����Ҳ��ȷ�����ܳ�����ҳ֮����ڴ�����</p>
+<p>&ldquo;接受&rdquo;的定义视平台而定。acceptance_form 通常引用确保在启动其它外部事务之前，处理器会一直&ldquo;等待&rdquo;，直至已经&ldquo;接受&rdquo;内存映射的 IO 事务。acceptance_form 不确保进行顺序确定，也不确保接受除后续页之外的内存区域。</p>
 
 
 <!--(HR)============================================================-->

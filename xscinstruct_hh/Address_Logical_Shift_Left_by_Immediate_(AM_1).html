@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Logical_Shift_Left_by_Immediate_(AM_1).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:47:08 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>���������߼����� (AM 1)</title>
+<title>按立即数逻辑左移 (AM 1)</title>
 
 <!--(Meta)==========================================================-->
 
@@ -83,7 +83,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nѰַģʽ\n���ݴ���������\n���������߼����� (AM 1)");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n寻址模式\n数据处理操作数\n按立即数逻辑左移 (AM 1)");
 
 	}
 	if (window.writeBtnStyle)
@@ -106,14 +106,14 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������"><a NAME=pgfId-1010510></a>���������߼����� (AM 1)</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题"><a NAME=pgfId-1010510></a>按立即数逻辑左移 (AM 1)</h1>
 
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p class=Preformatted><span class=Code>op2, LSL #sh_imm</span> </p>
 
-<p CLASS=Body>���У� </p>
+<p CLASS=Body>其中： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -125,7 +125,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ������Ҫ��λ��ֵ�ļĴ�����</td></tr>
+<p CLASS=CellBodyLeft>指定包含要移位的值的寄存器。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -134,7 +134,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ʾ�߼����ơ�</td></tr>
+<p CLASS=CellBodyLeft>表示逻辑左移。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -143,18 +143,18 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ����λ����ֵ���� 0 �� 31 ֮�䡣</td></tr>
+<p CLASS=CellBodyLeft>指定移位。此值介于 0 与 31 之间。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-���ݴ���������&ldquo;���������߼�����&rdquo;ִ�����²�����α����˵������
+数据处理操作数&ldquo;按立即数逻辑左移&rdquo;执行以下操作（伪代码说明）：
 
 <p CLASS=Preformatted-Code>if sh_imm == 0 then /*Register Operand */<br> addr_mode = op2<br> shifter_carry_out = C Flag<br> else /* sh_imm &gt; 0 */<br> addr_mode = op2 Logical_Shift_Left sh_imm<br> shifter_carry_out = op2[32 - sh_imm]</p>
 
-<p CLASS=Body>�����ݴ���������ֱ���ṩ�Ĵ���ֵ����Ĵ���������ֵ������ 2 �ĳ������ݣ���</p>
+<p CLASS=Body>此数据处理操作数直接提供寄存器值，或寄存器的左移值（乘以 2 的常数次幂）。</p>
 
-<p CLASS=Body>��ָ��������������������߼����ƵļĴ��� <em CLASS=SourceItalic>op2</em> ��ֵ�������������� 0 �� 31 ֮�䡣���ڳ��Ŀ�λ�в����㡣����Ƴ���λ����λ���Ľ�λ�����δָ���κ�λ�����λ�� C ��־��</p>
+<p CLASS=Body>此指令操作数代表按立即数逻辑左移的寄存器 <em CLASS=SourceItalic>op2</em> 的值，该立即数介于 0 与 31 之间。在腾出的空位中插入零。最后移出的位是移位器的进位。如果未指定任何位，则进位是 C 标志。</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -175,7 +175,7 @@ else
 <col class="whs2">
 <col class="whs2">
 
-<h2>���� </h2>
+<h2>编码 </h2>
 
 <tr class="whs3">
 <td ROWSPAN=1
@@ -407,22 +407,22 @@ else
 </tr>
 </table>
 
-<h3 class=NoteTipHead><img src="Note.gif">&nbsp;��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif">&nbsp;备注</h3>
 
-Ĭ����λ<br> ��� <em CLASS=Source>sh_imm==0</em>������������Լ򵥵�дΪ <em CLASS=SourceItalic>op2</em>�� 
+默认移位<br> 如果 <em CLASS=Source>sh_imm==0</em>，则操作数可以简单地写为 <em CLASS=SourceItalic>op2</em>。 
 
-<br>R15 ��ʹ��<br> ��� R15 ָ��Ϊ�Ĵ��� <em CLASS=SourceItalic>op2</em> �� <em 
- CLASS=SourceItalic>op1</em>����ʹ�õ�ֵ�ǵ�ǰָ��ĵ�ַ�� 8��
+<br>R15 的使用<br> 如果 R15 指定为寄存器 <em CLASS=SourceItalic>op2</em> 或 <em 
+ CLASS=SourceItalic>op1</em>，则使用的值是当前指令的地址加 8。
 </div>
 
 <div>
-<h2>&#xA0;ʾ��</h2>
+<h2>&#xA0;示例</h2>
 
 <p CLASS=Preformatted><span class=Code>ADC &#xA0;&#xA0;&#xA0;R2, R13, R8, LSL #2</span></p>
 
-<h2>������Ϣ</h2>
+<h2>更多信息</h2>
 
-<a href="Address_Data_Processing_Operands_Overview_1.html">�����Ѱַģʽ 1�����ݴ���������</a><a href="Inst_Overview_of_Instructions.html" CLASS="XRef" style="font-weight: normal;"><br> ����Ļ����ָ��</a> 
+<a href="Address_Data_Processing_Operands_Overview_1.html">请参阅寻址模式 1：数据处理操作数</a><a href="Inst_Overview_of_Instructions.html" CLASS="XRef" style="font-weight: normal;"><br> 请参阅汇编器指令</a> 
 </div>
 
 <script type="text/javascript" language="javascript1.2">

@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/XScale_HH/LipsXSc/Load_Store_Multiple_of_n_Register.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:26:04 GMT -->
 <head>
 
-<title>���ؼ���/�洢 n ���Ĵ���</title>
+<title>多重加载/存储 n 个寄存器</title>
 
 <!--(Meta)==========================================================-->
 
-<meta content="text/html; charset=GB2312" http-equiv=Content-Type>
+<meta content="text/html; charset=utf-8" http-equiv=Content-Type>
 <meta name=date content="02 16, 2003 12:41:02 PM">
 <meta name=topic-status content="In Progress">
 <meta name=topic-priority content=0>
@@ -98,7 +98,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض� XScale(R) ΢��ϵ�ṹ \nӢ�ض� XScale(R) ΢��ϵ�ṹ�ͷ�\n���ؼ���/�洢 n ���Ĵ����ͷ�");
+	addTocInfo("参考\n处理器事件与建议\n英特尔 XScale(R) 微体系结构 \n英特尔 XScale(R) 微体系结构惩罚\n多重加载/存储 n 个寄存器惩罚");
 
 	}
 	if (window.writeBtnStyle)
@@ -123,41 +123,41 @@ else
 </script>
 <h1><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
-{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='XS_logo.gif' alt='英特尔 XScale(R) 技术主题' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
 else
-{   document.write("<img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
-//--></script><noscript><img src='XS_logo.gif' alt='Ӣ�ض� XScale(R) ��������' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'></noscript>���ؼ���/�洢 n ���Ĵ���/����</h1>
+{   document.write("<img src='XS_logo.gif' alt='英特尔 XScale(R) 技术主题' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='XS_logo.gif' alt='英特尔 XScale(R) 技术主题' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' align='right' width='36px' height='36px' border='0' class='img_whs1'></noscript>多重加载/存储 n 个寄存器/警告</h1>
 
 <h2>XSC_LDMSTM_N</h2>
 
-<h3>����</h3>
+<h3>解释</h3>
 
-<p>LDM/STM �����Чָ��� Thumb ָ�� PUSH �� POP����ִ�����������Ǳ� LDR/STR �� LDRD/STRD �ࣨ�������л��棩����˼Ĵ�������ӳ����ӡ��� LDM/STM ָ���滻�� LDR/STR �� LDRD/STRD ���ܻ����Ӵ���ռ䣬���ٶȿ��ܻ���졣</p>
+<p>LDM/STM 或其等效指令（如 Thumb 指令 PUSH 或 POP）的执行周期数总是比 LDR/STR 或 LDRD/STRD 多（假设命中缓存），因此寄存器结果延迟增加。将 LDM/STM 指令替换成 LDR/STR 或 LDRD/STRD 尽管会增加代码空间，但速度可能会更快。</p>
 
-<h3><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs2"> ����</h3>
+<h3><img src="tip.gif" width="17px" height="18px" border="0" class="img_whs2"> 建议</h3>
 
 <ul type="disc" class="whs3">
 	
-	<li class=kadov-p><p><b style="font-weight: bold;">LDMSTM_1 - ���ؼ���/�洢 1 ���Ĵ���</b><br> ʹ�ó����&ldquo;����/�洢&rdquo;���Ǹ��ã���Ϊ�ٶȸ��졣</p></li>
+	<li class=kadov-p><p><b style="font-weight: bold;">LDMSTM_1 - 多重加载/存储 1 个寄存器</b><br> 使用常规的&ldquo;加载/存储&rdquo;总是更好，因为速度更快。</p></li>
 	
-	<li class=kadov-p><p><b style="font-weight: bold;">LDMSTM_2 - ���ؼ���/�洢 2 ���Ĵ���</b><br> ʹ��&ldquo;����/�洢&rdquo;˫�ֻ����� LDR/STR ָ�����Ǹ��ã���Ϊ�ٶȸ��죬Ҳ��ʡ����ռ䡣</p></li>
+	<li class=kadov-p><p><b style="font-weight: bold;">LDMSTM_2 - 多重加载/存储 2 个寄存器</b><br> 使用&ldquo;加载/存储&rdquo;双字或两条 LDR/STR 指令总是更好；因为速度更快，也节省代码空间。</p></li>
 	
-	<li class=kadov-p><p><b style="font-weight: bold;">LDMSTM_3 - ���ؼ���/�洢 2 �����ϼĴ���</b><br> ���Ҫ�Ż�ʱ�䣨����ִ�кܶ�Σ�������ʹ�� LDR/STR �� LDRD/STRD �������С����Ҫ�Ż�����ռ䣬����ʹ�� LDM/STM��</p></li>
+	<li class=kadov-p><p><b style="font-weight: bold;">LDMSTM_3 - 多重加载/存储 2 个以上寄存器</b><br> 如果要优化时间（代码执行很多次），建议使用 LDR/STR 或 LDRD/STRD 代码序列。如果要优化代码空间，建议使用 LDM/STM。</p></li>
 </ul>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> ��ע </h3>
+	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> 备注 </h3>
 
-<p class="whs5">����ļĴ���Խ�࣬�ɴ���չ�������л�õ�����ٷֱȾ�Խ�͡�</p>
+<p class="whs5">传输的寄存器越多，可从扩展的序列中获得的增益百分比就越低。</p>
 
-<h3>ʾ�� 1</h3>
+<h3>示例 1</h3>
 
-<p class="whs6">ԭʼ����</p>
+<p class="whs6">原始代码</p>
 
 <p class=Preformatted
 	style="margin-left: 40px;"><span class=Code>LDM r0!, {r1,r2,r3,r4,r5};</span></p>
 
-<p class="whs7">����Է��� 1</p>
+<p class="whs7">替代性方案 1</p>
 
 <p class=Preformatted
 	style="margin-left: 40px;"><u style="x-text-underline: normal; /*begin!kadov{{*/ text-decoration: underline; /*}}end!kadov*/ "><span class=Code
@@ -169,22 +169,22 @@ else
 <p class=Preformatted
 	style="margin-left: 40px;">&nbsp;</p>
 
-<p class="whs7">����Է��� 2</p>
+<p class="whs7">替代性方案 2</p>
 
 <p class=Preformatted
 	style="margin-left: 40px;"><u style="x-text-underline: normal; /*begin!kadov{{*/ text-decoration: underline; /*}}end!kadov*/ "><span class=Code
 	style="x-text-underline: off; /*begin!kadov{{*/ text-decoration: none; /*}}end!kadov*/ ">LDR &#xA0;r1, [r0], #4<br> LDR &#xA0;r2, [r0], #4<br> LDR &#xA0;r3, [r0], #4<br> LDRD r4, [r0], #8</span></u></p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> ��ע</h3>
+	style="margin-left: 40px;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"> 备注</h3>
 
-<p class="whs5">LDRD ���ж������ơ�Rd��Ŀ��Ĵ����������ǵ�ż������EA����Ч��ַ�������� 8 �ֽڶ���ġ�</p>
+<p class="whs5">LDRD 具有对齐限制。Rd（目标寄存器）必须是第偶数个，EA（有效地址）必须是 8 字节对齐的。</p>
 
-<p class="whs5">���� LDRD ������κ��ڴ����ָ��������ͣ�������ò�Ҫ�������&ldquo;����Է��� 2&rdquo;������ʹ�� <span class=Code>LDRD r2, [r0], #8</span> ����ڶ����������ָ� </p>
+<p class="whs5">跟在 LDRD 后面的任何内存操作指令都会产生暂停，因此最好不要像上面的&ldquo;替代性方案 2&rdquo;那样，使用 <span class=Code>LDRD r2, [r0], #8</span> 替代第二条与第三条指令。 </p>
 
-<h3>ʾ�� 2</h3>
+<h3>示例 2</h3>
 
-<p class="whs6">ԭʼ����</p>
+<p class="whs6">原始代码</p>
 
 <p class=Preformatted
 	style="margin-left: 40px;"><u style="x-text-underline: normal; /*begin!kadov{{*/ text-decoration: underline; /*}}end!kadov*/ "><span class=Code
@@ -193,7 +193,7 @@ else
 			x-text-underline: off;
 			/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ ">STM r0!, {r1,r2,r3,r4,r5}</span></u></p>
 
-<p class="whs7">����Է��� 1</p>
+<p class="whs7">替代性方案 1</p>
 
 <p class=Preformatted
 	style="margin-left: 40px;"><u style="x-text-underline: normal; /*begin!kadov{{*/ text-decoration: underline; /*}}end!kadov*/ "><span class=Code
@@ -202,7 +202,7 @@ else
 			x-text-underline: off;
 			/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ ">STR &#xA0;r1, [r0], #4<br> STR &#xA0;r2, [r0], #4<br> STR &#xA0;r3, [r0], #4<br> STR &#xA0;r4, [r0], #4<br> STR &#xA0;r5, [r0], #4</span></u></p>
 
-<p class="whs7">����Է��� 2</p>
+<p class="whs7">替代性方案 2</p>
 
 <p class=Preformatted
 	style="margin-left: 40px;"><u style="x-text-underline: normal; /*begin!kadov{{*/ text-decoration: underline; /*}}end!kadov*/ "><span class=Code
@@ -212,9 +212,9 @@ else
 			/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ ">STR &#xA0;r1, [r0], #4<br> STRD r2, [r0], #8<br> STRD r4, [r0], #8</span></u></p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><b style="font-weight: bold;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"></b> ��ע</h3>
+	style="margin-left: 40px;"><b style="font-weight: bold;"><img src="note.gif" x-maintain-ratio="TRUE" width="20px" height="20px" border="0" class="img_whs4"></b> 备注</h3>
 
-<p class="whs5">STRD �ж������ơ�Rd Ӧ����ż����EA ������� 8 �ֽڡ� </p>
+<p class="whs5">STRD 有对齐限制。Rd 应该是偶数，EA 必须对齐 8 字节。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

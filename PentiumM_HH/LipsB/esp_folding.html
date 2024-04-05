@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/PentiumM_HH/LipsB/esp_folding.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:25:27 GMT -->
 <head>
 
-<title>ESP ����</title>
+<title>ESP 交迭</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta NAME=MS-HAID CONTENT="Banias Penalties">
 <meta name=date content="10 10, 2002 3:01:32 PM">
 <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
@@ -79,7 +79,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\n�������¼��뽨��\nӢ�ض�(R) ����(R) M ������\nӢ�ض�(R) ����(R) M �������ĳͷ�\nESP ѹ��");
+	addTocInfo("参考\n处理器事件与建议\n英特尔(R) 奔腾(R) M 处理器\n英特尔(R) 奔腾(R) M 处理器的惩罚\nESP 压缩");
 
 	}
 	if (window.writeBtnStyle)
@@ -102,27 +102,27 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>ESP ����</h1>
+<h1>ESP 交迭</h1>
 
-<p><span style="font-weight: bold;"><B>esp_folding_ineffective</B></span> ��һ�򾯸档 </p>
+<p><span style="font-weight: bold;"><B>esp_folding_ineffective</B></span> 是一则警告。 </p>
 
-<p>�˾����ʾ����ʽʹ�� <span class=Code>esp</span> �Ĵ�������ʽʹ�� <span 
- class=Code>esp</span> �Ĵ���֮���ת�����������÷�֮���ת��������һ���ͷ���</p>
+<p>此警告表示在显式使用 <span class=Code>esp</span> 寄存器与隐式使用 <span 
+ class=Code>esp</span> 寄存器之间的转换。这两种用法之间的转换会引发一个惩罚。</p>
 
 <h3 class=NoteTipHead
-	style="margin-left: 40px;"><span style="font-weight: bold;"><B><span style="font-weight: normal;"><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs1"> </span>����</B></span></h3>
+	style="margin-left: 40px;"><span style="font-weight: bold;"><B><span style="font-weight: normal;"><img src="tip.gif" x-maintain-ratio="TRUE" width="17px" height="18px" border="0" class="img_whs1"> </span>建议</B></span></h3>
 
 <ol type="disc" class="whs2">
 	
 	<ul type="disc" class="whs3">
 		
-		<li class=kadov-p><p>������ʽ����ʽʹ�� <span class=Code>esp</span> ֮���л��Ĵ�������������ʽʹ�� <span class=Code>esp</span> �Ĵ�������ʽʹ�� <span class=Code>esp</span> �Ĵ����ֿ���������޶ȼ���������֮���ת����</p></li>
+		<li class=kadov-p><p>减少隐式与显式使用 <span class=Code>esp</span> 之间切换的次数。尽量将隐式使用 <span class=Code>esp</span> 寄存器与显式使用 <span class=Code>esp</span> 寄存器分开，并最大限度减少这两者之间的转换。</p></li>
 		
-		<li class=kadov-p><p>��Ӣ�ض�(R) �� Microsoft* C/C++ �������ϣ������ڲ����Ի�ַָ�� <span class=Code>/Oy-</span> ������±��롣</p></li>
+		<li class=kadov-p><p>在英特尔(R) 与 Microsoft* C/C++ 编译器上，尽量在不忽略基址指针 <span class=Code>/Oy-</span> 的情况下编译。</p></li>
 	</ul>
 </ol>
 
-<p class="whs4">�������ڣ�January 25, 2006</p>
+<p class="whs4">更新日期：January 25, 2006</p>
 
 <p>&nbsp;</p>
 

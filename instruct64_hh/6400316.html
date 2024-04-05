@@ -8,11 +8,11 @@
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct64_hh/6400316.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:46 GMT -->
 <head>
 
-<title>padd - ���мӷ�ָ��</title>
+<title>padd - 并行加法指令</title>
 
 <!--(Meta)==========================================================-->
 
-<meta http-equiv=content-type content="text/html; charset=GB2312">
+<meta http-equiv=content-type content="text/html; charset=utf-8">
 <meta name=date content="07 1, 2002 2:55:28 PM">
 <meta name=topic-status content="Ready for Review">
 <meta name=topic-priority content=1>
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض�(R) ����(R) ָ��\nP - ָ��\npadd - ���мӷ�ָ��");
+	addTocInfo("参考\n指令集\n英特尔(R) 安腾(R) 指令\nP - 指令\npadd - 并行加法指令");
 
 	}
 	if (window.writeBtnStyle)
@@ -116,16 +116,16 @@ if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function()
  <!--(==============================================================)-->
 
 
-<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="����(R) ����������" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">���мӷ�ָ��</h1>
+<h1><img src="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/itanium60hw.gif" alt="安腾(R) 处理器主题" x-maintain-ratio="TRUE" width="52px" height="60px" align="right" border="0" class="img_whs1">并行加法指令</h1>
 
 <p><span style="font-weight: bold;"><B>padd</B></span></p>
 
-<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400317.htm">����</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">�������</a>
+<p><a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400317.htm">操作</a> <a HREF="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400126.htm">字体惯例</a>
  </p>
 
-<p>ָ������ A</p>
+<p>指令类型 A</p>
 
-<p><span style="font-weight: bold;"><B>��ʽ</B></span></p>
+<p><span style="font-weight: bold;"><B>格式</B></span></p>
 
 <p CLASS=Preformatted>(<span style="font-style: italic;"><I>qp</I></span>) padd1 <span style="font-style: italic;"><I>r1</I></span> = <span style="font-style: italic;"><I>r2</I></span>, <span style="font-style: italic;"><I>r3</I></span> <span style="x-condition: eclipse;">one_byte_form</span><script type="text/javascript"
 	language=JavaScript1.2><!--
@@ -165,22 +165,22 @@ kadovFilePopupInit('A5');
 <hr size="2" width="100%" align="center" class="whs2">
 
 
-<p><span style="font-weight: bold;"><B>˵��</B></span></p>
+<p><span style="font-weight: bold;"><B>说明</B></span></p>
 
-<p>����Դ�������ļ���Ԫ����ӣ�Ȼ�󽫽������ <span style="x-condition: eclipse;">GR</span><script type="text/javascript"
+<p>两个源操作数的几组元素相加，然后将结果放入 <span style="x-condition: eclipse;">GR</span><script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A6');
-//--></script> <span style="font-style: italic;"><I>r1</I></span>��</p>
+//--></script> <span style="font-style: italic;"><I>r1</I></span>。</p>
 
-<p>�������Ԫ��֮���޷��ڽ��Ԫ���б�ʾ������ָ��������ɷ�����ִ�б����޼�����<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400074.htm" style="x-condition: eclipse;">���мӷ�������ɷ�����</a>��ʾ������ֵ�����з��ţ�Ҳ�����޷��š�<script type="text/javascript"
+<p>如果两个元素之和无法在结果元素中表示，且已指定饱和完成符，则执行饱和修剪。如<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400074.htm" style="x-condition: eclipse;">并行加法饱和完成符表格</a>所示，饱和值可以有符号，也可以无符号。<script type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A7');
-//--></script>�������Ԫ��֮�ʹ�������ֵ������ȡ����ֵ�����С������ֵ������ȡ����ֵ��<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400075.htm" style="x-condition: eclipse;">���мӷ����ͼ��ޱ���</a><script type="text/javascript"
+//--></script>如果两个元素之和大于上限值，则结果取上限值。如果小于下限值，则结果取下限值。<a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400075.htm" style="x-condition: eclipse;">并行加法饱和极限表格</a><script type="text/javascript"
 															language=JavaScript1.2><!--
 kadovFilePopupInit('A8');
-//--></script>��ʾѹ�����ͼ��ޡ�</p>
+//--></script>显示压缩饱和极限。</p>
 
-<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400076.htm" style="x-condition: eclipse;">�����˴���һ����ͼ��ͬʱ�鿴���ֽ���˫�ֽ���ʽ�� padd ָ���ʾ����</a><script 
+<p><a href="https://www.hgy413.com/hgydocs/IA32/instruct64_hh/6400076.htm" style="x-condition: eclipse;">单击此处在一幅插图中同时查看单字节与双字节形式的 padd 指令的示例。</a><script 
  type="text/javascript"
 	language=JavaScript1.2><!--
 kadovFilePopupInit('A9');

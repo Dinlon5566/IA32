@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/instruct32_hh/vc133.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:46:50 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>FYL2XP1 - ���� y * log2(x +1)</title>
+<title>FYL2XP1 - 计算 y * log2(x +1)</title>
 
 <!--(Meta)==========================================================-->
 
@@ -99,7 +99,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nIA-32 ָ��\nF - ָ��\nFYL2XP1 - ���� y * log2(x +1)");
+	addTocInfo("参考\n指令集\nIA-32 指令\nF - 指令\nFYL2XP1 - 计算 y * log2(x +1)");
 
 	}
 	if (window.writeBtnStyle)
@@ -122,7 +122,7 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1>FYL2XP1 - ���� y * log2(x +1)</h1>
+<h1>FYL2XP1 - 计算 y * log2(x +1)</h1>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -130,13 +130,13 @@ else
 <tr>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">������</td>
+	style="margin-bottom: 0;">操作码</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">ָ��</td>
+	style="margin-bottom: 0;">指令</td>
 <td valign="middle" class="whs2">
 <h3 CLASS=TableHead
-	style="margin-bottom: 0;">˵��</td></tr>
+	style="margin-bottom: 0;">说明</td></tr>
 
 <tr>
 <td valign="middle" class="whs2">
@@ -147,12 +147,12 @@ else
 	style="margin-bottom: 0;">FYL2XP1</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
-	style="margin-bottom: 0;">�� ST(1) �滻�� ST(1) * log 2 (ST(0) + 1.0)���������Ĵ�����ջ</td></tr>
+	style="margin-bottom: 0;">将 ST(1) 替换成 ST(1) * log 2 (ST(0) + 1.0)，并弹出寄存器堆栈</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-<p>�� epsilon Ϊ�ף����� (ST(1) * log<span style="vertical-align: sub;">2</span> ST(0) + 1.0)) �Ķ���������洢���Ĵ��� ST(1)�������� FPU �Ĵ�����ջ��ST(0) �е�Դ���������������·�Χ�ڣ�</p>
+<p>以 epsilon 为底，计算 (ST(1) * log<span style="vertical-align: sub;">2</span> ST(0) + 1.0)) 的对数，结果存储到寄存器 ST(1)，并弹出 FPU 寄存器堆栈。ST(0) 中的源操作数必须在以下范围内：</p>
 
 <p><script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -161,19 +161,19 @@ else
 {   document.write("<img src='vc11.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='201px' height='23px' border='0' class='img_whs3'>");}
 //--></script><noscript><img src='vc11.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='201px' height='23px' border='0' class='img_whs3'></noscript></p>
 
-<p>ST(1) �е�Դ��������Χ�Ǵ� -<script type="text/javascript" language="JavaScript"><!--
+<p>ST(1) 中的源操作数范围是从 -<script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='infinity.gif' border='0' class='img_whs4'>");}
 else
 {   document.write("<img src='infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'>");}
-//--></script><noscript><img src='infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'></noscript> �� +<script type="text/javascript" language="JavaScript"><!--
+//--></script><noscript><img src='infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'></noscript> 到 +<script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='infinity.gif' border='0' class='img_whs4'>");}
 else
 {   document.write("<img src='infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'>");}
-//--></script><noscript><img src='infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'></noscript>����� ST(0) �����������ɽ��ܷ�Χ������δ���壬������Ӧ�������ɵ��쳣����ĳЩ����£�ST(0) ������Χʱ���ܻ������쳣��������Ϊȡ���ھ���İ汾������һ���Ĳ�ȷ���ԡ�</p>
+//--></script><noscript><img src='infinity.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'></noscript>。如果 ST(0) 操作数超出可接受范围，则结果未定义，软件不应依赖生成的异常。在某些情况下，ST(0) 超出范围时可能会生成异常，但此行为取决于具体的版本，具有一定的不确定性。</p>
 
-<p>�±���ʾ���������ֵ�� epsilon Ϊ�׵Ķ���ʱ�õ��Ľ��������δ�������磩��</p>
+<p>下表显示计算各类数值以 epsilon 为底的对数时得到的结果（假设未发生下溢）。</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells wrapperparagraphselector="P" cellspacing="3" border="1" class="whs1">
@@ -216,7 +216,7 @@ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4))
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='vc13.gif' width='29px' height='17px' border='0' class='img_whs5'>");}
 else
 {   document.write("<img src='vc13.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='29px' height='17px' border='0' class='img_whs5'>");}
-//--></script><noscript><img src='vc13.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='29px' height='17px' border='0' class='img_whs5'></noscript> )) �� -0</td>
+//--></script><noscript><img src='vc13.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' width='29px' height='17px' border='0' class='img_whs5'></noscript> )) 到 -0</td>
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
@@ -228,7 +228,7 @@ else
 <td valign="middle" class="whs2">
 <p CLASS=TableCell
 	style="text-align: center; margin-bottom: 0;"
-	align=center>+0 �� +(1<font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
+	align=center>+0 到 +(1<font style="font-family: Verdana, Arial, Helvetica, sans-serif;"
 								face=verdana><font style="font-size: xx-small;"
 													size=1> -</font></font> (<script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -456,26 +456,26 @@ else
 	align=center>NaN</td></tr>
 </table>
 
-<p>��ע��F ��ʾ����ʵ����</p>
+<p>备注：F 表示有限实数。</p>
 
-<p>* ��ʾ���������Ч (#IA) �쳣��</p>
+<p>* 表示浮点操作无效 (#IA) 异常。</p>
 
-<p>��ָ���ܹ�Ϊ�ӽ� 0 �ĸ��� epsilon ֵ [�Ĵ��� ST(0) �е�ֵ] �ṩ��Ѿ��ȡ����ں�С�� epsilon (<script type="text/javascript" language="JavaScript"><!--
+<p>此指令能够为接近 0 的各种 epsilon 值 [寄存器 ST(0) 中的值] 提供最佳精度。对于很小的 epsilon (<script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='epsilon.gif' border='0' class='img_whs4'>");}
 else
 {   document.write("<img src='epsilon.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'>");}
-//--></script><noscript><img src='epsilon.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'></noscript>) ֵ��ͬ�� (<script type="text/javascript" language="JavaScript"><!--
+//--></script><noscript><img src='epsilon.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'></noscript>) 值，同将 (<script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='epsilon.gif' border='0' class='img_whs4'>");}
 else
 {   document.write("<img src='epsilon.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'>");}
-//--></script><noscript><img src='epsilon.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'></noscript>+1) ���� FYL2X ָ��Ĳ�����ȣ�ʹ�� FYL2XP1 ָ����Ա����������Чλ���ڸ��������Ͻ�����У��������Կ��� (<script type="text/javascript" language="JavaScript"><!--
+//--></script><noscript><img src='epsilon.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'></noscript>+1) 用作 FYL2X 指令的参数相比，使用 FYL2XP1 指令可以保留更多的有效位。在复利与养老金计算中，经常可以看到 (<script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='epsilon.gif' border='0' class='img_whs4'>");}
 else
 {   document.write("<img src='epsilon.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'>");}
-//--></script><noscript><img src='epsilon.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'></noscript>+1) ����ʽ��ͨ���� ST(1) Դ�������б������ϵ���������׽����ת������һ�������Ķ���ֵ�����µ�ʽ���ڼ����ض����������ı���ϵ�������� n �� FYL2XP1 ָ��Ľ������Ķ���������</p>
+//--></script><noscript><img src='epsilon.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'></noscript>+1) 表达式。通过在 ST(1) 源操作数中保存比例系数，很容易将结果转换成另一个底数的对数值。以下等式用于计算特定对数底数的比例系数，其中 n 是 FYL2XP1 指令的结果所需的对数底数：</p>
 
 <p>scale factor <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -484,7 +484,7 @@ else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'>");}
 //--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'></noscript> log n 2</p>
 
-<h2>����</h2>
+<h2>操作</h2>
 
 <p class=Preformatted><span style="font-size: 10.0pt;"><font size=2 style="font-size:10pt;">ST(1) <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
@@ -493,49 +493,49 @@ else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'>");}
 //--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'></noscript> ST(1) * log</font></span><font><span style="font-size: 10.0pt;"><font size=2 style="font-size:10pt;">2</font></span></font><span style="font-size: 10.0pt;"><font size=2 style="font-size:10pt;">(ST(0) + 1.0);</font></span><br> PopRegisterStack;</p>
 
-<h2>Ӱ��� FPU ��־</h2>
+<h2>影响的 FPU 标志</h2>
 
-<p>C1 - ���������ջ���磬������Ϊ 0��������ɲ���ȷ�Ľ���쳣 (#P)�����ʾȡ������</p>
+<p>C1 - 如果发生堆栈下溢，则设置为 0。如果生成不精确的结果异常 (#P)，则表示取整方向：</p>
 
 <p>0 <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='arrwleft.gif' border='0' class='img_whs4'>");}
 else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'>");}
-//--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'></noscript> ������ȡ����1 <script type="text/javascript" language="JavaScript"><!--
+//--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'></noscript> 非向上取整；1 <script type="text/javascript" language="JavaScript"><!--
 if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
 {  if (parseInt(navigator.appVersion) != 2) document.write("<img src='arrwleft.gif' border='0' class='img_whs4'>");}
 else
 {   document.write("<img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'>");}
-//--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'></noscript> ����ȡ����</p>
+//--></script><noscript><img src='arrwleft.gif' style='margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;' border='0' class='img_whs4'></noscript> 向上取整。</p>
 
-<p>C0��C2��C3 - δ���塣</p>
+<p>C0、C2、C3 - 未定义。</p>
 
-<h2>�����쳣</h2>
+<h2>浮点异常</h2>
 
-<p>#IS - ������ջ���硣</p>
+<p>#IS - 发生堆栈下溢。</p>
 
-<p>#IA - �������� SNaN ֵ��֧�ֵĸ�ʽ��</p>
+<p>#IA - 操作数是 SNaN 值或不支持的格式。</p>
 
-<p>#D - Դ�������Ƿǹ��ֵ��</p>
+<p>#D - 源操作数是非规格化值。</p>
 
-<p>#U - �������Ŀ���ʽ����̫С��</p>
+<p>#U - 结果对于目标格式而言太小。</p>
 
-<p>#O - �������Ŀ���ʽ����̫��</p>
+<p>#O - 结果对于目标格式而言太大。</p>
 
-<p>#P - ֵ�޷���Ŀ���ʽ��ȷ��ʾ��</p>
+<p>#P - 值无法按目标格式精确表示。</p>
 
-<h2>����ģʽ�쳣</h2>
+<h2>保护模式异常</h2>
 
-<p>#NM - ��� CR0 �е� EM �� TS ����Ϊ 1��</p>
+<p>#NM - 如果 CR0 中的 EM 或 TS 设置为 1。</p>
 
-<h2>ʵ��ַģʽ�쳣</h2>
+<h2>实地址模式异常</h2>
 
-<p>#NM - ��� CR0 �е� EM �� TS ����Ϊ 1��</p>
+<p>#NM - 如果 CR0 中的 EM 或 TS 设置为 1。</p>
 
-<h2>�� 8086 ģʽ�쳣</h2>
+<h2>虚 8086 模式异常</h2>
 
-<p class="whs6">#NM - ��� CR0 �е� EM �� TS ����Ϊ 1�� </p>
+<p class="whs6">#NM - 如果 CR0 中的 EM 或 TS 设置为 1。 </p>
 
 <script type="text/javascript" language="javascript1.2">
 <!--

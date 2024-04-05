@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/INST_BBL.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:55:43 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>B/BL - ��֧/��֧������</title>
+<title>B/BL - 分支/分支与链接</title>
 
 <!--(Meta)==========================================================-->
 
@@ -82,7 +82,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nָ��\n32 λָ��\nB - ָ��\nB/BL");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n指令\n32 位指令\nB - 指令\nB/BL");
 
 	}
 	if (window.writeBtnStyle)
@@ -105,16 +105,16 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������">B/BL - ��֧/��֧������</h1>
+<h1><IMG SRC="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题">B/BL - 分支/分支与链接</h1>
 
 <div>
 <div>
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p class=Preformatted><span class=Code>B[L][condition] target </span></p>
 
-<p>���У�</p>
+<p>其中：</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -125,7 +125,7 @@ else
 							style="font-style: italic;">&#xA0;L</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>����λ [24]</td></tr>
+<p CLASS=CellBodyLeft>链接位 [24]</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
@@ -133,7 +133,7 @@ else
 							style="font-style: italic;">&#xA0;condition</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>16 ������֮һ�������<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">��������״̬</a>��</td></tr>
+<p CLASS=CellBodyLeft>16 个条件之一。请参阅<a HREF="https://www.hgy413.com/hgydocs/IA32/xscinstruct_hh/notational_conventions.htm#Condition Code Status">条件代码状态</a>。</td></tr>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
@@ -141,20 +141,20 @@ else
 							style="font-style: italic;">&#xA0;target</em> 
  </td>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
-<p CLASS=CellBodyLeft>Ŀ���ַ</td></tr>
+<p CLASS=CellBodyLeft>目标地址</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-B ָ������ִ�е��ض� <em CLASS=SourceItalic>target</em> �ķ�֧��B ָ���û�з��أ���˲����з��ص�ַ���浽 Register14��BL ָ����ִ�е��ض� <em CLASS=SourceItalic>target</em> �ķ�֧֮ǰ������λ [24] ����Ϊ 1���⽫���·��ص�ַ�洢�� Register14��condition ��������Чֵ������ָ��� NOP�� 
+B 指令总是执行到特定 <em CLASS=SourceItalic>target</em> 的分支。B 指令的没有返回；因此不会有返回地址保存到 Register14。BL 指令在执行到特定 <em CLASS=SourceItalic>target</em> 的分支之前将链接位 [24] 设置为 1。这将导致返回地址存储到 Register14。condition 必须是有效值；否则将指令当作 NOP。 
 
-<h2>Ѱַģʽ</h2>
+<h2>寻址模式</h2>
 
-�޲������� 
+无操作数。 
 </div>
 
 <div>
-<h2>Ӱ��ı�־</h2>
+<h2>影响的标志</h2>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -203,7 +203,7 @@ B ָ������ִ�е��ض� <em CLASS=SourceItalic>target</em> �ķ�֧��B ָ���û�з���
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
 
-<h2>����</h2>
+<h2>编码</h2>
 
 <tr>
 <td ROWSPAN="1" COLSPAN="1" class="whs2">
@@ -285,7 +285,7 @@ B ָ������ִ�е��ض� <em CLASS=SourceItalic>target</em> �ķ�֧��B ָ���û�з���
 </div>
 
 <div>
-<h2>ʾ��</h2>
+<h2>示例</h2>
 
 <p class=Preformatted><span class=Code>1 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.text<br> 2 <br> 3 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.globl funcbl<br> 4 <br> 5 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@.align 0<br> 6 <br> 7 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;;@ * * * B * * *<br> 8 <br> 9 <br> 10 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example, CODE, READONLY<br> 11 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1<br> 12 &#xA0;&#xA0;00000000 &#xA0;E3A0B001 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R11, #1<br> 13 &#xA0;&#xA0;00000004 &#xA0;E2AB0001 &#xA0;&#xA0;ADC &#xA0;&#xA0;&#xA0;R0, R11, #1<br> 14 <br> 15 <br> 16 &#xA0;&#xA0;00000008 &#xA0;E3A0C002 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R12, #2<br> 17 &#xA0;&#xA0;00000012 &#xA0;E3A07003 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R7, #3<br> 18 &#xA0;&#xA0;00000016 &#xA0;E0AC1007 &#xA0;&#xA0;ADC &#xA0;&#xA0;&#xA0;R1, R12, R7<br> 19 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;AREA example2, CODE, READONLY<br> 20 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;ENTRY<br> 21 &#xA0;&#xA0;00000000 &#xA0;E3A0D004 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R13, #4<br> 22 &#xA0;&#xA0;00000004 &#xA0;E3A08005 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R8, #5<br> 23 &#xA0;&#xA0;00000008 &#xA0;E0AD2108 &#xA0;&#xA0;ADC &#xA0;&#xA0;&#xA0;R2, R13, R8, LSL #2<br> 24 &#xA0;&#xA0;00000012 &#xA0;EAFFFFFE &#xA0;&#xA0;B &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;label1<br> 25 &#xA0;&#xA0;00000016 &#xA0;E3A02004 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R2, #4<br> 26 &#xA0;&#xA0;00000020 &#xA0;E3A0E006 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R14, #6<br> 27 &#xA0;&#xA0;00000024 &#xA0;E3A09007 &#xA0;&#xA0;MOV &#xA0;&#xA0;&#xA0;R9, #7<br> 28 &#xA0;&#xA0;00000028 &#xA0;E0AE3219 &#xA0;&#xA0;ADC &#xA0;&#xA0;&#xA0;R3, R14, R9, LSL R2<br> 29 <br> 30 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;END &#xA0;&#xA0;&#xA0;31</span> </p>
 </div>

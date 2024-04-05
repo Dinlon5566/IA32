@@ -7,10 +7,10 @@
 
 <!-- Mirrored from www.hgy413.com/hgydocs/IA32/xscinstruct_hh/Address_Rotate_Right_with_Extend_(AM_1).htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Sep 2022 16:47:08 GMT -->
 <head>
-<!-- Inserted by TRADOS: --><META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<!-- Inserted by TRADOS: --><meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8">
 
 
-<title>��չѭ������ (AM 1)</title>
+<title>扩展循环右移 (AM 1)</title>
 
 <!--(Meta)==========================================================-->
 
@@ -81,7 +81,7 @@ if (window.gbWhTopic)
 {
 	if (window.addTocInfo)
 	{
-	addTocInfo("�ο�\nָ�\nӢ�ض� XScale(R) ����ָ��\nѰַģʽ\n���ݴ���������\n��չѭ������ (AM 1)");
+	addTocInfo("参考\n指令集\n英特尔 XScale(R) 技术指令\n寻址模式\n数据处理操作数\n扩展循环右移 (AM 1)");
 
 	}
 	if (window.writeBtnStyle)
@@ -104,14 +104,14 @@ else
 		document.location.reload();
 //-->
 </script>
-<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="Ӣ�ض� XScale(R) ��������"><a NAME=44161></a>��չѭ������ (AM 1)</h1>
+<h1><IMG SRC="XS_logo.gif" ALIGN="RIGHT" VSPACE="0" HSPACE="0" BORDER="0" alt="英特尔 XScale(R) 技术主题"><a NAME=44161></a>扩展循环右移 (AM 1)</h1>
 
 <div>
-<h2>�﷨</h2>
+<h2>语法</h2>
 
 <p class=Preformatted><span class=Code>op2, RRX</span> </p>
 
-<p CLASS=Body>���У� </p>
+<p CLASS=Body>其中： </p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -123,7 +123,7 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>ָ������Ҫ����һλ��ֵ�ļĴ�����</td></tr>
+<p CLASS=CellBodyLeft>指定包含要右移一位的值的寄存器。</td></tr>
 
 <tr>
 <td ROWSPAN=1
@@ -132,18 +132,18 @@ else
  </td>
 <td ROWSPAN=1
 	COLSPAN=1>
-<p CLASS=CellBodyLeft>��ʾ��չѭ�����ơ�</td></tr>
+<p CLASS=CellBodyLeft>表示扩展循环右移。</td></tr>
 </table>
 
-<h2>˵��</h2>
+<h2>说明</h2>
 
-���ݴ���������&ldquo;��չѭ������&rdquo;ִ�����²�����α����˵������
+数据处理操作数&ldquo;扩展循环右移&rdquo;执行以下操作（伪代码说明）：
 
 <p class=Preformatted-Code>addr_mode = (C Flag Logical_Shift_Left 31)<br> OR (op2 Logical_Shift_Right 1)<br> shifter_carry_out = op2[0]</p>
 
-<p CLASS=Body>�����ݴ���������ִ�� 33 λѭ�����ƣ����� 33 λ����&ldquo;��λ��־&rdquo;��</p>
+<p CLASS=Body>此数据处理操作数执行 33 位循环右移，将第 33 位用作&ldquo;进位标志&rdquo;。</p>
 
-<p CLASS=Body>��ָ������������Ĵ��� <em CLASS=SourceItalic>op2</em> ����һλ֮���ֵ��&ldquo;��λ��־&rdquo;�����ڳ��Ŀ�λ�ϡ��Ƴ��Ҷ�֮���λ����λ���Ľ�λ��</p>
+<p CLASS=Body>此指令操作数代表寄存器 <em CLASS=SourceItalic>op2</em> 右移一位之后的值。&ldquo;进位标志&rdquo;插入腾出的空位上。移出右端之外的位是移位器的进位。</p>
 
 <!--(Table)=========================================================-->
 <table x-use-null-cells border="1" class="whs1">
@@ -164,7 +164,7 @@ else
 <col class="whs2">
 <col class="whs2">
 
-<h2>����</h2>
+<h2>编码</h2>
 
 <tr>
 <td ROWSPAN=1
@@ -421,21 +421,21 @@ else
 </tr>
 </table>
 
-<h3 class=NoteTipHead><img src="Note.gif">&nbsp;��ע</h3>
+<h3 class=NoteTipHead><img src="Note.gif">&nbsp;备注</h3>
 
-ָ����������� <em CLASS=Source>ROR #0</em> �������С� 
+指令编码在用于 <em CLASS=Source>ROR #0</em> 的区域中。 
 
-<br>��� <em CLASS=Source>R15</em> ָ��Ϊ�Ĵ��� <em CLASS=SourceItalic>op2</em> �� <em CLASS=SourceItalic>op1</em>����ʹ�õ�ֵ�ǵ�ǰָ��ĵ�ַ�� 8��
+<br>如果 <em CLASS=Source>R15</em> 指定为寄存器 <em CLASS=SourceItalic>op2</em> 或 <em CLASS=SourceItalic>op1</em>，则使用的值是当前指令的地址加 8。
 </div>
 
 <div>
-<h2>ʾ�� </h2>
+<h2>示例 </h2>
 
 <p class=Preformatted><span CLASS=Code>ADC &#xA0;&#xA0;&#xA0;R10, R6, R1, RRX</span> </p>
 
-<h2>������Ϣ</h2>
+<h2>更多信息</h2>
 
-<a href="Address_Data_Processing_Operands_Overview_1.html">�����Ѱַģʽ 1�����ݴ���������</a><a href="Inst_Overview_of_Instructions.html" CLASS="XRef" style="font-weight: normal;"><br> ����Ļ����ָ��</a> 
+<a href="Address_Data_Processing_Operands_Overview_1.html">请参阅寻址模式 1：数据处理操作数</a><a href="Inst_Overview_of_Instructions.html" CLASS="XRef" style="font-weight: normal;"><br> 请参阅汇编器指令</a> 
 </div>
 
 <script type="text/javascript" language="javascript1.2">
